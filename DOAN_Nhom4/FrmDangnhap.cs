@@ -22,9 +22,9 @@ namespace DOAN_Nhom4
 
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void btn_Login_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "username" && txtPass.Text == "pass")
+            if (txtUserName.Text == "username" && txtPass.Text == "pass")
             {
                 new FrmNguoiDung().Show();
                 this.Hide();
@@ -38,16 +38,19 @@ namespace DOAN_Nhom4
             }
         }
 
-        private void lbl_clear_Click(object sender, EventArgs e)
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult dg = MessageBox.Show("Bạn có chắc muốn thoát không?",
+                "Error", MessageBoxButtons.YesNo);
+            if(dg == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void lbl_Clear_Click(object sender, EventArgs e)
         {
             txtUserName.Clear();
             txtPass.Clear();
             txtUserName.Focus();
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

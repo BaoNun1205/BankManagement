@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button btn_login;
-            System.Windows.Forms.Button btn_exit;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDangnhap));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,44 +37,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.lbl_clear = new System.Windows.Forms.Label();
             this.cb_showpass = new System.Windows.Forms.CheckBox();
-            btn_login = new System.Windows.Forms.Button();
-            btn_exit = new System.Windows.Forms.Button();
+            this.btn_Exit = new System.Windows.Forms.Button();
+            this.lbl_Clear = new System.Windows.Forms.Label();
+            this.btn_Login = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_login
-            // 
-            btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            btn_login.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            btn_login.Location = new System.Drawing.Point(40, 519);
-            btn_login.Name = "btn_login";
-            btn_login.Size = new System.Drawing.Size(400, 49);
-            btn_login.TabIndex = 7;
-            btn_login.Text = "LOG IN";
-            btn_login.UseMnemonic = false;
-            btn_login.UseVisualStyleBackColor = false;
-            btn_login.Click += new System.EventHandler(this.btn_login_Click);
-            // 
-            // btn_exit
-            // 
-            btn_exit.BackColor = System.Drawing.Color.White;
-            btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            btn_exit.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            btn_exit.Location = new System.Drawing.Point(40, 582);
-            btn_exit.Name = "btn_exit";
-            btn_exit.Size = new System.Drawing.Size(400, 49);
-            btn_exit.TabIndex = 12;
-            btn_exit.Text = "EXIT";
-            btn_exit.UseMnemonic = false;
-            btn_exit.UseVisualStyleBackColor = false;
-            btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // pictureBox1
             // 
@@ -159,18 +127,6 @@
             this.txtPass.Size = new System.Drawing.Size(343, 50);
             this.txtPass.TabIndex = 6;
             // 
-            // lbl_clear
-            // 
-            this.lbl_clear.AutoSize = true;
-            this.lbl_clear.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.lbl_clear.Location = new System.Drawing.Point(303, 477);
-            this.lbl_clear.Name = "lbl_clear";
-            this.lbl_clear.Size = new System.Drawing.Size(137, 23);
-            this.lbl_clear.TabIndex = 10;
-            this.lbl_clear.Text = "Clear Fields";
-            this.lbl_clear.Click += new System.EventHandler(this.lbl_clear_Click);
-            // 
             // cb_showpass
             // 
             this.cb_showpass.AutoSize = true;
@@ -183,15 +139,57 @@
             this.cb_showpass.Text = "Show Password";
             this.cb_showpass.UseVisualStyleBackColor = true;
             // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackColor = System.Drawing.Color.White;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btn_Exit.Location = new System.Drawing.Point(40, 581);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(400, 49);
+            this.btn_Exit.TabIndex = 18;
+            this.btn_Exit.Text = "EXIT";
+            this.btn_Exit.UseMnemonic = false;
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // lbl_Clear
+            // 
+            this.lbl_Clear.AutoSize = true;
+            this.lbl_Clear.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.lbl_Clear.Location = new System.Drawing.Point(303, 476);
+            this.lbl_Clear.Name = "lbl_Clear";
+            this.lbl_Clear.Size = new System.Drawing.Size(137, 23);
+            this.lbl_Clear.TabIndex = 17;
+            this.lbl_Clear.Text = "Clear Fields";
+            this.lbl_Clear.Click += new System.EventHandler(this.lbl_Clear_Click);
+            // 
+            // btn_Login
+            // 
+            this.btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Login.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Login.Location = new System.Drawing.Point(40, 518);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(400, 49);
+            this.btn_Login.TabIndex = 16;
+            this.btn_Login.Text = "LOG IN";
+            this.btn_Login.UseMnemonic = false;
+            this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            // 
             // FrmDangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 643);
-            this.Controls.Add(btn_exit);
+            this.ClientSize = new System.Drawing.Size(483, 670);
+            this.Controls.Add(this.btn_Exit);
+            this.Controls.Add(this.lbl_Clear);
+            this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.cb_showpass);
-            this.Controls.Add(this.lbl_clear);
-            this.Controls.Add(btn_login);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panel3);
@@ -221,9 +219,9 @@
         private Panel panel3;
         private TextBox txtUserName;
         private TextBox txtPass;
-        private Button btn_login;
-        private Button btn_exit;
-        private Label lbl_clear;
         private CheckBox cb_showpass;
+        private Button btn_Exit;
+        private Label lbl_Clear;
+        private Button btn_Login;
     }
 }
