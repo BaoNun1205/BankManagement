@@ -37,5 +37,17 @@ namespace DOAN_Nhom4
                 txtUserName.Focus();
             }
         }
+
+        private void lbl_clear_Click(object sender, EventArgs e)
+        {
+            txtUserName.Clear();
+            txtPass.Clear();
+            txtUserName.Focus();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

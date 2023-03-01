@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDangnhap));
             System.Windows.Forms.Button btn_login;
+            System.Windows.Forms.Button btn_exit;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDangnhap));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -38,11 +39,44 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.lbl_clear = new System.Windows.Forms.Label();
+            this.cb_showpass = new System.Windows.Forms.CheckBox();
             btn_login = new System.Windows.Forms.Button();
+            btn_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btn_login
+            // 
+            btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btn_login.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            btn_login.Location = new System.Drawing.Point(40, 519);
+            btn_login.Name = "btn_login";
+            btn_login.Size = new System.Drawing.Size(400, 49);
+            btn_login.TabIndex = 7;
+            btn_login.Text = "LOG IN";
+            btn_login.UseMnemonic = false;
+            btn_login.UseVisualStyleBackColor = false;
+            btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
+            // btn_exit
+            // 
+            btn_exit.BackColor = System.Drawing.Color.White;
+            btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btn_exit.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            btn_exit.Location = new System.Drawing.Point(40, 582);
+            btn_exit.Name = "btn_exit";
+            btn_exit.Size = new System.Drawing.Size(400, 49);
+            btn_exit.TabIndex = 12;
+            btn_exit.Text = "EXIT";
+            btn_exit.UseMnemonic = false;
+            btn_exit.UseVisualStyleBackColor = false;
+            btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // pictureBox1
             // 
@@ -125,26 +159,38 @@
             this.txtPass.Size = new System.Drawing.Size(343, 50);
             this.txtPass.TabIndex = 6;
             // 
-            // btn_login
+            // lbl_clear
             // 
-            btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            btn_login.Font = new System.Drawing.Font("Bahnschrift", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btn_login.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            btn_login.Location = new System.Drawing.Point(40, 494);
-            btn_login.Name = "btn_login";
-            btn_login.Size = new System.Drawing.Size(400, 49);
-            btn_login.TabIndex = 7;
-            btn_login.Text = "LOG IN";
-            btn_login.UseMnemonic = false;
-            btn_login.UseVisualStyleBackColor = false;
-            btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.lbl_clear.AutoSize = true;
+            this.lbl_clear.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.lbl_clear.Location = new System.Drawing.Point(303, 477);
+            this.lbl_clear.Name = "lbl_clear";
+            this.lbl_clear.Size = new System.Drawing.Size(137, 23);
+            this.lbl_clear.TabIndex = 10;
+            this.lbl_clear.Text = "Clear Fields";
+            this.lbl_clear.Click += new System.EventHandler(this.lbl_clear_Click);
+            // 
+            // cb_showpass
+            // 
+            this.cb_showpass.AutoSize = true;
+            this.cb_showpass.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cb_showpass.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.cb_showpass.Location = new System.Drawing.Point(40, 477);
+            this.cb_showpass.Name = "cb_showpass";
+            this.cb_showpass.Size = new System.Drawing.Size(161, 22);
+            this.cb_showpass.TabIndex = 11;
+            this.cb_showpass.Text = "Show Password";
+            this.cb_showpass.UseVisualStyleBackColor = true;
             // 
             // FrmDangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 643);
+            this.ClientSize = new System.Drawing.Size(483, 643);
+            this.Controls.Add(btn_exit);
+            this.Controls.Add(this.cb_showpass);
+            this.Controls.Add(this.lbl_clear);
             this.Controls.Add(btn_login);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserName);
@@ -176,5 +222,8 @@
         private TextBox txtUserName;
         private TextBox txtPass;
         private Button btn_login;
+        private Button btn_exit;
+        private Label lbl_clear;
+        private CheckBox cb_showpass;
     }
 }
