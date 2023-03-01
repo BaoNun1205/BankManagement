@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DOAN_Nhom4
 {
@@ -19,7 +20,7 @@ namespace DOAN_Nhom4
 
         private void FrmDangnhap_Load(object sender, EventArgs e)
         {
-
+            this.txtPass.PasswordChar = '*';
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
@@ -51,6 +52,12 @@ namespace DOAN_Nhom4
             txtUserName.Clear();
             txtPass.Clear();
             txtUserName.Focus();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            
+            txtPass.UseSystemPasswordChar = true;
         }
     }
 }

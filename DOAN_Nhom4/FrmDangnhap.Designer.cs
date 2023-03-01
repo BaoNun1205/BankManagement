@@ -124,8 +124,10 @@
             this.txtPass.Location = new System.Drawing.Point(97, 393);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(343, 50);
             this.txtPass.TabIndex = 6;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // cb_showpass
             // 
