@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DOAN_Nhom4
 {
@@ -56,8 +55,8 @@ namespace DOAN_Nhom4
 
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
-            
-            txtPass.UseSystemPasswordChar = true;
+
+            txtPass.UseSystemPasswordChar = false;
         }
     }
 }
