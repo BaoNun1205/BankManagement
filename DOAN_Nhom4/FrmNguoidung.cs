@@ -1,15 +1,20 @@
 namespace DOAN_Nhom4
 {
-    public partial class Form1 : Form
+    public partial class FrmNguoidung : Form
     {
-        public Form1()
+        public FrmNguoidung()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            lblXinchao.ForeColor = Color.Black;
+            lblXinchao.AutoSize = true;
 
+            // Set the transparency key to the same color as the backcolor
+            this.TransparencyKey = Color.White;
+            lblXinchao.BackColor = Color.White;
+
+            // Add the label to the form
+            this.Controls.Add(lblXinchao);
         }
     }
 }
