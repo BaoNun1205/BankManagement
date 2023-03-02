@@ -25,9 +25,13 @@ namespace DOAN_Nhom4
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "username" && txtPass.Text == "pass")
+            if (txtUserName.Text == "admin" && txtPass.Text == "admin")
             {
-                new FrmNguoiDung().Show();
+                if (ValidateChildren(ValidationConstraints.Enabled))
+                {
+                    MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                new FrmAdmin().Show();
                 this.Hide();
             }
             else
