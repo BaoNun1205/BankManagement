@@ -5,16 +5,24 @@ namespace DOAN_Nhom4
         public FrmNguoidung()
         {
             InitializeComponent();
+        }
 
-            lblXinchao.ForeColor = Color.Black;
-            lblXinchao.AutoSize = true;
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
 
-            // Set the transparency key to the same color as the backcolor
-            this.TransparencyKey = Color.White;
-            lblXinchao.BackColor = Color.White;
+        }
 
-            // Add the label to the form
-            this.Controls.Add(lblXinchao);
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmNguoidung_Load(object sender, EventArgs e)
+        {
+            lblXinchao.Parent = pictureBox1;
+            lblXinchao.BackColor = Color.Transparent;
+            pictureBox6.Parent = pictureBox1;
+            pictureBox6.BackColor = Color.Transparent;
         }
     }
 }
