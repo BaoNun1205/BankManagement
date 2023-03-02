@@ -127,7 +127,6 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(343, 50);
             this.txtPass.TabIndex = 6;
-            this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // cb_showpass
@@ -141,6 +140,7 @@
             this.cb_showpass.TabIndex = 11;
             this.cb_showpass.Text = "Show Password";
             this.cb_showpass.UseVisualStyleBackColor = true;
+            this.cb_showpass.CheckedChanged += new System.EventHandler(this.cb_showpass_CheckedChanged);
             // 
             // btn_Exit
             // 

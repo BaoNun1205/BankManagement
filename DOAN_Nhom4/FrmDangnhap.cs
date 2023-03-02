@@ -62,5 +62,17 @@ namespace DOAN_Nhom4
 
             txtPass.UseSystemPasswordChar = false;
         }
+
+        private void cb_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cb_showpass.Checked)
+            {
+                txtPass.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = false;
+            }
+        }
     }
 }
