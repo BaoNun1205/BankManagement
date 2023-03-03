@@ -18,7 +18,6 @@ namespace DOAN_Nhom4
             {
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 return dt;
             }
