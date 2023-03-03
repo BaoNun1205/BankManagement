@@ -65,13 +65,13 @@ namespace DOAN_Nhom4
         public Admin() { }
         public Admin(string soTK, string tenTK, string tenDN, string pass, string ngaySinh, string cccd, string sdt)
         {
-            SoTK = soTK;
-            TenTK = tenTK;
-            TenDN = tenDN;
-            Pass = pass;
-            NgaySinh = ngaySinh;
-            Cccd = cccd;
-            Sdt = sdt;
+            this.soTK = soTK;
+            this.tenTK = tenTK;
+            this.tenDN = tenDN;
+            this.pass = pass;
+            this.ngaySinh = ngaySinh;
+            this.cccd = cccd;
+            this.sdt = sdt;
         }
     }
 }
