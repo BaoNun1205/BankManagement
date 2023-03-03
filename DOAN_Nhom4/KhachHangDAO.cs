@@ -21,7 +21,7 @@ namespace DOAN_Nhom4
         public void Them(KhachHang ad)
         {
             string sqlStr = string.Format("INSERT INTO KhachHang(SoTK , TenTK, TenDN, MatKhau, NgaySinh, CCCD, SDT) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", ad.SoTK, ad.TenTK, ad.TenDN, ad.Pass, ad.NgaySinh, ad.Cccd, ad.Sdt);
-            data.xuLi(sqlStr);
+            data.xuLi(sqlStr); 
         }
 
         public void Xoa(KhachHang ad)
