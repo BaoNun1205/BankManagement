@@ -101,5 +101,10 @@ namespace DOAN_Nhom4
         {
             btnHotro.BorderColor = Color.LightSalmon;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

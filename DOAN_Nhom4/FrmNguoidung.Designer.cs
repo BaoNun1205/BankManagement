@@ -50,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnTienich = new CustomButton.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChuyentien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTienich)).BeginInit();
@@ -240,7 +241,7 @@
             // 
             // picBoxNguoidung
             // 
-            this.picBoxNguoidung.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxNguoidung.BackColor = System.Drawing.Color.MistyRose;
             this.picBoxNguoidung.Image = global::DOAN_Nhom4.Properties.Resources._11757;
             this.picBoxNguoidung.Location = new System.Drawing.Point(-50, 2);
             this.picBoxNguoidung.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -349,17 +350,25 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.BackColor = System.Drawing.Color.LightSalmon;
             this.panel1.Location = new System.Drawing.Point(803, 322);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 606);
             this.panel1.TabIndex = 27;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(879, 324);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(697, 604);
+            this.panel2.TabIndex = 28;
             // 
             // FrmNguoidung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1657, 977);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHotro);
             this.Controls.Add(this.picBoxHotro);
@@ -424,5 +433,6 @@
         private Label label3;
         private CustomButton.VBButton btnTienich;
         private Panel panel1;
+        private Panel panel2;
     }
 }
