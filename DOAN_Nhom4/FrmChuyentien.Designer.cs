@@ -35,11 +35,11 @@
             this.btnHuy = new CustomButton.VBButton();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtLoiNhan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSTK = new System.Windows.Forms.TextBox();
+            this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.picBoxChuyentien = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
@@ -78,11 +78,11 @@
             this.pnlChuyentien.Controls.Add(this.btnHuy);
             this.pnlChuyentien.Controls.Add(this.label2);
             this.pnlChuyentien.Controls.Add(this.comboBox1);
-            this.pnlChuyentien.Controls.Add(this.textBox3);
+            this.pnlChuyentien.Controls.Add(this.txtLoiNhan);
             this.pnlChuyentien.Controls.Add(this.label3);
             this.pnlChuyentien.Controls.Add(this.label4);
-            this.pnlChuyentien.Controls.Add(this.textBox1);
-            this.pnlChuyentien.Controls.Add(this.textBox2);
+            this.pnlChuyentien.Controls.Add(this.txtSTK);
+            this.pnlChuyentien.Controls.Add(this.txtSoTien);
             this.pnlChuyentien.Controls.Add(this.label5);
             this.pnlChuyentien.Location = new System.Drawing.Point(52, 79);
             this.pnlChuyentien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -169,14 +169,14 @@
             this.comboBox1.Size = new System.Drawing.Size(167, 23);
             this.comboBox1.TabIndex = 2;
             // 
-            // textBox3
+            // txtLoiNhan
             // 
-            this.textBox3.Location = new System.Drawing.Point(229, 176);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 71);
-            this.textBox3.TabIndex = 10;
+            this.txtLoiNhan.Location = new System.Drawing.Point(229, 176);
+            this.txtLoiNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtLoiNhan.Multiline = true;
+            this.txtLoiNhan.Name = "txtLoiNhan";
+            this.txtLoiNhan.Size = new System.Drawing.Size(167, 71);
+            this.txtLoiNhan.TabIndex = 10;
             // 
             // label3
             // 
@@ -202,23 +202,23 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Lời nhắn (nếu có)";
             // 
-            // textBox1
+            // txtSTK
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 77);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 23);
-            this.textBox1.TabIndex = 6;
+            this.txtSTK.Location = new System.Drawing.Point(229, 77);
+            this.txtSTK.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtSTK.Multiline = true;
+            this.txtSTK.Name = "txtSTK";
+            this.txtSTK.Size = new System.Drawing.Size(167, 23);
+            this.txtSTK.TabIndex = 6;
             // 
-            // textBox2
+            // txtSoTien
             // 
-            this.textBox2.Location = new System.Drawing.Point(229, 127);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 23);
-            this.textBox2.TabIndex = 8;
+            this.txtSoTien.Location = new System.Drawing.Point(229, 127);
+            this.txtSoTien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtSoTien.Multiline = true;
+            this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Size = new System.Drawing.Size(167, 23);
+            this.txtSoTien.TabIndex = 8;
             // 
             // label5
             // 
@@ -274,11 +274,11 @@
         private CustomButton.VBButton btnHuy;
         private Label label2;
         private ComboBox comboBox1;
-        private TextBox textBox3;
+        private TextBox txtLoiNhan;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtSTK;
+        private TextBox txtSoTien;
         private Label label5;
         private PictureBox picBoxChuyentien;
     }

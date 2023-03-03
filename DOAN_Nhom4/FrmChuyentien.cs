@@ -40,7 +40,10 @@ namespace DOAN_Nhom4
 
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien();
+            string stk = txtSTK.Text;
+            string soTien = txtSoTien.Text;
+            string loiNhan = txtLoiNhan.Text;
+            FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(stk, soTien, loiNhan);
             this.Hide();
             frmxacnhan.ShowDialog();
             this.Close();
