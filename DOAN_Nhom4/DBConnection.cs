@@ -6,20 +6,23 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace DOAN_Nhom4
 {
     internal class DBConnection
     {
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
         public DBConnection() { }
-        public DataTable LayDanhSach(string sqlStr, SqlConnection conn)
+        public DataTable LayDanhSach(string sqlStr)
         {
+            DataTable dt = new DataTable();
             try
             {
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 adapter.Fill(dt);
-                return dt;
+                
             }
             catch (Exception exc)
             {
@@ -29,10 +32,10 @@ namespace DOAN_Nhom4
             {
                 conn.Close();
             }
-            return null;
+            return dt;
         }
 
-        public void xuLi(string sqlStr, SqlConnection conn)
+        public void xuLi(string sqlStr)
         {
             try
             {
@@ -51,6 +54,41 @@ namespace DOAN_Nhom4
             {
                 conn.Close();
             }
+        }
+
+        public KhachHang LayKhachHang(KhachHang kh)
+        {
+            KhachHang khachHang = new KhachHang();
+            try
+            {
+                string soTK = kh.SoTK;
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT * FROM KhachHang WHERE SoTK = @SoTk", conn);
+                command.Parameters.AddWithValue("@SoTk", kh.SoTK);
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    khachHang.SoTK = reader.GetString(0);
+                    khachHang.TenTK = reader.GetString(1);
+                    khachHang.TenDN = reader.GetString(2);
+                    khachHang.Pass = reader.GetString(3);
+                    khachHang.NgaySinh = reader.GetString(4);
+                    khachHang.Cccd = reader.GetString(5);
+                    khachHang.Sdt = reader.GetString(6);
+                    khachHang.SoDu = reader.GetInt64(7).ToString();
+                    break;
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return khachHang;
         }
 
         public bool IsPhone(string numberphone)

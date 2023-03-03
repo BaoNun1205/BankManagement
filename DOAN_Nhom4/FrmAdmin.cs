@@ -57,6 +57,7 @@ namespace DOAN_Nhom4
             Admin ad = new Admin(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Text, txt_CCCD.Text, txt_SDT.Text);
             adminDAO.Xoa(ad);
             HienThi();
+            Refresh();
         }
 
         private void btn_sua_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace DOAN_Nhom4
                     MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 new FrmAdmin().Show();
-                this.Hide();
+                
             }
             else
             {
