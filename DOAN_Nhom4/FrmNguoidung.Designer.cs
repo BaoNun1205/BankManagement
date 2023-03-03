@@ -50,10 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnTienich = new CustomButton.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChuyentien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).BeginInit();
@@ -64,10 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTaikhoan)).BeginInit();
             this.pnlTaikhoan.SuspendLayout();
             this.pnlCaidat.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,10 +74,10 @@
             this.btnChuyentien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChuyentien.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChuyentien.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnChuyentien.Location = new System.Drawing.Point(57, 324);
-            this.btnChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnChuyentien.Location = new System.Drawing.Point(93, 518);
+            this.btnChuyentien.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnChuyentien.Name = "btnChuyentien";
-            this.btnChuyentien.Size = new System.Drawing.Size(297, 260);
+            this.btnChuyentien.Size = new System.Drawing.Size(483, 416);
             this.btnChuyentien.TabIndex = 5;
             this.btnChuyentien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChuyentien.TextColor = System.Drawing.SystemColors.Control;
@@ -97,10 +89,10 @@
             // 
             this.picBoxChuyentien.BackColor = System.Drawing.Color.LightBlue;
             this.picBoxChuyentien.Image = global::DOAN_Nhom4.Properties.Resources.download;
-            this.picBoxChuyentien.Location = new System.Drawing.Point(112, 346);
-            this.picBoxChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxChuyentien.Location = new System.Drawing.Point(182, 555);
+            this.picBoxChuyentien.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.picBoxChuyentien.Name = "picBoxChuyentien";
-            this.picBoxChuyentien.Size = new System.Drawing.Size(182, 149);
+            this.picBoxChuyentien.Size = new System.Drawing.Size(295, 239);
             this.picBoxChuyentien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxChuyentien.TabIndex = 6;
             this.picBoxChuyentien.TabStop = false;
@@ -116,10 +108,10 @@
             this.btnTietkiem.FlatAppearance.BorderSize = 0;
             this.btnTietkiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTietkiem.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTietkiem.Location = new System.Drawing.Point(57, 668);
-            this.btnTietkiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnTietkiem.Location = new System.Drawing.Point(93, 1069);
+            this.btnTietkiem.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnTietkiem.Name = "btnTietkiem";
-            this.btnTietkiem.Size = new System.Drawing.Size(297, 260);
+            this.btnTietkiem.Size = new System.Drawing.Size(483, 416);
             this.btnTietkiem.TabIndex = 10;
             this.btnTietkiem.TextColor = System.Drawing.SystemColors.Window;
             this.btnTietkiem.UseVisualStyleBackColor = false;
@@ -136,10 +128,10 @@
             this.btnHotro.FlatAppearance.BorderSize = 0;
             this.btnHotro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHotro.ForeColor = System.Drawing.Color.White;
-            this.btnHotro.Location = new System.Drawing.Point(437, 668);
-            this.btnHotro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnHotro.Location = new System.Drawing.Point(709, 1069);
+            this.btnHotro.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnHotro.Name = "btnHotro";
-            this.btnHotro.Size = new System.Drawing.Size(297, 260);
+            this.btnHotro.Size = new System.Drawing.Size(483, 416);
             this.btnHotro.TabIndex = 11;
             this.btnHotro.TextColor = System.Drawing.Color.White;
             this.btnHotro.UseVisualStyleBackColor = false;
@@ -150,10 +142,10 @@
             // 
             this.picBoxTietkiem.BackColor = System.Drawing.Color.Wheat;
             this.picBoxTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.z4148094277365_6ba49332b7154e507b2ae8ab24285f6a;
-            this.picBoxTietkiem.Location = new System.Drawing.Point(124, 714);
-            this.picBoxTietkiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxTietkiem.Location = new System.Drawing.Point(202, 1141);
+            this.picBoxTietkiem.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.picBoxTietkiem.Name = "picBoxTietkiem";
-            this.picBoxTietkiem.Size = new System.Drawing.Size(165, 117);
+            this.picBoxTietkiem.Size = new System.Drawing.Size(267, 188);
             this.picBoxTietkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxTietkiem.TabIndex = 12;
             this.picBoxTietkiem.TabStop = false;
@@ -162,8 +154,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(416, 832);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(676, 1331);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 32);
             this.label2.TabIndex = 13;
@@ -173,8 +165,8 @@
             this.lblTietkiem.AutoSize = true;
             this.lblTietkiem.BackColor = System.Drawing.Color.Wheat;
             this.lblTietkiem.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTietkiem.Location = new System.Drawing.Point(124, 849);
-            this.lblTietkiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTietkiem.Location = new System.Drawing.Point(241, 1372);
+            this.lblTietkiem.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTietkiem.Name = "lblTietkiem";
             this.lblTietkiem.Size = new System.Drawing.Size(170, 50);
             this.lblTietkiem.TabIndex = 14;
@@ -187,8 +179,8 @@
             this.lblChuyentien.BackColor = System.Drawing.Color.LightBlue;
             this.lblChuyentien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblChuyentien.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblChuyentien.Location = new System.Drawing.Point(92, 493);
-            this.lblChuyentien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblChuyentien.Location = new System.Drawing.Point(219, 817);
+            this.lblChuyentien.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblChuyentien.Name = "lblChuyentien";
             this.lblChuyentien.Size = new System.Drawing.Size(217, 50);
             this.lblChuyentien.TabIndex = 7;
@@ -199,10 +191,10 @@
             // 
             this.picBoxTienich.BackColor = System.Drawing.Color.LightBlue;
             this.picBoxTienich.Image = global::DOAN_Nhom4.Properties.Resources.plugin;
-            this.picBoxTienich.Location = new System.Drawing.Point(507, 360);
-            this.picBoxTienich.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxTienich.Location = new System.Drawing.Point(816, 578);
+            this.picBoxTienich.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.picBoxTienich.Name = "picBoxTienich";
-            this.picBoxTienich.Size = new System.Drawing.Size(150, 111);
+            this.picBoxTienich.Size = new System.Drawing.Size(243, 177);
             this.picBoxTienich.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxTienich.TabIndex = 15;
             this.picBoxTienich.TabStop = false;
@@ -214,8 +206,8 @@
             this.lblTienich.BackColor = System.Drawing.Color.LightBlue;
             this.lblTienich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTienich.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTienich.Location = new System.Drawing.Point(510, 493);
-            this.lblTienich.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTienich.Location = new System.Drawing.Point(873, 817);
+            this.lblTienich.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTienich.Name = "lblTienich";
             this.lblTienich.Size = new System.Drawing.Size(147, 50);
             this.lblTienich.TabIndex = 16;
@@ -226,10 +218,10 @@
             // 
             this.picBoxHotro.BackColor = System.Drawing.Color.Wheat;
             this.picBoxHotro.Image = global::DOAN_Nhom4.Properties.Resources.z4148207980118_554ba383f10cf1052b36c9ab12b93595;
-            this.picBoxHotro.Location = new System.Drawing.Point(507, 714);
-            this.picBoxHotro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxHotro.Location = new System.Drawing.Point(825, 1141);
+            this.picBoxHotro.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.picBoxHotro.Name = "picBoxHotro";
-            this.picBoxHotro.Size = new System.Drawing.Size(154, 107);
+            this.picBoxHotro.Size = new System.Drawing.Size(251, 171);
             this.picBoxHotro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxHotro.TabIndex = 17;
             this.picBoxHotro.TabStop = false;
@@ -240,8 +232,8 @@
             this.lblHotro.AutoSize = true;
             this.lblHotro.BackColor = System.Drawing.Color.Wheat;
             this.lblHotro.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHotro.Location = new System.Drawing.Point(516, 849);
-            this.lblHotro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHotro.Location = new System.Drawing.Point(882, 1372);
+            this.lblHotro.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblHotro.Name = "lblHotro";
             this.lblHotro.Size = new System.Drawing.Size(128, 50);
             this.lblHotro.TabIndex = 18;
@@ -252,22 +244,23 @@
             // 
             this.picBoxNguoidung.BackColor = System.Drawing.Color.MistyRose;
             this.picBoxNguoidung.Image = global::DOAN_Nhom4.Properties.Resources._11757;
-            this.picBoxNguoidung.Location = new System.Drawing.Point(-50, 2);
-            this.picBoxNguoidung.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxNguoidung.Location = new System.Drawing.Point(-82, 2);
+            this.picBoxNguoidung.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.picBoxNguoidung.Name = "picBoxNguoidung";
-            this.picBoxNguoidung.Size = new System.Drawing.Size(1723, 1005);
+            this.picBoxNguoidung.Size = new System.Drawing.Size(2801, 1609);
             this.picBoxNguoidung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxNguoidung.TabIndex = 0;
             this.picBoxNguoidung.TabStop = false;
+            this.picBoxNguoidung.Click += new System.EventHandler(this.picBoxNguoidung_Click);
             // 
             // picBoxCaidat
             // 
             this.picBoxCaidat.BackColor = System.Drawing.Color.Transparent;
             this.picBoxCaidat.Image = global::DOAN_Nhom4.Properties.Resources.settings;
-            this.picBoxCaidat.Location = new System.Drawing.Point(143, 2);
-            this.picBoxCaidat.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxCaidat.Location = new System.Drawing.Point(196, 2);
+            this.picBoxCaidat.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.picBoxCaidat.Name = "picBoxCaidat";
-            this.picBoxCaidat.Size = new System.Drawing.Size(80, 76);
+            this.picBoxCaidat.Size = new System.Drawing.Size(130, 122);
             this.picBoxCaidat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxCaidat.TabIndex = 19;
             this.picBoxCaidat.TabStop = false;
@@ -278,8 +271,8 @@
             this.lblXinchao.BackColor = System.Drawing.Color.Transparent;
             this.lblXinchao.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblXinchao.ForeColor = System.Drawing.Color.Black;
-            this.lblXinchao.Location = new System.Drawing.Point(104, 34);
-            this.lblXinchao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblXinchao.Location = new System.Drawing.Point(169, 53);
+            this.lblXinchao.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblXinchao.Name = "lblXinchao";
             this.lblXinchao.Size = new System.Drawing.Size(509, 57);
             this.lblXinchao.TabIndex = 20;
@@ -287,10 +280,11 @@
             // 
             // picBoxTaikhoan
             // 
-            this.picBoxTaikhoan.Image = global::DOAN_Nhom4.Properties.Resources.user;
-            this.picBoxTaikhoan.Location = new System.Drawing.Point(185, 3);
+            this.picBoxTaikhoan.Image = global::DOAN_Nhom4.Properties.Resources.user1;
+            this.picBoxTaikhoan.Location = new System.Drawing.Point(240, 4);
+            this.picBoxTaikhoan.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.picBoxTaikhoan.Name = "picBoxTaikhoan";
-            this.picBoxTaikhoan.Size = new System.Drawing.Size(80, 69);
+            this.picBoxTaikhoan.Size = new System.Drawing.Size(130, 116);
             this.picBoxTaikhoan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxTaikhoan.TabIndex = 21;
             this.picBoxTaikhoan.TabStop = false;
@@ -300,7 +294,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 12);
+            this.label1.Location = new System.Drawing.Point(31, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 45);
             this.label1.TabIndex = 22;
@@ -311,9 +306,10 @@
             this.pnlTaikhoan.BackColor = System.Drawing.Color.Transparent;
             this.pnlTaikhoan.Controls.Add(this.label1);
             this.pnlTaikhoan.Controls.Add(this.picBoxTaikhoan);
-            this.pnlTaikhoan.Location = new System.Drawing.Point(1033, 34);
+            this.pnlTaikhoan.Location = new System.Drawing.Point(1981, 55);
+            this.pnlTaikhoan.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.pnlTaikhoan.Name = "pnlTaikhoan";
-            this.pnlTaikhoan.Size = new System.Drawing.Size(268, 75);
+            this.pnlTaikhoan.Size = new System.Drawing.Size(373, 124);
             this.pnlTaikhoan.TabIndex = 23;
             // 
             // pnlCaidat
@@ -321,16 +317,18 @@
             this.pnlCaidat.BackColor = System.Drawing.Color.Transparent;
             this.pnlCaidat.Controls.Add(this.label3);
             this.pnlCaidat.Controls.Add(this.picBoxCaidat);
-            this.pnlCaidat.Location = new System.Drawing.Point(1372, 34);
+            this.pnlCaidat.Location = new System.Drawing.Point(2356, 53);
+            this.pnlCaidat.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.pnlCaidat.Name = "pnlCaidat";
-            this.pnlCaidat.Size = new System.Drawing.Size(226, 78);
+            this.pnlCaidat.Size = new System.Drawing.Size(326, 126);
             this.pnlCaidat.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(3, 17);
+            this.label3.Location = new System.Drawing.Point(38, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 45);
             this.label3.TabIndex = 22;
@@ -346,10 +344,10 @@
             this.btnTienich.FlatAppearance.BorderSize = 0;
             this.btnTienich.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTienich.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnTienich.Location = new System.Drawing.Point(437, 324);
-            this.btnTienich.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnTienich.Location = new System.Drawing.Point(709, 518);
+            this.btnTienich.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.btnTienich.Name = "btnTienich";
-            this.btnTienich.Size = new System.Drawing.Size(297, 260);
+            this.btnTienich.Size = new System.Drawing.Size(483, 416);
             this.btnTienich.TabIndex = 26;
             this.btnTienich.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTienich.TextColor = System.Drawing.Color.SteelBlue;
@@ -360,68 +358,29 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.panel1.Location = new System.Drawing.Point(803, 322);
+            this.panel1.Location = new System.Drawing.Point(1306, 514);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 606);
+            this.panel1.Size = new System.Drawing.Size(17, 971);
             this.panel1.TabIndex = 27;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(883, 322);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(697, 604);
-            this.panel2.TabIndex = 29;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DOAN_Nhom4.Properties.Resources.bannerto_km;
-            this.pictureBox4.Location = new System.Drawing.Point(373, 156);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(321, 199);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.Sacombank_ChungChiTienGuiSacombank_800;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 402);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(318, 199);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.photo_1_1648047934861207346163;
-            this.pictureBox2.Location = new System.Drawing.Point(373, 405);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(321, 199);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.hinh_ctkm_pay_co_hoi_thuong_ga_5724_7940_1649171141;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 156);
+            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources._63455e779feb863455e779feb9166549055163455e779feb663455e779feb7;
+            this.pictureBox1.Location = new System.Drawing.Point(1449, 1160);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(570, 325);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FrmNguoidung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1657, 977);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1110, 705);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHotro);
             this.Controls.Add(this.picBoxHotro);
@@ -440,7 +399,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHotro);
             this.Controls.Add(this.picBoxNguoidung);
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmNguoidung";
@@ -458,10 +417,6 @@
             this.pnlTaikhoan.PerformLayout();
             this.pnlCaidat.ResumeLayout(false);
             this.pnlCaidat.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -491,10 +446,6 @@
         private Label label3;
         private CustomButton.VBButton btnTienich;
         private Panel panel1;
-        private Panel panel2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
         private PictureBox pictureBox1;
     }
 }
