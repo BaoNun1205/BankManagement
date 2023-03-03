@@ -17,7 +17,11 @@
             pnlCaidat.Parent = picBoxNguoidung;
             pnlCaidat.BackColor = Color.Transparent;
 
-            
+            pnlTKhoan.Parent = picBoxNguoidung;
+            pnlTKhoan.BackColor = Color.Transparent;
+
+            pnlCĐat.Parent = picBoxNguoidung;
+            pnlCĐat.BackColor = Color.Transparent;
 
 
         }
