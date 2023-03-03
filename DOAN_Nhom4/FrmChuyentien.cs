@@ -40,9 +40,9 @@ namespace DOAN_Nhom4
 
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-           // FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien();
+            FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien();
             this.Hide();
-            //frmxacnhan.ShowDialog();
+            frmxacnhan.ShowDialog();
             this.Close();
         }
     }
