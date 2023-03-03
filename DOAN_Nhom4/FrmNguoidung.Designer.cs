@@ -50,6 +50,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnTienich = new CustomButton.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChuyentien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTienich)).BeginInit();
@@ -59,6 +64,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTaikhoan)).BeginInit();
             this.pnlTaikhoan.SuspendLayout();
             this.pnlCaidat.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnChuyentien
@@ -240,7 +250,7 @@
             // 
             // picBoxNguoidung
             // 
-            this.picBoxNguoidung.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxNguoidung.BackColor = System.Drawing.Color.MistyRose;
             this.picBoxNguoidung.Image = global::DOAN_Nhom4.Properties.Resources._11757;
             this.picBoxNguoidung.Location = new System.Drawing.Point(-50, 2);
             this.picBoxNguoidung.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -349,17 +359,69 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.BackColor = System.Drawing.Color.LightSalmon;
             this.panel1.Location = new System.Drawing.Point(803, 322);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 606);
             this.panel1.TabIndex = 27;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(883, 322);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(697, 604);
+            this.panel2.TabIndex = 29;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DOAN_Nhom4.Properties.Resources.bannerto_km;
+            this.pictureBox4.Location = new System.Drawing.Point(373, 156);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(321, 199);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.Sacombank_ChungChiTienGuiSacombank_800;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 402);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(318, 199);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.photo_1_1648047934861207346163;
+            this.pictureBox2.Location = new System.Drawing.Point(373, 405);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(321, 199);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.hinh_ctkm_pay_co_hoi_thuong_ga_5724_7940_1649171141;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 156);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(318, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmNguoidung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1657, 977);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHotro);
             this.Controls.Add(this.picBoxHotro);
@@ -396,6 +458,11 @@
             this.pnlTaikhoan.PerformLayout();
             this.pnlCaidat.ResumeLayout(false);
             this.pnlCaidat.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +491,10 @@
         private Label label3;
         private CustomButton.VBButton btnTienich;
         private Panel panel1;
+        private Panel panel2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
     }
 }

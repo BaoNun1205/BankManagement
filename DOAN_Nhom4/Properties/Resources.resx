@@ -124,8 +124,14 @@
   <data name="amazing-animal-beautiful-beautifull" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\amazing-animal-beautiful-beautifull.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="11757" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="0106_hinh-nen-4k-may-tinh11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0106_hinh-nen-4k-may-tinh11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sacombank_ChungChiTienGuiSacombank_800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sacombank_ChungChiTienGuiSacombank_800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="z4148207980118_554ba383f10cf1052b36c9ab12b93595" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4148207980118_554ba383f10cf1052b36c9ab12b93595.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +154,11 @@
   <data name="pexels-photo-1287145" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-photo-1287145.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-1649171141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-16491711411.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo-1-1648047934861207346163" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo-1-16480479348612073461631.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
