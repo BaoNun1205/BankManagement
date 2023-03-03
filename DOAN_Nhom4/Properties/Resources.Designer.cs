@@ -133,19 +133,9 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap download_2 {
+        internal static System.Drawing.Bitmap hinh_ctkm_pay_co_hoi_thuong_ga_5724_7940_1649171141 {
             get {
-                object obj = ResourceManager.GetObject("download_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image1 {
-            get {
-                object obj = ResourceManager.GetObject("Image1", resourceCulture);
+                object obj = ResourceManager.GetObject("hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-1649171141", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
