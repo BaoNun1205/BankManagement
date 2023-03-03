@@ -1,4 +1,4 @@
-namespace DOAN_Nhom4
+﻿namespace DOAN_Nhom4
 {
     public partial class FrmNguoidung : Form
     {
@@ -18,6 +18,8 @@ namespace DOAN_Nhom4
             pnlCaidat.BackColor = Color.Transparent;
 
             
+
+
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
@@ -100,6 +102,26 @@ namespace DOAN_Nhom4
         private void lblTietkiem_MouseMove(object sender, MouseEventArgs e)
         {
             btnTietkiem.BorderColor = Color.LightSalmon;
+        }
+
+        private void btnHotro_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnHotro.BorderColor = Color.LightSalmon;
+        }
+
+        private void btnHotro_MouseLeave(object sender, EventArgs e)
+        {
+            btnHotro.BorderColor = Color.Transparent;
+        }
+
+        private void picBoxHotro_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnHotro.BorderColor = Color.LightSalmon;
+        }
+
+        private void lblHotro_Move(object sender, EventArgs e)
+        {
+            btnHotro.BorderColor = Color.LightSalmon;
         }
     }
 }

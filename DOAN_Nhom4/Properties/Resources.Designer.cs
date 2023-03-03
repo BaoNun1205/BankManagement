@@ -331,5 +331,25 @@ namespace DOAN_Nhom4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4152507464422_56b6eff8efd0dc3c997d872cb3fe1ef9 {
+            get {
+                object obj = ResourceManager.GetObject("z4152507464422_56b6eff8efd0dc3c997d872cb3fe1ef9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4152520602606_09f2df787dbb2579775447a7d5da8857 {
+            get {
+                object obj = ResourceManager.GetObject("z4152520602606_09f2df787dbb2579775447a7d5da8857", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

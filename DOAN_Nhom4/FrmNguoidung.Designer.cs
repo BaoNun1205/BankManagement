@@ -38,8 +38,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblHotro = new System.Windows.Forms.Label();
+            this.picBoxHotro = new System.Windows.Forms.PictureBox();
             this.lblTietkiem = new System.Windows.Forms.Label();
             this.picBoxTietkiem = new System.Windows.Forms.PictureBox();
             this.lblTienich = new System.Windows.Forms.Label();
@@ -48,11 +48,11 @@
             this.picBoxChuyentien = new System.Windows.Forms.PictureBox();
             this.btnTietkiem = new CustomButton.VBButton();
             this.btnTienich = new CustomButton.VBButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlCĐat = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnChuyentien = new CustomButton.VBButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlTKhoan = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblXinchao = new System.Windows.Forms.Label();
@@ -65,13 +65,13 @@
             this.pnlCaidat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxHotro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTienich)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChuyentien)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlCĐat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.pnlTKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNguoidung)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +157,7 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.z4152520602606_09f2df787dbb2579775447a7d5da8857;
             this.pictureBox2.Location = new System.Drawing.Point(939, 656);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(636, 260);
@@ -168,6 +169,7 @@
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.z4152507464422_56b6eff8efd0dc3c997d872cb3fe1ef9;
             this.pictureBox3.Location = new System.Drawing.Point(939, 312);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(636, 262);
@@ -183,31 +185,33 @@
             this.panel1.Size = new System.Drawing.Size(10, 606);
             this.panel1.TabIndex = 47;
             // 
-            // label4
+            // lblHotro
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Wheat;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(545, 837);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 50);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Hỗ trợ";
+            this.lblHotro.AutoSize = true;
+            this.lblHotro.BackColor = System.Drawing.Color.Wheat;
+            this.lblHotro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHotro.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHotro.Location = new System.Drawing.Point(545, 837);
+            this.lblHotro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHotro.Name = "lblHotro";
+            this.lblHotro.Size = new System.Drawing.Size(128, 50);
+            this.lblHotro.TabIndex = 42;
+            this.lblHotro.Text = "Hỗ trợ";
+            this.lblHotro.Move += new System.EventHandler(this.lblHotro_Move);
             // 
-            // pictureBox4
+            // picBoxHotro
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Wheat;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::DOAN_Nhom4.Properties.Resources.z4148207980118_554ba383f10cf1052b36c9ab12b93595;
-            this.pictureBox4.Location = new System.Drawing.Point(536, 702);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(154, 107);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 41;
-            this.pictureBox4.TabStop = false;
+            this.picBoxHotro.BackColor = System.Drawing.Color.Wheat;
+            this.picBoxHotro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxHotro.Image = global::DOAN_Nhom4.Properties.Resources.z4148207980118_554ba383f10cf1052b36c9ab12b93595;
+            this.picBoxHotro.Location = new System.Drawing.Point(536, 702);
+            this.picBoxHotro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxHotro.Name = "picBoxHotro";
+            this.picBoxHotro.Size = new System.Drawing.Size(154, 107);
+            this.picBoxHotro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxHotro.TabIndex = 41;
+            this.picBoxHotro.TabStop = false;
+            this.picBoxHotro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picBoxHotro_MouseMove);
             // 
             // lblTietkiem
             // 
@@ -340,15 +344,15 @@
             this.btnTienich.MouseLeave += new System.EventHandler(this.btnTienich_MouseLeave);
             this.btnTienich.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnTienich_MouseMove);
             // 
-            // panel2
+            // pnlCĐat
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Location = new System.Drawing.Point(1401, 22);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 78);
-            this.panel2.TabIndex = 45;
+            this.pnlCĐat.BackColor = System.Drawing.Color.Transparent;
+            this.pnlCĐat.Controls.Add(this.label6);
+            this.pnlCĐat.Controls.Add(this.pictureBox6);
+            this.pnlCĐat.Location = new System.Drawing.Point(1401, 22);
+            this.pnlCĐat.Name = "pnlCĐat";
+            this.pnlCĐat.Size = new System.Drawing.Size(226, 78);
+            this.pnlCĐat.TabIndex = 45;
             // 
             // label6
             // 
@@ -398,15 +402,15 @@
             this.btnChuyentien.MouseLeave += new System.EventHandler(this.btnChuyentien_MouseLeave);
             this.btnChuyentien.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnChuyentien_MouseMove);
             // 
-            // panel3
+            // pnlTKhoan
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Location = new System.Drawing.Point(1127, 22);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(268, 78);
-            this.panel3.TabIndex = 44;
+            this.pnlTKhoan.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTKhoan.Controls.Add(this.label7);
+            this.pnlTKhoan.Controls.Add(this.pictureBox7);
+            this.pnlTKhoan.Location = new System.Drawing.Point(1127, 22);
+            this.pnlTKhoan.Name = "pnlTKhoan";
+            this.pnlTKhoan.Size = new System.Drawing.Size(268, 78);
+            this.pnlTKhoan.TabIndex = 44;
             // 
             // label7
             // 
@@ -423,7 +427,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::DOAN_Nhom4.Properties.Resources.user;
+            this.pictureBox7.Image = global::DOAN_Nhom4.Properties.Resources.user1;
             this.pictureBox7.Location = new System.Drawing.Point(185, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(80, 72);
@@ -471,6 +475,8 @@
             this.btnHotro.TabIndex = 35;
             this.btnHotro.TextColor = System.Drawing.Color.White;
             this.btnHotro.UseVisualStyleBackColor = false;
+            this.btnHotro.MouseLeave += new System.EventHandler(this.btnHotro_MouseLeave);
+            this.btnHotro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnHotro_MouseMove);
             // 
             // picBoxNguoidung
             // 
@@ -492,8 +498,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.lblHotro);
+            this.Controls.Add(this.picBoxHotro);
             this.Controls.Add(this.lblTietkiem);
             this.Controls.Add(this.picBoxTietkiem);
             this.Controls.Add(this.lblTienich);
@@ -502,9 +508,9 @@
             this.Controls.Add(this.picBoxChuyentien);
             this.Controls.Add(this.btnTietkiem);
             this.Controls.Add(this.btnTienich);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlCĐat);
             this.Controls.Add(this.btnChuyentien);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlTKhoan);
             this.Controls.Add(this.lblXinchao);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnHotro);
@@ -527,15 +533,15 @@
             this.pnlCaidat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxHotro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTienich)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChuyentien)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlCĐat.ResumeLayout(false);
+            this.pnlCĐat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlTKhoan.ResumeLayout(false);
+            this.pnlTKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNguoidung)).EndInit();
             this.ResumeLayout(false);
@@ -554,8 +560,8 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Panel panel1;
-        private Label label4;
-        private PictureBox pictureBox4;
+        private Label lblHotro;
+        private PictureBox picBoxHotro;
         private Label lblTietkiem;
         private PictureBox picBoxTietkiem;
         private Label lblTienich;
@@ -564,11 +570,11 @@
         private PictureBox picBoxChuyentien;
         private CustomButton.VBButton btnTietkiem;
         private CustomButton.VBButton btnTienich;
-        private Panel panel2;
+        private Panel pnlCĐat;
         private Label label6;
         private PictureBox pictureBox6;
         private CustomButton.VBButton btnChuyentien;
-        private Panel panel3;
+        private Panel pnlTKhoan;
         private Label label7;
         private PictureBox pictureBox7;
         private Label lblXinchao;
