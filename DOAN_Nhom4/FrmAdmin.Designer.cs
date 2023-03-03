@@ -201,8 +201,10 @@
             this.gvQLKH.Name = "gvQLKH";
             this.gvQLKH.RowHeadersWidth = 51;
             this.gvQLKH.RowTemplate.Height = 29;
+            this.gvQLKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvQLKH.Size = new System.Drawing.Size(865, 268);
             this.gvQLKH.TabIndex = 18;
+            this.gvQLKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvQLKH_CellContentClick);
             // 
             // btn_sua
             // 

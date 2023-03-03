@@ -86,5 +86,18 @@ namespace DOAN_Nhom4
             txt_CCCD.Text = "";
             txt_SDT.Text = "";
         }
+
+        private void gvQLKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            row = gvQLKH.Rows[e.RowIndex];
+            txt_soTK.Text = Convert.ToString(row.Cells[0].Value);
+            txt_tenTK.Text = Convert.ToString(row.Cells[1].Value);
+            txt_tenDN.Text = Convert.ToString(row.Cells[2].Value);
+            txt_Password.Text = Convert.ToString(row.Cells[3].Value);
+            txt_NgaySinh.Text = Convert.ToString(row.Cells[4].Value);
+            txt_CCCD.Text = Convert.ToString(row.Cells[5].Value);
+            txt_SDT.Text = Convert.ToString(row.Cells[6].Value);
+        }
     }
 }

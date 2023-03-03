@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
                 new FrmAdmin().Show();
                 this.Hide();
             }
-            else
+            else 
             {
                 MessageBox.Show("The user name or password you entered is incorrect, try again");
                 txtUserName.Clear();
@@ -60,7 +60,7 @@ namespace DOAN_Nhom4
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
 
-            txtPass.UseSystemPasswordChar = false;
+            //txtPass.UseSystemPasswordChar = false;
         }
 
         private void cb_showpass_CheckedChanged(object sender, EventArgs e)
