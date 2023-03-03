@@ -19,13 +19,29 @@ namespace DOAN_Nhom4
 
             
         }
-
-        private void picBoxChuyentien_MouseMove(object sender, MouseEventArgs e)
+        private void btnChuyentien_Click(object sender, EventArgs e)
         {
-            btnChuyentien.BorderColor = Color.Aqua;
+            FrmChuyentien frmchuyentien = new FrmChuyentien();
+            this.Hide();
+            frmchuyentien.ShowDialog();
+            this.Close();
         }
 
+        private void picBoxChuyentien_Click(object sender, EventArgs e)
+        {
+            FrmChuyentien frmchuyentien = new FrmChuyentien();
+            this.Hide();
+            frmchuyentien.ShowDialog();
+            this.Close();
+        }
 
+        private void lblChuyentien_Click(object sender, EventArgs e)
+        {
+            FrmChuyentien frmchuyentien = new FrmChuyentien();
+            this.Hide();
+            frmchuyentien.ShowDialog();
+            this.Close();
+        }
 
         private void btnChuyentien_MouseMove(object sender, MouseEventArgs e)
         {
@@ -35,6 +51,11 @@ namespace DOAN_Nhom4
         private void btnChuyentien_MouseLeave(object sender, EventArgs e)
         {
             btnChuyentien.BorderColor = Color.Transparent;
+        }
+
+        private void picBoxChuyentien_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnChuyentien.BorderColor = Color.Aqua;
         }
 
         private void lblChuyentien_MouseMove(object sender, MouseEventArgs e)
@@ -61,7 +82,6 @@ namespace DOAN_Nhom4
         {
             btnTienich.BorderColor = Color.Aqua;
         }
-
         private void btnTietkiem_MouseMove(object sender, MouseEventArgs e)
         {
             btnTietkiem.BorderColor = Color.LightSalmon;
@@ -72,6 +92,14 @@ namespace DOAN_Nhom4
             btnTietkiem.BorderColor = Color.Transparent;
         }
 
+        private void picBoxTietkiem_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnTietkiem.BorderColor = Color.LightSalmon;
+        }
 
+        private void lblTietkiem_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnTietkiem.BorderColor = Color.LightSalmon;
+        }
     }
 }

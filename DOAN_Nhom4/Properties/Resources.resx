@@ -124,8 +124,8 @@
   <data name="amazing-animal-beautiful-beautifull" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\amazing-animal-beautiful-beautifull.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ngan-hang-so-la-gi-1-scaled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ngan-hang-so-la-gi-1-scaled.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="334095953_575468774630032_6155504514543518078_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\334095953_575468774630032_6155504514543518078_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="0106_hinh-nen-4k-may-tinh11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0106_hinh-nen-4k-may-tinh11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +133,11 @@
   <data name="Sacombank_ChungChiTienGuiSacombank_800" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sacombank_ChungChiTienGuiSacombank_800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ngan-hang-so-la-gi-1-scaled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ngan-hang-so-la-gi-1-scaled.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="z4148207980118_554ba383f10cf1052b36c9ab12b93595" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4148207980118_554ba383f10cf1052b36c9ab12b93595.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bannerto_km" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\bannerto_km.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="anh-nen-trang-cho-may-tinh_013859682" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anh-nen-trang-cho-may-tinh_013859682.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +145,17 @@
   <data name="kisspng-computer-icons-bank-icon-design-screenshot-bank-5abb34cfcb4982.8424202015222181918327" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-bank-icon-design-screenshot-bank-5abb34cfcb4982.8424202015222181918327.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="334095953_575468774630032_6155504514543518078_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\334095953_575468774630032_6155504514543518078_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Image1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_11757" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\11757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-johannes-plenio-1632788" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-johannes-plenio-1632788.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngtree-double-direction-arrow-icon-png-image_971624" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-double-direction-arrow-icon-png-image_971624.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +166,11 @@
   <data name="kisspng-computer-icons-icon-design-download-swap-5b23b37f3e9725.9982512715290663672564" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-icon-design-download-swap-5b23b37f3e9725.9982512715290663672564.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-photo-1287145" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-photo-1287145.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bannerto_km" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\bannerto_km.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-1649171141" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-16491711411.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,16 +184,19 @@
   <data name="plugin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plugin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="z4148094277365_6ba49332b7154e507b2ae8ab24285f6a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\z4148094277365_6ba49332b7154e507b2ae8ab24285f6a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-photo-1287145" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-photo-1287145.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="63455e779feb863455e779feb9166549055163455e779feb663455e779feb7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\63455e779feb863455e779feb9166549055163455e779feb663455e779feb7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Image1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="z4148094277365_6ba49332b7154e507b2ae8ab24285f6a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z4148094277365_6ba49332b7154e507b2ae8ab24285f6a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="left-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

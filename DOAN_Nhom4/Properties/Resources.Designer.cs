@@ -153,6 +153,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Image1 {
+            get {
+                object obj = ResourceManager.GetObject("Image1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key {
             get {
                 object obj = ResourceManager.GetObject("key", resourceCulture);
@@ -185,6 +195,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap left_arrow {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ngan_hang_so_la_gi_1_scaled {
             get {
                 object obj = ResourceManager.GetObject("Ngan-hang-so-la-gi-1-scaled", resourceCulture);
@@ -198,6 +218,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap pexels_bella_white_635279 {
             get {
                 object obj = ResourceManager.GetObject("pexels-bella-white-635279", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_johannes_plenio_1632788 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-johannes-plenio-1632788", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
