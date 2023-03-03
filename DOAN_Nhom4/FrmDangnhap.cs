@@ -30,8 +30,10 @@ namespace DOAN_Nhom4
                 {
                     MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                new FrmNguoidung().Show();
+                FrmNguoidung frmnguoidung = new FrmNguoidung();
                 this.Hide();
+                frmnguoidung.ShowDialog();              
+                this.Close();
             }
             else
             {
