@@ -17,7 +17,6 @@ namespace DOAN_Nhom4
             InitializeComponent();
             pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
             pnlXacnhanChuyentien.BackColor = Color.Transparent;
-
             this.txtMatkhau.PasswordChar = '*';
         }
 
