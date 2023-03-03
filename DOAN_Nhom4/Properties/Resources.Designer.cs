@@ -93,6 +93,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _63455e779feb863455e779feb9166549055163455e779feb663455e779feb7 {
+            get {
+                object obj = ResourceManager.GetObject("63455e779feb863455e779feb9166549055163455e779feb663455e779feb7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap amazing_animal_beautiful_beautifull {
             get {
                 object obj = ResourceManager.GetObject("amazing-animal-beautiful-beautifull", resourceCulture);
@@ -258,6 +268,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user1 {
+            get {
+                object obj = ResourceManager.GetObject("user1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -106,5 +106,10 @@ namespace DOAN_Nhom4
         {
 
         }
+
+        private void picBoxNguoidung_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
