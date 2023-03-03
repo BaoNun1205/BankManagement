@@ -72,44 +72,6 @@ namespace DOAN_Nhom4
             btnTietkiem.BorderColor = Color.Transparent;
         }
 
-        private void picBoxTietkiem_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnTietkiem.BorderColor = Color.LightSalmon;
-        }
 
-        private void lblTietkiem_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnTietkiem.BorderColor = Color.LightSalmon;
-        }
-
-        private void btnHotro_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnHotro.BorderColor = Color.LightSalmon;
-        }
-
-        private void btnHotro_MouseLeave(object sender, EventArgs e)
-        {
-            btnHotro.BorderColor = Color.Transparent;
-        }
-
-        private void picBoxHotro_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnHotro.BorderColor = Color.LightSalmon;
-        }
-
-        private void lblHotro_MouseMove(object sender, MouseEventArgs e)
-        {
-            btnHotro.BorderColor = Color.LightSalmon;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picBoxNguoidung_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
