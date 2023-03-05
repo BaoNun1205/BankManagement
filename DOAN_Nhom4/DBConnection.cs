@@ -97,5 +97,24 @@ namespace DOAN_Nhom4
             Regex regex = new Regex(strRegex);
             return regex.IsMatch(numberphone);
         }
+
+        public bool KiemTraTonTai(string thongtin)
+        {
+            string query = "SELECT * FROM YourTable WHERE YourColumn = @YourValue";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@YourValue", thongtin);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

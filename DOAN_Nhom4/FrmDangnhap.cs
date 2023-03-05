@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangnhap : Form
     {
+        DBConnection dBConnection = new DBConnection();
         public FrmDangnhap()
         {
             InitializeComponent();
@@ -56,10 +58,11 @@ namespace DOAN_Nhom4
             if (dg == DialogResult.Yes)
                 Application.Exit();
         }
-
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "admin" && txtPass.Text == "admin")
+
+
+            if (dBConnection.KiemTraTonTai(txtUserName.Text) == true && dBConnection.KiemTraTonTai(txtPass.Text) == true)
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
