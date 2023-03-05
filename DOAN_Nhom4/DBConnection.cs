@@ -56,15 +56,16 @@ namespace DOAN_Nhom4
             }
         }
 
-        public KhachHang LayKhachHang(KhachHang kh)
+        public KhachHang LayKhachHang(string cotGiaTri, string giaTri)
         {
             KhachHang khachHang = new KhachHang();
             try
             {
-                string soTK = kh.SoTK;
+                string GiaTri = giaTri;
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM KhachHang WHERE SoTK = @SoTk", conn);
-                command.Parameters.AddWithValue("@SoTk", kh.SoTK);
+                string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = @SoTk", cotGiaTri);
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@SoTk", GiaTri);
 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -73,7 +74,7 @@ namespace DOAN_Nhom4
                     khachHang.TenTK = reader.GetString(1);
                     khachHang.TenDN = reader.GetString(2);
                     khachHang.Pass = reader.GetString(3);
-                    khachHang.NgaySinh = reader.GetString(4);
+                    khachHang.NgaySinh = reader.GetDateTime(4);
                     khachHang.Cccd = reader.GetString(5);
                     khachHang.Sdt = reader.GetString(6);
                     khachHang.SoDu = reader.GetInt64(7).ToString();
