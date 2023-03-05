@@ -11,12 +11,6 @@
             lblXinchao.Parent = picBoxNguoidung;
             lblXinchao.BackColor = Color.Transparent;
 
-            pnlTaikhoan.Parent = picBoxNguoidung;
-            pnlTaikhoan.BackColor = Color.Transparent;
-
-            pnlCaidat.Parent = picBoxNguoidung;
-            pnlCaidat.BackColor = Color.Transparent;
-
             pnlTKhoan.Parent = picBoxNguoidung;
             pnlTKhoan.BackColor = Color.Transparent;
 
