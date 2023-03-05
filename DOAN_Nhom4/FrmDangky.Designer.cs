@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.txt_CCCD = new System.Windows.Forms.TextBox();
-            this.txt_Password = new System.Windows.Forms.TextBox();
-            this.txt_tenDN = new System.Windows.Forms.TextBox();
-            this.txt_tenTK = new System.Windows.Forms.TextBox();
-            this.txt_soTK = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
+            this.txtTenDN = new System.Windows.Forms.TextBox();
+            this.txtTenTK = new System.Windows.Forms.TextBox();
+            this.txtSoTK = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_NgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.timeNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,63 +44,63 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new CustomButton.VBButton();
-            this.vbButton1 = new CustomButton.VBButton();
+            this.btnXacnhan = new CustomButton.VBButton();
             this.SuspendLayout();
             // 
-            // txt_SDT
+            // txtSDT
             // 
-            this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SDT.Location = new System.Drawing.Point(331, 664);
-            this.txt_SDT.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(319, 39);
-            this.txt_SDT.TabIndex = 39;
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSDT.Location = new System.Drawing.Point(331, 664);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(319, 39);
+            this.txtSDT.TabIndex = 39;
             // 
-            // txt_CCCD
+            // txtCCCD
             // 
-            this.txt_CCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_CCCD.Location = new System.Drawing.Point(331, 583);
-            this.txt_CCCD.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_CCCD.Name = "txt_CCCD";
-            this.txt_CCCD.Size = new System.Drawing.Size(319, 39);
-            this.txt_CCCD.TabIndex = 38;
+            this.txtCCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCCCD.Location = new System.Drawing.Point(331, 583);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.Size = new System.Drawing.Size(319, 39);
+            this.txtCCCD.TabIndex = 38;
             // 
-            // txt_Password
+            // txtMatkhau
             // 
-            this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Password.Location = new System.Drawing.Point(331, 404);
-            this.txt_Password.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(313, 39);
-            this.txt_Password.TabIndex = 37;
+            this.txtMatkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMatkhau.Location = new System.Drawing.Point(331, 404);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(5);
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(313, 39);
+            this.txtMatkhau.TabIndex = 37;
             // 
-            // txt_tenDN
+            // txtTenDN
             // 
-            this.txt_tenDN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tenDN.Location = new System.Drawing.Point(331, 319);
-            this.txt_tenDN.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_tenDN.Name = "txt_tenDN";
-            this.txt_tenDN.Size = new System.Drawing.Size(313, 39);
-            this.txt_tenDN.TabIndex = 36;
+            this.txtTenDN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenDN.Location = new System.Drawing.Point(331, 319);
+            this.txtTenDN.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTenDN.Name = "txtTenDN";
+            this.txtTenDN.Size = new System.Drawing.Size(313, 39);
+            this.txtTenDN.TabIndex = 36;
             // 
-            // txt_tenTK
+            // txtTenTK
             // 
-            this.txt_tenTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tenTK.Location = new System.Drawing.Point(331, 241);
-            this.txt_tenTK.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_tenTK.Name = "txt_tenTK";
-            this.txt_tenTK.Size = new System.Drawing.Size(313, 39);
-            this.txt_tenTK.TabIndex = 34;
+            this.txtTenTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenTK.Location = new System.Drawing.Point(331, 241);
+            this.txtTenTK.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTenTK.Name = "txtTenTK";
+            this.txtTenTK.Size = new System.Drawing.Size(313, 39);
+            this.txtTenTK.TabIndex = 34;
             // 
-            // txt_soTK
+            // txtSoTK
             // 
-            this.txt_soTK.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_soTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_soTK.Location = new System.Drawing.Point(331, 170);
-            this.txt_soTK.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_soTK.Name = "txt_soTK";
-            this.txt_soTK.Size = new System.Drawing.Size(313, 39);
-            this.txt_soTK.TabIndex = 33;
+            this.txtSoTK.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSoTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoTK.Location = new System.Drawing.Point(331, 170);
+            this.txtSoTK.Margin = new System.Windows.Forms.Padding(5);
+            this.txtSoTK.Name = "txtSoTK";
+            this.txtSoTK.Size = new System.Drawing.Size(313, 39);
+            this.txtSoTK.TabIndex = 33;
             // 
             // label8
             // 
@@ -126,17 +126,17 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "CCCD";
             // 
-            // txt_NgaySinh
+            // timeNgaySinh
             // 
-            this.txt_NgaySinh.CustomFormat = "MM/dd/yyyy";
-            this.txt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_NgaySinh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_NgaySinh.Location = new System.Drawing.Point(331, 496);
-            this.txt_NgaySinh.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_NgaySinh.Name = "txt_NgaySinh";
-            this.txt_NgaySinh.Size = new System.Drawing.Size(313, 39);
-            this.txt_NgaySinh.TabIndex = 30;
-            this.txt_NgaySinh.Value = new System.DateTime(2023, 3, 2, 12, 30, 31, 0);
+            this.timeNgaySinh.CustomFormat = "MM/dd/yyyy";
+            this.timeNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeNgaySinh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.timeNgaySinh.Location = new System.Drawing.Point(331, 496);
+            this.timeNgaySinh.Margin = new System.Windows.Forms.Padding(5);
+            this.timeNgaySinh.Name = "timeNgaySinh";
+            this.timeNgaySinh.Size = new System.Drawing.Size(313, 39);
+            this.timeNgaySinh.TabIndex = 30;
+            this.timeNgaySinh.Value = new System.DateTime(2023, 3, 2, 12, 30, 31, 0);
             // 
             // label6
             // 
@@ -230,24 +230,25 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // vbButton1
+            // btnXacnhan
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.Transparent;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.vbButton1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.BorderRadius = 0;
-            this.vbButton1.BorderSize = 3;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.vbButton1.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vbButton1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.Location = new System.Drawing.Point(410, 763);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(240, 80);
-            this.vbButton1.TabIndex = 41;
-            this.vbButton1.Text = "Xác nhận";
-            this.vbButton1.TextColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btnXacnhan.BackColor = System.Drawing.Color.Transparent;
+            this.btnXacnhan.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnXacnhan.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.BorderRadius = 0;
+            this.btnXacnhan.BorderSize = 3;
+            this.btnXacnhan.FlatAppearance.BorderSize = 0;
+            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXacnhan.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnXacnhan.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.Location = new System.Drawing.Point(410, 763);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(240, 80);
+            this.btnXacnhan.TabIndex = 42;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.UseVisualStyleBackColor = false;
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // FrmDangky
             // 
@@ -255,17 +256,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(725, 966);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.btnXacnhan);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.txt_SDT);
-            this.Controls.Add(this.txt_CCCD);
-            this.Controls.Add(this.txt_Password);
-            this.Controls.Add(this.txt_tenDN);
-            this.Controls.Add(this.txt_tenTK);
-            this.Controls.Add(this.txt_soTK);
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtCCCD);
+            this.Controls.Add(this.txtMatkhau);
+            this.Controls.Add(this.txtTenDN);
+            this.Controls.Add(this.txtTenTK);
+            this.Controls.Add(this.txtSoTK);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txt_NgaySinh);
+            this.Controls.Add(this.timeNgaySinh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -282,15 +283,15 @@
 
         #endregion
 
-        private TextBox txt_SDT;
-        private TextBox txt_CCCD;
-        private TextBox txt_Password;
-        private TextBox txt_tenDN;
-        private TextBox txt_tenTK;
-        private TextBox txt_soTK;
+        private TextBox txtSDT;
+        private TextBox txtCCCD;
+        private TextBox txtMatkhau;
+        private TextBox txtTenDN;
+        private TextBox txtTenTK;
+        private TextBox txtSoTK;
         private Label label8;
         private Label label7;
-        private DateTimePicker txt_NgaySinh;
+        private DateTimePicker timeNgaySinh;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -298,6 +299,6 @@
         private Label label2;
         private Label label1;
         private CustomButton.VBButton btnHuy;
-        private CustomButton.VBButton vbButton1;
+        private CustomButton.VBButton btnXacnhan;
     }
 }

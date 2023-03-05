@@ -12,7 +12,7 @@ namespace DOAN_Nhom4
         private string tenTK;
         private string tenDN;
         private string pass;
-        private string ngaySinh;
+        private DateTime ngaySinh;
         private string cccd;
         private string sdt;
         private string soDu;
@@ -21,13 +21,13 @@ namespace DOAN_Nhom4
         public string TenTK { get => tenTK; set => tenTK = value; }
         public string TenDN { get => tenDN; set => tenDN = value; }
         public string Pass { get => pass; set => pass = value; }
-        public string NgaySinh { get => ngaySinh; set => ngaySinh = value; }
+        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
         public string Cccd { get => cccd; set => cccd = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string SoDu { get => soDu; set => soDu = value; }
 
         public KhachHang() { }
-        public KhachHang(string soTK, string tenTK, string tenDN, string pass, string ngaySinh, string cccd, string sdt, string soDu)
+        public KhachHang(string soTK, string tenTK, string tenDN, string pass, DateTime ngaySinh, string cccd, string sdt, string soDu)
         {
             this.soTK = soTK;
             this.tenTK = tenTK;
@@ -45,7 +45,7 @@ namespace DOAN_Nhom4
             this.TenTK = "";
             this.TenDN = "";
             this.pass = "";
-            this.NgaySinh = "";
+            this.NgaySinh = DateTime.Now;
             this.cccd = "";
             this.sdt = "";
             this.soDu = "";
