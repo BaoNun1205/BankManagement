@@ -24,7 +24,6 @@ namespace DOAN_Nhom4
             this.txtPass.PasswordChar = '*';
         }
 
-        
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
 

@@ -18,7 +18,6 @@ namespace DOAN_Nhom4
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
-
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {

@@ -22,9 +22,6 @@ namespace DOAN_Nhom4
             pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
             pnlXacnhanChuyentien.BackColor = Color.Transparent;
             this.txtMatkhau.PasswordChar = '*';
-            STK = stk;
-            SoTien = soTien;
-            LoiNhan = loiNhan;
         }
         KhachHangDAO khachHangDAO = new KhachHangDAO();
 
