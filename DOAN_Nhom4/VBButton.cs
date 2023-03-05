@@ -152,4 +152,8 @@ namespace CustomButton
                 borderRadius = this.Height;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> HieuEdit
