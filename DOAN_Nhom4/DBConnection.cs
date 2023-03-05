@@ -61,7 +61,6 @@ namespace DOAN_Nhom4
             KhachHang khachHang = new KhachHang();
             try
             {
-                string soTK = kh.SoTK;
                 conn.Open();
                 SqlCommand command = new SqlCommand("SELECT * FROM KhachHang WHERE SoTK = @SoTk", conn);
                 command.Parameters.AddWithValue("@SoTk", kh.SoTK);
