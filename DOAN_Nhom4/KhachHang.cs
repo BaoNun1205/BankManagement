@@ -7,7 +7,7 @@ using System.Numerics;
 
 namespace DOAN_Nhom4
 {
-    internal class KhachHang
+    public class KhachHang
     {
         private string soTK;
         private string tenTK;

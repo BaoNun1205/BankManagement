@@ -59,6 +59,8 @@
             this.btnHotro = new CustomButton.VBButton();
             this.picBoxNguoidung = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTenTK = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCaidat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTaikhoan)).BeginInit();
             this.pnlTaikhoan.SuspendLayout();
@@ -79,20 +81,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(676, 1331);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(364, 624);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 32);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 13;
             // 
             // picBoxCaidat
             // 
             this.picBoxCaidat.BackColor = System.Drawing.Color.Transparent;
             this.picBoxCaidat.Image = global::DOAN_Nhom4.Properties.Resources.settings;
-            this.picBoxCaidat.Location = new System.Drawing.Point(196, 2);
-            this.picBoxCaidat.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.picBoxCaidat.Location = new System.Drawing.Point(106, 1);
+            this.picBoxCaidat.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.picBoxCaidat.Name = "picBoxCaidat";
-            this.picBoxCaidat.Size = new System.Drawing.Size(130, 122);
+            this.picBoxCaidat.Size = new System.Drawing.Size(70, 57);
             this.picBoxCaidat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxCaidat.TabIndex = 19;
             this.picBoxCaidat.TabStop = false;
@@ -100,10 +101,10 @@
             // picBoxTaikhoan
             // 
             this.picBoxTaikhoan.Image = global::DOAN_Nhom4.Properties.Resources.user1;
-            this.picBoxTaikhoan.Location = new System.Drawing.Point(240, 4);
-            this.picBoxTaikhoan.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.picBoxTaikhoan.Location = new System.Drawing.Point(129, 2);
+            this.picBoxTaikhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxTaikhoan.Name = "picBoxTaikhoan";
-            this.picBoxTaikhoan.Size = new System.Drawing.Size(130, 116);
+            this.picBoxTaikhoan.Size = new System.Drawing.Size(70, 54);
             this.picBoxTaikhoan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxTaikhoan.TabIndex = 21;
             this.picBoxTaikhoan.TabStop = false;
@@ -113,10 +114,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(31, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(17, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 45);
+            this.label1.Size = new System.Drawing.Size(92, 23);
             this.label1.TabIndex = 22;
             this.label1.Text = "Tài khoản";
             // 
@@ -125,10 +125,10 @@
             this.pnlTaikhoan.BackColor = System.Drawing.Color.Transparent;
             this.pnlTaikhoan.Controls.Add(this.label1);
             this.pnlTaikhoan.Controls.Add(this.picBoxTaikhoan);
-            this.pnlTaikhoan.Location = new System.Drawing.Point(1981, 55);
-            this.pnlTaikhoan.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.pnlTaikhoan.Location = new System.Drawing.Point(1067, 26);
+            this.pnlTaikhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTaikhoan.Name = "pnlTaikhoan";
-            this.pnlTaikhoan.Size = new System.Drawing.Size(373, 124);
+            this.pnlTaikhoan.Size = new System.Drawing.Size(201, 58);
             this.pnlTaikhoan.TabIndex = 23;
             // 
             // pnlCaidat
@@ -136,20 +136,19 @@
             this.pnlCaidat.BackColor = System.Drawing.Color.Transparent;
             this.pnlCaidat.Controls.Add(this.label3);
             this.pnlCaidat.Controls.Add(this.picBoxCaidat);
-            this.pnlCaidat.Location = new System.Drawing.Point(2356, 53);
-            this.pnlCaidat.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.pnlCaidat.Location = new System.Drawing.Point(1269, 25);
+            this.pnlCaidat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCaidat.Name = "pnlCaidat";
-            this.pnlCaidat.Size = new System.Drawing.Size(326, 126);
+            this.pnlCaidat.Size = new System.Drawing.Size(176, 59);
             this.pnlCaidat.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(38, 39);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(20, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 45);
+            this.label3.Size = new System.Drawing.Size(68, 23);
             this.label3.TabIndex = 22;
             this.label3.Text = "Cài đặt";
             // 
@@ -158,9 +157,10 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.z4152520602606_09f2df787dbb2579775447a7d5da8857;
-            this.pictureBox2.Location = new System.Drawing.Point(939, 656);
+            this.pictureBox2.Location = new System.Drawing.Point(506, 308);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(636, 260);
+            this.pictureBox2.Size = new System.Drawing.Size(344, 124);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
@@ -170,9 +170,10 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.z4152507464422_56b6eff8efd0dc3c997d872cb3fe1ef9;
-            this.pictureBox3.Location = new System.Drawing.Point(939, 312);
+            this.pictureBox3.Location = new System.Drawing.Point(506, 146);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(636, 262);
+            this.pictureBox3.Size = new System.Drawing.Size(344, 125);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
@@ -183,10 +184,10 @@
             this.lblHotro.BackColor = System.Drawing.Color.Wheat;
             this.lblHotro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblHotro.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHotro.Location = new System.Drawing.Point(545, 837);
-            this.lblHotro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHotro.Location = new System.Drawing.Point(293, 392);
+            this.lblHotro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHotro.Name = "lblHotro";
-            this.lblHotro.Size = new System.Drawing.Size(128, 50);
+            this.lblHotro.Size = new System.Drawing.Size(65, 25);
             this.lblHotro.TabIndex = 42;
             this.lblHotro.Text = "Hỗ trợ";
             this.lblHotro.Move += new System.EventHandler(this.lblHotro_Move);
@@ -196,10 +197,10 @@
             this.picBoxHotro.BackColor = System.Drawing.Color.Wheat;
             this.picBoxHotro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxHotro.Image = global::DOAN_Nhom4.Properties.Resources.z4148207980118_554ba383f10cf1052b36c9ab12b93595;
-            this.picBoxHotro.Location = new System.Drawing.Point(536, 702);
-            this.picBoxHotro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxHotro.Location = new System.Drawing.Point(289, 329);
+            this.picBoxHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxHotro.Name = "picBoxHotro";
-            this.picBoxHotro.Size = new System.Drawing.Size(154, 107);
+            this.picBoxHotro.Size = new System.Drawing.Size(83, 50);
             this.picBoxHotro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxHotro.TabIndex = 41;
             this.picBoxHotro.TabStop = false;
@@ -211,10 +212,10 @@
             this.lblTietkiem.BackColor = System.Drawing.Color.Wheat;
             this.lblTietkiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTietkiem.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTietkiem.Location = new System.Drawing.Point(153, 837);
-            this.lblTietkiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTietkiem.Location = new System.Drawing.Point(82, 392);
+            this.lblTietkiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTietkiem.Name = "lblTietkiem";
-            this.lblTietkiem.Size = new System.Drawing.Size(170, 50);
+            this.lblTietkiem.Size = new System.Drawing.Size(88, 25);
             this.lblTietkiem.TabIndex = 38;
             this.lblTietkiem.Text = "Tiết kiệm";
             this.lblTietkiem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblTietkiem_MouseMove);
@@ -224,10 +225,10 @@
             this.picBoxTietkiem.BackColor = System.Drawing.Color.Wheat;
             this.picBoxTietkiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.z4148094277365_6ba49332b7154e507b2ae8ab24285f6a;
-            this.picBoxTietkiem.Location = new System.Drawing.Point(153, 702);
-            this.picBoxTietkiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxTietkiem.Location = new System.Drawing.Point(82, 329);
+            this.picBoxTietkiem.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxTietkiem.Name = "picBoxTietkiem";
-            this.picBoxTietkiem.Size = new System.Drawing.Size(165, 117);
+            this.picBoxTietkiem.Size = new System.Drawing.Size(89, 55);
             this.picBoxTietkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxTietkiem.TabIndex = 36;
             this.picBoxTietkiem.TabStop = false;
@@ -240,10 +241,10 @@
             this.lblTienich.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTienich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTienich.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTienich.Location = new System.Drawing.Point(539, 481);
-            this.lblTienich.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTienich.Location = new System.Drawing.Point(290, 225);
+            this.lblTienich.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTienich.Name = "lblTienich";
-            this.lblTienich.Size = new System.Drawing.Size(147, 50);
+            this.lblTienich.Size = new System.Drawing.Size(78, 25);
             this.lblTienich.TabIndex = 40;
             this.lblTienich.Text = "Tiện ích";
             this.lblTienich.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblTienich_MouseMove);
@@ -253,10 +254,10 @@
             this.picBoxTienich.BackColor = System.Drawing.Color.LightBlue;
             this.picBoxTienich.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxTienich.Image = global::DOAN_Nhom4.Properties.Resources.plugin;
-            this.picBoxTienich.Location = new System.Drawing.Point(536, 348);
-            this.picBoxTienich.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxTienich.Location = new System.Drawing.Point(289, 163);
+            this.picBoxTienich.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxTienich.Name = "picBoxTienich";
-            this.picBoxTienich.Size = new System.Drawing.Size(150, 111);
+            this.picBoxTienich.Size = new System.Drawing.Size(81, 52);
             this.picBoxTienich.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxTienich.TabIndex = 39;
             this.picBoxTienich.TabStop = false;
@@ -269,10 +270,10 @@
             this.lblChuyentien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblChuyentien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblChuyentien.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblChuyentien.Location = new System.Drawing.Point(121, 481);
-            this.lblChuyentien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblChuyentien.Location = new System.Drawing.Point(65, 225);
+            this.lblChuyentien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChuyentien.Name = "lblChuyentien";
-            this.lblChuyentien.Size = new System.Drawing.Size(217, 50);
+            this.lblChuyentien.Size = new System.Drawing.Size(113, 25);
             this.lblChuyentien.TabIndex = 33;
             this.lblChuyentien.Text = "Chuyển tiền";
             this.lblChuyentien.Click += new System.EventHandler(this.lblChuyentien_Click);
@@ -283,10 +284,10 @@
             this.picBoxChuyentien.BackColor = System.Drawing.Color.LightBlue;
             this.picBoxChuyentien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBoxChuyentien.Image = global::DOAN_Nhom4.Properties.Resources.download;
-            this.picBoxChuyentien.Location = new System.Drawing.Point(141, 334);
-            this.picBoxChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxChuyentien.Location = new System.Drawing.Point(76, 157);
+            this.picBoxChuyentien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxChuyentien.Name = "picBoxChuyentien";
-            this.picBoxChuyentien.Size = new System.Drawing.Size(182, 149);
+            this.picBoxChuyentien.Size = new System.Drawing.Size(98, 70);
             this.picBoxChuyentien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxChuyentien.TabIndex = 32;
             this.picBoxChuyentien.TabStop = false;
@@ -304,10 +305,10 @@
             this.btnTietkiem.FlatAppearance.BorderSize = 0;
             this.btnTietkiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTietkiem.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTietkiem.Location = new System.Drawing.Point(86, 656);
-            this.btnTietkiem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnTietkiem.Location = new System.Drawing.Point(46, 308);
+            this.btnTietkiem.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTietkiem.Name = "btnTietkiem";
-            this.btnTietkiem.Size = new System.Drawing.Size(297, 260);
+            this.btnTietkiem.Size = new System.Drawing.Size(160, 122);
             this.btnTietkiem.TabIndex = 34;
             this.btnTietkiem.TextColor = System.Drawing.SystemColors.Window;
             this.btnTietkiem.UseVisualStyleBackColor = false;
@@ -325,10 +326,10 @@
             this.btnTienich.FlatAppearance.BorderSize = 0;
             this.btnTienich.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTienich.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnTienich.Location = new System.Drawing.Point(466, 312);
-            this.btnTienich.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnTienich.Location = new System.Drawing.Point(251, 146);
+            this.btnTienich.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTienich.Name = "btnTienich";
-            this.btnTienich.Size = new System.Drawing.Size(297, 260);
+            this.btnTienich.Size = new System.Drawing.Size(160, 122);
             this.btnTienich.TabIndex = 46;
             this.btnTienich.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTienich.TextColor = System.Drawing.Color.SteelBlue;
@@ -341,9 +342,10 @@
             this.pnlCĐat.BackColor = System.Drawing.Color.Transparent;
             this.pnlCĐat.Controls.Add(this.label6);
             this.pnlCĐat.Controls.Add(this.pictureBox6);
-            this.pnlCĐat.Location = new System.Drawing.Point(1401, 22);
+            this.pnlCĐat.Location = new System.Drawing.Point(754, 10);
+            this.pnlCĐat.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlCĐat.Name = "pnlCĐat";
-            this.pnlCĐat.Size = new System.Drawing.Size(226, 78);
+            this.pnlCĐat.Size = new System.Drawing.Size(122, 37);
             this.pnlCĐat.TabIndex = 45;
             // 
             // label6
@@ -351,9 +353,10 @@
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(3, 17);
+            this.label6.Location = new System.Drawing.Point(2, 8);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 45);
+            this.label6.Size = new System.Drawing.Size(68, 23);
             this.label6.TabIndex = 22;
             this.label6.Text = "Cài đặt";
             // 
@@ -362,10 +365,10 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::DOAN_Nhom4.Properties.Resources.settings;
-            this.pictureBox6.Location = new System.Drawing.Point(143, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(77, 1);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(80, 76);
+            this.pictureBox6.Size = new System.Drawing.Size(43, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -382,10 +385,10 @@
             this.btnChuyentien.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChuyentien.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnChuyentien.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnChuyentien.Location = new System.Drawing.Point(86, 312);
-            this.btnChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnChuyentien.Location = new System.Drawing.Point(46, 146);
+            this.btnChuyentien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnChuyentien.Name = "btnChuyentien";
-            this.btnChuyentien.Size = new System.Drawing.Size(297, 260);
+            this.btnChuyentien.Size = new System.Drawing.Size(160, 122);
             this.btnChuyentien.TabIndex = 31;
             this.btnChuyentien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChuyentien.TextColor = System.Drawing.SystemColors.Control;
@@ -399,9 +402,10 @@
             this.pnlTKhoan.BackColor = System.Drawing.Color.Transparent;
             this.pnlTKhoan.Controls.Add(this.label7);
             this.pnlTKhoan.Controls.Add(this.pictureBox7);
-            this.pnlTKhoan.Location = new System.Drawing.Point(1127, 22);
+            this.pnlTKhoan.Location = new System.Drawing.Point(607, 10);
+            this.pnlTKhoan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlTKhoan.Name = "pnlTKhoan";
-            this.pnlTKhoan.Size = new System.Drawing.Size(268, 78);
+            this.pnlTKhoan.Size = new System.Drawing.Size(144, 37);
             this.pnlTKhoan.TabIndex = 44;
             // 
             // label7
@@ -410,9 +414,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(3, 17);
+            this.label7.Location = new System.Drawing.Point(2, 8);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 45);
+            this.label7.Size = new System.Drawing.Size(92, 23);
             this.label7.TabIndex = 22;
             this.label7.Text = "Tài khoản";
             // 
@@ -420,9 +425,10 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::DOAN_Nhom4.Properties.Resources.user1;
-            this.pictureBox7.Location = new System.Drawing.Point(185, 3);
+            this.pictureBox7.Location = new System.Drawing.Point(100, 1);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(80, 72);
+            this.pictureBox7.Size = new System.Drawing.Size(43, 34);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 21;
             this.pictureBox7.TabStop = false;
@@ -433,20 +439,20 @@
             this.lblXinchao.BackColor = System.Drawing.Color.Transparent;
             this.lblXinchao.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblXinchao.ForeColor = System.Drawing.Color.Black;
-            this.lblXinchao.Location = new System.Drawing.Point(133, 22);
-            this.lblXinchao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblXinchao.Location = new System.Drawing.Point(72, 10);
+            this.lblXinchao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXinchao.Name = "lblXinchao";
-            this.lblXinchao.Size = new System.Drawing.Size(285, 57);
+            this.lblXinchao.Size = new System.Drawing.Size(111, 30);
             this.lblXinchao.TabIndex = 43;
-            this.lblXinchao.Text = "Xin chào, Nun";
+            this.lblXinchao.Text = "XIN CHÀO";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(445, 820);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(240, 384);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 32);
+            this.label8.Size = new System.Drawing.Size(0, 15);
             this.label8.TabIndex = 37;
             // 
             // btnHotro
@@ -460,10 +466,10 @@
             this.btnHotro.FlatAppearance.BorderSize = 0;
             this.btnHotro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHotro.ForeColor = System.Drawing.Color.White;
-            this.btnHotro.Location = new System.Drawing.Point(466, 656);
-            this.btnHotro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnHotro.Location = new System.Drawing.Point(251, 308);
+            this.btnHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHotro.Name = "btnHotro";
-            this.btnHotro.Size = new System.Drawing.Size(297, 260);
+            this.btnHotro.Size = new System.Drawing.Size(160, 122);
             this.btnHotro.TabIndex = 35;
             this.btnHotro.TextColor = System.Drawing.Color.White;
             this.btnHotro.UseVisualStyleBackColor = false;
@@ -476,10 +482,10 @@
             this.picBoxNguoidung.AccessibleDescription = "g";
             this.picBoxNguoidung.BackColor = System.Drawing.Color.MistyRose;
             this.picBoxNguoidung.Image = global::DOAN_Nhom4.Properties.Resources._11757;
-            this.picBoxNguoidung.Location = new System.Drawing.Point(-21, -10);
-            this.picBoxNguoidung.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.picBoxNguoidung.Location = new System.Drawing.Point(-11, -5);
+            this.picBoxNguoidung.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxNguoidung.Name = "picBoxNguoidung";
-            this.picBoxNguoidung.Size = new System.Drawing.Size(1723, 1001);
+            this.picBoxNguoidung.Size = new System.Drawing.Size(928, 469);
             this.picBoxNguoidung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxNguoidung.TabIndex = 29;
             this.picBoxNguoidung.TabStop = false;
@@ -487,16 +493,44 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SandyBrown;
-            this.panel1.Location = new System.Drawing.Point(844, 312);
+            this.panel1.Location = new System.Drawing.Point(454, 146);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(6, 604);
+            this.panel1.Size = new System.Drawing.Size(3, 283);
             this.panel1.TabIndex = 49;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(165, 10);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 30);
+            this.label4.TabIndex = 50;
+            // 
+            // lblTenTK
+            // 
+            this.lblTenTK.AutoSize = true;
+            this.lblTenTK.BackColor = System.Drawing.Color.Transparent;
+            this.lblTenTK.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTenTK.ForeColor = System.Drawing.Color.Black;
+            this.lblTenTK.Location = new System.Drawing.Point(181, 9);
+            this.lblTenTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenTK.Name = "lblTenTK";
+            this.lblTenTK.Size = new System.Drawing.Size(19, 30);
+            this.lblTenTK.TabIndex = 51;
+            this.lblTenTK.Text = " ";
             // 
             // FrmNguoidung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1690, 990);
+            this.ClientSize = new System.Drawing.Size(910, 464);
+            this.Controls.Add(this.lblTenTK);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
@@ -520,7 +554,7 @@
             this.Controls.Add(this.pnlCaidat);
             this.Controls.Add(this.pnlTaikhoan);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmNguoidung";
@@ -583,5 +617,7 @@
         private CustomButton.VBButton btnHotro;
         private PictureBox picBoxNguoidung;
         private Panel panel1;
+        private Label label4;
+        private Label lblTenTK;
     }
 }

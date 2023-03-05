@@ -17,34 +17,35 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        AdminDAO adminDAO = new AdminDAO();
+        KhachHangDAO khDAO = new KhachHangDAO();
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             HienThi();
         }
         private void HienThi()
         {
-            gvQLKH.DataSource = adminDAO.HienThi();
+            gvQLKH.DataSource = khDAO.HienThi();
             gvQLKH.RowHeadersVisible = false;
             gvQLKH.Columns[0].HeaderText = "Số tài khoản";
             gvQLKH.Columns[1].HeaderText = "Tên tài khoản";
             gvQLKH.Columns[2].HeaderText = "Tên đăng nhập";
-            gvQLKH.Columns[3].HeaderText = "Password";
+            gvQLKH.Columns[3].HeaderText = "Mật khẩu";
             gvQLKH.Columns[4].HeaderText = "Ngày sinh";
             gvQLKH.Columns[5].HeaderText = "Căn cước công dân";
             gvQLKH.Columns[6].HeaderText = "Số điện thoại";
+            gvQLKH.Columns[7].HeaderText = "Số dư";
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            Admin ad = new Admin(txt_soTK.Text, txt_tenTK.Text,txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Text, txt_CCCD.Text, txt_SDT.Text);
-            if (adminDAO.IsEmpty(ad) == false)
+            KhachHang kh = new KhachHang(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
+            if (khDAO.IsEmpty(kh) == false)
             {
-                if (adminDAO.IsPhone(ad) == false)
+                if (khDAO.IsPhone(kh) == false)
                     MessageBox.Show("So dien thoai khong hop le");
                 else
                 {
-                    adminDAO.Them(ad);
+                    khDAO.Them(kh);
                     HienThi();
                     Refresh();                }
             }
@@ -54,22 +55,22 @@ namespace DOAN_Nhom4
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            Admin ad = new Admin(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Text, txt_CCCD.Text, txt_SDT.Text);
-            adminDAO.Xoa(ad);
+            KhachHang kh = new KhachHang(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
+            khDAO.Xoa(kh);
             HienThi();
             Refresh();
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            Admin ad = new Admin(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Text, txt_CCCD.Text, txt_SDT.Text);
-            if (adminDAO.IsEmpty(ad) == false)
+            KhachHang kh = new KhachHang(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
+            if (khDAO.IsEmpty(kh) == false)
             {
-                if (adminDAO.IsPhone(ad) == false)
+                if (khDAO.IsPhone(kh) == false)
                     MessageBox.Show("So dien thoai khong hop le");
                 else
                 {
-                    adminDAO.Sua(ad);
+                    khDAO.Sua(kh);
                     HienThi();
                     Refresh();
                 }
@@ -86,6 +87,21 @@ namespace DOAN_Nhom4
             txt_Password.Text = "";
             txt_CCCD.Text = "";
             txt_SDT.Text = "";
+            txt_SoDu.Text = "";
+        }
+
+        private void gvQLKH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            txt_soTK.Text = gvQLKH.Rows[numrow].Cells[0].Value.ToString();
+            txt_tenTK.Text = gvQLKH.Rows[numrow].Cells[1].Value.ToString();
+            txt_tenDN.Text = gvQLKH.Rows[numrow].Cells[2].Value.ToString();
+            txt_Password.Text = gvQLKH.Rows[numrow].Cells[3].Value.ToString();
+            txt_NgaySinh.Text = gvQLKH.Rows[numrow].Cells[4].Value.ToString();
+            txt_CCCD.Text = gvQLKH.Rows[numrow].Cells[5].Value.ToString();
+            txt_SDT.Text = gvQLKH.Rows[numrow].Cells[6].Value.ToString();
+            txt_SoDu.Text = gvQLKH.Rows[numrow].Cells[7].Value.ToString();
         }
     }
 }

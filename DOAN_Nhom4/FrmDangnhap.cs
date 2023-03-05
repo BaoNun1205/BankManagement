@@ -43,8 +43,6 @@ namespace DOAN_Nhom4
             }
         }
 
-        
-
         private void lblXoa_Click(object sender, EventArgs e)
         {
             txtUserName.Clear();
@@ -61,13 +59,16 @@ namespace DOAN_Nhom4
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
+            KhachHang kh = new KhachHang();
             if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
                     MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                kh = dBConnection.LayKhachHang("TenDN", dn.TenDN);
                 FrmNguoidung frmnguoidung = new FrmNguoidung();
+                frmnguoidung.kh = kh;
                 this.Hide();
                 frmnguoidung.ShowDialog();
                 this.Close();

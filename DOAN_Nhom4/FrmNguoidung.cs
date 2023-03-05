@@ -2,6 +2,7 @@
 {
     public partial class FrmNguoidung : Form
     {
+        public KhachHang kh { get; set; }
         public FrmNguoidung()
         {
             InitializeComponent();
@@ -16,8 +17,10 @@
 
             pnlCĐat.Parent = picBoxNguoidung;
             pnlCĐat.BackColor = Color.Transparent;
-
-
+            
+            lblTenTK.Parent = picBoxNguoidung;
+            lblTenTK.BackColor = Color.Transparent;
+            lblTenTK.Text = kh.TenTK.ToString();
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
