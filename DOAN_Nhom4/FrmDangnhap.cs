@@ -23,7 +23,7 @@ namespace DOAN_Nhom4
         {
             this.txtPass.PasswordChar = '*';
         }
-
+        
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
 
@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
                 }
                 kh = dBConnection.LayKhachHang("TenDN", dn.TenDN);
                 FrmNguoidung frmnguoidung = new FrmNguoidung();
-                frmnguoidung.kh = kh;
+                frmnguoidung.khDangNhap = kh;
                 this.Hide();
                 frmnguoidung.ShowDialog();
                 this.Close();

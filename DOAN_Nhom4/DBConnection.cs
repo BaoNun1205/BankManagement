@@ -41,6 +41,9 @@ namespace DOAN_Nhom4
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("Thanh cong");
+
             }
             catch (Exception ex)
             {

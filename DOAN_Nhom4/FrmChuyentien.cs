@@ -13,15 +13,22 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
+        public KhachHang khNguoiDung { get; set; }
         public FrmChuyentien()
         {
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
         }
+        private KhachHang LayKhachHang()
+        {
+            KhachHang kh = new KhachHang(khNguoiDung.SoTK, khNguoiDung.TenTK, khNguoiDung.TenDN, khNguoiDung.Pass, khNguoiDung.NgaySinh, khNguoiDung.Cccd, khNguoiDung.Sdt, khNguoiDung.SoDu);
+            return khNguoiDung;
+        }
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmNguoidung frmnguoidung = new FrmNguoidung();
+            frmnguoidung.khDangNhap = LayKhachHang();
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -29,10 +36,10 @@ namespace DOAN_Nhom4
 
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            string stk = txtSTK.Text;
-            BigInteger soTien = int.Parse(txtSoTien.Text);
-            string loiNhan = txtLoiNhan.Text;
-            FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(stk, soTien, loiNhan);
+            ChuyenTien chuyenTien = new ChuyenTien(txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+            FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien();
+            frmxacnhan.chuyenTien = chuyenTien;
+            frmxacnhan.khChuyenTien = LayKhachHang();
             this.Hide();
             frmxacnhan.ShowDialog();
             this.Close();

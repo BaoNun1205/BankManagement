@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DOAN_Nhom4
 {
-    internal class ChuyenTien
+    public class ChuyenTien
     {
         private string soTk;
         private BigInteger soTien;

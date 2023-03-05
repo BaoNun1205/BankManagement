@@ -13,10 +13,9 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacnhanChuyentien : Form
     {
-        private string STK;
-        private BigInteger SoTien;
-        private string LoiNhan;
-        public FrmXacnhanChuyentien(string stk, BigInteger soTien, string loiNhan)
+        public ChuyenTien chuyenTien { get; set; }
+        public KhachHang khChuyenTien { get; set; }
+        public FrmXacnhanChuyentien()
         {
             InitializeComponent();
             pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
@@ -25,9 +24,16 @@ namespace DOAN_Nhom4
         }
         KhachHangDAO khachHangDAO = new KhachHangDAO();
 
+        private KhachHang LayKhachHang()
+        {
+            KhachHang kh = new KhachHang(khChuyenTien.SoTK, khChuyenTien.TenTK, khChuyenTien.TenDN, khChuyenTien.Pass, khChuyenTien.NgaySinh, khChuyenTien.Cccd, khChuyenTien.Sdt, khChuyenTien.SoDu);
+            return kh;
+        }
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien();
+            frmchuyentien.khNguoiDung = LayKhachHang();
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -35,9 +41,10 @@ namespace DOAN_Nhom4
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            ChuyenTien chuyenTien = new ChuyenTien(STK, SoTien, LoiNhan);
-            KhachHang khachHang = new KhachHang(STK);
-            khachHangDAO.ThemTien(khachHang, chuyenTien);
+            ChuyenTien ct = new ChuyenTien(chuyenTien.SoTk, chuyenTien.SoTien, chuyenTien.LoiNhan);
+            KhachHang khachHangGui = LayKhachHang();
+            KhachHang khachHangNhan = new KhachHang(chuyenTien.SoTk);
+            khachHangDAO.GuiTien(khachHangGui, ct, khachHangNhan);
         }
     }
 }

@@ -9,14 +9,14 @@ namespace DOAN_Nhom4
 {
     public class KhachHang
     {
-        private string soTK;
-        private string tenTK;
-        private string tenDN;
-        private string pass;
-        private DateTime ngaySinh;
-        private string cccd;
-        private string sdt;
-        private BigInteger soDu;
+        public string soTK;
+        public string tenTK;
+        public string tenDN;
+        public string pass;
+        public DateTime ngaySinh;
+        public string cccd;
+        public string sdt;
+        public BigInteger soDu;
 
         public string SoTK { get => soTK; set => soTK = value; }
         public string TenTK { get => tenTK; set => tenTK = value; }
