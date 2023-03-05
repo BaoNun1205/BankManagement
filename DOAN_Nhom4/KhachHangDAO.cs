@@ -20,7 +20,7 @@ namespace DOAN_Nhom4
         }
         public void Them(KhachHang ad)
         {
-            string sqlStr = string.Format("INSERT INTO KhachHang(SoTK , TenTK, TenDN, MatKhau, NgaySinh, CCCD, SDT) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", ad.SoTK, ad.TenTK, ad.TenDN, ad.Pass, ad.NgaySinh, ad.Cccd, ad.Sdt);
+            string sqlStr = string.Format("INSERT INTO KhachHang(SoTK , TenTK, TenDN, MatKhau, NgaySinh, CCCD, SDT, SoDU) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7})", ad.SoTK, ad.TenTK, ad.TenDN, ad.Pass, ad.NgaySinh, ad.Cccd, ad.Sdt, ad.SoDu);
             data.xuLi(sqlStr); 
         }
 
@@ -38,7 +38,7 @@ namespace DOAN_Nhom4
         {
             KhachHang khachHang = new KhachHang();
             khachHang = data.LayKhachHang("SoTK", ad.SoTK);
-            BigInteger soTien = (int.Parse(chuyenTien.SoTien) + int.Parse(khachHang.SoDu));
+            BigInteger soTien = chuyenTien.SoTien + khachHang.SoDu;
             string sqlStr = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTien, khachHang.SoTK);
             data.xuLi(sqlStr);
         }
