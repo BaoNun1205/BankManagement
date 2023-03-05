@@ -436,9 +436,9 @@
             this.lblXinchao.Location = new System.Drawing.Point(133, 22);
             this.lblXinchao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblXinchao.Name = "lblXinchao";
-            this.lblXinchao.Size = new System.Drawing.Size(285, 57);
+            this.lblXinchao.Size = new System.Drawing.Size(206, 57);
             this.lblXinchao.TabIndex = 43;
-            this.lblXinchao.Text = "Xin chào, Nun";
+            this.lblXinchao.Text = "Xin chào, ";
             // 
             // label8
             // 
