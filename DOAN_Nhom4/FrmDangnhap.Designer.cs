@@ -61,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label1.Location = new System.Drawing.Point(167, 188);
+            this.label1.Location = new System.Drawing.Point(160, 201);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 53);
             this.label1.TabIndex = 1;
@@ -134,7 +134,7 @@
             this.cb_showpass.AutoSize = true;
             this.cb_showpass.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cb_showpass.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.cb_showpass.Location = new System.Drawing.Point(40, 477);
+            this.cb_showpass.Location = new System.Drawing.Point(40, 472);
             this.cb_showpass.Name = "cb_showpass";
             this.cb_showpass.Size = new System.Drawing.Size(161, 22);
             this.cb_showpass.TabIndex = 11;
@@ -162,7 +162,7 @@
             this.lbl_Clear.AutoSize = true;
             this.lbl_Clear.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.lbl_Clear.Location = new System.Drawing.Point(303, 476);
+            this.lbl_Clear.Location = new System.Drawing.Point(303, 471);
             this.lbl_Clear.Name = "lbl_Clear";
             this.lbl_Clear.Size = new System.Drawing.Size(137, 23);
             this.lbl_Clear.TabIndex = 17;
@@ -202,6 +202,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmDangnhap";
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.FrmDangnhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
