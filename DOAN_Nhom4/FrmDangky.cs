@@ -16,5 +16,13 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            FrmDangnhap frmdangnhap = new FrmDangnhap();
+            this.Hide();
+            frmdangnhap.ShowDialog();
+            this.Close();
+        }
     }
 }

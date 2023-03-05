@@ -39,9 +39,9 @@
             this.cb_showpass = new System.Windows.Forms.CheckBox();
             this.lblXoa = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnDangnhap = new System.Windows.Forms.Button();
+            this.btnDangnhap = new CustomButton.VBButton();
+            this.btnThoat = new CustomButton.VBButton();
+            this.btnDangky = new CustomButton.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -166,64 +166,75 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "HHB BANK";
             // 
-            // button1
+            // btnDangnhap
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.button1.Location = new System.Drawing.Point(65, 833);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(311, 78);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "ĐĂNG KÝ";
-            this.button1.UseMnemonic = false;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDangnhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangnhap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangnhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnDangnhap.BorderRadius = 0;
+            this.btnDangnhap.BorderSize = 3;
+            this.btnDangnhap.FlatAppearance.BorderSize = 0;
+            this.btnDangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDangnhap.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDangnhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnDangnhap.Location = new System.Drawing.Point(404, 831);
+            this.btnDangnhap.Name = "btnDangnhap";
+            this.btnDangnhap.Size = new System.Drawing.Size(311, 80);
+            this.btnDangnhap.TabIndex = 23;
+            this.btnDangnhap.Text = "Đăng nhập";
+            this.btnDangnhap.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnDangnhap.UseVisualStyleBackColor = false;
+            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Bahnschrift", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThoat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnThoat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnThoat.BorderRadius = 0;
+            this.btnThoat.BorderSize = 3;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.btnThoat.Location = new System.Drawing.Point(65, 944);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(5);
+            this.btnThoat.Location = new System.Drawing.Point(65, 940);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(650, 78);
-            this.btnThoat.TabIndex = 21;
-            this.btnThoat.Text = "THOÁT";
-            this.btnThoat.UseMnemonic = false;
+            this.btnThoat.Size = new System.Drawing.Size(650, 80);
+            this.btnThoat.TabIndex = 25;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnDangnhap
+            // btnDangky
             // 
-            this.btnDangnhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangnhap.Font = new System.Drawing.Font("Bahnschrift", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDangnhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.btnDangnhap.Location = new System.Drawing.Point(404, 833);
-            this.btnDangnhap.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.Size = new System.Drawing.Size(311, 78);
-            this.btnDangnhap.TabIndex = 22;
-            this.btnDangnhap.Text = "ĐĂNG NHẬP";
-            this.btnDangnhap.UseMnemonic = false;
-            this.btnDangnhap.UseVisualStyleBackColor = false;
-            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
+            this.btnDangky.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangky.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDangky.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnDangky.BorderRadius = 0;
+            this.btnDangky.BorderSize = 3;
+            this.btnDangky.FlatAppearance.BorderSize = 0;
+            this.btnDangky.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDangky.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDangky.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnDangky.Location = new System.Drawing.Point(65, 831);
+            this.btnDangky.Name = "btnDangky";
+            this.btnDangky.Size = new System.Drawing.Size(311, 80);
+            this.btnDangky.TabIndex = 26;
+            this.btnDangky.Text = "Đăng ký";
+            this.btnDangky.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.btnDangky.UseVisualStyleBackColor = false;
+            this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
             // 
             // FrmDangnhap
             // 
-            this.AcceptButton = this.btnDangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(785, 1072);
-            this.Controls.Add(this.btnDangnhap);
+            this.Controls.Add(this.btnDangky);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDangnhap);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblXoa);
             this.Controls.Add(this.cb_showpass);
@@ -262,8 +273,8 @@
         private CheckBox cb_showpass;
         private Label lblXoa;
         private Label label1;
-        private Button button1;
-        private Button btnThoat;
-        private Button btnDangnhap;
+        private CustomButton.VBButton btnDangnhap;
+        private CustomButton.VBButton btnThoat;
+        private CustomButton.VBButton btnDangky;
     }
 }
