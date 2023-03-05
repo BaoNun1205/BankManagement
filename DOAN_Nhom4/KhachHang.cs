@@ -50,5 +50,11 @@ namespace DOAN_Nhom4
             this.sdt = "";
             this.soDu = "";
         }
+
+        public KhachHang(string tenDN, string pass)
+        {
+            this.tenDN = tenDN;
+            this.pass = pass;
+        }
     }
 }

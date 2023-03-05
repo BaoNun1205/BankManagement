@@ -56,15 +56,16 @@ namespace DOAN_Nhom4
             }
         }
 
-        public KhachHang LayKhachHang(KhachHang kh)
+        public KhachHang LayKhachHang(string cotGiaTri, string giaTri)
         {
             KhachHang khachHang = new KhachHang();
             try
             {
-                string soTK = kh.SoTK;
+                string GiaTri = giaTri;
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM KhachHang WHERE SoTK = @SoTk", conn);
-                command.Parameters.AddWithValue("@SoTk", kh.SoTK);
+                string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = @SoTk", cotGiaTri);
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@SoTk", GiaTri);
 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -96,24 +97,6 @@ namespace DOAN_Nhom4
             string strRegex = @"^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$";
             Regex regex = new Regex(strRegex);
             return regex.IsMatch(numberphone);
-        }
-
-        public bool KiemTraTonTai(string thongtin)
-        {
-            string query = "SELECT * FROM YourTable WHERE YourColumn = @YourValue";
-            SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("@YourValue", thongtin);
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
     }

@@ -18,6 +18,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
+        DangNhapDAO dnDAO = new DangNhapDAO();
 
         private void FrmDangnhap_Load(object sender, EventArgs e)
         {
@@ -60,9 +61,8 @@ namespace DOAN_Nhom4
         }
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
-
-
-            if (dBConnection.KiemTraTonTai(txtUserName.Text) == true && dBConnection.KiemTraTonTai(txtPass.Text) == true)
+            DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
+            if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {

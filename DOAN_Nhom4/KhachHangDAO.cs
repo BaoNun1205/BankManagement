@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
         public void ThemTien(KhachHang ad, ChuyenTien chuyenTien)
         {
             KhachHang khachHang = new KhachHang();
-            khachHang = data.LayKhachHang(ad);
+            khachHang = data.LayKhachHang("SoTK", ad.SoTK);
             BigInteger soTien = (int.Parse(chuyenTien.SoTien) + int.Parse(khachHang.SoDu));
             string sqlStr = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTien, khachHang.SoTK);
             data.xuLi(sqlStr);
