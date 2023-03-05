@@ -19,7 +19,6 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
         DangNhapDAO dnDAO = new DangNhapDAO();
-
         private void FrmDangnhap_Load(object sender, EventArgs e)
         {
             this.txtPass.PasswordChar = '*';
