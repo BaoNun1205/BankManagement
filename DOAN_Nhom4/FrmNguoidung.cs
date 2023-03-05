@@ -138,5 +138,14 @@
         {
 
         }
+
+        private void lblTaiKhoang_Click(object sender, EventArgs e)
+        {
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
+            frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
+            this.Hide();
+            frmHienThiThongTinCaNhan.ShowDialog();
+            this.Close();
+        }
     }
 }
