@@ -25,7 +25,7 @@ namespace DOAN_Nhom4
 
         private void btnChuyen_Click(object sender, EventArgs e)
         {
-            ChuyenTien chuyenTien = new ChuyenTien(txtStk.Text, txtSoTien.Text, txtLoiNhan.Text);
+            ChuyenTien chuyenTien = new ChuyenTien(txtStk.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
             KhachHang khachHang = new KhachHang(txtStk.Text);
             khachHangDAO.ThemTien(khachHang, chuyenTien);
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace DOAN_Nhom4
 {
@@ -15,7 +16,7 @@ namespace DOAN_Nhom4
         private DateTime ngaySinh;
         private string cccd;
         private string sdt;
-        private string soDu;
+        private BigInteger soDu;
 
         public string SoTK { get => soTK; set => soTK = value; }
         public string TenTK { get => tenTK; set => tenTK = value; }
@@ -24,10 +25,10 @@ namespace DOAN_Nhom4
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
         public string Cccd { get => cccd; set => cccd = value; }
         public string Sdt { get => sdt; set => sdt = value; }
-        public string SoDu { get => soDu; set => soDu = value; }
+        public BigInteger SoDu { get => soDu; set => soDu = value; }
 
         public KhachHang() { }
-        public KhachHang(string soTK, string tenTK, string tenDN, string pass, DateTime ngaySinh, string cccd, string sdt, string soDu)
+        public KhachHang(string soTK, string tenTK, string tenDN, string pass, DateTime ngaySinh, string cccd, string sdt, BigInteger soDu)
         {
             this.soTK = soTK;
             this.tenTK = tenTK;
@@ -48,7 +49,7 @@ namespace DOAN_Nhom4
             this.NgaySinh = DateTime.Now;
             this.cccd = "";
             this.sdt = "";
-            this.soDu = "";
+            this.soDu = 0;
         }
 
         public KhachHang(string tenDN, string pass)

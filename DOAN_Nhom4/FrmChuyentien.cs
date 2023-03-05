@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,7 +31,7 @@ namespace DOAN_Nhom4
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
             string stk = txtSTK.Text;
-            string soTien = txtSoTien.Text;
+            BigInteger soTien = int.Parse(txtSoTien.Text);
             string loiNhan = txtLoiNhan.Text;
             FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(stk, soTien, loiNhan);
             this.Hide();

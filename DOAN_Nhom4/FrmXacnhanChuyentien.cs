@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,9 @@ namespace DOAN_Nhom4
     public partial class FrmXacnhanChuyentien : Form
     {
         private string STK;
-        private string SoTien;
+        private BigInteger SoTien;
         private string LoiNhan;
-        public FrmXacnhanChuyentien(string stk, string soTien, string loiNhan)
+        public FrmXacnhanChuyentien(string stk, BigInteger soTien, string loiNhan)
         {
             InitializeComponent();
             pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
