@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
         public bool XacNhanDangNhap(DangNhap dn)
         {
             KhachHang khachHang = new KhachHang();
-            khachHang = db.LayKhachHang("TenDN", dn.TenDN);
+            //khachHang = db.LayKhachHang("TenDN", dn.TenDN);
             if (khachHang.TenDN == dn.TenDN && khachHang.Pass == dn.Pass)
             {
                 return true;
