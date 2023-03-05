@@ -56,14 +56,15 @@ namespace DOAN_Nhom4
             }
         }
 
-        public KhachHang LayKhachHang(KhachHang kh)
+        public KhachHang LayKhachHang(string Cot, string giaTri)
         {
             KhachHang khachHang = new KhachHang();
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM KhachHang WHERE SoTK = @SoTk", conn);
-                command.Parameters.AddWithValue("@SoTk", kh.SoTK);
+                string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = @Giatri", Cot);
+                SqlCommand command = new SqlCommand(sql, conn);
+                command.Parameters.AddWithValue("@Giatri", giaTri);
 
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
