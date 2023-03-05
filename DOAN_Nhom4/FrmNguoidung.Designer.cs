@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblHotro = new System.Windows.Forms.Label();
             this.picBoxHotro = new System.Windows.Forms.PictureBox();
             this.lblTietkiem = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnHotro = new CustomButton.VBButton();
             this.picBoxNguoidung = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCaidat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTaikhoan)).BeginInit();
             this.pnlTaikhoan.SuspendLayout();
@@ -176,14 +176,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSalmon;
-            this.panel1.Location = new System.Drawing.Point(841, 312);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 606);
-            this.panel1.TabIndex = 47;
             // 
             // lblHotro
             // 
@@ -475,11 +467,13 @@
             this.btnHotro.TabIndex = 35;
             this.btnHotro.TextColor = System.Drawing.Color.White;
             this.btnHotro.UseVisualStyleBackColor = false;
+            this.btnHotro.Click += new System.EventHandler(this.btnHotro_Click);
             this.btnHotro.MouseLeave += new System.EventHandler(this.btnHotro_MouseLeave);
             this.btnHotro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnHotro_MouseMove);
             // 
             // picBoxNguoidung
             // 
+            this.picBoxNguoidung.AccessibleDescription = "g";
             this.picBoxNguoidung.BackColor = System.Drawing.Color.MistyRose;
             this.picBoxNguoidung.Image = global::DOAN_Nhom4.Properties.Resources._11757;
             this.picBoxNguoidung.Location = new System.Drawing.Point(-21, -10);
@@ -490,14 +484,22 @@
             this.picBoxNguoidung.TabIndex = 29;
             this.picBoxNguoidung.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SandyBrown;
+            this.panel1.Location = new System.Drawing.Point(844, 312);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(6, 604);
+            this.panel1.TabIndex = 49;
+            // 
             // FrmNguoidung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1690, 990);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblHotro);
             this.Controls.Add(this.picBoxHotro);
             this.Controls.Add(this.lblTietkiem);
@@ -559,7 +561,6 @@
         private Label label3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private Panel panel1;
         private Label lblHotro;
         private PictureBox picBoxHotro;
         private Label lblTietkiem;
@@ -581,5 +582,6 @@
         private Label label8;
         private CustomButton.VBButton btnHotro;
         private PictureBox picBoxNguoidung;
+        private Panel panel1;
     }
 }

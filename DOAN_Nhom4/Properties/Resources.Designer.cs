@@ -215,6 +215,26 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap padlock {
+            get {
+                object obj = ResourceManager.GetObject("padlock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap padlock1 {
+            get {
+                object obj = ResourceManager.GetObject("padlock1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_bella_white_635279 {
             get {
                 object obj = ResourceManager.GetObject("pexels-bella-white-635279", resourceCulture);
@@ -228,6 +248,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap pexels_johannes_plenio_1632788 {
             get {
                 object obj = ResourceManager.GetObject("pexels-johannes-plenio-1632788", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_johannes_plenio_16327881 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-johannes-plenio-16327881", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -315,6 +345,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user3 {
+            get {
+                object obj = ResourceManager.GetObject("user3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap z4148094277365_6ba49332b7154e507b2ae8ab24285f6a {
             get {
                 object obj = ResourceManager.GetObject("z4148094277365_6ba49332b7154e507b2ae8ab24285f6a", resourceCulture);
@@ -348,6 +388,46 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap z4152520602606_09f2df787dbb2579775447a7d5da8857 {
             get {
                 object obj = ResourceManager.GetObject("z4152520602606_09f2df787dbb2579775447a7d5da8857", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4152690905779_18c0b3b2cab381e488f7f00a506d061f {
+            get {
+                object obj = ResourceManager.GetObject("z4152690905779_18c0b3b2cab381e488f7f00a506d061f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4156388208487_6cfd569e12217b8073a7fbfcc22c322f {
+            get {
+                object obj = ResourceManager.GetObject("z4156388208487_6cfd569e12217b8073a7fbfcc22c322f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4156394353170_c928a2cc547396d185fd30d8c9de6746 {
+            get {
+                object obj = ResourceManager.GetObject("z4156394353170_c928a2cc547396d185fd30d8c9de6746", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4156395647100_11d34480489db0250526d93d55587605 {
+            get {
+                object obj = ResourceManager.GetObject("z4156395647100_11d34480489db0250526d93d55587605", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -18,18 +18,7 @@ namespace DOAN_Nhom4
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
 
-            picBoxQuaylai.Parent = picBoxChuyentien;
-            picBoxQuaylai.BackColor = Color.Transparent;
         }
-
-        private void picBoxQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            this.Hide();
-            frmnguoidung.ShowDialog();
-            this.Close();
-        }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmNguoidung frmnguoidung = new FrmNguoidung();
@@ -47,6 +36,11 @@ namespace DOAN_Nhom4
             this.Hide();
             frmxacnhan.ShowDialog();
             this.Close();
+        }
+
+        private void txtSTK_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

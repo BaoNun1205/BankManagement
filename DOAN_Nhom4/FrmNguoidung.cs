@@ -121,5 +121,10 @@
         {
             btnHotro.BorderColor = Color.LightSalmon;
         }
+
+        private void btnHotro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
