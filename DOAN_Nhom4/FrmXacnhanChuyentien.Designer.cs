@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmXacnhanChuyentien));
             this.pnlXacnhanChuyentien = new System.Windows.Forms.Panel();
             this.btnHuy = new CustomButton.VBButton();
             this.btnXacnhan = new CustomButton.VBButton();
@@ -132,10 +133,11 @@
             this.ClientSize = new System.Drawing.Size(747, 460);
             this.Controls.Add(this.pnlXacnhanChuyentien);
             this.Controls.Add(this.picBoxXacnhanChuyentien);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FrmXacnhanChuyentien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmXacnhanChuyentien";
+            this.Text = "Xác nhận";
             this.pnlXacnhanChuyentien.ResumeLayout(false);
             this.pnlXacnhanChuyentien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxXacnhanChuyentien)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChuyentien));
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new CustomButton.VBButton();
             this.btnTieptuc = new CustomButton.VBButton();
@@ -111,7 +112,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Nội bộ HHB Bank",
@@ -137,7 +138,7 @@
             // 
             // txtLoiNhan
             // 
-            this.txtLoiNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtLoiNhan.ForeColor = System.Drawing.Color.Black;
             this.txtLoiNhan.Location = new System.Drawing.Point(443, 423);
             this.txtLoiNhan.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtLoiNhan.Multiline = true;
@@ -171,7 +172,7 @@
             // 
             // txtSTK
             // 
-            this.txtSTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtSTK.ForeColor = System.Drawing.Color.Black;
             this.txtSTK.Location = new System.Drawing.Point(443, 184);
             this.txtSTK.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSTK.Multiline = true;
@@ -182,7 +183,7 @@
             // 
             // txtSoTien
             // 
-            this.txtSoTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtSoTien.ForeColor = System.Drawing.Color.Black;
             this.txtSoTien.Location = new System.Drawing.Point(443, 302);
             this.txtSoTien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSoTien.Multiline = true;
@@ -240,10 +241,11 @@
             this.Controls.Add(this.pnlChuyentien);
             this.Controls.Add(this.picBoxChuyentien);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "FrmChuyentien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmChuyentien";
+            this.Text = "Chuyển tiền";
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChuyentien)).EndInit();
             this.pnlChuyentien.ResumeLayout(false);
             this.pnlChuyentien.PerformLayout();
