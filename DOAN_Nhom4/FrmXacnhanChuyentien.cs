@@ -45,6 +45,11 @@ namespace DOAN_Nhom4
             KhachHang khachHangGui = LayKhachHang();
             KhachHang khachHangNhan = new KhachHang(chuyenTien.SoTk);
             khachHangDAO.GuiTien(khachHangGui, ct, khachHangNhan);
+
+            FrmThongbaoChuyentien frmthongbao = new FrmThongbaoChuyentien();            
+            this.Hide();
+            frmthongbao.ShowDialog();
+            this.Close();
         }
     }
 }
