@@ -147,5 +147,7 @@
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
         }
+
+        
     }
 }

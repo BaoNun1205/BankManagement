@@ -104,7 +104,7 @@
             this.txtUserName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtUserName.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtUserName.Location = new System.Drawing.Point(158, 446);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(5);
             this.txtUserName.Multiline = true;
@@ -117,7 +117,7 @@
             this.txtPass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtPass.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtPass.Location = new System.Drawing.Point(158, 629);
             this.txtPass.Margin = new System.Windows.Forms.Padding(5);
             this.txtPass.Multiline = true;

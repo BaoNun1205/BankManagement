@@ -27,5 +27,13 @@ namespace DOAN_Nhom4
             lblNgaySinhValue.Text = khNguoiDung.NgaySinh.ToString();
             lblSdtValue.Text = khNguoiDung.Sdt.ToString();
         }
+
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmNguoidung frmnguoidung = new FrmNguoidung();
+            this.Hide();
+            frmnguoidung.ShowDialog();
+            this.Close();
+        }
     }
 }
