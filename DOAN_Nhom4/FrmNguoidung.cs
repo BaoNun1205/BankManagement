@@ -2,7 +2,7 @@
 {
     public partial class FrmNguoidung : Form
     {
-        public KhachHang kh { get; set; }
+        public KhachHang khDangNhap { get; set; }
         public FrmNguoidung()
         {
             InitializeComponent();
@@ -20,19 +20,28 @@
             
             lblTenTK.Parent = picBoxNguoidung;
             lblTenTK.BackColor = Color.Transparent;
-            lblTenTK.Text = kh.TenTK.ToString();
+            lblTenTK.Text = khDangNhap.TenTK.ToString();
+        }
+
+        private KhachHang LayKhachHang()
+        {
+            KhachHang khNguoiDung = new KhachHang(khDangNhap.SoTK, khDangNhap.TenTK, khDangNhap.TenDN, khDangNhap.Pass, khDangNhap.NgaySinh, khDangNhap.Cccd, khDangNhap.Sdt, khDangNhap.SoDu);
+            return khNguoiDung;
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien();
+            frmchuyentien.khNguoiDung = LayKhachHang();
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
         }
 
+
         private void picBoxChuyentien_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien();
+            frmchuyentien.khNguoiDung = LayKhachHang();
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -41,11 +50,13 @@
         private void lblChuyentien_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien();
+            frmchuyentien.khNguoiDung = LayKhachHang();
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
         }
 
+        //Nut chuyen tien
         private void btnChuyentien_MouseMove(object sender, MouseEventArgs e)
         {
             btnChuyentien.BorderColor = Color.Aqua;
@@ -66,6 +77,8 @@
             btnChuyentien.BorderColor = Color.Aqua;
         }
 
+        // Nut tien ich
+
         private void btnTienich_MouseMove(object sender, MouseEventArgs e)
         {
             btnTienich.BorderColor = Color.Aqua;
@@ -85,6 +98,8 @@
         {
             btnTienich.BorderColor = Color.Aqua;
         }
+
+        // Nut tiet kiem
         private void btnTietkiem_MouseMove(object sender, MouseEventArgs e)
         {
             btnTietkiem.BorderColor = Color.LightSalmon;
@@ -105,6 +120,7 @@
             btnTietkiem.BorderColor = Color.LightSalmon;
         }
 
+        // Nut ho tro
         private void btnHotro_MouseMove(object sender, MouseEventArgs e)
         {
             btnHotro.BorderColor = Color.LightSalmon;
@@ -128,6 +144,24 @@
         private void btnHotro_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblTaiKhoang_Click(object sender, EventArgs e)
+        {
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
+            frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
+            this.Hide();
+            frmHienThiThongTinCaNhan.ShowDialog();
+            this.Close();
+        }
+
+        private void picBTaiKhoang_Click(object sender, EventArgs e)
+        {
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
+            frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
+            this.Hide();
+            frmHienThiThongTinCaNhan.ShowDialog();
+            this.Close();
         }
     }
 }

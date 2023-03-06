@@ -121,16 +121,18 @@
             this.picBoxXacnhanChuyentien.Location = new System.Drawing.Point(-2, -6);
             this.picBoxXacnhanChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.picBoxXacnhanChuyentien.Name = "picBoxXacnhanChuyentien";
-            this.picBoxXacnhanChuyentien.Size = new System.Drawing.Size(748, 470);
+            this.picBoxXacnhanChuyentien.Size = new System.Drawing.Size(742, 465);
             this.picBoxXacnhanChuyentien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxXacnhanChuyentien.TabIndex = 8;
             this.picBoxXacnhanChuyentien.TabStop = false;
             // 
             // FrmXacnhanChuyentien
             // 
+            this.AcceptButton = this.btnXacnhan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 460);
+            this.CancelButton = this.btnHuy;
+            this.ClientSize = new System.Drawing.Size(735, 454);
             this.Controls.Add(this.pnlXacnhanChuyentien);
             this.Controls.Add(this.picBoxXacnhanChuyentien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

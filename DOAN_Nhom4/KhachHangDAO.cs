@@ -34,13 +34,19 @@ namespace DOAN_Nhom4
             string sqlStr = string.Format("UPDATE KhachHang SET TenTK = '{0}' , TenDN = '{1}', MatKhau = '{2}', NgaySinh = '{3}', CCCD = '{4}', SDT = '{5}', SoDu = {6} WHERE SoTK ='{7}'", kh.TenTK, kh.TenDN, kh.Pass, kh.NgaySinh, kh.Cccd, kh.Sdt, kh.SoDu, kh.SoTK);
             data.xuLi(sqlStr);
         }
-        public void ThemTien(KhachHang kh, ChuyenTien chuyenTien)
+        public void GuiTien(KhachHang khGui, ChuyenTien chuyenTien, KhachHang khNhan)
         {
-            KhachHang khachHang = new KhachHang();
-            khachHang = data.LayKhachHang("SoTK", kh.SoTK);
-            BigInteger soTien = chuyenTien.SoTien + khachHang.SoDu;
-            string sqlStr = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTien, khachHang.SoTK);
-            data.xuLi(sqlStr);
+            KhachHang khachHangNhan = new KhachHang();
+            khachHangNhan = data.LayKhachHang("SoTK", khNhan.SoTK);
+            BigInteger soTienNhan = chuyenTien.SoTien + khachHangNhan.SoDu;
+            string sqlStrNhan = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienNhan, khachHangNhan.SoTK);
+            data.xuLi(sqlStrNhan);
+
+            KhachHang khachHangGui = new KhachHang();
+            khachHangGui = data.LayKhachHang("SoTk", khGui.SoTK);
+            BigInteger soTienGui = khachHangGui.SoDu - chuyenTien.SoTien;
+            string sqlStrGui = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienGui, khachHangGui.SoTK);
+            data.xuLi(sqlStrGui);
         }
         public bool IsEmpty(KhachHang ad)
         {
