@@ -28,7 +28,7 @@ namespace DOAN_Nhom4
             lblSoTkValue.Text = khNguoiDung.SoTK.ToString();
             lblSoDuValue.Text = khNguoiDung.SoDu.ToString();
             lblCccdValue.Text = khNguoiDung.Cccd.ToString();
-            lblNgaySinhValue.Text = khNguoiDung.NgaySinh.ToString();
+            lblNgaySinhValue.Text = khNguoiDung.NgaySinh.ToString("dd-MM-yyyy");
             lblSdtValue.Text = khNguoiDung.Sdt.ToString();
         }
 
