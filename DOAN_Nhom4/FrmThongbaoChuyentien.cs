@@ -13,6 +13,7 @@ namespace DOAN_Nhom4
     public partial class FrmThongbaoChuyentien : Form
     {
         public KhachHang khXacNhanChuyenTien { get; set; }
+        public ChuyenTien chuyenTien { get; set; }
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
@@ -48,7 +49,10 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblTime.Text = khXacNhanChuyenTien.TenTK.ToString();
+            lblNguoinhan.Text = chuyenTien.TenTK.ToString();
+            lblSTK.Text = chuyenTien.SoTk.ToString();
+            lblNganhang.Text = chuyenTien.NganHang.ToString();
+            lblNoidung.Text = chuyenTien.LoiNhan.ToString();
         }
     }
 }

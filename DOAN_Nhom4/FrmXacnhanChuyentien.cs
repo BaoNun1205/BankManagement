@@ -44,11 +44,12 @@ namespace DOAN_Nhom4
             KhachHang khachHangGui = LayKhachHang();
             if (txtMatkhau.Text == khachHangGui.Pass)
             {
-                ChuyenTien ct = new ChuyenTien(chuyenTien.SoTk, chuyenTien.SoTien, chuyenTien.LoiNhan);
+                ChuyenTien ct = new ChuyenTien(chuyenTien.TenTK, chuyenTien.SoTk, chuyenTien.SoTien, chuyenTien.NganHang, chuyenTien.LoiNhan);
                 KhachHang khachHangNhan = new KhachHang(chuyenTien.SoTk);
                 khachHangDAO.GuiTien(khachHangGui, ct, khachHangNhan);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien();
                 frmThongbaoChuyentien.khXacNhanChuyenTien = khChuyenTien;
+                frmThongbaoChuyentien.chuyenTien = chuyenTien;
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();

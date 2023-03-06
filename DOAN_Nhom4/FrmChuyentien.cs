@@ -14,6 +14,7 @@ namespace DOAN_Nhom4
     public partial class FrmChuyentien : Form
     {
         public KhachHang khNguoiDung { get; set; }
+        private static string tenTK;
         public FrmChuyentien()
         {
             InitializeComponent();
@@ -44,7 +45,7 @@ namespace DOAN_Nhom4
         {
             if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                ChuyenTien chuyenTien = new ChuyenTien(txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                ChuyenTien chuyenTien = new ChuyenTien(tenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text , txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien();
                 frmxacnhan.chuyenTien = chuyenTien;
                 frmxacnhan.khChuyenTien = LayKhachHang();
@@ -66,7 +67,10 @@ namespace DOAN_Nhom4
             KhachHang kh = new KhachHang();
             kh = dBConnection.LayKhachHang("SoTK", txtSTK.Text);
             if (kh != null)
+            {
                 lblTenTK.Text = kh.TenTK.ToString();
+                tenTK = kh.TenTK.ToString();
+            }                   
             else
                 lblTenTK.Text = "Khong ton tai";
         } 
