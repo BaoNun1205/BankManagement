@@ -66,8 +66,9 @@ namespace DOAN_Nhom4
                 command.Parameters.AddWithValue("@Giatri", giaTri);
 
                 SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                if (reader.HasRows)
                 {
+                    reader.Read();
                     khachHang.SoTK = reader.GetString(0);
                     khachHang.TenTK = reader.GetString(1);
                     khachHang.TenDN = reader.GetString(2);
@@ -76,8 +77,9 @@ namespace DOAN_Nhom4
                     khachHang.Cccd = reader.GetString(5);
                     khachHang.Sdt = reader.GetString(6);
                     khachHang.SoDu = reader.GetInt64(7);
-                    break;
                 }
+                else
+                    return null;
             }
             catch (Exception exc)
             {
