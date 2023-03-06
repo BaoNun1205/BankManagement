@@ -52,8 +52,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnChuyentien = new CustomButton.VBButton();
             this.pnlTKhoan = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lblTaiKhoang = new System.Windows.Forms.Label();
+            this.picBTaiKhoang = new System.Windows.Forms.PictureBox();
             this.lblXinchao = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnHotro = new CustomButton.VBButton();
@@ -74,7 +74,7 @@
             this.pnlCĐat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnlTKhoan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBTaiKhoang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNguoidung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -403,16 +403,24 @@
             // pnlTKhoan
             // 
             this.pnlTKhoan.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.pnlTKhoan.Controls.Add(this.label7);
             this.pnlTKhoan.Controls.Add(this.pictureBox7);
             this.pnlTKhoan.Location = new System.Drawing.Point(1127, 21);
             this.pnlTKhoan.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+=======
+            this.pnlTKhoan.Controls.Add(this.lblTaiKhoang);
+            this.pnlTKhoan.Controls.Add(this.picBTaiKhoang);
+            this.pnlTKhoan.Location = new System.Drawing.Point(607, 10);
+            this.pnlTKhoan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+>>>>>>> 2f6fa60e6a198372dbf594d5907da20f4ff05dca
             this.pnlTKhoan.Name = "pnlTKhoan";
             this.pnlTKhoan.Size = new System.Drawing.Size(267, 79);
             this.pnlTKhoan.TabIndex = 44;
             // 
-            // label7
+            // lblTaiKhoang
             // 
+<<<<<<< HEAD
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -423,9 +431,23 @@
             this.label7.Size = new System.Drawing.Size(180, 45);
             this.label7.TabIndex = 22;
             this.label7.Text = "Tài khoản";
+=======
+            this.lblTaiKhoang.AutoSize = true;
+            this.lblTaiKhoang.BackColor = System.Drawing.Color.Transparent;
+            this.lblTaiKhoang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblTaiKhoang.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTaiKhoang.Location = new System.Drawing.Point(2, 8);
+            this.lblTaiKhoang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTaiKhoang.Name = "lblTaiKhoang";
+            this.lblTaiKhoang.Size = new System.Drawing.Size(92, 23);
+            this.lblTaiKhoang.TabIndex = 22;
+            this.lblTaiKhoang.Text = "Tài khoản";
+            this.lblTaiKhoang.Click += new System.EventHandler(this.lblTaiKhoang_Click);
+>>>>>>> 2f6fa60e6a198372dbf594d5907da20f4ff05dca
             // 
-            // pictureBox7
+            // picBTaiKhoang
             // 
+<<<<<<< HEAD
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = global::DOAN_Nhom4.Properties.Resources.user1;
             this.pictureBox7.Location = new System.Drawing.Point(186, 2);
@@ -435,6 +457,17 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 21;
             this.pictureBox7.TabStop = false;
+=======
+            this.picBTaiKhoang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBTaiKhoang.Image = global::DOAN_Nhom4.Properties.Resources.user1;
+            this.picBTaiKhoang.Location = new System.Drawing.Point(100, 1);
+            this.picBTaiKhoang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.picBTaiKhoang.Name = "picBTaiKhoang";
+            this.picBTaiKhoang.Size = new System.Drawing.Size(43, 34);
+            this.picBTaiKhoang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBTaiKhoang.TabIndex = 21;
+            this.picBTaiKhoang.TabStop = false;
+>>>>>>> 2f6fa60e6a198372dbf594d5907da20f4ff05dca
             // 
             // lblXinchao
             // 
@@ -581,7 +614,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pnlTKhoan.ResumeLayout(false);
             this.pnlTKhoan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBTaiKhoang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNguoidung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -613,8 +646,8 @@
         private PictureBox pictureBox6;
         private CustomButton.VBButton btnChuyentien;
         private Panel pnlTKhoan;
-        private Label label7;
-        private PictureBox pictureBox7;
+        private Label lblTaiKhoang;
+        private PictureBox picBTaiKhoang;
         private Label lblXinchao;
         private Label label8;
         private CustomButton.VBButton btnHotro;
