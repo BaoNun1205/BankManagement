@@ -244,7 +244,6 @@
             this.pnlChuyentien.Name = "pnlChuyentien";
             this.pnlChuyentien.Size = new System.Drawing.Size(444, 386);
             this.pnlChuyentien.TabIndex = 11;
-            this.pnlChuyentien.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChuyentien_Paint);
             // 
             // lblSoDuString
             // 
