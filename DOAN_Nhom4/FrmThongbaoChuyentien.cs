@@ -41,6 +41,14 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
+        {
+            lblTime.Text = khXacNhanChuyenTien.TenTK.ToString();
+        }
     }
 }

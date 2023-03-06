@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien();
-            frmchuyentien.khNguoiDung = LayKhachHang();
+            frmchuyentien.khNguoiDung = khChuyenTien;
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -48,7 +48,7 @@ namespace DOAN_Nhom4
                 KhachHang khachHangNhan = new KhachHang(chuyenTien.SoTk);
                 khachHangDAO.GuiTien(khachHangGui, ct, khachHangNhan);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien();
-                frmThongbaoChuyentien.khXacNhanChuyenTien = LayKhachHang();
+                frmThongbaoChuyentien.khXacNhanChuyenTien = khChuyenTien;
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();
