@@ -41,10 +41,18 @@ namespace DOAN_Nhom4
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            ChuyenTien ct = new ChuyenTien(chuyenTien.SoTk, chuyenTien.SoTien, chuyenTien.LoiNhan);
             KhachHang khachHangGui = LayKhachHang();
-            KhachHang khachHangNhan = new KhachHang(chuyenTien.SoTk);
-            khachHangDAO.GuiTien(khachHangGui, ct, khachHangNhan);
+            if (txtMatkhau.Text == khachHangGui.Pass)
+            {
+                ChuyenTien ct = new ChuyenTien(chuyenTien.SoTk, chuyenTien.SoTien, chuyenTien.LoiNhan);
+                KhachHang khachHangNhan = new KhachHang(chuyenTien.SoTk);
+                khachHangDAO.GuiTien(khachHangGui, ct, khachHangNhan);
+            }
+            else
+            {
+                MessageBox.Show("Sai mat khau");
+                txtMatkhau.Text = "";
+            }
         }
     }
 }
