@@ -208,7 +208,7 @@
             this.picBoxChuyentien.Image = global::DOAN_Nhom4.Properties.Resources.pexels_johannes_plenio_1632788;
             this.picBoxChuyentien.Location = new System.Drawing.Point(-3, -1);
             this.picBoxChuyentien.Name = "picBoxChuyentien";
-            this.picBoxChuyentien.Size = new System.Drawing.Size(1033, 1000);
+            this.picBoxChuyentien.Size = new System.Drawing.Size(941, 912);
             this.picBoxChuyentien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxChuyentien.TabIndex = 10;
             this.picBoxChuyentien.TabStop = false;
@@ -227,22 +227,27 @@
             this.pnlChuyentien.Controls.Add(this.txtSTK);
             this.pnlChuyentien.Controls.Add(this.txtSoTien);
             this.pnlChuyentien.Controls.Add(this.label5);
-            this.pnlChuyentien.Location = new System.Drawing.Point(100, 92);
+            this.pnlChuyentien.Location = new System.Drawing.Point(55, 55);
             this.pnlChuyentien.Name = "pnlChuyentien";
-            this.pnlChuyentien.Size = new System.Drawing.Size(821, 818);
+            this.pnlChuyentien.Size = new System.Drawing.Size(822, 791);
             this.pnlChuyentien.TabIndex = 11;
+            this.pnlChuyentien.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChuyentien_Paint);
             // 
             // FrmChuyentien
             // 
+            this.AcceptButton = this.btnTieptuc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1023, 1000);
+            this.CancelButton = this.btnHuy;
+            this.ClientSize = new System.Drawing.Size(934, 908);
             this.Controls.Add(this.pnlChuyentien);
             this.Controls.Add(this.picBoxChuyentien);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmChuyentien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chuyển tiền";

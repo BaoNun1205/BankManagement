@@ -33,6 +33,13 @@
             this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
             this.lblQuaylai = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
             this.panel1.SuspendLayout();
@@ -83,21 +90,105 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.lblTime);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblQuaylai);
             this.panel1.Controls.Add(this.picBoxQuaylai);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(10, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 229);
+            this.panel1.Size = new System.Drawing.Size(675, 862);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(67, 222);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 35);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Loại giao dịch";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(424, 222);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 35);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Chuyển tiền";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(67, 367);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 35);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Phí giao dịch";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(467, 367);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 35);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Miễn phí";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(67, 298);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 35);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Ngày giao dịch";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTime.Location = new System.Drawing.Point(467, 298);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(123, 35);
+            this.lblTime.TabIndex = 9;
+            this.lblTime.Text = "Miễn phí";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel2.Location = new System.Drawing.Point(72, 278);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(512, 2);
+            this.panel2.TabIndex = 10;
             // 
             // FrmThongbaoChuyentien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(697, 253);
+            this.ClientSize = new System.Drawing.Size(694, 883);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -119,5 +210,12 @@
         private PictureBox picBoxQuaylai;
         private Label lblQuaylai;
         private Panel panel1;
+        private Label lblTime;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Panel panel2;
     }
 }

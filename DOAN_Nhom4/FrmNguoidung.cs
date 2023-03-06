@@ -37,6 +37,7 @@
             this.Close();
         }
 
+
         private void picBoxChuyentien_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien();
@@ -55,6 +56,7 @@
             this.Close();
         }
 
+        //Nut chuyen tien
         private void btnChuyentien_MouseMove(object sender, MouseEventArgs e)
         {
             btnChuyentien.BorderColor = Color.Aqua;
@@ -75,6 +77,8 @@
             btnChuyentien.BorderColor = Color.Aqua;
         }
 
+        // Nut tien ich
+
         private void btnTienich_MouseMove(object sender, MouseEventArgs e)
         {
             btnTienich.BorderColor = Color.Aqua;
@@ -94,6 +98,8 @@
         {
             btnTienich.BorderColor = Color.Aqua;
         }
+
+        // Nut tiet kiem
         private void btnTietkiem_MouseMove(object sender, MouseEventArgs e)
         {
             btnTietkiem.BorderColor = Color.LightSalmon;
@@ -114,6 +120,7 @@
             btnTietkiem.BorderColor = Color.LightSalmon;
         }
 
+        // Nut ho tro
         private void btnHotro_MouseMove(object sender, MouseEventArgs e)
         {
             btnHotro.BorderColor = Color.LightSalmon;

@@ -49,5 +49,10 @@ namespace DOAN_Nhom4
         {
 
         }
+
+        private void pnlChuyentien_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

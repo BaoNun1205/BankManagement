@@ -40,5 +40,7 @@ namespace DOAN_Nhom4
             frmnguoidung.ShowDialog();
             this.Close();
         }
+
+        
     }
 }
