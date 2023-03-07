@@ -23,6 +23,19 @@ namespace DOAN_Nhom4
             KhachHang khNguoiDung = new KhachHang(khXacNhanChuyenTien.SoTK, khXacNhanChuyenTien.TenTK, khXacNhanChuyenTien.TenDN, khXacNhanChuyenTien.Pass, khXacNhanChuyenTien.NgaySinh, khXacNhanChuyenTien.Cccd, khXacNhanChuyenTien.Sdt, khXacNhanChuyenTien.SoDu);
             return khNguoiDung;
         }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString();
+            lblNguoinhan.Text = chuyenTien.TenTK.ToString();
+            lblSTK.Text = chuyenTien.SoTk.ToString();
+            lblNganhang.Text = chuyenTien.NganHang.ToString();
+            lblNoidung.Text = chuyenTien.LoiNhan.ToString();
+        }
 
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
@@ -40,19 +53,6 @@ namespace DOAN_Nhom4
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
-        {
-            lblNguoinhan.Text = chuyenTien.TenTK.ToString();
-            lblSTK.Text = chuyenTien.SoTk.ToString();
-            lblNganhang.Text = chuyenTien.NganHang.ToString();
-            lblNoidung.Text = chuyenTien.LoiNhan.ToString();
         }
     }
 }

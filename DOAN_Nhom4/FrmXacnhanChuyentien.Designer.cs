@@ -137,6 +137,8 @@
             this.Controls.Add(this.picBoxXacnhanChuyentien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmXacnhanChuyentien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xác nhận";

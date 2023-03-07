@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongbaoChuyentien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNoidung = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -154,9 +155,9 @@
             this.lblNguoinhan.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNguoinhan.Location = new System.Drawing.Point(355, 463);
             this.lblNguoinhan.Name = "lblNguoinhan";
-            this.lblNguoinhan.Size = new System.Drawing.Size(40, 35);
+            this.lblNguoinhan.Size = new System.Drawing.Size(24, 35);
             this.lblNguoinhan.TabIndex = 13;
-            this.lblNguoinhan.Text = " 1";
+            this.lblNguoinhan.Text = " ";
             // 
             // label7
             // 
@@ -194,11 +195,11 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTime.Location = new System.Drawing.Point(467, 298);
+            this.lblTime.Location = new System.Drawing.Point(355, 298);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(123, 35);
+            this.lblTime.Size = new System.Drawing.Size(24, 35);
             this.lblTime.TabIndex = 9;
-            this.lblTime.Text = "Miễn phí";
+            this.lblTime.Text = " ";
             // 
             // label6
             // 
@@ -216,7 +217,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(467, 367);
+            this.label5.Location = new System.Drawing.Point(355, 367);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 35);
             this.label5.TabIndex = 7;
@@ -238,7 +239,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(424, 222);
+            this.label3.Location = new System.Drawing.Point(355, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 35);
             this.label3.TabIndex = 5;
@@ -265,6 +266,7 @@
             this.lblQuaylai.Size = new System.Drawing.Size(165, 29);
             this.lblQuaylai.TabIndex = 3;
             this.lblQuaylai.Text = "Về trang chủ";
+            this.lblQuaylai.Click += new System.EventHandler(this.lblQuaylai_Click);
             // 
             // picBoxQuaylai
             // 
@@ -275,6 +277,7 @@
             this.picBoxQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxQuaylai.TabIndex = 2;
             this.picBoxQuaylai.TabStop = false;
+            this.picBoxQuaylai.Click += new System.EventHandler(this.picBoxQuaylai_Click);
             // 
             // label1
             // 
@@ -282,14 +285,14 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(140, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 52);
+            this.label1.Size = new System.Drawing.Size(424, 52);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Đã chuyển thành công";
+            this.label1.Text = "Giao dịch thành công";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.check;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(67, 107);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,6 +306,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(697, 790);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -330,7 +334,6 @@
         private Label label7;
         private Panel panel3;
         private Panel panel2;
-        private Label lblTime;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -341,5 +344,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label lblNganhang;
+        private Label lblTime;
     }
 }

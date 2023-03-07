@@ -253,9 +253,11 @@
             // 
             // FrmDangky
             // 
+            this.AcceptButton = this.btnXacnhan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CancelButton = this.btnHuy;
             this.ClientSize = new System.Drawing.Size(725, 966);
             this.Controls.Add(this.btnXacnhan);
             this.Controls.Add(this.btnHuy);
@@ -275,6 +277,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmDangky";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký";

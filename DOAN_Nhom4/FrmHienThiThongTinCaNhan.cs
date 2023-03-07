@@ -26,9 +26,9 @@ namespace DOAN_Nhom4
         {
             lblChuTKValue.Text = khNguoiDung.TenTK.ToString();
             lblSoTkValue.Text = khNguoiDung.SoTK.ToString();
-            lblSoDuValue.Text = khNguoiDung.SoDu.ToString();
+            lblSoDuValue.Text = khNguoiDung.SoDu.ToString() + " VNĐ";
             lblCccdValue.Text = khNguoiDung.Cccd.ToString();
-            lblNgaySinhValue.Text = khNguoiDung.NgaySinh.ToString();
+            lblNgaySinhValue.Text = khNguoiDung.NgaySinh.ToString("dd/MM/yyyy");
             lblSdtValue.Text = khNguoiDung.Sdt.ToString();
         }
 
@@ -39,6 +39,21 @@ namespace DOAN_Nhom4
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
+        }
+
+        private void lblNgaySinhValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCccdValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblChuTKValue_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
