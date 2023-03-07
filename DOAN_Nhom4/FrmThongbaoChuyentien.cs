@@ -36,7 +36,6 @@ namespace DOAN_Nhom4
             lblNganhang.Text = chuyenTien.NganHang.ToString();
             lblNoidung.Text = chuyenTien.LoiNhan.ToString();
         }
-
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
             FrmNguoidung frmnguoidung = new FrmNguoidung();

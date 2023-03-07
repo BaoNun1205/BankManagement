@@ -40,20 +40,5 @@ namespace DOAN_Nhom4
             frmnguoidung.ShowDialog();
             this.Close();
         }
-
-        private void lblNgaySinhValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCccdValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblChuTKValue_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
