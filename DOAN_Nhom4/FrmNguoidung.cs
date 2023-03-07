@@ -146,7 +146,7 @@
 
         }
 
-        private void lblTaiKhoang_Click(object sender, EventArgs e)
+        private void lblTaiKhoan_Click(object sender, EventArgs e)
         {
             FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
             frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
@@ -155,7 +155,7 @@
             this.Close();
         }
 
-        private void picBTaiKhoang_Click(object sender, EventArgs e)
+        private void picBTaiKhoan_Click(object sender, EventArgs e)
         {
             FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
             frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
