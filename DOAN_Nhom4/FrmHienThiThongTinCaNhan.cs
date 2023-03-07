@@ -40,5 +40,14 @@ namespace DOAN_Nhom4
             frmnguoidung.ShowDialog();
             this.Close();
         }
+
+        private void pb_quaylai_Click(object sender, EventArgs e)
+        {
+            FrmNguoidung frmnguoidung = new FrmNguoidung();
+            frmnguoidung.khDangNhap = LayKhachHang();
+            this.Hide();
+            frmnguoidung.ShowDialog();
+            this.Close();
+        }
     }
 }
