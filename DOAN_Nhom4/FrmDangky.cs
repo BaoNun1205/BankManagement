@@ -12,7 +12,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangky : Form
     {
-        KhachHangDAO khachHangDAO = new KhachHangDAO();
+        NguoiDungDAO khachHangDAO = new NguoiDungDAO();
         public FrmDangky()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace DOAN_Nhom4
         }
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang(txtSoTK.Text, txtTenTK.Text, txtTenDN.Text, txtMatkhau.Text, timeNgaySinh.Value, txtCCCD.Text, txtSDT.Text, 100000);
+            NguoiDung kh = new NguoiDung(txtSoTK.Text, txtTenTK.Text, txtTenDN.Text, txtMatkhau.Text, timeNgaySinh.Value, txtCCCD.Text, txtSDT.Text, 100000);
             khachHangDAO.Them(kh);
             FrmDangnhap frmdangnhap = new FrmDangnhap();
             this.Hide();

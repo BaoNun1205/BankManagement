@@ -58,16 +58,15 @@ namespace DOAN_Nhom4
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
-            KhachHang kh = new KhachHang();
+            NguoiDung nguoiDung = new NguoiDung();
             if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
                     MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                kh = dBConnection.LayKhachHang("TenDN", dn.TenDN);
-                FrmNguoidung frmnguoidung = new FrmNguoidung();
-                frmnguoidung.khDangNhap = kh;
+                nguoiDung = dBConnection.LayKhachHang("TenDN", dn.TenDN);
+                FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
                 this.Hide();
                 frmnguoidung.ShowDialog();
                 this.Close();

@@ -12,16 +12,17 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongbaoChuyentien : Form
     {
-        public KhachHang khXacNhanChuyenTien { get; set; }
-        public ChuyenTien chuyenTien { get; set; }
+        public NguoiDung nguoiDung;
+        public ChuyenTien chuyenTien;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
-        private KhachHang LayKhachHang()
+
+        public FrmThongbaoChuyentien(NguoiDung nguoiDung)
         {
-            KhachHang khNguoiDung = new KhachHang(khXacNhanChuyenTien.SoTK, khXacNhanChuyenTien.TenTK, khXacNhanChuyenTien.TenDN, khXacNhanChuyenTien.Pass, khXacNhanChuyenTien.NgaySinh, khXacNhanChuyenTien.Cccd, khXacNhanChuyenTien.Sdt, khXacNhanChuyenTien.SoDu);
-            return khNguoiDung;
+            InitializeComponent();
+            this.nguoiDung = nguoiDung;
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -38,8 +39,7 @@ namespace DOAN_Nhom4
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            frmnguoidung.khDangNhap = LayKhachHang();
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -47,8 +47,7 @@ namespace DOAN_Nhom4
 
         private void lblQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            frmnguoidung.khDangNhap = LayKhachHang();
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();

@@ -17,7 +17,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        KhachHangDAO khDAO = new KhachHangDAO();
+        NguoiDungDAO khDAO = new NguoiDungDAO();
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             HienThi();
@@ -38,7 +38,7 @@ namespace DOAN_Nhom4
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
+            NguoiDung kh = new NguoiDung(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
             if (khDAO.IsEmpty(kh) == false)
             {
                 if (khDAO.IsPhone(kh) == false)
@@ -55,7 +55,7 @@ namespace DOAN_Nhom4
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
+            NguoiDung kh = new NguoiDung(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
             khDAO.Xoa(kh);
             HienThi();
             Refresh();
@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
+            NguoiDung kh = new NguoiDung(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
             if (khDAO.IsEmpty(kh) == false)
             {
                 if (khDAO.IsPhone(kh) == false)

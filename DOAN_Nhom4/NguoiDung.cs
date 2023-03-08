@@ -7,7 +7,7 @@ using System.Numerics;
 
 namespace DOAN_Nhom4
 {
-    public class KhachHang
+    public class NguoiDung
     {
         public string soTK;
         public string tenTK;
@@ -27,8 +27,8 @@ namespace DOAN_Nhom4
         public string Sdt { get => sdt; set => sdt = value; }
         public BigInteger SoDu { get => soDu; set => soDu = value; }
 
-        public KhachHang() { }
-        public KhachHang(string soTK, string tenTK, string tenDN, string pass, DateTime ngaySinh, string cccd, string sdt, BigInteger soDu)
+        public NguoiDung() { }
+        public NguoiDung(string soTK, string tenTK, string tenDN, string pass, DateTime ngaySinh, string cccd, string sdt, BigInteger soDu)
         {
             this.soTK = soTK;
             this.tenTK = tenTK;
@@ -40,7 +40,7 @@ namespace DOAN_Nhom4
             this.soDu = soDu;
         }
 
-        public KhachHang(string soTK)
+        public NguoiDung(string soTK)
         {
             this.soTK = soTK;
             this.TenTK = "";
@@ -52,7 +52,7 @@ namespace DOAN_Nhom4
             this.soDu = 0;
         }
 
-        public KhachHang(string tenDN, string pass)
+        public NguoiDung(string tenDN, string pass)
         {
             this.tenDN = tenDN;
             this.pass = pass;

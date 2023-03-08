@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
         DBConnection db = new DBConnection();
         public bool XacNhanDangNhap(DangNhap dn)
         {
-            KhachHang khachHang = new KhachHang();
+            NguoiDung khachHang = new NguoiDung();
             khachHang = db.LayKhachHang("TenDN", dn.TenDN);
             if (khachHang.TenDN == dn.TenDN && khachHang.Pass == dn.Pass)
             {

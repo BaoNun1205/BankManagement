@@ -55,9 +55,9 @@ namespace DOAN_Nhom4
             }
         }
 
-        public KhachHang LayKhachHang(string Cot, string giaTri)
+        public NguoiDung LayKhachHang(string Cot, string giaTri)
         {
-            KhachHang khachHang = new KhachHang();
+            NguoiDung khachHang = new NguoiDung();
             try
             {
                 conn.Open();

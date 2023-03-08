@@ -2,10 +2,16 @@
 {
     public partial class FrmNguoidung : Form
     {
-        public KhachHang khDangNhap { get; set; }
+        public NguoiDung nguoiDung;
         public FrmNguoidung()
         {
             InitializeComponent();
+        }
+
+        public FrmNguoidung(NguoiDung nguoiDung)
+        {
+            InitializeComponent();
+            this.nguoiDung = nguoiDung;
         }
         private void FrmNguoidung_Load(object sender, EventArgs e)
         {
@@ -20,28 +26,18 @@
             
             lblTenTK.Parent = picBoxNguoidung;
             lblTenTK.BackColor = Color.Transparent;
-            lblTenTK.Text = khDangNhap.TenTK.ToString();
-        }
-
-        private KhachHang LayKhachHang()
-        {
-            KhachHang khNguoiDung = new KhachHang(khDangNhap.SoTK, khDangNhap.TenTK, khDangNhap.TenDN, khDangNhap.Pass, khDangNhap.NgaySinh, khDangNhap.Cccd, khDangNhap.Sdt, khDangNhap.SoDu);
-            return khNguoiDung;
+            lblTenTK.Text = nguoiDung.TenTK.ToString();
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien();
-            frmchuyentien.khNguoiDung = LayKhachHang();
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
         }
-
-
         private void picBoxChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien();
-            frmchuyentien.khNguoiDung = LayKhachHang();
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -49,8 +45,7 @@
 
         private void lblChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien();
-            frmchuyentien.khNguoiDung = LayKhachHang();
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -148,8 +143,7 @@
 
         private void lblTaiKhoan_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
-            frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
@@ -157,8 +151,7 @@
 
         private void picBTaiKhoan_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan();
-            frmHienThiThongTinCaNhan.khNguoiDung = LayKhachHang();
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
