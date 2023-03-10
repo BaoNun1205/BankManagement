@@ -45,8 +45,8 @@ namespace DOAN_Nhom4
             NguoiDung nguoiGui = nguoiDung;
             if (txtMatkhau.Text == nguoiGui.Pass)
             {
-                NguoiDung khachHangNhan = new NguoiDung(chuyenTien.SoTk);
-                khachHangDAO.GuiTien(nguoiGui, chuyenTien, khachHangNhan);
+                NguoiDung nguoiNhan = new NguoiDung(chuyenTien.SoTk);
+                khachHangDAO.GuiTien(nguoiGui, chuyenTien, nguoiNhan);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(nguoiDung);
                 frmThongbaoChuyentien.chuyenTien = chuyenTien;
                 this.Hide();

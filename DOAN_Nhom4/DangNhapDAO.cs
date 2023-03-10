@@ -10,11 +10,11 @@ namespace DOAN_Nhom4
     {
         public DangNhapDAO() { }
 
-        DBConnection db = new DBConnection();
+        NguoiDungDAO nguoiDungDAO = new NguoiDungDAO();
         public bool XacNhanDangNhap(DangNhap dn)
         {
             NguoiDung khachHang = new NguoiDung();
-            khachHang = db.LayKhachHang("TenDN", dn.TenDN);
+            khachHang = nguoiDungDAO.LayKhachHang("TenDN", dn.TenDN);
             if (khachHang.TenDN == dn.TenDN && khachHang.Pass == dn.Pass)
             {
                 return true;

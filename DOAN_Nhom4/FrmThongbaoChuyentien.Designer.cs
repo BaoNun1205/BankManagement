@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongbaoChuyentien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSotien = new System.Windows.Forms.Label();
             this.lblNoidung = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblNganhang = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.lblSotien);
             this.panel1.Controls.Add(this.lblNoidung);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblNganhang);
@@ -80,14 +82,24 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 769);
+            this.panel1.Size = new System.Drawing.Size(750, 1081);
             this.panel1.TabIndex = 2;
+            // 
+            // lblSotien
+            // 
+            this.lblSotien.AutoSize = true;
+            this.lblSotien.Font = new System.Drawing.Font("Tahoma", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSotien.Location = new System.Drawing.Point(258, 225);
+            this.lblSotien.Name = "lblSotien";
+            this.lblSotien.Size = new System.Drawing.Size(174, 52);
+            this.lblSotien.TabIndex = 20;
+            this.lblSotien.Text = "Số tiền";
             // 
             // lblNoidung
             // 
             this.lblNoidung.AutoSize = true;
             this.lblNoidung.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNoidung.Location = new System.Drawing.Point(367, 666);
+            this.lblNoidung.Location = new System.Drawing.Point(391, 960);
             this.lblNoidung.Name = "lblNoidung";
             this.lblNoidung.Size = new System.Drawing.Size(24, 35);
             this.lblNoidung.TabIndex = 19;
@@ -99,7 +111,7 @@
             this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(67, 666);
+            this.label10.Location = new System.Drawing.Point(67, 960);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(130, 35);
             this.label10.TabIndex = 18;
@@ -109,7 +121,7 @@
             // 
             this.lblNganhang.AutoSize = true;
             this.lblNganhang.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNganhang.Location = new System.Drawing.Point(367, 602);
+            this.lblNganhang.Location = new System.Drawing.Point(391, 885);
             this.lblNganhang.Name = "lblNganhang";
             this.lblNganhang.Size = new System.Drawing.Size(24, 35);
             this.lblNganhang.TabIndex = 17;
@@ -121,7 +133,7 @@
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(67, 602);
+            this.label9.Location = new System.Drawing.Point(67, 885);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(153, 35);
             this.label9.TabIndex = 16;
@@ -131,7 +143,7 @@
             // 
             this.lblSTK.AutoSize = true;
             this.lblSTK.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSTK.Location = new System.Drawing.Point(367, 531);
+            this.lblSTK.Location = new System.Drawing.Point(391, 808);
             this.lblSTK.Name = "lblSTK";
             this.lblSTK.Size = new System.Drawing.Size(24, 35);
             this.lblSTK.TabIndex = 15;
@@ -143,7 +155,7 @@
             this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(67, 531);
+            this.label8.Location = new System.Drawing.Point(67, 808);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(174, 35);
             this.label8.TabIndex = 14;
@@ -153,7 +165,7 @@
             // 
             this.lblNguoinhan.AutoSize = true;
             this.lblNguoinhan.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNguoinhan.Location = new System.Drawing.Point(367, 463);
+            this.lblNguoinhan.Location = new System.Drawing.Point(391, 728);
             this.lblNguoinhan.Name = "lblNguoinhan";
             this.lblNguoinhan.Size = new System.Drawing.Size(24, 35);
             this.lblNguoinhan.TabIndex = 13;
@@ -165,7 +177,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(67, 463);
+            this.label7.Location = new System.Drawing.Point(67, 728);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 35);
             this.label7.TabIndex = 12;
@@ -175,27 +187,27 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel3.Location = new System.Drawing.Point(75, 430);
+            this.panel3.Location = new System.Drawing.Point(73, 674);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(512, 2);
+            this.panel3.Size = new System.Drawing.Size(600, 2);
             this.panel3.TabIndex = 11;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel2.Location = new System.Drawing.Point(73, 200);
+            this.panel2.Location = new System.Drawing.Point(67, 368);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(512, 2);
+            this.panel2.Size = new System.Drawing.Size(600, 2);
             this.panel2.TabIndex = 10;
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTime.Location = new System.Drawing.Point(367, 298);
+            this.lblTime.Location = new System.Drawing.Point(391, 504);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(24, 35);
             this.lblTime.TabIndex = 9;
@@ -207,7 +219,7 @@
             this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(67, 298);
+            this.label6.Location = new System.Drawing.Point(67, 504);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(203, 35);
             this.label6.TabIndex = 8;
@@ -217,7 +229,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(367, 367);
+            this.label5.Location = new System.Drawing.Point(391, 582);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 35);
             this.label5.TabIndex = 7;
@@ -229,7 +241,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(67, 367);
+            this.label4.Location = new System.Drawing.Point(67, 582);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 35);
             this.label4.TabIndex = 6;
@@ -239,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(367, 222);
+            this.label3.Location = new System.Drawing.Point(391, 422);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 35);
             this.label3.TabIndex = 5;
@@ -251,7 +263,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(67, 222);
+            this.label2.Location = new System.Drawing.Point(67, 422);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 35);
             this.label2.TabIndex = 4;
@@ -283,16 +295,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(140, 107);
+            this.label1.Location = new System.Drawing.Point(192, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 52);
+            this.label1.Size = new System.Drawing.Size(424, 52);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Đã chuyển thành công";
+            this.label1.Text = "Giao dịch thành công";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.check;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(109, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -304,7 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(698, 791);
+            this.ClientSize = new System.Drawing.Size(774, 1105);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
@@ -345,5 +357,6 @@
         private PictureBox picBoxQuaylai;
         private Label label1;
         private PictureBox pictureBox1;
+        private Label lblSotien;
     }
 }

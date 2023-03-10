@@ -13,6 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
+        NguoiDungDAO NguoiDungDAO = new NguoiDungDAO();
         public NguoiDung nguoiDung;
         private static string tenTK;
         public FrmChuyentien()
@@ -28,7 +29,6 @@ namespace DOAN_Nhom4
             pnlChuyentien.BackColor = Color.Transparent;
             nguoiDung = kh;
         }
-        DBConnection dBConnection = new DBConnection();
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
             lblSoDu.Text = nguoiDung.SoDu.ToString();
@@ -65,7 +65,7 @@ namespace DOAN_Nhom4
         private void txtSTK_TextChanged(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung();
-            kh = dBConnection.LayKhachHang("SoTK", txtSTK.Text);
+            kh = NguoiDungDAO.LayKhachHang("SoTK", txtSTK.Text);
             if (kh != null)
             {
                 lblTenTK.Text = kh.TenTK.ToString();

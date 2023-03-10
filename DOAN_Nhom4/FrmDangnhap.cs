@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangnhap : Form
     {
-        DBConnection dBConnection = new DBConnection();
+        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
         public FrmDangnhap()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace DOAN_Nhom4
                 {
                     MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                nguoiDung = dBConnection.LayKhachHang("TenDN", dn.TenDN);
+                nguoiDung = ngdungDAO.LayKhachHang("TenDN", dn.TenDN);
                 FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
                 this.Hide();
                 frmnguoidung.ShowDialog();
