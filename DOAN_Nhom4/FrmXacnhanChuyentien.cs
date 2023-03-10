@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacnhanChuyentien : Form
     {
-        public ChuyenTien chuyenTien;
+        public GiaoDichChuyenTien gdchuyentien;
         public NguoiDung nguoiDung;
         NguoiDungDAO khachHangDAO = new NguoiDungDAO();
         public FrmXacnhanChuyentien()
@@ -45,10 +45,9 @@ namespace DOAN_Nhom4
             NguoiDung nguoiGui = nguoiDung;
             if (txtMatkhau.Text == nguoiGui.Pass)
             {
-                NguoiDung nguoiNhan = new NguoiDung(chuyenTien.SoTk);
-                khachHangDAO.GuiTien(nguoiGui, chuyenTien, nguoiNhan);
-                FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(nguoiDung);
-                frmThongbaoChuyentien.chuyenTien = chuyenTien;
+                NguoiDung nguoiNhan = new NguoiDung(gdchuyentien.STKNgnhan);
+                khachHangDAO.GuiTien(nguoiGui, gdchuyentien, nguoiNhan);
+                FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(nguoiDung, gdchuyentien);
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();

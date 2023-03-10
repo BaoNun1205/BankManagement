@@ -13,16 +13,17 @@ namespace DOAN_Nhom4
     public partial class FrmThongbaoChuyentien : Form
     {
         public NguoiDung nguoiDung;
-        public ChuyenTien chuyenTien;
+        public GiaoDichChuyenTien gdchuyentien;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
 
-        public FrmThongbaoChuyentien(NguoiDung nguoiDung)
+        public FrmThongbaoChuyentien(NguoiDung nguoiDung, GiaoDichChuyenTien gdchuyentien)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
+            this.gdchuyentien = gdchuyentien;
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -31,12 +32,12 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblSotien.Text = chuyenTien.SoTien.ToString() + " VNĐ";
+            lblSotien.Text = gdchuyentien.SotienGiaodich.ToString() + " VNĐ";
             lblTime.Text = DateTime.Now.ToString();
-            lblNguoinhan.Text = chuyenTien.TenTK.ToString();
-            lblSTK.Text = chuyenTien.SoTk.ToString();
-            lblNganhang.Text = chuyenTien.NganHang.ToString();
-            lblNoidung.Text = chuyenTien.LoiNhan.ToString();
+            lblNguoinhan.Text = gdchuyentien.TenNgnhan.ToString();
+            lblSTK.Text = gdchuyentien.STKNgnhan.ToString();
+            lblNganhang.Text = gdchuyentien.TenNganhang.ToString();
+            lblNoidung.Text = gdchuyentien.LoiNhan.ToString();
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {

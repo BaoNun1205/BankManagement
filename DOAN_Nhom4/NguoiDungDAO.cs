@@ -72,20 +72,20 @@ namespace DOAN_Nhom4
             }
             return khachHang;
         }
-        public void GuiTien(NguoiDung ngGui, ChuyenTien chuyenTien, NguoiDung ngNhan)
+        public void GuiTien(NguoiDung ngGui, GiaoDichChuyenTien gdchuyentien, NguoiDung ngNhan)
         {
             NguoiDung khachHangNhan = new NguoiDung();
             khachHangNhan = LayKhachHang("SoTK", ngNhan.SoTK);
-            BigInteger soTienNhan = chuyenTien.SoTien + khachHangNhan.SoDu;
+            BigInteger soTienNhan = gdchuyentien.SotienGiaodich + khachHangNhan.SoDu;
             string sqlStrNhan = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienNhan, khachHangNhan.SoTK);
             data.xuLi(sqlStrNhan);
 
             NguoiDung khachHangGui = new NguoiDung();
             khachHangGui = LayKhachHang("SoTk", ngGui.SoTK);
-            BigInteger soTienGui = khachHangGui.SoDu - chuyenTien.SoTien;
+            BigInteger soTienGui = khachHangGui.SoDu - gdchuyentien.SotienGiaodich;
             string sqlStrGui = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienGui, khachHangGui.SoTK);
             data.xuLi(sqlStrGui);
-            ngGui.SoDu = ngGui.SoDu - chuyenTien.SoTien;
+            ngGui.SoDu = ngGui.SoDu - gdchuyentien.SotienGiaodich;
 
         }
         public bool IsEmpty(NguoiDung ad)

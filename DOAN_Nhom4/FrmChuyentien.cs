@@ -46,9 +46,9 @@ namespace DOAN_Nhom4
         {
             if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                ChuyenTien chuyenTien = new ChuyenTien(tenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text , txtLoiNhan.Text);
+                GiaoDichChuyenTien chuyenTien = new GiaoDichChuyenTien(tenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text , txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung);
-                frmxacnhan.chuyenTien = chuyenTien;
+                frmxacnhan.gdchuyentien = chuyenTien;
                 this.Hide();
                 frmxacnhan.ShowDialog();
                 this.Close();
