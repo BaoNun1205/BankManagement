@@ -59,7 +59,7 @@ namespace DOAN_Nhom4
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
             NguoiDung nguoiDung = new NguoiDung();
-            if (dnDAO.XacNhanDangNhap(dn))
+            /*if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
@@ -77,7 +77,7 @@ namespace DOAN_Nhom4
                 txtUserName.Clear();
                 txtPass.Clear();
                 txtUserName.Focus();
-            }
+            }*/
         }
         private void btnDangky_Click(object sender, EventArgs e)
         {

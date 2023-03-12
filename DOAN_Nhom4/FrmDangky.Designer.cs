@@ -249,7 +249,7 @@
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.TextColor = System.Drawing.Color.DodgerBlue;
             this.btnXacnhan.UseVisualStyleBackColor = false;
-            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
+            /*this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);*/
             // 
             // FrmDangky
             // 

@@ -26,6 +26,7 @@ namespace DOAN_Nhom4
         {
             gvQLKH.DataSource = khDAO.HienThi();
             gvQLKH.RowHeadersVisible = false;
+            /*
             gvQLKH.Columns[0].HeaderText = "Số tài khoản";
             gvQLKH.Columns[1].HeaderText = "Tên tài khoản";
             gvQLKH.Columns[2].HeaderText = "Tên đăng nhập";
@@ -34,43 +35,48 @@ namespace DOAN_Nhom4
             gvQLKH.Columns[5].HeaderText = "Căn cước công dân";
             gvQLKH.Columns[6].HeaderText = "Số điện thoại";
             gvQLKH.Columns[7].HeaderText = "Số dư";
+            */
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
-            if (khDAO.IsEmpty(kh) == false)
+            NguoiDung kh = new NguoiDung("HHB",txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            if (!khDAO.IsEmpty(kh, tknh))
             {
-                if (khDAO.IsPhone(kh) == false)
+                if (!khDAO.IsPhone(kh))
                     MessageBox.Show("So dien thoai khong hop le");
                 else
                 {
-                    khDAO.Them(kh);
+                    khDAO.Them(kh, tknh);
                     HienThi();
-                    Refresh();                }
+                    Refresh();                
+                }
             }
             else
                 MessageBox.Show("Chua nhap du thong tin");
         }
-
+        
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
-            khDAO.Xoa(kh);
+            NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            khDAO.Xoa(kh, tknh);
             HienThi();
             Refresh();
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung(txt_soTK.Text, txt_tenTK.Text, txt_tenDN.Text, txt_Password.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_SDT.Text, int.Parse(txt_SoDu.Text));
-            if (khDAO.IsEmpty(kh) == false)
+            NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            if (khDAO.IsEmpty(kh, tknh) == false)
             {
                 if (khDAO.IsPhone(kh) == false)
                     MessageBox.Show("So dien thoai khong hop le");
                 else
                 {
-                    khDAO.Sua(kh);
+                    khDAO.Sua(kh, tknh);
                     HienThi();
                     Refresh();
                 }
@@ -78,6 +84,7 @@ namespace DOAN_Nhom4
             else
                 MessageBox.Show("Chua nhap du thong tin");
         }
+        
         private void Refresh()
         {
             txt_soTK.Text = "";

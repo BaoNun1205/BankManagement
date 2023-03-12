@@ -31,7 +31,7 @@ namespace DOAN_Nhom4
         DBConnection dBConnection = new DBConnection();
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
-            lblSoDu.Text = nguoiDung.SoDu.ToString();
+            /*lblSoDu.Text = nguoiDung.SoDu.ToString();*/
         }
        
         private void btnHuy_Click(object sender, EventArgs e)

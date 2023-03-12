@@ -40,7 +40,7 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void btnXacnhan_Click(object sender, EventArgs e)
+        /*private void btnXacnhan_Click(object sender, EventArgs e)
         {
             NguoiDung nguoiGui = nguoiDung;
             if (txtMatkhau.Text == nguoiGui.Pass)
@@ -58,6 +58,6 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Sai mat khau");
                 txtMatkhau.Text = "";
             }
-        }
+        }*/
     }
 }

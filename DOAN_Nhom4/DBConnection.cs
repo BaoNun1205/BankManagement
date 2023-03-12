@@ -35,15 +35,40 @@ namespace DOAN_Nhom4
             return dt;
         }
 
+        public void xuLi(string kh, string tknh)
+        {
+            conn.Open();
+            SqlTransaction transaction = conn.BeginTransaction();
+            try
+            {
+                SqlCommand cmdKH = new SqlCommand(kh, conn);
+                cmdKH.Transaction = transaction;
+                cmdKH.ExecuteNonQuery();
+
+                SqlCommand cmdNH = new SqlCommand(tknh, conn);
+                cmdNH.Transaction = transaction;
+                cmdNH.ExecuteNonQuery();
+
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                MessageBox.Show("Loi ket noi" + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public void xuLi(string sqlStr)
         {
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                { }
-
+                SqlCommand cmdKH = new SqlCommand(sqlStr, conn);
+                cmdKH.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -66,7 +91,7 @@ namespace DOAN_Nhom4
                 command.Parameters.AddWithValue("@Giatri", giaTri);
 
                 SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                /*if (reader.HasRows)
                 {
                     reader.Read();
                     khachHang.SoTK = reader.GetString(0);
@@ -80,6 +105,7 @@ namespace DOAN_Nhom4
                 }
                 else
                     return null;
+                */
             }
             catch (Exception exc)
             {

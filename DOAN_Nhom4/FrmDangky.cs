@@ -25,7 +25,7 @@ namespace DOAN_Nhom4
             frmdangnhap.ShowDialog();
             this.Close();
         }
-        private void btnXacnhan_Click(object sender, EventArgs e)
+        /*private void btnXacnhan_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung(txtSoTK.Text, txtTenTK.Text, txtTenDN.Text, txtMatkhau.Text, timeNgaySinh.Value, txtCCCD.Text, txtSDT.Text, 100000);
             khachHangDAO.Them(kh);
@@ -33,6 +33,6 @@ namespace DOAN_Nhom4
             this.Hide();
             frmdangnhap.ShowDialog();
             this.Close();
-        }
+        }*/
     }
 }

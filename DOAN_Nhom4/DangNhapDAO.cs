@@ -11,7 +11,7 @@ namespace DOAN_Nhom4
         public DangNhapDAO() { }
 
         DBConnection db = new DBConnection();
-        public bool XacNhanDangNhap(DangNhap dn)
+        /*public bool XacNhanDangNhap(DangNhap dn)
         {
             NguoiDung khachHang = new NguoiDung();
             khachHang = db.LayKhachHang("TenDN", dn.TenDN);
@@ -20,6 +20,6 @@ namespace DOAN_Nhom4
                 return true;
             }
             return false;
-        }
+        }*/
     }
 }
