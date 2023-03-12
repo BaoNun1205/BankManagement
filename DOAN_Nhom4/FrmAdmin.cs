@@ -17,7 +17,6 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        NguoiDungDAO khDAO = new NguoiDungDAO();
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             HienThi();
