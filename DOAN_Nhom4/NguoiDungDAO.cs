@@ -34,13 +34,6 @@ namespace DOAN_Nhom4
             string sqlStr = string.Format("UPDATE KhachHang SET TenTK = '{0}' , TenDN = '{1}', MatKhau = '{2}', NgaySinh = '{3}', CCCD = '{4}', SDT = '{5}', SoDu = {6} WHERE SoTK ='{7}'", kh.TenTK, kh.TenDN, kh.Pass, kh.NgaySinh, kh.Cccd, kh.Sdt, kh.SoDu, kh.SoTK);
             data.xuLi(sqlStr);
         }
-        public void GuiTien(NguoiDung khGui, ChuyenTien chuyenTien, NguoiDung khNhan)
-        {
-            NguoiDung khachHangNhan = new NguoiDung();
-            khachHangNhan = data.LayKhachHang("SoTK", khNhan.SoTK);
-            BigInteger soTienNhan = chuyenTien.SoTien + khachHangNhan.SoDu;
-            string sqlStrNhan = string.Format("UPDATE KhachHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienNhan, khachHangNhan.SoTK);
-            data.xuLi(sqlStrNhan);
 
             NguoiDung khachHangGui = new NguoiDung();
             khachHangGui = data.LayKhachHang("SoTk", khGui.SoTK);
