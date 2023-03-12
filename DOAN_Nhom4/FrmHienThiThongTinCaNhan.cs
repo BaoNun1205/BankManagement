@@ -12,30 +12,38 @@ namespace DOAN_Nhom4
 {
     public partial class FrmHienThiThongTinCaNhan : Form
     {
-        public KhachHang khNguoiDung { get; set; }
+        public NguoiDung nguoiDung;
         public FrmHienThiThongTinCaNhan()
         {
             InitializeComponent();
         }
-        private KhachHang LayKhachHang()
+
+        public FrmHienThiThongTinCaNhan(NguoiDung nguoiDung)
         {
-            KhachHang kh = new KhachHang(khNguoiDung.SoTK, khNguoiDung.TenTK, khNguoiDung.TenDN, khNguoiDung.Pass, khNguoiDung.NgaySinh, khNguoiDung.Cccd, khNguoiDung.Sdt, khNguoiDung.SoDu);
-            return khNguoiDung;
+            InitializeComponent();
+            this.nguoiDung = nguoiDung;
         }
         private void FrmHienThiThongTinCaNhan_Load(object sender, EventArgs e)
         {
-            lblChuTKValue.Text = khNguoiDung.TenTK.ToString();
-            lblSoTkValue.Text = khNguoiDung.SoTK.ToString();
-            lblSoDuValue.Text = khNguoiDung.SoDu.ToString();
-            lblCccdValue.Text = khNguoiDung.Cccd.ToString();
-            lblNgaySinhValue.Text = khNguoiDung.NgaySinh.ToString("dd-MM-yyyy");
-            lblSdtValue.Text = khNguoiDung.Sdt.ToString();
+            lblChuTKValue.Text = nguoiDung.TenTK.ToString();
+            lblSoTkValue.Text = nguoiDung.SoTK.ToString();
+            lblSoDuValue.Text = nguoiDung.SoDu.ToString() + " VNĐ";
+            lblCccdValue.Text = nguoiDung.Cccd.ToString();
+            lblNgaySinhValue.Text = nguoiDung.NgaySinh.ToString("dd/MM/yyyy");
+            lblSdtValue.Text = nguoiDung.Sdt.ToString();
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            frmnguoidung.khDangNhap = LayKhachHang();
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            this.Hide();
+            frmnguoidung.ShowDialog();
+            this.Close();
+        }
+
+        private void pb_quaylai_Click(object sender, EventArgs e)
+        {
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();

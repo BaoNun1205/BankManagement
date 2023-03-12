@@ -12,36 +12,19 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongbaoChuyentien : Form
     {
-        public KhachHang khXacNhanChuyenTien { get; set; }
-        public ChuyenTien chuyenTien { get; set; }
+        public NguoiDung nguoiDung;
+        public GiaoDichChuyenTien gdchuyentien;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
-        private KhachHang LayKhachHang()
-        {
-            KhachHang khNguoiDung = new KhachHang(khXacNhanChuyenTien.SoTK, khXacNhanChuyenTien.TenTK, khXacNhanChuyenTien.TenDN, khXacNhanChuyenTien.Pass, khXacNhanChuyenTien.NgaySinh, khXacNhanChuyenTien.Cccd, khXacNhanChuyenTien.Sdt, khXacNhanChuyenTien.SoDu);
-            return khNguoiDung;
-        }
 
-        private void picBoxQuaylai_Click(object sender, EventArgs e)
+        public FrmThongbaoChuyentien(NguoiDung nguoiDung, GiaoDichChuyenTien gdchuyentien)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            frmnguoidung.khDangNhap = LayKhachHang();
-            this.Hide();
-            frmnguoidung.ShowDialog();
-            this.Close();
+            InitializeComponent();
+            this.nguoiDung = nguoiDung;
+            this.gdchuyentien = gdchuyentien;
         }
-
-        private void lblQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            frmnguoidung.khDangNhap = LayKhachHang();
-            this.Hide();
-            frmnguoidung.ShowDialog();
-            this.Close();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -49,10 +32,27 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblNguoinhan.Text = chuyenTien.TenTK.ToString();
-            lblSTK.Text = chuyenTien.SoTk.ToString();
-            lblNganhang.Text = chuyenTien.NganHang.ToString();
-            lblNoidung.Text = chuyenTien.LoiNhan.ToString();
+            lblSotien.Text = gdchuyentien.SotienGiaodich.ToString() + " VNĐ";
+            lblTime.Text = DateTime.Now.ToString();
+            lblNguoinhan.Text = gdchuyentien.TenNgnhan.ToString();
+            lblSTK.Text = gdchuyentien.STKNgnhan.ToString();
+            lblNganhang.Text = gdchuyentien.TenNganhang.ToString();
+            lblNoidung.Text = gdchuyentien.LoiNhan.ToString();
+        }
+        private void picBoxQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            this.Hide();
+            frmnguoidung.ShowDialog();
+            this.Close();
+        }
+
+        private void lblQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            this.Hide();
+            frmnguoidung.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -121,7 +121,7 @@
             this.cbTenNH.ForeColor = System.Drawing.Color.Black;
             this.cbTenNH.FormattingEnabled = true;
             this.cbTenNH.Items.AddRange(new object[] {
-            "Nội bộ HHB Bank",
+            "HHB Bank",
             "ACB",
             "Agribank",
             "BIDV",
@@ -253,9 +253,9 @@
             this.lblSoDuString.Location = new System.Drawing.Point(453, 363);
             this.lblSoDuString.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSoDuString.Name = "lblSoDuString";
-            this.lblSoDuString.Size = new System.Drawing.Size(91, 32);
+            this.lblSoDuString.Size = new System.Drawing.Size(88, 32);
             this.lblSoDuString.TabIndex = 27;
-            this.lblSoDuString.Text = "Số Dư: ";
+            this.lblSoDuString.Text = "Số dư: ";
             // 
             // lblSoDu
             // 
@@ -272,7 +272,7 @@
             // 
             this.lblTenTK.AutoSize = true;
             this.lblTenTK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTenTK.Location = new System.Drawing.Point(451, 243);
+            this.lblTenTK.Location = new System.Drawing.Point(453, 243);
             this.lblTenTK.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTenTK.Name = "lblTenTK";
             this.lblTenTK.Size = new System.Drawing.Size(21, 32);
@@ -290,6 +290,8 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmChuyentien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chuyển tiền";

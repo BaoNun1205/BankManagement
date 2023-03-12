@@ -13,7 +13,8 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
-        public KhachHang khNguoiDung { get; set; }
+        NguoiDungDAO NguoiDungDAO = new NguoiDungDAO();
+        public NguoiDung nguoiDung;
         private static string tenTK;
         public FrmChuyentien()
         {
@@ -21,21 +22,21 @@ namespace DOAN_Nhom4
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
         }
-        DBConnection dBConnection = new DBConnection();
+        public FrmChuyentien(NguoiDung kh)
+        {
+            InitializeComponent();
+            pnlChuyentien.Parent = picBoxChuyentien;
+            pnlChuyentien.BackColor = Color.Transparent;
+            nguoiDung = kh;
+        }
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
-            KhachHang kh = LayKhachHang();
-            lblSoDu.Text = kh.SoDu.ToString();
+            lblSoDu.Text = nguoiDung.SoDu.ToString();
         }
-        private KhachHang LayKhachHang()
-        {
-            KhachHang kh = new KhachHang(khNguoiDung.SoTK, khNguoiDung.TenTK, khNguoiDung.TenDN, khNguoiDung.Pass, khNguoiDung.NgaySinh, khNguoiDung.Cccd, khNguoiDung.Sdt, khNguoiDung.SoDu);
-            return khNguoiDung;
-        }
+       
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung();
-            frmnguoidung.khDangNhap = LayKhachHang();
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -45,10 +46,9 @@ namespace DOAN_Nhom4
         {
             if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                ChuyenTien chuyenTien = new ChuyenTien(tenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text , txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien();
-                frmxacnhan.chuyenTien = chuyenTien;
-                frmxacnhan.khChuyenTien = LayKhachHang();
+                GiaoDichChuyenTien chuyenTien = new GiaoDichChuyenTien(tenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text , txtLoiNhan.Text);
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung);
+                frmxacnhan.gdchuyentien = chuyenTien;
                 this.Hide();
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -64,8 +64,8 @@ namespace DOAN_Nhom4
 
         private void txtSTK_TextChanged(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang();
-            kh = dBConnection.LayKhachHang("SoTK", txtSTK.Text);
+            NguoiDung kh = new NguoiDung();
+            kh = NguoiDungDAO.LayKhachHang("SoTK", txtSTK.Text);
             if (kh != null)
             {
                 lblTenTK.Text = kh.TenTK.ToString();
@@ -73,6 +73,6 @@ namespace DOAN_Nhom4
             }                   
             else
                 lblTenTK.Text = "Khong ton tai";
-        } 
+        }
     }
 }
