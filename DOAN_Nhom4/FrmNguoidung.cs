@@ -27,6 +27,7 @@
             lblTenTK.Parent = picBoxNguoidung;
             lblTenTK.BackColor = Color.Transparent;
             lblTenTK.Text = nguoiDung.TenTK.ToString();
+
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
@@ -154,6 +155,35 @@
             FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
+            this.Close();
+        }
+
+        private void picBoxLsgd_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(nguoiDung);
+            this.Hide();
+            frmtietkiem.ShowDialog();
+            this.Close();
+        }
+
+        private void picBoxTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(nguoiDung);
+            this.Hide();
+            frmtietkiem.ShowDialog();
+            this.Close();
+        }
+
+        private void lblTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(nguoiDung);
+            this.Hide();
+            frmtietkiem.ShowDialog();
             this.Close();
         }
     }

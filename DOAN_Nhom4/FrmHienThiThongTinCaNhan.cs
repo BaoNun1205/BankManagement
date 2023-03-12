@@ -48,5 +48,13 @@ namespace DOAN_Nhom4
             frmnguoidung.ShowDialog();
             this.Close();
         }
+
+        private void btnBaomat_Click(object sender, EventArgs e)
+        {
+            FrmBaomat frmbaomat = new FrmBaomat(nguoiDung);
+            this.Hide();
+            frmbaomat.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -100,6 +100,7 @@
             this.btn_QuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_QuayLai.TextColor = System.Drawing.Color.White;
             this.btn_QuayLai.UseVisualStyleBackColor = false;
+            this.btn_QuayLai.Click += new System.EventHandler(this.btn_QuayLai_Click);
             // 
             // label1
             // 
@@ -193,6 +194,7 @@
             this.btn_doimatkhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_doimatkhau.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.btn_doimatkhau.UseVisualStyleBackColor = false;
+            this.btn_doimatkhau.Click += new System.EventHandler(this.btn_doimatkhau_Click);
             // 
             // cb_hienthipass
             // 
@@ -244,6 +246,7 @@
             this.ClientSize = new System.Drawing.Size(1006, 688);
             this.Controls.Add(this.pn_baomat);
             this.Name = "FrmBaomat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBaomat";
             this.pn_baomat.ResumeLayout(false);
             this.pn_baomat.PerformLayout();
