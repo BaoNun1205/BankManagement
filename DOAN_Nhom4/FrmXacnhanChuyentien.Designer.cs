@@ -93,7 +93,7 @@
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.TextColor = System.Drawing.Color.White;
             this.btnXacnhan.UseVisualStyleBackColor = false;
-            /*this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);*/
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // txtMatkhau
             // 

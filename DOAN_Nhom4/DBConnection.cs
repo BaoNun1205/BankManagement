@@ -80,6 +80,72 @@ namespace DOAN_Nhom4
             }
         }
 
+        public TaiKhoangNganHang XuLi(string sqlStr)
+        {
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    tknh.SoTK = reader.GetString(1);
+                    tknh.TenDN = reader.GetString(2);
+                    tknh.MatKhau = reader.GetString(3);
+                    tknh.SoDu = reader.GetInt64(4);
+                }
+                else
+                    return null;
+                
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tknh;
+        }
+
+        public NguoiDung Xuli(string sqlStr)
+        {
+            NguoiDung khachHang = new NguoiDung();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    khachHang.SoTK = reader.GetString(1);
+                    khachHang.TenTK = reader.GetString(2);
+                    khachHang.NgaySinh = reader.GetDateTime(3);
+                    khachHang.Cccd = reader.GetString(4);
+                    khachHang.Email = reader.GetString(5);
+                    khachHang.Sdt = reader.GetString(6);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return khachHang;
+        }
+
+
+
+
         public bool IsPhone(string numberphone)
         {
             string strRegex = @"^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$";

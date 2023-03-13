@@ -10,16 +10,16 @@ namespace DOAN_Nhom4
     {
         public DangNhapDAO() { }
 
-        DBConnection db = new DBConnection();
-        /*public bool XacNhanDangNhap(DangNhap dn)
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        public bool XacNhanDangNhap(DangNhap dn)
         {
-            NguoiDung khachHang = new NguoiDung();
-            khachHang = db.LayKhachHang("TenDN", dn.TenDN);
-            if (khachHang.TenDN == dn.TenDN && khachHang.Pass == dn.Pass)
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang();
+            tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
+            if (tknh.TenDN == dn.TenDN && tknh.MatKhau == dn.Pass)
             {
                 return true;
             }
             return false;
-        }*/
+        }
     }
 }

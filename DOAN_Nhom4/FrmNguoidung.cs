@@ -3,15 +3,17 @@
     public partial class FrmNguoidung : Form
     {
         public NguoiDung nguoiDung;
+        public TaiKhoangNganHang tknh;
         public FrmNguoidung()
         {
             InitializeComponent();
         }
 
-        public FrmNguoidung(NguoiDung nguoiDung)
+        public FrmNguoidung(NguoiDung nguoiDung, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
+            this.tknh = tknh;
         }
         private void FrmNguoidung_Load(object sender, EventArgs e)
         {
@@ -30,14 +32,14 @@
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
         }
         private void picBoxChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -45,7 +47,7 @@
 
         private void lblChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -143,7 +145,7 @@
 
         private void lblTaiKhoan_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung);
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung, tknh);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
@@ -151,7 +153,7 @@
 
         private void picBTaiKhoan_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung);
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung, tknh);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();

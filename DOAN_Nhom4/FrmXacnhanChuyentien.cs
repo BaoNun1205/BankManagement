@@ -15,7 +15,8 @@ namespace DOAN_Nhom4
     {
         public ChuyenTien chuyenTien;
         public NguoiDung nguoiDung;
-        NguoiDungDAO khachHangDAO = new NguoiDungDAO();
+        public TaiKhoangNganHang tknh;
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         public FrmXacnhanChuyentien()
         {
             InitializeComponent();
@@ -24,30 +25,31 @@ namespace DOAN_Nhom4
             this.txtMatkhau.PasswordChar = '*';
         }
 
-        public FrmXacnhanChuyentien(NguoiDung nguoiDung)
+        public FrmXacnhanChuyentien(NguoiDung nguoiDung, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
             pnlXacnhanChuyentien.BackColor = Color.Transparent;
             this.txtMatkhau.PasswordChar = '*';
             this.nguoiDung = nguoiDung;
+            this.tknh = tknh;
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
         }
 
-        /*private void btnXacnhan_Click(object sender, EventArgs e)
-        {
-            NguoiDung nguoiGui = nguoiDung;
-            if (txtMatkhau.Text == nguoiGui.Pass)
+        private void btnXacnhan_Click(object sender, EventArgs e)
+        {   
+            if (txtMatkhau.Text == tknh.MatKhau)
             {
-                NguoiDung khachHangNhan = new NguoiDung(chuyenTien.SoTk);
-                khachHangDAO.GuiTien(nguoiGui, chuyenTien, khachHangNhan);
-                FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(nguoiDung);
+                TaiKhoangNganHang tknhNhan = new TaiKhoangNganHang(chuyenTien.SoTk);
+                tknhDAO.GuiTien(tknh, chuyenTien, tknhNhan);
+                tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK);
+                FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(nguoiDung, tknh);
                 frmThongbaoChuyentien.chuyenTien = chuyenTien;
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();
@@ -58,6 +60,6 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Sai mat khau");
                 txtMatkhau.Text = "";
             }
-        }*/
+        }
     }
 }

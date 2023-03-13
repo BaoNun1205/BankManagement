@@ -14,6 +14,8 @@ namespace DOAN_Nhom4
     public partial class FrmDangnhap : Form
     {
         DBConnection dBConnection = new DBConnection();
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        NguoiDungDAO khDAO = new NguoiDungDAO();
         public FrmDangnhap()
         {
             InitializeComponent();
@@ -58,15 +60,17 @@ namespace DOAN_Nhom4
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang();
             NguoiDung nguoiDung = new NguoiDung();
-            /*if (dnDAO.XacNhanDangNhap(dn))
+            if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
                     MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                nguoiDung = dBConnection.LayKhachHang("TenDN", dn.TenDN);
-                FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+                tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
+                nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
+                FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
                 this.Hide();
                 frmnguoidung.ShowDialog();
                 this.Close();
@@ -77,7 +81,7 @@ namespace DOAN_Nhom4
                 txtUserName.Clear();
                 txtPass.Clear();
                 txtUserName.Focus();
-            }*/
+            }
         }
         private void btnDangky_Click(object sender, EventArgs e)
         {
