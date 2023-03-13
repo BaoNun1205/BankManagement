@@ -52,39 +52,45 @@
             this.txt_XacNhanMatKhau.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_XacNhanMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_XacNhanMatKhau.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_XacNhanMatKhau.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_XacNhanMatKhau.ForeColor = System.Drawing.Color.Gray;
             this.txt_XacNhanMatKhau.Location = new System.Drawing.Point(208, 599);
             this.txt_XacNhanMatKhau.Margin = new System.Windows.Forms.Padding(5);
             this.txt_XacNhanMatKhau.Name = "txt_XacNhanMatKhau";
             this.txt_XacNhanMatKhau.Size = new System.Drawing.Size(530, 49);
             this.txt_XacNhanMatKhau.TabIndex = 21;
             this.txt_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
+            this.txt_XacNhanMatKhau.Enter += new System.EventHandler(this.txt_XacNhanMatKhau_Enter);
+            this.txt_XacNhanMatKhau.Leave += new System.EventHandler(this.txt_XacNhanMatKhau_Leave);
             // 
             // txt_MatKhauMoi
             // 
             this.txt_MatKhauMoi.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_MatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_MatKhauMoi.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_MatKhauMoi.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_MatKhauMoi.ForeColor = System.Drawing.Color.Gray;
             this.txt_MatKhauMoi.Location = new System.Drawing.Point(208, 436);
             this.txt_MatKhauMoi.Margin = new System.Windows.Forms.Padding(5);
             this.txt_MatKhauMoi.Name = "txt_MatKhauMoi";
             this.txt_MatKhauMoi.Size = new System.Drawing.Size(530, 49);
             this.txt_MatKhauMoi.TabIndex = 20;
             this.txt_MatKhauMoi.Text = "Mật khẩu mới";
+            this.txt_MatKhauMoi.Enter += new System.EventHandler(this.txt_MatKhauMoi_Enter);
+            this.txt_MatKhauMoi.Leave += new System.EventHandler(this.txt_MatKhauMoi_Leave);
             // 
             // txt_MatKhauCu
             // 
             this.txt_MatKhauCu.BackColor = System.Drawing.SystemColors.Menu;
             this.txt_MatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_MatKhauCu.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_MatKhauCu.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_MatKhauCu.ForeColor = System.Drawing.Color.Gray;
             this.txt_MatKhauCu.Location = new System.Drawing.Point(208, 272);
             this.txt_MatKhauCu.Margin = new System.Windows.Forms.Padding(5);
             this.txt_MatKhauCu.Name = "txt_MatKhauCu";
             this.txt_MatKhauCu.Size = new System.Drawing.Size(530, 49);
             this.txt_MatKhauCu.TabIndex = 19;
             this.txt_MatKhauCu.Text = "Mật khẩu cũ";
+            this.txt_MatKhauCu.Enter += new System.EventHandler(this.txt_MatKhauCu_Enter);
+            this.txt_MatKhauCu.Leave += new System.EventHandler(this.txt_MatKhauCu_Leave);
             // 
             // btn_DoiMatKhau
             // 
@@ -105,6 +111,7 @@
             this.btn_DoiMatKhau.Text = "Đổi mật khẩu ";
             this.btn_DoiMatKhau.TextColor = System.Drawing.Color.White;
             this.btn_DoiMatKhau.UseVisualStyleBackColor = false;
+            this.btn_DoiMatKhau.Click += new System.EventHandler(this.btn_DoiMatKhau_Click);
             // 
             // panel3
             // 

@@ -9,17 +9,17 @@ namespace DOAN_Nhom4
     internal class DangNhap
     {
         private string tenDN;
-        private string pass;
+        private string matKhau;
 
         public string TenDN { get => tenDN; set => tenDN = value; }
-        public string Pass { get => pass; set => pass = value; }
+        public string MatKhau { get => matKhau; set => matKhau = value; }
 
         public DangNhap() { }
 
         public DangNhap(string tenDN, string pass)
         {
             this.tenDN = tenDN;
-            this.pass = pass;
+            this.matKhau = pass;
         }
     }
 }

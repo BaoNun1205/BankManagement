@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             NguoiDung nguoiGui = nguoiDung;
-            if (txtMatkhau.Text == nguoiGui.Pass)
+            if (txtMatkhau.Text == nguoiGui.MatKhau)
             {
                 NguoiDung nguoiNhan = new NguoiDung(gdchuyentien.STKNgnhan);
                 khachHangDAO.GuiTien(nguoiGui, gdchuyentien, nguoiNhan);

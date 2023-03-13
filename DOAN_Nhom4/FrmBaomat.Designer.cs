@@ -120,7 +120,7 @@
             this.txt_passvalue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_passvalue.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_passvalue.ForeColor = System.Drawing.Color.Gray;
-            this.txt_passvalue.Location = new System.Drawing.Point(343, 309);
+            this.txt_passvalue.Location = new System.Drawing.Point(343, 312);
             this.txt_passvalue.Margin = new System.Windows.Forms.Padding(5);
             this.txt_passvalue.Name = "txt_passvalue";
             this.txt_passvalue.ReadOnly = true;
@@ -134,7 +134,7 @@
             this.txt_tenDNvalue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_tenDNvalue.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_tenDNvalue.ForeColor = System.Drawing.Color.Gray;
-            this.txt_tenDNvalue.Location = new System.Drawing.Point(343, 184);
+            this.txt_tenDNvalue.Location = new System.Drawing.Point(343, 168);
             this.txt_tenDNvalue.Margin = new System.Windows.Forms.Padding(5);
             this.txt_tenDNvalue.Name = "txt_tenDNvalue";
             this.txt_tenDNvalue.ReadOnly = true;

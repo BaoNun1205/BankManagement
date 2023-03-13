@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
         {
             NguoiDung khachHang = new NguoiDung();
             khachHang = nguoiDungDAO.LayKhachHang("TenDN", dn.TenDN);
-            if (khachHang.TenDN == dn.TenDN && khachHang.Pass == dn.Pass)
+            if (khachHang.TenDN == dn.TenDN && khachHang.MatKhau == dn.MatKhau)
             {
                 return true;
             }
