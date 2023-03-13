@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
     {
         NguoiDungDAO NguoiDungDAO = new NguoiDungDAO();
         public NguoiDung nguoiDung;
-        private static string tenTK;
+        private string tenTK;
         public FrmChuyentien()
         {
             InitializeComponent();

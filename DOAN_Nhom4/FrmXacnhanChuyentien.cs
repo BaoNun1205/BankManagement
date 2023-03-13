@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
     {
         public GiaoDichChuyenTien gdchuyentien;
         public NguoiDung nguoiDung;
-        NguoiDungDAO khachHangDAO = new NguoiDungDAO();
+        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
         public FrmXacnhanChuyentien()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace DOAN_Nhom4
             if (txtMatkhau.Text == nguoiGui.MatKhau)
             {
                 NguoiDung nguoiNhan = new NguoiDung(gdchuyentien.STKNgnhan);
-                khachHangDAO.GuiTien(nguoiGui, gdchuyentien, nguoiNhan);
+                ngdungDAO.GuiTien(nguoiGui, gdchuyentien, nguoiNhan);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(nguoiDung, gdchuyentien);
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();
