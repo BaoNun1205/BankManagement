@@ -16,6 +16,8 @@ namespace DOAN_Nhom4
         public NguoiDung ngdung;
         public TaiKhoangNganHang tknh;
         private int kiHan;
+        private double laiSuat;
+        private double tienlai;
         public FrmTietkiem()
         {
             InitializeComponent();
@@ -56,10 +58,32 @@ namespace DOAN_Nhom4
             return tiengoc * laisuat * thoigian / 12;
         }
 
+        private double TongTien(int tiengoc, double tienlai)
+        {
+            return tiengoc + tienlai;
+        }
+
+        private bool ktSotien(int tien)
+        {
+            if (tien >= 100000 && tien % 100000 == 0) return true;
+            else return false;
+        }
+
         private void btn1thang_Click(object sender, EventArgs e)
         {
             kiHan = 1;
             lblLaisuat.Text = "6%";
+            laiSuat = 0.06;          
+            if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
+            {
+                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                {
+                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
+                    lblTongtienlai.Text = tienlai.ToString();
+                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                }
+                else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            }           
             btn1thang.ForeColor = Color.White;
             btn1thang.BackColor = Color.DodgerBlue;
             btn3thang.ForeColor = Color.DodgerBlue;
@@ -76,6 +100,17 @@ namespace DOAN_Nhom4
         {
             kiHan = 3;
             lblLaisuat.Text = "6%";
+            laiSuat = 0.06;
+            if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
+            {
+                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                {
+                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
+                    lblTongtienlai.Text = tienlai.ToString();
+                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                }
+                else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            }
             btn1thang.ForeColor = Color.DodgerBlue;
             btn1thang.BackColor = Color.White;
             btn3thang.ForeColor = Color.White;
@@ -92,6 +127,17 @@ namespace DOAN_Nhom4
         {
             kiHan = 6;
             lblLaisuat.Text = "8%";
+            laiSuat = 0.08;
+            if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
+            {
+                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                {
+                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
+                    lblTongtienlai.Text = tienlai.ToString();
+                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                }
+                else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            }
             btn1thang.ForeColor = Color.DodgerBlue;
             btn1thang.BackColor = Color.White;
             btn3thang.ForeColor = Color.DodgerBlue;
@@ -108,6 +154,17 @@ namespace DOAN_Nhom4
         {
             kiHan = 12;
             lblLaisuat.Text = "8,6%";
+            laiSuat = 0.086;
+            if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
+            {
+                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                {
+                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
+                    lblTongtienlai.Text = tienlai.ToString();
+                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                }
+                else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            }
             btn1thang.ForeColor = Color.DodgerBlue;
             btn1thang.BackColor = Color.White;
             btn3thang.ForeColor = Color.DodgerBlue;
@@ -124,6 +181,17 @@ namespace DOAN_Nhom4
         {
             kiHan = 18;
             lblLaisuat.Text = "9%";
+            laiSuat = 0.09;
+            if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
+            {
+                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                {
+                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
+                    lblTongtienlai.Text = tienlai.ToString();
+                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                }
+                else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            }
             btn1thang.ForeColor = Color.DodgerBlue;
             btn1thang.BackColor = Color.White;
             btn3thang.ForeColor = Color.DodgerBlue;
