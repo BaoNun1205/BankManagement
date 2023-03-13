@@ -13,20 +13,22 @@ namespace DOAN_Nhom4
     public partial class FrmBaomat : Form
     {
         public NguoiDung ngdung;
+        public TaiKhoangNganHang tknh;
         public FrmBaomat()
         {
             InitializeComponent();
         }
 
-        public FrmBaomat(NguoiDung ngdung)
+        public FrmBaomat(NguoiDung ngdung, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             this.ngdung = ngdung;
+            this.tknh = tknh;
         }
 
         private void btn_QuayLai_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(ngdung);
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(ngdung, tknh);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
@@ -34,7 +36,7 @@ namespace DOAN_Nhom4
 
         private void btn_doimatkhau_Click(object sender, EventArgs e)
         {
-            FrmDoimatkhau frmdoimk = new FrmDoimatkhau(ngdung);
+            FrmDoimatkhau frmdoimk = new FrmDoimatkhau(ngdung, tknh);
             this.Hide();
             frmdoimk.ShowDialog();
             this.Close();

@@ -10,12 +10,12 @@ namespace DOAN_Nhom4
     {
         public DangNhapDAO() { }
 
-        NguoiDungDAO nguoiDungDAO = new NguoiDungDAO();
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         public bool XacNhanDangNhap(DangNhap dn)
         {
-            NguoiDung khachHang = new NguoiDung();
-            khachHang = nguoiDungDAO.LayKhachHang("TenDN", dn.TenDN);
-            if (khachHang.TenDN == dn.TenDN && khachHang.MatKhau == dn.MatKhau)
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang();
+            tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
+            if (tknh.TenDN == dn.TenDN && tknh.MatKhau == dn.MatKhau)
             {
                 return true;
             }

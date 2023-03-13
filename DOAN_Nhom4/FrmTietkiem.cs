@@ -14,20 +14,22 @@ namespace DOAN_Nhom4
     public partial class FrmTietkiem : Form
     {
         public NguoiDung ngdung;
+        public TaiKhoangNganHang tknh;
         private int kiHan;
         public FrmTietkiem()
         {
             InitializeComponent();
         }
 
-        public FrmTietkiem(NguoiDung ngdung)
+        public FrmTietkiem(NguoiDung ngdung, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             this.ngdung = ngdung;
+            this.tknh = tknh;
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(ngdung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(ngdung, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();

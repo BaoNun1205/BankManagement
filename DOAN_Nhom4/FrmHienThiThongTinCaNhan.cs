@@ -13,21 +13,23 @@ namespace DOAN_Nhom4
     public partial class FrmHienThiThongTinCaNhan : Form
     {
         public NguoiDung nguoiDung;
+        public TaiKhoangNganHang tknh;
         public FrmHienThiThongTinCaNhan()
         {
             InitializeComponent();
         }
 
-        public FrmHienThiThongTinCaNhan(NguoiDung nguoiDung)
+        public FrmHienThiThongTinCaNhan(NguoiDung nguoiDung, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
+            this.tknh = tknh;
         }
         private void FrmHienThiThongTinCaNhan_Load(object sender, EventArgs e)
         {
             lblChuTKValue.Text = nguoiDung.TenTK.ToString();
             lblSoTkValue.Text = nguoiDung.SoTK.ToString();
-            lblSoDuValue.Text = nguoiDung.SoDu.ToString() + " VNĐ";
+            lblSoDuValue.Text = tknh.SoDu.ToString() + " VNĐ";
             lblCccdValue.Text = nguoiDung.Cccd.ToString();
             lblNgaySinhValue.Text = nguoiDung.NgaySinh.ToString("dd/MM/yyyy");
             lblSdtValue.Text = nguoiDung.Sdt.ToString();
@@ -35,7 +37,7 @@ namespace DOAN_Nhom4
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -43,7 +45,7 @@ namespace DOAN_Nhom4
 
         private void pb_quaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -51,7 +53,7 @@ namespace DOAN_Nhom4
 
         private void btnBaomat_Click(object sender, EventArgs e)
         {
-            FrmBaomat frmbaomat = new FrmBaomat(nguoiDung);
+            FrmBaomat frmbaomat = new FrmBaomat(nguoiDung, tknh);
             this.Hide();
             frmbaomat.ShowDialog();
             this.Close();

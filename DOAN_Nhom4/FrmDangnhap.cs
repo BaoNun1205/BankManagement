@@ -13,12 +13,13 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangnhap : Form
     {
-        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        NguoiDungDAO khDAO = new NguoiDungDAO();
+        DangNhapDAO dnDAO = new DangNhapDAO();
         public FrmDangnhap()
         {
             InitializeComponent();
         }
-        DangNhapDAO dnDAO = new DangNhapDAO();
         private void FrmDangnhap_Load(object sender, EventArgs e)
         {
             this.txtPass.PasswordChar = '*';
@@ -58,21 +59,24 @@ namespace DOAN_Nhom4
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
+            TaiKhoangNganHang tknh = new TaiKhoangNganHang();
             NguoiDung nguoiDung = new NguoiDung();
             if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
-                    nguoiDung = ngdungDAO.LayKhachHang("TenDN", dn.TenDN);
-                    FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
-                    this.Hide();
-                    frmnguoidung.ShowDialog();
-                    this.Close();
+                    MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
+                nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
+                FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
+                this.Hide();
+                frmnguoidung.ShowDialog();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("The user name or password you entered is incorrect, try again");
                 txtUserName.Clear();
                 txtPass.Clear();
                 txtUserName.Focus();

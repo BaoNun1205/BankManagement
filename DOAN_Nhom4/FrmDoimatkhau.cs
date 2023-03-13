@@ -13,21 +13,24 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDoimatkhau : Form
     {
-        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
         public NguoiDung ngdung;
+        public TaiKhoangNganHang tknh;
+        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         public FrmDoimatkhau()
         {
             InitializeComponent();
         }
 
-        public FrmDoimatkhau(NguoiDung ngdung)
+        public FrmDoimatkhau(NguoiDung ngdung, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             this.ngdung = ngdung;
+            this.tknh = tknh;
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmBaomat frmbaomat = new FrmBaomat(ngdung);
+            FrmBaomat frmbaomat = new FrmBaomat(ngdung, tknh);
             this.Hide();
             frmbaomat.ShowDialog();
             this.Close();
@@ -88,7 +91,7 @@ namespace DOAN_Nhom4
 
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            if (txt_MatKhauCu.Text != ngdung.MatKhau)
+            if (txt_MatKhauCu.Text != tknh.MatKhau)
             {
                 MessageBox.Show("Mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -102,8 +105,8 @@ namespace DOAN_Nhom4
             }
             else
             {
-                ngdung.MatKhau = txt_MatKhauMoi.Text;
-                ngdungDAO.Sua(ngdung);
+                tknh.MatKhau = txt_MatKhauMoi.Text;
+                tknhDAO.Sua(tknh);
                 FrmDangnhap frmdangnhap = new FrmDangnhap();
                 this.Hide();
                 frmdangnhap.ShowDialog();
