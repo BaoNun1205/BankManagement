@@ -65,18 +65,17 @@ namespace DOAN_Nhom4
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
-                    MessageBox.Show("Login successful!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
+                    nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
+                    FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
+                    this.Hide();
+                    frmnguoidung.ShowDialog();
+                    this.Close();
                 }
-                tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
-                nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
-                FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
-                this.Hide();
-                frmnguoidung.ShowDialog();
-                this.Close();
             }
             else
             {
-                MessageBox.Show("The user name or password you entered is incorrect, try again");
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUserName.Clear();
                 txtPass.Clear();
                 txtUserName.Focus();
