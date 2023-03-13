@@ -69,7 +69,6 @@ namespace DOAN_Nhom4
             if (kh != null)
             {
                 lblTenTK.Text = kh.TenTK.ToString();
-                tenTK = kh.TenTK.ToString();
             }                   
             else
                 lblTenTK.Text = "Khong ton tai";
