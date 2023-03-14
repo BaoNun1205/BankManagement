@@ -35,7 +35,7 @@ namespace DOAN_Nhom4
             return dt;
         }
 
-        public void xuLi(string kh, string tknh)
+        /*public void xuLi(string kh, string tknh)
         {
             conn.Open();
             SqlTransaction transaction = conn.BeginTransaction();
@@ -60,7 +60,7 @@ namespace DOAN_Nhom4
             {
                 conn.Close();
             }
-        }
+        }*/
 
         public void xuLi(string sqlStr)
         {

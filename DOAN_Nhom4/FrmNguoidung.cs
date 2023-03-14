@@ -146,7 +146,7 @@
 
         private void lblTaiKhoan_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung, tknh);
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
@@ -154,7 +154,7 @@
 
         private void picBTaiKhoan_Click(object sender, EventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(nguoiDung, tknh);
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
             this.Hide();
             frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
