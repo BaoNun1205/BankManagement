@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDoimatkhau : Form
     {
-        public NguoiDung ngdung;
+        public NguoiDung kh;
         public TaiKhoangNganHang tknh;
         NguoiDungDAO ngdungDAO = new NguoiDungDAO();
         TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
@@ -22,15 +22,15 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmDoimatkhau(NguoiDung ngdung, TaiKhoangNganHang tknh)
+        public FrmDoimatkhau(NguoiDung kh, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
-            this.ngdung = ngdung;
+            this.kh = kh;
             this.tknh = tknh;
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmBaomat frmbaomat = new FrmBaomat(ngdung, tknh);
+            FrmBaomat frmbaomat = new FrmBaomat(kh, tknh);
             this.Hide();
             frmbaomat.ShowDialog();
             this.Close();

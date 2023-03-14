@@ -13,9 +13,9 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
-        public NguoiDung nguoiDung;
+        public NguoiDung kh;
         public TaiKhoangNganHang tknh;
-        NguoiDungDAO nguoidungDAO = new NguoiDungDAO();
+        NguoiDungDAO khDAO = new NguoiDungDAO();
         TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         public FrmChuyentien()
         {
@@ -28,7 +28,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
-            nguoiDung = kh;
+            this.kh = kh;
             this.tknh = tknh;
         }
         private void FrmChuyentien_Load(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace DOAN_Nhom4
        
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(this.kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -48,8 +48,8 @@ namespace DOAN_Nhom4
         {
             if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                GiaoDichChuyenTien chuyenTien = new GiaoDichChuyenTien(nguoiDung.TenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text, txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh);
+                GiaoDichChuyenTien chuyenTien = new GiaoDichChuyenTien(this.kh.TenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text, txtLoiNhan.Text);
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(this.kh, tknh);
                 this.Hide();
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
         {
             NguoiDung kh = new NguoiDung();
             TaiKhoangNganHang tk = new TaiKhoangNganHang();
-            kh = nguoidungDAO.LayKhachHang("SoTK", txtSTK.Text);
+            kh = khDAO.LayKhachHang("SoTK", txtSTK.Text);
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text);
             if (tk != null)
             {

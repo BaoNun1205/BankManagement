@@ -13,9 +13,9 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangnhap : Form
     {
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         NguoiDungDAO khDAO = new NguoiDungDAO();
         DangNhapDAO dnDAO = new DangNhapDAO();
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         public FrmDangnhap()
         {
             InitializeComponent();

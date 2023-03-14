@@ -2,17 +2,17 @@
 {
     public partial class FrmNguoidung : Form
     {
-        public NguoiDung nguoiDung;
+        public NguoiDung kh;
         public TaiKhoangNganHang tknh;
         public FrmNguoidung()
         {
             InitializeComponent();
         }
 
-        public FrmNguoidung(NguoiDung nguoiDung, TaiKhoangNganHang tknh)
+        public FrmNguoidung(NguoiDung kh, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
-            this.nguoiDung = nguoiDung;
+            this.kh = kh;
             this.tknh = tknh;
         }
         private void FrmNguoidung_Load(object sender, EventArgs e)
@@ -28,19 +28,19 @@
             
             lblTenTK.Parent = picBoxNguoidung;
             lblTenTK.BackColor = Color.Transparent;
-            lblTenTK.Text = nguoiDung.TenTK.ToString();
+            lblTenTK.Text = kh.TenTK.ToString();
 
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
         }
         private void picBoxChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -48,7 +48,7 @@
 
         private void lblChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(nguoiDung, tknh);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
@@ -167,7 +167,7 @@
 
         private void btnTietkiem_Click(object sender, EventArgs e)
         {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(nguoiDung, tknh);
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             this.Hide();
             frmtietkiem.ShowDialog();
             this.Close();
@@ -175,7 +175,7 @@
 
         private void picBoxTietkiem_Click(object sender, EventArgs e)
         {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(nguoiDung, tknh);
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             this.Hide();
             frmtietkiem.ShowDialog();
             this.Close();
@@ -183,7 +183,7 @@
 
         private void lblTietkiem_Click(object sender, EventArgs e)
         {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(nguoiDung, tknh);
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             this.Hide();
             frmtietkiem.ShowDialog();
             this.Close();
