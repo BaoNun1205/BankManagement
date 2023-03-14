@@ -54,6 +54,5 @@ namespace DOAN_Nhom4
         {
             return data.IsPhone(kh.Sdt);
         }
-
     }
 }
