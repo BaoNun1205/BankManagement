@@ -100,6 +100,7 @@
             this.btn_QuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_QuayLai.TextColor = System.Drawing.Color.White;
             this.btn_QuayLai.UseVisualStyleBackColor = false;
+            this.btn_QuayLai.Click += new System.EventHandler(this.btn_QuayLai_Click);
             // 
             // label1
             // 
@@ -119,7 +120,7 @@
             this.txt_passvalue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_passvalue.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_passvalue.ForeColor = System.Drawing.Color.Gray;
-            this.txt_passvalue.Location = new System.Drawing.Point(343, 309);
+            this.txt_passvalue.Location = new System.Drawing.Point(343, 312);
             this.txt_passvalue.Margin = new System.Windows.Forms.Padding(5);
             this.txt_passvalue.Name = "txt_passvalue";
             this.txt_passvalue.ReadOnly = true;
@@ -133,7 +134,7 @@
             this.txt_tenDNvalue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_tenDNvalue.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_tenDNvalue.ForeColor = System.Drawing.Color.Gray;
-            this.txt_tenDNvalue.Location = new System.Drawing.Point(343, 184);
+            this.txt_tenDNvalue.Location = new System.Drawing.Point(343, 168);
             this.txt_tenDNvalue.Margin = new System.Windows.Forms.Padding(5);
             this.txt_tenDNvalue.Name = "txt_tenDNvalue";
             this.txt_tenDNvalue.ReadOnly = true;
@@ -193,6 +194,7 @@
             this.btn_doimatkhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_doimatkhau.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.btn_doimatkhau.UseVisualStyleBackColor = false;
+            this.btn_doimatkhau.Click += new System.EventHandler(this.btn_doimatkhau_Click);
             // 
             // cb_hienthipass
             // 
@@ -244,6 +246,7 @@
             this.ClientSize = new System.Drawing.Size(1006, 688);
             this.Controls.Add(this.pn_baomat);
             this.Name = "FrmBaomat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBaomat";
             this.pn_baomat.ResumeLayout(false);
             this.pn_baomat.PerformLayout();

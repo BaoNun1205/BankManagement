@@ -450,6 +450,7 @@
             this.btnBaomat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBaomat.TextColor = System.Drawing.Color.White;
             this.btnBaomat.UseVisualStyleBackColor = false;
+            this.btnBaomat.Click += new System.EventHandler(this.btnBaomat_Click);
             // 
             // btnLSGD
             // 

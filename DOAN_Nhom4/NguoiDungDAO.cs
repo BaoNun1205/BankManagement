@@ -21,7 +21,7 @@ namespace DOAN_Nhom4
         }
         public void Them(NguoiDung kh)
         {
-            string sqlStr = string.Format("INSERT INTO KhachHang(SoTK , TenTK, TenDN, MatKhau, NgaySinh, CCCD, SDT, SoDU) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7})", kh.SoTK, kh.TenTK, kh.TenDN, kh.Pass, kh.NgaySinh, kh.Cccd, kh.Sdt, kh.SoDu);
+            string sqlStr = string.Format("INSERT INTO KhachHang(SoTK , TenTK, TenDN, MatKhau, NgaySinh, CCCD, SDT, SoDU) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', {7})", kh.SoTK, kh.TenTK, kh.TenDN, kh.MatKhau, kh.NgaySinh, kh.Cccd, kh.Sdt, kh.SoDu);
             data.xuLi(sqlStr); 
         }
 
@@ -32,7 +32,7 @@ namespace DOAN_Nhom4
         }
         public void Sua(NguoiDung kh)
         {
-            string sqlStr = string.Format("UPDATE KhachHang SET TenTK = '{0}' , TenDN = '{1}', MatKhau = '{2}', NgaySinh = '{3}', CCCD = '{4}', SDT = '{5}', SoDu = {6} WHERE SoTK ='{7}'", kh.TenTK, kh.TenDN, kh.Pass, kh.NgaySinh, kh.Cccd, kh.Sdt, kh.SoDu, kh.SoTK);
+            string sqlStr = string.Format("UPDATE KhachHang SET TenTK = '{0}' , TenDN = '{1}', MatKhau = '{2}', NgaySinh = '{3}', CCCD = '{4}', SDT = '{5}', SoDu = {6} WHERE SoTK ='{7}'", kh.TenTK, kh.TenDN, kh.MatKhau, kh.NgaySinh, kh.Cccd, kh.Sdt, kh.SoDu, kh.SoTK);
             data.xuLi(sqlStr);
         }
 
@@ -53,7 +53,7 @@ namespace DOAN_Nhom4
                     khachHang.SoTK = reader.GetString(0);
                     khachHang.TenTK = reader.GetString(1);
                     khachHang.TenDN = reader.GetString(2);
-                    khachHang.Pass = reader.GetString(3);
+                    khachHang.MatKhau = reader.GetString(3);
                     khachHang.NgaySinh = reader.GetDateTime(4);
                     khachHang.Cccd = reader.GetString(5);
                     khachHang.Sdt = reader.GetString(6);
@@ -90,7 +90,7 @@ namespace DOAN_Nhom4
         }
         public bool IsEmpty(NguoiDung ad)
         {
-            if (ad.SoTK != "" && ad.TenTK != "" && ad.Pass != "" && ad.TenDN != "" && ad.Cccd != "" && ad.Sdt != "")
+            if (ad.SoTK != "" && ad.TenTK != "" && ad.MatKhau != "" && ad.TenDN != "" && ad.Cccd != "" && ad.Sdt != "")
                 return false;
             return true;
         }
