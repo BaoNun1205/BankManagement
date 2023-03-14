@@ -24,20 +24,5 @@ namespace DOAN_Nhom4
         public int TienGoc { get => tienGoc; set => tienGoc = value; }
         public int KiHan { get => kiHan; set => kiHan = value; }
         public double LaiSuat { get => laiSuat; set => laiSuat = value; }
-
-        public bool ktSotien(int tiengoc, BigInteger sodu)
-        {
-            if (tienGoc <= sodu && tiengoc >= 100000 && tiengoc % 100000 == 0) return true;
-            else return false;
-        }
-        public double TienLai(int tiengoc, double laisuat, int thoigian)
-        {
-            return tiengoc * laisuat * thoigian / 12;
-        }
-
-        public double TongTien(int tiengoc, double tienlai)
-        {
-            return tiengoc + tienlai;
-        }
     }
 }
