@@ -22,7 +22,6 @@ namespace DOAN_Nhom4
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 adapter.Fill(dt);
-
             }
             catch (Exception exc)
             {
