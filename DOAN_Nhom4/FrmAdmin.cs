@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
         private void btn_them_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (!khDAO.IsPhone(kh))
@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
             khDAO.Xoa(kh);
             tknhDAO.Xoa(tknh);
             HienThi();
@@ -73,7 +73,7 @@ namespace DOAN_Nhom4
         private void btn_sua_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (khDAO.IsPhone(kh) == false)

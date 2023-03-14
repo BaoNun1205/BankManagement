@@ -23,8 +23,8 @@ namespace DOAN_Nhom4
         public BigInteger SoDu { get => soDu; set => soDu = value; }
         public DateTime NgayDangKy { get => NgayDangKy; set => ngayDangKy = value; }
 
-        public TaiKhoangNganHang() { }
-        public TaiKhoangNganHang(string tenNH, string soTK, string tenDN, string matKhau, BigInteger soDu, DateTime ngayDangKy)
+        public TaiKhoanNganHang() { }
+        public TaiKhoanNganHang(string tenNH, string soTK, string tenDN, string matKhau, BigInteger soDu, DateTime ngayDangKy)
         {
             this.tenNH = tenNH;
             this.soTK = soTK;
