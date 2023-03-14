@@ -47,7 +47,7 @@ namespace DOAN_Nhom4
         {
             if (txtMatkhau.Text == tknh.MatKhau)
             {
-                TaiKhoangNganHang tknhNhan = new TaiKhoangNganHang(gd.SoTk);
+                TaiKhoangNganHang tknhNhan = new TaiKhoangNganHang(gd.SoTKNhan);
                 tknhDAO.GuiTien(tknh, gd, tknhNhan);
                 tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh);
