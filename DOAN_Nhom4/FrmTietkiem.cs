@@ -222,7 +222,7 @@ namespace DOAN_Nhom4
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
             MessageBox.Show("Tạo tài khoản tiết kiện thành công.", "Thông báo", MessageBoxButtons.OK);
-            FrmTietkiem frmtietkiem = new FrmTietkiem(ngdung, tknh);
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             Hide();
             frmtietkiem.ShowDialog();
             Close();
