@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
     public partial class FrmAdmin : Form
     {
         NguoiDungDAO khDAO = new NguoiDungDAO();
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmAdmin()
         {
             InitializeComponent();

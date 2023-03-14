@@ -14,8 +14,10 @@ namespace DOAN_Nhom4
     public partial class FrmTietkiem : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        public TaiKhoanNganHang tknh;
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        public TietKiem tkiem;
+
         private int tienGoc;
         private int kiHan;
         private double laiSuat;
@@ -26,7 +28,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmTietkiem(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
@@ -34,9 +36,9 @@ namespace DOAN_Nhom4
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
             this.Hide();
-            frmnguoidung.ShowDialog();
+            frmtrangchu.ShowDialog();
             this.Close();
         }
 
@@ -79,12 +81,12 @@ namespace DOAN_Nhom4
             laiSuat = 0.06;          
             if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
             {
-                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                if (tkiem.ktSotien(int.Parse(txtSotien.Text), tknh.SoDu) == true)
                 {
                     tienGoc = int.Parse(txtSotien.Text);
-                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    tienLai = tkiem.TienLai(tienGoc, laiSuat, kiHan);
                     lblTongtienlai.Text = tienLai.ToString();
-                    tongTien = TongTien(tienGoc, tienLai);
+                    tongTien = tkiem.TongTien(tienGoc, tienLai);
                     lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }

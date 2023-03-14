@@ -1,21 +1,31 @@
 ﻿namespace DOAN_Nhom4
 {
-    public partial class FrmNguoidung : Form
+    public partial class FrmTrangchu : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
-        public FrmNguoidung()
+        public TaiKhoanNganHang tknh;
+        public GiaoDichChuyenTien gd;
+        public FrmTrangchu()
         {
             InitializeComponent();
         }
 
-        public FrmNguoidung(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
         }
-        private void FrmNguoidung_Load(object sender, EventArgs e)
+
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDichChuyenTien gd)
+        {
+            InitializeComponent();
+            this.kh = kh;
+            this.tknh = tknh;
+            this.gd = gd;
+        }
+
+        private void FrmTrangchu_Load(object sender, EventArgs e)
         {
             lblXinchao.Parent = picBoxNguoidung;
             lblXinchao.BackColor = Color.Transparent;
@@ -25,11 +35,10 @@
 
             pnlCĐat.Parent = picBoxNguoidung;
             pnlCĐat.BackColor = Color.Transparent;
-            
+
             lblTenTK.Parent = picBoxNguoidung;
             lblTenTK.BackColor = Color.Transparent;
             lblTenTK.Text = kh.TenTK.ToString();
-
         }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
@@ -162,7 +171,10 @@
 
         private void picBoxLsgd_Click(object sender, EventArgs e)
         {
-           
+            FrmLichSuGiaoDich frmlsgd = new FrmLichSuGiaoDich(kh, gd, tknh);
+            this.Hide();
+            frmlsgd.ShowDialog();
+            this.Close();
         }
 
         private void btnTietkiem_Click(object sender, EventArgs e)
@@ -182,6 +194,14 @@
         }
 
         private void lblTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
+            this.Hide();
+            frmtietkiem.ShowDialog();
+            this.Close();
+        }
+
+        private void picBoxFrmTietkiem_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             this.Hide();

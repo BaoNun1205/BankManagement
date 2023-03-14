@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
     public partial class FrmDangky : Form
     {
         NguoiDungDAO khDAO = new NguoiDungDAO();
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmDangky()
         {
             InitializeComponent();

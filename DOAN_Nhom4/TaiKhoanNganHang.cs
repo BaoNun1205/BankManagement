@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DOAN_Nhom4
 {
-    public class TaiKhoangNganHang
+    public class TaiKhoanNganHang
     {
         private string tenNH;
         private string soTK;
@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
             this.soDu = soDu;
             this.ngayDangKy = ngayDangKy;
         }
-        public TaiKhoangNganHang(String soTK)
+        public TaiKhoanNganHang(String soTK)
         {
             this.soTK = soTK;
         }

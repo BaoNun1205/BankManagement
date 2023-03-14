@@ -13,13 +13,13 @@ namespace DOAN_Nhom4
     public partial class FrmBaomat : Form
     {
         public NguoiDung ngdung;
-        public TaiKhoangNganHang tknh;
+        public TaiKhoanNganHang tknh;
         public FrmBaomat()
         {
             InitializeComponent();
         }
 
-        public FrmBaomat(NguoiDung ngdung, TaiKhoangNganHang tknh)
+        public FrmBaomat(NguoiDung ngdung, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.ngdung = ngdung;
