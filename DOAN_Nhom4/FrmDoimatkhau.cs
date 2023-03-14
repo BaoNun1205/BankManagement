@@ -66,7 +66,7 @@ namespace DOAN_Nhom4
         {
             if (txt_MatKhauMoi.Text == "")
             {
-                txt_MatKhauMoi.Text = "Mật khẩu cũ";
+                txt_MatKhauMoi.Text = "Mật khẩu mới";
                 txt_MatKhauMoi.ForeColor = Color.Gray;
             }
         }
@@ -84,7 +84,7 @@ namespace DOAN_Nhom4
         {
             if (txt_XacNhanMatKhau.Text == "")
             {
-                txt_XacNhanMatKhau.Text = "Mật khẩu cũ";
+                txt_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
                 txt_XacNhanMatKhau.ForeColor = Color.Gray;
             }
         }
@@ -107,6 +107,7 @@ namespace DOAN_Nhom4
             {
                 tknh.MatKhau = txt_MatKhauMoi.Text;
                 tknhDAO.Sua(tknh);
+                MessageBox.Show("Xác nhận mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 FrmDangnhap frmdangnhap = new FrmDangnhap();
                 this.Hide();
                 frmdangnhap.ShowDialog();

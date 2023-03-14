@@ -52,13 +52,11 @@
             this.lblSoTkValue = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pb_lsgd = new System.Windows.Forms.PictureBox();
             this.pb_baomat = new System.Windows.Forms.PictureBox();
             this.pb_quaylai = new System.Windows.Forms.PictureBox();
             this.btnQuaylai = new CustomButton.VBButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBaomat = new CustomButton.VBButton();
-            this.btnLSGD = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,7 +64,6 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_lsgd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_baomat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_quaylai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -344,13 +341,11 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pb_lsgd);
             this.panel2.Controls.Add(this.pb_baomat);
             this.panel2.Controls.Add(this.pb_quaylai);
             this.panel2.Controls.Add(this.btnQuaylai);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnBaomat);
-            this.panel2.Controls.Add(this.btnLSGD);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
@@ -358,23 +353,11 @@
             this.panel2.Size = new System.Drawing.Size(234, 924);
             this.panel2.TabIndex = 1;
             // 
-            // pb_lsgd
-            // 
-            this.pb_lsgd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.pb_lsgd.Image = ((System.Drawing.Image)(resources.GetObject("pb_lsgd.Image")));
-            this.pb_lsgd.Location = new System.Drawing.Point(14, 386);
-            this.pb_lsgd.Margin = new System.Windows.Forms.Padding(5);
-            this.pb_lsgd.Name = "pb_lsgd";
-            this.pb_lsgd.Size = new System.Drawing.Size(58, 61);
-            this.pb_lsgd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_lsgd.TabIndex = 23;
-            this.pb_lsgd.TabStop = false;
-            // 
             // pb_baomat
             // 
             this.pb_baomat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.pb_baomat.Image = ((System.Drawing.Image)(resources.GetObject("pb_baomat.Image")));
-            this.pb_baomat.Location = new System.Drawing.Point(14, 214);
+            this.pb_baomat.Location = new System.Drawing.Point(14, 148);
             this.pb_baomat.Margin = new System.Windows.Forms.Padding(5);
             this.pb_baomat.Name = "pb_baomat";
             this.pb_baomat.Size = new System.Drawing.Size(72, 54);
@@ -441,7 +424,7 @@
             this.btnBaomat.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBaomat.ForeColor = System.Drawing.Color.White;
             this.btnBaomat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaomat.Location = new System.Drawing.Point(-1, 192);
+            this.btnBaomat.Location = new System.Drawing.Point(-2, 127);
             this.btnBaomat.Margin = new System.Windows.Forms.Padding(5);
             this.btnBaomat.Name = "btnBaomat";
             this.btnBaomat.Size = new System.Drawing.Size(234, 102);
@@ -451,27 +434,6 @@
             this.btnBaomat.TextColor = System.Drawing.Color.White;
             this.btnBaomat.UseVisualStyleBackColor = false;
             this.btnBaomat.Click += new System.EventHandler(this.btnBaomat_Click);
-            // 
-            // btnLSGD
-            // 
-            this.btnLSGD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.btnLSGD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.btnLSGD.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLSGD.BorderRadius = 20;
-            this.btnLSGD.BorderSize = 0;
-            this.btnLSGD.FlatAppearance.BorderSize = 0;
-            this.btnLSGD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLSGD.Font = new System.Drawing.Font("Palatino Linotype", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLSGD.ForeColor = System.Drawing.Color.White;
-            this.btnLSGD.Location = new System.Drawing.Point(-1, 366);
-            this.btnLSGD.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLSGD.Name = "btnLSGD";
-            this.btnLSGD.Size = new System.Drawing.Size(234, 102);
-            this.btnLSGD.TabIndex = 18;
-            this.btnLSGD.Text = "     Lịch sử     giao dịch";
-            this.btnLSGD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLSGD.TextColor = System.Drawing.Color.White;
-            this.btnLSGD.UseVisualStyleBackColor = false;
             // 
             // FrmHienThiThongTinCaNhan
             // 
@@ -498,7 +460,6 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_lsgd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_baomat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_quaylai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -531,12 +492,10 @@
         private Label lblSoTkValue;
         private PictureBox pictureBox3;
         private Panel panel2;
-        private PictureBox pb_lsgd;
         private PictureBox pb_baomat;
         private PictureBox pb_quaylai;
         private CustomButton.VBButton btnQuaylai;
         private PictureBox pictureBox1;
         private CustomButton.VBButton btnBaomat;
-        private CustomButton.VBButton btnLSGD;
     }
 }
