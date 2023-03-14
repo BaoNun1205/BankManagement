@@ -31,8 +31,8 @@ namespace DOAN_Nhom4
         {
             lblSotien.Text = gd.SoTien.ToString() + " VNĐ";
             lblTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-            lblNguoinhan.Text = gd.TenTK.ToString();
-            lblSTK.Text = gd.SoTk.ToString();
+            lblNguoinhan.Text = gd.TenTKNhan.ToString();
+            lblSTK.Text = gd.SoTKNhan.ToString();
             lblNganhang.Text = gd.NganHang.ToString();
             lblNoidung.Text = gd.LoiNhan.ToString();
         }
