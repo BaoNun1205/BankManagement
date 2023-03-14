@@ -26,14 +26,23 @@ namespace DOAN_Nhom4
             this.tknh = tknh;
         }
 
-        private void btn_QuayLai_Click(object sender, EventArgs e)
+        private void pn_baomat_Paint(object sender, PaintEventArgs e)
         {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(ngdung, tknh);
-            this.Hide();
-            frmHienThiThongTinCaNhan.ShowDialog();
-            this.Close();
+            txtTenDN.Text = tknh.TenDN;
+            txtMatkhau.Text = tknh.MatKhau;
         }
 
+        private void cb_hienthipass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_hienthipass.Checked)
+            {
+                txtMatkhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMatkhau.UseSystemPasswordChar = true;
+            }
+        }
         private void btn_doimatkhau_Click(object sender, EventArgs e)
         {
             FrmDoimatkhau frmdoimk = new FrmDoimatkhau(ngdung, tknh);
@@ -47,6 +56,14 @@ namespace DOAN_Nhom4
             FrmDangnhap frmDangnhap = new FrmDangnhap();
             this.Hide();
             frmDangnhap.ShowDialog();
+            this.Close();
+        }
+
+        private void pb_QuayLai_Click(object sender, EventArgs e)
+        {
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(ngdung, tknh);
+            this.Hide();
+            frmHienThiThongTinCaNhan.ShowDialog();
             this.Close();
         }
     }
