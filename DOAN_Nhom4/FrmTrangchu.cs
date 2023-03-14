@@ -24,10 +24,22 @@
             this.tknh = tknh;
             this.gd = gd;
         }
-        
 
+        private void FrmTrangchu_Load(object sender, EventArgs e)
+        {
+            lblXinchao.Parent = picBoxNguoidung;
+            lblXinchao.BackColor = Color.Transparent;
 
+            pnlTKhoan.Parent = picBoxNguoidung;
+            pnlTKhoan.BackColor = Color.Transparent;
 
+            pnlCĐat.Parent = picBoxNguoidung;
+            pnlCĐat.BackColor = Color.Transparent;
+
+            lblTenTK.Parent = picBoxNguoidung;
+            lblTenTK.BackColor = Color.Transparent;
+            lblTenTK.Text = kh.TenTK.ToString();
+        }
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
@@ -195,22 +207,6 @@
             this.Hide();
             frmtietkiem.ShowDialog();
             this.Close();
-        }
-
-        private void FrmTrangchu_Load(object sender, EventArgs e)
-        {
-            lblXinchao.Parent = picBoxNguoidung;
-            lblXinchao.BackColor = Color.Transparent;
-
-            pnlTKhoan.Parent = picBoxNguoidung;
-            pnlTKhoan.BackColor = Color.Transparent;
-
-            pnlCĐat.Parent = picBoxNguoidung;
-            pnlCĐat.BackColor = Color.Transparent;
-
-            lblTenTK.Parent = picBoxNguoidung;
-            lblTenTK.BackColor = Color.Transparent;
-            lblTenTK.Text = kh.TenTK.ToString();
         }
     }
 }
