@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
+            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -45,7 +45,7 @@ namespace DOAN_Nhom4
 
         private void pb_quaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
+            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();

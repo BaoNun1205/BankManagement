@@ -27,11 +27,6 @@ namespace DOAN_Nhom4
             this.gd = gd;
             this.tknh = tknh;
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
             lblSotien.Text = gd.SoTien.ToString() + " VNĐ";
@@ -43,7 +38,7 @@ namespace DOAN_Nhom4
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
+            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh, gd);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -51,7 +46,7 @@ namespace DOAN_Nhom4
 
         private void lblQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
+            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh, gd);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();

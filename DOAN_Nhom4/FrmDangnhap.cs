@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
                 {
                     tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
                     nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
-                    FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
+                    FrmTrangchu frmnguoidung = new FrmTrangchu(nguoiDung, tknh);
                     this.Hide();
                     frmnguoidung.ShowDialog();
                     this.Close();

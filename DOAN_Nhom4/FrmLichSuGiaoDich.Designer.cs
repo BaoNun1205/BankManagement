@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pn_TienVao = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@
             this.vbButton1 = new CustomButton.VBButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pn_ToanBo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +53,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.picBoxQuaylai);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pn_TienVao);
@@ -64,17 +67,29 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.vbButton1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-15, -37);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Location = new System.Drawing.Point(-30, -37);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1272, 1294);
+            this.panel1.Size = new System.Drawing.Size(1287, 1294);
             this.panel1.TabIndex = 1;
+            // 
+            // picBoxQuaylai
+            // 
+            this.picBoxQuaylai.BackColor = System.Drawing.SystemColors.Control;
+            this.picBoxQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
+            this.picBoxQuaylai.Location = new System.Drawing.Point(42, 49);
+            this.picBoxQuaylai.Name = "picBoxQuaylai";
+            this.picBoxQuaylai.Size = new System.Drawing.Size(38, 36);
+            this.picBoxQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxQuaylai.TabIndex = 57;
+            this.picBoxQuaylai.TabStop = false;
+            this.picBoxQuaylai.Click += new System.EventHandler(this.picBoxQuaylai_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(84, 677);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -85,7 +100,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel2.Location = new System.Drawing.Point(840, 666);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(384, 2);
             this.panel2.TabIndex = 38;
@@ -94,7 +109,7 @@
             // 
             this.pn_TienVao.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pn_TienVao.Location = new System.Drawing.Point(465, 666);
-            this.pn_TienVao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pn_TienVao.Margin = new System.Windows.Forms.Padding(5);
             this.pn_TienVao.Name = "pn_TienVao";
             this.pn_TienVao.Size = new System.Drawing.Size(384, 2);
             this.pn_TienVao.TabIndex = 37;
@@ -104,7 +119,7 @@
             this.pn_ToanBo.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pn_ToanBo.Controls.Add(this.panel3);
             this.pn_ToanBo.Location = new System.Drawing.Point(84, 666);
-            this.pn_ToanBo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pn_ToanBo.Margin = new System.Windows.Forms.Padding(5);
             this.pn_ToanBo.Name = "pn_ToanBo";
             this.pn_ToanBo.Size = new System.Drawing.Size(384, 2);
             this.pn_ToanBo.TabIndex = 36;
@@ -113,7 +128,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(384, 2);
             this.panel3.TabIndex = 24;
@@ -130,7 +145,7 @@
             this.btn_TienRa.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_TienRa.ForeColor = System.Drawing.Color.White;
             this.btn_TienRa.Location = new System.Drawing.Point(847, 600);
-            this.btn_TienRa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_TienRa.Margin = new System.Windows.Forms.Padding(5);
             this.btn_TienRa.Name = "btn_TienRa";
             this.btn_TienRa.Size = new System.Drawing.Size(377, 56);
             this.btn_TienRa.TabIndex = 35;
@@ -150,7 +165,7 @@
             this.btn_TienVao.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_TienVao.ForeColor = System.Drawing.Color.White;
             this.btn_TienVao.Location = new System.Drawing.Point(465, 600);
-            this.btn_TienVao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_TienVao.Margin = new System.Windows.Forms.Padding(5);
             this.btn_TienVao.Name = "btn_TienVao";
             this.btn_TienVao.Size = new System.Drawing.Size(384, 56);
             this.btn_TienVao.TabIndex = 34;
@@ -170,7 +185,7 @@
             this.btn_ToanBo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ToanBo.ForeColor = System.Drawing.Color.White;
             this.btn_ToanBo.Location = new System.Drawing.Point(84, 600);
-            this.btn_ToanBo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ToanBo.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ToanBo.Name = "btn_ToanBo";
             this.btn_ToanBo.Size = new System.Drawing.Size(384, 56);
             this.btn_ToanBo.TabIndex = 33;
@@ -182,7 +197,7 @@
             // 
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
             this.pictureBox1.Location = new System.Drawing.Point(557, 51);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,7 +216,7 @@
             this.vbButton3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vbButton3.ForeColor = System.Drawing.Color.White;
             this.vbButton3.Location = new System.Drawing.Point(679, 490);
-            this.vbButton3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.vbButton3.Margin = new System.Windows.Forms.Padding(5);
             this.vbButton3.Name = "vbButton3";
             this.vbButton3.Size = new System.Drawing.Size(544, 80);
             this.vbButton3.TabIndex = 32;
@@ -221,7 +236,7 @@
             this.vbButton2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vbButton2.ForeColor = System.Drawing.Color.White;
             this.vbButton2.Location = new System.Drawing.Point(84, 490);
-            this.vbButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.vbButton2.Margin = new System.Windows.Forms.Padding(5);
             this.vbButton2.Name = "vbButton2";
             this.vbButton2.Size = new System.Drawing.Size(585, 80);
             this.vbButton2.TabIndex = 31;
@@ -242,7 +257,7 @@
             "30 ngày gần đây nhất",
             "100 ngày gần đây nhất"});
             this.comboBox1.Location = new System.Drawing.Point(396, 346);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(5);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(753, 61);
             this.comboBox1.TabIndex = 30;
@@ -260,7 +275,7 @@
             this.vbButton1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vbButton1.ForeColor = System.Drawing.Color.Black;
             this.vbButton1.Location = new System.Drawing.Point(84, 293);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.vbButton1.Margin = new System.Windows.Forms.Padding(5);
             this.vbButton1.Name = "vbButton1";
             this.vbButton1.Size = new System.Drawing.Size(1139, 170);
             this.vbButton1.TabIndex = 29;
@@ -285,13 +300,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 1242);
+            this.ClientSize = new System.Drawing.Size(1250, 1242);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmLichSuGiaoDich";
-            this.Text = "FrmLichSuGiaoDich";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Lịch sử giao dịch";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pn_ToanBo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -316,5 +333,6 @@
         private ComboBox comboBox1;
         private CustomButton.VBButton vbButton1;
         private Label label1;
+        private PictureBox picBoxQuaylai;
     }
 }

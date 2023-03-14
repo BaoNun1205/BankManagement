@@ -107,7 +107,7 @@ namespace DOAN_Nhom4
             {
                 tknh.MatKhau = txt_MatKhauMoi.Text;
                 tknhDAO.Sua(tknh);
-                MessageBox.Show("Xác nhận mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Đổi mật khẩu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 FrmDangnhap frmdangnhap = new FrmDangnhap();
                 this.Hide();
                 frmdangnhap.ShowDialog();

@@ -1,6 +1,6 @@
 ﻿namespace DOAN_Nhom4
 {
-    partial class FrmNguoidung
+    partial class FrmTrangchu
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNguoidung));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrangchu));
             this.label2 = new System.Windows.Forms.Label();
             this.picBoxCaidat = new System.Windows.Forms.PictureBox();
             this.picBoxTaikhoan = new System.Windows.Forms.PictureBox();
@@ -37,7 +37,7 @@
             this.pnlCaidat = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.picBoxLsgd = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picBoxFrmTietkiem = new System.Windows.Forms.PictureBox();
             this.lblHotro = new System.Windows.Forms.Label();
             this.picBoxHotro = new System.Windows.Forms.PictureBox();
             this.lblTietkiem = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.pnlTaikhoan.SuspendLayout();
             this.pnlCaidat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLsgd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFrmTietkiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxHotro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTienich)).BeginInit();
@@ -170,18 +170,19 @@
             this.picBoxLsgd.TabStop = false;
             this.picBoxLsgd.Click += new System.EventHandler(this.picBoxLsgd_Click);
             // 
-            // pictureBox3
+            // picBoxFrmTietkiem
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.z4152507464422_56b6eff8efd0dc3c997d872cb3fe1ef9;
-            this.pictureBox3.Location = new System.Drawing.Point(940, 311);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(634, 263);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
+            this.picBoxFrmTietkiem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBoxFrmTietkiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxFrmTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.z4152507464422_56b6eff8efd0dc3c997d872cb3fe1ef9;
+            this.picBoxFrmTietkiem.Location = new System.Drawing.Point(940, 311);
+            this.picBoxFrmTietkiem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.picBoxFrmTietkiem.Name = "picBoxFrmTietkiem";
+            this.picBoxFrmTietkiem.Size = new System.Drawing.Size(634, 263);
+            this.picBoxFrmTietkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxFrmTietkiem.TabIndex = 30;
+            this.picBoxFrmTietkiem.TabStop = false;
+            this.picBoxFrmTietkiem.Click += new System.EventHandler(this.picBoxFrmTietkiem_Click);
             // 
             // lblHotro
             // 
@@ -534,7 +535,7 @@
             this.lblTenTK.TabIndex = 51;
             this.lblTenTK.Text = " ";
             // 
-            // FrmNguoidung
+            // FrmTrangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -543,7 +544,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picBoxLsgd);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.picBoxFrmTietkiem);
             this.Controls.Add(this.lblHotro);
             this.Controls.Add(this.picBoxHotro);
             this.Controls.Add(this.lblTietkiem);
@@ -568,10 +569,10 @@
             this.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmNguoidung";
+            this.Name = "FrmTrangchu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Người dùng";
-            this.Load += new System.EventHandler(this.FrmNguoidung_Load);
+            this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.FrmTrangchu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCaidat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTaikhoan)).EndInit();
             this.pnlTaikhoan.ResumeLayout(false);
@@ -579,7 +580,7 @@
             this.pnlCaidat.ResumeLayout(false);
             this.pnlCaidat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLsgd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxFrmTietkiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxHotro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTietkiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTienich)).EndInit();
@@ -605,7 +606,7 @@
         private Panel pnlCaidat;
         private Label label3;
         private PictureBox picBoxLsgd;
-        private PictureBox pictureBox3;
+        private PictureBox picBoxFrmTietkiem;
         private Label lblHotro;
         private PictureBox picBoxHotro;
         private Label lblTietkiem;
