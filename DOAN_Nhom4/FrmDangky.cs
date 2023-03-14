@@ -29,7 +29,7 @@ namespace DOAN_Nhom4
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txtSoTK.Text, txtTenTK.Text, timeNgaySinh.Value, txtCCCD.Text, txtEmail.Text, txtSDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txtSoTK.Text, txtTenDN.Text, txtMatkhau.Text, 100000);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txtSoTK.Text, txtTenDN.Text, txtMatkhau.Text, 100000, txtNgayDangKy.Value);
             khDAO.Them(kh);
             tknhDAO.Them(tknh);
             FrmDangnhap frmdangnhap = new FrmDangnhap();

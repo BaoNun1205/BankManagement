@@ -58,23 +58,6 @@ namespace DOAN_Nhom4
                 txtSotien.Text = "Bạn muốn gửi bao nhiêu?";
             }    
         }
-
-        private double TienLai(int tiengoc, double laisuat, int thoigian)
-        {
-            return tiengoc * laisuat * thoigian / 12;
-        }
-
-        private double TongTien(int tiengoc, double tienlai)
-        {
-            return tiengoc + tienlai;
-        }
-
-        private bool ktSotien(int tien)
-        {
-            if (tien >= 100000 && tien % 100000 == 0) return true;
-            else return false;
-        }
-
         private void btn1thang_Click(object sender, EventArgs e)
         {
             kiHan = 1;

@@ -37,12 +37,13 @@ namespace DOAN_Nhom4
             gvQLKH.Columns[7].HeaderText = "Căn cước công dân";
             gvQLKH.Columns[8].HeaderText = "Email";
             gvQLKH.Columns[9].HeaderText = "Số điện thoại";
+            gvQLKH.Columns[10].HeaderText = "Ngày đăng ký";
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (!khDAO.IsPhone(kh))
@@ -61,8 +62,8 @@ namespace DOAN_Nhom4
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
             khDAO.Xoa(kh);
             tknhDAO.Xoa(tknh);
             HienThi();
@@ -71,8 +72,8 @@ namespace DOAN_Nhom4
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (khDAO.IsPhone(kh) == false)
@@ -90,11 +91,12 @@ namespace DOAN_Nhom4
         }
         private void Refresh()
         {
-            txt_soTK.Text = "";
-            txt_tenTK.Text = "";
-            txt_tenDN.Text = "";
+            txt_SoTK.Text = "";
+            txt_TenTK.Text = "";
+            txt_TenDN.Text = "";
             txt_NgaySinh.Value = DateTime.Now;
-            txt_Password.Text = "";
+            txt_NgayDangKyThe.Value = DateTime.Now;
+            txt_MatKhau.Text = "";
             txt_CCCD.Text = "";
             txt_SDT.Text = "";
             txt_Email.Text = "";
@@ -105,28 +107,16 @@ namespace DOAN_Nhom4
         {
             int numrow;
             numrow = e.RowIndex;
-            txt_soTK.Text = gvQLKH.Rows[numrow].Cells[1].Value.ToString();
-            txt_tenTK.Text = gvQLKH.Rows[numrow].Cells[2].Value.ToString();
-            txt_tenDN.Text = gvQLKH.Rows[numrow].Cells[3].Value.ToString();
-            txt_Password.Text = gvQLKH.Rows[numrow].Cells[4].Value.ToString();
+            txt_SoTK.Text = gvQLKH.Rows[numrow].Cells[1].Value.ToString();
+            txt_TenTK.Text = gvQLKH.Rows[numrow].Cells[2].Value.ToString();
+            txt_TenDN.Text = gvQLKH.Rows[numrow].Cells[3].Value.ToString();
+            txt_MatKhau.Text = gvQLKH.Rows[numrow].Cells[4].Value.ToString();
             txt_SoDu.Text = gvQLKH.Rows[numrow].Cells[5].Value.ToString();
             txt_NgaySinh.Text = gvQLKH.Rows[numrow].Cells[6].Value.ToString();
             txt_CCCD.Text = gvQLKH.Rows[numrow].Cells[7].Value.ToString();
             txt_Email.Text = gvQLKH.Rows[numrow].Cells[8].Value.ToString();
             txt_SDT.Text = gvQLKH.Rows[numrow].Cells[9].Value.ToString();
-        }
-
-        private void gvQLKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = new DataGridViewRow();
-            row = gvQLKH.Rows[e.RowIndex];
-            txt_soTK.Text = Convert.ToString(row.Cells[0].Value);
-            txt_tenTK.Text = Convert.ToString(row.Cells[1].Value);
-            txt_tenDN.Text = Convert.ToString(row.Cells[2].Value);
-            txt_Password.Text = Convert.ToString(row.Cells[3].Value);
-            txt_NgaySinh.Text = Convert.ToString(row.Cells[4].Value);
-            txt_CCCD.Text = Convert.ToString(row.Cells[5].Value);
-            txt_SDT.Text = Convert.ToString(row.Cells[6].Value);
+            txt_NgayDangKyThe.Text = gvQLKH.Rows[numrow].Cells[10].Value.ToString();
         }
     }
 }
