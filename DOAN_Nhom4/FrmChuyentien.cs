@@ -14,16 +14,16 @@ namespace DOAN_Nhom4
     public partial class FrmChuyentien : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
+        public TaiKhoanNganHang tknh;
         NguoiDungDAO khDAO = new NguoiDungDAO();
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmChuyentien()
         {
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
         }
-        public FrmChuyentien(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmChuyentien(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
@@ -66,7 +66,7 @@ namespace DOAN_Nhom4
         private void txtSTK_TextChanged(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung();
-            TaiKhoangNganHang tk = new TaiKhoangNganHang();
+            TaiKhoanNganHang tk = new TaiKhoanNganHang();
             kh = khDAO.LayKhachHang("SoTK", txtSTK.Text);
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text);
             if (tk != null)

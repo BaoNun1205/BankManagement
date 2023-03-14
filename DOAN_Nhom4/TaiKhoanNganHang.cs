@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DOAN_Nhom4
 {
-    public class TaiKhoangNganHang
+    public class TaiKhoanNganHang
     {
         private string tenNH;
         private string soTK;
@@ -21,8 +21,8 @@ namespace DOAN_Nhom4
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public BigInteger SoDu { get => soDu; set => soDu = value; }
 
-        public TaiKhoangNganHang() { }
-        public TaiKhoangNganHang(string tenNH, string soTK, string tenDN, string matKhau, BigInteger soDu)
+        public TaiKhoanNganHang() { }
+        public TaiKhoanNganHang(string tenNH, string soTK, string tenDN, string matKhau, BigInteger soDu)
         {
             this.tenNH = tenNH;
             this.soTK = soTK;
@@ -30,7 +30,7 @@ namespace DOAN_Nhom4
             this.matKhau = matKhau;
             this.soDu = soDu;
         }
-        public TaiKhoangNganHang(String soTK)
+        public TaiKhoanNganHang(String soTK)
         {
             this.soTK = soTK;
         }

@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
     public partial class FrmAdmin : Form
     {
         NguoiDungDAO khDAO = new NguoiDungDAO();
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmAdmin()
         {
             InitializeComponent();
@@ -42,7 +42,7 @@ namespace DOAN_Nhom4
         private void btn_them_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (!khDAO.IsPhone(kh))
@@ -62,7 +62,7 @@ namespace DOAN_Nhom4
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
             khDAO.Xoa(kh);
             tknhDAO.Xoa(tknh);
             HienThi();
@@ -72,7 +72,7 @@ namespace DOAN_Nhom4
         private void btn_sua_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_soTK.Text, txt_tenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_soTK.Text, txt_tenDN.Text, txt_Password.Text, int.Parse(txt_SoDu.Text));
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (khDAO.IsPhone(kh) == false)

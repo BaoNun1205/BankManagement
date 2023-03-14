@@ -14,8 +14,8 @@ namespace DOAN_Nhom4
     public partial class FrmTietkiem : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        public TaiKhoanNganHang tknh;
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         private int tienGoc;
         private int kiHan;
         private double laiSuat;
@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmTietkiem(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;

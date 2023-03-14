@@ -13,14 +13,14 @@ namespace DOAN_Nhom4
     public partial class FrmLichSuGiaoDich : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
+        public TaiKhoanNganHang tknh;
         public GiaoDichChuyenTien gd;
         public FrmLichSuGiaoDich()
         {
             InitializeComponent();
         }
 
-        public FrmLichSuGiaoDich(NguoiDung kh, GiaoDichChuyenTien gd, TaiKhoangNganHang tknh)
+        public FrmLichSuGiaoDich(NguoiDung kh, GiaoDichChuyenTien gd, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;

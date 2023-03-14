@@ -13,13 +13,13 @@ namespace DOAN_Nhom4
     public partial class FrmHienThiThongTinCaNhan : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
+        public TaiKhoanNganHang tknh;
         public FrmHienThiThongTinCaNhan()
         {
             InitializeComponent();
         }
 
-        public FrmHienThiThongTinCaNhan(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmHienThiThongTinCaNhan(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;

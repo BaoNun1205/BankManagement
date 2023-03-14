@@ -80,9 +80,9 @@ namespace DOAN_Nhom4
             }
         }
 
-        public TaiKhoangNganHang XuLi(string sqlStr)
+        public TaiKhoanNganHang XuLi(string sqlStr)
         {
-            TaiKhoangNganHang tknh = new TaiKhoangNganHang();
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang();
             try
             {
                 conn.Open();

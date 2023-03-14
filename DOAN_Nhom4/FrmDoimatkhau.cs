@@ -14,15 +14,15 @@ namespace DOAN_Nhom4
     public partial class FrmDoimatkhau : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
+        public TaiKhoanNganHang tknh;
         NguoiDungDAO ngdungDAO = new NguoiDungDAO();
-        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmDoimatkhau()
         {
             InitializeComponent();
         }
 
-        public FrmDoimatkhau(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmDoimatkhau(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;

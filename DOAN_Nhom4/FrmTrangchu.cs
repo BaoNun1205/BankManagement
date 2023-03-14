@@ -3,21 +3,21 @@
     public partial class FrmTrangchu : Form
     {
         public NguoiDung kh;
-        public TaiKhoangNganHang tknh;
+        public TaiKhoanNganHang tknh;
         public GiaoDichChuyenTien gd;
         public FrmTrangchu()
         {
             InitializeComponent();
         }
 
-        public FrmTrangchu(NguoiDung kh, TaiKhoangNganHang tknh)
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
         }
 
-        public FrmTrangchu(NguoiDung kh, TaiKhoangNganHang tknh, GiaoDichChuyenTien gd)
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDichChuyenTien gd)
         {
             InitializeComponent();
             this.kh = kh;
