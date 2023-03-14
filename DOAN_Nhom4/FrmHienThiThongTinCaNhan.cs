@@ -37,17 +37,17 @@ namespace DOAN_Nhom4
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
             this.Hide();
-            frmnguoidung.ShowDialog();
+            frmtrangchu.ShowDialog();
             this.Close();
         }
 
         private void pb_quaylai_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
             this.Hide();
-            frmnguoidung.ShowDialog();
+            frmtrangchu.ShowDialog();
             this.Close();
         }
 

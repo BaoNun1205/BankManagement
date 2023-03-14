@@ -38,9 +38,9 @@ namespace DOAN_Nhom4
        
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmnguoidung = new FrmTrangchu(this.kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(this.kh, tknh);
             this.Hide();
-            frmnguoidung.ShowDialog();
+            frmtrangchu.ShowDialog();
             this.Close();
         }
 

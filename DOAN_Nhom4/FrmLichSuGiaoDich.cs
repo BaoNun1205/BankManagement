@@ -30,9 +30,9 @@ namespace DOAN_Nhom4
 
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmnguoidung = new FrmTrangchu(kh, tknh, gd);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
             this.Hide();
-            frmnguoidung.ShowDialog();
+            frmtrangchu.ShowDialog();
             this.Close();
         }
     }
