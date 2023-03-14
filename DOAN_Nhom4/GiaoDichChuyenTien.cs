@@ -9,26 +9,26 @@ namespace DOAN_Nhom4
 {
     public class GiaoDichChuyenTien
     {
-        private string tenNgnhan;
-        private string stkNgnhan;
-        private BigInteger sotienGiaodich;
-        private string tenNganhang;
+        private string tenTK;
+        private string soTk;
+        private BigInteger soTien;
+        private string nganHang;
         private string loiNhan;
 
-        public string TenNgnhan { get => tenNgnhan; set => tenNgnhan = value; }
-        public string STKNgnhan { get => stkNgnhan; set => stkNgnhan = value; }
-        public BigInteger SotienGiaodich { get => sotienGiaodich; set => sotienGiaodich = value; }
-        public string TenNganhang { get => tenNganhang; set => tenNganhang = value; }
+        public string TenTK { get => tenTK; set => tenTK = value; }
+        public string SoTk { get => soTk; set => soTk = value; }
+        public BigInteger SoTien { get => soTien; set => soTien = value; }
+        public string NganHang { get => nganHang; set => nganHang = value; }
         public string LoiNhan { get => loiNhan; set => loiNhan = value; }
 
         public GiaoDichChuyenTien() { }
 
         public GiaoDichChuyenTien(string tenTK, string soTk, BigInteger soTien, string nganHang, string loiNhan)
         {
-            this.tenNgnhan = tenTK;
-            this.stkNgnhan = soTk;
-            this.sotienGiaodich = soTien;
-            this.tenNganhang = nganHang;
+            this.tenTK = tenTK;
+            this.soTk = soTk;
+            this.soTien = soTien;
+            this.nganHang = nganHang;
             this.loiNhan = loiNhan;
         }
     }

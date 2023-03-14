@@ -13,30 +13,32 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
-        NguoiDungDAO NguoiDungDAO = new NguoiDungDAO();
-        public NguoiDung nguoiDung;
-        private static string tenTK;
+        public NguoiDung kh;
+        public TaiKhoangNganHang tknh;
+        NguoiDungDAO khDAO = new NguoiDungDAO();
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
         public FrmChuyentien()
         {
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
         }
-        public FrmChuyentien(NguoiDung kh)
+        public FrmChuyentien(NguoiDung kh, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
             pnlChuyentien.Parent = picBoxChuyentien;
             pnlChuyentien.BackColor = Color.Transparent;
-            nguoiDung = kh;
+            this.kh = kh;
+            this.tknh = tknh;
         }
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
-            lblSoDu.Text = nguoiDung.SoDu.ToString();
+            lblSoDu.Text = tknh.SoDu.ToString();
         }
        
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(this.kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -46,9 +48,8 @@ namespace DOAN_Nhom4
         {
             if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                GiaoDichChuyenTien chuyenTien = new GiaoDichChuyenTien(tenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text , txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung);
-                frmxacnhan.gdchuyentien = chuyenTien;
+                GiaoDichChuyenTien chuyenTien = new GiaoDichChuyenTien(this.kh.TenTK, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text, txtLoiNhan.Text);
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(this.kh, tknh);
                 this.Hide();
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -65,14 +66,17 @@ namespace DOAN_Nhom4
         private void txtSTK_TextChanged(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung();
-            kh = NguoiDungDAO.LayKhachHang("SoTK", txtSTK.Text);
-            if (kh != null)
+            TaiKhoangNganHang tk = new TaiKhoangNganHang();
+            kh = khDAO.LayKhachHang("SoTK", txtSTK.Text);
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text);
+            if (tk != null)
             {
                 lblTenTK.Text = kh.TenTK.ToString();
-                tenTK = kh.TenTK.ToString();
-            }                   
+            }
             else
+            {
                 lblTenTK.Text = "Khong ton tai";
+            }
         }
     }
 }

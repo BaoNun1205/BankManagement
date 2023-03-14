@@ -28,69 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTietkiem));
+            this.pnlTietkiem = new System.Windows.Forms.Panel();
+            this.btnXacnhan = new CustomButton.VBButton();
+            this.txtTenTKTK = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSotien = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTongtien = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTongtienlai = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblLaisuat = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.vbButton5 = new CustomButton.VBButton();
-            this.vbButton4 = new CustomButton.VBButton();
-            this.vbButton3 = new CustomButton.VBButton();
-            this.vbButton2 = new CustomButton.VBButton();
-            this.vbButton1 = new CustomButton.VBButton();
+            this.btn18thang = new CustomButton.VBButton();
+            this.btn12thang = new CustomButton.VBButton();
+            this.btn6thang = new CustomButton.VBButton();
+            this.btn3thang = new CustomButton.VBButton();
+            this.btn1thang = new CustomButton.VBButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTKTK = new System.Windows.Forms.Label();
+            this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlTietkiem
+            // 
+            this.pnlTietkiem.BackColor = System.Drawing.Color.White;
+            this.pnlTietkiem.Controls.Add(this.lblTKTK);
+            this.pnlTietkiem.Controls.Add(this.btnXacnhan);
+            this.pnlTietkiem.Controls.Add(this.txtTenTKTK);
+            this.pnlTietkiem.Controls.Add(this.panel1);
+            this.pnlTietkiem.Controls.Add(this.picBoxQuaylai);
+            this.pnlTietkiem.Controls.Add(this.lblTongtien);
+            this.pnlTietkiem.Controls.Add(this.label9);
+            this.pnlTietkiem.Controls.Add(this.panel5);
+            this.pnlTietkiem.Controls.Add(this.lblTongtienlai);
+            this.pnlTietkiem.Controls.Add(this.label7);
+            this.pnlTietkiem.Controls.Add(this.lblLaisuat);
+            this.pnlTietkiem.Controls.Add(this.panel4);
+            this.pnlTietkiem.Controls.Add(this.label5);
+            this.pnlTietkiem.Controls.Add(this.panel3);
+            this.pnlTietkiem.Controls.Add(this.btn18thang);
+            this.pnlTietkiem.Controls.Add(this.btn12thang);
+            this.pnlTietkiem.Controls.Add(this.btn6thang);
+            this.pnlTietkiem.Controls.Add(this.btn3thang);
+            this.pnlTietkiem.Controls.Add(this.btn1thang);
+            this.pnlTietkiem.Controls.Add(this.label4);
+            this.pnlTietkiem.Controls.Add(this.label3);
+            this.pnlTietkiem.Controls.Add(this.label1);
+            this.pnlTietkiem.Controls.Add(this.panel2);
+            this.pnlTietkiem.Location = new System.Drawing.Point(-1, -1);
+            this.pnlTietkiem.Name = "pnlTietkiem";
+            this.pnlTietkiem.Size = new System.Drawing.Size(769, 981);
+            this.pnlTietkiem.TabIndex = 0;
+            // 
+            // btnXacnhan
+            // 
+            this.btnXacnhan.BackColor = System.Drawing.Color.White;
+            this.btnXacnhan.BackgroundColor = System.Drawing.Color.White;
+            this.btnXacnhan.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.BorderRadius = 20;
+            this.btnXacnhan.BorderSize = 2;
+            this.btnXacnhan.FlatAppearance.BorderSize = 0;
+            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXacnhan.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.Location = new System.Drawing.Point(294, 881);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(174, 66);
+            this.btnXacnhan.TabIndex = 59;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.UseVisualStyleBackColor = false;
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
+            // 
+            // txtTenTKTK
+            // 
+            this.txtTenTKTK.BackColor = System.Drawing.Color.White;
+            this.txtTenTKTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTKTK.Font = new System.Drawing.Font("Tahoma", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTenTKTK.Location = new System.Drawing.Point(223, 97);
+            this.txtTenTKTK.Name = "txtTenTKTK";
+            this.txtTenTKTK.Size = new System.Drawing.Size(485, 33);
+            this.txtTenTKTK.TabIndex = 58;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.picBoxQuaylai);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.vbButton5);
-            this.panel1.Controls.Add(this.vbButton4);
-            this.panel1.Controls.Add(this.vbButton3);
-            this.panel1.Controls.Add(this.vbButton2);
-            this.panel1.Controls.Add(this.vbButton1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.txtSotien);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtUserName);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(2, 5);
+            this.panel1.Location = new System.Drawing.Point(58, 202);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 981);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            this.panel1.Size = new System.Drawing.Size(650, 84);
+            this.panel1.TabIndex = 57;
+            // 
+            // txtSotien
+            // 
+            this.txtSotien.BackColor = System.Drawing.Color.White;
+            this.txtSotien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSotien.Location = new System.Drawing.Point(30, 25);
+            this.txtSotien.Name = "txtSotien";
+            this.txtSotien.Size = new System.Drawing.Size(567, 32);
+            this.txtSotien.TabIndex = 9;
+            this.txtSotien.Text = "Bạn muốn gửi bao nhiêu?";
+            this.txtSotien.Enter += new System.EventHandler(this.txtSotien_Enter);
+            this.txtSotien.Leave += new System.EventHandler(this.txtSotien_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.pencil;
+            this.pictureBox1.Location = new System.Drawing.Point(610, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // picBoxQuaylai
             // 
-            this.picBoxQuaylai.BackColor = System.Drawing.SystemColors.Control;
+            this.picBoxQuaylai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picBoxQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
             this.picBoxQuaylai.Location = new System.Drawing.Point(10, 7);
             this.picBoxQuaylai.Name = "picBoxQuaylai";
@@ -100,14 +166,15 @@
             this.picBoxQuaylai.TabStop = false;
             this.picBoxQuaylai.Click += new System.EventHandler(this.picBoxQuaylai_Click);
             // 
-            // label10
+            // lblTongtien
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(345, 776);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 32);
-            this.label10.TabIndex = 55;
-            this.label10.Text = " ";
+            this.lblTongtien.AutoSize = true;
+            this.lblTongtien.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongtien.Location = new System.Drawing.Point(328, 768);
+            this.lblTongtien.Name = "lblTongtien";
+            this.lblTongtien.Size = new System.Drawing.Size(65, 29);
+            this.lblTongtien.TabIndex = 55;
+            this.lblTongtien.Text = "      -";
             // 
             // label9
             // 
@@ -122,20 +189,21 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel5.Location = new System.Drawing.Point(58, 863);
+            this.panel5.Location = new System.Drawing.Point(53, 843);
             this.panel5.Margin = new System.Windows.Forms.Padding(5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(650, 2);
             this.panel5.TabIndex = 20;
             // 
-            // label8
+            // lblTongtienlai
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(503, 589);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 32);
-            this.label8.TabIndex = 53;
-            this.label8.Text = " ";
+            this.lblTongtienlai.AutoSize = true;
+            this.lblTongtienlai.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongtienlai.Location = new System.Drawing.Point(510, 591);
+            this.lblTongtienlai.Name = "lblTongtienlai";
+            this.lblTongtienlai.Size = new System.Drawing.Size(51, 29);
+            this.lblTongtienlai.TabIndex = 53;
+            this.lblTongtienlai.Text = "    -";
             // 
             // label7
             // 
@@ -146,14 +214,15 @@
             this.label7.TabIndex = 52;
             this.label7.Text = "Tổng tiền lãi dự kiến";
             // 
-            // label6
+            // lblLaisuat
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(188, 589);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 32);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "8%";
+            this.lblLaisuat.AutoSize = true;
+            this.lblLaisuat.Font = new System.Drawing.Font("Segoe UI Black", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLaisuat.Location = new System.Drawing.Point(176, 580);
+            this.lblLaisuat.Name = "lblLaisuat";
+            this.lblLaisuat.Size = new System.Drawing.Size(25, 40);
+            this.lblLaisuat.TabIndex = 51;
+            this.lblLaisuat.Text = " ";
             // 
             // panel4
             // 
@@ -183,95 +252,100 @@
             this.panel3.Size = new System.Drawing.Size(650, 2);
             this.panel3.TabIndex = 19;
             // 
-            // vbButton5
+            // btn18thang
             // 
-            this.vbButton5.BackColor = System.Drawing.SystemColors.Control;
-            this.vbButton5.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.vbButton5.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton5.BorderRadius = 20;
-            this.vbButton5.BorderSize = 2;
-            this.vbButton5.FlatAppearance.BorderSize = 0;
-            this.vbButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton5.Location = new System.Drawing.Point(440, 427);
-            this.vbButton5.Name = "vbButton5";
-            this.vbButton5.Size = new System.Drawing.Size(79, 53);
-            this.vbButton5.TabIndex = 18;
-            this.vbButton5.Text = "18";
-            this.vbButton5.TextColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton5.UseVisualStyleBackColor = false;
+            this.btn18thang.BackColor = System.Drawing.Color.White;
+            this.btn18thang.BackgroundColor = System.Drawing.Color.White;
+            this.btn18thang.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn18thang.BorderRadius = 20;
+            this.btn18thang.BorderSize = 2;
+            this.btn18thang.FlatAppearance.BorderSize = 0;
+            this.btn18thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn18thang.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn18thang.Location = new System.Drawing.Point(440, 427);
+            this.btn18thang.Name = "btn18thang";
+            this.btn18thang.Size = new System.Drawing.Size(79, 53);
+            this.btn18thang.TabIndex = 18;
+            this.btn18thang.Text = "18";
+            this.btn18thang.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn18thang.UseVisualStyleBackColor = false;
+            this.btn18thang.Click += new System.EventHandler(this.btn18thang_Click);
             // 
-            // vbButton4
+            // btn12thang
             // 
-            this.vbButton4.BackColor = System.Drawing.SystemColors.Control;
-            this.vbButton4.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.vbButton4.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton4.BorderRadius = 20;
-            this.vbButton4.BorderSize = 2;
-            this.vbButton4.FlatAppearance.BorderSize = 0;
-            this.vbButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton4.Location = new System.Drawing.Point(345, 427);
-            this.vbButton4.Name = "vbButton4";
-            this.vbButton4.Size = new System.Drawing.Size(79, 53);
-            this.vbButton4.TabIndex = 17;
-            this.vbButton4.Text = "12";
-            this.vbButton4.TextColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton4.UseVisualStyleBackColor = false;
+            this.btn12thang.BackColor = System.Drawing.Color.White;
+            this.btn12thang.BackgroundColor = System.Drawing.Color.White;
+            this.btn12thang.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn12thang.BorderRadius = 20;
+            this.btn12thang.BorderSize = 2;
+            this.btn12thang.FlatAppearance.BorderSize = 0;
+            this.btn12thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn12thang.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn12thang.Location = new System.Drawing.Point(345, 427);
+            this.btn12thang.Name = "btn12thang";
+            this.btn12thang.Size = new System.Drawing.Size(79, 53);
+            this.btn12thang.TabIndex = 17;
+            this.btn12thang.Text = "12";
+            this.btn12thang.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn12thang.UseVisualStyleBackColor = false;
+            this.btn12thang.Click += new System.EventHandler(this.btn12thang_Click);
             // 
-            // vbButton3
+            // btn6thang
             // 
-            this.vbButton3.BackColor = System.Drawing.SystemColors.Control;
-            this.vbButton3.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.vbButton3.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton3.BorderRadius = 20;
-            this.vbButton3.BorderSize = 2;
-            this.vbButton3.FlatAppearance.BorderSize = 0;
-            this.vbButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton3.Location = new System.Drawing.Point(251, 427);
-            this.vbButton3.Name = "vbButton3";
-            this.vbButton3.Size = new System.Drawing.Size(79, 53);
-            this.vbButton3.TabIndex = 16;
-            this.vbButton3.Text = "6";
-            this.vbButton3.TextColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton3.UseVisualStyleBackColor = false;
+            this.btn6thang.BackColor = System.Drawing.Color.White;
+            this.btn6thang.BackgroundColor = System.Drawing.Color.White;
+            this.btn6thang.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn6thang.BorderRadius = 20;
+            this.btn6thang.BorderSize = 2;
+            this.btn6thang.FlatAppearance.BorderSize = 0;
+            this.btn6thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn6thang.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn6thang.Location = new System.Drawing.Point(251, 427);
+            this.btn6thang.Name = "btn6thang";
+            this.btn6thang.Size = new System.Drawing.Size(79, 53);
+            this.btn6thang.TabIndex = 16;
+            this.btn6thang.Text = "6";
+            this.btn6thang.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn6thang.UseVisualStyleBackColor = false;
+            this.btn6thang.Click += new System.EventHandler(this.btn6thang_Click);
             // 
-            // vbButton2
+            // btn3thang
             // 
-            this.vbButton2.BackColor = System.Drawing.SystemColors.Control;
-            this.vbButton2.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.vbButton2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton2.BorderRadius = 20;
-            this.vbButton2.BorderSize = 2;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton2.Location = new System.Drawing.Point(156, 427);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(79, 53);
-            this.vbButton2.TabIndex = 15;
-            this.vbButton2.Text = "3";
-            this.vbButton2.TextColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton2.UseVisualStyleBackColor = false;
+            this.btn3thang.BackColor = System.Drawing.Color.White;
+            this.btn3thang.BackgroundColor = System.Drawing.Color.White;
+            this.btn3thang.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn3thang.BorderRadius = 20;
+            this.btn3thang.BorderSize = 2;
+            this.btn3thang.FlatAppearance.BorderSize = 0;
+            this.btn3thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3thang.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn3thang.Location = new System.Drawing.Point(156, 427);
+            this.btn3thang.Name = "btn3thang";
+            this.btn3thang.Size = new System.Drawing.Size(79, 53);
+            this.btn3thang.TabIndex = 15;
+            this.btn3thang.Text = "3";
+            this.btn3thang.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn3thang.UseVisualStyleBackColor = false;
+            this.btn3thang.Click += new System.EventHandler(this.btn3thang_Click);
             // 
-            // vbButton1
+            // btn1thang
             // 
-            this.vbButton1.BackColor = System.Drawing.SystemColors.Control;
-            this.vbButton1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.vbButton1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 2;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.Location = new System.Drawing.Point(62, 427);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(79, 53);
-            this.vbButton1.TabIndex = 14;
-            this.vbButton1.Text = "1";
-            this.vbButton1.TextColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btn1thang.BackColor = System.Drawing.Color.White;
+            this.btn1thang.BackgroundColor = System.Drawing.Color.White;
+            this.btn1thang.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btn1thang.BorderRadius = 20;
+            this.btn1thang.BorderSize = 2;
+            this.btn1thang.FlatAppearance.BorderSize = 0;
+            this.btn1thang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1thang.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn1thang.Location = new System.Drawing.Point(62, 427);
+            this.btn1thang.Name = "btn1thang";
+            this.btn1thang.Size = new System.Drawing.Size(79, 53);
+            this.btn1thang.TabIndex = 14;
+            this.btn1thang.Text = "1";
+            this.btn1thang.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn1thang.UseVisualStyleBackColor = false;
+            this.btn1thang.Click += new System.EventHandler(this.btn1thang_Click);
             // 
             // label4
             // 
@@ -286,40 +360,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(58, 289);
+            this.label3.Location = new System.Drawing.Point(62, 299);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(523, 32);
             this.label3.TabIndex = 12;
             this.label3.Text = "Số tiền phải là tối thiểu và chia hết cho 100.000";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.pencil;
-            this.pictureBox1.Location = new System.Drawing.Point(655, 220);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(77, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 32);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Bạn muốn gửi bao nhiêu?";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(58, 198);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(650, 78);
-            this.textBox1.TabIndex = 9;
             // 
             // label1
             // 
@@ -329,19 +374,6 @@
             this.label1.Size = new System.Drawing.Size(159, 32);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đặt tên TKTK:";
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUserName.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.txtUserName.Location = new System.Drawing.Point(228, 67);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(5);
-            this.txtUserName.Multiline = true;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(480, 62);
-            this.txtUserName.TabIndex = 7;
             // 
             // panel2
             // 
@@ -353,49 +385,64 @@
             this.panel2.Size = new System.Drawing.Size(650, 2);
             this.panel2.TabIndex = 5;
             // 
+            // lblTKTK
+            // 
+            this.lblTKTK.AutoSize = true;
+            this.lblTKTK.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTKTK.Location = new System.Drawing.Point(631, 11);
+            this.lblTKTK.Name = "lblTKTK";
+            this.lblTKTK.Size = new System.Drawing.Size(123, 32);
+            this.lblTKTK.TabIndex = 60;
+            this.lblTKTK.Text = "Xem TKTK";
+            // 
             // FrmTietkiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 987);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(765, 979);
+            this.Controls.Add(this.pnlTietkiem);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTietkiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tiết kiệm";
+            this.pnlTietkiem.ResumeLayout(false);
+            this.pnlTietkiem.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
-        private TextBox txtUserName;
+        private Panel pnlTietkiem;
         private Panel panel2;
-        private CustomButton.VBButton vbButton1;
+        private CustomButton.VBButton btn1thang;
         private Label label4;
         private Label label3;
         private PictureBox pictureBox1;
-        private Label label2;
-        private TextBox textBox1;
+        private TextBox txtSotien;
         private Label label1;
         private Label label5;
         private Panel panel3;
-        private CustomButton.VBButton vbButton5;
-        private CustomButton.VBButton vbButton4;
-        private CustomButton.VBButton vbButton3;
-        private CustomButton.VBButton vbButton2;
+        private CustomButton.VBButton btn18thang;
+        private CustomButton.VBButton btn12thang;
+        private CustomButton.VBButton btn6thang;
+        private CustomButton.VBButton btn3thang;
         private Panel panel4;
-        private Label label10;
+        private Label lblTongtien;
         private Label label9;
         private Panel panel5;
-        private Label label8;
+        private Label lblTongtienlai;
         private Label label7;
-        private Label label6;
+        private Label lblLaisuat;
         private PictureBox picBoxQuaylai;
+        private Panel panel1;
+        private TextBox txtTenTKTK;
+        private CustomButton.VBButton btnXacnhan;
+        private Label lblTKTK;
     }
 }

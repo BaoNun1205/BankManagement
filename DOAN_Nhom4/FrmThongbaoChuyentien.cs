@@ -12,18 +12,20 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongbaoChuyentien : Form
     {
-        public NguoiDung nguoiDung;
+        public NguoiDung kh;
+        public TaiKhoangNganHang tknh;
         public GiaoDichChuyenTien gdchuyentien;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
 
-        public FrmThongbaoChuyentien(NguoiDung nguoiDung, GiaoDichChuyenTien gdchuyentien)
+        public FrmThongbaoChuyentien(NguoiDung kh, GiaoDichChuyenTien gdchuyentien, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
-            this.nguoiDung = nguoiDung;
+            this.kh = kh;
             this.gdchuyentien = gdchuyentien;
+            this.tknh = tknh;
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -32,16 +34,16 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblSotien.Text = gdchuyentien.SotienGiaodich.ToString() + " VNĐ";
+            lblSotien.Text = gdchuyentien.SoTien.ToString() + " VNĐ";
             lblTime.Text = DateTime.Now.ToString();
-            lblNguoinhan.Text = gdchuyentien.TenNgnhan.ToString();
-            lblSTK.Text = gdchuyentien.STKNgnhan.ToString();
-            lblNganhang.Text = gdchuyentien.TenNganhang.ToString();
+            lblNguoinhan.Text = gdchuyentien.TenTK.ToString();
+            lblSTK.Text = gdchuyentien.SoTk.ToString();
+            lblNganhang.Text = gdchuyentien.NganHang.ToString();
             lblNoidung.Text = gdchuyentien.LoiNhan.ToString();
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -49,7 +51,7 @@ namespace DOAN_Nhom4
 
         private void lblQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();

@@ -12,30 +12,32 @@ namespace DOAN_Nhom4
 {
     public partial class FrmHienThiThongTinCaNhan : Form
     {
-        public NguoiDung nguoiDung;
+        public NguoiDung kh;
+        public TaiKhoangNganHang tknh;
         public FrmHienThiThongTinCaNhan()
         {
             InitializeComponent();
         }
 
-        public FrmHienThiThongTinCaNhan(NguoiDung nguoiDung)
+        public FrmHienThiThongTinCaNhan(NguoiDung kh, TaiKhoangNganHang tknh)
         {
             InitializeComponent();
-            this.nguoiDung = nguoiDung;
+            this.kh = kh;
+            this.tknh = tknh;
         }
         private void FrmHienThiThongTinCaNhan_Load(object sender, EventArgs e)
         {
-            lblChuTKValue.Text = nguoiDung.TenTK.ToString();
-            lblSoTkValue.Text = nguoiDung.SoTK.ToString();
-            lblSoDuValue.Text = nguoiDung.SoDu.ToString() + " VNĐ";
-            lblCccdValue.Text = nguoiDung.Cccd.ToString();
-            lblNgaySinhValue.Text = nguoiDung.NgaySinh.ToString("dd/MM/yyyy");
-            lblSdtValue.Text = nguoiDung.Sdt.ToString();
+            lblChuTKValue.Text = kh.TenTK.ToString();
+            lblSoTkValue.Text = kh.SoTK.ToString();
+            lblSoDuValue.Text = tknh.SoDu.ToString() + " VNĐ";
+            lblCccdValue.Text = kh.Cccd.ToString();
+            lblNgaySinhValue.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
+            lblSdtValue.Text = kh.Sdt.ToString();
         }
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -43,7 +45,7 @@ namespace DOAN_Nhom4
 
         private void pb_quaylai_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
             this.Hide();
             frmnguoidung.ShowDialog();
             this.Close();
@@ -51,7 +53,7 @@ namespace DOAN_Nhom4
 
         private void btnBaomat_Click(object sender, EventArgs e)
         {
-            FrmBaomat frmbaomat = new FrmBaomat(nguoiDung);
+            FrmBaomat frmbaomat = new FrmBaomat(kh, tknh);
             this.Hide();
             frmbaomat.ShowDialog();
             this.Close();
