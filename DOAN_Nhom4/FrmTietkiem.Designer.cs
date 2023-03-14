@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTietkiem));
             this.pnlTietkiem = new System.Windows.Forms.Panel();
+            this.btnXacnhan = new CustomButton.VBButton();
             this.txtTenTKTK = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSotien = new System.Windows.Forms.TextBox();
@@ -53,7 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnXacnhan = new CustomButton.VBButton();
+            this.lblTKTK = new System.Windows.Forms.Label();
             this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +64,7 @@
             // pnlTietkiem
             // 
             this.pnlTietkiem.BackColor = System.Drawing.Color.White;
+            this.pnlTietkiem.Controls.Add(this.lblTKTK);
             this.pnlTietkiem.Controls.Add(this.btnXacnhan);
             this.pnlTietkiem.Controls.Add(this.txtTenTKTK);
             this.pnlTietkiem.Controls.Add(this.panel1);
@@ -89,6 +91,25 @@
             this.pnlTietkiem.Name = "pnlTietkiem";
             this.pnlTietkiem.Size = new System.Drawing.Size(769, 981);
             this.pnlTietkiem.TabIndex = 0;
+            // 
+            // btnXacnhan
+            // 
+            this.btnXacnhan.BackColor = System.Drawing.Color.White;
+            this.btnXacnhan.BackgroundColor = System.Drawing.Color.White;
+            this.btnXacnhan.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.BorderRadius = 20;
+            this.btnXacnhan.BorderSize = 2;
+            this.btnXacnhan.FlatAppearance.BorderSize = 0;
+            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXacnhan.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.Location = new System.Drawing.Point(294, 881);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(174, 66);
+            this.btnXacnhan.TabIndex = 59;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.UseVisualStyleBackColor = false;
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // txtTenTKTK
             // 
@@ -364,24 +385,15 @@
             this.panel2.Size = new System.Drawing.Size(650, 2);
             this.panel2.TabIndex = 5;
             // 
-            // btnXacnhan
+            // lblTKTK
             // 
-            this.btnXacnhan.BackColor = System.Drawing.Color.White;
-            this.btnXacnhan.BackgroundColor = System.Drawing.Color.White;
-            this.btnXacnhan.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnXacnhan.BorderRadius = 20;
-            this.btnXacnhan.BorderSize = 2;
-            this.btnXacnhan.FlatAppearance.BorderSize = 0;
-            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXacnhan.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnXacnhan.Location = new System.Drawing.Point(294, 881);
-            this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(174, 66);
-            this.btnXacnhan.TabIndex = 59;
-            this.btnXacnhan.Text = "Xác nhận";
-            this.btnXacnhan.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btnXacnhan.UseVisualStyleBackColor = false;
-            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
+            this.lblTKTK.AutoSize = true;
+            this.lblTKTK.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTKTK.Location = new System.Drawing.Point(631, 11);
+            this.lblTKTK.Name = "lblTKTK";
+            this.lblTKTK.Size = new System.Drawing.Size(123, 32);
+            this.lblTKTK.TabIndex = 60;
+            this.lblTKTK.Text = "Xem TKTK";
             // 
             // FrmTietkiem
             // 
@@ -431,5 +443,6 @@
         private Panel panel1;
         private TextBox txtTenTKTK;
         private CustomButton.VBButton btnXacnhan;
+        private Label lblTKTK;
     }
 }
