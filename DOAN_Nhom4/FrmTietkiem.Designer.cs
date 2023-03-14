@@ -35,10 +35,10 @@
             this.txtSotien = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblTongtien = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTongtienlai = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblLaisuat = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -65,10 +65,10 @@
             this.pnlTietkiem.Controls.Add(this.txtTenTKTK);
             this.pnlTietkiem.Controls.Add(this.panel1);
             this.pnlTietkiem.Controls.Add(this.picBoxQuaylai);
-            this.pnlTietkiem.Controls.Add(this.label10);
+            this.pnlTietkiem.Controls.Add(this.lblTongtien);
             this.pnlTietkiem.Controls.Add(this.label9);
             this.pnlTietkiem.Controls.Add(this.panel5);
-            this.pnlTietkiem.Controls.Add(this.label8);
+            this.pnlTietkiem.Controls.Add(this.lblTongtienlai);
             this.pnlTietkiem.Controls.Add(this.label7);
             this.pnlTietkiem.Controls.Add(this.lblLaisuat);
             this.pnlTietkiem.Controls.Add(this.panel4);
@@ -143,14 +143,15 @@
             this.picBoxQuaylai.TabStop = false;
             this.picBoxQuaylai.Click += new System.EventHandler(this.picBoxQuaylai_Click);
             // 
-            // label10
+            // lblTongtien
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(345, 798);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 32);
-            this.label10.TabIndex = 55;
-            this.label10.Text = " ";
+            this.lblTongtien.AutoSize = true;
+            this.lblTongtien.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongtien.Location = new System.Drawing.Point(328, 768);
+            this.lblTongtien.Name = "lblTongtien";
+            this.lblTongtien.Size = new System.Drawing.Size(65, 29);
+            this.lblTongtien.TabIndex = 55;
+            this.lblTongtien.Text = "      -";
             // 
             // label9
             // 
@@ -165,20 +166,21 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel5.Location = new System.Drawing.Point(58, 902);
+            this.panel5.Location = new System.Drawing.Point(53, 843);
             this.panel5.Margin = new System.Windows.Forms.Padding(5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(650, 2);
             this.panel5.TabIndex = 20;
             // 
-            // label8
+            // lblTongtienlai
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(503, 589);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 32);
-            this.label8.TabIndex = 53;
-            this.label8.Text = " ";
+            this.lblTongtienlai.AutoSize = true;
+            this.lblTongtienlai.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongtienlai.Location = new System.Drawing.Point(510, 591);
+            this.lblTongtienlai.Name = "lblTongtienlai";
+            this.lblTongtienlai.Size = new System.Drawing.Size(51, 29);
+            this.lblTongtienlai.TabIndex = 53;
+            this.lblTongtienlai.Text = "    -";
             // 
             // label7
             // 
@@ -193,7 +195,7 @@
             // 
             this.lblLaisuat.AutoSize = true;
             this.lblLaisuat.Font = new System.Drawing.Font("Segoe UI Black", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLaisuat.Location = new System.Drawing.Point(175, 583);
+            this.lblLaisuat.Location = new System.Drawing.Point(176, 580);
             this.lblLaisuat.Name = "lblLaisuat";
             this.lblLaisuat.Size = new System.Drawing.Size(25, 40);
             this.lblLaisuat.TabIndex = 51;
@@ -398,10 +400,10 @@
         private CustomButton.VBButton btn6thang;
         private CustomButton.VBButton btn3thang;
         private Panel panel4;
-        private Label label10;
+        private Label lblTongtien;
         private Label label9;
         private Panel panel5;
-        private Label label8;
+        private Label lblTongtienlai;
         private Label label7;
         private Label lblLaisuat;
         private PictureBox picBoxQuaylai;
