@@ -15,9 +15,12 @@ namespace DOAN_Nhom4
     {
         public NguoiDung ngdung;
         public TaiKhoangNganHang tknh;
+        TaiKhoangNganHangDAO tknhDAO = new TaiKhoangNganHangDAO();
+        private int tienGoc;
         private int kiHan;
         private double laiSuat;
-        private double tienlai;
+        private double tienLai;
+        private double tongTien;
         public FrmTietkiem()
         {
             InitializeComponent();
@@ -78,9 +81,11 @@ namespace DOAN_Nhom4
             {
                 if (ktSotien(int.Parse(txtSotien.Text)) == true)
                 {
-                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
-                    lblTongtienlai.Text = tienlai.ToString();
-                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                    tienGoc = int.Parse(txtSotien.Text);
+                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    lblTongtienlai.Text = tienLai.ToString();
+                    tongTien = TongTien(tienGoc, tienLai);
+                    lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }           
@@ -105,9 +110,11 @@ namespace DOAN_Nhom4
             {
                 if (ktSotien(int.Parse(txtSotien.Text)) == true)
                 {
-                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
-                    lblTongtienlai.Text = tienlai.ToString();
-                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                    tienGoc = int.Parse(txtSotien.Text);
+                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    lblTongtienlai.Text = tienLai.ToString();
+                    tongTien = TongTien(tienGoc, tienLai);
+                    lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
@@ -132,9 +139,11 @@ namespace DOAN_Nhom4
             {
                 if (ktSotien(int.Parse(txtSotien.Text)) == true)
                 {
-                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
-                    lblTongtienlai.Text = tienlai.ToString();
-                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                    tienGoc = int.Parse(txtSotien.Text);
+                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    lblTongtienlai.Text = tienLai.ToString();
+                    tongTien = TongTien(tienGoc, tienLai);
+                    lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
@@ -159,9 +168,11 @@ namespace DOAN_Nhom4
             {
                 if (ktSotien(int.Parse(txtSotien.Text)) == true)
                 {
-                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
-                    lblTongtienlai.Text = tienlai.ToString();
-                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                    tienGoc = int.Parse(txtSotien.Text);
+                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    lblTongtienlai.Text = tienLai.ToString();
+                    tongTien = TongTien(tienGoc, tienLai);
+                    lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
@@ -186,9 +197,11 @@ namespace DOAN_Nhom4
             {
                 if (ktSotien(int.Parse(txtSotien.Text)) == true)
                 {
-                    tienlai = TienLai(int.Parse(txtSotien.Text), laiSuat, kiHan);
-                    lblTongtienlai.Text = tienlai.ToString();
-                    lblTongtien.Text = TongTien(int.Parse(txtSotien.Text), tienlai).ToString();
+                    tienGoc = int.Parse(txtSotien.Text);
+                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    lblTongtienlai.Text = tienLai.ToString();
+                    tongTien = TongTien(tienGoc, tienLai);
+                    lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
@@ -202,6 +215,17 @@ namespace DOAN_Nhom4
             btn12thang.BackColor = Color.White;
             btn18thang.ForeColor = Color.White;
             btn18thang.BackColor = Color.DodgerBlue;
+        }
+
+        private void btnXacnhan_Click(object sender, EventArgs e)
+        {
+            tknh.SoDu = tknh.SoDu - tienGoc;
+            tknhDAO.Sua(tknh);
+            MessageBox.Show("Tạo tài khoản tiết kiện thành công.", "Thông báo", MessageBoxButtons.OK);
+            FrmTietkiem frmtietkiem = new FrmTietkiem();
+            Hide();
+            frmtietkiem.ShowDialog();
+            Close();
         }
     }
 }

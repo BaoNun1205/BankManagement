@@ -53,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXacnhan = new CustomButton.VBButton();
             this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@
             // pnlTietkiem
             // 
             this.pnlTietkiem.BackColor = System.Drawing.Color.White;
+            this.pnlTietkiem.Controls.Add(this.btnXacnhan);
             this.pnlTietkiem.Controls.Add(this.txtTenTKTK);
             this.pnlTietkiem.Controls.Add(this.panel1);
             this.pnlTietkiem.Controls.Add(this.picBoxQuaylai);
@@ -362,6 +364,25 @@
             this.panel2.Size = new System.Drawing.Size(650, 2);
             this.panel2.TabIndex = 5;
             // 
+            // btnXacnhan
+            // 
+            this.btnXacnhan.BackColor = System.Drawing.Color.White;
+            this.btnXacnhan.BackgroundColor = System.Drawing.Color.White;
+            this.btnXacnhan.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.BorderRadius = 20;
+            this.btnXacnhan.BorderSize = 2;
+            this.btnXacnhan.FlatAppearance.BorderSize = 0;
+            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXacnhan.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.Location = new System.Drawing.Point(294, 881);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(174, 66);
+            this.btnXacnhan.TabIndex = 59;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnXacnhan.UseVisualStyleBackColor = false;
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
+            // 
             // FrmTietkiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -409,5 +430,6 @@
         private PictureBox picBoxQuaylai;
         private Panel panel1;
         private TextBox txtTenTKTK;
+        private CustomButton.VBButton btnXacnhan;
     }
 }
