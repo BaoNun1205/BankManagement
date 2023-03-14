@@ -21,7 +21,7 @@ namespace DOAN_Nhom4
         public string TenDN { get => tenDN; set => tenDN = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public BigInteger SoDu { get => soDu; set => soDu = value; }
-        public DateTime NgayDangKy { get => NgayDangKy; set => ngayDangKy = value; }
+        public DateTime NgayDangKy { get => ngayDangKy; set => ngayDangKy = value; }
 
         public TaiKhoanNganHang() { }
         public TaiKhoanNganHang(string tenNH, string soTK, string tenDN, string matKhau, BigInteger soDu, DateTime ngayDangKy)
