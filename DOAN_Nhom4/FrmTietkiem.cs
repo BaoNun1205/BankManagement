@@ -16,6 +16,8 @@ namespace DOAN_Nhom4
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        public TietKiem tkiem;
+
         private int tienGoc;
         private int kiHan;
         private double laiSuat;
@@ -79,12 +81,12 @@ namespace DOAN_Nhom4
             laiSuat = 0.06;          
             if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
             {
-                if (ktSotien(int.Parse(txtSotien.Text)) == true)
+                if (tkiem.ktSotien(int.Parse(txtSotien.Text), tknh.SoDu) == true)
                 {
                     tienGoc = int.Parse(txtSotien.Text);
-                    tienLai = TienLai(tienGoc, laiSuat, kiHan);
+                    tienLai = tkiem.TienLai(tienGoc, laiSuat, kiHan);
                     lblTongtienlai.Text = tienLai.ToString();
-                    tongTien = TongTien(tienGoc, tienLai);
+                    tongTien = tkiem.TongTien(tienGoc, tienLai);
                     lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }

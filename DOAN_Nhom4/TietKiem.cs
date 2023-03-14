@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DOAN_Nhom4
 {
-    internal class TietKiem
+    public class TietKiem
     {
         private int tienGoc;
         private int kiHan;
@@ -24,9 +25,9 @@ namespace DOAN_Nhom4
         public int KiHan { get => kiHan; set => kiHan = value; }
         public double LaiSuat { get => laiSuat; set => laiSuat = value; }
 
-        public bool ktSotien(int tiengoc, int sodu)
+        public bool ktSotien(int tiengoc, BigInteger sodu)
         {
-            if (tiengoc >= 100000 && tiengoc % 100000 == 0) return true;
+            if (tienGoc <= sodu && tiengoc >= 100000 && tiengoc % 100000 == 0) return true;
             else return false;
         }
         public double TienLai(int tiengoc, double laisuat, int thoigian)
