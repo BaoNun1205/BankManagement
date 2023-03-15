@@ -32,7 +32,7 @@ namespace DOAN_Nhom4
         }
         public void Sua(NguoiDung kh)
         {
-            string sqlKH = string.Format("UPDATE KhachHang SET TenTK = '{0}', NgaySinh = '{1}', CCCD = '{2}', Email = '{3}', SDT = '{4}' WHERE SoTK ='{5}'", kh.TenTK, kh.NgaySinh, kh.Cccd, kh.Email, kh.Sdt, kh.SoTK);
+            string sqlKH = string.Format("UPDATE KhachHang SET TenKH = '{0}', NgaySinh = '{1}', CCCD = '{2}', Email = '{3}', SDT = '{4}' WHERE SoTK ='{5}'", kh.TenTK, kh.NgaySinh, kh.Cccd, kh.Email, kh.Sdt, kh.SoTK);
             data.xuLi(sqlKH);
         }
 
