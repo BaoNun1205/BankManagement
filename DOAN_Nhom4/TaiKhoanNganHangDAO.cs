@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
 
         public void Them(TaiKhoanNganHang tknh)
         {
-            string sqlNH = string.Format("INSERT INTO TaiKhoanNganHang(TenNH, SoTK, TenDN, MatKhau, SoDu) VALUES ('{0}', '{1}', '{2}', '{3}', {4})", tknh.TenNH, tknh.SoTK, tknh.TenDN, tknh.MatKhau, tknh.SoDu);
+            string sqlNH = string.Format("INSERT INTO TaiKhoanNganHang(TenNH, SoTK, TenDN, MatKhau, SoDu, NgayDangKy) VALUES ('{0}', '{1}', '{2}', '{3}', {4}, '{5}')", tknh.TenNH, tknh.SoTK, tknh.TenDN, tknh.MatKhau, tknh.SoDu, tknh.NgayDangKy);
             data.xuLi(sqlNH);
         }
 
@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
         }
         public void Sua(TaiKhoanNganHang tknh)
         {
-            string sqlNH = string.Format("UPDATE TaiKhoanNganHang SET TenDN = '{0}', MatKhau = '{1}', SoDu = {2} WHERE SoTK = '{3}'", tknh.TenDN, tknh.MatKhau, tknh.SoDu, tknh.SoTK);
+            string sqlNH = string.Format("UPDATE TaiKhoanNganHang SET TenDN = '{0}', MatKhau = '{1}', SoDu = {2}, NgayDangKy = '{3}' WHERE SoTK = '{4}'", tknh.TenDN, tknh.MatKhau, tknh.SoDu,tknh.NgayDangKy, tknh.SoTK);
             data.xuLi(sqlNH);
         }
         public bool IsEmpty(TaiKhoanNganHang tknh)
