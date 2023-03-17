@@ -15,6 +15,8 @@ namespace DOAN_Nhom4
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         public GiaoDichChuyenTien gd;
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
+
         public FrmLichSuGiaoDich()
         {
             InitializeComponent();
@@ -34,6 +36,56 @@ namespace DOAN_Nhom4
             this.Hide();
             frmtrangchu.ShowDialog();
             this.Close();
+        }
+
+        private void btn_TienVao_Click(object sender, EventArgs e)
+        {
+            GvTongGui.Visible = false;
+            GvTongNhan.Visible = false;
+            GvLSGD.Visible = true;
+            GvLSGD.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
+        }
+
+        private void btn_TienRa_Click(object sender, EventArgs e)
+        {
+            GvTongGui.Visible = false;
+            GvTongNhan.Visible = false;
+            GvLSGD.Visible = true;
+            GvLSGD.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
+        }
+
+        public int LayGiaTri()
+        {
+            if (cmNgay.SelectedItem == null)
+                return 1000;
+            string selectedCountry = cmNgay.SelectedItem.ToString();
+            if (selectedCountry == "1 ngày gần đây nhất")
+                return 1;
+            if (selectedCountry == "3 ngày gần đây nhất")
+                return 3;
+            if (selectedCountry == "7 ngày gần đây nhất")
+                return 7;
+            if (selectedCountry == "30 ngày gần đây nhất")
+                return 30;
+            if (selectedCountry == "100 ngày gần đây nhất")
+                return 100;
+            return 1000;
+        }
+
+        private void btn_ToanBo_Click(object sender, EventArgs e)
+        {
+            GvLSGD.Visible = false;
+            GvTongGui.Visible = true;
+            GvTongNhan.Visible = true;
+            GvTongGui.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
+            GvTongNhan.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
+
+        }
+
+        private void FrmLichSuGiaoDich_Load(object sender, EventArgs e)
+        {
+            GvTongGui.Visible = false;
+            GvTongNhan.Visible = false;
         }
     }
 }

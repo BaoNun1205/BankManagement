@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTietkiem));
             this.pnlTietkiem = new System.Windows.Forms.Panel();
+            this.lblTKTK = new System.Windows.Forms.Label();
             this.btnXacnhan = new CustomButton.VBButton();
             this.txtTenTKTK = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTKTK = new System.Windows.Forms.Label();
             this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,17 @@
             this.pnlTietkiem.Name = "pnlTietkiem";
             this.pnlTietkiem.Size = new System.Drawing.Size(769, 981);
             this.pnlTietkiem.TabIndex = 0;
+            // 
+            // lblTKTK
+            // 
+            this.lblTKTK.AutoSize = true;
+            this.lblTKTK.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTKTK.Location = new System.Drawing.Point(631, 11);
+            this.lblTKTK.Name = "lblTKTK";
+            this.lblTKTK.Size = new System.Drawing.Size(123, 32);
+            this.lblTKTK.TabIndex = 60;
+            this.lblTKTK.Text = "Xem TKTK";
+            this.lblTKTK.Click += new System.EventHandler(this.lblTKTK_Click);
             // 
             // btnXacnhan
             // 
@@ -384,16 +395,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(650, 2);
             this.panel2.TabIndex = 5;
-            // 
-            // lblTKTK
-            // 
-            this.lblTKTK.AutoSize = true;
-            this.lblTKTK.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTKTK.Location = new System.Drawing.Point(631, 11);
-            this.lblTKTK.Name = "lblTKTK";
-            this.lblTKTK.Size = new System.Drawing.Size(123, 32);
-            this.lblTKTK.TabIndex = 60;
-            this.lblTKTK.Text = "Xem TKTK";
             // 
             // FrmTietkiem
             // 

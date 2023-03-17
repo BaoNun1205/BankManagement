@@ -15,10 +15,10 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
-        public TietKiem tkiem;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
+        private string tenTKTK;
         private int tienGoc;
         private int kiHan;
         private double laiSuat;
@@ -207,10 +207,21 @@ namespace DOAN_Nhom4
         {
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
+            tenTKTK = txtTenTKTK.Text;
+            TietKiem tietKiem = new TietKiem(tenTKTK, tienGoc, kiHan,laiSuat, tienLai, tongTien);
+            tkiemDAO.Them(tietKiem);
             MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             Hide();
             frmtietkiem.ShowDialog();
+            Close();
+        }
+
+        private void lblTKTK_Click(object sender, EventArgs e)
+        {
+            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh);
+            Hide();
+            frmxemtktk.ShowDialog();
             Close();
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -9,6 +10,7 @@ namespace DOAN_Nhom4
 {
     internal class TietkiemDAO
     {
+        DBConnection data = new DBConnection();
         public TietkiemDAO() { }
 
         public bool ktSotien(int tiengoc, BigInteger sodu)
@@ -25,5 +27,17 @@ namespace DOAN_Nhom4
         {
             return tiengoc + tienlai;
         }
+
+        public DataTable LayDanhSachTKTK()
+        {
+            string sqlStr = string.Format("SELECT *FROM TaiKhoanTietKiem");
+            return data.LayDanhSach(sqlStr);
+        }
+        public void Them(TietKiem tkiem)
+        {
+            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenTKTK, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", tkiem.TenTKTK, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
+            data.xuLi(sqlTkiem);
+        }
+
     }
 }

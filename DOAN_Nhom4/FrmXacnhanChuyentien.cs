@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         public FrmXacnhanChuyentien()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace DOAN_Nhom4
             {
                 TaiKhoanNganHang tknhNhan = new TaiKhoanNganHang(gd.SoTKNhan);
                 tknhDAO.GuiTien(tknh, gd, tknhNhan);
+                lsgdDAO.Them(gd);
                 tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh);
                 this.Hide();
