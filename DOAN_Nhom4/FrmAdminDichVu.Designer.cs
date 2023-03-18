@@ -88,6 +88,7 @@
             this.btn_ChuyenTien.Text = "Chuyển Tiền";
             this.btn_ChuyenTien.TextColor = System.Drawing.Color.White;
             this.btn_ChuyenTien.UseVisualStyleBackColor = false;
+            this.btn_ChuyenTien.Click += new System.EventHandler(this.btn_ChuyenTien_Click);
             // 
             // btn_RutTien
             // 
@@ -107,6 +108,7 @@
             this.btn_RutTien.Text = "Rút Tiền";
             this.btn_RutTien.TextColor = System.Drawing.Color.White;
             this.btn_RutTien.UseVisualStyleBackColor = false;
+            this.btn_RutTien.Click += new System.EventHandler(this.btn_RutTien_Click);
             // 
             // btn_NapTien
             // 
@@ -139,6 +141,7 @@
             this.Name = "FrmAdminDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Dịch Vụ";
+            this.Load += new System.EventHandler(this.FrmAdminDichVu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

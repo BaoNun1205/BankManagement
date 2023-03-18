@@ -118,5 +118,13 @@ namespace DOAN_Nhom4
             else
                 MessageBox.Show("Chua nhap du thong tin");
         }
+
+        private void btn_DichVu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAdminDichVu frmaddv = new FrmAdminDichVu();
+            frmaddv.ShowDialog();
+            this.Close();
+        }
     }
 }

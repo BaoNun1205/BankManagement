@@ -56,9 +56,7 @@
             this.btn_Them = new CustomButton.VBButton();
             this.btn_Xoa = new CustomButton.VBButton();
             this.btn_Sua = new CustomButton.VBButton();
-            this.btn_NapTien = new CustomButton.VBButton();
-            this.btn_ChuyenTien = new CustomButton.VBButton();
-            this.btn_RutTien = new CustomButton.VBButton();
+            this.btn_DichVu = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKH)).BeginInit();
             this.SuspendLayout();
@@ -379,62 +377,25 @@
             this.btn_Sua.UseVisualStyleBackColor = false;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
-            // btn_NapTien
+            // btn_DichVu
             // 
-            this.btn_NapTien.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_NapTien.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_NapTien.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_NapTien.BorderRadius = 20;
-            this.btn_NapTien.BorderSize = 0;
-            this.btn_NapTien.FlatAppearance.BorderSize = 0;
-            this.btn_NapTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NapTien.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_NapTien.ForeColor = System.Drawing.Color.White;
-            this.btn_NapTien.Location = new System.Drawing.Point(473, 878);
-            this.btn_NapTien.Name = "btn_NapTien";
-            this.btn_NapTien.Size = new System.Drawing.Size(201, 60);
-            this.btn_NapTien.TabIndex = 29;
-            this.btn_NapTien.Text = "Nạp Tiền";
-            this.btn_NapTien.TextColor = System.Drawing.Color.White;
-            this.btn_NapTien.UseVisualStyleBackColor = false;
-            // 
-            // btn_ChuyenTien
-            // 
-            this.btn_ChuyenTien.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_ChuyenTien.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_ChuyenTien.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ChuyenTien.BorderRadius = 20;
-            this.btn_ChuyenTien.BorderSize = 0;
-            this.btn_ChuyenTien.FlatAppearance.BorderSize = 0;
-            this.btn_ChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChuyenTien.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ChuyenTien.ForeColor = System.Drawing.Color.White;
-            this.btn_ChuyenTien.Location = new System.Drawing.Point(964, 878);
-            this.btn_ChuyenTien.Name = "btn_ChuyenTien";
-            this.btn_ChuyenTien.Size = new System.Drawing.Size(201, 60);
-            this.btn_ChuyenTien.TabIndex = 30;
-            this.btn_ChuyenTien.Text = "Chuyển Tiền";
-            this.btn_ChuyenTien.TextColor = System.Drawing.Color.White;
-            this.btn_ChuyenTien.UseVisualStyleBackColor = false;
-            // 
-            // btn_RutTien
-            // 
-            this.btn_RutTien.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_RutTien.BackgroundColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_RutTien.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_RutTien.BorderRadius = 20;
-            this.btn_RutTien.BorderSize = 0;
-            this.btn_RutTien.FlatAppearance.BorderSize = 0;
-            this.btn_RutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RutTien.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_RutTien.ForeColor = System.Drawing.Color.White;
-            this.btn_RutTien.Location = new System.Drawing.Point(1479, 882);
-            this.btn_RutTien.Name = "btn_RutTien";
-            this.btn_RutTien.Size = new System.Drawing.Size(201, 60);
-            this.btn_RutTien.TabIndex = 31;
-            this.btn_RutTien.Text = "Rút Tiền";
-            this.btn_RutTien.TextColor = System.Drawing.Color.White;
-            this.btn_RutTien.UseVisualStyleBackColor = false;
+            this.btn_DichVu.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_DichVu.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_DichVu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DichVu.BorderRadius = 20;
+            this.btn_DichVu.BorderSize = 0;
+            this.btn_DichVu.FlatAppearance.BorderSize = 0;
+            this.btn_DichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DichVu.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_DichVu.ForeColor = System.Drawing.Color.White;
+            this.btn_DichVu.Location = new System.Drawing.Point(964, 878);
+            this.btn_DichVu.Name = "btn_DichVu";
+            this.btn_DichVu.Size = new System.Drawing.Size(201, 60);
+            this.btn_DichVu.TabIndex = 30;
+            this.btn_DichVu.Text = "Dịch Vụ Khác";
+            this.btn_DichVu.TextColor = System.Drawing.Color.White;
+            this.btn_DichVu.UseVisualStyleBackColor = false;
+            this.btn_DichVu.Click += new System.EventHandler(this.btn_DichVu_Click);
             // 
             // FrmAdmin
             // 
@@ -442,9 +403,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1909, 982);
-            this.Controls.Add(this.btn_RutTien);
-            this.Controls.Add(this.btn_ChuyenTien);
-            this.Controls.Add(this.btn_NapTien);
+            this.Controls.Add(this.btn_DichVu);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);
@@ -513,8 +472,6 @@
         private CustomButton.VBButton btn_Them;
         private CustomButton.VBButton btn_Xoa;
         private CustomButton.VBButton btn_Sua;
-        private CustomButton.VBButton btn_NapTien;
-        private CustomButton.VBButton btn_ChuyenTien;
-        private CustomButton.VBButton btn_RutTien;
+        private CustomButton.VBButton btn_DichVu;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.btn_RutTien = new CustomButton.VBButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_SoDu = new System.Windows.Forms.TextBox();
+            this.txt_SoTien = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.btn_RutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RutTien.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_RutTien.ForeColor = System.Drawing.Color.White;
-            this.btn_RutTien.Location = new System.Drawing.Point(208, 432);
+            this.btn_RutTien.Location = new System.Drawing.Point(221, 430);
             this.btn_RutTien.Name = "btn_RutTien";
             this.btn_RutTien.Size = new System.Drawing.Size(199, 55);
             this.btn_RutTien.TabIndex = 49;
@@ -64,20 +64,20 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(187, 314);
+            this.label10.Location = new System.Drawing.Point(200, 312);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 23);
             this.label10.TabIndex = 48;
             this.label10.Text = "Số Tiền";
             // 
-            // txt_SoDu
+            // txt_SoTien
             // 
-            this.txt_SoDu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SoDu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoDu.Location = new System.Drawing.Point(187, 340);
-            this.txt_SoDu.Name = "txt_SoDu";
-            this.txt_SoDu.Size = new System.Drawing.Size(244, 30);
-            this.txt_SoDu.TabIndex = 47;
+            this.txt_SoTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_SoTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_SoTien.Location = new System.Drawing.Point(200, 338);
+            this.txt_SoTien.Name = "txt_SoTien";
+            this.txt_SoTien.Size = new System.Drawing.Size(244, 30);
+            this.txt_SoTien.TabIndex = 47;
             // 
             // label8
             // 
@@ -85,7 +85,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(187, 225);
+            this.label8.Location = new System.Drawing.Point(200, 223);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 23);
             this.label8.TabIndex = 46;
@@ -95,7 +95,7 @@
             // 
             this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SDT.Location = new System.Drawing.Point(187, 251);
+            this.txt_SDT.Location = new System.Drawing.Point(200, 249);
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Size = new System.Drawing.Size(244, 30);
             this.txt_SDT.TabIndex = 45;
@@ -106,7 +106,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(187, 145);
+            this.label7.Location = new System.Drawing.Point(200, 143);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 23);
             this.label7.TabIndex = 44;
@@ -116,7 +116,7 @@
             // 
             this.txt_CCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_CCCD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_CCCD.Location = new System.Drawing.Point(187, 171);
+            this.txt_CCCD.Location = new System.Drawing.Point(200, 169);
             this.txt_CCCD.Name = "txt_CCCD";
             this.txt_CCCD.Size = new System.Drawing.Size(244, 30);
             this.txt_CCCD.TabIndex = 43;
@@ -127,7 +127,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(187, 54);
+            this.label5.Location = new System.Drawing.Point(200, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 23);
             this.label5.TabIndex = 42;
@@ -137,7 +137,7 @@
             // 
             this.txt_SoTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SoTK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTK.Location = new System.Drawing.Point(187, 80);
+            this.txt_SoTK.Location = new System.Drawing.Point(200, 78);
             this.txt_SoTK.Name = "txt_SoTK";
             this.txt_SoTK.Size = new System.Drawing.Size(244, 30);
             this.txt_SoTK.TabIndex = 41;
@@ -149,7 +149,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.btn_RutTien);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txt_SoDu);
+            this.Controls.Add(this.txt_SoTien);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.label7);
@@ -157,7 +157,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_SoTK);
             this.Name = "RutTien";
-            this.Size = new System.Drawing.Size(619, 541);
+            this.Size = new System.Drawing.Size(611, 515);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +167,7 @@
 
         private CustomButton.VBButton btn_RutTien;
         private Label label10;
-        private TextBox txt_SoDu;
+        private TextBox txt_SoTien;
         private Label label8;
         private TextBox txt_SDT;
         private Label label7;
