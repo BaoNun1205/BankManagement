@@ -28,24 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminDichVu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pb_QuayLai = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ChuyenTien = new CustomButton.VBButton();
             this.btn_RutTien = new CustomButton.VBButton();
             this.btn_NapTien = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_QuayLai)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.pb_QuayLai);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(948, 128);
             this.panel1.TabIndex = 32;
+            // 
+            // pb_QuayLai
+            // 
+            this.pb_QuayLai.Image = ((System.Drawing.Image)(resources.GetObject("pb_QuayLai.Image")));
+            this.pb_QuayLai.Location = new System.Drawing.Point(-2, 3);
+            this.pb_QuayLai.Name = "pb_QuayLai";
+            this.pb_QuayLai.Size = new System.Drawing.Size(53, 48);
+            this.pb_QuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_QuayLai.TabIndex = 25;
+            this.pb_QuayLai.TabStop = false;
+            this.pb_QuayLai.Click += new System.EventHandler(this.pb_QuayLai_Click);
             // 
             // label1
             // 
@@ -144,6 +159,7 @@
             this.Load += new System.EventHandler(this.FrmAdminDichVu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_QuayLai)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -157,5 +173,6 @@
         private CustomButton.VBButton btn_NapTien;
         private CustomButton.VBButton btn_ChuyenTien;
         private CustomButton.VBButton btn_RutTien;
+        private PictureBox pb_QuayLai;
     }
 }

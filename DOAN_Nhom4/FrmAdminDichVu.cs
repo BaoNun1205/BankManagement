@@ -55,5 +55,13 @@ namespace DOAN_Nhom4
             ct.Show();
             ct.BringToFront();
         }
+
+        private void pb_QuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAdmin frmad = new FrmAdmin();    
+            frmad.ShowDialog();
+            this.Close();
+        }
     }
 }

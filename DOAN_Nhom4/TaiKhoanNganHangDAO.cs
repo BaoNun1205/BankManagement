@@ -58,5 +58,13 @@ namespace DOAN_Nhom4
             string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienGui, taiKhoanGui.SoTK);
             data.xuLi(sqlStrGui);
         }
+        public void NapTien(TaiKhoanNganHang tkNap, BigInteger SoTien)
+        {
+            TaiKhoanNganHang taiKhoanNhan = new TaiKhoanNganHang();
+            taiKhoanNhan = LayTaiKhoanNganHang("SoTK", tkNap.SoTK);
+            BigInteger tongSoDu = SoTien + taiKhoanNhan.SoDu;
+            string sqlStrNap = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", tongSoDu, taiKhoanNhan.SoTK);
+            data.xuLi(sqlStrNap);
+        }
     }
 }
