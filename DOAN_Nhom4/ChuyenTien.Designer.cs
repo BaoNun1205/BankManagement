@@ -61,6 +61,7 @@
             this.btn_ChuyenTien.Text = "Chuyển Tiền";
             this.btn_ChuyenTien.TextColor = System.Drawing.Color.White;
             this.btn_ChuyenTien.UseVisualStyleBackColor = false;
+            this.btn_ChuyenTien.Click += new System.EventHandler(this.btn_ChuyenTien_Click);
             // 
             // label10
             // 

@@ -58,6 +58,25 @@ namespace DOAN_Nhom4
             string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienGui, taiKhoanGui.SoTK);
             data.xuLi(sqlStrGui);
         }
-
+        public void NapTien(TaiKhoanNganHang tkNap, BigInteger SoTien)
+        {
+            BigInteger SoDu = SoTien + tkNap.SoDu;
+            string sqlStrNap = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", SoDu, tkNap.SoTK);
+            data.xuLi(sqlStrNap);        }
+        public void RutTien(TaiKhoanNganHang tkRut, BigInteger SoTien)
+        {
+            BigInteger SoDu = tkRut.SoDu - SoTien;
+            string sqlStrRut = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", SoDu, tkRut.SoTK);
+            data.xuLi(sqlStrRut);
+        }
+        public void ChuyenTien(TaiKhoanNganHang tkChuyen, BigInteger SoTien, TaiKhoanNganHang tkNhan)
+        {
+            BigInteger soTienNhan = SoTien + tkNhan.SoDu;
+            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienNhan, tkNhan.SoTK);
+            data.xuLi(sqlStrNhan);
+            BigInteger soTienChuyen = tkChuyen.SoDu - SoTien;
+            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienChuyen, tkChuyen.SoTK);
+            data.xuLi(sqlStrGui);
+        }
     }
 }

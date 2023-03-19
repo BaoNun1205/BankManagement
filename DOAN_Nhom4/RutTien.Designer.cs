@@ -57,6 +57,7 @@
             this.btn_RutTien.Text = "Rút Tiền";
             this.btn_RutTien.TextColor = System.Drawing.Color.White;
             this.btn_RutTien.UseVisualStyleBackColor = false;
+            this.btn_RutTien.Click += new System.EventHandler(this.btn_RutTien_Click);
             // 
             // label10
             // 
