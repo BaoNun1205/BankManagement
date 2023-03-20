@@ -44,6 +44,14 @@ namespace DOAN_Nhom4
             return tknh;
         }
 
+        public TaiKhoanNganHang LayTaiKhoanNganHang(string cotThuNhat, string giaTriThuNhat, string cotThuHai, string giaTriThuHai)
+        {
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang();
+            string sql = string.Format("SELECT * FROM TaiKhoanNganHang WHERE {0} = '{1}' AND {2} = '{3}'", cotThuNhat, giaTriThuNhat, cotThuHai, giaTriThuHai);
+            tknh = data.XuLi(sql);
+            return tknh;
+        }
+
         public void GuiTien(TaiKhoanNganHang tkGui, GiaoDichChuyenTien chuyenTien, TaiKhoanNganHang tkNhan)
         {
             TaiKhoanNganHang taiKhoanNhan = new TaiKhoanNganHang();

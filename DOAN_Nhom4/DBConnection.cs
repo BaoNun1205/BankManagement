@@ -90,6 +90,7 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
+                    tknh.TenNH = reader.GetString(0);
                     tknh.SoTK = reader.GetString(1);
                     tknh.TenDN = reader.GetString(2);
                     tknh.MatKhau = reader.GetString(3);
@@ -121,6 +122,7 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
+                    khachHang.TenNH = reader.GetString(0);
                     khachHang.SoTK = reader.GetString(1);
                     khachHang.TenTK = reader.GetString(2);
                     khachHang.NgaySinh = reader.GetDateTime(3);
