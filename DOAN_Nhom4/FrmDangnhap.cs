@@ -61,7 +61,14 @@ namespace DOAN_Nhom4
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
             TaiKhoanNganHang tknh = new TaiKhoanNganHang();
             NguoiDung nguoiDung = new NguoiDung();
-            if (dnDAO.XacNhanDangNhap(dn))
+            if (txtUserName.Text == "admin" && txtPass.Text == "1")
+            {
+                FrmAdmin frmad = new FrmAdmin();
+                this.Hide();
+                frmad.ShowDialog();
+                this.Close();
+            }
+            else if (dnDAO.XacNhanDangNhap(dn))
             {
                 if (ValidateChildren(ValidationConstraints.Enabled))
                 {
@@ -72,7 +79,7 @@ namespace DOAN_Nhom4
                     frmnguoidung.ShowDialog();
                     this.Close();
                 }
-            }
+            }            
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

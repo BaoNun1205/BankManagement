@@ -8,6 +8,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DOAN_Nhom4
 {
@@ -31,10 +32,10 @@ namespace DOAN_Nhom4
             tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKNhan.Text);
             NguoiDung ngdungNhan = new NguoiDung();
             ngdungNhan = ngdungDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text);
-            BigInteger SoTien = BigInteger.Parse(txt_SoTien.Text);
+            BigInteger SoTien = BigInteger.Parse(txt_SoTien.Text);        
             if (tkChuyen != null)
             {
-                if ((txt_TenNH.Text != "HHB" && tkNhan == null) || tkNhan != null)
+                if ((cb_TenNH.Text != "HHB" && tkNhan == null) || tkNhan != null)
                 {
                     if (txt_CCCD.Text == ngdungChuyen.Cccd)
                     {
@@ -45,7 +46,7 @@ namespace DOAN_Nhom4
                                 tknhDAO.ChuyenTien(tkChuyen, SoTien, tkNhan);
                                 txt_SoTKNhan.Text = "";
                                 txt_SoTKChuyen.Text = "";
-                                txt_TenNH.Text = "";
+                                cb_TenNH.SelectedIndex = 0;
                                 txt_SoTien.Text = "";
                                 txt_CCCD.Text = "";
                                 txt_SDT.Text = "";
@@ -65,6 +66,14 @@ namespace DOAN_Nhom4
             }
             else
                 MessageBox.Show("Số tài khoản chuyển không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void ChuyenTien_Load(object sender, EventArgs e)
+        {
+            string[] items = { "HHB", "ACB", "Agribank", "BIDV", "Đông Á Bank", "Eximbank",
+                "HDBank",  "MBBank", "OCB", "Sacombank", "SHB", "TPBank", "Vietcombank",
+                "Vietinbank", "VietCapital Bank"};
+            cb_TenNH.Items.AddRange(items);
         }
     }
 }

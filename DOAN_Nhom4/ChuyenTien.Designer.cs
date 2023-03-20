@@ -40,7 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_SoTKNhan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_TenNH = new System.Windows.Forms.TextBox();
+            this.cb_TenNH = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_ChuyenTien
@@ -180,22 +180,22 @@
             this.label2.TabIndex = 62;
             this.label2.Text = "Tên Ngân Hàng";
             // 
-            // txt_TenNH
+            // cb_TenNH
             // 
-            this.txt_TenNH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenNH.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TenNH.Location = new System.Drawing.Point(482, 127);
-            this.txt_TenNH.Name = "txt_TenNH";
-            this.txt_TenNH.Size = new System.Drawing.Size(244, 30);
-            this.txt_TenNH.TabIndex = 61;
+            this.cb_TenNH.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cb_TenNH.FormattingEnabled = true;
+            this.cb_TenNH.Location = new System.Drawing.Point(482, 126);
+            this.cb_TenNH.Name = "cb_TenNH";
+            this.cb_TenNH.Size = new System.Drawing.Size(244, 31);
+            this.cb_TenNH.TabIndex = 63;
             // 
             // ChuyenTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.cb_TenNH);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_TenNH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_SoTKNhan);
             this.Controls.Add(this.btn_ChuyenTien);
@@ -209,6 +209,7 @@
             this.Controls.Add(this.txt_SoTKChuyen);
             this.Name = "ChuyenTien";
             this.Size = new System.Drawing.Size(810, 477);
+            this.Load += new System.EventHandler(this.ChuyenTien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,6 +229,6 @@
         private Label label1;
         private TextBox txt_SoTKNhan;
         private Label label2;
-        private TextBox txt_TenNH;
+        private ComboBox cb_TenNH;
     }
 }
