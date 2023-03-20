@@ -18,25 +18,26 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
-        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
+        NguoiDungDAO ndDAO = new NguoiDungDAO();
         DBConnection db = new DBConnection();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
             tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
-            NguoiDung ngdungNap = new NguoiDung();
-            ngdungNap = ngdungDAO.LayKhachHang("SoTK", txt_SoTK.Text);
-            BigInteger SoTien = BigInteger.Parse(txt_SoTien.Text);
+            NguoiDung ndNap = new NguoiDung();
+            ndNap = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
+            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenTK, tkNap.SoTK, BigInteger.Parse(txt_SoTien.Text), "Nap tien vao taikhoan");
             if (tkNap != null)
             {
-                if (txt_CCCD.Text == ngdungNap.Cccd)
+                if (txt_CCCD.Text == ndNap.Cccd)
                 {
-                    if (txt_SDT.Text == ngdungNap.Sdt && db.IsPhone(txt_SDT.Text))
+                    if (txt_SDT.Text == ndNap.Sdt && db.IsPhone(txt_SDT.Text))
                     {
-                        if (SoTien > 0)
+                        if (gd.SoTien > 0)
                         {
-                            tknhDAO.NapTien(tkNap, SoTien);
+                            tknhDAO.NapTien(tkNap, gd);
+                            lsgdDAO.Them(gd);
                             txt_SoTK.Text = "";
                             txt_SoTien.Text = "";
                             txt_CCCD.Text = "";

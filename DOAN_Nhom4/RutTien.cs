@@ -18,25 +18,26 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
-        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
+        NguoiDungDAO ndDAO = new NguoiDungDAO();
         DBConnection db = new DBConnection();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkRut = new TaiKhoanNganHang();
             tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
-            NguoiDung ngdungRut = new NguoiDung();
-            ngdungRut = ngdungDAO.LayKhachHang("SoTK", txt_SoTK.Text);
-            BigInteger SoTien = BigInteger.Parse(txt_SoTien.Text);
+            NguoiDung ndRut = new NguoiDung();
+            ndRut = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
+            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", BigInteger.Parse(txt_SoTien.Text), "Rut tien ra khoi tai khoan");
             if (tkRut != null)
             {
-                if (txt_CCCD.Text == ngdungRut.Cccd)
+                if (txt_CCCD.Text == ndRut.Cccd)
                 {
-                    if (txt_SDT.Text == ngdungRut.Sdt && db.IsPhone(txt_SDT.Text))
+                    if (txt_SDT.Text == ndRut.Sdt && db.IsPhone(txt_SDT.Text))
                     {
-                        if (SoTien > 0 && SoTien <= tkRut.SoDu)
+                        if (gd.SoTien > 0 && gd.SoTien <= tkRut.SoDu)
                         {
-                            tknhDAO.RutTien(tkRut, SoTien);
+                            tknhDAO.RutTien(tkRut, gd);
+                            lsgdDAO.Them(gd);
                             txt_SoTK.Text = "";
                             txt_SoTien.Text = "";
                             txt_CCCD.Text = "";

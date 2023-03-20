@@ -12,9 +12,9 @@ namespace DOAN_Nhom4
         DBConnection data = new DBConnection();
         public LichSuGiaoDichDAO() { }
 
-        public void Them(GiaoDichChuyenTien gdct)
+        public void Them(GiaoDich gd)
         {
-            string sqlGD = string.Format("INSERT INTO hr.LichSuGiaoDich(TenTKGui, SoTKGui, TenTKNhan, SoTKNhan, ThoiGian, SoTien, NganHangGui, NganHangNhan, LoiNhan) OUTPUT INSERTED.MaGD VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}')", gdct.TenTKGui, gdct.SoTKGui, gdct.TenTKNhan, gdct.SoTKNhan, DateTime.Now, gdct.SoTien, "HHB", gdct.NganHang, gdct.LoiNhan);
+            string sqlGD = string.Format("INSERT INTO hr.LichSuGiaoDich(LoaiGD, NganHangGui, TenTKGui, SoTKGui, NganHangNhan, TenTKNhan, SoTKNhan, ThoiGian, SoTien, LoiNhan) OUTPUT INSERTED.MaGD VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', {8}, '{9}')",gd.LoaiGD, gd.NganHangGui, gd.TenTKGui, gd.SoTKGui, gd.NganHangNhan, gd.TenTKNhan, gd.SoTKNhan, DateTime.Now, gd.SoTien, gd.LoiNhan);
             data.xuLi(sqlGD);
         }
 

@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
             this.soDu = soDu;
             this.ngayDangKy = ngayDangKy;
         }
-        public TaiKhoanNganHang(String soTK)
+        public TaiKhoanNganHang(string soTK)
         {
             this.soTK = soTK;
         }

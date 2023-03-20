@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
-        public GiaoDichChuyenTien gd;
+        public GiaoDich gd;
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
         public FrmLichSuGiaoDich()
@@ -22,7 +22,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmLichSuGiaoDich(NguoiDung kh, GiaoDichChuyenTien gd, TaiKhoanNganHang tknh)
+        public FrmLichSuGiaoDich(NguoiDung kh, GiaoDich gd, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
@@ -79,7 +79,6 @@ namespace DOAN_Nhom4
             GvTongNhan.Visible = true;
             GvTongGui.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
             GvTongNhan.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
-
         }
 
         private void FrmLichSuGiaoDich_Load(object sender, EventArgs e)

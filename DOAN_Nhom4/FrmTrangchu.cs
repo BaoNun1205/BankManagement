@@ -4,7 +4,7 @@
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
-        public GiaoDichChuyenTien gd;
+        public GiaoDich gd;
         public FrmTrangchu()
         {
             InitializeComponent();
@@ -17,7 +17,7 @@
             this.tknh = tknh;
         }
 
-        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDichChuyenTien gd)
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
         {
             InitializeComponent();
             this.kh = kh;

@@ -93,8 +93,8 @@ namespace DOAN_Nhom4
         {
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
             TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
-            khDAO.Xoa(kh);
             tknhDAO.Xoa(tknh);
+            khDAO.Xoa(kh);
             HienThi();
             Refresh();
         }
@@ -125,6 +125,11 @@ namespace DOAN_Nhom4
             FrmAdminDichVu frmaddv = new FrmAdminDichVu();
             frmaddv.ShowDialog();
             this.Close();
+        }
+
+        private void btn_Refersh_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }

@@ -48,8 +48,8 @@ namespace DOAN_Nhom4
         {
             if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                GiaoDichChuyenTien gd = new GiaoDichChuyenTien(kh.TenTK, kh.SoTK, lblTenTK.Text, txtSTK.Text, int.Parse(txtSoTien.Text), cbTenNH.Text, txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(this.kh, tknh, gd);
+                GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTK.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd);
                 this.Hide();
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -88,7 +88,5 @@ namespace DOAN_Nhom4
                 lblTenTK.Text = "Khong ton tai";
             }
         }
-
-        
     }
 }

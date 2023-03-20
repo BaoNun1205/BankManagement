@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacnhanChuyentien : Form
     {
-        public GiaoDichChuyenTien gd;
+        public GiaoDich gd;
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
             this.txtMatkhau.PasswordChar = '*';
         }
 
-        public FrmXacnhanChuyentien(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDichChuyenTien gd)
+        public FrmXacnhanChuyentien(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
         {
             InitializeComponent();
             pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
             if (txtMatkhau.Text == tknh.MatKhau)
             {
                 TaiKhoanNganHang tknhNhan = new TaiKhoanNganHang(gd.SoTKNhan);
-                tknhDAO.GuiTien(tknh, gd, tknhNhan);
+                tknhDAO.ChuyenTien(tknh, gd, tknhNhan);
                 lsgdDAO.Them(gd);
                 tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh);

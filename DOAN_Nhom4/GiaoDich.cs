@@ -7,34 +7,40 @@ using System.Threading.Tasks;
 
 namespace DOAN_Nhom4
 {
-    public class GiaoDichChuyenTien
+    public class GiaoDich
     {
+        private string loaiGD;
+        private string nganHangGui;
         private string tenTKGui;
         private string soTKGui;
+        private string nganHangNhan;
         private string tenTKNhan;
         private string soTKNhan;
         private BigInteger soTien;
-        private string nganHang;
         private string loiNhan;
 
+        public string LoaiGD { get => loaiGD; set => loaiGD = value; }
+        public string NganHangGui { get => nganHangGui; set => nganHangGui = value; }
         public string TenTKGui { get => tenTKGui; set => tenTKGui = value; }
         public string SoTKGui { get => soTKGui; set => soTKGui = value; }
+        public string NganHangNhan { get => nganHangNhan; set => nganHangNhan = value; }
         public string TenTKNhan { get => tenTKNhan; set => tenTKNhan = value; }
         public string SoTKNhan { get => soTKNhan; set => soTKNhan = value; }
         public BigInteger SoTien { get => soTien; set => soTien = value; }
-        public string NganHang { get => nganHang; set => nganHang = value; }
         public string LoiNhan { get => loiNhan; set => loiNhan = value; }
 
-        public GiaoDichChuyenTien() { }
+        public GiaoDich() { }
 
-        public GiaoDichChuyenTien(string tenTKGui, string soTKGui, string tenTKNhan, string soTKNhan, BigInteger soTien, string nganHang, string loiNhan)
+        public GiaoDich(string loaiGD, string nganHangGui, string tenTKGui, string soTKGui, string nganHangNhan, string tenTKNhan, string soTKNhan, BigInteger soTien, string loiNhan)
         {
+            this.loaiGD = loaiGD;
+            this.nganHangGui = nganHangGui;
             this.tenTKGui = tenTKGui;
             this.soTKGui = soTKGui;
+            this.nganHangNhan = nganHangNhan;
             this.tenTKNhan = tenTKNhan;
             this.soTKNhan = soTKNhan;
             this.soTien = soTien;
-            this.nganHang = nganHang;
             this.loiNhan = loiNhan;
         }
     }

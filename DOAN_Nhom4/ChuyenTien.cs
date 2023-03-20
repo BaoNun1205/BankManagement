@@ -19,31 +19,32 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
-        NguoiDungDAO ngdungDAO = new NguoiDungDAO();
+        NguoiDungDAO ndDAO = new NguoiDungDAO();
         DBConnection db = new DBConnection();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
-            TaiKhoanNganHang tkChuyen = new TaiKhoanNganHang();
-            tkChuyen = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text);
-            NguoiDung ngdungChuyen = new NguoiDung();
-            ngdungChuyen = ngdungDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text);
+            TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
+            tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text);
+            NguoiDung ndGui = new NguoiDung();
+            ndGui = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text);
             TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
             tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKNhan.Text);
-            NguoiDung ngdungNhan = new NguoiDung();
-            ngdungNhan = ngdungDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text);
-            BigInteger SoTien = BigInteger.Parse(txt_SoTien.Text);        
-            if (tkChuyen != null)
+            NguoiDung ndNhan = new NguoiDung();
+            ndNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text);
+            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, BigInteger.Parse(txt_SoTien.Text), "Chuyen tien");      
+            if (tkGui != null)
             {
-                if ((cb_TenNH.Text != "HHB" && tkNhan == null) || tkNhan != null)
+                if (tkNhan != null)
                 {
-                    if (txt_CCCD.Text == ngdungChuyen.Cccd)
+                    if (txt_CCCD.Text == ndGui.Cccd)
                     {
-                        if (txt_SDT.Text == ngdungChuyen.Sdt && db.IsPhone(txt_SDT.Text))
+                        if (txt_SDT.Text == ndGui.Sdt && db.IsPhone(txt_SDT.Text))
                         {
-                            if (SoTien > 0 && SoTien <= tkChuyen.SoDu)
+                            if (gd.SoTien > 0 && gd.SoTien <= tkGui.SoDu)
                             {
-                                tknhDAO.ChuyenTien(tkChuyen, SoTien, tkNhan);
+                                tknhDAO.ChuyenTien(tkGui, gd, tkNhan);
+                                lsgdDAO.Them(gd);
                                 txt_SoTKNhan.Text = "";
                                 txt_SoTKChuyen.Text = "";
                                 cb_TenNH.SelectedIndex = 0;

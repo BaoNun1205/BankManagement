@@ -14,13 +14,13 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
-        public GiaoDichChuyenTien gd;
+        public GiaoDich gd;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
 
-        public FrmThongbaoChuyentien(NguoiDung kh, GiaoDichChuyenTien gd, TaiKhoanNganHang tknh)
+        public FrmThongbaoChuyentien(NguoiDung kh, GiaoDich gd, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
             lblTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
             lblNguoinhan.Text = gd.TenTKNhan.ToString();
             lblSTK.Text = gd.SoTKNhan.ToString();
-            lblNganhang.Text = gd.NganHang.ToString();
+            lblNganhang.Text = gd.NganHangNhan.ToString();
             lblNoidung.Text = gd.LoiNhan.ToString();
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
