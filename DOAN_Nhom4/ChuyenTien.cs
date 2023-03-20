@@ -34,7 +34,7 @@ namespace DOAN_Nhom4
             BigInteger SoTien = BigInteger.Parse(txt_SoTien.Text);
             if (tkChuyen != null)
             {
-                if ((txt_TenNH.Text != "HHB" && tkNhan == null) || (tkNhan != null && tkNhan.TenNH == "HHB"))
+                if ((txt_TenNH.Text != "HHB" && tkNhan == null) || tkNhan != null)
                 {
                     if (txt_CCCD.Text == ngdungChuyen.Cccd)
                     {
