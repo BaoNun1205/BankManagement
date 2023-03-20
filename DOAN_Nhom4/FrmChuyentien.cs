@@ -65,10 +65,20 @@ namespace DOAN_Nhom4
 
         private void txtSTK_TextChanged(object sender, EventArgs e)
         {
+            IsTonTai();
+        }
+
+        private void cbTenNH_TextChanged(object sender, EventArgs e)
+        {
+            IsTonTai();
+        }
+
+        public void IsTonTai()
+        {
             NguoiDung kh = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            kh = khDAO.LayKhachHang("SoTK", txtSTK.Text);
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text);
+            kh = khDAO.LayKhachHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
             if (tk != null)
             {
                 lblTenTK.Text = kh.TenTK.ToString();
@@ -78,5 +88,7 @@ namespace DOAN_Nhom4
                 lblTenTK.Text = "Khong ton tai";
             }
         }
+
+        
     }
 }

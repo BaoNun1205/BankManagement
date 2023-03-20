@@ -44,6 +44,14 @@ namespace DOAN_Nhom4
             return khachHang;
         }
 
+        public NguoiDung LayKhachHang(string cotThuNhat, string giaTriThuNhat, string cotThuHai, string giaTriThuHai)
+        {
+            NguoiDung khachHang = new NguoiDung();
+            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}'", cotThuNhat, giaTriThuNhat, cotThuHai, giaTriThuHai);
+            khachHang = data.Xuli(sql);
+            return khachHang;
+        }
+
         public bool IsEmpty(NguoiDung kh)
         {
             if (kh.SoTK != "" && kh.TenTK != "" && kh.Cccd != "" && kh.Sdt != "" && kh.Email != "")
