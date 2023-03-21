@@ -49,6 +49,7 @@
             this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRuttien = new CustomButton.VBButton();
             this.pnlTietkiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvTKTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
@@ -57,6 +58,7 @@
             // pnlTietkiem
             // 
             this.pnlTietkiem.BackColor = System.Drawing.Color.White;
+            this.pnlTietkiem.Controls.Add(this.btnRuttien);
             this.pnlTietkiem.Controls.Add(this.lblTienlai);
             this.pnlTietkiem.Controls.Add(this.lblTenTKTK);
             this.pnlTietkiem.Controls.Add(this.lblLaisuat);
@@ -79,7 +81,7 @@
             this.pnlTietkiem.Controls.Add(this.panel2);
             this.pnlTietkiem.Location = new System.Drawing.Point(-1, -1);
             this.pnlTietkiem.Name = "pnlTietkiem";
-            this.pnlTietkiem.Size = new System.Drawing.Size(1063, 794);
+            this.pnlTietkiem.Size = new System.Drawing.Size(1063, 895);
             this.pnlTietkiem.TabIndex = 1;
             this.pnlTietkiem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTietkiem_Paint);
             // 
@@ -282,11 +284,29 @@
             this.panel2.Size = new System.Drawing.Size(450, 2);
             this.panel2.TabIndex = 5;
             // 
+            // btnRuttien
+            // 
+            this.btnRuttien.BackColor = System.Drawing.Color.Teal;
+            this.btnRuttien.BackgroundColor = System.Drawing.Color.Teal;
+            this.btnRuttien.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRuttien.BorderRadius = 0;
+            this.btnRuttien.BorderSize = 0;
+            this.btnRuttien.FlatAppearance.BorderSize = 0;
+            this.btnRuttien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuttien.ForeColor = System.Drawing.Color.White;
+            this.btnRuttien.Location = new System.Drawing.Point(414, 773);
+            this.btnRuttien.Name = "btnRuttien";
+            this.btnRuttien.Size = new System.Drawing.Size(224, 80);
+            this.btnRuttien.TabIndex = 84;
+            this.btnRuttien.Text = "Rút tiền";
+            this.btnRuttien.TextColor = System.Drawing.Color.White;
+            this.btnRuttien.UseVisualStyleBackColor = false;
+            // 
             // FrmXemTKTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 791);
+            this.ClientSize = new System.Drawing.Size(1058, 894);
             this.Controls.Add(this.pnlTietkiem);
             this.Name = "FrmXemTKTK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -322,5 +342,6 @@
         private Label lblLaisuat;
         private Label lblTenTKTK;
         private Label lblTienlai;
+        private CustomButton.VBButton btnRuttien;
     }
 }
