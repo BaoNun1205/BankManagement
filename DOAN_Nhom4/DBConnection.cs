@@ -7,6 +7,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Numerics;
+using Excel = Microsoft.Office.Interop.Excel;
+using OfficeOpenXml;
+using System.IO;
 
 namespace DOAN_Nhom4
 {
@@ -98,7 +101,6 @@ namespace DOAN_Nhom4
                 }
                 else
                     return null;
-
             }
             catch
             {
@@ -151,5 +153,61 @@ namespace DOAN_Nhom4
             return regex.IsMatch(numberphone);
         }
 
+        public void XuatExcel(string sql)
+        {
+            try
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    // Thực thi câu truy vấn và tạo một SqlDataReader
+                    using (SqlDataReader dataReader = command.ExecuteReader())
+                    {
+                        // Tạo một đối tượng ExcelPackage mới
+                        ExcelPackage excelPackage = new ExcelPackage();
+
+                        // Tạo một worksheet mới và thiết lập tên cho nó
+                        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("MyWorksheet");
+
+                        // Thiết lập cột tiêu đề cho worksheet
+                        for (int i = 0; i < dataReader.FieldCount; i++)
+                        {
+                            worksheet.Cells[1, i + 1].Value = dataReader.GetName(i);
+                        }
+
+                        // Thiết lập dữ liệu cho worksheet
+                        int row = 2;
+                        while (dataReader.Read())
+                        {
+                            for (int i = 0; i < dataReader.FieldCount; i++)
+                            {
+                                worksheet.Cells[row, i + 1].Value = dataReader.GetValue(i).ToString();
+                            }
+                            row++;
+                        }
+
+                        // Thiết lập đường dẫn lưu tập tin Excel
+                        string fileName = @"D:\lAY\MyWorkbook.xlsx";
+
+                        // Lưu workbook vào đường dẫn đã thiết lập
+                        FileStream stream = new FileStream(fileName, FileMode.Create);
+                        excelPackage.SaveAs(stream);
+                        stream.Close();
+
+                        // Giải phóng tài nguyên
+                        excelPackage.Dispose();
+                    }
+                }
+                MessageBox.Show("Export successful!");
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
