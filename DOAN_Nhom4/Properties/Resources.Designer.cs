@@ -193,6 +193,26 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1215119911_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1215119911-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_511061090_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-511061090-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key {
             get {
                 object obj = ResourceManager.GetObject("key", resourceCulture);
@@ -378,6 +398,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap settings {
             get {
                 object obj = ResourceManager.GetObject("settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toa_nha_landmark_81 {
+            get {
+                object obj = ResourceManager.GetObject("toa-nha-landmark-81", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

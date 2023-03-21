@@ -58,11 +58,20 @@ namespace DOAN_Nhom4
                 txtSotien.Text = "Bạn muốn gửi bao nhiêu?";
             }    
         }
+
+        private void lblTKTK_Click(object sender, EventArgs e)
+        {
+            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh);
+            Hide();
+            frmxemtktk.ShowDialog();
+            Close();
+        }
+
         private void btn1thang_Click(object sender, EventArgs e)
         {
             kiHan = 1;
             lblLaisuat.Text = "6%";
-            laiSuat = 0.06;          
+            laiSuat = 0.06;
             if (txtSotien.Text != "Bạn muốn gửi bao nhiêu?")
             {
                 if (tkiemDAO.ktSotien(int.Parse(txtSotien.Text), tknh.SoDu) == true)
@@ -74,17 +83,17 @@ namespace DOAN_Nhom4
                     lblTongtien.Text = tongTien.ToString();
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            }           
-            btn1thang.ForeColor = Color.White;
-            btn1thang.BackColor = Color.DodgerBlue;
-            btn3thang.ForeColor = Color.DodgerBlue;
-            btn3thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.DodgerBlue;
-            btn6thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.DodgerBlue;
-            btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.DodgerBlue;
-            btn18thang.BackColor = Color.White;
+            }
+              btn1thang.ForeColor = Color.White;
+              btn1thang.BackColor = Color.Teal;
+              btn3thang.ForeColor = Color.Teal;
+              btn3thang.BackColor = Color.White;
+              btn6thang.ForeColor = Color.Teal;
+              btn6thang.BackColor = Color.White;
+              btn12thang.ForeColor = Color.Teal;
+              btn12thang.BackColor = Color.White;
+              btn18thang.ForeColor = Color.Teal;
+              btn18thang.BackColor = Color.White;
         }
 
         private void btn3thang_Click(object sender, EventArgs e)
@@ -104,15 +113,15 @@ namespace DOAN_Nhom4
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
-            btn1thang.ForeColor = Color.DodgerBlue;
-            btn1thang.BackColor = Color.White;
             btn3thang.ForeColor = Color.White;
-            btn3thang.BackColor = Color.DodgerBlue;
-            btn6thang.ForeColor = Color.DodgerBlue;
+            btn3thang.BackColor = Color.Teal;
+            btn1thang.ForeColor = Color.Teal;
+            btn1thang.BackColor = Color.White;
+            btn6thang.ForeColor = Color.Teal;
             btn6thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.DodgerBlue;
+            btn12thang.ForeColor = Color.Teal;
             btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.DodgerBlue;
+            btn18thang.ForeColor = Color.Teal;
             btn18thang.BackColor = Color.White;
         }
 
@@ -133,15 +142,15 @@ namespace DOAN_Nhom4
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
-            btn1thang.ForeColor = Color.DodgerBlue;
-            btn1thang.BackColor = Color.White;
-            btn3thang.ForeColor = Color.DodgerBlue;
-            btn3thang.BackColor = Color.White;
             btn6thang.ForeColor = Color.White;
-            btn6thang.BackColor = Color.DodgerBlue;
-            btn12thang.ForeColor = Color.DodgerBlue;
+            btn6thang.BackColor = Color.Teal;
+            btn3thang.ForeColor = Color.Teal;
+            btn3thang.BackColor = Color.White;
+            btn1thang.ForeColor = Color.Teal;
+            btn1thang.BackColor = Color.White;
+            btn12thang.ForeColor = Color.Teal;
             btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.DodgerBlue;
+            btn18thang.ForeColor = Color.Teal;
             btn18thang.BackColor = Color.White;
         }
 
@@ -162,15 +171,15 @@ namespace DOAN_Nhom4
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
-            btn1thang.ForeColor = Color.DodgerBlue;
-            btn1thang.BackColor = Color.White;
-            btn3thang.ForeColor = Color.DodgerBlue;
-            btn3thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.DodgerBlue;
-            btn6thang.BackColor = Color.White;
             btn12thang.ForeColor = Color.White;
-            btn12thang.BackColor = Color.DodgerBlue;
-            btn18thang.ForeColor = Color.DodgerBlue;
+            btn12thang.BackColor = Color.Teal;
+            btn3thang.ForeColor = Color.Teal;
+            btn3thang.BackColor = Color.White;
+            btn6thang.ForeColor = Color.Teal;
+            btn6thang.BackColor = Color.White;
+            btn1thang.ForeColor = Color.Teal;
+            btn1thang.BackColor = Color.White;
+            btn18thang.ForeColor = Color.Teal;
             btn18thang.BackColor = Color.White;
         }
 
@@ -191,16 +200,16 @@ namespace DOAN_Nhom4
                 }
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
-            btn1thang.ForeColor = Color.DodgerBlue;
-            btn1thang.BackColor = Color.White;
-            btn3thang.ForeColor = Color.DodgerBlue;
-            btn3thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.DodgerBlue;
-            btn6thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.DodgerBlue;
-            btn12thang.BackColor = Color.White;
             btn18thang.ForeColor = Color.White;
-            btn18thang.BackColor = Color.DodgerBlue;
+            btn18thang.BackColor = Color.Teal;
+            btn3thang.ForeColor = Color.Teal;
+            btn3thang.BackColor = Color.White;
+            btn6thang.ForeColor = Color.Teal;
+            btn6thang.BackColor = Color.White;
+            btn12thang.ForeColor = Color.Teal;
+            btn12thang.BackColor = Color.White;
+            btn1thang.ForeColor = Color.Teal;
+            btn1thang.BackColor = Color.White;
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)
@@ -208,20 +217,12 @@ namespace DOAN_Nhom4
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
             tenTKTK = txtTenTKTK.Text;
-            TietKiem tietKiem = new TietKiem(tenTKTK, tienGoc, kiHan,laiSuat, tienLai, tongTien);
+            TietKiem tietKiem = new TietKiem(tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
             tkiemDAO.Them(tietKiem);
             MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             Hide();
             frmtietkiem.ShowDialog();
-            Close();
-        }
-
-        private void lblTKTK_Click(object sender, EventArgs e)
-        {
-            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh);
-            Hide();
-            frmxemtktk.ShowDialog();
             Close();
         }
     }

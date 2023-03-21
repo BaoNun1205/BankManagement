@@ -145,6 +145,9 @@
   <data name="z4156395647100_11d34480489db0250526d93d55587605" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4156395647100_11d34480489db0250526d93d55587605.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="toa-nha-landmark-81" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toa-nha-landmark-81.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,6 +162,9 @@
   </data>
   <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Image2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +193,12 @@
   <data name="0106_hinh-nen-4k-may-tinh11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0106_hinh-nen-4k-may-tinh11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pexels-johannes-plenio-16327882" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-johannes-plenio-16327882.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-511061090-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-511061090-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -198,6 +210,9 @@
   </data>
   <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Image1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="z4148094277365_6ba49332b7154e507b2ae8ab24285f6a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4148094277365_6ba49332b7154e507b2ae8ab24285f6a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,13 +256,7 @@
   <data name="pngtree-double-direction-arrow-icon-png-image_971624" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-double-direction-arrow-icon-png-image_971624.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-johannes-plenio-16327882" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-johannes-plenio-16327882.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Image1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Image1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Image2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="istockphoto-1215119911-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1215119911-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
