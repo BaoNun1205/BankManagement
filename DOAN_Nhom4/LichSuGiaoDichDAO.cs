@@ -29,5 +29,11 @@ namespace DOAN_Nhom4
             string sqlStr = String.Format("SELECT MaGD, ThoiGian, NganHangNhan, SoTKNhan, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKGui = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
             return data.LayDanhSach(sqlStr);
         }
+
+        public void XuatExcel()
+        {
+            string sql = string.Format("SELECT * FROM hr.LichSuGiaoDich");
+            data.XuatExcel(sql);
+        }
     }
 }

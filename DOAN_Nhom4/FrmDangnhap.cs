@@ -61,31 +61,49 @@ namespace DOAN_Nhom4
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
             TaiKhoanNganHang tknh = new TaiKhoanNganHang();
             NguoiDung nguoiDung = new NguoiDung();
-            if (txtUserName.Text == "admin" && txtPass.Text == "1")
+            if (rdb_Admin.Checked == true)
             {
-                FrmAdmin frmad = new FrmAdmin();
-                this.Hide();
-                frmad.ShowDialog();
-                this.Close();
-            }
-            else if (dnDAO.XacNhanDangNhap(dn))
-            {
-                if (ValidateChildren(ValidationConstraints.Enabled))
+                if (txtUserName.Text == "admin" && txtPass.Text == "1")
                 {
-                    tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
-                    nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
-                    FrmTrangchu frmnguoidung = new FrmTrangchu(nguoiDung, tknh);
+                    FrmAdmin frmad = new FrmAdmin();
                     this.Hide();
-                    frmnguoidung.ShowDialog();
+                    frmad.ShowDialog();
                     this.Close();
                 }
-            }            
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtUserName.Clear();
+                    txtPass.Clear();
+                    txtUserName.Focus();
+                }
+            }
+            else if (rdb_NguoiDung.Checked == true)
+            {
+                if (dnDAO.XacNhanDangNhap(dn))
+                {
+                    if (ValidateChildren(ValidationConstraints.Enabled))
+                    {
+                        tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
+                        nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK);
+                        FrmTrangchu frmnguoidung = new FrmTrangchu(nguoiDung, tknh);
+                        this.Hide();
+                        frmnguoidung.ShowDialog();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtUserName.Clear();
+                    txtPass.Clear();
+                    txtUserName.Focus();
+                }
+            }
             else
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtUserName.Clear();
-                txtPass.Clear();
-                txtUserName.Focus();
+                MessageBox.Show("Chưa chọn loại đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
         }
         private void btnDangky_Click(object sender, EventArgs e)
