@@ -79,7 +79,6 @@
             this.pnlTietkiem.Name = "pnlTietkiem";
             this.pnlTietkiem.Size = new System.Drawing.Size(416, 462);
             this.pnlTietkiem.TabIndex = 0;
-            this.pnlTietkiem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTietkiem_Paint);
             // 
             // lblTKTK
             // 
@@ -104,7 +103,6 @@
             this.txtTenTKTK.Name = "txtTenTKTK";
             this.txtTenTKTK.Size = new System.Drawing.Size(261, 17);
             this.txtTenTKTK.TabIndex = 58;
-            this.txtTenTKTK.TextChanged += new System.EventHandler(this.txtTenTKTK_TextChanged);
             // 
             // panel1
             // 
@@ -116,7 +114,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 42);
             this.panel1.TabIndex = 57;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSotien
             // 
@@ -129,7 +126,6 @@
             this.txtSotien.Size = new System.Drawing.Size(305, 16);
             this.txtSotien.TabIndex = 9;
             this.txtSotien.Text = "Bạn muốn gửi bao nhiêu?";
-            this.txtSotien.TextChanged += new System.EventHandler(this.txtSotien_TextChanged);
             this.txtSotien.Enter += new System.EventHandler(this.txtSotien_Enter);
             this.txtSotien.Leave += new System.EventHandler(this.txtSotien_Leave);
             // 
@@ -144,7 +140,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // picBoxQuaylai
             // 
@@ -169,7 +164,6 @@
             this.label3.Size = new System.Drawing.Size(253, 15);
             this.label3.TabIndex = 12;
             this.label3.Text = "Số tiền phải là tối thiểu và chia hết cho 100.000";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -181,7 +175,6 @@
             this.label1.Size = new System.Drawing.Size(77, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đặt tên TKTK:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -192,7 +185,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(350, 1);
             this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel6
             // 
@@ -218,7 +210,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(414, 295);
             this.panel6.TabIndex = 61;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // btnXacnhan
             // 
@@ -251,7 +242,6 @@
             this.lblTongtien.Size = new System.Drawing.Size(36, 14);
             this.lblTongtien.TabIndex = 74;
             this.lblTongtien.Text = "      -";
-            this.lblTongtien.Click += new System.EventHandler(this.lblTongtien_Click);
             // 
             // label6
             // 
@@ -263,7 +253,6 @@
             this.label6.Size = new System.Drawing.Size(176, 15);
             this.label6.TabIndex = 73;
             this.label6.Text = "Số dư dự kiến vào ngày đến hạn";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel7
             // 
@@ -274,7 +263,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(350, 1);
             this.panel7.TabIndex = 67;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // lblTongtienlai
             // 
@@ -287,7 +275,6 @@
             this.lblTongtienlai.Size = new System.Drawing.Size(28, 14);
             this.lblTongtienlai.TabIndex = 72;
             this.lblTongtienlai.Text = "    -";
-            this.lblTongtienlai.Click += new System.EventHandler(this.lblTongtienlai_Click);
             // 
             // label10
             // 
@@ -299,7 +286,6 @@
             this.label10.Size = new System.Drawing.Size(114, 15);
             this.label10.TabIndex = 71;
             this.label10.Text = "Tổng tiền lãi dự kiến";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // lblLaisuat
             // 
@@ -312,7 +298,6 @@
             this.lblLaisuat.Size = new System.Drawing.Size(13, 20);
             this.lblLaisuat.TabIndex = 70;
             this.lblLaisuat.Text = " ";
-            this.lblLaisuat.Click += new System.EventHandler(this.lblLaisuat_Click);
             // 
             // panel8
             // 
@@ -322,7 +307,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 73);
             this.panel8.TabIndex = 69;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label12
             // 
@@ -334,7 +318,6 @@
             this.label12.Size = new System.Drawing.Size(74, 15);
             this.label12.TabIndex = 68;
             this.label12.Text = "Lãi suất năm";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel9
             // 
@@ -345,7 +328,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(350, 1);
             this.panel9.TabIndex = 66;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // btn18thang
             // 
@@ -458,7 +440,6 @@
             this.label13.Size = new System.Drawing.Size(190, 15);
             this.label13.TabIndex = 60;
             this.label13.Text = "Bạn chọn kỳ hạn bao nhiêu tháng?";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // FrmTietkiem
             // 
