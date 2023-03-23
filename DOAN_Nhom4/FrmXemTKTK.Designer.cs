@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTietkiem = new System.Windows.Forms.Panel();
+            this.btnRuttien = new CustomButton.VBButton();
             this.lblTienlai = new System.Windows.Forms.Label();
             this.lblTenTKTK = new System.Windows.Forms.Label();
             this.lblLaisuat = new System.Windows.Forms.Label();
@@ -49,7 +50,9 @@
             this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnRuttien = new CustomButton.VBButton();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pnlTietkiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvTKTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
@@ -58,6 +61,9 @@
             // pnlTietkiem
             // 
             this.pnlTietkiem.BackColor = System.Drawing.Color.White;
+            this.pnlTietkiem.Controls.Add(this.lblID);
+            this.pnlTietkiem.Controls.Add(this.lbl2);
+            this.pnlTietkiem.Controls.Add(this.panel6);
             this.pnlTietkiem.Controls.Add(this.btnRuttien);
             this.pnlTietkiem.Controls.Add(this.lblTienlai);
             this.pnlTietkiem.Controls.Add(this.lblTenTKTK);
@@ -84,6 +90,25 @@
             this.pnlTietkiem.Size = new System.Drawing.Size(1063, 895);
             this.pnlTietkiem.TabIndex = 1;
             this.pnlTietkiem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTietkiem_Paint);
+            // 
+            // btnRuttien
+            // 
+            this.btnRuttien.BackColor = System.Drawing.Color.Teal;
+            this.btnRuttien.BackgroundColor = System.Drawing.Color.Teal;
+            this.btnRuttien.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRuttien.BorderRadius = 0;
+            this.btnRuttien.BorderSize = 0;
+            this.btnRuttien.FlatAppearance.BorderSize = 0;
+            this.btnRuttien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRuttien.ForeColor = System.Drawing.Color.White;
+            this.btnRuttien.Location = new System.Drawing.Point(414, 773);
+            this.btnRuttien.Name = "btnRuttien";
+            this.btnRuttien.Size = new System.Drawing.Size(224, 80);
+            this.btnRuttien.TabIndex = 84;
+            this.btnRuttien.Text = "Rút tiền";
+            this.btnRuttien.TextColor = System.Drawing.Color.White;
+            this.btnRuttien.UseVisualStyleBackColor = false;
+            this.btnRuttien.Click += new System.EventHandler(this.btnRuttien_Click);
             // 
             // lblTienlai
             // 
@@ -247,6 +272,7 @@
             this.gvTKTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvTKTK.Location = new System.Drawing.Point(58, 416);
             this.gvTKTK.Name = "gvTKTK";
+            this.gvTKTK.RowHeadersVisible = false;
             this.gvTKTK.RowHeadersWidth = 82;
             this.gvTKTK.RowTemplate.Height = 41;
             this.gvTKTK.Size = new System.Drawing.Size(945, 317);
@@ -284,23 +310,34 @@
             this.panel2.Size = new System.Drawing.Size(450, 2);
             this.panel2.TabIndex = 5;
             // 
-            // btnRuttien
+            // lblID
             // 
-            this.btnRuttien.BackColor = System.Drawing.Color.Teal;
-            this.btnRuttien.BackgroundColor = System.Drawing.Color.Teal;
-            this.btnRuttien.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRuttien.BorderRadius = 0;
-            this.btnRuttien.BorderSize = 0;
-            this.btnRuttien.FlatAppearance.BorderSize = 0;
-            this.btnRuttien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRuttien.ForeColor = System.Drawing.Color.White;
-            this.btnRuttien.Location = new System.Drawing.Point(414, 773);
-            this.btnRuttien.Name = "btnRuttien";
-            this.btnRuttien.Size = new System.Drawing.Size(224, 80);
-            this.btnRuttien.TabIndex = 84;
-            this.btnRuttien.Text = "Rút tiền";
-            this.btnRuttien.TextColor = System.Drawing.Color.White;
-            this.btnRuttien.UseVisualStyleBackColor = false;
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Tahoma", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblID.Location = new System.Drawing.Point(182, 20);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(23, 33);
+            this.lblID.TabIndex = 87;
+            this.lblID.Text = " ";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(58, 21);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(42, 32);
+            this.lbl2.TabIndex = 86;
+            this.lbl2.Text = "ID:";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel6.Location = new System.Drawing.Point(58, 63);
+            this.panel6.Margin = new System.Windows.Forms.Padding(5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(450, 2);
+            this.panel6.TabIndex = 85;
             // 
             // FrmXemTKTK
             // 
@@ -343,5 +380,8 @@
         private Label lblTenTKTK;
         private Label lblTienlai;
         private CustomButton.VBButton btnRuttien;
+        private Label lblID;
+        private Label lbl2;
+        private Panel panel6;
     }
 }

@@ -22,8 +22,10 @@ namespace DOAN_Nhom4
         {
             NapTien nt = new NapTien();
             this.Controls.Add(nt);
-            nt.Location = new Point(185, 127);
-            nt.Size = new Size(763, 542);
+            //nt.Location = new Point(185, 127);
+            //nt.Size = new Size(763, 542);
+            nt.Location = new Point(325, 250);
+            nt.Size = new Size(763, 800);
             nt.Show();
             nt.BringToFront();
         }
@@ -31,17 +33,21 @@ namespace DOAN_Nhom4
         {
             NapTien nt = new NapTien();
             this.Controls.Add(nt);
-            nt.Location = new Point(185, 127);
-            nt.Size = new Size(763, 542);
+            //nt.Location = new Point(185, 127);
+            //nt.Size = new Size(763, 542);
+            nt.Location = new Point(325, 250);
+            nt.Size = new Size(763, 800);
             nt.Show();
             nt.BringToFront();
         }
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             RutTien rt = new RutTien();
-            this.Controls.Add(rt);      
-            rt.Location = new Point(185, 127);
-            rt.Size = new Size(763, 542);
+            this.Controls.Add(rt);
+            // rt.Location = new Point(185, 127);
+            //rt.Size = new Size(763, 542);
+            rt.Location = new Point(325, 250);
+            rt.Size = new Size(763, 800);
             rt.Show();
             rt.BringToFront();
         }
@@ -50,8 +56,10 @@ namespace DOAN_Nhom4
         {
             ChuyenTien ct = new ChuyenTien();
             this.Controls.Add(ct);
-            ct.Location = new Point(185, 127);
-            ct.Size = new Size(763, 542);
+            //ct.Location = new Point(185, 127);
+            //ct.Size = new Size(763, 542);
+            ct.Location = new Point(325, 250);
+            ct.Size = new Size(1200, 800);
             ct.Show();
             ct.BringToFront();
         }
