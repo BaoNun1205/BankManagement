@@ -39,7 +39,7 @@ namespace DOAN_Nhom4
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             RutTien rt = new RutTien();
-            this.Controls.Add(rt);      
+            this.Controls.Add(rt);
             rt.Location = new Point(185, 127);
             rt.Size = new Size(763, 542);
             rt.Show();

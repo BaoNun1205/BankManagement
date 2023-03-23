@@ -13,6 +13,8 @@ namespace DOAN_Nhom4
 {
     public partial class FrmTietkiem : Form
     {
+        private Random rand;
+        int ID;
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -34,6 +36,8 @@ namespace DOAN_Nhom4
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
+            rand = new Random();
+            ID = rand.Next(100000, 999999);
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
@@ -58,15 +62,6 @@ namespace DOAN_Nhom4
                 txtSotien.Text = "Bạn muốn gửi bao nhiêu?";
             }    
         }
-
-        private void lblTKTK_Click(object sender, EventArgs e)
-        {
-            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh);
-            Hide();
-            frmxemtktk.ShowDialog();
-            Close();
-        }
-
         private void btn1thang_Click(object sender, EventArgs e)
         {
             kiHan = 1;
@@ -217,8 +212,8 @@ namespace DOAN_Nhom4
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
             tenTKTK = txtTenTKTK.Text;
-            TietKiem tietKiem = new TietKiem(tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
-            tkiemDAO.Them(tietKiem);
+            TietKiem tkiem = new TietKiem(ID, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
+            tkiemDAO.Them(tkiem);
             MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             Hide();
@@ -226,99 +221,12 @@ namespace DOAN_Nhom4
             Close();
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
+        private void lblTKTK_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pnlTietkiem_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtTenTKTK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtSotien_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblTongtien_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblTongtienlai_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLaisuat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
+            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh);
+            Hide();
+            frmxemtktk.ShowDialog();
+            Close();
         }
     }
 }
