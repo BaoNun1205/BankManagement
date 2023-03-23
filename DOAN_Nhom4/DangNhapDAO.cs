@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
         {
             TaiKhoanNganHang tknh = new TaiKhoanNganHang();
             tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN);
-            if (tknh.TenDN == dn.TenDN && tknh.MatKhau == dn.MatKhau)
+            if (tknh != null && tknh.TenDN == dn.TenDN && tknh.MatKhau == dn.MatKhau)
             {
                 return true;
             }
