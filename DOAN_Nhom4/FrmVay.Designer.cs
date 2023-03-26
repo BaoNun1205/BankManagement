@@ -32,6 +32,7 @@ namespace DOAN_Nhom4
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVay));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_DangKy = new CustomButton.VBButton();
             this.llbl_DieuKhoan = new System.Windows.Forms.LinkLabel();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.txt_NgayVay = new System.Windows.Forms.DateTimePicker();
@@ -84,7 +85,6 @@ namespace DOAN_Nhom4
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_DangKy = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +149,24 @@ namespace DOAN_Nhom4
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1482, 809);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_DangKy
+            // 
+            this.btn_DangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_DangKy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_DangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DangKy.BorderRadius = 20;
+            this.btn_DangKy.BorderSize = 0;
+            this.btn_DangKy.FlatAppearance.BorderSize = 0;
+            this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangKy.ForeColor = System.Drawing.Color.White;
+            this.btn_DangKy.Location = new System.Drawing.Point(981, 715);
+            this.btn_DangKy.Name = "btn_DangKy";
+            this.btn_DangKy.Size = new System.Drawing.Size(294, 63);
+            this.btn_DangKy.TabIndex = 59;
+            this.btn_DangKy.Text = "Đăng Ký";
+            this.btn_DangKy.TextColor = System.Drawing.Color.White;
+            this.btn_DangKy.UseVisualStyleBackColor = false;
             // 
             // llbl_DieuKhoan
             // 
@@ -714,24 +732,6 @@ namespace DOAN_Nhom4
             this.label2.Size = new System.Drawing.Size(319, 45);
             this.label2.TabIndex = 3;
             this.label2.Text = "ĐĂNG KÝ VAY NỢ";
-            // 
-            // btn_DangKy
-            // 
-            this.btn_DangKy.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_DangKy.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_DangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_DangKy.BorderRadius = 20;
-            this.btn_DangKy.BorderSize = 0;
-            this.btn_DangKy.FlatAppearance.BorderSize = 0;
-            this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangKy.ForeColor = System.Drawing.Color.White;
-            this.btn_DangKy.Location = new System.Drawing.Point(1042, 733);
-            this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(188, 50);
-            this.btn_DangKy.TabIndex = 59;
-            this.btn_DangKy.Text = "vbButton1";
-            this.btn_DangKy.TextColor = System.Drawing.Color.White;
-            this.btn_DangKy.UseVisualStyleBackColor = false;
             // 
             // FrmVay
             // 
