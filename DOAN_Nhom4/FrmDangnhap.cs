@@ -103,7 +103,6 @@ namespace DOAN_Nhom4
             else
             {
                 MessageBox.Show("Chưa chọn loại đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
             }
         }
         private void btnDangky_Click(object sender, EventArgs e)
