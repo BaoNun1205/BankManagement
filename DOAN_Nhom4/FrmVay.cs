@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Numerics;
 namespace DOAN_Nhom4
 {
     public partial class FrmVay : Form
     {
+        DBConnection db = new DBConnection();
         public FrmVay()
         {
             InitializeComponent();
             this.Size = new Size(1501, 858);
+
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
@@ -62,15 +65,48 @@ namespace DOAN_Nhom4
             if (cb_DiaChiLienLac.Checked == true)
             {
                 s = cb_DiaChiLienLac.Text;
-                txt_DiaChiLienLac.ReadOnly = true;
             }
             else
                 s = txt_DiaChiLienLac.Text;
-            ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
-            XacNhanThongTinNguoiDungVay xacnhan = new XacNhanThongTinNguoiDungVay(ttNgDung);
-            Hide();
-            xacnhan.ShowDialog();
-            Close();
+            if (IsNull(sender, e) == true)
+            {
+                if (cb_DongY.Checked == true)
+                {
+                    ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
+                    XacNhanThongTinNguoiDungVay xacnhan = new XacNhanThongTinNguoiDungVay(ttNgDung);
+                    Hide();
+                    xacnhan.ShowDialog();
+                    Close();
+                }
+                else
+                    MessageBox.Show("Bạn chưa đồng ý với điều khoản điều kiện của chúng tôi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+                MessageBox.Show("Phải nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        public bool IsNull(object sender, EventArgs e)
+        {
+            if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && BigInteger.Parse(txt_SoTienVay.Text) > 0 && BigInteger.Parse(txt_SoTienVay.Text) % 100000 == 0 && txt_ThoiGianVay.Text != null && int.Parse(txt_ThoiGianVay.Text) > 0 && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void cb_DiaChiLienLac_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (cb_DiaChiLienLac.Checked == true)
+            {
+                txt_DiaChiLienLac.ReadOnly = true;
+            }
+            else if (cb_DiaChiLienLac.Checked == false)
+            {
+                txt_DiaChiLienLac.ReadOnly = false;
+                if(txt_DiaChiLienLac.Text != null)
+                {
+                    cb_DiaChiLienLac.Enabled = false;
+                }
+            }
         }
     }
 }

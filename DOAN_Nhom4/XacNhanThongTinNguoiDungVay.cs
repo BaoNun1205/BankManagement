@@ -63,13 +63,20 @@ namespace DOAN_Nhom4
                 lai = 7.3;
             txt_LaiSuat.Text = lai.ToString();
             double soTienVay = double.Parse(txt_SoTienVay.Text);
-            double tmp =  (soTienVay * lai) / 100;
-            BigInteger tienhangthang = new BigInteger(tmp);
-            txt_SoTienHangThang.Text = tienhangthang.ToString();
-            BigInteger tongsotien = tienhangthang * int.Parse(txt_ThoiGianVay.Text);
+            double tmp =  (soTienVay + (soTienVay * lai / 100));
+            BigInteger tongsotien = new BigInteger(tmp);
             txt_TongSoTien.Text = tongsotien.ToString();
+            BigInteger tienhangthang = tongsotien / int.Parse(txt_ThoiGianVay.Text);
+            txt_SoTienHangThang.Text = tienhangthang.ToString();
+            if(ttNgDung.ChiNhanhVay == "Cùng chi nhánh với địa chỉ liên lạc")
+            {
+
+            }
+            else 
+
             txt_ChiNhanhVay.Text = ttNgDung.ChiNhanhVay;
             txt_NgayVay.Text = ttNgDung.NgayVay.ToString();
+            txt_TinhTien.Text = String.Format("{0} + ({1} x {2}) = {3}", soTienVay.ToString(), soTienVay.ToString(), (lai/100).ToString(), tongsotien.ToString());
         }
     }
 }

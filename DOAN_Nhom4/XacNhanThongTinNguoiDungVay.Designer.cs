@@ -61,7 +61,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_SoTienHangThang = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_DangKy = new CustomButton.VBButton();
+            this.btn_XacNhanVay = new CustomButton.VBButton();
             this.txt_TinhTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(400, 40);
+            this.label2.Location = new System.Drawing.Point(432, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(414, 45);
             this.label2.TabIndex = 4;
@@ -252,6 +252,7 @@
             this.txt_DanhXung.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_DanhXung.Location = new System.Drawing.Point(287, 212);
             this.txt_DanhXung.Name = "txt_DanhXung";
+            this.txt_DanhXung.ReadOnly = true;
             this.txt_DanhXung.Size = new System.Drawing.Size(298, 21);
             this.txt_DanhXung.TabIndex = 56;
             this.txt_DanhXung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -263,6 +264,7 @@
             this.txt_HoTen.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_HoTen.Location = new System.Drawing.Point(287, 285);
             this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.ReadOnly = true;
             this.txt_HoTen.Size = new System.Drawing.Size(298, 21);
             this.txt_HoTen.TabIndex = 57;
             this.txt_HoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -274,6 +276,7 @@
             this.txt_CCCD.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_CCCD.Location = new System.Drawing.Point(287, 357);
             this.txt_CCCD.Name = "txt_CCCD";
+            this.txt_CCCD.ReadOnly = true;
             this.txt_CCCD.Size = new System.Drawing.Size(298, 21);
             this.txt_CCCD.TabIndex = 58;
             this.txt_CCCD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -285,6 +288,7 @@
             this.txt_DiaChi.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_DiaChi.Location = new System.Drawing.Point(287, 431);
             this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.ReadOnly = true;
             this.txt_DiaChi.Size = new System.Drawing.Size(298, 21);
             this.txt_DiaChi.TabIndex = 59;
             this.txt_DiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -296,6 +300,7 @@
             this.txt_SDT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_SDT.Location = new System.Drawing.Point(287, 512);
             this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.ReadOnly = true;
             this.txt_SDT.Size = new System.Drawing.Size(298, 21);
             this.txt_SDT.TabIndex = 60;
             this.txt_SDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -307,6 +312,7 @@
             this.txt_Email.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_Email.Location = new System.Drawing.Point(287, 600);
             this.txt_Email.Name = "txt_Email";
+            this.txt_Email.ReadOnly = true;
             this.txt_Email.Size = new System.Drawing.Size(298, 21);
             this.txt_Email.TabIndex = 61;
             this.txt_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -318,6 +324,7 @@
             this.txt_NgheNghiep.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_NgheNghiep.Location = new System.Drawing.Point(287, 681);
             this.txt_NgheNghiep.Name = "txt_NgheNghiep";
+            this.txt_NgheNghiep.ReadOnly = true;
             this.txt_NgheNghiep.Size = new System.Drawing.Size(298, 21);
             this.txt_NgheNghiep.TabIndex = 62;
             this.txt_NgheNghiep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -329,6 +336,7 @@
             this.txt_ThuNhap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_ThuNhap.Location = new System.Drawing.Point(870, 212);
             this.txt_ThuNhap.Name = "txt_ThuNhap";
+            this.txt_ThuNhap.ReadOnly = true;
             this.txt_ThuNhap.Size = new System.Drawing.Size(298, 21);
             this.txt_ThuNhap.TabIndex = 63;
             this.txt_ThuNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -340,6 +348,7 @@
             this.txt_SPVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_SPVay.Location = new System.Drawing.Point(870, 285);
             this.txt_SPVay.Name = "txt_SPVay";
+            this.txt_SPVay.ReadOnly = true;
             this.txt_SPVay.Size = new System.Drawing.Size(298, 21);
             this.txt_SPVay.TabIndex = 64;
             this.txt_SPVay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -351,6 +360,7 @@
             this.txt_SoTienVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_SoTienVay.Location = new System.Drawing.Point(870, 358);
             this.txt_SoTienVay.Name = "txt_SoTienVay";
+            this.txt_SoTienVay.ReadOnly = true;
             this.txt_SoTienVay.Size = new System.Drawing.Size(298, 21);
             this.txt_SoTienVay.TabIndex = 65;
             this.txt_SoTienVay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -362,6 +372,7 @@
             this.txt_ThoiGianVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_ThoiGianVay.Location = new System.Drawing.Point(870, 431);
             this.txt_ThoiGianVay.Name = "txt_ThoiGianVay";
+            this.txt_ThoiGianVay.ReadOnly = true;
             this.txt_ThoiGianVay.Size = new System.Drawing.Size(298, 21);
             this.txt_ThoiGianVay.TabIndex = 66;
             this.txt_ThoiGianVay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -374,6 +385,7 @@
             this.txt_ChiNhanhVay.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txt_ChiNhanhVay.Location = new System.Drawing.Point(242, 102);
             this.txt_ChiNhanhVay.Name = "txt_ChiNhanhVay";
+            this.txt_ChiNhanhVay.ReadOnly = true;
             this.txt_ChiNhanhVay.Size = new System.Drawing.Size(298, 21);
             this.txt_ChiNhanhVay.TabIndex = 67;
             // 
@@ -385,6 +397,7 @@
             this.txt_NgayVay.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txt_NgayVay.Location = new System.Drawing.Point(242, 144);
             this.txt_NgayVay.Name = "txt_NgayVay";
+            this.txt_NgayVay.ReadOnly = true;
             this.txt_NgayVay.Size = new System.Drawing.Size(298, 21);
             this.txt_NgayVay.TabIndex = 68;
             // 
@@ -395,6 +408,7 @@
             this.txt_TongSoTien.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_TongSoTien.Location = new System.Drawing.Point(870, 600);
             this.txt_TongSoTien.Name = "txt_TongSoTien";
+            this.txt_TongSoTien.ReadOnly = true;
             this.txt_TongSoTien.Size = new System.Drawing.Size(298, 21);
             this.txt_TongSoTien.TabIndex = 70;
             this.txt_TongSoTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -419,6 +433,7 @@
             this.txt_LaiSuat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_LaiSuat.Location = new System.Drawing.Point(870, 512);
             this.txt_LaiSuat.Name = "txt_LaiSuat";
+            this.txt_LaiSuat.ReadOnly = true;
             this.txt_LaiSuat.Size = new System.Drawing.Size(298, 21);
             this.txt_LaiSuat.TabIndex = 72;
             this.txt_LaiSuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -443,6 +458,7 @@
             this.txt_SoTienHangThang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_SoTienHangThang.Location = new System.Drawing.Point(870, 681);
             this.txt_SoTienHangThang.Name = "txt_SoTienHangThang";
+            this.txt_SoTienHangThang.ReadOnly = true;
             this.txt_SoTienHangThang.Size = new System.Drawing.Size(298, 21);
             this.txt_SoTienHangThang.TabIndex = 74;
             this.txt_SoTienHangThang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -460,24 +476,24 @@
             this.label4.TabIndex = 73;
             this.label4.Text = "Số tiền phải trả hàng tháng";
             // 
-            // btn_DangKy
+            // btn_XacNhanVay
             // 
-            this.btn_DangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_DangKy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_DangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_DangKy.BorderRadius = 20;
-            this.btn_DangKy.BorderSize = 0;
-            this.btn_DangKy.FlatAppearance.BorderSize = 0;
-            this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangKy.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangKy.ForeColor = System.Drawing.Color.White;
-            this.btn_DangKy.Location = new System.Drawing.Point(456, 774);
-            this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(294, 63);
-            this.btn_DangKy.TabIndex = 75;
-            this.btn_DangKy.Text = "XÁC NHẬN VAY";
-            this.btn_DangKy.TextColor = System.Drawing.Color.White;
-            this.btn_DangKy.UseVisualStyleBackColor = false;
+            this.btn_XacNhanVay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_XacNhanVay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_XacNhanVay.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_XacNhanVay.BorderRadius = 20;
+            this.btn_XacNhanVay.BorderSize = 0;
+            this.btn_XacNhanVay.FlatAppearance.BorderSize = 0;
+            this.btn_XacNhanVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XacNhanVay.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_XacNhanVay.ForeColor = System.Drawing.Color.White;
+            this.btn_XacNhanVay.Location = new System.Drawing.Point(480, 774);
+            this.btn_XacNhanVay.Name = "btn_XacNhanVay";
+            this.btn_XacNhanVay.Size = new System.Drawing.Size(294, 63);
+            this.btn_XacNhanVay.TabIndex = 75;
+            this.btn_XacNhanVay.Text = "XÁC NHẬN VAY";
+            this.btn_XacNhanVay.TextColor = System.Drawing.Color.White;
+            this.btn_XacNhanVay.UseVisualStyleBackColor = false;
             // 
             // txt_TinhTien
             // 
@@ -486,6 +502,7 @@
             this.txt_TinhTien.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_TinhTien.Location = new System.Drawing.Point(870, 627);
             this.txt_TinhTien.Name = "txt_TinhTien";
+            this.txt_TinhTien.ReadOnly = true;
             this.txt_TinhTien.Size = new System.Drawing.Size(298, 15);
             this.txt_TinhTien.TabIndex = 77;
             this.txt_TinhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -511,7 +528,7 @@
             this.ClientSize = new System.Drawing.Size(1203, 868);
             this.Controls.Add(this.txt_TinhTien);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btn_DangKy);
+            this.Controls.Add(this.btn_XacNhanVay);
             this.Controls.Add(this.txt_SoTienHangThang);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_LaiSuat);
@@ -546,6 +563,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Name = "XacNhanThongTinNguoiDungVay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XacNhanThongTinNguoiDungVay";
             this.Load += new System.EventHandler(this.XacNhanThongTinNguoiDungVay_Load);
             this.ResumeLayout(false);
@@ -588,7 +606,7 @@
         private Label label3;
         private TextBox txt_SoTienHangThang;
         private Label label4;
-        private CustomButton.VBButton btn_DangKy;
+        private CustomButton.VBButton btn_XacNhanVay;
         private TextBox txt_TinhTien;
         private Label label5;
     }

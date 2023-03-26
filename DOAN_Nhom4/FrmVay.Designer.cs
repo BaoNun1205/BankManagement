@@ -213,6 +213,8 @@ namespace DOAN_Nhom4
             this.txt_DiaChiLienLac.Size = new System.Drawing.Size(381, 30);
             this.txt_DiaChiLienLac.TabIndex = 55;
             this.txt_DiaChiLienLac.Text = "Địa chỉ khác";
+            this.txt_DiaChiLienLac.Click += new System.EventHandler(this.txt_DiaChiLienLac_Click);
+            this.txt_DiaChiLienLac.Leave += new System.EventHandler(this.txt_DiaChiLienLac_Leave);
             // 
             // cb_DiaChiLienLac
             // 
@@ -224,6 +226,7 @@ namespace DOAN_Nhom4
             this.cb_DiaChiLienLac.TabIndex = 54;
             this.cb_DiaChiLienLac.Text = "Cùng chi nhánh với địa chỉ liên lạc";
             this.cb_DiaChiLienLac.UseVisualStyleBackColor = true;
+            this.cb_DiaChiLienLac.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cb_DiaChiLienLac_MouseClick);
             // 
             // label32
             // 
