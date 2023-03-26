@@ -51,11 +51,9 @@ namespace DOAN_Nhom4
                 txt_DiaChiLienLac.ForeColor = Color.Silver;
             }
         }
-
-        private void llbl_DieuKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void llbl_DieuKhoan_Click(object sender, EventArgs e)
         {
-            string link = "https://ebank.bidv.com.vn/DKNHDT/term.htm";
-            Process.Start(link);
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=BtOEztT1Qzk");
         }
     }
 }
