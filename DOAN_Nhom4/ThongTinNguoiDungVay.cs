@@ -31,7 +31,7 @@ namespace DOAN_Nhom4
             get { return hoTen; }
             set { hoTen = value; }
         }
-        public string Ccccd
+        public string Cccd
         {
             get { return cccd; }
             set { cccd = value; }

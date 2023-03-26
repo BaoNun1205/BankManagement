@@ -34,17 +34,17 @@ namespace DOAN_Nhom4
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_DangKy = new CustomButton.VBButton();
             this.llbl_DieuKhoan = new System.Windows.Forms.LinkLabel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cb_DongY = new System.Windows.Forms.CheckBox();
             this.txt_NgayVay = new System.Windows.Forms.DateTimePicker();
             this.txt_DiaChiLienLac = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cb_DiaChiLienLac = new System.Windows.Forms.CheckBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_ThoiGianVay = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_SoTienVay = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.cb_SPVay = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@ namespace DOAN_Nhom4
             this.txt_CCCD = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_Ten = new System.Windows.Forms.TextBox();
+            this.txt_HoTen = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cb_DanhXung = new System.Windows.Forms.ComboBox();
@@ -94,17 +94,17 @@ namespace DOAN_Nhom4
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.btn_DangKy);
             this.panel1.Controls.Add(this.llbl_DieuKhoan);
-            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.cb_DongY);
             this.panel1.Controls.Add(this.txt_NgayVay);
             this.panel1.Controls.Add(this.txt_DiaChiLienLac);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.cb_DiaChiLienLac);
             this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.label31);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txt_ThoiGianVay);
             this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txt_SoTienVay);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.cb_SPVay);
             this.panel1.Controls.Add(this.label29);
@@ -129,7 +129,7 @@ namespace DOAN_Nhom4
             this.panel1.Controls.Add(this.txt_CCCD);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.txt_Ten);
+            this.panel1.Controls.Add(this.txt_HoTen);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.cb_DanhXung);
@@ -159,6 +159,7 @@ namespace DOAN_Nhom4
             this.btn_DangKy.BorderSize = 0;
             this.btn_DangKy.FlatAppearance.BorderSize = 0;
             this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangKy.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_DangKy.ForeColor = System.Drawing.Color.White;
             this.btn_DangKy.Location = new System.Drawing.Point(981, 715);
             this.btn_DangKy.Name = "btn_DangKy";
@@ -167,12 +168,13 @@ namespace DOAN_Nhom4
             this.btn_DangKy.Text = "Đăng Ký";
             this.btn_DangKy.TextColor = System.Drawing.Color.White;
             this.btn_DangKy.UseVisualStyleBackColor = false;
+            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // llbl_DieuKhoan
             // 
             this.llbl_DieuKhoan.AutoSize = true;
             this.llbl_DieuKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.llbl_DieuKhoan.LinkColor = System.Drawing.Color.Teal;
+            this.llbl_DieuKhoan.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.llbl_DieuKhoan.Location = new System.Drawing.Point(1042, 682);
             this.llbl_DieuKhoan.Name = "llbl_DieuKhoan";
             this.llbl_DieuKhoan.Size = new System.Drawing.Size(161, 19);
@@ -181,16 +183,16 @@ namespace DOAN_Nhom4
             this.llbl_DieuKhoan.Text = "Điều Khoản Sử Dụng";
             this.llbl_DieuKhoan.Click += new System.EventHandler(this.llbl_DieuKhoan_Click);
             // 
-            // checkBox2
+            // cb_DongY
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(850, 653);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(556, 26);
-            this.checkBox2.TabIndex = 57;
-            this.checkBox2.Text = "Tôi đồng ý với các điều khoản điều kiện đăng ký dịch vụ của HHB";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cb_DongY.AutoSize = true;
+            this.cb_DongY.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cb_DongY.Location = new System.Drawing.Point(850, 653);
+            this.cb_DongY.Name = "cb_DongY";
+            this.cb_DongY.Size = new System.Drawing.Size(556, 26);
+            this.cb_DongY.TabIndex = 57;
+            this.cb_DongY.Text = "Tôi đồng ý với các điều khoản điều kiện đăng ký dịch vụ của HHB";
+            this.cb_DongY.UseVisualStyleBackColor = true;
             // 
             // txt_NgayVay
             // 
@@ -212,16 +214,16 @@ namespace DOAN_Nhom4
             this.txt_DiaChiLienLac.TabIndex = 55;
             this.txt_DiaChiLienLac.Text = "Địa chỉ khác";
             // 
-            // checkBox1
+            // cb_DiaChiLienLac
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(992, 454);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(294, 27);
-            this.checkBox1.TabIndex = 54;
-            this.checkBox1.Text = "Cùng chi nhánh với địa chỉ liên lạc";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cb_DiaChiLienLac.AutoSize = true;
+            this.cb_DiaChiLienLac.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cb_DiaChiLienLac.Location = new System.Drawing.Point(992, 454);
+            this.cb_DiaChiLienLac.Name = "cb_DiaChiLienLac";
+            this.cb_DiaChiLienLac.Size = new System.Drawing.Size(294, 27);
+            this.cb_DiaChiLienLac.TabIndex = 54;
+            this.cb_DiaChiLienLac.Text = "Cùng chi nhánh với địa chỉ liên lạc";
+            this.cb_DiaChiLienLac.UseVisualStyleBackColor = true;
             // 
             // label32
             // 
@@ -271,12 +273,12 @@ namespace DOAN_Nhom4
             this.label25.TabIndex = 50;
             this.label25.Text = "VNĐ";
             // 
-            // textBox6
+            // txt_ThoiGianVay
             // 
-            this.textBox6.Location = new System.Drawing.Point(981, 318);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(110, 27);
-            this.textBox6.TabIndex = 49;
+            this.txt_ThoiGianVay.Location = new System.Drawing.Point(981, 318);
+            this.txt_ThoiGianVay.Name = "txt_ThoiGianVay";
+            this.txt_ThoiGianVay.Size = new System.Drawing.Size(110, 27);
+            this.txt_ThoiGianVay.TabIndex = 49;
             // 
             // label26
             // 
@@ -291,12 +293,12 @@ namespace DOAN_Nhom4
             this.label26.TabIndex = 47;
             this.label26.Text = "Thời gian vay";
             // 
-            // textBox7
+            // txt_SoTienVay
             // 
-            this.textBox7.Location = new System.Drawing.Point(981, 246);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(271, 27);
-            this.textBox7.TabIndex = 46;
+            this.txt_SoTienVay.Location = new System.Drawing.Point(981, 246);
+            this.txt_SoTienVay.Name = "txt_SoTienVay";
+            this.txt_SoTienVay.Size = new System.Drawing.Size(271, 27);
+            this.txt_SoTienVay.TabIndex = 46;
             // 
             // label28
             // 
@@ -558,12 +560,12 @@ namespace DOAN_Nhom4
             this.label13.TabIndex = 19;
             this.label13.Text = "Căn cước công dân";
             // 
-            // txt_Ten
+            // txt_HoTen
             // 
-            this.txt_Ten.Location = new System.Drawing.Point(261, 250);
-            this.txt_Ten.Name = "txt_Ten";
-            this.txt_Ten.Size = new System.Drawing.Size(374, 27);
-            this.txt_Ten.TabIndex = 18;
+            this.txt_HoTen.Location = new System.Drawing.Point(261, 250);
+            this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.Size = new System.Drawing.Size(374, 27);
+            this.txt_HoTen.TabIndex = 18;
             // 
             // label10
             // 
@@ -726,7 +728,7 @@ namespace DOAN_Nhom4
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label2.Location = new System.Drawing.Point(573, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(319, 45);
@@ -770,7 +772,7 @@ namespace DOAN_Nhom4
         private TextBox txt_CCCD;
         private Label label12;
         private Label label13;
-        private TextBox txt_Ten;
+        private TextBox txt_HoTen;
         private Label label10;
         private Label label11;
         private ComboBox cb_DanhXung;
@@ -787,9 +789,9 @@ namespace DOAN_Nhom4
         private Label label1;
         private Label label24;
         private PictureBox pictureBox1;
-        private TextBox textBox6;
+        private TextBox txt_ThoiGianVay;
         private Label label26;
-        private TextBox textBox7;
+        private TextBox txt_SoTienVay;
         private Label label28;
         private ComboBox cb_SPVay;
         private Label label29;
@@ -799,10 +801,10 @@ namespace DOAN_Nhom4
         private Label label27;
         private Label label25;
         private Label label31;
-        private CheckBox checkBox1;
+        private CheckBox cb_DiaChiLienLac;
         private Label label32;
         private LinkLabel llbl_DieuKhoan;
-        private CheckBox checkBox2;
+        private CheckBox cb_DongY;
         private DateTimePicker txt_NgayVay;
         private TextBox txt_DiaChiLienLac;
         private VBButton btn_DangKy;
