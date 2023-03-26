@@ -61,6 +61,12 @@
             this.Close();
         }
 
-
+        private void btnTienich_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmVay frmVay = new FrmVay(kh);
+            frmVay.ShowDialog();
+            this.Close();
+        }
     }
 }

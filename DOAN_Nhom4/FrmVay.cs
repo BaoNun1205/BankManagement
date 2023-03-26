@@ -9,16 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Numerics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 namespace DOAN_Nhom4
 {
     public partial class FrmVay : Form
     {
         DBConnection db = new DBConnection();
+        public NguoiDung nguoiDung;
         public FrmVay()
         {
             InitializeComponent();
             this.Size = new Size(1501, 858);
-
+        }
+        public FrmVay(NguoiDung nguoiDung)
+        {
+            InitializeComponent();
+            this.Size = new Size(1501, 858);
+            this.nguoiDung = nguoiDung;
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
@@ -34,7 +42,11 @@ namespace DOAN_Nhom4
             cb_DanhXung.DataSource = danhxung;
             cb_NgheNghiep.DataSource = nghe;
             cb_ThuNhap.DataSource = thunhap;
-            cb_SPVay.DataSource = SPvay;    
+            cb_SPVay.DataSource = SPvay;
+            txt_HoTen.Text = nguoiDung.TenTK;
+            txt_CCCD.Text = nguoiDung.Cccd;
+            txt_SDT.Text = nguoiDung.Sdt;
+            txt_Email.Text = nguoiDung.Email;
         }
 
         private void txt_DiaChiLienLac_Click(object sender, EventArgs e)
@@ -72,11 +84,11 @@ namespace DOAN_Nhom4
             {
                 if (cb_DongY.Checked == true)
                 {
-                    ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
+                    ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
                     XacNhanThongTinNguoiDungVay xacnhan = new XacNhanThongTinNguoiDungVay(ttNgDung);
-                    Hide();
+                    this.Hide();
                     xacnhan.ShowDialog();
-                    Close();
+                    this.Close();
                 }
                 else
                     MessageBox.Show("Bạn chưa đồng ý với điều khoản điều kiện của chúng tôi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -102,11 +114,14 @@ namespace DOAN_Nhom4
             else if (cb_DiaChiLienLac.Checked == false)
             {
                 txt_DiaChiLienLac.ReadOnly = false;
-                if(txt_DiaChiLienLac.Text != null)
+                if (txt_DiaChiLienLac.Text == null)
                 {
                     cb_DiaChiLienLac.Enabled = false;
                 }
+                else
+                    cb_DiaChiLienLac.Enabled = true;
             }
         }
+
     }
 }
