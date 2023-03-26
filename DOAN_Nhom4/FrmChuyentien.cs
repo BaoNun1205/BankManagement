@@ -42,9 +42,9 @@ namespace DOAN_Nhom4
 
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
+            if (lblTenTKhoan.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTK.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTKhoan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd);
                // this.Hide();
                 frmxacnhan.ShowDialog();
@@ -52,7 +52,7 @@ namespace DOAN_Nhom4
             }
             else
             {
-                if (lblTenTK.Text == "Khong ton tai")
+                if (lblTenTKhoan.Text == "Khong ton tai")
                     MessageBox.Show("Tai khoang khong ton tai");
                 else
                     MessageBox.Show("So Du cua ban khong du");

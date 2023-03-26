@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DOAN_Nhom4
 {
-    internal class ThongTinNguoiDungVay
+    public class ThongTinNguoiDungVay
     {
         private string danhXung;
         private string hoTen;

@@ -12,7 +12,6 @@ namespace DOAN_Nhom4
 {
     public partial class FrmVay : Form
     {
-        ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay();
         public FrmVay()
         {
             InitializeComponent();
@@ -67,8 +66,11 @@ namespace DOAN_Nhom4
             }
             else
                 s = txt_DiaChiLienLac.Text;
-            ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
-            //XacNhanThongTinNguoiDungVay xacnhan = new XacNhanThongTinNguoiDungVay(ttNgDung);
+            ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
+            XacNhanThongTinNguoiDungVay xacnhan = new XacNhanThongTinNguoiDungVay(ttNgDung);
+            Hide();
+            xacnhan.ShowDialog();
+            Close();
         }
     }
 }
