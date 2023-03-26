@@ -1,4 +1,6 @@
-﻿namespace DOAN_Nhom4
+﻿using CustomButton;
+
+namespace DOAN_Nhom4
 {
     partial class FrmVay
     {
@@ -82,6 +84,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_DangKy = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +92,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.btn_DangKy);
             this.panel1.Controls.Add(this.llbl_DieuKhoan);
             this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.txt_NgayVay);
@@ -711,6 +715,24 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "ĐĂNG KÝ VAY NỢ";
             // 
+            // btn_DangKy
+            // 
+            this.btn_DangKy.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_DangKy.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_DangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DangKy.BorderRadius = 20;
+            this.btn_DangKy.BorderSize = 0;
+            this.btn_DangKy.FlatAppearance.BorderSize = 0;
+            this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangKy.ForeColor = System.Drawing.Color.White;
+            this.btn_DangKy.Location = new System.Drawing.Point(1042, 733);
+            this.btn_DangKy.Name = "btn_DangKy";
+            this.btn_DangKy.Size = new System.Drawing.Size(188, 50);
+            this.btn_DangKy.TabIndex = 59;
+            this.btn_DangKy.Text = "vbButton1";
+            this.btn_DangKy.TextColor = System.Drawing.Color.White;
+            this.btn_DangKy.UseVisualStyleBackColor = false;
+            // 
             // FrmVay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -783,5 +805,6 @@
         private CheckBox checkBox2;
         private DateTimePicker txt_NgayVay;
         private TextBox txt_DiaChiLienLac;
+        private VBButton btn_DangKy;
     }
 }
