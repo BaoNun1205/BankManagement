@@ -34,43 +34,41 @@
             this.btnXacnhan = new CustomButton.VBButton();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.picBoxXacnhanChuyentien = new System.Windows.Forms.PictureBox();
             this.pnlXacnhanChuyentien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxXacnhanChuyentien)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlXacnhanChuyentien
             // 
-            this.pnlXacnhanChuyentien.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlXacnhanChuyentien.BackColor = System.Drawing.Color.White;
             this.pnlXacnhanChuyentien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlXacnhanChuyentien.Controls.Add(this.btnHuy);
             this.pnlXacnhanChuyentien.Controls.Add(this.btnXacnhan);
             this.pnlXacnhanChuyentien.Controls.Add(this.txtMatkhau);
             this.pnlXacnhanChuyentien.Controls.Add(this.label1);
-            this.pnlXacnhanChuyentien.Location = new System.Drawing.Point(48, 44);
-            this.pnlXacnhanChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pnlXacnhanChuyentien.Location = new System.Drawing.Point(1, 1);
+            this.pnlXacnhanChuyentien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlXacnhanChuyentien.Name = "pnlXacnhanChuyentien";
-            this.pnlXacnhanChuyentien.Size = new System.Drawing.Size(643, 369);
+            this.pnlXacnhanChuyentien.Size = new System.Drawing.Size(622, 407);
             this.pnlXacnhanChuyentien.TabIndex = 9;
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.Transparent;
             this.btnHuy.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnHuy.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHuy.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnHuy.BorderRadius = 0;
             this.btnHuy.BorderSize = 3;
             this.btnHuy.FlatAppearance.BorderSize = 0;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHuy.Font = new System.Drawing.Font("Verdana", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(35, 245);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnHuy.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHuy.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnHuy.Location = new System.Drawing.Point(67, 232);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(249, 81);
+            this.btnHuy.Size = new System.Drawing.Size(211, 79);
             this.btnHuy.TabIndex = 15;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.TextColor = System.Drawing.Color.DarkCyan;
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -78,65 +76,56 @@
             // 
             this.btnXacnhan.BackColor = System.Drawing.Color.Transparent;
             this.btnXacnhan.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnXacnhan.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnXacnhan.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnXacnhan.BorderRadius = 0;
             this.btnXacnhan.BorderSize = 3;
             this.btnXacnhan.FlatAppearance.BorderSize = 0;
             this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXacnhan.Font = new System.Drawing.Font("Verdana", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnXacnhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacnhan.Location = new System.Drawing.Point(355, 245);
-            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnXacnhan.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXacnhan.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnXacnhan.Location = new System.Drawing.Point(340, 232);
+            this.btnXacnhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(249, 81);
+            this.btnXacnhan.Size = new System.Drawing.Size(211, 79);
             this.btnXacnhan.TabIndex = 14;
             this.btnXacnhan.Text = "Xác nhận";
-            this.btnXacnhan.TextColor = System.Drawing.Color.White;
+            this.btnXacnhan.TextColor = System.Drawing.Color.DarkCyan;
             this.btnXacnhan.UseVisualStyleBackColor = false;
             this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(349, 107);
-            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtMatkhau.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMatkhau.Location = new System.Drawing.Point(340, 105);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtMatkhau.Multiline = true;
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(253, 39);
+            this.txtMatkhau.Size = new System.Drawing.Size(226, 39);
             this.txtMatkhau.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 107);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(43, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 45);
+            this.label1.Size = new System.Drawing.Size(235, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập mật khẩu";
-            // 
-            // picBoxXacnhanChuyentien
-            // 
-            this.picBoxXacnhanChuyentien.Image = global::DOAN_Nhom4.Properties.Resources.pexels_johannes_plenio_1632788;
-            this.picBoxXacnhanChuyentien.Location = new System.Drawing.Point(-2, -6);
-            this.picBoxXacnhanChuyentien.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.picBoxXacnhanChuyentien.Name = "picBoxXacnhanChuyentien";
-            this.picBoxXacnhanChuyentien.Size = new System.Drawing.Size(742, 465);
-            this.picBoxXacnhanChuyentien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxXacnhanChuyentien.TabIndex = 8;
-            this.picBoxXacnhanChuyentien.TabStop = false;
             // 
             // FrmXacnhanChuyentien
             // 
             this.AcceptButton = this.btnXacnhan;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnHuy;
-            this.ClientSize = new System.Drawing.Size(735, 454);
+            this.ClientSize = new System.Drawing.Size(622, 407);
             this.Controls.Add(this.pnlXacnhanChuyentien);
-            this.Controls.Add(this.picBoxXacnhanChuyentien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmXacnhanChuyentien";
@@ -144,7 +133,6 @@
             this.Text = "Xác nhận";
             this.pnlXacnhanChuyentien.ResumeLayout(false);
             this.pnlXacnhanChuyentien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxXacnhanChuyentien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,6 +144,5 @@
         private CustomButton.VBButton btnXacnhan;
         private TextBox txtMatkhau;
         private Label label1;
-        private PictureBox picBoxXacnhanChuyentien;
     }
 }
