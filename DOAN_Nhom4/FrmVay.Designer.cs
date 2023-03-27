@@ -213,6 +213,8 @@ namespace DOAN_Nhom4
             this.txt_DiaChiLienLac.Size = new System.Drawing.Size(381, 30);
             this.txt_DiaChiLienLac.TabIndex = 55;
             this.txt_DiaChiLienLac.Text = "Địa chỉ khác";
+            this.txt_DiaChiLienLac.Click += new System.EventHandler(this.txt_DiaChiLienLac_Click);
+            this.txt_DiaChiLienLac.Leave += new System.EventHandler(this.txt_DiaChiLienLac_Leave);
             // 
             // cb_DiaChiLienLac
             // 
@@ -220,10 +222,11 @@ namespace DOAN_Nhom4
             this.cb_DiaChiLienLac.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cb_DiaChiLienLac.Location = new System.Drawing.Point(992, 454);
             this.cb_DiaChiLienLac.Name = "cb_DiaChiLienLac";
-            this.cb_DiaChiLienLac.Size = new System.Drawing.Size(294, 27);
+            this.cb_DiaChiLienLac.Size = new System.Drawing.Size(150, 27);
             this.cb_DiaChiLienLac.TabIndex = 54;
-            this.cb_DiaChiLienLac.Text = "Cùng chi nhánh với địa chỉ liên lạc";
+            this.cb_DiaChiLienLac.Text = "Đăng Ký Online";
             this.cb_DiaChiLienLac.UseVisualStyleBackColor = true;
+            this.cb_DiaChiLienLac.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cb_DiaChiLienLac_MouseClick);
             // 
             // label32
             // 
@@ -434,8 +437,10 @@ namespace DOAN_Nhom4
             // 
             // txt_Email
             // 
+            this.txt_Email.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Email.Location = new System.Drawing.Point(261, 565);
             this.txt_Email.Name = "txt_Email";
+            this.txt_Email.ReadOnly = true;
             this.txt_Email.Size = new System.Drawing.Size(374, 27);
             this.txt_Email.TabIndex = 30;
             // 
@@ -466,8 +471,10 @@ namespace DOAN_Nhom4
             // 
             // txt_SDT
             // 
+            this.txt_SDT.BackColor = System.Drawing.SystemColors.Window;
             this.txt_SDT.Location = new System.Drawing.Point(261, 481);
             this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.ReadOnly = true;
             this.txt_SDT.Size = new System.Drawing.Size(374, 27);
             this.txt_SDT.TabIndex = 27;
             // 
@@ -530,8 +537,10 @@ namespace DOAN_Nhom4
             // 
             // txt_CCCD
             // 
+            this.txt_CCCD.BackColor = System.Drawing.SystemColors.Window;
             this.txt_CCCD.Location = new System.Drawing.Point(261, 322);
             this.txt_CCCD.Name = "txt_CCCD";
+            this.txt_CCCD.ReadOnly = true;
             this.txt_CCCD.Size = new System.Drawing.Size(374, 27);
             this.txt_CCCD.TabIndex = 21;
             // 
@@ -562,8 +571,10 @@ namespace DOAN_Nhom4
             // 
             // txt_HoTen
             // 
+            this.txt_HoTen.BackColor = System.Drawing.SystemColors.Window;
             this.txt_HoTen.Location = new System.Drawing.Point(261, 250);
             this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.ReadOnly = true;
             this.txt_HoTen.Size = new System.Drawing.Size(374, 27);
             this.txt_HoTen.TabIndex = 18;
             // 

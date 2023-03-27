@@ -14,6 +14,7 @@ namespace DOAN_Nhom4
     public partial class XacNhanThongTinNguoiDungVay : Form
     {
         public ThongTinNguoiDungVay ttNgDung;
+        public NguoiDung nguoiDung;
         public XacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace DOAN_Nhom4
         public XacNhanThongTinNguoiDungVay(ThongTinNguoiDungVay ttNgDung)
         {
             InitializeComponent();
-            this.ttNgDung= ttNgDung;
+            this.ttNgDung = ttNgDung;
         }
 
         private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace DOAN_Nhom4
             txt_NgheNghiep.Text = ttNgDung.NgheNghiep;
             txt_ThuNhap.Text = ttNgDung.ThuNhap;
             txt_SPVay.Text = ttNgDung.SpVay;
-            txt_SoTienVay.Text = ttNgDung.SoTienVay;
+            txt_SoTienVay.Text = BigInteger.Parse(ttNgDung.SoTienVay).ToString("N0");
             txt_ThoiGianVay.Text = ttNgDung.ThoiGianVay;
             double lai;
             if (ttNgDung.SpVay == "Sản phẩm cho vay nhu cầu nhà ở")
@@ -63,13 +64,31 @@ namespace DOAN_Nhom4
                 lai = 7.3;
             txt_LaiSuat.Text = lai.ToString();
             double soTienVay = double.Parse(txt_SoTienVay.Text);
-            double tmp =  (soTienVay * lai) / 100;
-            BigInteger tienhangthang = new BigInteger(tmp);
-            txt_SoTienHangThang.Text = tienhangthang.ToString();
-            BigInteger tongsotien = tienhangthang * int.Parse(txt_ThoiGianVay.Text);
-            txt_TongSoTien.Text = tongsotien.ToString();
+            double tmp =  (soTienVay + (soTienVay * lai / 100));
+            BigInteger tongsotien = new BigInteger(tmp);
+            txt_TongSoTien.Text = tongsotien.ToString("N0");
+            BigInteger tienhangthang = tongsotien / int.Parse(txt_ThoiGianVay.Text);
+            txt_SoTienHangThang.Text = tienhangthang.ToString("N0");
             txt_ChiNhanhVay.Text = ttNgDung.ChiNhanhVay;
             txt_NgayVay.Text = ttNgDung.NgayVay.ToString();
+            txt_TinhTien.Text = String.Format("{0} + ({1} x {2}) = {3}", soTienVay.ToString(), soTienVay.ToString(), (lai/100).ToString(), tongsotien.ToString());
+        }
+
+        private void btn_XacNhanVay_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            FrmTienIchVay frmtienichvay = new FrmTienIchVay();
+            frmtienichvay.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTienIchVay frmtienichvay = new FrmTienIchVay();
+            frmtienichvay.ShowDialog();
+            this.Close();
         }
     }
 }

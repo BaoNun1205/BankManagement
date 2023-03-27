@@ -343,6 +343,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Image3 {
+            get {
+                object obj = ResourceManager.GetObject("Image3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1215119911_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1215119911-612x612", resourceCulture);
@@ -675,6 +685,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tindungonline {
+            get {
+                object obj = ResourceManager.GetObject("tindungonline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toa_nha_landmark_81 {
             get {
                 object obj = ResourceManager.GetObject("toa-nha-landmark-81", resourceCulture);
@@ -748,6 +768,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap user5 {
             get {
                 object obj = ResourceManager.GetObject("user5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vaytien {
+            get {
+                object obj = ResourceManager.GetObject("vaytien", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
