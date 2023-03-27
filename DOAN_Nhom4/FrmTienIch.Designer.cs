@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTenTK = new System.Windows.Forms.Label();
+            this.lblXinchao = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbTienTich = new System.Windows.Forms.PictureBox();
@@ -37,22 +39,26 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ptbVayTien = new System.Windows.Forms.PictureBox();
             this.lblVayTien = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblNapDienThoai = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblTinDung = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.lblTenTK = new System.Windows.Forms.Label();
-            this.lblXinchao = new System.Windows.Forms.Label();
+            this.ptbTinDung = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTienTich)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +71,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1001, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // lblTenTK
+            // 
+            this.lblTenTK.AutoSize = true;
+            this.lblTenTK.BackColor = System.Drawing.Color.Transparent;
+            this.lblTenTK.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTenTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblTenTK.Location = new System.Drawing.Point(729, 5);
+            this.lblTenTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenTK.Name = "lblTenTK";
+            this.lblTenTK.Size = new System.Drawing.Size(21, 32);
+            this.lblTenTK.TabIndex = 53;
+            this.lblTenTK.Text = " ";
+            // 
+            // lblXinchao
+            // 
+            this.lblXinchao.AutoSize = true;
+            this.lblXinchao.BackColor = System.Drawing.Color.Transparent;
+            this.lblXinchao.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblXinchao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblXinchao.Location = new System.Drawing.Point(605, 5);
+            this.lblXinchao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblXinchao.Name = "lblXinchao";
+            this.lblXinchao.Size = new System.Drawing.Size(114, 32);
+            this.lblXinchao.TabIndex = 52;
+            this.lblXinchao.Text = "Xin chào,";
             // 
             // pictureBox1
             // 
@@ -136,18 +168,29 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.ptbVayTien);
             this.panel5.Controls.Add(this.lblVayTien);
             this.panel5.Location = new System.Drawing.Point(0, 40);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(496, 231);
             this.panel5.TabIndex = 4;
             // 
+            // ptbVayTien
+            // 
+            this.ptbVayTien.Image = global::DOAN_Nhom4.Properties.Resources.vaytien;
+            this.ptbVayTien.Location = new System.Drawing.Point(199, 119);
+            this.ptbVayTien.Name = "ptbVayTien";
+            this.ptbVayTien.Size = new System.Drawing.Size(92, 67);
+            this.ptbVayTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbVayTien.TabIndex = 1;
+            this.ptbVayTien.TabStop = false;
+            // 
             // lblVayTien
             // 
             this.lblVayTien.AutoSize = true;
             this.lblVayTien.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVayTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblVayTien.Location = new System.Drawing.Point(174, 71);
+            this.lblVayTien.Location = new System.Drawing.Point(195, 71);
             this.lblVayTien.Name = "lblVayTien";
             this.lblVayTien.Size = new System.Drawing.Size(105, 32);
             this.lblVayTien.TabIndex = 0;
@@ -155,6 +198,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.lblNapDienThoai);
             this.panel6.Location = new System.Drawing.Point(1, 324);
             this.panel6.Name = "panel6";
@@ -166,14 +210,16 @@
             this.lblNapDienThoai.AutoSize = true;
             this.lblNapDienThoai.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNapDienThoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblNapDienThoai.Location = new System.Drawing.Point(123, 75);
+            this.lblNapDienThoai.Location = new System.Drawing.Point(123, 71);
             this.lblNapDienThoai.Name = "lblNapDienThoai";
             this.lblNapDienThoai.Size = new System.Drawing.Size(236, 32);
             this.lblNapDienThoai.TabIndex = 2;
             this.lblNapDienThoai.Text = "Nạp Tiền Điện Thoại";
+            this.lblNapDienThoai.Click += new System.EventHandler(this.lblNapDienThoai_Click);
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.ptbTinDung);
             this.panel7.Controls.Add(this.lblTinDung);
             this.panel7.Location = new System.Drawing.Point(506, 40);
             this.panel7.Name = "panel7";
@@ -198,31 +244,25 @@
             this.panel8.Size = new System.Drawing.Size(496, 231);
             this.panel8.TabIndex = 7;
             // 
-            // lblTenTK
+            // ptbTinDung
             // 
-            this.lblTenTK.AutoSize = true;
-            this.lblTenTK.BackColor = System.Drawing.Color.Transparent;
-            this.lblTenTK.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTenTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTenTK.Location = new System.Drawing.Point(729, 5);
-            this.lblTenTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTenTK.Name = "lblTenTK";
-            this.lblTenTK.Size = new System.Drawing.Size(21, 32);
-            this.lblTenTK.TabIndex = 53;
-            this.lblTenTK.Text = " ";
+            this.ptbTinDung.Image = global::DOAN_Nhom4.Properties.Resources.tindungonline;
+            this.ptbTinDung.Location = new System.Drawing.Point(224, 119);
+            this.ptbTinDung.Name = "ptbTinDung";
+            this.ptbTinDung.Size = new System.Drawing.Size(92, 67);
+            this.ptbTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTinDung.TabIndex = 2;
+            this.ptbTinDung.TabStop = false;
             // 
-            // lblXinchao
+            // pictureBox2
             // 
-            this.lblXinchao.AutoSize = true;
-            this.lblXinchao.BackColor = System.Drawing.Color.Transparent;
-            this.lblXinchao.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblXinchao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblXinchao.Location = new System.Drawing.Point(605, 5);
-            this.lblXinchao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblXinchao.Name = "lblXinchao";
-            this.lblXinchao.Size = new System.Drawing.Size(114, 32);
-            this.lblXinchao.TabIndex = 52;
-            this.lblXinchao.Text = "Xin chào,";
+            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
+            this.pictureBox2.Location = new System.Drawing.Point(198, 119);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(92, 67);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmTienIch
             // 
@@ -250,10 +290,13 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +320,8 @@
         private Label lblTinDung;
         private Label lblTenTK;
         private Label lblXinchao;
+        private PictureBox ptbVayTien;
+        private PictureBox ptbTinDung;
+        private PictureBox pictureBox2;
     }
 }

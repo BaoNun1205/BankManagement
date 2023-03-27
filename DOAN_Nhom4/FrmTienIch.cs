@@ -15,10 +15,14 @@ namespace DOAN_Nhom4
         public FrmTienIch()
         {
             InitializeComponent();
-            this.ShowInTaskbar = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNapDienThoai_Click(object sender, EventArgs e)
         {
 
         }
