@@ -129,7 +129,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.pencil;
-            this.pictureBox1.Location = new System.Drawing.Point(443, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(443, 19);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
@@ -283,7 +283,7 @@
             this.txtTenTKTK.BackColor = System.Drawing.Color.White;
             this.txtTenTKTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenTKTK.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTenTKTK.ForeColor = System.Drawing.Color.Black;
+            this.txtTenTKTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.txtTenTKTK.Location = new System.Drawing.Point(196, 14);
             this.txtTenTKTK.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtTenTKTK.Multiline = true;

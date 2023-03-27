@@ -39,7 +39,7 @@ namespace DOAN_Nhom4
             data.xuLi(sqlTkiem);
         }
 
-        public void Xoa(TietKiem tkiem)
+        public void Rut(TietKiem tkiem)
         {
             string sqlTkiem = string.Format("DELETE FROM TaiKhoanTietKiem WHERE ID ='{0}'", tkiem.Id);
             data.xuLi(sqlTkiem);

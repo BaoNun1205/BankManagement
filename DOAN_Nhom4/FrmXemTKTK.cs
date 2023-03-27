@@ -14,18 +14,21 @@ namespace DOAN_Nhom4
     {
         TietkiemDAO tietkiemDAO = new TietkiemDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
-        public NguoiDung kh;
-        public TaiKhoanNganHang tknh;
+        private NguoiDung kh;
+        private TaiKhoanNganHang tknh;
+        private Panel pnlNguoidung;
+
         public FrmXemTKTK()
         {
             InitializeComponent();
         }
 
-        public FrmXemTKTK(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmXemTKTK(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.kh = kh;
-            this.tknh = tknh;
+            this.tknh = tknh;           
+            this.pnlNguoidung = pnlNguoidung;
             HienThi();
         }
         private void FrmXemTKTK_Load(object sender, EventArgs e)
@@ -36,6 +39,13 @@ namespace DOAN_Nhom4
         public void HienThi()
         {
             gvTKTK.DataSource = tietkiemDAO.LayDanhSachTKTK();
+            gvTKTK.Columns[0].HeaderText = "Ma tiet kiem";
+            gvTKTK.Columns[1].HeaderText = "Ten TKTK";
+            gvTKTK.Columns[2].HeaderText = "Tien goc";
+            gvTKTK.Columns[3].HeaderText = "Ki han";
+            gvTKTK.Columns[4].HeaderText = "Lai suat";
+            gvTKTK.Columns[5].HeaderText = "Tien lai";
+            gvTKTK.Columns[6].HeaderText = "Tong tien";
         }
 
         private void gvTKTK_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -51,14 +61,32 @@ namespace DOAN_Nhom4
             lblTongtien.Text = gvTKTK.Rows[i].Cells[6].Value.ToString();
         }
 
+        private void Xoa()
+        {
+            lblID.Text = "";
+            lblTenTKTK.Text = "";
+            txtTiengoc.Text = "";
+            txtKihan.Text = "";
+            lblLaisuat.Text = "";
+            lblTienlai.Text = "";
+            lblTongtien.Text = "";
+        }
+
         private void btnRuttien_Click(object sender, EventArgs e)
         {
             TietKiem tkiem = new TietKiem(int.Parse(lblID.Text), lblTenTKTK.Text, int.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), double.Parse(lblTienlai.Text), double.Parse(lblTongtien.Text));
             tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
             tknhDAO.Sua(tknh);
-            tietkiemDAO.Xoa(tkiem);
+            tietkiemDAO.Rut(tkiem);
             MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             HienThi();
+            Xoa();
+        }
+
+        private void pBQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
         }
     }
 }

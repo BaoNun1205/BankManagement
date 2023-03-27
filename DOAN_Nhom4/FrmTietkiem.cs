@@ -15,8 +15,8 @@ namespace DOAN_Nhom4
     {
         private Random rand;
         int ID;
-        public NguoiDung kh;
-        public TaiKhoanNganHang tknh;
+        private NguoiDung kh;
+        private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         TietkiemDAO tkiemDAO = new TietkiemDAO();
@@ -217,26 +217,8 @@ namespace DOAN_Nhom4
 
         private void lblTKTK_Click(object sender, EventArgs e)
         {
-            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh);
-            Hide();
-            frmxemtktk.ShowDialog();
-            Close();
-        }
-
-        private void btnTrangchu_Click(object sender, EventArgs e)
-        {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
-        }
-
-        private void btnChuyentien_Click(object sender, EventArgs e)
-        {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
-            this.Hide();
-            frmchuyentien.ShowDialog();
-            this.Close();
+            FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
         }
     }
 }
