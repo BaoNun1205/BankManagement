@@ -112,6 +112,7 @@
             this.btnCaidat.Text = "  Cài đặt";
             this.btnCaidat.TextColor = System.Drawing.Color.White;
             this.btnCaidat.UseVisualStyleBackColor = false;
+            this.btnCaidat.Click += new System.EventHandler(this.btnCaidat_Click);
             // 
             // btnHotro
             // 

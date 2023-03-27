@@ -66,11 +66,11 @@
             // lblBaoMat
             // 
             this.lblBaoMat.AutoSize = true;
-            this.lblBaoMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblBaoMat.Font = new System.Drawing.Font("Tahoma", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblBaoMat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblBaoMat.Location = new System.Drawing.Point(-1, 93);
+            this.lblBaoMat.Location = new System.Drawing.Point(6, 90);
             this.lblBaoMat.Name = "lblBaoMat";
-            this.lblBaoMat.Size = new System.Drawing.Size(610, 64);
+            this.lblBaoMat.Size = new System.Drawing.Size(593, 64);
             this.lblBaoMat.TabIndex = 27;
             this.lblBaoMat.Text = "BẢO MẬT TÀI KHOẢN";
             // 

@@ -14,16 +14,18 @@ namespace DOAN_Nhom4
     {
         public NguoiDung ngdung;
         public TaiKhoanNganHang tknh;
+        private Panel pnlNguoiDung;
         public FrmBaomat()
         {
             InitializeComponent();
         }
 
-        public FrmBaomat(NguoiDung ngdung, TaiKhoanNganHang tknh)
+        public FrmBaomat(NguoiDung ngdung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.ngdung = ngdung;
             this.tknh = tknh;
+            this.pnlNguoiDung = pnlNguoiDung;
         }
 
         private void pn_baomat_Paint(object sender, PaintEventArgs e)
@@ -45,26 +47,18 @@ namespace DOAN_Nhom4
         }
         private void btn_doimatkhau_Click(object sender, EventArgs e)
         {
-            FrmDoimatkhau frmdoimk = new FrmDoimatkhau(ngdung, tknh);
-            this.Hide();
-            frmdoimk.ShowDialog();
-            this.Close();
+            FrmDoimatkhau frmDoiMatKhau = new FrmDoimatkhau(ngdung, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmDoiMatKhau, pnlNguoiDung);
         }
 
         private void btn_dangxuat_Click(object sender, EventArgs e)
         {
             FrmDangnhap frmDangnhap = new FrmDangnhap();
-            this.Hide();
+            Application.OpenForms["frmBaoMat"].Hide();
+            Application.OpenForms["frmNguoiDung"].Hide();
             frmDangnhap.ShowDialog();
-            this.Close();
-        }
-
-        private void pb_QuayLai_Click(object sender, EventArgs e)
-        {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(ngdung, tknh);
-            this.Hide();
-            frmHienThiThongTinCaNhan.ShowDialog();
-            this.Close();
+            Application.OpenForms["frmBaoMat"].Close();
+            Application.OpenForms["frmNguoiDung"].Close();
         }
     }
 }

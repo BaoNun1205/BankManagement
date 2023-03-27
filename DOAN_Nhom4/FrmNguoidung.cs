@@ -101,5 +101,11 @@ namespace DOAN_Nhom4
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnCaidat_Click(object sender, EventArgs e)
+        {
+            FrmBaomat frmBaomat = new FrmBaomat(kh, tknh, pnlNguoidung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmBaomat, pnlNguoidung);
+        }
     }
 }

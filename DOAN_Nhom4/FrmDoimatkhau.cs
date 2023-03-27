@@ -15,6 +15,7 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
+        public Panel pnlNguoiDung;
         NguoiDungDAO ngdungDAO = new NguoiDungDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmDoimatkhau()
@@ -22,18 +23,17 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmDoimatkhau(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmDoimatkhau(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
+            this.pnlNguoiDung = pnlNguoiDung;
         }
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmBaomat frmbaomat = new FrmBaomat(kh, tknh);
-            this.Hide();
-            frmbaomat.ShowDialog();
-            this.Close();
+            FrmBaomat frmBaoMat = new FrmBaomat(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmBaoMat, pnlNguoiDung);
         }
         private void txt_MatKhauCu_Enter(object sender, EventArgs e)
         {
@@ -108,11 +108,18 @@ namespace DOAN_Nhom4
                 tknh.MatKhau = txt_MatKhauMoi.Text;
                 tknhDAO.Sua(tknh);
                 MessageBox.Show("Đổi mật khẩu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                FrmDangnhap frmdangnhap = new FrmDangnhap();
-                this.Hide();
-                frmdangnhap.ShowDialog();
-                this.Close();
+                FrmDangnhap frmDangnhap = new FrmDangnhap();
+                Application.OpenForms["frmBaoMat"].Hide();
+                Application.OpenForms["frmNguoiDung"].Hide();
+                frmDangnhap.ShowDialog();
+                Application.OpenForms["frmBaoMat"].Close();
+                Application.OpenForms["frmNguoiDung"].Close();
             }    
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
