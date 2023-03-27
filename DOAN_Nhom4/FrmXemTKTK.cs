@@ -38,29 +38,6 @@ namespace DOAN_Nhom4
             gvTKTK.DataSource = tietkiemDAO.LayDanhSachTKTK();
         }
 
-        private void picBoxQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
-            Hide();
-            frmtietkiem.ShowDialog();
-            Close();
-        }
-
-        private void pnlTietkiem_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTongtienlai_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gvTKTK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
@@ -72,11 +49,6 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = gvTKTK.Rows[i].Cells[4].Value.ToString();
             lblTienlai.Text = gvTKTK.Rows[i].Cells[5].Value.ToString();
             lblTongtien.Text = gvTKTK.Rows[i].Cells[6].Value.ToString();
-        }
-
-        private void lblLaisuat_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRuttien_Click(object sender, EventArgs e)

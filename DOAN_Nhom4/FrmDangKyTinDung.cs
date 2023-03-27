@@ -34,17 +34,6 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void addForm(Form form)
-        {
-            pnlNguoiDung.Controls.Clear();
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            form.FormBorderStyle = FormBorderStyle.None;
-            pnlNguoiDung.Controls.Add(form);
-            pnlNguoiDung.Tag = form;
-            form.Show();
-        }
-
         private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = cb_LoaiThe.SelectedIndex;
@@ -61,7 +50,7 @@ namespace DOAN_Nhom4
         private void lbllLoaiThe_Click(object sender, EventArgs e)
         {
             FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
-            addForm(frmThongTinTheHHBVisaFlexi);
+            DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTheHHBVisaFlexi, pnlNguoiDung);
         }
     }
 }

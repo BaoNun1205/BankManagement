@@ -89,7 +89,6 @@
             this.pnlTietkiem.Name = "pnlTietkiem";
             this.pnlTietkiem.Size = new System.Drawing.Size(1063, 895);
             this.pnlTietkiem.TabIndex = 1;
-            this.pnlTietkiem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTietkiem_Paint);
             // 
             // btnRuttien
             // 
@@ -139,7 +138,6 @@
             this.lblLaisuat.Size = new System.Drawing.Size(20, 29);
             this.lblLaisuat.TabIndex = 81;
             this.lblLaisuat.Text = " ";
-            this.lblLaisuat.Click += new System.EventHandler(this.lblLaisuat_Click);
             // 
             // panel4
             // 
@@ -188,7 +186,6 @@
             this.lblTongtien.Size = new System.Drawing.Size(64, 35);
             this.lblTongtien.TabIndex = 75;
             this.lblTongtien.Text = "    -";
-            this.lblTongtien.Click += new System.EventHandler(this.lblTongtienlai_Click);
             // 
             // label5
             // 
@@ -289,7 +286,6 @@
             this.picBoxQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxQuaylai.TabIndex = 56;
             this.picBoxQuaylai.TabStop = false;
-            this.picBoxQuaylai.Click += new System.EventHandler(this.picBoxQuaylai_Click);
             // 
             // label1
             // 

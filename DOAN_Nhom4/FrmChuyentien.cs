@@ -84,29 +84,5 @@ namespace DOAN_Nhom4
                 lblTenTKhoan.Text = "Khong ton tai";
             }
         }
-
-        private void btnTrangchu_Click(object sender, EventArgs e)
-        {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTietkiem_Click(object sender, EventArgs e)
-        {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
-            this.Hide();
-            frmtietkiem.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTaikhoan_Click(object sender, EventArgs e)
-        {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
-            this.Hide();
-            frmHienThiThongTinCaNhan.ShowDialog();
-            this.Close();
-        }
     }
 }

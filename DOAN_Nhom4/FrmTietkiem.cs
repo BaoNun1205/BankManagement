@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
         int ID;
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
+        private Panel pnlNguoidung;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
@@ -31,12 +32,13 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             txtTenTKTK.Focus();
             this.kh = kh;
             this.tknh = tknh;
+            this.pnlNguoidung = pnlNguoidung;
             rand = new Random();
             ID = rand.Next(100000, 999999);
         }
@@ -209,10 +211,8 @@ namespace DOAN_Nhom4
             TietKiem tkiem = new TietKiem(ID, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
             tkiemDAO.Them(tkiem);
             MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
-            Hide();
-            frmtietkiem.ShowDialog();
-            Close();
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
         }
 
         private void lblTKTK_Click(object sender, EventArgs e)
@@ -237,11 +237,6 @@ namespace DOAN_Nhom4
             this.Hide();
             frmchuyentien.ShowDialog();
             this.Close();
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
