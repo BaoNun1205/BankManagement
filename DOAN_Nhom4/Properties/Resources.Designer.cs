@@ -213,6 +213,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baomat {
+            get {
+                object obj = ResourceManager.GetObject("baomat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -958,16 +968,6 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap z4156394353170_c928a2cc547396d185fd30d8c9de6746 {
             get {
                 object obj = ResourceManager.GetObject("z4156394353170_c928a2cc547396d185fd30d8c9de6746", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap z4156395647100_11d34480489db0250526d93d55587605 {
-            get {
-                object obj = ResourceManager.GetObject("z4156395647100_11d34480489db0250526d93d55587605", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

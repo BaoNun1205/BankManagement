@@ -277,7 +277,7 @@
   <data name="_11757" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\11757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="z4156395647100_11d34480489db0250526d93d55587605" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="baomat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4156395647100_11d34480489db0250526d93d55587605.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="photo-1-1648047934861207346163" type="System.Resources.ResXFileRef, System.Windows.Forms">
