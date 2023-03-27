@@ -76,7 +76,7 @@ namespace DOAN_Nhom4
 
         private void panelTinDung_Click(object sender, EventArgs e)
         {
-            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh);
+            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
             addForm(frmDangKyTinDung);
         }
 

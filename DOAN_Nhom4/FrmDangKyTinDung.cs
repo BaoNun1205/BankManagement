@@ -14,6 +14,7 @@ namespace DOAN_Nhom4
     {
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
+        private Panel pnlNguoiDung;
         Image[] images = new Image[]
         {
             Properties.Resources.hhb_visa_Flexi,
@@ -25,11 +26,23 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmDangKyTinDung(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmDangKyTinDung(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
+            this.pnlNguoiDung = pnlNguoiDung;
+        }
+
+        private void addForm(Form form)
+        {
+            pnlNguoiDung.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
+            pnlNguoiDung.Controls.Add(form);
+            pnlNguoiDung.Tag = form;
+            form.Show();
         }
 
         private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
@@ -43,6 +56,12 @@ namespace DOAN_Nhom4
             {
                 ptbTheTinDung.Image = null;
             }
+        }
+
+        private void lbllLoaiThe_Click(object sender, EventArgs e)
+        {
+            FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
+            addForm(frmThongTinTheHHBVisaFlexi);
         }
     }
 }

@@ -724,6 +724,7 @@
             this.lbllLoaiThe.TabIndex = 63;
             this.lbllLoaiThe.TabStop = true;
             this.lbllLoaiThe.Text = "Loại Thẻ";
+            this.lbllLoaiThe.Click += new System.EventHandler(this.lbllLoaiThe_Click);
             // 
             // label26
             // 
