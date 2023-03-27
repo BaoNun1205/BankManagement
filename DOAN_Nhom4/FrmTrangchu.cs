@@ -27,7 +27,7 @@
 
         private void FrmTrangchu_Load(object sender, EventArgs e)
         {
-            lblTenTK.Text = kh.TenTK.ToString();
+            
         }
 
         private void picBoxLsgd_Click(object sender, EventArgs e)
@@ -37,30 +37,5 @@
             frmlsgd.ShowDialog();
             this.Close();
         }
-        private void btnTaikhoan_Click(object sender, EventArgs e)
-        {
-            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
-            this.Hide();
-            frmHienThiThongTinCaNhan.ShowDialog();
-            this.Close();
-        }
-
-        private void btnChuyentien_Click(object sender, EventArgs e)
-        {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
-            this.Hide();
-            frmchuyentien.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTietkiem_Click(object sender, EventArgs e)
-        {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
-            this.Hide();
-            frmtietkiem.ShowDialog();
-            this.Close();
-        }
-
-
     }
 }

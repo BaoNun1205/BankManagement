@@ -34,17 +34,11 @@ namespace DOAN_Nhom4
         public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
+            txtTenTKTK.Focus();
             this.kh = kh;
             this.tknh = tknh;
             rand = new Random();
             ID = rand.Next(100000, 999999);
-        }
-        private void picBoxQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
         }
 
         private void txtSotien_Enter(object sender, EventArgs e)
@@ -227,6 +221,27 @@ namespace DOAN_Nhom4
             Hide();
             frmxemtktk.ShowDialog();
             Close();
+        }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            this.Hide();
+            frmtrangchu.ShowDialog();
+            this.Close();
+        }
+
+        private void btnChuyentien_Click(object sender, EventArgs e)
+        {
+            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
+            this.Hide();
+            frmchuyentien.ShowDialog();
+            this.Close();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

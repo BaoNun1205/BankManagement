@@ -415,6 +415,46 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap left_arrow2 {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow3 {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow4 {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow5 {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ngan_hang_so_la_gi_1_scaled {
             get {
                 object obj = ResourceManager.GetObject("Ngan-hang-so-la-gi-1-scaled", resourceCulture);

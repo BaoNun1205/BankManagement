@@ -36,21 +36,6 @@ namespace DOAN_Nhom4
             lblNganhang.Text = gd.NganHangNhan.ToString();
             lblNoidung.Text = gd.LoiNhan.ToString();
         }
-        private void picBoxQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
-        }
-
-        private void lblQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
-        }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -65,6 +50,14 @@ namespace DOAN_Nhom4
                     }
                 }
             }
+        }
+
+        private void btnVetrangchu_Click(object sender, EventArgs e)
+        {
+            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh, gd);
+            this.Hide();
+            frmnguoidung.ShowDialog();
+            this.Close();
         }
     }
 }
