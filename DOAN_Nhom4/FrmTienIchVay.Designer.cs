@@ -38,9 +38,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1022, 508);
+            this.pictureBox1.Size = new System.Drawing.Size(1139, 720);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -56,10 +57,10 @@
             this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_DangKy.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_DangKy.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_DangKy.Location = new System.Drawing.Point(267, 57);
+            this.btn_DangKy.Location = new System.Drawing.Point(329, 177);
             this.btn_DangKy.Margin = new System.Windows.Forms.Padding(0);
             this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(375, 141);
+            this.btn_DangKy.Size = new System.Drawing.Size(368, 142);
             this.btn_DangKy.TabIndex = 1;
             this.btn_DangKy.Text = "Đăng Ký Khoản Vay";
             this.btn_DangKy.TextColor = System.Drawing.SystemColors.Window;
@@ -78,9 +79,10 @@
             this.btn_XemKhoanVay.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_XemKhoanVay.ForeColor = System.Drawing.Color.White;
             this.btn_XemKhoanVay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XemKhoanVay.Location = new System.Drawing.Point(267, 291);
+            this.btn_XemKhoanVay.Location = new System.Drawing.Point(329, 384);
+            this.btn_XemKhoanVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_XemKhoanVay.Name = "btn_XemKhoanVay";
-            this.btn_XemKhoanVay.Size = new System.Drawing.Size(375, 141);
+            this.btn_XemKhoanVay.Size = new System.Drawing.Size(368, 135);
             this.btn_XemKhoanVay.TabIndex = 2;
             this.btn_XemKhoanVay.Text = "Xem Thông Tin Khoản Vay";
             this.btn_XemKhoanVay.TextColor = System.Drawing.Color.White;
@@ -89,12 +91,14 @@
             // 
             // FrmTienIchVay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 510);
+            this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.btn_XemKhoanVay);
             this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmTienIchVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienIchVay";

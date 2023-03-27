@@ -14,24 +14,34 @@ namespace DOAN_Nhom4
     {
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
+        private Panel pnlNguoiDung;
         public FrmTienIchVay()
         {
             InitializeComponent();
         }
-        public FrmTienIchVay(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmTienIchVay(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
+            this.pnlNguoiDung = pnlNguoiDung;
+        }
+
+        private void addForm(Form form)
+        {
+            pnlNguoiDung.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
+            pnlNguoiDung.Controls.Add(form);
+            pnlNguoiDung.Tag = form;
+            form.Show();
         }
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmVay frmVay = new FrmVay(kh, tknh);
-            frmVay.ShowDialog();
-            frmVay = null;
-            this.Show();
+            FrmVay frmVay = new FrmVay(kh, tknh,pnlNguoiDung);
+            addForm(frmVay);
         }
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
