@@ -33,9 +33,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ptbTheTinDung = new System.Windows.Forms.PictureBox();
             this.ptbThongTin = new System.Windows.Forms.PictureBox();
+            this.ptbChuyenTrang = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThongTin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbChuyenTrang)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbQuayLai
@@ -47,6 +49,7 @@
             this.ptbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbQuayLai.TabIndex = 67;
             this.ptbQuayLai.TabStop = false;
+            this.ptbQuayLai.Click += new System.EventHandler(this.ptbQuayLai_Click);
             // 
             // lblTheTinDung
             // 
@@ -83,29 +86,43 @@
             // ptbThongTin
             // 
             this.ptbThongTin.Image = global::DOAN_Nhom4.Properties.Resources.thong_tin_hhb_visa_flexi;
-            this.ptbThongTin.Location = new System.Drawing.Point(462, 64);
+            this.ptbThongTin.Location = new System.Drawing.Point(442, 60);
             this.ptbThongTin.Name = "ptbThongTin";
-            this.ptbThongTin.Size = new System.Drawing.Size(649, 595);
+            this.ptbThongTin.Size = new System.Drawing.Size(649, 642);
             this.ptbThongTin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbThongTin.TabIndex = 71;
             this.ptbThongTin.TabStop = false;
+            // 
+            // ptbChuyenTrang
+            // 
+            this.ptbChuyenTrang.Image = global::DOAN_Nhom4.Properties.Resources.right_arrow1;
+            this.ptbChuyenTrang.Location = new System.Drawing.Point(1094, 340);
+            this.ptbChuyenTrang.Name = "ptbChuyenTrang";
+            this.ptbChuyenTrang.Size = new System.Drawing.Size(41, 45);
+            this.ptbChuyenTrang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbChuyenTrang.TabIndex = 72;
+            this.ptbChuyenTrang.TabStop = false;
+            this.ptbChuyenTrang.Click += new System.EventHandler(this.ptbChuyenTrang_Click);
             // 
             // FrmThongTinTheHHBVisaFlexi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 681);
+            this.ClientSize = new System.Drawing.Size(1139, 720);
+            this.Controls.Add(this.ptbChuyenTrang);
             this.Controls.Add(this.ptbThongTin);
             this.Controls.Add(this.ptbTheTinDung);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ptbQuayLai);
             this.Controls.Add(this.lblTheTinDung);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmThongTinTheHHBVisaFlexi";
             this.Text = "FrmThongTinTheHHBVisaFlexi";
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThongTin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbChuyenTrang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +135,6 @@
         private Panel panel1;
         private PictureBox ptbTheTinDung;
         private PictureBox ptbThongTin;
+        private PictureBox ptbChuyenTrang;
     }
 }
