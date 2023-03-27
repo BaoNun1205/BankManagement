@@ -42,12 +42,12 @@
             this.ptbVayTien = new System.Windows.Forms.PictureBox();
             this.lblVayTien = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblNapDienThoai = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ptbTinDung = new System.Windows.Forms.PictureBox();
             this.lblTinDung = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.ptbTinDung = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,9 +56,9 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +78,7 @@
             this.lblTenTK.BackColor = System.Drawing.Color.Transparent;
             this.lblTenTK.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTenTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTenTK.Location = new System.Drawing.Point(729, 5);
+            this.lblTenTK.Location = new System.Drawing.Point(710, 5);
             this.lblTenTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenTK.Name = "lblTenTK";
             this.lblTenTK.Size = new System.Drawing.Size(21, 32);
@@ -124,7 +124,7 @@
             this.ptbTienTich.Image = global::DOAN_Nhom4.Properties.Resources.plugin1;
             this.ptbTienTich.Location = new System.Drawing.Point(504, 3);
             this.ptbTienTich.Name = "ptbTienTich";
-            this.ptbTienTich.Size = new System.Drawing.Size(51, 47);
+            this.ptbTienTich.Size = new System.Drawing.Size(46, 43);
             this.ptbTienTich.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbTienTich.TabIndex = 1;
             this.ptbTienTich.TabStop = false;
@@ -205,6 +205,16 @@
             this.panel6.Size = new System.Drawing.Size(496, 231);
             this.panel6.TabIndex = 5;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
+            this.pictureBox2.Location = new System.Drawing.Point(198, 119);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(92, 67);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblNapDienThoai
             // 
             this.lblNapDienThoai.AutoSize = true;
@@ -226,6 +236,16 @@
             this.panel7.Size = new System.Drawing.Size(496, 231);
             this.panel7.TabIndex = 6;
             // 
+            // ptbTinDung
+            // 
+            this.ptbTinDung.Image = global::DOAN_Nhom4.Properties.Resources.tindungonline;
+            this.ptbTinDung.Location = new System.Drawing.Point(224, 119);
+            this.ptbTinDung.Name = "ptbTinDung";
+            this.ptbTinDung.Size = new System.Drawing.Size(92, 67);
+            this.ptbTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTinDung.TabIndex = 2;
+            this.ptbTinDung.TabStop = false;
+            // 
             // lblTinDung
             // 
             this.lblTinDung.AutoSize = true;
@@ -244,26 +264,6 @@
             this.panel8.Size = new System.Drawing.Size(496, 231);
             this.panel8.TabIndex = 7;
             // 
-            // ptbTinDung
-            // 
-            this.ptbTinDung.Image = global::DOAN_Nhom4.Properties.Resources.tindungonline;
-            this.ptbTinDung.Location = new System.Drawing.Point(224, 119);
-            this.ptbTinDung.Name = "ptbTinDung";
-            this.ptbTinDung.Size = new System.Drawing.Size(92, 67);
-            this.ptbTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTinDung.TabIndex = 2;
-            this.ptbTinDung.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
-            this.pictureBox2.Location = new System.Drawing.Point(198, 119);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(92, 67);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // FrmTienIch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -280,6 +280,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmTienIch";
             this.Text = "FrmTienIch";
+            this.Load += new System.EventHandler(this.FrmTienIch_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -293,10 +294,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

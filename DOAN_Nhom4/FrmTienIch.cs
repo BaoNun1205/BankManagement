@@ -12,9 +12,16 @@ namespace DOAN_Nhom4
 {
     public partial class FrmTienIch : Form
     {
+        private NguoiDung kh;
         public FrmTienIch()
         {
             InitializeComponent();
+        }
+
+        public FrmTienIch(NguoiDung kh)
+        {
+            InitializeComponent();
+            this.kh = kh;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -25,6 +32,11 @@ namespace DOAN_Nhom4
         private void lblNapDienThoai_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmTienIch_Load(object sender, EventArgs e)
+        {
+            lblTenTK.Text = kh.TenTK.ToString();
         }
     }
 }

@@ -64,8 +64,8 @@
         private void btnTienich_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmVay frmVay = new FrmVay(kh);
-            frmVay.ShowDialog();
+            FrmTienIch frmTienIch = new FrmTienIch(kh);
+            frmTienIch.ShowDialog();
             this.Close();
         }
     }
