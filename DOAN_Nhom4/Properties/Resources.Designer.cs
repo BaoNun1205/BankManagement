@@ -293,6 +293,36 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hhb_visa_Flexi {
+            get {
+                object obj = ResourceManager.GetObject("hhb_visa_Flexi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hhb_visa_infinite {
+            get {
+                object obj = ResourceManager.GetObject("hhb_visa_infinite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hhb_visa_platinum_cashback {
+            get {
+                object obj = ResourceManager.GetObject("hhb_visa_platinum_cashback", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_ctkm_pay_co_hoi_thuong_ga_5724_7940_1649171141 {
             get {
                 object obj = ResourceManager.GetObject("hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-1649171141", resourceCulture);

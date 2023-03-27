@@ -17,16 +17,18 @@ namespace DOAN_Nhom4
     {
         DBConnection db = new DBConnection();
         public NguoiDung nguoiDung;
+        public TaiKhoanNganHang tknh;
         public FrmVay()
         {
             InitializeComponent();
             this.Size = new Size(1501, 858);
         }
-        public FrmVay(NguoiDung nguoiDung)
+        public FrmVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.Size = new Size(1501, 858);
             this.nguoiDung = nguoiDung;
+            this.tknh = tknh;
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
