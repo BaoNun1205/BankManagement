@@ -18,17 +18,17 @@ namespace DOAN_Nhom4
         DBConnection db = new DBConnection();
         public NguoiDung nguoiDung;
         public TaiKhoanNganHang tknh;
+        private Panel pnlNguoiDung;
         public FrmVay()
         {
             InitializeComponent();
-            this.Size = new Size(1501, 858);
         }
-        public FrmVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh)
+        public FrmVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
-            this.Size = new Size(1501, 858);
             this.nguoiDung = nguoiDung;
             this.tknh = tknh;
+            this.pnlNguoiDung = pnlNguoiDung;
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
@@ -125,5 +125,14 @@ namespace DOAN_Nhom4
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

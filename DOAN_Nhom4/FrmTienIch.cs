@@ -58,10 +58,8 @@ namespace DOAN_Nhom4
 
         private void panelVayTien_Click(object sender, EventArgs e)
         {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh);
-            this.Hide();
-            frmTienIchVay.ShowDialog();
-            this.Close();
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh, pnlNguoiDung);
+            addForm(frmTienIchVay);
         }
 
         private void ptbVayTien_Click(object sender, EventArgs e)

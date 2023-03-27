@@ -182,6 +182,7 @@
             // 
             this.lblSdtValue.AutoSize = true;
             this.lblSdtValue.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSdtValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblSdtValue.Location = new System.Drawing.Point(854, 209);
             this.lblSdtValue.Name = "lblSdtValue";
             this.lblSdtValue.Size = new System.Drawing.Size(26, 27);
@@ -192,6 +193,7 @@
             // 
             this.lblNgaySinhValue.AutoSize = true;
             this.lblNgaySinhValue.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNgaySinhValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblNgaySinhValue.Location = new System.Drawing.Point(854, 91);
             this.lblNgaySinhValue.Name = "lblNgaySinhValue";
             this.lblNgaySinhValue.Size = new System.Drawing.Size(26, 27);
@@ -202,6 +204,7 @@
             // 
             this.lblCccdValue.AutoSize = true;
             this.lblCccdValue.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCccdValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblCccdValue.Location = new System.Drawing.Point(297, 209);
             this.lblCccdValue.Name = "lblCccdValue";
             this.lblCccdValue.Size = new System.Drawing.Size(26, 27);
@@ -212,6 +215,7 @@
             // 
             this.lblChuTKValue.AutoSize = true;
             this.lblChuTKValue.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblChuTKValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblChuTKValue.Location = new System.Drawing.Point(297, 93);
             this.lblChuTKValue.Name = "lblChuTKValue";
             this.lblChuTKValue.Size = new System.Drawing.Size(26, 27);
@@ -223,6 +227,7 @@
             this.label9.AutoSize = true;
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label9.Location = new System.Drawing.Point(692, 209);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 29);
@@ -234,6 +239,7 @@
             this.label8.AutoSize = true;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label8.Location = new System.Drawing.Point(692, 91);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 29);
@@ -245,6 +251,7 @@
             this.label7.AutoSize = true;
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label7.Location = new System.Drawing.Point(71, 209);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(200, 29);
@@ -256,6 +263,7 @@
             this.label6.AutoSize = true;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label6.Location = new System.Drawing.Point(71, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 29);
