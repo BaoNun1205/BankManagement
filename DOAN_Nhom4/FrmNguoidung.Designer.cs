@@ -38,10 +38,12 @@
             this.btnTaikhoan = new CustomButton.VBButton();
             this.pnlNguoidung = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pBThoat = new System.Windows.Forms.PictureBox();
             this.lblTenTK = new System.Windows.Forms.Label();
             this.lblXinchao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,11 +75,11 @@
             this.btnTrangchu.ForeColor = System.Drawing.Color.White;
             this.btnTrangchu.Image = global::DOAN_Nhom4.Properties.Resources.home1;
             this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.Location = new System.Drawing.Point(4, 85);
+            this.btnTrangchu.Location = new System.Drawing.Point(2, 85);
             this.btnTrangchu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnTrangchu.Size = new System.Drawing.Size(261, 88);
+            this.btnTrangchu.Size = new System.Drawing.Size(263, 88);
             this.btnTrangchu.TabIndex = 32;
             this.btnTrangchu.Text = "      Trang chủ";
             this.btnTrangchu.TextColor = System.Drawing.Color.White;
@@ -98,11 +100,11 @@
             this.btnCaidat.ForeColor = System.Drawing.Color.White;
             this.btnCaidat.Image = global::DOAN_Nhom4.Properties.Resources.settings2;
             this.btnCaidat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaidat.Location = new System.Drawing.Point(-1, 717);
+            this.btnCaidat.Location = new System.Drawing.Point(2, 717);
             this.btnCaidat.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnCaidat.Name = "btnCaidat";
             this.btnCaidat.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnCaidat.Size = new System.Drawing.Size(261, 88);
+            this.btnCaidat.Size = new System.Drawing.Size(263, 88);
             this.btnCaidat.TabIndex = 41;
             this.btnCaidat.Text = "  Cài đặt";
             this.btnCaidat.TextColor = System.Drawing.Color.White;
@@ -126,7 +128,7 @@
             this.btnHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHotro.Name = "btnHotro";
             this.btnHotro.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnHotro.Size = new System.Drawing.Size(261, 88);
+            this.btnHotro.Size = new System.Drawing.Size(264, 88);
             this.btnHotro.TabIndex = 39;
             this.btnHotro.Text = "  Hỗ trợ";
             this.btnHotro.TextColor = System.Drawing.Color.White;
@@ -242,6 +244,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.panel3.Controls.Add(this.pBThoat);
             this.panel3.Controls.Add(this.lblTenTK);
             this.panel3.Controls.Add(this.lblXinchao);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -249,6 +252,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1408, 90);
             this.panel3.TabIndex = 55;
+            // 
+            // pBThoat
+            // 
+            this.pBThoat.Image = global::DOAN_Nhom4.Properties.Resources.cancel2;
+            this.pBThoat.Location = new System.Drawing.Point(1360, 3);
+            this.pBThoat.Name = "pBThoat";
+            this.pBThoat.Size = new System.Drawing.Size(45, 35);
+            this.pBThoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBThoat.TabIndex = 52;
+            this.pBThoat.TabStop = false;
+            this.pBThoat.Click += new System.EventHandler(this.pBThoat_Click);
             // 
             // lblTenTK
             // 
@@ -292,6 +306,7 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,5 +325,6 @@
         private Panel panel3;
         private Label lblTenTK;
         private Label lblXinchao;
+        private PictureBox pBThoat;
     }
 }

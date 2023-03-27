@@ -45,10 +45,10 @@
             // ptbLoGo
             // 
             this.ptbLoGo.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
-            this.ptbLoGo.Location = new System.Drawing.Point(310, 79);
+            this.ptbLoGo.Location = new System.Drawing.Point(472, 12);
             this.ptbLoGo.Name = "ptbLoGo";
-            this.ptbLoGo.Size = new System.Drawing.Size(518, 518);
-            this.ptbLoGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLoGo.Size = new System.Drawing.Size(195, 154);
+            this.ptbLoGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbLoGo.TabIndex = 14;
             this.ptbLoGo.TabStop = false;
             // 

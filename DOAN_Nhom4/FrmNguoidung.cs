@@ -23,6 +23,8 @@ namespace DOAN_Nhom4
         public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            addForm(frmtrangchu);
             this.kh = kh;
             this.tknh = tknh;
         }
@@ -30,6 +32,8 @@ namespace DOAN_Nhom4
         public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
         {
             InitializeComponent();
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            addForm(frmtrangchu);
             this.kh = kh;
             this.tknh = tknh;
             this.gd = gd;
@@ -79,6 +83,11 @@ namespace DOAN_Nhom4
         {
             FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung);
             addForm(frmTienIch);
+        }
+
+        private void pBThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

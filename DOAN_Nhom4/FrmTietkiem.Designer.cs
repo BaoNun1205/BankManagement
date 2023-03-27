@@ -74,13 +74,13 @@
             this.pnlTietkiem.Controls.Add(this.btn18thang);
             this.pnlTietkiem.Controls.Add(this.label13);
             this.pnlTietkiem.Controls.Add(this.btn12thang);
-            this.pnlTietkiem.Controls.Add(this.btn1thang);
             this.pnlTietkiem.Controls.Add(this.btn3thang);
+            this.pnlTietkiem.Controls.Add(this.btn1thang);
             this.pnlTietkiem.Controls.Add(this.btn6thang);
             this.pnlTietkiem.Location = new System.Drawing.Point(39, 20);
             this.pnlTietkiem.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlTietkiem.Name = "pnlTietkiem";
-            this.pnlTietkiem.Size = new System.Drawing.Size(1071, 674);
+            this.pnlTietkiem.Size = new System.Drawing.Size(1071, 690);
             this.pnlTietkiem.TabIndex = 0;
             // 
             // lblTKTK
@@ -88,7 +88,7 @@
             this.lblTKTK.AutoSize = true;
             this.lblTKTK.BackColor = System.Drawing.Color.White;
             this.lblTKTK.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTKTK.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblTKTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblTKTK.Location = new System.Drawing.Point(787, 20);
             this.lblTKTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTKTK.Name = "lblTKTK";
@@ -115,7 +115,7 @@
             this.txtSotien.BackColor = System.Drawing.Color.White;
             this.txtSotien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSotien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSotien.ForeColor = System.Drawing.Color.DarkCyan;
+            this.txtSotien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.txtSotien.Location = new System.Drawing.Point(5, 15);
             this.txtSotien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtSotien.Name = "txtSotien";
@@ -153,14 +153,14 @@
             this.panel6.Location = new System.Drawing.Point(81, 242);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(901, 431);
+            this.panel6.Size = new System.Drawing.Size(901, 447);
             this.panel6.TabIndex = 61;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // btnXacnhan
             // 
-            this.btnXacnhan.BackColor = System.Drawing.Color.Teal;
-            this.btnXacnhan.BackgroundColor = System.Drawing.Color.Teal;
+            this.btnXacnhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXacnhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnXacnhan.BorderColor = System.Drawing.Color.Teal;
             this.btnXacnhan.BorderRadius = 20;
             this.btnXacnhan.BorderSize = 0;
@@ -194,7 +194,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label6.Location = new System.Drawing.Point(248, 209);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -204,7 +204,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Teal;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel7.Location = new System.Drawing.Point(87, 357);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -228,7 +228,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.Teal;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label10.Location = new System.Drawing.Point(516, 44);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
@@ -250,7 +250,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.Teal;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.panel8.Location = new System.Drawing.Point(431, 44);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel8.Name = "panel8";
@@ -261,7 +261,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.Teal;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label12.Location = new System.Drawing.Point(179, 44);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
@@ -271,7 +271,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.Teal;
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.panel9.ForeColor = System.Drawing.Color.Teal;
             this.panel9.Location = new System.Drawing.Point(87, 172);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -308,7 +308,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label1.Location = new System.Drawing.Point(33, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -318,7 +318,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel2.Location = new System.Drawing.Point(33, 51);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -330,20 +330,20 @@
             // 
             this.btn18thang.BackColor = System.Drawing.Color.Transparent;
             this.btn18thang.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btn18thang.BorderColor = System.Drawing.Color.Teal;
+            this.btn18thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn18thang.BorderRadius = 20;
             this.btn18thang.BorderSize = 2;
             this.btn18thang.FlatAppearance.BorderSize = 0;
             this.btn18thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn18thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn18thang.ForeColor = System.Drawing.Color.Teal;
-            this.btn18thang.Location = new System.Drawing.Point(881, 175);
+            this.btn18thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn18thang.Location = new System.Drawing.Point(800, 182);
             this.btn18thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn18thang.Name = "btn18thang";
-            this.btn18thang.Size = new System.Drawing.Size(90, 56);
+            this.btn18thang.Size = new System.Drawing.Size(70, 43);
             this.btn18thang.TabIndex = 65;
             this.btn18thang.Text = "18";
-            this.btn18thang.TextColor = System.Drawing.Color.Teal;
+            this.btn18thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn18thang.UseVisualStyleBackColor = false;
             this.btn18thang.Click += new System.EventHandler(this.btn18thang_Click);
             // 
@@ -352,7 +352,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.Teal;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label13.Location = new System.Drawing.Point(33, 187);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
@@ -364,20 +364,20 @@
             // 
             this.btn12thang.BackColor = System.Drawing.Color.Transparent;
             this.btn12thang.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btn12thang.BorderColor = System.Drawing.Color.Teal;
+            this.btn12thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn12thang.BorderRadius = 20;
             this.btn12thang.BorderSize = 2;
             this.btn12thang.FlatAppearance.BorderSize = 0;
             this.btn12thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn12thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn12thang.ForeColor = System.Drawing.Color.Teal;
-            this.btn12thang.Location = new System.Drawing.Point(772, 175);
+            this.btn12thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn12thang.Location = new System.Drawing.Point(711, 182);
             this.btn12thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn12thang.Name = "btn12thang";
-            this.btn12thang.Size = new System.Drawing.Size(90, 56);
+            this.btn12thang.Size = new System.Drawing.Size(70, 43);
             this.btn12thang.TabIndex = 64;
             this.btn12thang.Text = "12";
-            this.btn12thang.TextColor = System.Drawing.Color.Teal;
+            this.btn12thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn12thang.UseVisualStyleBackColor = false;
             this.btn12thang.Click += new System.EventHandler(this.btn12thang_Click);
             // 
@@ -385,20 +385,20 @@
             // 
             this.btn1thang.BackColor = System.Drawing.Color.Transparent;
             this.btn1thang.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btn1thang.BorderColor = System.Drawing.Color.Teal;
+            this.btn1thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn1thang.BorderRadius = 20;
             this.btn1thang.BorderSize = 2;
             this.btn1thang.FlatAppearance.BorderSize = 0;
             this.btn1thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn1thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn1thang.ForeColor = System.Drawing.Color.Teal;
-            this.btn1thang.Location = new System.Drawing.Point(443, 176);
+            this.btn1thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn1thang.Location = new System.Drawing.Point(443, 182);
             this.btn1thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn1thang.Name = "btn1thang";
-            this.btn1thang.Size = new System.Drawing.Size(90, 55);
+            this.btn1thang.Size = new System.Drawing.Size(70, 43);
             this.btn1thang.TabIndex = 61;
             this.btn1thang.Text = "1";
-            this.btn1thang.TextColor = System.Drawing.Color.Teal;
+            this.btn1thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn1thang.UseVisualStyleBackColor = false;
             this.btn1thang.Click += new System.EventHandler(this.btn1thang_Click);
             // 
@@ -406,20 +406,20 @@
             // 
             this.btn3thang.BackColor = System.Drawing.Color.Transparent;
             this.btn3thang.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btn3thang.BorderColor = System.Drawing.Color.Teal;
+            this.btn3thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn3thang.BorderRadius = 20;
             this.btn3thang.BorderSize = 2;
             this.btn3thang.FlatAppearance.BorderSize = 0;
             this.btn3thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn3thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn3thang.ForeColor = System.Drawing.Color.Teal;
-            this.btn3thang.Location = new System.Drawing.Point(551, 176);
+            this.btn3thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn3thang.Location = new System.Drawing.Point(530, 182);
             this.btn3thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn3thang.Name = "btn3thang";
-            this.btn3thang.Size = new System.Drawing.Size(90, 55);
+            this.btn3thang.Size = new System.Drawing.Size(70, 43);
             this.btn3thang.TabIndex = 62;
             this.btn3thang.Text = "3";
-            this.btn3thang.TextColor = System.Drawing.Color.Teal;
+            this.btn3thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn3thang.UseVisualStyleBackColor = false;
             this.btn3thang.Click += new System.EventHandler(this.btn3thang_Click);
             // 
@@ -427,20 +427,20 @@
             // 
             this.btn6thang.BackColor = System.Drawing.Color.Transparent;
             this.btn6thang.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btn6thang.BorderColor = System.Drawing.Color.Teal;
+            this.btn6thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn6thang.BorderRadius = 20;
             this.btn6thang.BorderSize = 2;
             this.btn6thang.FlatAppearance.BorderSize = 0;
             this.btn6thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn6thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn6thang.ForeColor = System.Drawing.Color.Teal;
-            this.btn6thang.Location = new System.Drawing.Point(662, 176);
+            this.btn6thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn6thang.Location = new System.Drawing.Point(621, 182);
             this.btn6thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn6thang.Name = "btn6thang";
-            this.btn6thang.Size = new System.Drawing.Size(90, 55);
+            this.btn6thang.Size = new System.Drawing.Size(70, 43);
             this.btn6thang.TabIndex = 63;
             this.btn6thang.Text = "6";
-            this.btn6thang.TextColor = System.Drawing.Color.Teal;
+            this.btn6thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn6thang.UseVisualStyleBackColor = false;
             this.btn6thang.Click += new System.EventHandler(this.btn6thang_Click);
             // 

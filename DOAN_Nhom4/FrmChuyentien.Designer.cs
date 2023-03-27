@@ -63,20 +63,20 @@
             // 
             this.btnHuy.BackColor = System.Drawing.Color.Transparent;
             this.btnHuy.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnHuy.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnHuy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnHuy.BorderRadius = 0;
             this.btnHuy.BorderSize = 3;
             this.btnHuy.FlatAppearance.BorderSize = 0;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHuy.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnHuy.Location = new System.Drawing.Point(244, 544);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(156, 58);
             this.btnHuy.TabIndex = 24;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextColor = System.Drawing.Color.DarkCyan;
+            this.btnHuy.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -84,20 +84,20 @@
             // 
             this.btnTieptuc.BackColor = System.Drawing.Color.Transparent;
             this.btnTieptuc.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnTieptuc.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnTieptuc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnTieptuc.BorderRadius = 0;
             this.btnTieptuc.BorderSize = 3;
             this.btnTieptuc.FlatAppearance.BorderSize = 0;
             this.btnTieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTieptuc.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTieptuc.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnTieptuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnTieptuc.Location = new System.Drawing.Point(597, 544);
             this.btnTieptuc.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTieptuc.Name = "btnTieptuc";
             this.btnTieptuc.Size = new System.Drawing.Size(156, 58);
             this.btnTieptuc.TabIndex = 23;
             this.btnTieptuc.Text = "Tiếp tục";
-            this.btnTieptuc.TextColor = System.Drawing.Color.DarkCyan;
+            this.btnTieptuc.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnTieptuc.UseVisualStyleBackColor = false;
             this.btnTieptuc.Click += new System.EventHandler(this.btnTieptuc_Click);
             // 
@@ -105,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label2.Location = new System.Drawing.Point(48, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -158,7 +158,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label3.Location = new System.Drawing.Point(48, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -170,7 +170,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label4.Location = new System.Drawing.Point(48, 358);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -207,7 +207,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label5.Location = new System.Drawing.Point(48, 242);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -242,7 +242,7 @@
             // 
             this.lblTenTKhoan.AutoSize = true;
             this.lblTenTKhoan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTenTKhoan.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblTenTKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblTenTKhoan.Location = new System.Drawing.Point(549, 165);
             this.lblTenTKhoan.Name = "lblTenTKhoan";
             this.lblTenTKhoan.Size = new System.Drawing.Size(20, 25);
@@ -253,7 +253,7 @@
             // 
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSoDuString.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblSoDuString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblSoDuString.Location = new System.Drawing.Point(549, 295);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(88, 32);
@@ -264,7 +264,7 @@
             // 
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSoDu.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblSoDu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblSoDu.Location = new System.Drawing.Point(643, 295);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(31, 32);
