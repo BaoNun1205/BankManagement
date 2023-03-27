@@ -51,5 +51,20 @@ namespace DOAN_Nhom4
             frmtrangchu.ShowDialog();
             this.Close();
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason == CloseReason.UserClosing) // chỉ đóng khi người dùng tắt Form
+            {
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form != this) // không đóng Form chính
+                    {
+                        form.Close(); // đóng các Form con
+                    }
+                }
+            }
+        }
     }
 }

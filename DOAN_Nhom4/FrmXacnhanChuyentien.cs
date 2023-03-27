@@ -21,16 +21,12 @@ namespace DOAN_Nhom4
         public FrmXacnhanChuyentien()
         {
             InitializeComponent();
-            pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
-            pnlXacnhanChuyentien.BackColor = Color.Transparent;
             this.txtMatkhau.PasswordChar = '*';
         }
 
         public FrmXacnhanChuyentien(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
         {
             InitializeComponent();
-            pnlXacnhanChuyentien.Parent = picBoxXacnhanChuyentien;
-            pnlXacnhanChuyentien.BackColor = Color.Transparent;
             this.txtMatkhau.PasswordChar = '*';
             this.kh = kh;
             this.tknh = tknh;
@@ -57,6 +53,7 @@ namespace DOAN_Nhom4
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();
             }
+
             else
             {
                 MessageBox.Show("Sai mat khau");

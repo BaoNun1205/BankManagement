@@ -35,7 +35,28 @@ namespace DOAN_Nhom4
             lblSdtValue.Text = kh.Sdt.ToString();
         }
 
-        private void btnQuaylai_Click(object sender, EventArgs e)
+        private void btnChuyentien_Click(object sender, EventArgs e)
+        {
+            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
+            this.Hide();
+            frmchuyentien.ShowDialog();
+            this.Close();
+        }
+
+        private void btnTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
+            this.Hide();
+            frmtietkiem.ShowDialog();
+            this.Close();
+        }
+
+        private void btnTienich_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
             this.Hide();
@@ -43,20 +64,9 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void pb_quaylai_Click(object sender, EventArgs e)
+        private void btnTaikhoan_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
-        }
 
-        private void btnBaomat_Click(object sender, EventArgs e)
-        {
-            FrmBaomat frmbaomat = new FrmBaomat(kh, tknh);
-            this.Hide();
-            frmbaomat.ShowDialog();
-            this.Close();
         }
     }
 }

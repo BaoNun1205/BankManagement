@@ -20,14 +20,10 @@ namespace DOAN_Nhom4
         public FrmChuyentien()
         {
             InitializeComponent();
-            pnlChuyentien.Parent = picBoxChuyentien;
-            pnlChuyentien.BackColor = Color.Transparent;
         }
         public FrmChuyentien(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
-            pnlChuyentien.Parent = picBoxChuyentien;
-            pnlChuyentien.BackColor = Color.Transparent;
             this.kh = kh;
             this.tknh = tknh;
         }
@@ -46,17 +42,17 @@ namespace DOAN_Nhom4
 
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            if (lblTenTK.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
+            if (lblTenTKhoan.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
-                GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTK.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTKhoan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd);
-                this.Hide();
+               // this.Hide();
                 frmxacnhan.ShowDialog();
-                this.Close();
+                //this.Close();
             }
             else
             {
-                if (lblTenTK.Text == "Khong ton tai")
+                if (lblTenTKhoan.Text == "Khong ton tai")
                     MessageBox.Show("Tai khoang khong ton tai");
                 else
                     MessageBox.Show("So Du cua ban khong du");
@@ -81,12 +77,36 @@ namespace DOAN_Nhom4
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
             if (tk != null)
             {
-                lblTenTK.Text = kh.TenTK.ToString();
+                lblTenTKhoan.Text = kh.TenTK.ToString();
             }
             else
             {
-                lblTenTK.Text = "Khong ton tai";
+                lblTenTKhoan.Text = "Khong ton tai";
             }
+        }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            this.Hide();
+            frmtrangchu.ShowDialog();
+            this.Close();
+        }
+
+        private void btnTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
+            this.Hide();
+            frmtietkiem.ShowDialog();
+            this.Close();
+        }
+
+        private void btnTaikhoan_Click(object sender, EventArgs e)
+        {
+            FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
+            this.Hide();
+            frmHienThiThongTinCaNhan.ShowDialog();
+            this.Close();
         }
     }
 }
