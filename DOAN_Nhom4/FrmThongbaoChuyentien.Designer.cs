@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongbaoChuyentien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVetrangchu = new CustomButton.VBButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblSotien = new System.Windows.Forms.Label();
             this.lblNoidung = new System.Windows.Forms.Label();
@@ -47,18 +48,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblQuaylai = new System.Windows.Forms.Label();
-            this.picBoxQuaylai = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.btnVetrangchu);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.lblSotien);
             this.panel1.Controls.Add(this.lblNoidung);
@@ -76,8 +75,6 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblQuaylai);
-            this.panel1.Controls.Add(this.picBoxQuaylai);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -2);
@@ -85,6 +82,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 642);
             this.panel1.TabIndex = 2;
+            // 
+            // btnVetrangchu
+            // 
+            this.btnVetrangchu.BackColor = System.Drawing.Color.White;
+            this.btnVetrangchu.BackgroundColor = System.Drawing.Color.White;
+            this.btnVetrangchu.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVetrangchu.BorderRadius = 0;
+            this.btnVetrangchu.BorderSize = 2;
+            this.btnVetrangchu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVetrangchu.FlatAppearance.BorderSize = 0;
+            this.btnVetrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVetrangchu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVetrangchu.ForeColor = System.Drawing.Color.Black;
+            this.btnVetrangchu.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow5;
+            this.btnVetrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVetrangchu.Location = new System.Drawing.Point(2, 1);
+            this.btnVetrangchu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnVetrangchu.Name = "btnVetrangchu";
+            this.btnVetrangchu.Size = new System.Drawing.Size(140, 31);
+            this.btnVetrangchu.TabIndex = 32;
+            this.btnVetrangchu.Text = "   Về trang chủ";
+            this.btnVetrangchu.TextColor = System.Drawing.Color.Black;
+            this.btnVetrangchu.UseVisualStyleBackColor = false;
+            this.btnVetrangchu.Click += new System.EventHandler(this.btnVetrangchu_Click);
             // 
             // panel4
             // 
@@ -285,30 +306,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Loại giao dịch";
             // 
-            // lblQuaylai
-            // 
-            this.lblQuaylai.AutoSize = true;
-            this.lblQuaylai.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQuaylai.Location = new System.Drawing.Point(39, 1);
-            this.lblQuaylai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblQuaylai.Name = "lblQuaylai";
-            this.lblQuaylai.Size = new System.Drawing.Size(154, 26);
-            this.lblQuaylai.TabIndex = 3;
-            this.lblQuaylai.Text = "Về trang chủ";
-            this.lblQuaylai.Click += new System.EventHandler(this.lblQuaylai_Click);
-            // 
-            // picBoxQuaylai
-            // 
-            this.picBoxQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.picBoxQuaylai.Location = new System.Drawing.Point(2, 1);
-            this.picBoxQuaylai.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.picBoxQuaylai.Name = "picBoxQuaylai";
-            this.picBoxQuaylai.Size = new System.Drawing.Size(33, 32);
-            this.picBoxQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxQuaylai.TabIndex = 2;
-            this.picBoxQuaylai.TabStop = false;
-            this.picBoxQuaylai.Click += new System.EventHandler(this.picBoxQuaylai_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -348,7 +345,6 @@
             this.Load += new System.EventHandler(this.FrmThongbaoChuyentien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxQuaylai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -372,11 +368,10 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private Label lblQuaylai;
-        private PictureBox picBoxQuaylai;
         private Label label1;
         private PictureBox pictureBox1;
         private Label lblSotien;
         private Panel panel4;
+        private CustomButton.VBButton btnVetrangchu;
     }
 }

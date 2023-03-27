@@ -27,7 +27,7 @@
 
         private void FrmTrangchu_Load(object sender, EventArgs e)
         {
-            lblTenTK.Text = kh.TenTK.ToString();
+            
         }
 
         private void picBoxLsgd_Click(object sender, EventArgs e)
