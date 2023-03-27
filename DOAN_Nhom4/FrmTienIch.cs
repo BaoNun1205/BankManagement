@@ -14,16 +14,29 @@ namespace DOAN_Nhom4
     {
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
+        private Panel pnlNguoiDung;
         public FrmTienIch()
         {
             InitializeComponent();
         }
 
-        public FrmTienIch(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmTienIch(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
+            this.pnlNguoiDung = pnlNguoiDung;
+        }
+
+        private void addForm(Form form)
+        {
+            pnlNguoiDung.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
+            pnlNguoiDung.Controls.Add(form);
+            pnlNguoiDung.Tag = form;
+            form.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,10 +54,9 @@ namespace DOAN_Nhom4
 
         private void FrmTienIch_Load(object sender, EventArgs e)
         {
-            lblTenTK.Text = kh.TenTK.ToString();
         }
 
-        private void panel5_Click(object sender, EventArgs e)
+        private void panelVayTien_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh);
             this.Hide();
@@ -54,12 +66,28 @@ namespace DOAN_Nhom4
 
         private void ptbVayTien_Click(object sender, EventArgs e)
         {
-            panel5_Click(sender, e);
+            panelVayTien_Click(sender, e);
         }
 
         private void lblVayTien_Click(object sender, EventArgs e)
         {
-            panel5_Click(sender, e);
+            panelVayTien_Click(sender, e);
+        }
+
+        private void panelTinDung_Click(object sender, EventArgs e)
+        {
+            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh);
+            addForm(frmDangKyTinDung);
+        }
+
+        private void lblTinDung_Click(object sender, EventArgs e)
+        {
+            panelTinDung_Click(sender, e);
+        }
+
+        private void ptbTinDung_Click(object sender, EventArgs e)
+        {
+            panelTinDung_Click(sender, e);
         }
     }
 }

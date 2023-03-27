@@ -383,6 +383,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Image4 {
+            get {
+                object obj = ResourceManager.GetObject("Image4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1215119911_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1215119911-612x612", resourceCulture);
@@ -488,6 +498,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap left_arrow5 {
             get {
                 object obj = ResourceManager.GetObject("left-arrow5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap naptiendienthoai {
+            get {
+                object obj = ResourceManager.GetObject("naptiendienthoai", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -708,6 +728,36 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap settings2 {
             get {
                 object obj = ResourceManager.GetObject("settings2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thong_tin_hhb_visa_flexi {
+            get {
+                object obj = ResourceManager.GetObject("thong_tin_hhb_visa_flexi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thong_tin_hhb_visa_infinite {
+            get {
+                object obj = ResourceManager.GetObject("thong_tin_hhb_visa_infinite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thong_tin_hhb_visa_platinum_cashback {
+            get {
+                object obj = ResourceManager.GetObject("thong_tin_hhb_visa_platinum_cashback", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

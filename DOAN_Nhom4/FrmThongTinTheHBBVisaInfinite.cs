@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
-    public partial class FrmThongTinTheHHBVisaFlexi : Form
+    public partial class FrmThongTinTheHBBVisaInfinite : Form
     {
-        public FrmThongTinTheHHBVisaFlexi()
+        public FrmThongTinTheHBBVisaInfinite()
         {
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void lblTheTinDung_Click(object sender, EventArgs e)
         {
 
         }

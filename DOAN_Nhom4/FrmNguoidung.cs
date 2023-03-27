@@ -74,5 +74,11 @@ namespace DOAN_Nhom4
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
             addForm(frmtietkiem);
         }
+
+        private void btnTienich_Click(object sender, EventArgs e)
+        {
+            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung);
+            addForm(frmTienIch);
+        }
     }
 }

@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
-    public partial class XacNhanThongTinNguoiDungVay : Form
+    public partial class FrmXacNhanThongTinNguoiDungVay : Form
     {
         public ThongTinNguoiDungVay ttNgDung;
         public NguoiDung nguoiDung;
-        public XacNhanThongTinNguoiDungVay()
+        public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
         }
 
-        public XacNhanThongTinNguoiDungVay(ThongTinNguoiDungVay ttNgDung)
+        public FrmXacNhanThongTinNguoiDungVay(ThongTinNguoiDungVay ttNgDung)
         {
             InitializeComponent();
             this.ttNgDung = ttNgDung;

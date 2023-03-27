@@ -1,6 +1,6 @@
 ﻿namespace DOAN_Nhom4
 {
-    partial class XacNhanThongTinNguoiDungVay
+    partial class FrmXacNhanThongTinNguoiDungVay
     {
         /// <summary>
         /// Required designer variable.

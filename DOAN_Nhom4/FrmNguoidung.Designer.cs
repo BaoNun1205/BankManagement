@@ -155,6 +155,7 @@
             this.btnTienich.Text = "    Tiện ích";
             this.btnTienich.TextColor = System.Drawing.Color.White;
             this.btnTienich.UseVisualStyleBackColor = false;
+            this.btnTienich.Click += new System.EventHandler(this.btnTienich_Click);
             // 
             // btnTietkiem
             // 

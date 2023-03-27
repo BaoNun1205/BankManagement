@@ -122,7 +122,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(536, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(527, 407);
+            this.pictureBox3.Size = new System.Drawing.Size(526, 406);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
@@ -172,10 +172,10 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(-2, 376);
+            this.panel3.Location = new System.Drawing.Point(1, 376);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1145, 346);
+            this.panel3.Size = new System.Drawing.Size(1136, 346);
             this.panel3.TabIndex = 2;
             // 
             // lblSdtValue

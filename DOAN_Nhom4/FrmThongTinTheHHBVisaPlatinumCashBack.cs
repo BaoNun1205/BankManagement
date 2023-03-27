@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
-    public partial class FrmThongTinTheHHBVisaFlexi : Form
+    public partial class FrmThongTinTheHHBVisaPlatinumCashBack : Form
     {
-        public FrmThongTinTheHHBVisaFlexi()
+        public FrmThongTinTheHHBVisaPlatinumCashBack()
         {
             InitializeComponent();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

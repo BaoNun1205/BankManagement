@@ -27,7 +27,7 @@
 
         private void FrmTrangchu_Load(object sender, EventArgs e)
         {
-            
+            ptbLoGo.Image = Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f;
         }
 
         private void picBoxLsgd_Click(object sender, EventArgs e)
@@ -63,10 +63,6 @@
 
         private void btnTienich_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh);
-            frmTienIch.ShowDialog();
-            this.Close();
         }
     }
 }

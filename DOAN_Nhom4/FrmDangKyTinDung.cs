@@ -12,6 +12,8 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangKyTinDung : Form
     {
+        private NguoiDung kh;
+        private TaiKhoanNganHang tknh;
         Image[] images = new Image[]
         {
             Properties.Resources.hhb_visa_Flexi,
@@ -21,6 +23,13 @@ namespace DOAN_Nhom4
         public FrmDangKyTinDung()
         {
             InitializeComponent();
+        }
+
+        public FrmDangKyTinDung(NguoiDung kh, TaiKhoanNganHang tknh)
+        {
+            InitializeComponent();
+            this.kh = kh;
+            this.tknh = tknh;
         }
 
         private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,11 +43,6 @@ namespace DOAN_Nhom4
             {
                 ptbTheTinDung.Image = null;
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
