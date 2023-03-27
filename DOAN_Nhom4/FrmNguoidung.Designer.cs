@@ -41,9 +41,11 @@
             this.pBThoat = new System.Windows.Forms.PictureBox();
             this.lblTenTK = new System.Windows.Forms.Label();
             this.lblXinchao = new System.Windows.Forms.Label();
+            this.ptbMini = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -244,6 +246,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.panel3.Controls.Add(this.ptbMini);
             this.panel3.Controls.Add(this.pBThoat);
             this.panel3.Controls.Add(this.lblTenTK);
             this.panel3.Controls.Add(this.lblXinchao);
@@ -252,6 +255,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1408, 90);
             this.panel3.TabIndex = 55;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
             // pBThoat
             // 
@@ -290,6 +294,17 @@
             this.lblXinchao.TabIndex = 43;
             this.lblXinchao.Text = "Xin chào,";
             // 
+            // ptbMini
+            // 
+            this.ptbMini.Image = global::DOAN_Nhom4.Properties.Resources.cancel2;
+            this.ptbMini.Location = new System.Drawing.Point(1318, 3);
+            this.ptbMini.Name = "ptbMini";
+            this.ptbMini.Size = new System.Drawing.Size(45, 35);
+            this.ptbMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbMini.TabIndex = 53;
+            this.ptbMini.TabStop = false;
+            this.ptbMini.Click += new System.EventHandler(this.ptbMini_Click);
+            // 
             // FrmNguoidung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -307,6 +322,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,5 +342,6 @@
         private Label lblTenTK;
         private Label lblXinchao;
         private PictureBox pBThoat;
+        private PictureBox ptbMini;
     }
 }
