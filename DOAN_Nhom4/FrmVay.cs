@@ -19,6 +19,7 @@ namespace DOAN_Nhom4
         public NguoiDung nguoiDung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
+        BigInteger i = 0;
         public FrmVay()
         {
             InitializeComponent();
@@ -86,7 +87,8 @@ namespace DOAN_Nhom4
             {
                 if (cb_DongY.Checked == true)
                 {
-                    ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, txt_SoTienVay.Text, txt_ThoiGianVay.Text, s, txt_NgayVay.Value);
+                    i++;
+                    ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(i.ToString(),cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), s, txt_NgayVay.Value);
                     FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(ttNgDung);
                     this.Hide();
                     xacnhan.ShowDialog();

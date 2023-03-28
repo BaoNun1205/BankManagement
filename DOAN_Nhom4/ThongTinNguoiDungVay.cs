@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace DOAN_Nhom4
 {
     public class ThongTinNguoiDungVay
     {
+        private string soTKVay;
         private string danhXung;
         private string hoTen;
         private string cccd;
@@ -17,10 +19,15 @@ namespace DOAN_Nhom4
         private string ngheNghiep;
         private string thuNhap;
         private string spVay;
-        private string soTienVay;
-        private string thoiGianVay;
+        private BigInteger soTienVay;
+        private int thoiGianVay;
         private string chiNhanhVay;
         private DateTime ngayVay;
+        public string SoTKVay
+        {
+            get { return soTKVay; }
+            set { soTKVay = value; }
+        }
         public string DanhXung
         {
             get { return danhXung; }
@@ -84,7 +91,7 @@ namespace DOAN_Nhom4
                 spVay = value;
             }
         }
-        public string SoTienVay
+        public BigInteger SoTienVay
         {
             get { return soTienVay; }
             set
@@ -92,7 +99,7 @@ namespace DOAN_Nhom4
                 soTienVay = value;
             }
         }
-        public string ThoiGianVay
+        public int ThoiGianVay
         {
             get { return thoiGianVay; }
             set
@@ -117,8 +124,9 @@ namespace DOAN_Nhom4
             }
         }
         public ThongTinNguoiDungVay() { }
-        public ThongTinNguoiDungVay(string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, string soTienVay, string thoiGianVay, string chiNhanhVay, DateTime ngayVay)
+        public ThongTinNguoiDungVay(string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay, string chiNhanhVay, DateTime ngayVay)
         {
+            this.soTKVay = soTKVay;
             this.danhXung = danhXung;
             this.hoTen = hoTen;
             this.cccd = cccd;

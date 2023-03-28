@@ -15,6 +15,7 @@ namespace DOAN_Nhom4
     {
         public ThongTinNguoiDungVay ttNgDung;
         public NguoiDung nguoiDung;
+        ThongTinNguoiDungVayDAO ngDungVay = new ThongTinNguoiDungVayDAO();
         public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
@@ -37,8 +38,8 @@ namespace DOAN_Nhom4
             txt_NgheNghiep.Text = ttNgDung.NgheNghiep;
             txt_ThuNhap.Text = ttNgDung.ThuNhap;
             txt_SPVay.Text = ttNgDung.SpVay;
-            txt_SoTienVay.Text = BigInteger.Parse(ttNgDung.SoTienVay).ToString("N0");
-            txt_ThoiGianVay.Text = ttNgDung.ThoiGianVay;
+            txt_SoTienVay.Text = ttNgDung.SoTienVay.ToString("N0");
+            txt_ThoiGianVay.Text = ttNgDung.ThoiGianVay.ToString();
             double lai;
             if (ttNgDung.SpVay == "Sản phẩm cho vay nhu cầu nhà ở")
             {
@@ -76,11 +77,8 @@ namespace DOAN_Nhom4
 
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
+            ngDungVay.Them(ttNgDung);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
-            FrmTienIchVay frmtienichvay = new FrmTienIchVay();
-            frmtienichvay.ShowDialog();
-            this.Close();
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
