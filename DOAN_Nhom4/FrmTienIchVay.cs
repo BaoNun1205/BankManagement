@@ -12,17 +12,17 @@ namespace DOAN_Nhom4
 {
     public partial class FrmTienIchVay : Form
     {
-        private NguoiDung kh;
+        private NguoiDung nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         public FrmTienIchVay()
         {
             InitializeComponent();
         }
-        public FrmTienIchVay(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmTienIchVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
-            this.kh = kh;
+            this.nguoiDung = nguoiDung;
             this.tknh = tknh;
             this.pnlNguoiDung = pnlNguoiDung;
         }
@@ -40,7 +40,7 @@ namespace DOAN_Nhom4
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            FrmVay frmVay = new FrmVay(kh, tknh,pnlNguoiDung);
+            FrmVay frmVay = new FrmVay(nguoiDung, tknh,pnlNguoiDung);
             addForm(frmVay);
         }
 

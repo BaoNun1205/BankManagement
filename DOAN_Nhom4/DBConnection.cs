@@ -145,6 +145,32 @@ namespace DOAN_Nhom4
             }
             return khachHang;
         }
+        public ThongTinNguoiDungVay XuLiNgDungVay(string sqlStr)
+        {
+            ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    ttNgDung.SoTKVay = reader.GetString(0);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ttNgDung;
+        }
         public bool IsEmail(string email)
         {
             string strRegex = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";

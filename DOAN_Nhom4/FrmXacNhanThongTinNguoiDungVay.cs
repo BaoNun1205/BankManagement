@@ -16,15 +16,20 @@ namespace DOAN_Nhom4
         public ThongTinNguoiDungVay ttNgDung;
         public NguoiDung nguoiDung;
         ThongTinNguoiDungVayDAO ngDungVay = new ThongTinNguoiDungVayDAO();
+        private Panel pnlNguoiDung;
+        public TaiKhoanNganHang tknh;
         public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
         }
 
-        public FrmXacNhanThongTinNguoiDungVay(ThongTinNguoiDungVay ttNgDung)
+        public FrmXacNhanThongTinNguoiDungVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh,ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
+            this.nguoiDung = nguoiDung;
+            this.tknh = tknh;
             this.ttNgDung = ttNgDung;
+            this.pnlNguoiDung = pnlNguoiDung;
         }
 
         private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
@@ -79,14 +84,14 @@ namespace DOAN_Nhom4
         {
             ngDungVay.Them(ttNgDung);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoiDung);
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmTienIchVay frmtienichvay = new FrmTienIchVay();
-            frmtienichvay.ShowDialog();
-            this.Close();
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
     }
 }

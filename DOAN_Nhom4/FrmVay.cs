@@ -19,7 +19,7 @@ namespace DOAN_Nhom4
         public NguoiDung nguoiDung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        BigInteger i = 0;
+        ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
         public FrmVay()
         {
             InitializeComponent();
@@ -33,19 +33,6 @@ namespace DOAN_Nhom4
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
-            string[] danhxung = {"Ông", "Bà"};
-            string[] nghe = { "Chọn", "NONG NGHIEP VA DV CO LIEN QUAN", "LAM NGHIEP VA DV CO LIEN QUAN", "KHAI THAC, NUOI TRONG THUY SAN",
-                            "KHAI THAC THAN CUNG VA THAN NON", "KHAI THAC DAU MO VA KHI DOT TU NHIEN", "SAN XUAT O TO", "NHAN VIEN TRONG NGANH DICH VU", 
-                            "NHA BAO", "NHA GIAO", "SINH VIEN, HOC SINH","NOI TRO, HUU TRI", "THO THU CONG", "LANH DAO DOANH NGHIEP","KINH DOANH MOI GIOI THUONG MAI",
-                            "NHAN VIEN VAN PHONG", "NGHE Y, DUOC", "NGHE NONG", "GIAO THONG VAN TAI", "BUON BAN TIEU THUONG", "CONG NHAN", "KE TOAN KIEM TOAN",
-                            "KY SU XAY DUNG", "KIEN TRUC SU", "CAN BO NHA NUOC", "LAM THUE", "HOAT DONG Y TE", "GIAO DUC VA DAO TAO", "HOAT DONG DIEU TRA DAM BAO AN TOAN", "NGHE KHAC"};
-            string[] thunhap = {"Chọn" ,"<= 3 triệu đồng", ">= 3-5 triệu đồng", ">= 5-10 triệu đồng", ">= 10-20 triệu đồng", ">= 20 triệu đồng" };
-            string[] SPvay = {"Chọn", "Sản phẩm cho vay nhu cầu nhà ở", "Sản phẩm cho vay sản xuất kinh doanh", "Sản phẩm cho vay mua oto", "Sản phẩm cho vay tiêu dùng không có tài sản đảm bảo",
-                            "Sản phẩm cho vay tiêu dùng đảm bảo bằng bất động sản", "Cho vay khác"};
-            cb_DanhXung.DataSource = danhxung;
-            cb_NgheNghiep.DataSource = nghe;
-            cb_ThuNhap.DataSource = thunhap;
-            cb_SPVay.DataSource = SPvay;
             txt_HoTen.Text = nguoiDung.TenTK;
             txt_CCCD.Text = nguoiDung.Cccd;
             txt_SDT.Text = nguoiDung.Sdt;
@@ -69,17 +56,13 @@ namespace DOAN_Nhom4
                 txt_DiaChiLienLac.ForeColor = Color.Silver;
             }
         }
-        private void llbl_DieuKhoan_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=BtOEztT1Qzk");
-        }
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             string s;
             if (cb_DiaChiLienLac.Checked == true)
             {
-                s = cb_DiaChiLienLac.Text;
+                s = "Dang ky Online";
             }
             else
                 s = txt_DiaChiLienLac.Text;
@@ -87,12 +70,25 @@ namespace DOAN_Nhom4
             {
                 if (cb_DongY.Checked == true)
                 {
-                    i++;
-                    ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(i.ToString(),cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), s, txt_NgayVay.Value);
-                    FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(ttNgDung);
-                    this.Hide();
-                    xacnhan.ShowDialog();
-                    this.Close();
+                    if (BigInteger.Parse(txt_SoTienVay.Text) > 0 && BigInteger.Parse(txt_SoTienVay.Text) % 1000 == 0)
+                    {
+                        if (int.Parse(txt_ThoiGianVay.Text) > 0)
+                        {
+                            if (ttNgDungDAO.TKValid(nguoiDung.SoTK) == null)
+                            {
+                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), s, txt_NgayVay.Value);
+                                FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+                                DOAN_Nhom4.ClassAddForm.addForm(xacnhan, pnlNguoiDung);
+                            }
+                            else
+                                MessageBox.Show("Bạn đang có 1 khoản vay khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                            MessageBox.Show("Thời gian vay chưa hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                    else
+                        MessageBox.Show("Số tiền nhập vào chưa hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                     MessageBox.Show("Bạn chưa đồng ý với điều khoản điều kiện của chúng tôi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -102,7 +98,7 @@ namespace DOAN_Nhom4
         }
         public bool IsNull(object sender, EventArgs e)
         {
-            if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && BigInteger.Parse(txt_SoTienVay.Text) > 0 && BigInteger.Parse(txt_SoTienVay.Text) % 100000 == 0 && txt_ThoiGianVay.Text != null && int.Parse(txt_ThoiGianVay.Text) > 0 && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+            if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
             {
                 return true;
             }
@@ -135,6 +131,26 @@ namespace DOAN_Nhom4
         private void label28_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void llbl_DieuKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Khởi tạo đường dẫn của trình duyệt web mặc định trên máy tính
+            string browserPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Google\\Chrome\\Application\\chrome.exe";
+
+            // Nếu không tìm thấy trình duyệt Chrome, có thể sử dụng trình duyệt mặc định khác như Microsoft Edge
+            if (!File.Exists(browserPath))
+            {
+                browserPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Microsoft\\Edge\\Application\\msedge.exe";
+            }
+
+            // Tạo đối tượng ProcessStartInfo để khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
+            ProcessStartInfo psi = new ProcessStartInfo(browserPath);
+            psi.Arguments = "https://www.facebook.com/tuilahiuu";
+            psi.UseShellExecute = true;
+
+            // Khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
+            Process.Start(psi);
         }
     }
 }
