@@ -154,9 +154,6 @@
   <data name="pexels-photo-1287145" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-photo-1287145.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thong_tin_hhb_visa_infinite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thong-tin-hhb-visa-infinite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="z4148094277365_6ba49332b7154e507b2ae8ab24285f6a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z4148094277365_6ba49332b7154e507b2ae8ab24285f6a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -195,9 +192,6 @@
   </data>
   <data name="payments" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thong_tin_hhb_visa_flexi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thong-tin-hhb-visa-flexi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tindungonline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\tindungonline.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,9 +337,6 @@
   <data name="payments1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payments1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thong_tin_hhb_visa_platinum_cashback" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thong-tin-hhb-visa-platinum-cashback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="140-help-center-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\140-help-center-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -390,5 +381,14 @@
   </data>
   <data name="dangxuat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangxuat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thong_tin_hhb_visa_flexi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thong-tin-hhb-visa-flexi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thong_tin_hhb_visa_infinite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thong-tin-hhb-visa-infinite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thong_tin_hhb_visa_platinum_cashback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thong-tin-hhb-visa-platinum-cashback.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

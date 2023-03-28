@@ -36,10 +36,12 @@ namespace DOAN_Nhom4
 
         private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string[] hanMuc = {"10.000.000 - 80.000.000 VND", "80.000.000 VND - ... VND ", "300.000.000 VND - ... VND "};
             int selectedIndex = cb_LoaiThe.SelectedIndex;
             if (selectedIndex >= 0)
             {
                 ptbTheTinDung.Image = images[selectedIndex];
+                lblThongTinTIen.Text = hanMuc[selectedIndex];
             }
             else
             {
