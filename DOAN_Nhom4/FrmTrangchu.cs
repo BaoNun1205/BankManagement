@@ -4,7 +4,6 @@
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
-        public GiaoDich gd;
         private Panel pnlNguoidung;
         public FrmTrangchu()
         {
@@ -23,23 +22,6 @@
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
-            this.pnlNguoidung = pnlNguoidung;
-        }
-
-        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
-        {
-            InitializeComponent();
-            this.kh = kh;
-            this.tknh = tknh;
-            this.gd = gd;
-        }
-
-        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd, Panel pnlNguoidung)
-        {
-            InitializeComponent();
-            this.kh = kh;
-            this.tknh = tknh;
-            this.gd = gd;
             this.pnlNguoidung = pnlNguoidung;
         }
 

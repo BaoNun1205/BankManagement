@@ -15,17 +15,19 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
+        private Panel pnlNguoidung;
         NguoiDungDAO khDAO = new NguoiDungDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmChuyentien()
         {
             InitializeComponent();
         }
-        public FrmChuyentien(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmChuyentien(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
+            this.pnlNguoidung = pnlNguoidung;
         }
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
@@ -45,10 +47,8 @@ namespace DOAN_Nhom4
             if (lblTenTKhoan.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
             {
                 GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTKhoan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd);
-               // this.Hide();
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd, pnlNguoidung);
                 frmxacnhan.ShowDialog();
-                //this.Close();
             }
             else
             {

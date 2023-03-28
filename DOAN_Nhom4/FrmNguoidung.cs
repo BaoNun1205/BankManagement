@@ -15,7 +15,6 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
-        public GiaoDich gd;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -27,22 +26,10 @@ namespace DOAN_Nhom4
 
         public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh)
         {
-            InitializeComponent();
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            //addForm(frmtrangchu);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
+            InitializeComponent();         
             this.kh = kh;
             this.tknh = tknh;
-        }
-
-        public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
-        {
-            InitializeComponent();
-            this.kh = kh;
-            this.tknh = tknh;
-            this.gd = gd;
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
-            //addForm(frmtrangchu);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
@@ -54,35 +41,30 @@ namespace DOAN_Nhom4
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
             FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
-            //addForm(frmHienThiThongTinCaNhan);
             DOAN_Nhom4.ClassAddForm.addForm(frmHienThiThongTinCaNhan, pnlNguoidung);
         }
 
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
-            //addForm(frmchuyentien);
+            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
         }
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd, pnlNguoidung);
-            //addForm(frmtrangchu);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
         private void btnTietkiem_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
-            //addForm(frmtietkiem);
             DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
         }
 
         private void btnTienich_Click(object sender, EventArgs e)
         {
             FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung);
-            //addForm(frmTienIch);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoidung);
         }
 

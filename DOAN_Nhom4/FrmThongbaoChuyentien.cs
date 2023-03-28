@@ -12,20 +12,22 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongbaoChuyentien : Form
     {
-        public NguoiDung kh;
-        public TaiKhoanNganHang tknh;
-        public GiaoDich gd;
+        private NguoiDung kh;
+        private TaiKhoanNganHang tknh;
+        private GiaoDich gd;
+        private Panel pnlNguoidung;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
 
-        public FrmThongbaoChuyentien(NguoiDung kh, GiaoDich gd, TaiKhoanNganHang tknh)
+        public FrmThongbaoChuyentien(NguoiDung kh, GiaoDich gd, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.kh = kh;
             this.gd = gd;
             this.tknh = tknh;
+            this.pnlNguoidung = pnlNguoidung;
         }
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
@@ -37,26 +39,11 @@ namespace DOAN_Nhom4
             lblNoidung.Text = gd.LoiNhan.ToString();
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            base.OnFormClosing(e);
-            if (e.CloseReason == CloseReason.UserClosing) // chỉ đóng khi người dùng tắt Form
-            {
-                foreach (Form form in Application.OpenForms)
-                {
-                    if (form != this) // không đóng Form chính
-                    {
-                        form.Close(); // đóng các Form con
-                    }
-                }
-            }
-        }
-
         private void btnVetrangchu_Click(object sender, EventArgs e)
         {
-            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh, gd);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
             this.Hide();
-            frmnguoidung.ShowDialog();
+            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
             this.Close();
         }
     }
