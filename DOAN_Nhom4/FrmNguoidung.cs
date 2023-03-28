@@ -28,7 +28,7 @@ namespace DOAN_Nhom4
         public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
             //addForm(frmtrangchu);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
             this.kh = kh;
@@ -48,7 +48,7 @@ namespace DOAN_Nhom4
 
         private void FrmNguoidung_Load(object sender, EventArgs e)
         {
-            lblTenTK.Text = kh.TenTK.ToString();
+            
         }
 
         private void btnTaikhoan_Click(object sender, EventArgs e)
