@@ -289,7 +289,7 @@
             this.txt_DiaChi.Location = new System.Drawing.Point(227, 431);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.ReadOnly = true;
-            this.txt_DiaChi.Size = new System.Drawing.Size(298, 21);
+            this.txt_DiaChi.Size = new System.Drawing.Size(396, 21);
             this.txt_DiaChi.TabIndex = 59;
             // 
             // txt_SDT
@@ -549,7 +549,7 @@
             this.btn_Huy.UseVisualStyleBackColor = false;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
-            // XacNhanThongTinNguoiDungVay
+            // FrmXacNhanThongTinNguoiDungVay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -594,7 +594,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Name = "XacNhanThongTinNguoiDungVay";
+            this.Name = "FrmXacNhanThongTinNguoiDungVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XacNhanThongTinNguoiDungVay";
             this.Load += new System.EventHandler(this.XacNhanThongTinNguoiDungVay_Load);

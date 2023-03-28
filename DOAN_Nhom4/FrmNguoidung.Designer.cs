@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNguoidung));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTrangchu = new CustomButton.VBButton();
             this.btnCaidat = new CustomButton.VBButton();
@@ -260,7 +261,7 @@
             // 
             // ptbMini
             // 
-            this.ptbMini.Image = global::DOAN_Nhom4.Properties.Resources.cancel2;
+            this.ptbMini.Image = global::DOAN_Nhom4.Properties.Resources.minus;
             this.ptbMini.Location = new System.Drawing.Point(1318, 3);
             this.ptbMini.Name = "ptbMini";
             this.ptbMini.Size = new System.Drawing.Size(45, 35);
@@ -315,6 +316,7 @@
             this.Controls.Add(this.pnlNguoidung);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmNguoidung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNguoidung";
