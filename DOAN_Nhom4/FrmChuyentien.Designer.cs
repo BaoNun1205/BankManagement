@@ -253,7 +253,7 @@
             // 
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSoDuString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
             this.lblSoDuString.Location = new System.Drawing.Point(549, 295);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(88, 32);
@@ -264,7 +264,7 @@
             // 
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSoDu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblSoDu.ForeColor = System.Drawing.Color.Red;
             this.lblSoDu.Location = new System.Drawing.Point(643, 295);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(31, 32);
