@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrangchu));
             this.label2 = new System.Windows.Forms.Label();
             this.ptbLoGo = new System.Windows.Forms.PictureBox();
+            this.lblXemLsgd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLoGo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,23 @@
             this.ptbLoGo.TabIndex = 14;
             this.ptbLoGo.TabStop = false;
             // 
+            // lblXemLsgd
+            // 
+            this.lblXemLsgd.AutoSize = true;
+            this.lblXemLsgd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblXemLsgd.Location = new System.Drawing.Point(788, 239);
+            this.lblXemLsgd.Name = "lblXemLsgd";
+            this.lblXemLsgd.Size = new System.Drawing.Size(210, 30);
+            this.lblXemLsgd.TabIndex = 15;
+            this.lblXemLsgd.Text = "Xem lịch sử giao dịch";
+            this.lblXemLsgd.Click += new System.EventHandler(this.lblXemLsgd_Click);
+            // 
             // FrmTrangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 720);
+            this.Controls.Add(this.lblXemLsgd);
             this.Controls.Add(this.ptbLoGo);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -78,5 +91,6 @@
 
         private Label label2;
         private PictureBox ptbLoGo;
+        private Label lblXemLsgd;
     }
 }

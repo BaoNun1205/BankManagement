@@ -5,6 +5,7 @@
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         public GiaoDich gd;
+        private Panel pnlNguoidung;
         public FrmTrangchu()
         {
             InitializeComponent();
@@ -17,6 +18,14 @@
             this.tknh = tknh;
         }
 
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        {
+            InitializeComponent();
+            this.kh = kh;
+            this.tknh = tknh;
+            this.pnlNguoidung = pnlNguoidung;
+        }
+
         public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
         {
             InitializeComponent();
@@ -25,9 +34,24 @@
             this.gd = gd;
         }
 
+        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd, Panel pnlNguoidung)
+        {
+            InitializeComponent();
+            this.kh = kh;
+            this.tknh = tknh;
+            this.gd = gd;
+            this.pnlNguoidung = pnlNguoidung;
+        }
+
         private void FrmTrangchu_Load(object sender, EventArgs e)
         {
             ptbLoGo.Image = Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f;
+        }
+
+        private void lblXemLsgd_Click(object sender, EventArgs e)
+        {
+            FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh);
+            DOAN_Nhom4.ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
         }
     }
 }

@@ -14,8 +14,6 @@ namespace DOAN_Nhom4
     public partial class FrmLichSuGiaoDich : Form
     {
         public NguoiDung kh;
-        public TaiKhoanNganHang tknh;
-        public GiaoDich gd;
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
         public FrmLichSuGiaoDich()
@@ -23,20 +21,15 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmLichSuGiaoDich(NguoiDung kh, GiaoDich gd, TaiKhoanNganHang tknh)
+        public FrmLichSuGiaoDich(NguoiDung kh)
         {
             InitializeComponent();
             this.kh = kh;
-            this.gd = gd;
-            this.tknh = tknh;
         }
 
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
+           
         }
 
         private void btn_TienVao_Click(object sender, EventArgs e)

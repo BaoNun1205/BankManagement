@@ -69,36 +69,36 @@
             // 
             this.GvTongGui.BackgroundColor = System.Drawing.Color.White;
             this.GvTongGui.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GvTongGui.Location = new System.Drawing.Point(0, 493);
+            this.GvTongGui.Location = new System.Drawing.Point(189, 441);
             this.GvTongGui.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GvTongGui.Name = "GvTongGui";
             this.GvTongGui.RowHeadersWidth = 82;
             this.GvTongGui.RowTemplate.Height = 41;
-            this.GvTongGui.Size = new System.Drawing.Size(1076, 139);
+            this.GvTongGui.Size = new System.Drawing.Size(711, 191);
             this.GvTongGui.TabIndex = 59;
             // 
             // GvTongNhan
             // 
             this.GvTongNhan.BackgroundColor = System.Drawing.Color.White;
             this.GvTongNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GvTongNhan.Location = new System.Drawing.Point(0, 358);
+            this.GvTongNhan.Location = new System.Drawing.Point(189, 260);
             this.GvTongNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GvTongNhan.Name = "GvTongNhan";
             this.GvTongNhan.RowHeadersWidth = 82;
             this.GvTongNhan.RowTemplate.Height = 41;
-            this.GvTongNhan.Size = new System.Drawing.Size(1076, 133);
+            this.GvTongNhan.Size = new System.Drawing.Size(711, 179);
             this.GvTongNhan.TabIndex = 58;
             // 
             // GvLSGD
             // 
             this.GvLSGD.BackgroundColor = System.Drawing.Color.White;
             this.GvLSGD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GvLSGD.Location = new System.Drawing.Point(0, 358);
+            this.GvLSGD.Location = new System.Drawing.Point(189, 260);
             this.GvLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GvLSGD.Name = "GvLSGD";
             this.GvLSGD.RowHeadersWidth = 51;
             this.GvLSGD.RowTemplate.Height = 29;
-            this.GvLSGD.Size = new System.Drawing.Size(1076, 274);
+            this.GvLSGD.Size = new System.Drawing.Size(711, 372);
             this.GvLSGD.TabIndex = 39;
             // 
             // btn_TienRa
@@ -112,7 +112,7 @@
             this.btn_TienRa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TienRa.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_TienRa.ForeColor = System.Drawing.Color.White;
-            this.btn_TienRa.Location = new System.Drawing.Point(426, 269);
+            this.btn_TienRa.Location = new System.Drawing.Point(426, 202);
             this.btn_TienRa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TienRa.Name = "btn_TienRa";
             this.btn_TienRa.Size = new System.Drawing.Size(237, 36);
@@ -133,7 +133,7 @@
             this.btn_TienVao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TienVao.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_TienVao.ForeColor = System.Drawing.Color.White;
-            this.btn_TienVao.Location = new System.Drawing.Point(663, 269);
+            this.btn_TienVao.Location = new System.Drawing.Point(663, 202);
             this.btn_TienVao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TienVao.Name = "btn_TienVao";
             this.btn_TienVao.Size = new System.Drawing.Size(237, 36);
@@ -154,7 +154,7 @@
             this.btn_ToanBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ToanBo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ToanBo.ForeColor = System.Drawing.Color.White;
-            this.btn_ToanBo.Location = new System.Drawing.Point(189, 269);
+            this.btn_ToanBo.Location = new System.Drawing.Point(189, 202);
             this.btn_ToanBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ToanBo.Name = "btn_ToanBo";
             this.btn_ToanBo.Size = new System.Drawing.Size(237, 36);
@@ -175,10 +175,10 @@
             this.vbButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vbButton3.ForeColor = System.Drawing.Color.White;
-            this.vbButton3.Location = new System.Drawing.Point(596, 198);
+            this.vbButton3.Location = new System.Drawing.Point(596, 144);
             this.vbButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton3.Name = "vbButton3";
-            this.vbButton3.Size = new System.Drawing.Size(304, 51);
+            this.vbButton3.Size = new System.Drawing.Size(304, 38);
             this.vbButton3.TabIndex = 32;
             this.vbButton3.Text = "Tìm kiếm ";
             this.vbButton3.TextColor = System.Drawing.Color.White;
@@ -195,10 +195,10 @@
             this.btn_XuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XuatExcel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_XuatExcel.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatExcel.Location = new System.Drawing.Point(189, 198);
+            this.btn_XuatExcel.Location = new System.Drawing.Point(189, 144);
             this.btn_XuatExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_XuatExcel.Name = "btn_XuatExcel";
-            this.btn_XuatExcel.Size = new System.Drawing.Size(303, 51);
+            this.btn_XuatExcel.Size = new System.Drawing.Size(303, 38);
             this.btn_XuatExcel.TabIndex = 31;
             this.btn_XuatExcel.Text = "Xuất excel";
             this.btn_XuatExcel.TextColor = System.Drawing.Color.White;
@@ -208,7 +208,7 @@
             // cmNgay
             // 
             this.cmNgay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmNgay.Font = new System.Drawing.Font("Sitka Banner", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmNgay.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmNgay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.cmNgay.FormattingEnabled = true;
             this.cmNgay.Items.AddRange(new object[] {
@@ -217,10 +217,10 @@
             "7 ngày gần đây nhất",
             "30 ngày gần đây nhất",
             "100 ngày gần đây nhất"});
-            this.cmNgay.Location = new System.Drawing.Point(423, 107);
+            this.cmNgay.Location = new System.Drawing.Point(426, 84);
             this.cmNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmNgay.Name = "cmNgay";
-            this.cmNgay.Size = new System.Drawing.Size(429, 38);
+            this.cmNgay.Size = new System.Drawing.Size(429, 36);
             this.cmNgay.TabIndex = 30;
             // 
             // vbButton1
@@ -238,7 +238,7 @@
             this.vbButton1.Location = new System.Drawing.Point(189, 71);
             this.vbButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(711, 104);
+            this.vbButton1.Size = new System.Drawing.Size(711, 59);
             this.vbButton1.TabIndex = 29;
             this.vbButton1.Text = "            Thời gian";
             this.vbButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

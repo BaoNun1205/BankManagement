@@ -28,7 +28,7 @@ namespace DOAN_Nhom4
         public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
             //addForm(frmtrangchu);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
             this.kh = kh;
@@ -38,12 +38,12 @@ namespace DOAN_Nhom4
         public FrmNguoidung(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd)
         {
             InitializeComponent();
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            //addForm(frmtrangchu);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
             this.kh = kh;
             this.tknh = tknh;
             this.gd = gd;
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd);
+            //addForm(frmtrangchu);
+            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
         private void FrmNguoidung_Load(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, gd, pnlNguoidung);
             //addForm(frmtrangchu);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
