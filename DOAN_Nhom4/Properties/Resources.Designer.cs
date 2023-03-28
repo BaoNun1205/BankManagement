@@ -213,6 +213,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baomat {
+            get {
+                object obj = ResourceManager.GetObject("baomat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -276,6 +286,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap customer_support1 {
             get {
                 object obj = ResourceManager.GetObject("customer-support1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dangxuat {
+            get {
+                object obj = ResourceManager.GetObject("dangxuat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,46 +396,6 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap home1 {
             get {
                 object obj = ResourceManager.GetObject("home1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image1 {
-            get {
-                object obj = ResourceManager.GetObject("Image1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image2 {
-            get {
-                object obj = ResourceManager.GetObject("Image2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image3 {
-            get {
-                object obj = ResourceManager.GetObject("Image3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Image4 {
-            get {
-                object obj = ResourceManager.GetObject("Image4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -528,6 +508,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap left_arrow5 {
             get {
                 object obj = ResourceManager.GetObject("left-arrow5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus {
+            get {
+                object obj = ResourceManager.GetObject("minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -988,16 +978,6 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap z4156394353170_c928a2cc547396d185fd30d8c9de6746 {
             get {
                 object obj = ResourceManager.GetObject("z4156394353170_c928a2cc547396d185fd30d8c9de6746", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap z4156395647100_11d34480489db0250526d93d55587605 {
-            get {
-                object obj = ResourceManager.GetObject("z4156395647100_11d34480489db0250526d93d55587605", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

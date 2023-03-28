@@ -52,8 +52,8 @@
             this.btn18thang = new CustomButton.VBButton();
             this.label13 = new System.Windows.Forms.Label();
             this.btn12thang = new CustomButton.VBButton();
-            this.btn1thang = new CustomButton.VBButton();
             this.btn3thang = new CustomButton.VBButton();
+            this.btn1thang = new CustomButton.VBButton();
             this.btn6thang = new CustomButton.VBButton();
             this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,7 +129,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.pencil;
-            this.pictureBox1.Location = new System.Drawing.Point(443, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(443, 19);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
@@ -155,7 +155,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(901, 447);
             this.panel6.TabIndex = 61;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // btnXacnhan
             // 
@@ -186,9 +185,9 @@
             this.lblTongtien.Location = new System.Drawing.Point(395, 269);
             this.lblTongtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongtien.Name = "lblTongtien";
-            this.lblTongtien.Size = new System.Drawing.Size(23, 29);
+            this.lblTongtien.Size = new System.Drawing.Size(51, 29);
             this.lblTongtien.TabIndex = 74;
-            this.lblTongtien.Text = "-";
+            this.lblTongtien.Text = "    -";
             // 
             // label6
             // 
@@ -220,9 +219,9 @@
             this.lblTongtienlai.Location = new System.Drawing.Point(596, 95);
             this.lblTongtienlai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongtienlai.Name = "lblTongtienlai";
-            this.lblTongtienlai.Size = new System.Drawing.Size(23, 29);
+            this.lblTongtienlai.Size = new System.Drawing.Size(51, 29);
             this.lblTongtienlai.TabIndex = 72;
-            this.lblTongtienlai.Text = "-";
+            this.lblTongtienlai.Text = "    -";
             // 
             // label10
             // 
@@ -244,9 +243,9 @@
             this.lblLaisuat.Location = new System.Drawing.Point(228, 95);
             this.lblLaisuat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLaisuat.Name = "lblLaisuat";
-            this.lblLaisuat.Size = new System.Drawing.Size(23, 29);
+            this.lblLaisuat.Size = new System.Drawing.Size(37, 29);
             this.lblLaisuat.TabIndex = 70;
-            this.lblLaisuat.Text = "-";
+            this.lblLaisuat.Text = "  -";
             // 
             // panel8
             // 
@@ -284,7 +283,7 @@
             this.txtTenTKTK.BackColor = System.Drawing.Color.White;
             this.txtTenTKTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenTKTK.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTenTKTK.ForeColor = System.Drawing.Color.Black;
+            this.txtTenTKTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.txtTenTKTK.Location = new System.Drawing.Point(196, 14);
             this.txtTenTKTK.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtTenTKTK.Multiline = true;
@@ -381,27 +380,6 @@
             this.btn12thang.UseVisualStyleBackColor = false;
             this.btn12thang.Click += new System.EventHandler(this.btn12thang_Click);
             // 
-            // btn1thang
-            // 
-            this.btn1thang.BackColor = System.Drawing.Color.Transparent;
-            this.btn1thang.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btn1thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn1thang.BorderRadius = 20;
-            this.btn1thang.BorderSize = 2;
-            this.btn1thang.FlatAppearance.BorderSize = 0;
-            this.btn1thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn1thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn1thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn1thang.Location = new System.Drawing.Point(443, 182);
-            this.btn1thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btn1thang.Name = "btn1thang";
-            this.btn1thang.Size = new System.Drawing.Size(70, 43);
-            this.btn1thang.TabIndex = 61;
-            this.btn1thang.Text = "1";
-            this.btn1thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn1thang.UseVisualStyleBackColor = false;
-            this.btn1thang.Click += new System.EventHandler(this.btn1thang_Click);
-            // 
             // btn3thang
             // 
             this.btn3thang.BackColor = System.Drawing.Color.Transparent;
@@ -422,6 +400,27 @@
             this.btn3thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btn3thang.UseVisualStyleBackColor = false;
             this.btn3thang.Click += new System.EventHandler(this.btn3thang_Click);
+            // 
+            // btn1thang
+            // 
+            this.btn1thang.BackColor = System.Drawing.Color.Transparent;
+            this.btn1thang.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btn1thang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn1thang.BorderRadius = 20;
+            this.btn1thang.BorderSize = 2;
+            this.btn1thang.FlatAppearance.BorderSize = 0;
+            this.btn1thang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn1thang.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn1thang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn1thang.Location = new System.Drawing.Point(443, 182);
+            this.btn1thang.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btn1thang.Name = "btn1thang";
+            this.btn1thang.Size = new System.Drawing.Size(70, 43);
+            this.btn1thang.TabIndex = 61;
+            this.btn1thang.Text = "1";
+            this.btn1thang.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn1thang.UseVisualStyleBackColor = false;
+            this.btn1thang.Click += new System.EventHandler(this.btn1thang_Click);
             // 
             // btn6thang
             // 

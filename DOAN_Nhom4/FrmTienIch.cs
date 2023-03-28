@@ -28,17 +28,6 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void addForm(Form form)
-        {
-            pnlNguoiDung.Controls.Clear();
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            form.FormBorderStyle = FormBorderStyle.None;
-            pnlNguoiDung.Controls.Add(form);
-            pnlNguoiDung.Tag = form;
-            form.Show();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
@@ -58,10 +47,8 @@ namespace DOAN_Nhom4
 
         private void panelVayTien_Click(object sender, EventArgs e)
         {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh);
-            this.Hide();
-            frmTienIchVay.ShowDialog();
-            this.Close();
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
 
         private void ptbVayTien_Click(object sender, EventArgs e)
@@ -77,7 +64,7 @@ namespace DOAN_Nhom4
         private void panelTinDung_Click(object sender, EventArgs e)
         {
             FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
-            addForm(frmDangKyTinDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmDangKyTinDung, pnlNguoiDung);
         }
 
         private void lblTinDung_Click(object sender, EventArgs e)

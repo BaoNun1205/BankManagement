@@ -34,39 +34,5 @@ namespace DOAN_Nhom4
             lblNgaySinhValue.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
             lblSdtValue.Text = kh.Sdt.ToString();
         }
-
-        private void btnChuyentien_Click(object sender, EventArgs e)
-        {
-            FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh);
-            this.Hide();
-            frmchuyentien.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTietkiem_Click(object sender, EventArgs e)
-        {
-            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh);
-            this.Hide();
-            frmtietkiem.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTienich_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTrangchu_Click(object sender, EventArgs e)
-        {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
-        }
-
-        private void btnTaikhoan_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
