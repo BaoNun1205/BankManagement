@@ -225,8 +225,8 @@
             // 
             // vbButton1
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.CadetBlue;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.vbButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.vbButton1.BorderRadius = 20;
@@ -234,7 +234,7 @@
             this.vbButton1.FlatAppearance.BorderSize = 0;
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.vbButton1.Font = new System.Drawing.Font("Sitka Banner", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vbButton1.ForeColor = System.Drawing.Color.Black;
+            this.vbButton1.ForeColor = System.Drawing.Color.White;
             this.vbButton1.Location = new System.Drawing.Point(189, 71);
             this.vbButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton1.Name = "vbButton1";
@@ -242,7 +242,7 @@
             this.vbButton1.TabIndex = 29;
             this.vbButton1.Text = "            Thời gian";
             this.vbButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.vbButton1.TextColor = System.Drawing.Color.Black;
+            this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
             // 
             // label1
