@@ -15,17 +15,19 @@ namespace DOAN_Nhom4
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
+        private ThongTinNguoiDungVay ttNgDung;
         public FrmTienIch()
         {
             InitializeComponent();
         }
 
-        public FrmTienIch(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmTienIch(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinNguoiDungVay ttNgDung)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
             this.pnlNguoiDung = pnlNguoiDung;
+            this.ttNgDung = ttNgDung;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace DOAN_Nhom4
 
         private void panelVayTien_Click(object sender, EventArgs e)
         {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh, pnlNguoiDung);
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh, pnlNguoiDung, ttNgDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
 

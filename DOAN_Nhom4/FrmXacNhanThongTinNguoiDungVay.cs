@@ -84,13 +84,13 @@ namespace DOAN_Nhom4
         {
             ngDungVay.Them(ttNgDung);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
+            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung, ttNgDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoiDung);
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung, ttNgDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
     }

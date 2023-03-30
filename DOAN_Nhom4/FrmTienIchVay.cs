@@ -15,16 +15,18 @@ namespace DOAN_Nhom4
         private NguoiDung nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
+        private ThongTinNguoiDungVay ttNgDung;
         public FrmTienIchVay()
         {
             InitializeComponent();
         }
-        public FrmTienIchVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmTienIchVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinNguoiDungVay ttNgDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
             this.tknh = tknh;
             this.pnlNguoiDung = pnlNguoiDung;
+            this.ttNgDung = ttNgDung;
         }
 
         private void addForm(Form form)
@@ -46,7 +48,8 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-
+            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(ttNgDung,pnlNguoiDung);
+            addForm(frmThongTinTaiKhoanVay);
         }
     }
 }

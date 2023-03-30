@@ -15,6 +15,7 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
+        public ThongTinNguoiDungVay ttNgDung;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -64,7 +65,7 @@ namespace DOAN_Nhom4
 
         private void btnTienich_Click(object sender, EventArgs e)
         {
-            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung);
+            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung, ttNgDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoidung);
         }
 
