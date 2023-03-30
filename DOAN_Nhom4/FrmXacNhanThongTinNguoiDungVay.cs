@@ -46,51 +46,55 @@ namespace DOAN_Nhom4
             txt_SoTienVay.Text = ttNgDung.SoTienVay.ToString("N0");
             txt_ThoiGianVay.Text = ttNgDung.ThoiGianVay.ToString();
             double lai;
-            if (ttNgDung.SpVay == "Sản phẩm cho vay nhu cầu nhà ở")
+            if (ttNgDung.SpVay == "NHU CAU NHA O")
             {
                 lai = 7.9;
             }
-            else if (ttNgDung.SpVay == "Sản phẩm cho vay sản xuất kinh doanh")
+            else if (ttNgDung.SpVay == "SAN XUAT KINH DOANH")
             {
                 lai = 5;
             }
-            else if (ttNgDung.SpVay == "Sản phẩm cho vay mua oto")
+            else if (ttNgDung.SpVay == "MUA O TO")
             {
                 lai = 7.3;
             }
-            else if (ttNgDung.SpVay == "Sản phẩm cho vay tiêu dùng không có tài sản đảm bảo")
+            else if (ttNgDung.SpVay == "TIEU DUNG KHONG CO TAI SAN BAO DAM")
             {
                 lai = 11.9;
             }
-            else if (ttNgDung.SpVay == "Sản phẩm cho vay tiêu dùng đảm bảo bằng bất động sản")
+            else if (ttNgDung.SpVay == "TIEU DUNG DAM BAO BANG BAT DONG SAN")
             {
                 lai = 7.5;
             }
             else
                 lai = 7.3;
+            ttNgDung.Lai = lai;
             txt_LaiSuat.Text = lai.ToString();
             double soTienVay = double.Parse(txt_SoTienVay.Text);
             double tmp =  (soTienVay + (soTienVay * lai / 100));
             BigInteger tongsotien = new BigInteger(tmp);
             txt_TongSoTien.Text = tongsotien.ToString("N0");
             BigInteger tienhangthang = tongsotien / int.Parse(txt_ThoiGianVay.Text);
+            ttNgDung.SoTienHangThang = tienhangthang;
             txt_SoTienHangThang.Text = tienhangthang.ToString("N0");
             txt_ChiNhanhVay.Text = ttNgDung.ChiNhanhVay;
             txt_NgayVay.Text = ttNgDung.NgayVay.ToString();
             txt_TinhTien.Text = String.Format("{0} + ({1} x {2}) = {3}", soTienVay.ToString(), soTienVay.ToString(), (lai/100).ToString(), tongsotien.ToString());
+            ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
+            ttNgDung.TongSoTienPhaiTra = tongsotien;
         }
 
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung, ttNgDung);
+            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoiDung);
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung, ttNgDung);
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
     }

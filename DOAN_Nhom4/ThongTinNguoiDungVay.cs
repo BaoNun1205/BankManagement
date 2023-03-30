@@ -23,6 +23,10 @@ namespace DOAN_Nhom4
         private int thoiGianVay;
         private string chiNhanhVay;
         private DateTime ngayVay;
+        private double lai;
+        private BigInteger soTienHangThang;
+        private DateTime ngayDenHan;
+        private BigInteger tongSoTienPhaiTra;
         public string SoTKVay
         {
             get { return soTKVay; }
@@ -122,6 +126,26 @@ namespace DOAN_Nhom4
             {
                 ngayVay = value;
             }
+        }
+        public double Lai
+        {
+            get { return lai; }
+            set { lai = value; }
+        }
+        public BigInteger SoTienHangThang
+        {
+            get { return soTienHangThang; }
+            set { soTienHangThang = value; }
+        }
+        public DateTime NgayDenHan
+        {
+            get { return ngayDenHan; }
+            set { ngayDenHan = value; }
+        }
+        public BigInteger TongSoTienPhaiTra
+        {
+            get { return tongSoTienPhaiTra; }
+            set { tongSoTienPhaiTra = value; }
         }
         public ThongTinNguoiDungVay() { }
         public ThongTinNguoiDungVay(string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay, string chiNhanhVay, DateTime ngayVay)

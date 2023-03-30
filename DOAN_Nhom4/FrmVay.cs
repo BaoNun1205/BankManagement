@@ -33,6 +33,21 @@ namespace DOAN_Nhom4
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
+            string[] danhxung = { "Ong", "Ba" };
+            string[] nghe = {"Chọn", "NONG NGHIEP VA HOAT DONG DV CO LIEN QUAN", "LAM NGHIEP VA HOAT DONG DV CO LIEN QUAN",
+                            "KHAI THAC, NUOI TRONG THUY SAN", "CAC NGANH KHAI THAC", "SAN XUAT CHE BIEN THUC PHAM",
+                            "SAN XUAT DO UONG", "SAN XUAT SAN PHAM THUOC LA","DET","SAN XUAT TRANG PHUC","LAM NOI THAT",
+                            "SAN XUAT XE","BUON BAN NHO LE","BUON BAN O TO","SUA CHUA CAC LOAI MAY MOC","SAN XUAT GIUONG, TU, BAN GHE",
+                            "KHAI THAC, XU LI, CUNG CAP NUOC","THU GOM, XU LY, TAI CHE RAC THAI", "LAO CONG","GIAO VIEN","HOC SINH, SINH VIEN",
+                            "CAN BO NHA NUOC","KIEN TRUC SU","NHA THAU","VAN TAI HANG KHONG", "VAN TAI DUONG THUY", "VAN TAI DUONG BO","DICH VU AN UONG",
+                            "LAP TRINH VIEN", "VIEN THONG","CAC NGANH DICH VU KHAC","HOAT DONG Y TE", "CONG NHAN","NHA BAO", "KIEM TOAN KE TOAN",
+                            "BAC SI, Y, DUOC SI", "NGHE NONG", "NGHE KHAC"};
+            string[] thunhap = { "Chọn", "<= 3 trieu dong", ">= 3-5 trieu dong", ">= 5-10 trieu dong", ">= 10-20 trieu dong", ">= 20 trieu dong" };
+            string[] spvay = { "Chọn", "NHU CAU NHA O", "SAN XUAT KINH DOANH", "MUA O TO", "TIEU DUNG KHONG CO TAI SAN BAO DAM", "TIEU DUNG DAM BAO BANG BAT DONG SAN", "CHO VAY KHAC" };
+            cb_DanhXung.DataSource = danhxung;
+            cb_NgheNghiep.DataSource = nghe;
+            cb_ThuNhap.DataSource = thunhap;
+            cb_SPVay.DataSource = spvay;
             txt_HoTen.Text = nguoiDung.TenTK;
             txt_CCCD.Text = nguoiDung.Cccd;
             txt_SDT.Text = nguoiDung.Sdt;

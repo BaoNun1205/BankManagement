@@ -15,18 +15,17 @@ namespace DOAN_Nhom4
         private NguoiDung nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        private ThongTinNguoiDungVay ttNgDung;
+        ThongTinNguoiDungVayDAO ttNgDungDao = new ThongTinNguoiDungVayDAO();
         public FrmTienIchVay()
         {
             InitializeComponent();
         }
-        public FrmTienIchVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinNguoiDungVay ttNgDung)
+        public FrmTienIchVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
             this.tknh = tknh;
             this.pnlNguoiDung = pnlNguoiDung;
-            this.ttNgDung = ttNgDung;
         }
 
         private void addForm(Form form)
@@ -48,8 +47,9 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(ttNgDung,pnlNguoiDung);
-            addForm(frmThongTinTaiKhoanVay);
+            ThongTinNguoiDungVay ttNgVay = ttNgDungDao.TKValid(nguoiDung.soTK);
+            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(ttNgVay,pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
         }
     }
 }

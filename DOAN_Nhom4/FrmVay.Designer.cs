@@ -217,7 +217,7 @@ namespace DOAN_Nhom4
             this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangKy.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_DangKy.ForeColor = System.Drawing.Color.White;
-            this.btn_DangKy.Location = new System.Drawing.Point(890, 821);
+            this.btn_DangKy.Location = new System.Drawing.Point(872, 821);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(246, 63);
             this.btn_DangKy.TabIndex = 59;
@@ -231,7 +231,7 @@ namespace DOAN_Nhom4
             this.llbl_DieuKhoan.AutoSize = true;
             this.llbl_DieuKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.llbl_DieuKhoan.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.llbl_DieuKhoan.Location = new System.Drawing.Point(941, 773);
+            this.llbl_DieuKhoan.Location = new System.Drawing.Point(923, 773);
             this.llbl_DieuKhoan.Name = "llbl_DieuKhoan";
             this.llbl_DieuKhoan.Size = new System.Drawing.Size(161, 19);
             this.llbl_DieuKhoan.TabIndex = 58;
@@ -243,7 +243,7 @@ namespace DOAN_Nhom4
             // 
             this.cb_DongY.AutoSize = true;
             this.cb_DongY.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cb_DongY.Location = new System.Drawing.Point(749, 744);
+            this.cb_DongY.Location = new System.Drawing.Point(731, 744);
             this.cb_DongY.Name = "cb_DongY";
             this.cb_DongY.Size = new System.Drawing.Size(556, 26);
             this.cb_DongY.TabIndex = 57;

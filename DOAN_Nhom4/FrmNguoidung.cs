@@ -65,7 +65,7 @@ namespace DOAN_Nhom4
 
         private void btnTienich_Click(object sender, EventArgs e)
         {
-            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung, ttNgDung);
+            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoidung);
         }
 
