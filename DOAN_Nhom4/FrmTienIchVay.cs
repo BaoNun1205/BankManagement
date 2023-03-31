@@ -15,7 +15,6 @@ namespace DOAN_Nhom4
         private NguoiDung nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        ThongTinNguoiDungVayDAO ttNgDungDao = new ThongTinNguoiDungVayDAO();
         public FrmTienIchVay()
         {
             InitializeComponent();
@@ -47,8 +46,7 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            ThongTinNguoiDungVay ttNgVay = ttNgDungDao.TKValid(nguoiDung.soTK);
-            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(ttNgVay,pnlNguoiDung);
+            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung,pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
         }
     }

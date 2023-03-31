@@ -12,21 +12,23 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongTinTaiKhoanVay : Form
     {
-        public ThongTinNguoiDungVay ttNgVay;
+        public NguoiDung nguoiDung;
+        ThongTinNguoiDungVayDAO ttNgVayDAO = new ThongTinNguoiDungVayDAO();
         private Panel pnlNguoiDung;
         public FrmThongTinTaiKhoanVay()
         {
             InitializeComponent();
         }
-        public FrmThongTinTaiKhoanVay(ThongTinNguoiDungVay ttNgVay, Panel pnlNguoiDung)
+        public FrmThongTinTaiKhoanVay(NguoiDung nguoiDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.pnlNguoiDung = pnlNguoiDung;
-            this.ttNgVay = ttNgVay;
+            this.nguoiDung = nguoiDung;
         }
 
         private void FrmThongTinTaiKhoanVay_Load(object sender, EventArgs e)
         {
+            ThongTinNguoiDungVay ttNgVay = ttNgVayDAO.TKValid(nguoiDung.SoTK);
             txt_NgayDenHan.Value = ttNgVay.NgayDenHan;
             txt_DuNo.Text = ttNgVay.TongSoTienPhaiTra.ToString();
             txt_LaiSuat.Text = ttNgVay.Lai.ToString();

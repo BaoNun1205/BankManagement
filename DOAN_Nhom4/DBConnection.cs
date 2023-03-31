@@ -163,7 +163,6 @@ namespace DOAN_Nhom4
                     ttNgDung.ThoiGianVay = reader.GetInt32(11);
                     ttNgDung.ChiNhanhVay = reader.GetString(12);
                     ttNgDung.NgayVay = reader.GetDateTime(13);
-
                     ttNgDung.SoTienHangThang = reader.GetInt64(15);
                     ttNgDung.NgayDenHan = reader.GetDateTime(16);
                     ttNgDung.TongSoTienPhaiTra = reader.GetInt64(17);
