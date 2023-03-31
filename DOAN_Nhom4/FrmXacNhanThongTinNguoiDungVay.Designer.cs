@@ -344,7 +344,7 @@
             this.txt_SPVay.Location = new System.Drawing.Point(882, 265);
             this.txt_SPVay.Name = "txt_SPVay";
             this.txt_SPVay.ReadOnly = true;
-            this.txt_SPVay.Size = new System.Drawing.Size(370, 21);
+            this.txt_SPVay.Size = new System.Drawing.Size(408, 21);
             this.txt_SPVay.TabIndex = 64;
             // 
             // txt_SoTienVay
@@ -493,7 +493,7 @@
             this.txt_TinhTien.Location = new System.Drawing.Point(882, 607);
             this.txt_TinhTien.Name = "txt_TinhTien";
             this.txt_TinhTien.ReadOnly = true;
-            this.txt_TinhTien.Size = new System.Drawing.Size(298, 15);
+            this.txt_TinhTien.Size = new System.Drawing.Size(359, 15);
             this.txt_TinhTien.TabIndex = 77;
             // 
             // label5
@@ -554,7 +554,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1253, 840);
+            this.ClientSize = new System.Drawing.Size(1302, 840);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);

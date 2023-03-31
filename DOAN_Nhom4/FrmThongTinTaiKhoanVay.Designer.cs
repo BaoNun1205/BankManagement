@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinTaiKhoanVay));
             this.txt_NgayDenHan = new System.Windows.Forms.DateTimePicker();
             this.btn_HuyBo = new CustomButton.VBButton();
-            this.btn_DangKy = new CustomButton.VBButton();
+            this.btn_ThanhToan = new CustomButton.VBButton();
             this.txt_PhiTraCham = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_SoTienHangThang = new System.Windows.Forms.TextBox();
@@ -73,25 +73,26 @@
             this.btn_HuyBo.Text = "Hủy Bỏ";
             this.btn_HuyBo.TextColor = System.Drawing.Color.Turquoise;
             this.btn_HuyBo.UseVisualStyleBackColor = false;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
-            // btn_DangKy
+            // btn_ThanhToan
             // 
-            this.btn_DangKy.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btn_DangKy.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            this.btn_DangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_DangKy.BorderRadius = 20;
-            this.btn_DangKy.BorderSize = 0;
-            this.btn_DangKy.FlatAppearance.BorderSize = 0;
-            this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangKy.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangKy.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_DangKy.Location = new System.Drawing.Point(651, 573);
-            this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(246, 63);
-            this.btn_DangKy.TabIndex = 85;
-            this.btn_DangKy.Text = "Đăng Ký";
-            this.btn_DangKy.TextColor = System.Drawing.SystemColors.Window;
-            this.btn_DangKy.UseVisualStyleBackColor = false;
+            this.btn_ThanhToan.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_ThanhToan.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_ThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ThanhToan.BorderRadius = 20;
+            this.btn_ThanhToan.BorderSize = 0;
+            this.btn_ThanhToan.FlatAppearance.BorderSize = 0;
+            this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThanhToan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ThanhToan.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_ThanhToan.Location = new System.Drawing.Point(651, 573);
+            this.btn_ThanhToan.Name = "btn_ThanhToan";
+            this.btn_ThanhToan.Size = new System.Drawing.Size(246, 63);
+            this.btn_ThanhToan.TabIndex = 85;
+            this.btn_ThanhToan.Text = "Thanh Toán";
+            this.btn_ThanhToan.TextColor = System.Drawing.SystemColors.Window;
+            this.btn_ThanhToan.UseVisualStyleBackColor = false;
             // 
             // txt_PhiTraCham
             // 
@@ -232,7 +233,7 @@
             this.ClientSize = new System.Drawing.Size(1121, 673);
             this.Controls.Add(this.txt_NgayDenHan);
             this.Controls.Add(this.btn_HuyBo);
-            this.Controls.Add(this.btn_DangKy);
+            this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.txt_PhiTraCham);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_SoTienHangThang);
@@ -246,6 +247,7 @@
             this.Name = "FrmThongTinTaiKhoanVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmThongTinTaiKhoanVay";
+            this.Load += new System.EventHandler(this.FrmThongTinTaiKhoanVay_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,7 +257,7 @@
 
         private DateTimePicker txt_NgayDenHan;
         private CustomButton.VBButton btn_HuyBo;
-        private CustomButton.VBButton btn_DangKy;
+        private CustomButton.VBButton btn_ThanhToan;
         private TextBox txt_PhiTraCham;
         private Label label4;
         private TextBox txt_SoTienHangThang;
