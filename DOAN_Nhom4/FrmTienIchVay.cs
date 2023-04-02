@@ -48,22 +48,7 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTK);
-            if (ttNgDung.NgayDenHan.Month > DateTime.Now.Month)
-            {
-                ttNgDung.PhiTraCham = 0;
-            }
-            else if (ttNgDung.NgayDenHan.Month == DateTime.Now.Month)
-            {
-                if (ttNgDung.NgayDenHan.Date >= DateTime.Now.Date)
-                {
-                    ttNgDung.PhiTraCham = 0;
-                }
-                else
-                    ttNgDung.PhiTraCham = 50000;
-            }
-            else
-                ttNgDung.PhiTraCham = 50000;
+            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTK);           
             if (ttNgDung != null)
             {
                 FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);

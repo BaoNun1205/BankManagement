@@ -82,6 +82,7 @@ namespace DOAN_Nhom4
             txt_TinhTien.Text = String.Format("{0} + ({1} x {2}) = {3}", soTienVay.ToString(), soTienVay.ToString(), (lai/100).ToString(), tongsotien.ToString());
             ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra = tongsotien;
+            ttNgDung.PhiTraCham = 0;
         }
 
         private void btn_XacNhanVay_Click(object sender, EventArgs e)

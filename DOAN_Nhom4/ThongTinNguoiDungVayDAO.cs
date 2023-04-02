@@ -13,12 +13,12 @@ namespace DOAN_Nhom4
 
         public void Them(ThongTinNguoiDungVay ttNgDung)
         {
-            string sql = string.Format("INSERT INTO KhachHangVay(SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, SoTienHangThang, NgayDenHan, TongSoTienPhaiTra) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', {10}, {11}, '{12}', '{13}', '{14}', {15}, '{16}', {17})", ttNgDung.SoTKVay, ttNgDung.DanhXung, ttNgDung.HoTen, ttNgDung.Cccd, ttNgDung.DiaChi, ttNgDung.Sdt, ttNgDung.Email, ttNgDung.NgheNghiep, ttNgDung.ThuNhap, ttNgDung.SpVay,ttNgDung.SoTienVay, ttNgDung.ThoiGianVay, ttNgDung.ChiNhanhVay, ttNgDung.NgayVay, ttNgDung.Lai, ttNgDung.SoTienHangThang, ttNgDung.NgayDenHan, ttNgDung.TongSoTienPhaiTra);
+            string sql = string.Format("INSERT INTO KhachHangVay(SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, SoTienHangThang, NgayDenHan, TongSoTienPhaiTra, PhiTraCham) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', {10}, {11}, '{12}', '{13}', '{14}', {15}, '{16}', {17}, {18})", ttNgDung.SoTKVay, ttNgDung.DanhXung, ttNgDung.HoTen, ttNgDung.Cccd, ttNgDung.DiaChi, ttNgDung.Sdt, ttNgDung.Email, ttNgDung.NgheNghiep, ttNgDung.ThuNhap, ttNgDung.SpVay,ttNgDung.SoTienVay, ttNgDung.ThoiGianVay, ttNgDung.ChiNhanhVay, ttNgDung.NgayVay, ttNgDung.Lai, ttNgDung.SoTienHangThang, ttNgDung.NgayDenHan, ttNgDung.TongSoTienPhaiTra, ttNgDung.PhiTraCham);
             data.xuLi(sql);
         }
         public void Update(ThongTinNguoiDungVay ttNgDung)
         {
-            string sql = string.Format("UPDATE KhachHangVay SET TongSoTienPhaiTra = {0}, ThoiGianVay = {1}, SoTienHangThang = {2}, PhiTraCham = {3}", ttNgDung.TongSoTienPhaiTra, ttNgDung.ThoiGianVay, ttNgDung.SoTienHangThang, ttNgDung.PhiTraCham);
+            string sql = string.Format("UPDATE KhachHangVay SET TongSoTienPhaiTra = {0}, ThoiGianVay = {1}, SoTienVay = {2}, PhiTraCham = {3}, NgayDenHan = '{4}'", ttNgDung.TongSoTienPhaiTra, ttNgDung.ThoiGianVay, ttNgDung.SoTienVay, ttNgDung.PhiTraCham, ttNgDung.NgayDenHan);
             data.xuLi(sql);
         }
         public void Xoa(ThongTinNguoiDungVay ttNgDung)

@@ -48,7 +48,6 @@
             // 
             this.txt_NgayDenHan.CalendarFont = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_NgayDenHan.CustomFormat = "MM/dd/yyyy";
-            this.txt_NgayDenHan.Enabled = false;
             this.txt_NgayDenHan.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_NgayDenHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_NgayDenHan.Location = new System.Drawing.Point(642, 224);

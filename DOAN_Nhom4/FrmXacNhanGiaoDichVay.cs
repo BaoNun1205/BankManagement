@@ -42,30 +42,34 @@ namespace DOAN_Nhom4
             ttNgDung.NgayDenHan.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             ttNgDung.ThoiGianVay -= 1;
-            ttNgDung.SoTienHangThang = ttNgDung.TongSoTienPhaiTra / ttNgDung.ThoiGianVay;
+            ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - int.Parse(txt_SoTienLai.Text));
             ttNgDung.PhiTraCham = 0;
             if (ttNgDung.ThoiGianVay != 0)
             {
                 ttNgDungDAO.Update(ttNgDung);
                 MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+                DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
             }
             else
             {
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+                DOAN_Nhom4.ClassAddForm.addForm(FrmTienIchVay, pnlNguoiDung);
             }
-            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+            
         }
 
         private void FrmXacNhanGiaoDichVay_Load(object sender, EventArgs e)
         {
             txt_TKNguon.Text = nguoiDung.SoTK;
             txt_TKVay.Text = nguoiDung.SoTK;
-            txt_SoTienGoc.Text = (ttNgDung.SoTienVay / ttNgDung.ThoiGianVay).ToString();
-            txt_SoTienLai.Text = (ttNgDung.SoTienVay * ttNgDung.Lai).ToString();
-            txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString();
-            txt_TongSoTien.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).ToString();
+            BigInteger tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
+            txt_SoTienGoc.Text = tmp.ToString("N0");
+            txt_SoTienLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString();
+            txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
+            txt_TongSoTien.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).ToString("N0");
             txt_NgayGiaoDich.Value = DateTime.Now;
         }
     }
