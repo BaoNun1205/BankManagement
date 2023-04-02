@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace DOAN_Nhom4
         private NguoiDung nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
+        ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
         public FrmTienIchVay()
         {
             InitializeComponent();
@@ -46,8 +48,29 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh,pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTK);
+            if (ttNgDung.NgayDenHan.Month > DateTime.Now.Month)
+            {
+                ttNgDung.PhiTraCham = 0;
+            }
+            else if (ttNgDung.NgayDenHan.Month == DateTime.Now.Month)
+            {
+                if (ttNgDung.NgayDenHan.Date >= DateTime.Now.Date)
+                {
+                    ttNgDung.PhiTraCham = 0;
+                }
+                else
+                    ttNgDung.PhiTraCham = 50000;
+            }
+            else
+                ttNgDung.PhiTraCham = 50000;
+            if (ttNgDung != null)
+            {
+                FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+                DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+            }
+            else
+                MessageBox.Show("Bạn không có khoản vay nào!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

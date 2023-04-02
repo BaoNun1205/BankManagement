@@ -167,6 +167,7 @@ namespace DOAN_Nhom4
                     ttNgDung.SoTienHangThang = reader.GetInt64(15);
                     ttNgDung.NgayDenHan = reader.GetDateTime(16);
                     ttNgDung.TongSoTienPhaiTra = reader.GetInt64(17);
+                    ttNgDung.PhiTraCham = reader.GetInt64(18);
                 }
                 else
                     return null;
