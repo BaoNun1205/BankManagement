@@ -39,7 +39,7 @@ namespace DOAN_Nhom4
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            ttNgDung.NgayDenHan.AddMonths(1);
+            ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             ttNgDung.ThoiGianVay -= 1;
             ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - int.Parse(txt_SoTienLai.Text));
