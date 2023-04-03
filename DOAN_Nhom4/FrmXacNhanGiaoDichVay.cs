@@ -18,6 +18,8 @@ namespace DOAN_Nhom4
         public Panel pnlNguoiDung;
         public TaiKhoanNganHang tknh;
         ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         public FrmXacNhanGiaoDichVay()
         {
             InitializeComponent();
@@ -44,9 +46,13 @@ namespace DOAN_Nhom4
             ttNgDung.ThoiGianVay -= 1;
             ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - int.Parse(txt_SoTienLai.Text));
             ttNgDung.PhiTraCham = 0;
+            tknh.SoDu -= ttNgDung.SoTienHangThang;
             if (ttNgDung.ThoiGianVay != 0)
             {
                 ttNgDungDAO.Update(ttNgDung);
+                tknhDAO.Sua(tknh);
+                GiaoDich gd = new GiaoDich("Thanh toan khoan vay 1 thang", "HHB",nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                lsgdDAO.Them(gd);
                 MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                 DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
