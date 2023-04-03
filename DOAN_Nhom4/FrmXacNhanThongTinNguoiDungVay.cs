@@ -48,7 +48,7 @@ namespace DOAN_Nhom4
             double lai;
             if (ttNgDung.SpVay == "NHU CAU NHA O")
             {
-                lai = 7.9;
+                lai = 8.9;
             }
             else if (ttNgDung.SpVay == "SAN XUAT KINH DOANH")
             {
@@ -56,30 +56,34 @@ namespace DOAN_Nhom4
             }
             else if (ttNgDung.SpVay == "MUA O TO")
             {
-                lai = 7.3;
+                lai = 7;
             }
             else if (ttNgDung.SpVay == "TIEU DUNG KHONG CO TAI SAN BAO DAM")
             {
-                lai = 11.9;
+                lai = 12;
             }
             else if (ttNgDung.SpVay == "TIEU DUNG DAM BAO BANG BAT DONG SAN")
             {
-                lai = 7.5;
+                lai = 8;
             }
             else
-                lai = 7.3;
+                lai = 7;
             ttNgDung.Lai = lai;
             txt_LaiSuat.Text = lai.ToString();
             double soTienVay = double.Parse(txt_SoTienVay.Text);
-            double tmp =  (soTienVay + (soTienVay * lai / 100));
-            BigInteger tongsotien = new BigInteger(tmp);
+            double laithang = lai / 1200;
+            double number = Math.Pow((1 + laithang), 10);
+            double tmp = (soTienVay * laithang * number) / (number - 1);
+            BigInteger tienhangthang = new BigInteger(tmp);
+            BigInteger tongsotien = tienhangthang * int.Parse(txt_ThoiGianVay.Text);
             txt_TongSoTien.Text = tongsotien.ToString("N0");
-            BigInteger tienhangthang = tongsotien / int.Parse(txt_ThoiGianVay.Text);
             ttNgDung.SoTienHangThang = tienhangthang;
             txt_SoTienHangThang.Text = tienhangthang.ToString("N0");
             txt_ChiNhanhVay.Text = ttNgDung.ChiNhanhVay;
             txt_NgayVay.Text = ttNgDung.NgayVay.ToString();
-            txt_TinhTien.Text = String.Format("{0} + ({1} x {2}) = {3}", soTienVay.ToString(), soTienVay.ToString(), (lai/100).ToString(), tongsotien.ToString());
+            laithang *= 100;
+            txt_TinhTien.Text = String.Format("{0} x ({1} x {2}% x (1 + {3}%)^{4}) / ((1 + {5}%)^{6} - 1) = {7}",
+                txt_ThoiGianVay.Text, soTienVay.ToString("N0"),laithang.ToString("0.000"), laithang.ToString("0.000"), txt_ThoiGianVay.Text,laithang.ToString("0.000"),txt_ThoiGianVay.Text, tongsotien.ToString("N0"));
             ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra = tongsotien;
             ttNgDung.PhiTraCham = 0;

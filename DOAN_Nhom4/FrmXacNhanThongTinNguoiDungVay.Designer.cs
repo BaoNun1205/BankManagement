@@ -67,6 +67,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Huy = new CustomButton.VBButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -344,7 +345,7 @@
             this.txt_SPVay.Location = new System.Drawing.Point(882, 265);
             this.txt_SPVay.Name = "txt_SPVay";
             this.txt_SPVay.ReadOnly = true;
-            this.txt_SPVay.Size = new System.Drawing.Size(408, 21);
+            this.txt_SPVay.Size = new System.Drawing.Size(419, 21);
             this.txt_SPVay.TabIndex = 64;
             // 
             // txt_SoTienVay
@@ -490,10 +491,10 @@
             this.txt_TinhTien.BackColor = System.Drawing.SystemColors.Window;
             this.txt_TinhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_TinhTien.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TinhTien.Location = new System.Drawing.Point(882, 607);
+            this.txt_TinhTien.Location = new System.Drawing.Point(844, 606);
             this.txt_TinhTien.Name = "txt_TinhTien";
             this.txt_TinhTien.ReadOnly = true;
-            this.txt_TinhTien.Size = new System.Drawing.Size(359, 15);
+            this.txt_TinhTien.Size = new System.Drawing.Size(457, 15);
             this.txt_TinhTien.TabIndex = 77;
             // 
             // label5
@@ -502,7 +503,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label5.Location = new System.Drawing.Point(751, 607);
+            this.label5.Location = new System.Drawing.Point(751, 606);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(87, 16);
@@ -549,12 +550,25 @@
             this.btn_Huy.UseVisualStyleBackColor = false;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(922, 411);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(56, 21);
+            this.textBox2.TabIndex = 81;
+            this.textBox2.Text = "tháng";
+            // 
             // FrmXacNhanThongTinNguoiDungVay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1302, 840);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
@@ -645,5 +659,6 @@
         private TextBox textBox1;
         private Panel panel1;
         private CustomButton.VBButton btn_Huy;
+        private TextBox textBox2;
     }
 }
