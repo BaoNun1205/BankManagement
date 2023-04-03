@@ -37,22 +37,29 @@ namespace DOAN_Nhom4
             txt_DuNo.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
             txt_LaiSuat.Text = ttNgDung.Lai.ToString() + "%/năm";
             txt_SoTienHangThang.Text = ttNgDung.SoTienHangThang.ToString("N0");
-            txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
-            if (ttNgDung.NgayDenHan.Month > DateTime.Now.Month)
+            if (ttNgDung.NgayDenHan.Year > DateTime.Now.Year)
             {
                 ttNgDung.PhiTraCham = 0;
             }
-            else if (ttNgDung.NgayDenHan.Month == DateTime.Now.Month)
+            else
             {
-                if (ttNgDung.NgayDenHan.Date >= DateTime.Now.Date)
+                if (ttNgDung.NgayDenHan.Month > DateTime.Now.Month)
                 {
                     ttNgDung.PhiTraCham = 0;
+                }
+                else if (ttNgDung.NgayDenHan.Month == DateTime.Now.Month)
+                {
+                    if (ttNgDung.NgayDenHan.Date >= DateTime.Now.Date)
+                    {
+                        ttNgDung.PhiTraCham = 0;
+                    }
+                    else
+                        ttNgDung.PhiTraCham = 50000;
                 }
                 else
                     ttNgDung.PhiTraCham = 50000;
             }
-            else
-                ttNgDung.PhiTraCham = 50000;
+            txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
         }
         
         private void btn_HuyBo_Click(object sender, EventArgs e)
