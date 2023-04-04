@@ -18,6 +18,7 @@ namespace DOAN_Nhom4
         ThongTinNguoiDungVayDAO ngDungVay = new ThongTinNguoiDungVayDAO();
         private Panel pnlNguoiDung;
         public TaiKhoanNganHang tknh;
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace DOAN_Nhom4
             double lai;
             if (ttNgDung.SpVay == "NHU CAU NHA O")
             {
-                lai = 8.9;
+                lai = 9;
             }
             else if (ttNgDung.SpVay == "SAN XUAT KINH DOANH")
             {
@@ -72,7 +73,7 @@ namespace DOAN_Nhom4
             txt_LaiSuat.Text = lai.ToString();
             double soTienVay = double.Parse(txt_SoTienVay.Text);
             double laithang = lai / 1200;
-            double number = Math.Pow((1 + laithang), 10);
+            double number = Math.Pow((1 + laithang), int.Parse(txt_ThoiGianVay.Text));
             double tmp = (soTienVay * laithang * number) / (number - 1);
             BigInteger tienhangthang = new BigInteger(tmp);
             BigInteger tongsotien = tienhangthang * int.Parse(txt_ThoiGianVay.Text);
@@ -87,6 +88,8 @@ namespace DOAN_Nhom4
             ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra = tongsotien;
             ttNgDung.PhiTraCham = 0;
+            tknh.SoDu += ttNgDung.SoTienVay;
+            tknhDAO.Sua(tknh);
         }
 
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
