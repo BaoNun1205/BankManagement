@@ -35,41 +35,6 @@ namespace DOAN_Nhom4
             FrmBaomat frmBaoMat = new FrmBaomat(kh, tknh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmBaoMat, pnlNguoiDung);
         }
-        private void txt_MatKhauCu_Enter(object sender, EventArgs e)
-        {
-           if (txt_MatKhauCu.ForeColor != Color.Black)
-           {
-               txt_MatKhauCu.Text = "";
-               txt_MatKhauCu.ForeColor = Color.Black;
-           }               
-        }
-
-        private void txt_MatKhauCu_Leave(object sender, EventArgs e)
-        {
-            if (txt_MatKhauCu.Text == "")
-            {
-                txt_MatKhauCu.Text = "Mật khẩu cũ";
-                txt_MatKhauCu.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txt_MatKhauMoi_Enter(object sender, EventArgs e)
-        {
-            if (txt_MatKhauMoi.ForeColor != Color.Black)
-            {
-                txt_MatKhauMoi.Text = "";
-                txt_MatKhauMoi.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_MatKhauMoi_Leave(object sender, EventArgs e)
-        {
-            if (txt_MatKhauMoi.Text == "")
-            {
-                txt_MatKhauMoi.Text = "Mật khẩu mới";
-                txt_MatKhauMoi.ForeColor = Color.Gray;
-            }
-        }
 
         private void txt_XacNhanMatKhau_Enter(object sender, EventArgs e)
         {
@@ -77,15 +42,6 @@ namespace DOAN_Nhom4
             {
                 txt_XacNhanMatKhau.Text = "";
                 txt_XacNhanMatKhau.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_XacNhanMatKhau_Leave(object sender, EventArgs e)
-        {
-            if (txt_XacNhanMatKhau.Text == "")
-            {
-                txt_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
-                txt_XacNhanMatKhau.ForeColor = Color.Gray;
             }
         }
 
@@ -120,6 +76,63 @@ namespace DOAN_Nhom4
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txt_MatKhauCu_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txt_MatKhauCu.ForeColor != Color.Black)
+            {
+                txt_MatKhauCu.Text = "";
+                txt_MatKhauCu.ForeColor = Color.Black;
+            }
+            if (txt_MatKhauMoi.Text == "")
+            {
+                txt_MatKhauMoi.Text = "Mật khẩu mới";
+                txt_MatKhauMoi.ForeColor = Color.Gray;
+            }
+            if (txt_XacNhanMatKhau.Text == "")
+            {
+                txt_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
+                txt_XacNhanMatKhau.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_MatKhauMoi_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txt_MatKhauMoi.ForeColor != Color.Black)
+            {
+                txt_MatKhauMoi.Text = "";
+                txt_MatKhauMoi.ForeColor = Color.Black;
+            }
+            if (txt_MatKhauCu.Text == "")
+            {
+                txt_MatKhauCu.Text = "Mật khẩu cũ";
+                txt_MatKhauCu.ForeColor = Color.Gray;
+            }
+            if (txt_XacNhanMatKhau.Text == "")
+            {
+                txt_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
+                txt_XacNhanMatKhau.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_XacNhanMatKhau_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txt_XacNhanMatKhau.ForeColor != Color.Black)
+            {
+                txt_XacNhanMatKhau.Text = "";
+                txt_XacNhanMatKhau.ForeColor = Color.Black;
+            }
+            if (txt_MatKhauCu.Text == "")
+            {
+                txt_MatKhauCu.Text = "Mật khẩu cũ";
+                txt_MatKhauCu.ForeColor = Color.Gray;
+            }
+            if (txt_MatKhauMoi.Text == "")
+            {
+                txt_MatKhauMoi.Text = "Mật khẩu mới";
+                txt_MatKhauMoi.ForeColor = Color.Gray;
+            }
         }
     }
 }

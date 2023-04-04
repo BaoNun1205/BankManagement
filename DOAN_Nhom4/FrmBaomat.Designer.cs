@@ -32,34 +32,28 @@
             this.lblBaoMat = new System.Windows.Forms.Label();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.txtTenDN = new System.Windows.Forms.TextBox();
-            this.pb_dangxuat = new System.Windows.Forms.PictureBox();
-            this.btn_dangxuat = new CustomButton.VBButton();
             this.btn_doimatkhau = new CustomButton.VBButton();
             this.cb_hienthipass = new System.Windows.Forms.CheckBox();
             this.lbl_matKhau = new System.Windows.Forms.Label();
             this.lbl_tenDN = new System.Windows.Forms.Label();
             this.pn_baomat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_dangxuat)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_baomat
             // 
             this.pn_baomat.BackColor = System.Drawing.Color.White;
-            this.pn_baomat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn_baomat.Controls.Add(this.lblBaoMat);
             this.pn_baomat.Controls.Add(this.txtMatkhau);
             this.pn_baomat.Controls.Add(this.txtTenDN);
-            this.pn_baomat.Controls.Add(this.pb_dangxuat);
-            this.pn_baomat.Controls.Add(this.btn_dangxuat);
             this.pn_baomat.Controls.Add(this.btn_doimatkhau);
             this.pn_baomat.Controls.Add(this.cb_hienthipass);
             this.pn_baomat.Controls.Add(this.lbl_matKhau);
             this.pn_baomat.Controls.Add(this.lbl_tenDN);
             this.pn_baomat.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.pn_baomat.Location = new System.Drawing.Point(291, 0);
+            this.pn_baomat.Location = new System.Drawing.Point(282, 60);
             this.pn_baomat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_baomat.Name = "pn_baomat";
-            this.pn_baomat.Size = new System.Drawing.Size(600, 720);
+            this.pn_baomat.Size = new System.Drawing.Size(598, 549);
             this.pn_baomat.TabIndex = 2;
             this.pn_baomat.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_baomat_Paint);
             // 
@@ -68,7 +62,7 @@
             this.lblBaoMat.AutoSize = true;
             this.lblBaoMat.Font = new System.Drawing.Font("Tahoma", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblBaoMat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblBaoMat.Location = new System.Drawing.Point(6, 90);
+            this.lblBaoMat.Location = new System.Drawing.Point(3, 89);
             this.lblBaoMat.Name = "lblBaoMat";
             this.lblBaoMat.Size = new System.Drawing.Size(593, 64);
             this.lblBaoMat.TabIndex = 27;
@@ -101,40 +95,6 @@
             this.txtTenDN.Size = new System.Drawing.Size(302, 26);
             this.txtTenDN.TabIndex = 25;
             // 
-            // pb_dangxuat
-            // 
-            this.pb_dangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.pb_dangxuat.Image = global::DOAN_Nhom4.Properties.Resources.dangxuat;
-            this.pb_dangxuat.Location = new System.Drawing.Point(359, 531);
-            this.pb_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pb_dangxuat.Name = "pb_dangxuat";
-            this.pb_dangxuat.Size = new System.Drawing.Size(64, 67);
-            this.pb_dangxuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_dangxuat.TabIndex = 24;
-            this.pb_dangxuat.TabStop = false;
-            // 
-            // btn_dangxuat
-            // 
-            this.btn_dangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_dangxuat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_dangxuat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_dangxuat.BorderRadius = 30;
-            this.btn_dangxuat.BorderSize = 0;
-            this.btn_dangxuat.FlatAppearance.BorderSize = 0;
-            this.btn_dangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_dangxuat.Font = new System.Drawing.Font("MS Reference Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_dangxuat.ForeColor = System.Drawing.Color.White;
-            this.btn_dangxuat.Location = new System.Drawing.Point(166, 526);
-            this.btn_dangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_dangxuat.Name = "btn_dangxuat";
-            this.btn_dangxuat.Size = new System.Drawing.Size(272, 79);
-            this.btn_dangxuat.TabIndex = 23;
-            this.btn_dangxuat.Text = "Đăng xuất";
-            this.btn_dangxuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dangxuat.TextColor = System.Drawing.Color.White;
-            this.btn_dangxuat.UseVisualStyleBackColor = false;
-            this.btn_dangxuat.Click += new System.EventHandler(this.btn_dangxuat_Click);
-            // 
             // btn_doimatkhau
             // 
             this.btn_doimatkhau.BackColor = System.Drawing.Color.White;
@@ -146,10 +106,10 @@
             this.btn_doimatkhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_doimatkhau.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_doimatkhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_doimatkhau.Location = new System.Drawing.Point(402, 421);
+            this.btn_doimatkhau.Location = new System.Drawing.Point(212, 462);
             this.btn_doimatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_doimatkhau.Name = "btn_doimatkhau";
-            this.btn_doimatkhau.Size = new System.Drawing.Size(180, 69);
+            this.btn_doimatkhau.Size = new System.Drawing.Size(188, 69);
             this.btn_doimatkhau.TabIndex = 22;
             this.btn_doimatkhau.Text = "Đổi mật khẩu ";
             this.btn_doimatkhau.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
@@ -178,7 +138,7 @@
             this.lbl_matKhau.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_matKhau.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_matKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lbl_matKhau.Location = new System.Drawing.Point(70, 324);
+            this.lbl_matKhau.Location = new System.Drawing.Point(13, 324);
             this.lbl_matKhau.Name = "lbl_matKhau";
             this.lbl_matKhau.Size = new System.Drawing.Size(111, 25);
             this.lbl_matKhau.TabIndex = 20;
@@ -212,7 +172,6 @@
             this.Text = "FrmBaomat";
             this.pn_baomat.ResumeLayout(false);
             this.pn_baomat.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_dangxuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,8 +182,6 @@
         private Label lblBaoMat;
         private TextBox txtMatkhau;
         private TextBox txtTenDN;
-        private PictureBox pb_dangxuat;
-        private CustomButton.VBButton btn_dangxuat;
         private CustomButton.VBButton btn_doimatkhau;
         private CheckBox cb_hienthipass;
         private Label lbl_matKhau;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNguoidung));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDanhmuc = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCaidat = new CustomButton.VBButton();
             this.btnHotro = new CustomButton.VBButton();
@@ -42,26 +42,31 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.ptbMini = new System.Windows.Forms.PictureBox();
             this.pBThoat = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.pnlLuachonCD = new System.Windows.Forms.Panel();
+            this.btnDangxuat = new System.Windows.Forms.Button();
+            this.btnBaomat = new System.Windows.Forms.Button();
+            this.pnlDanhmuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).BeginInit();
+            this.pnlLuachonCD.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlDanhmuc
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnCaidat);
-            this.panel1.Controls.Add(this.btnHotro);
-            this.panel1.Controls.Add(this.btnTienich);
-            this.panel1.Controls.Add(this.btnChuyentien);
-            this.panel1.Controls.Add(this.btnTaikhoan);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(265, 809);
-            this.panel1.TabIndex = 53;
+            this.pnlDanhmuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.pnlDanhmuc.Controls.Add(this.pictureBox1);
+            this.pnlDanhmuc.Controls.Add(this.btnCaidat);
+            this.pnlDanhmuc.Controls.Add(this.btnHotro);
+            this.pnlDanhmuc.Controls.Add(this.btnTienich);
+            this.pnlDanhmuc.Controls.Add(this.btnChuyentien);
+            this.pnlDanhmuc.Controls.Add(this.btnTaikhoan);
+            this.pnlDanhmuc.Location = new System.Drawing.Point(0, 0);
+            this.pnlDanhmuc.Name = "pnlDanhmuc";
+            this.pnlDanhmuc.Size = new System.Drawing.Size(265, 809);
+            this.pnlDanhmuc.TabIndex = 53;
+            this.pnlDanhmuc.MouseHover += new System.EventHandler(this.pnlDanhmuc_MouseHover);
             // 
             // pictureBox1
             // 
@@ -89,7 +94,7 @@
             this.btnCaidat.ForeColor = System.Drawing.Color.White;
             this.btnCaidat.Image = global::DOAN_Nhom4.Properties.Resources.settings2;
             this.btnCaidat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaidat.Location = new System.Drawing.Point(2, 717);
+            this.btnCaidat.Location = new System.Drawing.Point(2, 720);
             this.btnCaidat.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnCaidat.Name = "btnCaidat";
             this.btnCaidat.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
@@ -98,7 +103,7 @@
             this.btnCaidat.Text = "  Cài đặt";
             this.btnCaidat.TextColor = System.Drawing.Color.White;
             this.btnCaidat.UseVisualStyleBackColor = false;
-            this.btnCaidat.Click += new System.EventHandler(this.btnCaidat_Click);
+            this.btnCaidat.MouseHover += new System.EventHandler(this.btnCaidat_MouseHover);
             // 
             // btnHotro
             // 
@@ -227,7 +232,7 @@
             // 
             // pnlNguoidung
             // 
-            this.pnlNguoidung.Location = new System.Drawing.Point(267, 86);
+            this.pnlNguoidung.Location = new System.Drawing.Point(267, 88);
             this.pnlNguoidung.Name = "pnlNguoidung";
             this.pnlNguoidung.Size = new System.Drawing.Size(1139, 720);
             this.pnlNguoidung.TabIndex = 54;
@@ -241,7 +246,7 @@
             this.panel3.Controls.Add(this.lblTenTK);
             this.panel3.Location = new System.Drawing.Point(265, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1148, 91);
+            this.panel3.Size = new System.Drawing.Size(1150, 91);
             this.panel3.TabIndex = 55;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
@@ -267,15 +272,55 @@
             this.pBThoat.TabStop = false;
             this.pBThoat.Click += new System.EventHandler(this.pBThoat_Click);
             // 
+            // pnlLuachonCD
+            // 
+            this.pnlLuachonCD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.pnlLuachonCD.Controls.Add(this.btnDangxuat);
+            this.pnlLuachonCD.Controls.Add(this.btnBaomat);
+            this.pnlLuachonCD.Location = new System.Drawing.Point(265, 720);
+            this.pnlLuachonCD.Name = "pnlLuachonCD";
+            this.pnlLuachonCD.Size = new System.Drawing.Size(152, 89);
+            this.pnlLuachonCD.TabIndex = 55;
+            this.pnlLuachonCD.Visible = false;
+            // 
+            // btnDangxuat
+            // 
+            this.btnDangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangxuat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDangxuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangxuat.Location = new System.Drawing.Point(0, 43);
+            this.btnDangxuat.Name = "btnDangxuat";
+            this.btnDangxuat.Size = new System.Drawing.Size(153, 45);
+            this.btnDangxuat.TabIndex = 1;
+            this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.UseVisualStyleBackColor = false;
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
+            // 
+            // btnBaomat
+            // 
+            this.btnBaomat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnBaomat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaomat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBaomat.ForeColor = System.Drawing.Color.White;
+            this.btnBaomat.Location = new System.Drawing.Point(0, -1);
+            this.btnBaomat.Name = "btnBaomat";
+            this.btnBaomat.Size = new System.Drawing.Size(153, 45);
+            this.btnBaomat.TabIndex = 0;
+            this.btnBaomat.Text = "Bảo mật";
+            this.btnBaomat.UseVisualStyleBackColor = false;
+            this.btnBaomat.Click += new System.EventHandler(this.btnBaomat_Click);
+            // 
             // FrmNguoidung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1408, 808);
+            this.ClientSize = new System.Drawing.Size(1407, 808);
+            this.Controls.Add(this.pnlLuachonCD);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlNguoidung);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDanhmuc);
             this.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -283,19 +328,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNguoidung";
             this.Load += new System.EventHandler(this.FrmNguoidung_Load);
-            this.panel1.ResumeLayout(false);
+            this.pnlDanhmuc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).EndInit();
+            this.pnlLuachonCD.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlDanhmuc;
         private CustomButton.VBButton btnCaidat;
         private CustomButton.VBButton btnHotro;
         private CustomButton.VBButton btnTienich;
@@ -308,5 +354,8 @@
         private PictureBox pBThoat;
         private PictureBox ptbMini;
         private PictureBox pictureBox1;
+        private Panel pnlLuachonCD;
+        private Button btnDangxuat;
+        private Button btnBaomat;
     }
 }
