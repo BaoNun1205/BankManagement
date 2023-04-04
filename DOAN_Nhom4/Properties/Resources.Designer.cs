@@ -203,6 +203,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bank_service_quality_indicators_august_2022 {
+            get {
+                object obj = ResourceManager.GetObject("bank-service-quality-indicators-august-2022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bannerto_km {
             get {
                 object obj = ResourceManager.GetObject("bannerto_km", resourceCulture);
@@ -376,6 +386,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap hinh_ctkm_pay_co_hoi_thuong_ga_5724_7940_1649171141 {
             get {
                 object obj = ResourceManager.GetObject("hinh-ctkm-pay-co-hoi-thuong-ga-5724-7940-1649171141", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_cong_nghe_103229758 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-cong-nghe_103229758", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -585,6 +605,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap payments2 {
+            get {
+                object obj = ResourceManager.GetObject("payments2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pencil {
             get {
                 object obj = ResourceManager.GetObject("pencil", resourceCulture);
@@ -668,6 +698,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap piggy_bank1 {
             get {
                 object obj = ResourceManager.GetObject("piggy-bank1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap piggy_bank2 {
+            get {
+                object obj = ResourceManager.GetObject("piggy-bank2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -34,7 +34,6 @@
             this.btnCaidat = new CustomButton.VBButton();
             this.btnHotro = new CustomButton.VBButton();
             this.btnTienich = new CustomButton.VBButton();
-            this.btnTietkiem = new CustomButton.VBButton();
             this.btnChuyentien = new CustomButton.VBButton();
             this.btnTaikhoan = new CustomButton.VBButton();
             this.pnlNguoidung = new System.Windows.Forms.Panel();
@@ -56,7 +55,6 @@
             this.panel1.Controls.Add(this.btnCaidat);
             this.panel1.Controls.Add(this.btnHotro);
             this.panel1.Controls.Add(this.btnTienich);
-            this.panel1.Controls.Add(this.btnTietkiem);
             this.panel1.Controls.Add(this.btnChuyentien);
             this.panel1.Controls.Add(this.btnTaikhoan);
             this.panel1.Location = new System.Drawing.Point(0, 1);
@@ -128,7 +126,7 @@
             this.btnHotro.ForeColor = System.Drawing.Color.White;
             this.btnHotro.Image = global::DOAN_Nhom4.Properties.Resources.customer_support1;
             this.btnHotro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHotro.Location = new System.Drawing.Point(1, 535);
+            this.btnHotro.Location = new System.Drawing.Point(2, 445);
             this.btnHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHotro.Name = "btnHotro";
             this.btnHotro.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
@@ -152,7 +150,7 @@
             this.btnTienich.ForeColor = System.Drawing.Color.White;
             this.btnTienich.Image = global::DOAN_Nhom4.Properties.Resources.payments1;
             this.btnTienich.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTienich.Location = new System.Drawing.Point(2, 445);
+            this.btnTienich.Location = new System.Drawing.Point(2, 355);
             this.btnTienich.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTienich.Name = "btnTienich";
             this.btnTienich.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
@@ -162,31 +160,6 @@
             this.btnTienich.TextColor = System.Drawing.Color.White;
             this.btnTienich.UseVisualStyleBackColor = false;
             this.btnTienich.Click += new System.EventHandler(this.btnTienich_Click);
-            // 
-            // btnTietkiem
-            // 
-            this.btnTietkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnTietkiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnTietkiem.BorderColor = System.Drawing.Color.Transparent;
-            this.btnTietkiem.BorderRadius = 0;
-            this.btnTietkiem.BorderSize = 2;
-            this.btnTietkiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTietkiem.FlatAppearance.BorderSize = 0;
-            this.btnTietkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTietkiem.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTietkiem.ForeColor = System.Drawing.Color.White;
-            this.btnTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.piggy_bank1;
-            this.btnTietkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTietkiem.Location = new System.Drawing.Point(2, 355);
-            this.btnTietkiem.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnTietkiem.Name = "btnTietkiem";
-            this.btnTietkiem.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnTietkiem.Size = new System.Drawing.Size(261, 88);
-            this.btnTietkiem.TabIndex = 35;
-            this.btnTietkiem.Text = "      Tiết kiệm";
-            this.btnTietkiem.TextColor = System.Drawing.Color.White;
-            this.btnTietkiem.UseVisualStyleBackColor = false;
-            this.btnTietkiem.Click += new System.EventHandler(this.btnTietkiem_Click);
             // 
             // btnChuyentien
             // 
@@ -337,7 +310,6 @@
         private CustomButton.VBButton btnCaidat;
         private CustomButton.VBButton btnHotro;
         private CustomButton.VBButton btnTienich;
-        private CustomButton.VBButton btnTietkiem;
         private CustomButton.VBButton btnChuyentien;
         private CustomButton.VBButton btnTaikhoan;
         private Panel pnlNguoidung;

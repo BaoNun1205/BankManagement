@@ -76,14 +76,14 @@ namespace DOAN_Nhom4
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
               btn1thang.ForeColor = Color.White;
-              btn1thang.BackColor = Color.Teal;
-              btn3thang.ForeColor = Color.Teal;
+              btn1thang.BackColor = Color.FromArgb(2, 69, 158);
+              btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
               btn3thang.BackColor = Color.White;
-              btn6thang.ForeColor = Color.Teal;
+              btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
               btn6thang.BackColor = Color.White;
-              btn12thang.ForeColor = Color.Teal;
+              btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
               btn12thang.BackColor = Color.White;
-              btn18thang.ForeColor = Color.Teal;
+              btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
               btn18thang.BackColor = Color.White;
         }
 
@@ -105,14 +105,14 @@ namespace DOAN_Nhom4
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
             btn3thang.ForeColor = Color.White;
-            btn3thang.BackColor = Color.Teal;
-            btn1thang.ForeColor = Color.Teal;
+            btn3thang.BackColor = Color.FromArgb(2, 69, 158);
+            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn1thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.Teal;
+            btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn6thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.Teal;
+            btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.Teal;
+            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn18thang.BackColor = Color.White;
         }
 
@@ -134,14 +134,14 @@ namespace DOAN_Nhom4
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
             btn6thang.ForeColor = Color.White;
-            btn6thang.BackColor = Color.Teal;
-            btn3thang.ForeColor = Color.Teal;
+            btn6thang.BackColor = Color.FromArgb(2, 69, 158);
+            btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn3thang.BackColor = Color.White;
-            btn1thang.ForeColor = Color.Teal;
+            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn1thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.Teal;
+            btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.Teal;
+            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn18thang.BackColor = Color.White;
         }
 
@@ -163,14 +163,14 @@ namespace DOAN_Nhom4
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
             btn12thang.ForeColor = Color.White;
-            btn12thang.BackColor = Color.Teal;
-            btn3thang.ForeColor = Color.Teal;
+            btn12thang.BackColor = Color.FromArgb(2, 69, 158);
+            btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn3thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.Teal;
+            btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn6thang.BackColor = Color.White;
-            btn1thang.ForeColor = Color.Teal;
+            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn1thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.Teal;
+            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn18thang.BackColor = Color.White;
         }
 
@@ -192,14 +192,14 @@ namespace DOAN_Nhom4
                 else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             }
             btn18thang.ForeColor = Color.White;
-            btn18thang.BackColor = Color.Teal;
-            btn3thang.ForeColor = Color.Teal;
+            btn18thang.BackColor = Color.FromArgb(2, 69, 158);
+            btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn3thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.Teal;
+            btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn6thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.Teal;
+            btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn12thang.BackColor = Color.White;
-            btn1thang.ForeColor = Color.Teal;
+            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn1thang.BackColor = Color.White;
         }
 

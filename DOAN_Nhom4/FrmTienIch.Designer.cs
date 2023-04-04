@@ -43,7 +43,9 @@
             this.panelTinDung = new System.Windows.Forms.Panel();
             this.ptbTinDung = new System.Windows.Forms.PictureBox();
             this.lblTinDung = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelTietkiem = new System.Windows.Forms.Panel();
+            this.ptbTietkiem = new System.Windows.Forms.PictureBox();
+            this.lblTietkiem = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTienTich)).BeginInit();
             this.panel4.SuspendLayout();
@@ -53,6 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTinDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).BeginInit();
+            this.panelTietkiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTietkiem)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -67,7 +71,8 @@
             // 
             // ptbTienTich
             // 
-            this.ptbTienTich.Image = global::DOAN_Nhom4.Properties.Resources.plugin1;
+            this.ptbTienTich.ErrorImage = global::DOAN_Nhom4.Properties.Resources.payments2;
+            this.ptbTienTich.Image = global::DOAN_Nhom4.Properties.Resources.payments1;
             this.ptbTienTich.Location = new System.Drawing.Point(584, 9);
             this.ptbTienTich.Name = "ptbTienTich";
             this.ptbTienTich.Size = new System.Drawing.Size(69, 66);
@@ -174,7 +179,6 @@
             this.lblNapDienThoai.Size = new System.Drawing.Size(236, 32);
             this.lblNapDienThoai.TabIndex = 2;
             this.lblNapDienThoai.Text = "Nạp Tiền Điện Thoại";
-            this.lblNapDienThoai.Click += new System.EventHandler(this.lblNapDienThoai_Click);
             // 
             // panelTinDung
             // 
@@ -209,12 +213,38 @@
             this.lblTinDung.Text = "Tín Dụng Online";
             this.lblTinDung.Click += new System.EventHandler(this.lblTinDung_Click);
             // 
-            // panel8
+            // panelTietkiem
             // 
-            this.panel8.Location = new System.Drawing.Point(580, 402);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(556, 309);
-            this.panel8.TabIndex = 7;
+            this.panelTietkiem.Controls.Add(this.ptbTietkiem);
+            this.panelTietkiem.Controls.Add(this.lblTietkiem);
+            this.panelTietkiem.Location = new System.Drawing.Point(580, 402);
+            this.panelTietkiem.Name = "panelTietkiem";
+            this.panelTietkiem.Size = new System.Drawing.Size(556, 309);
+            this.panelTietkiem.TabIndex = 7;
+            this.panelTietkiem.Click += new System.EventHandler(this.panelTietkiem_Click);
+            // 
+            // ptbTietkiem
+            // 
+            this.ptbTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.piggy_bank2;
+            this.ptbTietkiem.Location = new System.Drawing.Point(244, 126);
+            this.ptbTietkiem.Name = "ptbTietkiem";
+            this.ptbTietkiem.Size = new System.Drawing.Size(92, 67);
+            this.ptbTietkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTietkiem.TabIndex = 3;
+            this.ptbTietkiem.TabStop = false;
+            this.ptbTietkiem.Click += new System.EventHandler(this.ptbTietkiem_Click);
+            // 
+            // lblTietkiem
+            // 
+            this.lblTietkiem.AutoSize = true;
+            this.lblTietkiem.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTietkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblTietkiem.Location = new System.Drawing.Point(231, 78);
+            this.lblTietkiem.Name = "lblTietkiem";
+            this.lblTietkiem.Size = new System.Drawing.Size(115, 32);
+            this.lblTietkiem.TabIndex = 2;
+            this.lblTietkiem.Text = "Tiết kiệm";
+            this.lblTietkiem.Click += new System.EventHandler(this.lblTietkiem_Click);
             // 
             // FrmTienIch
             // 
@@ -222,7 +252,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panelTietkiem);
             this.Controls.Add(this.panelTinDung);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panelVayTien);
@@ -248,6 +278,9 @@
             this.panelTinDung.ResumeLayout(false);
             this.panelTinDung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).EndInit();
+            this.panelTietkiem.ResumeLayout(false);
+            this.panelTietkiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTietkiem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,12 +295,14 @@
         private Panel panelVayTien;
         private Panel panel6;
         private Panel panelTinDung;
-        private Panel panel8;
+        private Panel panelTietkiem;
         private Label lblVayTien;
         private Label lblNapDienThoai;
         private Label lblTinDung;
         private PictureBox ptbVayTien;
         private PictureBox ptbTinDung;
         private PictureBox pictureBox2;
+        private PictureBox ptbTietkiem;
+        private Label lblTietkiem;
     }
 }
