@@ -157,8 +157,15 @@ namespace DOAN_Nhom4
                 {
                     reader.Read();
                     ttNgDung.SoTKVay = reader.GetString(0);
+                    ttNgDung.DanhXung = reader.GetString(1);
                     ttNgDung.HoTen = reader.GetString(2);
                     ttNgDung.Cccd = reader.GetString(3);
+                    ttNgDung.DiaChi = reader.GetString(4);
+                    ttNgDung.Sdt = reader.GetString(5);
+                    ttNgDung.Email = reader.GetString(6);
+                    ttNgDung.NgheNghiep = reader.GetString(7);
+                    ttNgDung.ThuNhap = reader.GetString(8);
+                    ttNgDung.SpVay = reader.GetString(9);
                     ttNgDung.SoTienVay = reader.GetInt64(10);
                     ttNgDung.ThoiGianVay = reader.GetInt32(11);
                     ttNgDung.ChiNhanhVay = reader.GetString(12);

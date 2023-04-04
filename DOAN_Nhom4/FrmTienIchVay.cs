@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
             ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTK);           
-            if (ttNgDung != null)
+            if (ttNgDung != null && ttNgDung.TongSoTienPhaiTra != 0)
             {
                 FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                 DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
