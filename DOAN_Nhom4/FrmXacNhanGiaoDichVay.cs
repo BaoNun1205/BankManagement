@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -41,10 +42,11 @@ namespace DOAN_Nhom4
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
+            BigInteger sotienlai = BigInteger.Parse(txt_SoTienLai.Text, NumberStyles.AllowThousands);
             ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             ttNgDung.ThoiGianVay -= 1;
-            ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - int.Parse(txt_SoTienLai.Text));
+            ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - sotienlai);
             ttNgDung.PhiTraCham = 0;
             tknh.SoDu -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             if (ttNgDung.ThoiGianVay != 0)
@@ -75,7 +77,7 @@ namespace DOAN_Nhom4
             txt_TKVay.Text = nguoiDung.SoTK;
             BigInteger tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
             txt_SoTienGoc.Text = tmp.ToString("N0");
-            txt_SoTienLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString();
+            txt_SoTienLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString("N0");
             txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
             txt_TongSoTien.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).ToString("N0");
             txt_NgayGiaoDich.Value = DateTime.Now;

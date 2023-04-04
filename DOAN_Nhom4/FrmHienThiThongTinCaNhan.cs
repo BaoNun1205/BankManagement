@@ -29,7 +29,7 @@ namespace DOAN_Nhom4
         {
             lblChuTKValue.Text = kh.TenTK.ToString();
             lblSoTkValue.Text = kh.SoTK.ToString();
-            lblSoDuValue.Text = tknh.SoDu.ToString() + " VNĐ";
+            lblSoDuValue.Text = tknh.SoDu.ToString("N0") + " VNĐ";
             lblCccdValue.Text = kh.Cccd.ToString();
             lblNgaySinhValue.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
             lblSdtValue.Text = kh.Sdt.ToString();
