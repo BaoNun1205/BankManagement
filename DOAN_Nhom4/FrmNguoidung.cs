@@ -36,7 +36,7 @@ namespace DOAN_Nhom4
 
         private void FrmNguoidung_Load(object sender, EventArgs e)
         {
-            
+            lblTenTK.Text = kh.TenTK.ToString();
         }
 
         private void btnTaikhoan_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace DOAN_Nhom4
             DOAN_Nhom4.ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
         }
 
-        private void btnTrangchu_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
