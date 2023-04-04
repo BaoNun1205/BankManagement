@@ -36,11 +36,6 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void lblNapDienThoai_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmTienIch_Load(object sender, EventArgs e)
         {
         }
