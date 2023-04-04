@@ -87,7 +87,7 @@ namespace DOAN_Nhom4
                 {
                     if (BigInteger.Parse(txt_SoTienVay.Text) > 0 && BigInteger.Parse(txt_SoTienVay.Text) % 1000 == 0)
                     {
-                        if (int.Parse(txt_ThoiGianVay.Text) > 0)
+                        if (int.Parse(txt_ThoiGianVay.Text) >= 6 && int.Parse(txt_ThoiGianVay.Text) <= 60)
                         {
                             if (ttNgDungDAO.TKValid(nguoiDung.SoTK) == null)
                             {
@@ -100,7 +100,6 @@ namespace DOAN_Nhom4
                         }
                         else
                             MessageBox.Show("Thời gian vay chưa hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                     }
                     else
                         MessageBox.Show("Số tiền nhập vào chưa hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
