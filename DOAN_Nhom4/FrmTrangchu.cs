@@ -27,13 +27,21 @@
 
         private void FrmTrangchu_Load(object sender, EventArgs e)
         {
-            ptbLoGo.Image = Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f;
+            timer1.Start();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToLongDateString();
         }
 
         private void lblXemLsgd_Click(object sender, EventArgs e)
         {
             FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh);
             DOAN_Nhom4.ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
         }
     }
 }

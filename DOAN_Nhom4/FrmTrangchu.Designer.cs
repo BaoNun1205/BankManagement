@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrangchu));
             this.label2 = new System.Windows.Forms.Label();
             this.ptbLoGo = new System.Windows.Forms.PictureBox();
             this.lblXemLsgd = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLoGo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +50,7 @@
             // ptbLoGo
             // 
             this.ptbLoGo.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
-            this.ptbLoGo.Location = new System.Drawing.Point(472, 12);
+            this.ptbLoGo.Location = new System.Drawing.Point(472, 215);
             this.ptbLoGo.Name = "ptbLoGo";
             this.ptbLoGo.Size = new System.Drawing.Size(195, 154);
             this.ptbLoGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -57,21 +61,52 @@
             // 
             this.lblXemLsgd.AutoSize = true;
             this.lblXemLsgd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblXemLsgd.Location = new System.Drawing.Point(788, 239);
+            this.lblXemLsgd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblXemLsgd.Location = new System.Drawing.Point(917, 9);
             this.lblXemLsgd.Name = "lblXemLsgd";
             this.lblXemLsgd.Size = new System.Drawing.Size(210, 30);
             this.lblXemLsgd.TabIndex = 15;
             this.lblXemLsgd.Text = "Xem lịch sử giao dịch";
             this.lblXemLsgd.Click += new System.EventHandler(this.lblXemLsgd_Click);
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTime.ForeColor = System.Drawing.Color.Black;
+            this.lblTime.Location = new System.Drawing.Point(487, 384);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(105, 37);
+            this.lblTime.TabIndex = 16;
+            this.lblTime.Text = "lblTime";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblDate.Location = new System.Drawing.Point(428, 420);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(103, 37);
+            this.lblDate.TabIndex = 17;
+            this.lblDate.Text = "lblDate";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmTrangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblXemLsgd);
             this.Controls.Add(this.ptbLoGo);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
@@ -92,5 +127,8 @@
         private Label label2;
         private PictureBox ptbLoGo;
         private Label lblXemLsgd;
+        private Label lblTime;
+        private Label lblDate;
+        private System.Windows.Forms.Timer timer1;
     }
 }
