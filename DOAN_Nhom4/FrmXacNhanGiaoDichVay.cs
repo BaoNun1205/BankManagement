@@ -46,7 +46,7 @@ namespace DOAN_Nhom4
             ttNgDung.ThoiGianVay -= 1;
             ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - int.Parse(txt_SoTienLai.Text));
             ttNgDung.PhiTraCham = 0;
-            tknh.SoDu -= ttNgDung.SoTienHangThang;
+            tknh.SoDu -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             if (ttNgDung.ThoiGianVay != 0)
             {
                 ttNgDungDAO.Update(ttNgDung);
