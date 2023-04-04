@@ -52,7 +52,7 @@
             // 
             this.picBoxQuaylai.BackColor = System.Drawing.Color.White;
             this.picBoxQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.picBoxQuaylai.Location = new System.Drawing.Point(2, 2);
+            this.picBoxQuaylai.Location = new System.Drawing.Point(11, 10);
             this.picBoxQuaylai.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxQuaylai.Name = "picBoxQuaylai";
             this.picBoxQuaylai.Size = new System.Drawing.Size(49, 41);
@@ -65,7 +65,6 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.txt_XacNhanMatKhau);
-            this.panel4.Controls.Add(this.picBoxQuaylai);
             this.panel4.Controls.Add(this.txt_MatKhauMoi);
             this.panel4.Controls.Add(this.txt_MatKhauCu);
             this.panel4.Controls.Add(this.btn_DoiMatKhau);
@@ -223,6 +222,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.picBoxQuaylai);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "FrmDoimatkhau";
