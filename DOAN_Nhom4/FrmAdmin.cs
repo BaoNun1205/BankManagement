@@ -131,5 +131,13 @@ namespace DOAN_Nhom4
         {
             Refresh();
         }
+
+        private void btn_QuanLyVay_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyVayAdmin frmqlvay = new FrmQuanLyVayAdmin();
+            this.Hide();
+            frmqlvay.ShowDialog();
+            this.Close();
+        }
     }
 }
