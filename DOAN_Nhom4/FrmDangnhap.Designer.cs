@@ -62,7 +62,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.user3;
+            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.profile_user;
             this.pictureBox2.Location = new System.Drawing.Point(35, 184);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -73,7 +73,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.padlock1;
+            this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.padlock2;
             this.pictureBox3.Location = new System.Drawing.Point(35, 270);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
@@ -106,7 +106,7 @@
             this.txtUserName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtUserName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.txtUserName.Location = new System.Drawing.Point(85, 184);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserName.Multiline = true;
@@ -119,7 +119,7 @@
             this.txtPass.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Malgun Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtPass.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.txtPass.Location = new System.Drawing.Point(85, 270);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Multiline = true;
@@ -148,7 +148,7 @@
             this.lblXoa.AutoSize = true;
             this.lblXoa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblXoa.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblXoa.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblXoa.Location = new System.Drawing.Point(342, 358);
             this.lblXoa.Name = "lblXoa";
             this.lblXoa.Size = new System.Drawing.Size(42, 19);
@@ -160,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label1.Location = new System.Drawing.Point(123, 131);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -172,20 +172,20 @@
             // 
             this.btnDangnhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangnhap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangnhap.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangnhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnDangnhap.BorderRadius = 0;
             this.btnDangnhap.BorderSize = 3;
             this.btnDangnhap.FlatAppearance.BorderSize = 0;
             this.btnDangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDangnhap.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDangnhap.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangnhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnDangnhap.Location = new System.Drawing.Point(218, 390);
             this.btnDangnhap.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnDangnhap.Name = "btnDangnhap";
             this.btnDangnhap.Size = new System.Drawing.Size(167, 38);
             this.btnDangnhap.TabIndex = 23;
             this.btnDangnhap.Text = "Đăng nhập";
-            this.btnDangnhap.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangnhap.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnDangnhap.UseVisualStyleBackColor = false;
             this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
             // 
@@ -193,20 +193,20 @@
             // 
             this.btnThoat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThoat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThoat.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnThoat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnThoat.BorderRadius = 0;
             this.btnThoat.BorderSize = 3;
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnThoat.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnThoat.Location = new System.Drawing.Point(35, 443);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(350, 38);
             this.btnThoat.TabIndex = 25;
             this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnThoat.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -214,20 +214,20 @@
             // 
             this.btnDangky.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDangky.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangky.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangky.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnDangky.BorderRadius = 0;
             this.btnDangky.BorderSize = 3;
             this.btnDangky.FlatAppearance.BorderSize = 0;
             this.btnDangky.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDangky.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDangky.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangky.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnDangky.Location = new System.Drawing.Point(35, 390);
             this.btnDangky.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnDangky.Name = "btnDangky";
             this.btnDangky.Size = new System.Drawing.Size(167, 38);
             this.btnDangky.TabIndex = 26;
             this.btnDangky.Text = "Đăng ký";
-            this.btnDangky.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangky.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnDangky.UseVisualStyleBackColor = false;
             this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
             // 
@@ -235,7 +235,7 @@
             // 
             this.rdb_Admin.AutoSize = true;
             this.rdb_Admin.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdb_Admin.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.rdb_Admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.rdb_Admin.Location = new System.Drawing.Point(85, 325);
             this.rdb_Admin.Name = "rdb_Admin";
             this.rdb_Admin.Size = new System.Drawing.Size(71, 20);
@@ -248,7 +248,7 @@
             // 
             this.rdb_NguoiDung.AutoSize = true;
             this.rdb_NguoiDung.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rdb_NguoiDung.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.rdb_NguoiDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.rdb_NguoiDung.Location = new System.Drawing.Point(246, 325);
             this.rdb_NguoiDung.Name = "rdb_NguoiDung";
             this.rdb_NguoiDung.Size = new System.Drawing.Size(107, 20);

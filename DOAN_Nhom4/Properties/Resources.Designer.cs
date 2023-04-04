@@ -585,6 +585,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap padlock2 {
+            get {
+                object obj = ResourceManager.GetObject("padlock2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap payments {
             get {
                 object obj = ResourceManager.GetObject("payments", resourceCulture);
@@ -738,6 +748,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap pngtree_double_direction_arrow_icon_png_image_971624 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-double-direction-arrow-icon-png-image_971624", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_user {
+            get {
+                object obj = ResourceManager.GetObject("profile-user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
