@@ -333,6 +333,7 @@
             this.gvTKTK.RowTemplate.Height = 41;
             this.gvTKTK.Size = new System.Drawing.Size(809, 182);
             this.gvTKTK.TabIndex = 94;
+            this.gvTKTK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTKTK_CellClick);
             // 
             // label1
             // 

@@ -52,7 +52,7 @@
             // 
             this.picBoxQuaylai.BackColor = System.Drawing.Color.White;
             this.picBoxQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.picBoxQuaylai.Location = new System.Drawing.Point(2, 2);
+            this.picBoxQuaylai.Location = new System.Drawing.Point(11, 10);
             this.picBoxQuaylai.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.picBoxQuaylai.Name = "picBoxQuaylai";
             this.picBoxQuaylai.Size = new System.Drawing.Size(49, 41);
@@ -64,9 +64,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.txt_XacNhanMatKhau);
-            this.panel4.Controls.Add(this.picBoxQuaylai);
             this.panel4.Controls.Add(this.txt_MatKhauMoi);
             this.panel4.Controls.Add(this.txt_MatKhauCu);
             this.panel4.Controls.Add(this.btn_DoiMatKhau);
@@ -85,42 +83,45 @@
             // 
             // txt_XacNhanMatKhau
             // 
-            this.txt_XacNhanMatKhau.BackColor = System.Drawing.SystemColors.Menu;
+            this.txt_XacNhanMatKhau.BackColor = System.Drawing.Color.White;
             this.txt_XacNhanMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_XacNhanMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_XacNhanMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txt_XacNhanMatKhau.ForeColor = System.Drawing.Color.Gray;
             this.txt_XacNhanMatKhau.Location = new System.Drawing.Point(209, 457);
             this.txt_XacNhanMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_XacNhanMatKhau.Name = "txt_XacNhanMatKhau";
             this.txt_XacNhanMatKhau.Size = new System.Drawing.Size(285, 32);
             this.txt_XacNhanMatKhau.TabIndex = 32;
             this.txt_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
+            this.txt_XacNhanMatKhau.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_XacNhanMatKhau_MouseClick);
             // 
             // txt_MatKhauMoi
             // 
-            this.txt_MatKhauMoi.BackColor = System.Drawing.SystemColors.Menu;
+            this.txt_MatKhauMoi.BackColor = System.Drawing.Color.White;
             this.txt_MatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_MatKhauMoi.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_MatKhauMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txt_MatKhauMoi.ForeColor = System.Drawing.Color.Gray;
             this.txt_MatKhauMoi.Location = new System.Drawing.Point(209, 360);
             this.txt_MatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MatKhauMoi.Name = "txt_MatKhauMoi";
             this.txt_MatKhauMoi.Size = new System.Drawing.Size(285, 32);
             this.txt_MatKhauMoi.TabIndex = 31;
             this.txt_MatKhauMoi.Text = "Mật khẩu mới";
+            this.txt_MatKhauMoi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_MatKhauMoi_MouseClick);
             // 
             // txt_MatKhauCu
             // 
-            this.txt_MatKhauCu.BackColor = System.Drawing.SystemColors.Menu;
+            this.txt_MatKhauCu.BackColor = System.Drawing.Color.White;
             this.txt_MatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_MatKhauCu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_MatKhauCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txt_MatKhauCu.ForeColor = System.Drawing.Color.Gray;
             this.txt_MatKhauCu.Location = new System.Drawing.Point(209, 258);
             this.txt_MatKhauCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MatKhauCu.Name = "txt_MatKhauCu";
             this.txt_MatKhauCu.Size = new System.Drawing.Size(285, 32);
             this.txt_MatKhauCu.TabIndex = 30;
             this.txt_MatKhauCu.Text = "Mật khẩu cũ";
+            this.txt_MatKhauCu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_MatKhauCu_MouseClick);
             // 
             // btn_DoiMatKhau
             // 
@@ -173,7 +174,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DOAN_Nhom4.Properties.Resources.baomat;
-            this.pictureBox3.Location = new System.Drawing.Point(136, 439);
+            this.pictureBox3.Location = new System.Drawing.Point(136, 444);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 50);
@@ -184,7 +185,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.baomat;
-            this.pictureBox2.Location = new System.Drawing.Point(136, 342);
+            this.pictureBox2.Location = new System.Drawing.Point(136, 347);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 50);
@@ -195,7 +196,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.baomat;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 240);
+            this.pictureBox1.Location = new System.Drawing.Point(136, 245);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
@@ -221,6 +222,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.picBoxQuaylai);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "FrmDoimatkhau";

@@ -22,6 +22,7 @@ namespace DOAN_Nhom4
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             HienThi();
+            txt_NgayDangKyThe.Value = DateTime.Now;
         }
         private void HienThi()
         {
@@ -37,7 +38,7 @@ namespace DOAN_Nhom4
             gvQLKH.Columns[7].HeaderText = "Căn cước công dân";
             gvQLKH.Columns[8].HeaderText = "Email";
             gvQLKH.Columns[9].HeaderText = "Số điện thoại";
-            gvQLKH.Columns[10].HeaderText = "Ngày đăng ký";
+            gvQLKH.Columns[10].HeaderText = "Ngày đăng ký";            
         }
         private void Refresh()
         {
@@ -130,6 +131,14 @@ namespace DOAN_Nhom4
         private void btn_Refersh_Click(object sender, EventArgs e)
         {
             Refresh();
+        }
+
+        private void btn_QuanLyVay_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyVayAdmin frmqlvay = new FrmQuanLyVayAdmin();
+            this.Hide();
+            frmqlvay.ShowDialog();
+            this.Close();
         }
     }
 }

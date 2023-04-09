@@ -58,6 +58,8 @@
             this.btn_Sua = new CustomButton.VBButton();
             this.btn_DichVu = new CustomButton.VBButton();
             this.btn_Refersh = new CustomButton.VBButton();
+            this.btn_QuanLyVay = new CustomButton.VBButton();
+            this.btn_QuanLyTinDung = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKH)).BeginInit();
             this.SuspendLayout();
@@ -245,6 +247,7 @@
             // 
             this.txt_NgaySinh.CustomFormat = "MM/dd/yyyy";
             this.txt_NgaySinh.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_NgaySinh.Location = new System.Drawing.Point(59, 393);
             this.txt_NgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_NgaySinh.Name = "txt_NgaySinh";
@@ -289,12 +292,15 @@
             // txt_NgayDangKyThe
             // 
             this.txt_NgayDangKyThe.CustomFormat = "MM/dd/yyyy";
+            this.txt_NgayDangKyThe.Enabled = false;
             this.txt_NgayDangKyThe.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_NgayDangKyThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_NgayDangKyThe.Location = new System.Drawing.Point(59, 678);
             this.txt_NgayDangKyThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_NgayDangKyThe.Name = "txt_NgayDangKyThe";
             this.txt_NgayDangKyThe.Size = new System.Drawing.Size(214, 24);
             this.txt_NgayDangKyThe.TabIndex = 23;
+            this.txt_NgayDangKyThe.Value = new System.DateTime(2023, 4, 6, 11, 35, 9, 0);
             // 
             // label11
             // 
@@ -404,7 +410,7 @@
             this.btn_DichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DichVu.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_DichVu.ForeColor = System.Drawing.Color.White;
-            this.btn_DichVu.Location = new System.Drawing.Point(844, 658);
+            this.btn_DichVu.Location = new System.Drawing.Point(1197, 658);
             this.btn_DichVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DichVu.Name = "btn_DichVu";
             this.btn_DichVu.Size = new System.Drawing.Size(176, 45);
@@ -435,12 +441,55 @@
             this.btn_Refersh.UseVisualStyleBackColor = false;
             this.btn_Refersh.Click += new System.EventHandler(this.btn_Refersh_Click);
             // 
+            // btn_QuanLyVay
+            // 
+            this.btn_QuanLyVay.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_QuanLyVay.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_QuanLyVay.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_QuanLyVay.BorderRadius = 20;
+            this.btn_QuanLyVay.BorderSize = 0;
+            this.btn_QuanLyVay.FlatAppearance.BorderSize = 0;
+            this.btn_QuanLyVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QuanLyVay.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_QuanLyVay.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanLyVay.Location = new System.Drawing.Point(567, 658);
+            this.btn_QuanLyVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_QuanLyVay.Name = "btn_QuanLyVay";
+            this.btn_QuanLyVay.Size = new System.Drawing.Size(176, 45);
+            this.btn_QuanLyVay.TabIndex = 32;
+            this.btn_QuanLyVay.Text = "Quản Lý Vay";
+            this.btn_QuanLyVay.TextColor = System.Drawing.Color.White;
+            this.btn_QuanLyVay.UseVisualStyleBackColor = false;
+            this.btn_QuanLyVay.Click += new System.EventHandler(this.btn_QuanLyVay_Click);
+            // 
+            // btn_QuanLyTinDung
+            // 
+            this.btn_QuanLyTinDung.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_QuanLyTinDung.BackgroundColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_QuanLyTinDung.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_QuanLyTinDung.BorderRadius = 20;
+            this.btn_QuanLyTinDung.BorderSize = 0;
+            this.btn_QuanLyTinDung.FlatAppearance.BorderSize = 0;
+            this.btn_QuanLyTinDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QuanLyTinDung.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_QuanLyTinDung.ForeColor = System.Drawing.Color.White;
+            this.btn_QuanLyTinDung.Location = new System.Drawing.Point(891, 658);
+            this.btn_QuanLyTinDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_QuanLyTinDung.Name = "btn_QuanLyTinDung";
+            this.btn_QuanLyTinDung.Size = new System.Drawing.Size(176, 45);
+            this.btn_QuanLyTinDung.TabIndex = 32;
+            this.btn_QuanLyTinDung.Text = "Quản Lý Tín Dụng";
+            this.btn_QuanLyTinDung.TextColor = System.Drawing.Color.White;
+            this.btn_QuanLyTinDung.UseVisualStyleBackColor = false;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1670, 736);
+            this.Controls.Add(this.btn_QuanLyTinDung);
+            this.Controls.Add(this.btn_QuanLyVay);
             this.Controls.Add(this.btn_Refersh);
             this.Controls.Add(this.btn_DichVu);
             this.Controls.Add(this.btn_Sua);
@@ -514,5 +563,7 @@
         private CustomButton.VBButton btn_Sua;
         private CustomButton.VBButton btn_DichVu;
         private CustomButton.VBButton btn_Refersh;
+        private CustomButton.VBButton btn_QuanLyVay;
+        private CustomButton.VBButton btn_QuanLyTinDung;
     }
 }

@@ -48,18 +48,7 @@ namespace DOAN_Nhom4
             gvTKTK.Columns[6].HeaderText = "Tong tien";
         }
 
-        private void gvTKTK_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i;
-            i = gvTKTK.CurrentRow.Index;
-            lblID.Text = gvTKTK.Rows[i].Cells[0].Value.ToString();
-            lblTenTKTK.Text = gvTKTK.Rows[i].Cells[1].Value.ToString();
-            txtTiengoc.Text = gvTKTK.Rows[i].Cells[2].Value.ToString();
-            txtKihan.Text = gvTKTK.Rows[i].Cells[3].Value.ToString();
-            lblLaisuat.Text = gvTKTK.Rows[i].Cells[4].Value.ToString();
-            lblTienlai.Text = gvTKTK.Rows[i].Cells[5].Value.ToString();
-            lblTongtien.Text = gvTKTK.Rows[i].Cells[6].Value.ToString();
-        }
+        
 
         private void Xoa()
         {
@@ -87,6 +76,19 @@ namespace DOAN_Nhom4
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
+        }
+
+        private void gvTKTK_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = gvTKTK.CurrentRow.Index;
+            lblID.Text = gvTKTK.Rows[i].Cells[0].Value.ToString();
+            lblTenTKTK.Text = gvTKTK.Rows[i].Cells[1].Value.ToString();
+            txtTiengoc.Text = gvTKTK.Rows[i].Cells[2].Value.ToString();
+            txtKihan.Text = gvTKTK.Rows[i].Cells[3].Value.ToString();
+            lblLaisuat.Text = gvTKTK.Rows[i].Cells[4].Value.ToString();
+            lblTienlai.Text = gvTKTK.Rows[i].Cells[5].Value.ToString();
+            lblTongtien.Text = gvTKTK.Rows[i].Cells[6].Value.ToString();
         }
     }
 }

@@ -51,7 +51,7 @@ namespace DOAN_Nhom4
             DOAN_Nhom4.ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
         }
 
-        private void btnTrangchu_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
@@ -85,10 +85,29 @@ namespace DOAN_Nhom4
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnCaidat_Click(object sender, EventArgs e)
+        private void pnlDanhmuc_MouseHover(object sender, EventArgs e)
+        {
+            pnlLuachonCD.Visible = false;
+        }
+
+        private void btnCaidat_MouseHover(object sender, EventArgs e)
+        {
+            pnlLuachonCD.Visible = true;
+        }
+
+        private void btnBaomat_Click(object sender, EventArgs e)
         {
             FrmBaomat frmBaomat = new FrmBaomat(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmBaomat, pnlNguoidung);
+            pnlLuachonCD.Visible = false;
+        }
+
+        private void btnDangxuat_Click(object sender, EventArgs e)
+        {
+            FrmDangnhap frmDangnhap = new FrmDangnhap();
+            Application.OpenForms["frmNguoiDung"].Hide();
+            frmDangnhap.ShowDialog();
+            Application.OpenForms["frmNguoiDung"].Close();
         }
     }
 }

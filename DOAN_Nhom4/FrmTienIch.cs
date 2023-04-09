@@ -36,11 +36,6 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void lblNapDienThoai_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmTienIch_Load(object sender, EventArgs e)
         {
         }
@@ -75,6 +70,22 @@ namespace DOAN_Nhom4
         private void ptbTinDung_Click(object sender, EventArgs e)
         {
             panelTinDung_Click(sender, e);
+        }
+
+        private void ptbTietkiem_Click(object sender, EventArgs e)
+        {
+            panelTietkiem_Click(sender, e);
+        }
+
+        private void panelTietkiem_Click(object sender, EventArgs e)
+        {
+            FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoiDung);
+        }
+
+        private void lblTietkiem_Click(object sender, EventArgs e)
+        {
+            panelTietkiem_Click(sender, e);
         }
     }
 }

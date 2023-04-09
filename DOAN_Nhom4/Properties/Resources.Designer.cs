@@ -203,6 +203,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bank_service_quality_indicators_august_2022 {
+            get {
+                object obj = ResourceManager.GetObject("bank-service-quality-indicators-august-2022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bannerto_km {
             get {
                 object obj = ResourceManager.GetObject("bannerto_km", resourceCulture);
@@ -383,6 +393,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_cong_nghe_103229758 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-cong-nghe_103229758", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
@@ -515,6 +535,26 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout__1_ {
+            get {
+                object obj = ResourceManager.GetObject("logout (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
@@ -565,6 +605,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap padlock2 {
+            get {
+                object obj = ResourceManager.GetObject("padlock2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap payments {
             get {
                 object obj = ResourceManager.GetObject("payments", resourceCulture);
@@ -578,6 +628,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap payments1 {
             get {
                 object obj = ResourceManager.GetObject("payments1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap payments2 {
+            get {
+                object obj = ResourceManager.GetObject("payments2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -675,6 +735,16 @@ namespace DOAN_Nhom4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap piggy_bank2 {
+            get {
+                object obj = ResourceManager.GetObject("piggy-bank2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plugin {
             get {
                 object obj = ResourceManager.GetObject("plugin", resourceCulture);
@@ -698,6 +768,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap pngtree_double_direction_arrow_icon_png_image_971624 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-double-direction-arrow-icon-png-image_971624", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_user {
+            get {
+                object obj = ResourceManager.GetObject("profile-user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -758,6 +838,16 @@ namespace DOAN_Nhom4.Properties {
         internal static System.Drawing.Bitmap settings2 {
             get {
                 object obj = ResourceManager.GetObject("settings2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings3 {
+            get {
+                object obj = ResourceManager.GetObject("settings3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
