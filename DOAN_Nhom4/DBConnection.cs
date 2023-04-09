@@ -182,6 +182,47 @@ namespace DOAN_Nhom4
             }
             return ttNgDung;
         }
+        public ThongTinTinDung XuLiNgDungTinDung(string sqlStr)
+        {
+            ThongTinTinDung ttTinDung = new ThongTinTinDung();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    ttTinDung.SoTKTinDung = reader.GetString(0);
+                    ttTinDung.HoTen = reader.GetString(1);
+                    ttTinDung.Cccd = reader.GetString(2);
+                    ttTinDung.DiaChi = reader.GetString(3);
+                    ttTinDung.Sdt = reader.GetString(4);
+                    ttTinDung.Email = reader.GetString(5);
+                    ttTinDung.NgheNghiep = reader.GetString(6);
+                    ttTinDung.ThuNhap = reader.GetString(7);
+                    ttTinDung.LoaiThe = reader.GetString(8);
+                    ttTinDung.NgayDaoHan = reader.GetDateTime(9);
+                    ttTinDung.HanMuc = reader.GetInt64(10);
+                    ttTinDung.LaiSuat = double.Parse(reader.GetString(11));
+                    ttTinDung.SoTienDaSuDung = reader.GetInt64(12);
+                    ttTinDung.NgayMoThe = reader.GetDateTime(13);
+                    ttTinDung.PhiTraCham = reader.GetInt64(14);
+                    ttTinDung.PhiThuongNien = reader.GetInt64(15);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ttTinDung;
+        }
         public bool IsEmail(string email)
         {
             string strRegex = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
@@ -227,7 +268,6 @@ namespace DOAN_Nhom4
                             }
                             row++;
                         }
-
                         // Thiết lập đường dẫn lưu tập tin Excel
                         string fileName = @"D:\lAY\MyWorkbook.xlsx";
 

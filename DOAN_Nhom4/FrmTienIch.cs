@@ -63,8 +63,8 @@ namespace DOAN_Nhom4
 
         private void panelTinDung_Click(object sender, EventArgs e)
         {
-            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmDangKyTinDung, pnlNguoiDung);
+            FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
 
         private void lblTinDung_Click(object sender, EventArgs e)

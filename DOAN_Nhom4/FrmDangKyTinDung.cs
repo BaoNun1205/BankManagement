@@ -15,6 +15,7 @@ namespace DOAN_Nhom4
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
+        ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         Image[] images = new Image[]
         {
             Properties.Resources.hhb_visa_Flexi,
@@ -53,6 +54,45 @@ namespace DOAN_Nhom4
         {
             FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTheHHBVisaFlexi, pnlNguoiDung);
+        }
+
+        private void ptbQuayLai_Click(object sender, EventArgs e)
+        {
+            FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
+        }
+
+        private void FrmDangKyTinDung_Load(object sender, EventArgs e)
+        {
+            txt_HoTen.Text = kh.tenTK;
+            txt_CCCD.Text = kh.cccd;
+            txt_SDT.Text = kh.Sdt;
+            txt_Email.Text = kh.Email;
+        }
+
+        private void btn_DangKy_Click(object sender, EventArgs e)
+        {
+            double lai = laiSuat();
+            ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoang.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
+                                                            cb_LoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), int.Parse(txtHanMuc.Text), lai, 0, dtpNgayMoThe.Value, 0, 0);
+            tttdDAO.Them(ttTinDung);
+        }
+
+        private double laiSuat()
+        {
+            int giaTri = cb_LoaiThe.SelectedIndex;
+            if (giaTri == 1)
+            {
+                return 18;
+            }
+            else if (giaTri == 2)
+            {
+                return 16.5;
+            }
+            else
+            {
+                return 16.5;
+            }
         }
     }
 }

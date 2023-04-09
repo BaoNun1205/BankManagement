@@ -36,7 +36,7 @@ namespace DOAN_Nhom4
 
         private void FrmNguoidung_Load(object sender, EventArgs e)
         {
-            
+            lblTenTK.Text = kh.TenTK.ToString();
         }
 
         private void btnTaikhoan_Click(object sender, EventArgs e)
