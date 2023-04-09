@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DOAN_Nhom4
 {
@@ -14,6 +16,9 @@ namespace DOAN_Nhom4
     {
         TietkiemDAO tietkiemDAO = new TietkiemDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        DBConnection dBConnection = new DBConnection();
+        List<string> danhSachLuaChon = new List<string>();
+
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
@@ -27,33 +32,22 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
             this.kh = kh;
-            this.tknh = tknh;           
+            this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
-            HienThi();
+            danhSachLuaChon = dBConnection.LayCot("SELECT TenTKTK FROM TaiKhoanTietKiem", "TenTKTK");
+            cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());
         }
         private void FrmXemTKTK_Load(object sender, EventArgs e)
         {
-            HienThi();
+            cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());
+            
         }
-
-        public void HienThi()
-        {
-            gvTKTK.DataSource = tietkiemDAO.LayDanhSachTKTK();
-            gvTKTK.Columns[0].HeaderText = "Ma tiet kiem";
-            gvTKTK.Columns[1].HeaderText = "Ten TKTK";
-            gvTKTK.Columns[2].HeaderText = "Tien goc";
-            gvTKTK.Columns[3].HeaderText = "Ki han";
-            gvTKTK.Columns[4].HeaderText = "Lai suat";
-            gvTKTK.Columns[5].HeaderText = "Tien lai";
-            gvTKTK.Columns[6].HeaderText = "Tong tien";
-        }
-
         
 
         private void Xoa()
         {
-            lblID.Text = "";
-            lblTenTKTK.Text = "";
+            lblMatietkiem.Text = "";
+            cbTenTKTK.Text = "";
             txtTiengoc.Text = "";
             txtKihan.Text = "";
             lblLaisuat.Text = "";
@@ -63,12 +57,11 @@ namespace DOAN_Nhom4
 
         private void btnRuttien_Click(object sender, EventArgs e)
         {
-            TietKiem tkiem = new TietKiem(int.Parse(lblID.Text), lblTenTKTK.Text, int.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), double.Parse(lblTienlai.Text), double.Parse(lblTongtien.Text));
+            TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), cbTenTKTK.Text, int.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), double.Parse(lblTienlai.Text), double.Parse(lblTongtien.Text));
             tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
             tknhDAO.Sua(tknh);
             tietkiemDAO.Rut(tkiem);
             MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HienThi();
             Xoa();
         }
 
@@ -78,17 +71,17 @@ namespace DOAN_Nhom4
             DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
         }
 
-        private void gvTKTK_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int i;
-            i = gvTKTK.CurrentRow.Index;
-            lblID.Text = gvTKTK.Rows[i].Cells[0].Value.ToString();
-            lblTenTKTK.Text = gvTKTK.Rows[i].Cells[1].Value.ToString();
-            txtTiengoc.Text = gvTKTK.Rows[i].Cells[2].Value.ToString();
-            txtKihan.Text = gvTKTK.Rows[i].Cells[3].Value.ToString();
-            lblLaisuat.Text = gvTKTK.Rows[i].Cells[4].Value.ToString();
-            lblTienlai.Text = gvTKTK.Rows[i].Cells[5].Value.ToString();
-            lblTongtien.Text = gvTKTK.Rows[i].Cells[6].Value.ToString();
+            string sqlStr = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE TenTKTK = '{0}'", cbTenTKTK.Text);
+            TietKiem tkiem = new TietKiem();
+            tkiem = dBConnection.LayHangTKTK(sqlStr);
+            lblMatietkiem.Text = tkiem.Id.ToString();
+            txtKihan.Text = tkiem.KiHan.ToString();
+            txtTiengoc.Text = tkiem.TienGoc.ToString();  
+            lblTienlai.Text = tkiem.TienLai.ToString();
+            lblLaisuat.Text = tkiem.LaiSuat.ToString();
+            lblTongtien.Text = tkiem.TongTien.ToString();
         }
     }
 }

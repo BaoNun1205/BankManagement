@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbTenTKTK = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lblID = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.btnRuttien = new CustomButton.VBButton();
             this.lblTienlai = new System.Windows.Forms.Label();
-            this.lblTenTKTK = new System.Windows.Forms.Label();
+            this.lblMatietkiem = new System.Windows.Forms.Label();
             this.lblLaisuat = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,26 +51,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTiengoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.gvTKTK = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.pBQuaylai = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvTKTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBQuaylai)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbTenTKTK);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.lbl2);
             this.panel1.Controls.Add(this.btnRuttien);
             this.panel1.Controls.Add(this.lblTienlai);
-            this.panel1.Controls.Add(this.lblTenTKTK);
+            this.panel1.Controls.Add(this.lblMatietkiem);
             this.panel1.Controls.Add(this.lblLaisuat);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label6);
@@ -81,12 +80,20 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtTiengoc);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.gvTKTK);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(57, 42);
+            this.panel1.Location = new System.Drawing.Point(57, 117);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 636);
+            this.panel1.Size = new System.Drawing.Size(1023, 498);
             this.panel1.TabIndex = 0;
+            // 
+            // cbTenTKTK
+            // 
+            this.cbTenTKTK.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTenTKTK.FormattingEnabled = true;
+            this.cbTenTKTK.Location = new System.Drawing.Point(230, 4);
+            this.cbTenTKTK.Name = "cbTenTKTK";
+            this.cbTenTKTK.Size = new System.Drawing.Size(163, 33);
+            this.cbTenTKTK.TabIndex = 116;
+            this.cbTenTKTK.SelectedIndexChanged += new System.EventHandler(this.cbTenTKTK_SelectedIndexChanged);
             // 
             // panel9
             // 
@@ -107,6 +114,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(342, 1);
             this.panel6.TabIndex = 114;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(107, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 32);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Tên TKTK:";
             // 
             // panel2
             // 
@@ -138,22 +156,11 @@
             this.panel7.Size = new System.Drawing.Size(342, 1);
             this.panel7.TabIndex = 111;
             // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(160, 6);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(23, 29);
-            this.lblID.TabIndex = 110;
-            this.lblID.Text = "-";
-            // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl2.Location = new System.Drawing.Point(107, 4);
+            this.lbl2.Location = new System.Drawing.Point(107, 69);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(42, 32);
@@ -171,7 +178,7 @@
             this.btnRuttien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRuttien.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRuttien.ForeColor = System.Drawing.Color.White;
-            this.btnRuttien.Location = new System.Drawing.Point(440, 585);
+            this.btnRuttien.Location = new System.Drawing.Point(452, 392);
             this.btnRuttien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnRuttien.Name = "btnRuttien";
             this.btnRuttien.Size = new System.Drawing.Size(135, 48);
@@ -192,16 +199,16 @@
             this.lblTienlai.TabIndex = 107;
             this.lblTienlai.Text = "-";
             // 
-            // lblTenTKTK
+            // lblMatietkiem
             // 
-            this.lblTenTKTK.AutoSize = true;
-            this.lblTenTKTK.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTenTKTK.Location = new System.Drawing.Point(234, 66);
-            this.lblTenTKTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTenTKTK.Name = "lblTenTKTK";
-            this.lblTenTKTK.Size = new System.Drawing.Size(23, 29);
-            this.lblTenTKTK.TabIndex = 106;
-            this.lblTenTKTK.Text = "-";
+            this.lblMatietkiem.AutoSize = true;
+            this.lblMatietkiem.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMatietkiem.Location = new System.Drawing.Point(170, 72);
+            this.lblMatietkiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMatietkiem.Name = "lblMatietkiem";
+            this.lblMatietkiem.Size = new System.Drawing.Size(23, 29);
+            this.lblMatietkiem.TabIndex = 106;
+            this.lblMatietkiem.Text = "-";
             // 
             // lblLaisuat
             // 
@@ -248,7 +255,7 @@
             // 
             this.lblTongtien.AutoSize = true;
             this.lblTongtien.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTongtien.Location = new System.Drawing.Point(473, 270);
+            this.lblTongtien.Location = new System.Drawing.Point(463, 315);
             this.lblTongtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongtien.Name = "lblTongtien";
             this.lblTongtien.Size = new System.Drawing.Size(51, 29);
@@ -259,7 +266,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(350, 221);
+            this.label5.Location = new System.Drawing.Point(339, 236);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(362, 32);
@@ -322,30 +329,6 @@
             this.label2.TabIndex = 95;
             this.label2.Text = "Tiền gốc:";
             // 
-            // gvTKTK
-            // 
-            this.gvTKTK.BackgroundColor = System.Drawing.Color.White;
-            this.gvTKTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTKTK.Location = new System.Drawing.Point(107, 374);
-            this.gvTKTK.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.gvTKTK.Name = "gvTKTK";
-            this.gvTKTK.RowHeadersWidth = 82;
-            this.gvTKTK.RowTemplate.Height = 41;
-            this.gvTKTK.Size = new System.Drawing.Size(809, 182);
-            this.gvTKTK.TabIndex = 94;
-            this.gvTKTK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTKTK_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(107, 63);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 32);
-            this.label1.TabIndex = 93;
-            this.label1.Text = "Tên TKTK:";
-            // 
             // pBQuaylai
             // 
             this.pBQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow3;
@@ -372,7 +355,6 @@
             this.Text = "FrmXemTKTK";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvTKTK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBQuaylai)).EndInit();
             this.ResumeLayout(false);
 
@@ -386,11 +368,10 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel7;
-        private Label lblID;
         private Label lbl2;
         private CustomButton.VBButton btnRuttien;
         private Label lblTienlai;
-        private Label lblTenTKTK;
+        private Label lblMatietkiem;
         private Label lblLaisuat;
         private Panel panel4;
         private Label label6;
@@ -402,8 +383,8 @@
         private Label label3;
         private TextBox txtTiengoc;
         private Label label2;
-        private DataGridView gvTKTK;
         private Label label1;
         private PictureBox pBQuaylai;
+        private ComboBox cbTenTKTK;
     }
 }

@@ -41,7 +41,7 @@ namespace DOAN_Nhom4
             this.pnlNguoidung = pnlNguoidung;
             rand = new Random();
             ID = rand.Next(100000, 999999);
-        }
+        }       
 
         private void txtSotien_Enter(object sender, EventArgs e)
         {

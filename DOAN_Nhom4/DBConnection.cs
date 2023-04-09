@@ -10,6 +10,8 @@ using System.Numerics;
 using Excel = Microsoft.Office.Interop.Excel;
 using OfficeOpenXml;
 using System.IO;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
@@ -35,6 +37,62 @@ namespace DOAN_Nhom4
                 conn.Close();
             }
             return dt;
+        }
+
+        public List<string> LayCot(string sqlStr, string tenCot)
+        {
+            List<string> cot = new List<string>();
+            conn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    cot.Add(reader[tenCot].ToString());
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return cot;
+        }
+
+        public TietKiem LayHangTKTK(string sqlStr)
+        {
+            TietKiem tkiem = new TietKiem();
+            conn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    tkiem.Id = int.Parse(reader["ID"].ToString());
+                    tkiem.TenTKTK = reader["TenTKTK"].ToString();
+                    tkiem.TienGoc = int.Parse(reader["TienGoc"].ToString());
+                    tkiem.KiHan = int.Parse(reader["KiHan"].ToString());
+                    tkiem.LaiSuat = double.Parse(reader["LaiSuat"].ToString());
+                    tkiem.TienLai = double.Parse(reader["TienLai"].ToString());
+                    tkiem.TongTien = double.Parse(reader["TongTien"].ToString());
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return tkiem;
         }
 
         public void xuLi(string kh, string tknh)
