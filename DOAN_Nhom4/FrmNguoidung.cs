@@ -85,16 +85,6 @@ namespace DOAN_Nhom4
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void pnlDanhmuc_MouseHover(object sender, EventArgs e)
-        {
-            pnlLuachonCD.Visible = false;
-        }
-
-        private void btnCaidat_MouseHover(object sender, EventArgs e)
-        {
-            pnlLuachonCD.Visible = true;
-        }
-
         private void btnBaomat_Click(object sender, EventArgs e)
         {
             FrmBaomat frmBaomat = new FrmBaomat(kh, tknh, pnlNguoidung);
@@ -104,10 +94,21 @@ namespace DOAN_Nhom4
 
         private void btnDangxuat_Click(object sender, EventArgs e)
         {
-            FrmDangnhap frmDangnhap = new FrmDangnhap();
-            Application.OpenForms["frmNguoiDung"].Hide();
-            frmDangnhap.ShowDialog();
-            Application.OpenForms["frmNguoiDung"].Close();
+            DialogResult luachon = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (luachon == DialogResult.Yes)
+            {
+                FrmDangnhap frmDangnhap = new FrmDangnhap();
+                Application.OpenForms["frmNguoiDung"].Hide();
+                frmDangnhap.ShowDialog();
+                Application.OpenForms["frmNguoiDung"].Close();
+            }
+            else pnlLuachonCD.Visible = false;
+        }
+
+        private void btnCaidat_Click(object sender, EventArgs e)
+        {
+            if (pnlLuachonCD.Visible == true) pnlLuachonCD.Visible = false;
+            else pnlLuachonCD.Visible = true;
         }
     }
 }

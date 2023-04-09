@@ -66,7 +66,6 @@
             this.pnlDanhmuc.Name = "pnlDanhmuc";
             this.pnlDanhmuc.Size = new System.Drawing.Size(265, 809);
             this.pnlDanhmuc.TabIndex = 53;
-            this.pnlDanhmuc.MouseHover += new System.EventHandler(this.pnlDanhmuc_MouseHover);
             // 
             // pictureBox1
             // 
@@ -103,7 +102,7 @@
             this.btnCaidat.Text = "  Cài đặt";
             this.btnCaidat.TextColor = System.Drawing.Color.White;
             this.btnCaidat.UseVisualStyleBackColor = false;
-            this.btnCaidat.MouseHover += new System.EventHandler(this.btnCaidat_MouseHover);
+            this.btnCaidat.Click += new System.EventHandler(this.btnCaidat_Click);
             // 
             // btnHotro
             // 
