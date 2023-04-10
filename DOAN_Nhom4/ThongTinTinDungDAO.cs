@@ -11,22 +11,22 @@ namespace DOAN_Nhom4
     {
         DBConnection data = new DBConnection();
         public ThongTinTinDungDAO () { }
-        public void Them(ThongTinTinDung ttTinDung)
+        public void Them(ThongTinTinDung tttd)
         {
             string sql = string.Format("INSERT INTO TaiKhoanTinDung(SoTKTinDung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, LoaiThe, NgayDaoHan, HanMuc, LaiSuat, SoTienDaSuDung, NgayMoThe, PhiTraCham, PhiThuongNien) " +
                                         "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', {10}, '{11}', {12}, '{13}', {14}, {15})",
-                                        ttTinDung.SoTKTinDung, ttTinDung.HoTen, ttTinDung.Cccd, ttTinDung.DiaChi, ttTinDung.Sdt, ttTinDung.Email, ttTinDung.NgheNghiep, ttTinDung.ThuNhap,
-                                        ttTinDung.LoaiThe, ttTinDung.NgayDaoHan, ttTinDung.HanMuc, ttTinDung.LaiSuat, ttTinDung.SoTienDaSuDung, ttTinDung.NgayMoThe, ttTinDung.PhiTraCham, ttTinDung.PhiThuongNien);
+                                        tttd.SoTKTinDung, tttd.HoTen, tttd.Cccd, tttd.DiaChi, tttd.Sdt, tttd.Email, tttd.NgheNghiep, tttd.ThuNhap,
+                                        tttd.LoaiThe, tttd.NgayDaoHan, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiThuongNien);
             data.xuLi(sql);
         }
-        public void Update(ThongTinTinDung ttTinDung)
+        public void Update(ThongTinTinDung tttd)
         {
-            string sql = string.Format("UPDATE TaiKhoangTinDung SET NgayDaoHan = '{0}', SoTienDaSuDung = {1} Where SoTkTinDung = '{2}'", ttTinDung.NgayDaoHan, ttTinDung.SoTienDaSuDung, ttTinDung.SoTKTinDung);
+            string sql = string.Format("UPDATE TaiKhoangTinDung SET NgayDaoHan = '{0}', SoTienDaSuDung = {1} Where SoTkTinDung = '{2}'", tttd.NgayDaoHan, tttd.SoTienDaSuDung, tttd.SoTKTinDung);
             data.xuLi(sql);
         }
-        public void Xoa(ThongTinTinDung ttTinDung)
+        public void Xoa(ThongTinTinDung tttd)
         {
-            string sql = string.Format("DELETE FROM TaiKhoanTinDung WHERE SoTKVay = '{0}'", ttTinDung.SoTKTinDung);
+            string sql = string.Format("DELETE FROM TaiKhoanTinDung WHERE SoTKVay = '{0}'", tttd.SoTKTinDung);
             data.xuLi(sql);
         }
         public ThongTinTinDung LayThongTinTinDung(string cot, string giaTri)
@@ -37,21 +37,27 @@ namespace DOAN_Nhom4
             return ttTinDung;
         }
 
-        public BigInteger PhiTraCham(BigInteger soTienDaSuDung, float laiSuat)
+        public BigInteger LaiSuat(ThongTinTinDung tttd)
         {
-            decimal laiSuatThang = (decimal)laiSuat;
-            decimal tienLaiSuat = laiSuatThang / 100 / 12;
-            BigInteger soTien = BigInteger.Multiply((BigInteger)tienLaiSuat, soTienDaSuDung);
-            return soTien;
+            decimal tienLaiSuat = (decimal)tttd.LaiSuat / 100 / 12;
+            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
+            return (BigInteger)(tienDaSuDung * tienLaiSuat);
         }
 
-        public bool IsNgayDenHan(DateTime ngayDenHan)
+        public bool IsNgayDenHan(ThongTinTinDung tttd)
         {
-            if (DateTime.Now > ngayDenHan)
+            if (DateTime.Now > tttd.NgayDaoHan)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
+        }
+
+        public BigInteger PhiTraCham(ThongTinTinDung tttd)
+        {
+            decimal tienPhat = (decimal)0.04;
+            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
+            return (BigInteger)(tienDaSuDung * tienPhat);
         }
     }
 }

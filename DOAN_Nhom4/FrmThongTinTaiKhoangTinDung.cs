@@ -41,15 +41,21 @@ namespace DOAN_Nhom4
             lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString();
             lblHienThiSoTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString();
             lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString();
-            if (!tttdDAO.IsNgayDenHan(tttd.NgayDaoHan))
+            if (!tttdDAO.IsNgayDenHan(tttd))
             {
-                lblHienThiPhiTraCham.Text = tttdDAO.PhiTraCham(BigInteger.Parse(lblHienThiSoTienDaSuDung.Text), float.Parse(lblHienThiLaiSuat.Text)).ToString();
+                lblHienThiPhiTraCham.Text = tttdDAO.LaiSuat(tttd).ToString();
             }
             else
             {
                 lblHienThiPhiTraCham.Text = "0";
             }
             lblHienThiPhiThuongNien.Text = "0";
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            FrmXacNhanGIaoDichTinDung frmXacNhanGIaoDichTinDung = new FrmXacNhanGIaoDichTinDung(kh, tknh, pnlNguoiDung, tttd);
+            DOAN_Nhom4.ClassAddForm.addForm(frmXacNhanGIaoDichTinDung, pnlNguoiDung);
         }
     }
 }

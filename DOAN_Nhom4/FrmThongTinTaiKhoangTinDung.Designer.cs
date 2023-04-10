@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinTaiKhoangTinDung));
-            this.btn_HuyBo = new CustomButton.VBButton();
-            this.btn_ThanhToan = new CustomButton.VBButton();
+            this.btnHuyBo = new CustomButton.VBButton();
+            this.btnThanhToan = new CustomButton.VBButton();
             this.lblPhiTraCham = new System.Windows.Forms.Label();
             this.lblSoTIenDaSuDung = new System.Windows.Forms.Label();
             this.lblLaiSuat = new System.Windows.Forms.Label();
             this.lblHanMuc = new System.Windows.Forms.Label();
             this.lblNgayDaoHan = new System.Windows.Forms.Label();
-            this.btn_TaiKhoanVay = new CustomButton.VBButton();
+            this.btnTaiKhoanVay = new CustomButton.VBButton();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.lblPhiPhat = new System.Windows.Forms.Label();
             this.lblSoTK = new System.Windows.Forms.Label();
@@ -49,47 +49,49 @@
             this.lblHienThiSoTienDaSuDung = new System.Windows.Forms.Label();
             this.lblHienThiPhiTraCham = new System.Windows.Forms.Label();
             this.lblHienThiPhiThuongNien = new System.Windows.Forms.Label();
+            this.btnChuyenKhoan = new CustomButton.VBButton();
             this.SuspendLayout();
             // 
-            // btn_HuyBo
+            // btnHuyBo
             // 
-            this.btn_HuyBo.BackColor = System.Drawing.SystemColors.Menu;
-            this.btn_HuyBo.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.btn_HuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_HuyBo.BorderRadius = 20;
-            this.btn_HuyBo.BorderSize = 0;
-            this.btn_HuyBo.FlatAppearance.BorderSize = 0;
-            this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_HuyBo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_HuyBo.Location = new System.Drawing.Point(355, 430);
-            this.btn_HuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_HuyBo.Name = "btn_HuyBo";
-            this.btn_HuyBo.Size = new System.Drawing.Size(215, 47);
-            this.btn_HuyBo.TabIndex = 99;
-            this.btn_HuyBo.Text = "Hủy Bỏ";
-            this.btn_HuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_HuyBo.UseVisualStyleBackColor = false;
+            this.btnHuyBo.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnHuyBo.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.btnHuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuyBo.BorderRadius = 20;
+            this.btnHuyBo.BorderSize = 0;
+            this.btnHuyBo.FlatAppearance.BorderSize = 0;
+            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyBo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHuyBo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHuyBo.Location = new System.Drawing.Point(372, 430);
+            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(215, 47);
+            this.btnHuyBo.TabIndex = 99;
+            this.btnHuyBo.Text = "Hủy Bỏ";
+            this.btnHuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHuyBo.UseVisualStyleBackColor = false;
             // 
-            // btn_ThanhToan
+            // btnThanhToan
             // 
-            this.btn_ThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_ThanhToan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_ThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ThanhToan.BorderRadius = 20;
-            this.btn_ThanhToan.BorderSize = 0;
-            this.btn_ThanhToan.FlatAppearance.BorderSize = 0;
-            this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThanhToan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThanhToan.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(591, 430);
-            this.btn_ThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(215, 47);
-            this.btn_ThanhToan.TabIndex = 98;
-            this.btn_ThanhToan.Text = "Thanh Toán";
-            this.btn_ThanhToan.TextColor = System.Drawing.SystemColors.Window;
-            this.btn_ThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 20;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThanhToan.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnThanhToan.Location = new System.Drawing.Point(622, 430);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(215, 47);
+            this.btnThanhToan.TabIndex = 98;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.TextColor = System.Drawing.SystemColors.Window;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // lblPhiTraCham
             // 
@@ -156,28 +158,28 @@
             this.lblNgayDaoHan.TabIndex = 89;
             this.lblNgayDaoHan.Text = "Ngày đáo hạn";
             // 
-            // btn_TaiKhoanVay
+            // btnTaiKhoanVay
             // 
-            this.btn_TaiKhoanVay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_TaiKhoanVay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_TaiKhoanVay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_TaiKhoanVay.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_TaiKhoanVay.BorderRadius = 30;
-            this.btn_TaiKhoanVay.BorderSize = 0;
-            this.btn_TaiKhoanVay.FlatAppearance.BorderSize = 0;
-            this.btn_TaiKhoanVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TaiKhoanVay.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_TaiKhoanVay.ForeColor = System.Drawing.Color.White;
-            this.btn_TaiKhoanVay.Image = ((System.Drawing.Image)(resources.GetObject("btn_TaiKhoanVay.Image")));
-            this.btn_TaiKhoanVay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TaiKhoanVay.Location = new System.Drawing.Point(85, 29);
-            this.btn_TaiKhoanVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_TaiKhoanVay.Name = "btn_TaiKhoanVay";
-            this.btn_TaiKhoanVay.Size = new System.Drawing.Size(425, 94);
-            this.btn_TaiKhoanVay.TabIndex = 88;
-            this.btn_TaiKhoanVay.Text = "             Tài Khoản Tín Dụng";
-            this.btn_TaiKhoanVay.TextColor = System.Drawing.Color.White;
-            this.btn_TaiKhoanVay.UseVisualStyleBackColor = false;
+            this.btnTaiKhoanVay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTaiKhoanVay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTaiKhoanVay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTaiKhoanVay.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTaiKhoanVay.BorderRadius = 30;
+            this.btnTaiKhoanVay.BorderSize = 0;
+            this.btnTaiKhoanVay.FlatAppearance.BorderSize = 0;
+            this.btnTaiKhoanVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiKhoanVay.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTaiKhoanVay.ForeColor = System.Drawing.Color.White;
+            this.btnTaiKhoanVay.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiKhoanVay.Image")));
+            this.btnTaiKhoanVay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoanVay.Location = new System.Drawing.Point(85, 29);
+            this.btnTaiKhoanVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaiKhoanVay.Name = "btnTaiKhoanVay";
+            this.btnTaiKhoanVay.Size = new System.Drawing.Size(425, 94);
+            this.btnTaiKhoanVay.TabIndex = 88;
+            this.btnTaiKhoanVay.Text = "             Tài Khoản Tín Dụng";
+            this.btnTaiKhoanVay.TextColor = System.Drawing.Color.White;
+            this.btnTaiKhoanVay.UseVisualStyleBackColor = false;
             // 
             // lblPhiPhat
             // 
@@ -306,12 +308,33 @@
             this.lblHienThiPhiThuongNien.TabIndex = 112;
             this.lblHienThiPhiThuongNien.Text = "-";
             // 
+            // btnChuyenKhoan
+            // 
+            this.btnChuyenKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnChuyenKhoan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnChuyenKhoan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnChuyenKhoan.BorderRadius = 20;
+            this.btnChuyenKhoan.BorderSize = 0;
+            this.btnChuyenKhoan.FlatAppearance.BorderSize = 0;
+            this.btnChuyenKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChuyenKhoan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChuyenKhoan.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnChuyenKhoan.Location = new System.Drawing.Point(120, 430);
+            this.btnChuyenKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChuyenKhoan.Name = "btnChuyenKhoan";
+            this.btnChuyenKhoan.Size = new System.Drawing.Size(215, 47);
+            this.btnChuyenKhoan.TabIndex = 113;
+            this.btnChuyenKhoan.Text = "Chuyển Khoản";
+            this.btnChuyenKhoan.TextColor = System.Drawing.SystemColors.Window;
+            this.btnChuyenKhoan.UseVisualStyleBackColor = false;
+            // 
             // FrmThongTinTaiKhoangTinDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(981, 505);
+            this.Controls.Add(this.btnChuyenKhoan);
             this.Controls.Add(this.lblHienThiPhiThuongNien);
             this.Controls.Add(this.lblHienThiPhiTraCham);
             this.Controls.Add(this.lblHienThiSoTienDaSuDung);
@@ -323,14 +346,14 @@
             this.Controls.Add(this.lblLoaiThe);
             this.Controls.Add(this.lblSoTK);
             this.Controls.Add(this.lblPhiPhat);
-            this.Controls.Add(this.btn_HuyBo);
-            this.Controls.Add(this.btn_ThanhToan);
+            this.Controls.Add(this.btnHuyBo);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.lblPhiTraCham);
             this.Controls.Add(this.lblSoTIenDaSuDung);
             this.Controls.Add(this.lblLaiSuat);
             this.Controls.Add(this.lblHanMuc);
             this.Controls.Add(this.lblNgayDaoHan);
-            this.Controls.Add(this.btn_TaiKhoanVay);
+            this.Controls.Add(this.btnTaiKhoanVay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmThongTinTaiKhoangTinDung";
             this.Text = "FrmThongTinTaiKhoangTinDung";
@@ -341,14 +364,14 @@
         }
 
         #endregion
-        private CustomButton.VBButton btn_HuyBo;
-        private CustomButton.VBButton btn_ThanhToan;
+        private CustomButton.VBButton btnHuyBo;
+        private CustomButton.VBButton btnThanhToan;
         private Label lblPhiTraCham;
         private Label lblSoTIenDaSuDung;
         private Label lblLaiSuat;
         private Label lblHanMuc;
         private Label lblNgayDaoHan;
-        private CustomButton.VBButton btn_TaiKhoanVay;
+        private CustomButton.VBButton btnTaiKhoanVay;
         private PageSetupDialog pageSetupDialog1;
         private Label lblPhiPhat;
         private Label lblSoTK;
@@ -361,5 +384,6 @@
         private Label lblHienThiSoTienDaSuDung;
         private Label lblHienThiPhiTraCham;
         private Label lblHienThiPhiThuongNien;
+        private CustomButton.VBButton btnChuyenKhoan;
     }
 }
