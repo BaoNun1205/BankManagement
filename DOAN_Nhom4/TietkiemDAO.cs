@@ -13,19 +13,19 @@ namespace DOAN_Nhom4
         DBConnection data = new DBConnection();
         public TietkiemDAO() { }
 
-        public bool ktSotien(int tiengoc, BigInteger sodu)
+        public bool ktSotien(BigInteger tienGoc, BigInteger soDu)
         {
-            if (tiengoc <= sodu && tiengoc >= 100000 && tiengoc % 100000 == 0) return true;
+            if (tienGoc <= soDu && tienGoc >= 100000 && tienGoc % 100000 == 0) return true;
             else return false;
         }
-        public double TienLai(int tiengoc, double laisuat, int thoigian)
+        public BigInteger TienLai(BigInteger tienGoc, double laiSuat, int thoigian)
         {
-            return tiengoc * laisuat * thoigian / 12;
+            return (BigInteger)((decimal)tienGoc * (decimal)laiSuat * thoigian / 12);
         }
 
-        public double TongTien(int tiengoc, double tienlai)
+        public BigInteger TongTien(BigInteger tienGoc, BigInteger tienLai)
         {
-            return tiengoc + tienlai;
+            return tienGoc + tienLai;
         }
 
         public DataTable LayDanhSachTKTK()

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,7 +58,7 @@ namespace DOAN_Nhom4
 
         private void btnRuttien_Click(object sender, EventArgs e)
         {
-            TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), cbTenTKTK.Text, int.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), double.Parse(lblTienlai.Text), double.Parse(lblTongtien.Text));
+            TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), cbTenTKTK.Text, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
             tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
             tknhDAO.Sua(tknh);
             tietkiemDAO.Rut(tkiem);

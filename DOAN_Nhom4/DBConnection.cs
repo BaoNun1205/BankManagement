@@ -77,11 +77,11 @@ namespace DOAN_Nhom4
                 {
                     tkiem.Id = int.Parse(reader["ID"].ToString());
                     tkiem.TenTKTK = reader["TenTKTK"].ToString();
-                    tkiem.TienGoc = int.Parse(reader["TienGoc"].ToString());
+                    tkiem.TienGoc = BigInteger.Parse(reader["TienGoc"].ToString());
                     tkiem.KiHan = int.Parse(reader["KiHan"].ToString());
                     tkiem.LaiSuat = double.Parse(reader["LaiSuat"].ToString());
-                    tkiem.TienLai = double.Parse(reader["TienLai"].ToString());
-                    tkiem.TongTien = double.Parse(reader["TongTien"].ToString());
+                    tkiem.TienLai = BigInteger.Parse(reader["TienLai"].ToString());
+                    tkiem.TongTien = BigInteger.Parse(reader["TongTien"].ToString());
                 }
             }
             catch (Exception exc)

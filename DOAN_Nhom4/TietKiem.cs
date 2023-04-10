@@ -11,15 +11,15 @@ namespace DOAN_Nhom4
     {
         private int id;
         private string tenTKTK;
-        private int tienGoc;
+        private BigInteger tienGoc;
         private int kiHan;
         private double laiSuat;
-        private double tienLai;
-        private double tongTien;
+        private BigInteger tienLai;
+        private BigInteger tongTien;
 
         public TietKiem() { }
 
-        public TietKiem(int id, string tenTKTK, int tienGoc, int kiHan, double laiSuat, double tienLai, double tongTien)
+        public TietKiem(int id, string tenTKTK, BigInteger tienGoc, int kiHan, double laiSuat, BigInteger tienLai, BigInteger tongTien)
         {
             this.id = id;
             this.tenTKTK = tenTKTK;
@@ -32,11 +32,11 @@ namespace DOAN_Nhom4
 
         public int Id { get => id; set => id = value; }
         public string TenTKTK { get => tenTKTK; set => tenTKTK = value; }
-        public int TienGoc { get => tienGoc; set => tienGoc = value; }
+        public BigInteger TienGoc { get => tienGoc; set => tienGoc = value; }
         public int KiHan { get => kiHan; set => kiHan = value; }
         public double LaiSuat { get => laiSuat; set => laiSuat = value; }
-        public double TienLai { get => tienLai; set => tienLai = value; }
-        public double TongTien { get => tongTien; set => tongTien = value; }
+        public BigInteger TienLai { get => tienLai; set => tienLai = value; }
+        public BigInteger TongTien { get => tongTien; set => tongTien = value; }
         
     }
 }

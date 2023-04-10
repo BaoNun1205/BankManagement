@@ -195,9 +195,9 @@
             this.lblTienlai.Location = new System.Drawing.Point(689, 64);
             this.lblTienlai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTienlai.Name = "lblTienlai";
-            this.lblTienlai.Size = new System.Drawing.Size(23, 29);
+            this.lblTienlai.Size = new System.Drawing.Size(20, 29);
             this.lblTienlai.TabIndex = 107;
-            this.lblTienlai.Text = "-";
+            this.lblTienlai.Text = " ";
             // 
             // lblMatietkiem
             // 
@@ -206,9 +206,9 @@
             this.lblMatietkiem.Location = new System.Drawing.Point(170, 72);
             this.lblMatietkiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMatietkiem.Name = "lblMatietkiem";
-            this.lblMatietkiem.Size = new System.Drawing.Size(23, 29);
+            this.lblMatietkiem.Size = new System.Drawing.Size(20, 29);
             this.lblMatietkiem.TabIndex = 106;
-            this.lblMatietkiem.Text = "-";
+            this.lblMatietkiem.Text = " ";
             // 
             // lblLaisuat
             // 
@@ -217,9 +217,9 @@
             this.lblLaisuat.Location = new System.Drawing.Point(741, 130);
             this.lblLaisuat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLaisuat.Name = "lblLaisuat";
-            this.lblLaisuat.Size = new System.Drawing.Size(23, 29);
+            this.lblLaisuat.Size = new System.Drawing.Size(20, 29);
             this.lblLaisuat.TabIndex = 105;
-            this.lblLaisuat.Text = "-";
+            this.lblLaisuat.Text = " ";
             // 
             // panel4
             // 
@@ -258,9 +258,9 @@
             this.lblTongtien.Location = new System.Drawing.Point(463, 315);
             this.lblTongtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongtien.Name = "lblTongtien";
-            this.lblTongtien.Size = new System.Drawing.Size(51, 29);
+            this.lblTongtien.Size = new System.Drawing.Size(48, 29);
             this.lblTongtien.TabIndex = 101;
-            this.lblTongtien.Text = "    -";
+            this.lblTongtien.Text = "     ";
             // 
             // label5
             // 
@@ -294,7 +294,7 @@
             this.txtKihan.Name = "txtKihan";
             this.txtKihan.Size = new System.Drawing.Size(35, 29);
             this.txtKihan.TabIndex = 98;
-            this.txtKihan.Text = "-";
+            this.txtKihan.Text = " ";
             // 
             // label3
             // 

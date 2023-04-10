@@ -22,11 +22,11 @@ namespace DOAN_Nhom4
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
         private string tenTKTK;
-        private int tienGoc;
+        private BigInteger tienGoc;
         private int kiHan;
         private double laiSuat;
-        private double tienLai;
-        private double tongTien;
+        private BigInteger tienLai;
+        private BigInteger tongTien;
         public FrmTietkiem()
         {
             InitializeComponent();
