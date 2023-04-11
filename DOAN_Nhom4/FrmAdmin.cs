@@ -22,7 +22,6 @@ namespace DOAN_Nhom4
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
             HienThi();
-            txt_NgayDangKyThe.Value = DateTime.Now;
         }
         private void HienThi()
         {

@@ -44,10 +44,10 @@ namespace DOAN_Nhom4
         {
             if (txtMatkhau.Text == tknh.MatKhau)
             {
-                TaiKhoanNganHang tknhNhan = new TaiKhoanNganHang(gd.SoTKNhan);
+                TaiKhoanNganHang tknhNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
                 tknhDAO.ChuyenTien(tknh, gd, tknhNhan);
                 lsgdDAO.Them(gd);
-                tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK);
+                tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKGui, "TenNH", gd.NganHangGui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoidung);
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();

@@ -5,6 +5,7 @@
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
+        private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmTrangchu()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@
 
         public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
+            tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", kh.SoTK, "TenNH", kh.TenNH);
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
@@ -27,6 +29,7 @@
 
         private void FrmTrangchu_Load(object sender, EventArgs e)
         {
+
             timer1.Start();
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
