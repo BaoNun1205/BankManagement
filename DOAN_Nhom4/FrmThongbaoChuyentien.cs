@@ -16,6 +16,7 @@ namespace DOAN_Nhom4
         private TaiKhoanNganHang tknh;
         private GiaoDich gd;
         private Panel pnlNguoidung;
+        private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
