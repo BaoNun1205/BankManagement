@@ -17,7 +17,6 @@ namespace DOAN_Nhom4
     {
         TietkiemDAO tietkiemDAO = new TietkiemDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
-        DBConnection dBConnection = new DBConnection();
         List<string> danhSachLuaChon = new List<string>();
 
         private NguoiDung kh;
@@ -35,7 +34,7 @@ namespace DOAN_Nhom4
             this.kh = kh;
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
-            danhSachLuaChon = dBConnection.LayCot("SELECT TenTKTK FROM TaiKhoanTietKiem", "TenTKTK");
+            danhSachLuaChon = tietkiemDAO.LayCotTKTK("TenTKTK");
             cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());
         }
         private void FrmXemTKTK_Load(object sender, EventArgs e)
@@ -74,9 +73,8 @@ namespace DOAN_Nhom4
 
         private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string sqlStr = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE TenTKTK = '{0}'", cbTenTKTK.Text);
             TietKiem tkiem = new TietKiem();
-            tkiem = dBConnection.LayHangTKTK(sqlStr);
+            tkiem = tietkiemDAO.LayHangTKTK("TenTKTK", cbTenTKTK.Text);
             lblMatietkiem.Text = tkiem.Id.ToString();
             txtKihan.Text = tkiem.KiHan.ToString();
             txtTiengoc.Text = tkiem.TienGoc.ToString();  

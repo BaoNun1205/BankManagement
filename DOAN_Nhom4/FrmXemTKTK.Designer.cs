@@ -88,6 +88,7 @@
             // cbTenTKTK
             // 
             this.cbTenTKTK.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTenTKTK.ForeColor = System.Drawing.Color.Black;
             this.cbTenTKTK.FormattingEnabled = true;
             this.cbTenTKTK.Location = new System.Drawing.Point(230, 4);
             this.cbTenTKTK.Name = "cbTenTKTK";
@@ -119,6 +120,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label1.Location = new System.Drawing.Point(107, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -160,6 +162,7 @@
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lbl2.Location = new System.Drawing.Point(107, 69);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
@@ -192,7 +195,8 @@
             // 
             this.lblTienlai.AutoSize = true;
             this.lblTienlai.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTienlai.Location = new System.Drawing.Point(689, 64);
+            this.lblTienlai.ForeColor = System.Drawing.Color.Black;
+            this.lblTienlai.Location = new System.Drawing.Point(689, 69);
             this.lblTienlai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTienlai.Name = "lblTienlai";
             this.lblTienlai.Size = new System.Drawing.Size(20, 29);
@@ -203,7 +207,8 @@
             // 
             this.lblMatietkiem.AutoSize = true;
             this.lblMatietkiem.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMatietkiem.Location = new System.Drawing.Point(170, 72);
+            this.lblMatietkiem.ForeColor = System.Drawing.Color.Black;
+            this.lblMatietkiem.Location = new System.Drawing.Point(173, 69);
             this.lblMatietkiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMatietkiem.Name = "lblMatietkiem";
             this.lblMatietkiem.Size = new System.Drawing.Size(20, 29);
@@ -214,6 +219,7 @@
             // 
             this.lblLaisuat.AutoSize = true;
             this.lblLaisuat.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLaisuat.ForeColor = System.Drawing.Color.Black;
             this.lblLaisuat.Location = new System.Drawing.Point(741, 130);
             this.lblLaisuat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLaisuat.Name = "lblLaisuat";
@@ -234,7 +240,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(574, 63);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label6.Location = new System.Drawing.Point(574, 67);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 32);
@@ -255,6 +262,7 @@
             // 
             this.lblTongtien.AutoSize = true;
             this.lblTongtien.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTongtien.ForeColor = System.Drawing.Color.Black;
             this.lblTongtien.Location = new System.Drawing.Point(463, 315);
             this.lblTongtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongtien.Name = "lblTongtien";
@@ -266,6 +274,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label5.Location = new System.Drawing.Point(339, 236);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -277,6 +286,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label4.Location = new System.Drawing.Point(574, 128);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -289,6 +299,7 @@
             this.txtKihan.BackColor = System.Drawing.Color.White;
             this.txtKihan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtKihan.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtKihan.ForeColor = System.Drawing.Color.Black;
             this.txtKihan.Location = new System.Drawing.Point(208, 130);
             this.txtKihan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtKihan.Name = "txtKihan";
@@ -300,6 +311,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label3.Location = new System.Drawing.Point(107, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -312,6 +324,7 @@
             this.txtTiengoc.BackColor = System.Drawing.Color.White;
             this.txtTiengoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTiengoc.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTiengoc.ForeColor = System.Drawing.Color.Black;
             this.txtTiengoc.Location = new System.Drawing.Point(689, 7);
             this.txtTiengoc.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtTiengoc.Name = "txtTiengoc";
@@ -322,6 +335,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.label2.Location = new System.Drawing.Point(574, 5);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";

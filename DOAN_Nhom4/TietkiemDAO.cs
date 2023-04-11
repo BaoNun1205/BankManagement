@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -13,6 +14,21 @@ namespace DOAN_Nhom4
         DBConnection data = new DBConnection();
         public TietkiemDAO() { }
 
+        public TietKiem LayHangTKTK(string Cot, string giaTri)
+        {
+            TietKiem tktk = new TietKiem();
+            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE {0} = '{1}'", Cot, giaTri);
+            tktk = data.LayHangTKTK(sql);
+            return tktk;
+        }
+
+        public List<string> LayCotTKTK(string tenCot)
+        {
+            List<string> cot = new List<string>();
+            string sql = string.Format("SELECT TenTKTK FROM TaiKhoanTietKiem");
+            cot = data.LayCot(sql, tenCot);
+            return cot;
+        }
         public bool ktSotien(BigInteger tienGoc, BigInteger soDu)
         {
             if (tienGoc <= soDu && tienGoc >= 100000 && tienGoc % 100000 == 0) return true;
