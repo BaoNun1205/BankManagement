@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.btn_Xoa = new CustomButton.VBButton();
-            this.btn_TimKiem = new CustomButton.VBButton();
-            this.rb_DangThanhToan = new System.Windows.Forms.RadioButton();
-            this.rb_ThanhToanXong = new System.Windows.Forms.RadioButton();
             this.gv_Vay = new System.Windows.Forms.DataGridView();
             this.btn_QuayLai = new CustomButton.VBButton();
             this.txt_SoTKVay = new System.Windows.Forms.TextBox();
@@ -59,54 +56,6 @@
             this.btn_Xoa.UseVisualStyleBackColor = false;
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.BackColor = System.Drawing.Color.Teal;
-            this.btn_TimKiem.BackgroundColor = System.Drawing.Color.Teal;
-            this.btn_TimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_TimKiem.BorderRadius = 20;
-            this.btn_TimKiem.BorderSize = 0;
-            this.btn_TimKiem.FlatAppearance.BorderSize = 0;
-            this.btn_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_TimKiem.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
-            this.btn_TimKiem.Location = new System.Drawing.Point(99, 342);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(201, 60);
-            this.btn_TimKiem.TabIndex = 29;
-            this.btn_TimKiem.Text = "Tìm kiếm";
-            this.btn_TimKiem.TextColor = System.Drawing.Color.White;
-            this.btn_TimKiem.UseVisualStyleBackColor = false;
-            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
-            // 
-            // rb_DangThanhToan
-            // 
-            this.rb_DangThanhToan.AutoSize = true;
-            this.rb_DangThanhToan.BackColor = System.Drawing.SystemColors.Window;
-            this.rb_DangThanhToan.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rb_DangThanhToan.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rb_DangThanhToan.Location = new System.Drawing.Point(99, 420);
-            this.rb_DangThanhToan.Name = "rb_DangThanhToan";
-            this.rb_DangThanhToan.Size = new System.Drawing.Size(240, 24);
-            this.rb_DangThanhToan.TabIndex = 30;
-            this.rb_DangThanhToan.TabStop = true;
-            this.rb_DangThanhToan.Text = "Trong thời gian thanh toán";
-            this.rb_DangThanhToan.UseVisualStyleBackColor = false;
-            // 
-            // rb_ThanhToanXong
-            // 
-            this.rb_ThanhToanXong.AutoSize = true;
-            this.rb_ThanhToanXong.BackColor = System.Drawing.SystemColors.Window;
-            this.rb_ThanhToanXong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rb_ThanhToanXong.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.rb_ThanhToanXong.Location = new System.Drawing.Point(99, 459);
-            this.rb_ThanhToanXong.Name = "rb_ThanhToanXong";
-            this.rb_ThanhToanXong.Size = new System.Drawing.Size(185, 24);
-            this.rb_ThanhToanXong.TabIndex = 31;
-            this.rb_ThanhToanXong.TabStop = true;
-            this.rb_ThanhToanXong.Text = "Đã thanh toán xong";
-            this.rb_ThanhToanXong.UseVisualStyleBackColor = false;
-            // 
             // gv_Vay
             // 
             this.gv_Vay.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -117,6 +66,7 @@
             this.gv_Vay.RowTemplate.Height = 29;
             this.gv_Vay.Size = new System.Drawing.Size(939, 716);
             this.gv_Vay.TabIndex = 32;
+            this.gv_Vay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Vay_CellClick);
             // 
             // btn_QuayLai
             // 
@@ -129,7 +79,7 @@
             this.btn_QuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_QuayLai.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_QuayLai.ForeColor = System.Drawing.Color.White;
-            this.btn_QuayLai.Location = new System.Drawing.Point(99, 544);
+            this.btn_QuayLai.Location = new System.Drawing.Point(99, 486);
             this.btn_QuayLai.Name = "btn_QuayLai";
             this.btn_QuayLai.Size = new System.Drawing.Size(201, 60);
             this.btn_QuayLai.TabIndex = 33;
@@ -168,9 +118,6 @@
             this.Controls.Add(this.txt_SoTKVay);
             this.Controls.Add(this.btn_QuayLai);
             this.Controls.Add(this.gv_Vay);
-            this.Controls.Add(this.rb_ThanhToanXong);
-            this.Controls.Add(this.rb_DangThanhToan);
-            this.Controls.Add(this.btn_TimKiem);
             this.Controls.Add(this.btn_Xoa);
             this.Name = "FrmQuanLyVayAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -184,9 +131,6 @@
 
         #endregion
         private CustomButton.VBButton btn_Xoa;
-        private CustomButton.VBButton btn_TimKiem;
-        private RadioButton rb_DangThanhToan;
-        private RadioButton rb_ThanhToanXong;
         private DataGridView gv_Vay;
         private CustomButton.VBButton btn_QuayLai;
         private TextBox txt_SoTKVay;

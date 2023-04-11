@@ -58,30 +58,14 @@ namespace DOAN_Nhom4
             ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(txt_SoTKVay.Text);
             ttNgDungDAO.Xoa(ttNgDung);
             MessageBox.Show("Đã xóa khoản vay!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        //chua xong
-        private void btn_TimKiem_Click(object sender, EventArgs e)
-        {
-            if (rb_ThanhToanXong.Checked)
-                ttNgDungDAO.TimKiemThanhToanXong();
-            if (rb_DangThanhToan.Checked)
-                ttNgDungDAO.TimKiemDangThanhToan();
+            HienThi();
         }
 
-        private void rb_DangThanhToan_CheckedChanged(object sender, EventArgs e)
+        private void gv_Vay_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(rb_DangThanhToan.Checked)
-            {
-                rb_ThanhToanXong.Enabled = true;
-            }
-        }
-
-        private void rb_ThanhToanXong_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rb_ThanhToanXong.Checked)
-            {
-                rb_DangThanhToan.Enabled = true;
-            }
+            int numrow;
+            numrow = e.RowIndex;
+            txt_SoTKVay.Text = gv_Vay.Rows[numrow].Cells[0].Value.ToString();
         }
     }
 }
