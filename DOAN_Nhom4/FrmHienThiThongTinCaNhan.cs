@@ -14,6 +14,7 @@ namespace DOAN_Nhom4
     {
         public NguoiDung kh;
         public TaiKhoanNganHang tknh;
+        private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmHienThiThongTinCaNhan()
         {
             InitializeComponent();
