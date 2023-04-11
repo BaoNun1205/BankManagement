@@ -12,8 +12,10 @@ namespace DOAN_Nhom4
         {
             pnlNguoidung.Controls.Clear();
             form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
             form.FormBorderStyle = FormBorderStyle.None;
+            int x = (pnlNguoidung.Width - form.Width) / 2;
+            int y = (pnlNguoidung.Height - form.Height) / 2;
+            form.Location = new Point(x, y);
             pnlNguoidung.Controls.Add(form);
             pnlNguoidung.Tag = form;
             form.Show();

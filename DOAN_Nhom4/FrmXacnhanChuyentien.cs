@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             if (txtMatkhau.Text == tknh.MatKhau)
-            {
+            {               
                 TaiKhoanNganHang tknhNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
                 tknhDAO.ChuyenTien(tknh, gd, tknhNhan);
                 lsgdDAO.Them(gd);

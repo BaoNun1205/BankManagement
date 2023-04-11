@@ -30,6 +30,7 @@ namespace DOAN_Nhom4
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
         }
+
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
             lblSotien.Text = gd.SoTien.ToString() + " VNĐ";
@@ -38,13 +39,21 @@ namespace DOAN_Nhom4
             lblSTK.Text = gd.SoTKNhan.ToString();
             lblNganhang.Text = gd.NganHangNhan.ToString();
             lblNoidung.Text = gd.LoiNhan.ToString();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(FrmNguoidung))
+                {
+                    form.Hide();
+                    form.Close();
+                }
+            }
         }
 
         private void btnVetrangchu_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
+            FrmNguoidung frmnguoidung = new FrmNguoidung(kh, tknh);
             this.Hide();
-            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
+            frmnguoidung.ShowDialog();
             this.Close();
         }
     }

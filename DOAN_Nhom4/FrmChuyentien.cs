@@ -37,9 +37,7 @@ namespace DOAN_Nhom4
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(this.kh, tknh);
-            this.Hide();
-            frmtrangchu.ShowDialog();
-            this.Close();
+            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
         private void btnTieptuc_Click(object sender, EventArgs e)
@@ -49,6 +47,7 @@ namespace DOAN_Nhom4
                 GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTKhoan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd, pnlNguoidung);
                 frmxacnhan.ShowDialog();
+                this.Close();
             }
             else
             {

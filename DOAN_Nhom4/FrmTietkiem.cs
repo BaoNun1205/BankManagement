@@ -35,7 +35,6 @@ namespace DOAN_Nhom4
         public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
-            txtTenTKTK.Focus();
             this.kh = kh;
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
