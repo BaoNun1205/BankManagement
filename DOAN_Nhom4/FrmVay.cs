@@ -90,7 +90,7 @@ namespace DOAN_Nhom4
                         if (int.Parse(txt_ThoiGianVay.Text) >= 6 && int.Parse(txt_ThoiGianVay.Text) <= 60)
                         {
                             ThongTinNguoiDungVay tmp = ttNgDungDAO.TKValid(nguoiDung.SoTK);
-                            if ( tmp == null || tmp.ThoiGianVay == 0)
+                            if (tmp == null)
                             {
                                 ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), s, txt_NgayVay.Value);
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);

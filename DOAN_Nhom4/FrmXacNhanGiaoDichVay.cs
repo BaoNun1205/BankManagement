@@ -61,10 +61,10 @@ namespace DOAN_Nhom4
             }
             else
             {
-                ttNgDungDAO.Sua(ttNgDung);
                 tknhDAO.Sua(tknh);
                 GiaoDich gd = new GiaoDich("Thanh toan khoan vay 1 thang", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
                 lsgdDAO.Them(gd);
+                ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
                 DOAN_Nhom4.ClassAddForm.addForm(FrmTienIchVay, pnlNguoiDung);
