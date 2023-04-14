@@ -29,6 +29,11 @@ namespace DOAN_Nhom4
             string sqlNH = string.Format("UPDATE TaiKhoanNganHang SET TenDN = '{0}', MatKhau = '{1}', SoDu = {2}, NgayDangKy = '{3}' WHERE SoTK = '{4}'", tknh.TenDN, tknh.MatKhau, tknh.SoDu,tknh.NgayDangKy, tknh.SoTK);
             data.xuLi(sqlNH);
         }
+        public void SuaSoDu(TaiKhoanNganHang tknh)
+        {
+            string sqlNH = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", tknh.SoDu, tknh.SoTK);
+            data.xuLi(sqlNH);
+        }
         public bool IsEmpty(TaiKhoanNganHang tknh)
         {
             if (tknh.SoTK != "" && tknh.MatKhau != "" && tknh.TenDN != "" && tknh.SoDu != 0)

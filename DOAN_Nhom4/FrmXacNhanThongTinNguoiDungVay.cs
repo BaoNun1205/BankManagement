@@ -19,6 +19,7 @@ namespace DOAN_Nhom4
         private Panel pnlNguoiDung;
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
@@ -32,8 +33,7 @@ namespace DOAN_Nhom4
             this.ttNgDung = ttNgDung;
             this.pnlNguoiDung = pnlNguoiDung;
         }
-
-        private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
+        private void HienThi()
         {
             txt_DanhXung.Text = ttNgDung.DanhXung;
             txt_HoTen.Text = ttNgDung.HoTen;
@@ -84,17 +84,24 @@ namespace DOAN_Nhom4
             txt_NgayVay.Text = ttNgDung.NgayVay.ToString();
             laithang *= 100;
             txt_TinhTien.Text = String.Format("{0} x ({1} x {2}% x (1 + {3}%)^{4}) / ((1 + {5}%)^{6} - 1) = {7}",
-                txt_ThoiGianVay.Text, soTienVay.ToString("N0"),laithang.ToString("0.000"), laithang.ToString("0.000"), txt_ThoiGianVay.Text,laithang.ToString("0.000"),txt_ThoiGianVay.Text, tongsotien.ToString("N0"));
+                txt_ThoiGianVay.Text, soTienVay.ToString("N0"), laithang.ToString("0.000"), laithang.ToString("0.000"), txt_ThoiGianVay.Text, laithang.ToString("0.000"), txt_ThoiGianVay.Text, tongsotien.ToString("N0"));
             ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra = tongsotien;
             ttNgDung.PhiTraCham = 0;
             tknh.SoDu += ttNgDung.SoTienVay;
-            tknhDAO.Sua(tknh);
+            tknhDAO.SuaSoDu(tknh);
+        }
+
+        private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
+        {
+            HienThi();
         }
 
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
+            GiaoDich gd = new GiaoDich("Dang ky khoan vay", "HHB", "","", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
+            lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoiDung);

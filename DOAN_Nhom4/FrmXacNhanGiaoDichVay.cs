@@ -74,6 +74,10 @@ namespace DOAN_Nhom4
 
         private void FrmXacNhanGiaoDichVay_Load(object sender, EventArgs e)
         {
+            HienThi();
+        }
+        private void HienThi()
+        {
             lblHienThiTKNguon.Text = nguoiDung.SoTK;
             lblHienThiTKVay.Text = nguoiDung.SoTK;
             BigInteger tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
