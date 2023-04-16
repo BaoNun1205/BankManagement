@@ -79,7 +79,7 @@
             this.btn_QuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_QuayLai.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_QuayLai.ForeColor = System.Drawing.Color.White;
-            this.btn_QuayLai.Location = new System.Drawing.Point(99, 486);
+            this.btn_QuayLai.Location = new System.Drawing.Point(99, 374);
             this.btn_QuayLai.Name = "btn_QuayLai";
             this.btn_QuayLai.Size = new System.Drawing.Size(201, 60);
             this.btn_QuayLai.TabIndex = 33;

@@ -47,9 +47,9 @@ namespace DOAN_Nhom4
 
         private void btn_QuayLai_Click(object sender, EventArgs e)
         {
-            FrmAdmin frmadm = new FrmAdmin();
+            FrmQLTKVay frmqltkvay = new FrmQLTKVay();
             this.Hide();
-            frmadm.ShowDialog();
+            frmqltkvay.ShowDialog();
             this.Close();
         }
 
@@ -57,10 +57,14 @@ namespace DOAN_Nhom4
         {
             ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(txt_SoTKVay.Text);
             ttNgDungDAO.Xoa(ttNgDung);
+            Refresh();
             MessageBox.Show("Đã xóa khoản vay!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             HienThi();
         }
-
+        private void Refresh()
+        {
+            txt_SoTKVay.Text = "";
+        }
         private void gv_Vay_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
