@@ -36,26 +36,29 @@ namespace DOAN_Nhom4
         {
             lblHienThiSoTK.Text = tttd.SoTKTinDung.ToString();
             lblHienThiLoaiThe.Text = tttd.LoaiThe.ToString();
-            lblHienThiNgayDaoHan.Text = tttd.NgayDaoHan.ToString();
+            lblHienThiNgayDaoHan.Text = tttd.NgayDaoHan.ToString("dd/MM/yyyy");
             lblHienThiHanMuc.Text = tttd.HanMuc.ToString();
             lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString();
             lblHienThiSoTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString();
-            lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString();
-            if (!tttdDAO.IsNgayDenHan(tttd))
+            if (tttdDAO.IsNgayDenHan(tttd))
             {
-                lblHienThiPhiTraCham.Text = tttdDAO.LaiSuat(tttd).ToString();
+                CapNhatPhi();
             }
-            else
-            {
-                lblHienThiPhiTraCham.Text = "0";
-            }
-            lblHienThiPhiThuongNien.Text = "0";
+            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.ToString();
+            lblHienThiPhiPhat.Text = tttd.PhiPhat.ToString();
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             FrmXacNhanGIaoDichTinDung frmXacNhanGIaoDichTinDung = new FrmXacNhanGIaoDichTinDung(kh, tknh, pnlNguoiDung, tttd);
             DOAN_Nhom4.ClassAddForm.addForm(frmXacNhanGIaoDichTinDung, pnlNguoiDung);
+        }
+
+        public void CapNhatPhi()
+        {
+            tttd.PhiPhat = tttdDAO.PhiPhat(tttd);
+            tttd.PhiTraCham = tttdDAO.PhiTraCham(tttd);
+            tttdDAO.Update(tttd);
         }
     }
 }

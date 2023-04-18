@@ -24,7 +24,7 @@ namespace DOAN_Nhom4
         private BigInteger soTienDaSuDung;
         private DateTime ngayMoThe;
         private BigInteger phiTraCham;
-        private BigInteger phiThuongNien;
+        private BigInteger phiPhat;
 
         public string SoTKTinDung { get => soTKTinDung; set => soTKTinDung = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
@@ -41,12 +41,12 @@ namespace DOAN_Nhom4
         public BigInteger SoTienDaSuDung { get => soTienDaSuDung; set => soTienDaSuDung = value; }
         public DateTime NgayMoThe { get => ngayMoThe; set => ngayMoThe = value; }
         public BigInteger PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
-        public BigInteger PhiThuongNien { get => phiThuongNien; set => phiThuongNien = value; }
+        public BigInteger PhiPhat { get => phiPhat; set => phiPhat = value; }
 
         public ThongTinTinDung() { }
 
         public ThongTinTinDung(string soTKTinDung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string loaiThe, 
-                                DateTime ngayDaoHan, BigInteger hanMuc, double laiSuat, BigInteger soTienDaSuDung, DateTime ngayMoThe, BigInteger phiTraCham, BigInteger phiThuongNien)
+                                DateTime ngayDaoHan, BigInteger hanMuc, double laiSuat, BigInteger soTienDaSuDung, DateTime ngayMoThe, BigInteger phiTraCham, BigInteger phiPhat)
         {
             this.soTKTinDung = soTKTinDung;
             this.hoTen = hoTen;
@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
             this.soTienDaSuDung = soTienDaSuDung;
             this.ngayMoThe = ngayMoThe;
             this.phiTraCham = phiTraCham;
-            this.PhiThuongNien = phiThuongNien;
+            this.phiPhat = phiPhat;
         }
         
     }

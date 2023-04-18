@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
         private Panel pnlNguoiDung;
         private ThongTinTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
+        private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public FrmXacNhanGIaoDichTinDung()
         {
             InitializeComponent();
@@ -37,16 +38,17 @@ namespace DOAN_Nhom4
             lblHienThiTKTinDung.Text = tttd.SoTKTinDung;
             lblHienThiTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString();
             txt_NgayGiaoDich.Value = DateTime.Now;
-            if (tttdDAO.IsNgayDenHan(tttd))
-            {
-                lblHienThiLai.Text = tttdDAO.LaiSuat(tttd).ToString();
-                lblHienThiTraCham.Text = tttdDAO.PhiTraCham(tttd).ToString();
-            }
-            else
-            {
-                lblHienThiLai.Text = "0";
-                lblHienThiTraCham.Text = "0";
-            }
+            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.ToString();
+            lblHienThiPhiPhat.Text = tttd.PhiPhat.ToString();
+            lblHienThiTongSoTien.Text = (tttd.PhiTraCham + tttd.PhiPhat + tttd.SoTienDaSuDung).ToString();
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenTK, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTKTinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
+            tknhDAO.RutTien(tknh, gd);
+            tttdDAO.CapNhatTinDungHangThang(tttd);
+            tttdDAO.Update(tttd);
         }
     }
 }

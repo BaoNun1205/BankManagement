@@ -273,7 +273,7 @@ namespace DOAN_Nhom4
                     ttTinDung.SoTienDaSuDung = reader.GetInt64(12);
                     ttTinDung.NgayMoThe = reader.GetDateTime(13);
                     ttTinDung.PhiTraCham = reader.GetInt64(14);
-                    ttTinDung.PhiThuongNien = reader.GetInt64(15);
+                    ttTinDung.PhiPhat = reader.GetInt64(15);
                 }
                 else
                     return null;
