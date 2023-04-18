@@ -18,6 +18,7 @@ namespace DOAN_Nhom4
         private ThongTinTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        private LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         public FrmXacNhanGIaoDichTinDung()
         {
             InitializeComponent();
@@ -49,6 +50,17 @@ namespace DOAN_Nhom4
             tknhDAO.RutTien(tknh, gd);
             tttdDAO.CapNhatTinDungHangThang(tttd);
             tttdDAO.Update(tttd);
+            tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
+            lsgdDAO.Them(gd);
+            FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
+            frmThongbaoChuyentien.ShowDialog();
+            this.Close();
+        }
+
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            FrmThongTinTaiKhoangTinDung frmThongTinTaiKhoangTinDung = new FrmThongTinTaiKhoangTinDung(kh, tknh, pnlNguoiDung, tttd);
+            DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
         }
     }
 }

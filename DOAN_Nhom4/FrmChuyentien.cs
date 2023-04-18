@@ -52,9 +52,9 @@ namespace DOAN_Nhom4
             else
             {
                 if (lblTenTKhoan.Text == "Khong ton tai")
-                    MessageBox.Show("Tai khoang khong ton tai");
+                    MessageBox.Show("Tai khoan khong ton tai");
                 else
-                    MessageBox.Show("So Du cua ban khong du");
+                    MessageBox.Show("So du cua ban khong du");
             }
         }
 

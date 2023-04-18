@@ -46,7 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblHienThiLoai = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,7 +73,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblHienThiLoai);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -282,16 +282,16 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Phí giao dịch";
             // 
-            // label3
+            // lblHienThiLoai
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(357, 207);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 27);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Chuyển tiền";
+            this.lblHienThiLoai.AutoSize = true;
+            this.lblHienThiLoai.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHienThiLoai.Location = new System.Drawing.Point(357, 207);
+            this.lblHienThiLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHienThiLoai.Name = "lblHienThiLoai";
+            this.lblHienThiLoai.Size = new System.Drawing.Size(127, 27);
+            this.lblHienThiLoai.TabIndex = 5;
+            this.lblHienThiLoai.Text = "Chuyển tiền";
             // 
             // label2
             // 
@@ -366,7 +366,7 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private Label label3;
+        private Label lblHienThiLoai;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;

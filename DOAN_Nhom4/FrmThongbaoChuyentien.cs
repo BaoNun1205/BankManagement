@@ -39,6 +39,7 @@ namespace DOAN_Nhom4
             lblSTK.Text = gd.SoTKNhan.ToString();
             lblNganhang.Text = gd.NganHangNhan.ToString();
             lblNoidung.Text = gd.LoiNhan.ToString();
+            lblHienThiLoai.Text = gd.LoaiGD.ToString();
             foreach (Form form in Application.OpenForms)
             {
                 if (form.GetType() == typeof(FrmNguoidung))
