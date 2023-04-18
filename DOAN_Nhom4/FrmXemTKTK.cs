@@ -54,11 +54,26 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = "";
             lblTienlai.Text = "";
             lblTongtien.Text = "";
+            lblNgaytoihan.Text = "";
+        }
+
+        private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TietKiem tkiem = new TietKiem();
+            tkiem = tietkiemDAO.LayHangTKTK("TenTKTK", cbTenTKTK.Text);
+            DateTime ngaytoihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
+            lblMatietkiem.Text = tkiem.Id.ToString();
+            txtKihan.Text = tkiem.KiHan.ToString();
+            txtTiengoc.Text = tkiem.TienGoc.ToString();
+            lblTienlai.Text = tkiem.TienLai.ToString();
+            lblLaisuat.Text = tkiem.LaiSuat.ToString();
+            lblTongtien.Text = tkiem.TongTien.ToString();
+            lblNgaytoihan.Text = tkiem.NgayDangky.ToString("dd/MM/yyyy");
         }
 
         private void btnRuttien_Click(object sender, EventArgs e)
         {
-            TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), cbTenTKTK.Text, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
+            TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), DateTime.Parse(lblNgaytoihan.Text), cbTenTKTK.Text, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
             GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.Id.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
             tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
             tknhDAO.Sua(tknh);
@@ -72,18 +87,6 @@ namespace DOAN_Nhom4
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
-        }
-
-        private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TietKiem tkiem = new TietKiem();
-            tkiem = tietkiemDAO.LayHangTKTK("TenTKTK", cbTenTKTK.Text);
-            lblMatietkiem.Text = tkiem.Id.ToString();
-            txtKihan.Text = tkiem.KiHan.ToString();
-            txtTiengoc.Text = tkiem.TienGoc.ToString();  
-            lblTienlai.Text = tkiem.TienLai.ToString();
-            lblLaisuat.Text = tkiem.LaiSuat.ToString();
-            lblTongtien.Text = tkiem.TongTien.ToString();
         }
     }
 }

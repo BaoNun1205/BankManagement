@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Numerics;
@@ -51,7 +52,7 @@ namespace DOAN_Nhom4
         }
         public void Them(TietKiem tkiem)
         {
-            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(ID, TenTKTK, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", tkiem.Id, tkiem.TenTKTK, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
+            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(ID, NgayDangKy, TenTKTK, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", tkiem.Id, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
             data.xuLi(sqlTkiem);
         }
 
@@ -59,6 +60,13 @@ namespace DOAN_Nhom4
         {
             string sqlTkiem = string.Format("DELETE FROM TaiKhoanTietKiem WHERE ID ='{0}'", tkiem.Id);
             data.xuLi(sqlTkiem);
+        }
+
+        public DateTime NgayToiHan(DateTime ngaydangky, int kihan)
+        {
+            TimeSpan timeToAdd = TimeSpan.FromDays(kihan*30);
+            DateTime ngaytoihan = ngaydangky.Add(timeToAdd);
+            return ngaytoihan;
         }
     }
 }

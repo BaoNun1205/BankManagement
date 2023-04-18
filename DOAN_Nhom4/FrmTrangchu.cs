@@ -40,6 +40,7 @@
             int x2 = (this.Size.Width - lblDate.Width) / 2;
             int y2 = (this.Size.Height - lblDate.Height) / 2;
 
+
             lblTime.Location = new Point(x, y + lblTime.Height);
             lblDate.Location = new Point(x2, y2 + 2*lblTime.Height);
         }

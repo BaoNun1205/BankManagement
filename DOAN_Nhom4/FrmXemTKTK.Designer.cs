@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNgaytoihan = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbTenTKTK = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -58,6 +60,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblNgaytoihan);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.cbTenTKTK);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel6);
@@ -80,10 +84,32 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtTiengoc);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(57, 117);
+            this.panel1.Location = new System.Drawing.Point(57, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 498);
+            this.panel1.Size = new System.Drawing.Size(1023, 535);
             this.panel1.TabIndex = 0;
+            // 
+            // lblNgaytoihan
+            // 
+            this.lblNgaytoihan.AutoSize = true;
+            this.lblNgaytoihan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNgaytoihan.ForeColor = System.Drawing.Color.Red;
+            this.lblNgaytoihan.Location = new System.Drawing.Point(247, 186);
+            this.lblNgaytoihan.Name = "lblNgaytoihan";
+            this.lblNgaytoihan.Size = new System.Drawing.Size(20, 25);
+            this.lblNgaytoihan.TabIndex = 118;
+            this.lblNgaytoihan.Text = "-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(107, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 25);
+            this.label7.TabIndex = 117;
+            this.label7.Text = "Ngày tới hạn:";
             // 
             // cbTenTKTK
             // 
@@ -181,7 +207,7 @@
             this.btnRuttien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRuttien.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRuttien.ForeColor = System.Drawing.Color.White;
-            this.btnRuttien.Location = new System.Drawing.Point(452, 392);
+            this.btnRuttien.Location = new System.Drawing.Point(456, 453);
             this.btnRuttien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnRuttien.Name = "btnRuttien";
             this.btnRuttien.Size = new System.Drawing.Size(135, 48);
@@ -263,7 +289,7 @@
             this.lblTongtien.AutoSize = true;
             this.lblTongtien.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTongtien.ForeColor = System.Drawing.Color.Black;
-            this.lblTongtien.Location = new System.Drawing.Point(463, 315);
+            this.lblTongtien.Location = new System.Drawing.Point(466, 329);
             this.lblTongtien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongtien.Name = "lblTongtien";
             this.lblTongtien.Size = new System.Drawing.Size(48, 29);
@@ -275,7 +301,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label5.Location = new System.Drawing.Point(339, 236);
+            this.label5.Location = new System.Drawing.Point(347, 260);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(362, 32);
@@ -400,5 +426,7 @@
         private Label label1;
         private PictureBox pBQuaylai;
         private ComboBox cbTenTKTK;
+        private Label label7;
+        private Label lblNgaytoihan;
     }
 }
