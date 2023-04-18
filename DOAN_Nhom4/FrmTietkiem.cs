@@ -19,6 +19,7 @@ namespace DOAN_Nhom4
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
         private string tenTKTK;
@@ -208,7 +209,9 @@ namespace DOAN_Nhom4
             tknhDAO.Sua(tknh);
             tenTKTK = txtTenTKTK.Text;
             TietKiem tkiem = new TietKiem(ID, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
+            GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, ID.ToString(), int.Parse(txtSotien.Text), "");
             tkiemDAO.Them(tkiem);
+            lsgdDAO.Them(gd);
             MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);

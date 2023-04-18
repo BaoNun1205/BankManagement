@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblSotien.Text = gd.SoTien.ToString() + " VNĐ";
+            lblSotien.Text = gd.SoTien.ToString("N0") + " VNĐ";
             lblTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
             lblNguoinhan.Text = gd.TenTKNhan.ToString();
             lblSTK.Text = gd.SoTKNhan.ToString();

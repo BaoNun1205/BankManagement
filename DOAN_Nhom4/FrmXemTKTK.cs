@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
     {
         TietkiemDAO tietkiemDAO = new TietkiemDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         List<string> danhSachLuaChon = new List<string>();
 
         private NguoiDung kh;
@@ -58,9 +59,11 @@ namespace DOAN_Nhom4
         private void btnRuttien_Click(object sender, EventArgs e)
         {
             TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), cbTenTKTK.Text, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
+            GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.Id.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
             tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
             tknhDAO.Sua(tknh);
             tietkiemDAO.Rut(tkiem);
+            lsgdDAO.Them(gd);
             MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Xoa();
         }
