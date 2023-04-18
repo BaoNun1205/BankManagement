@@ -33,12 +33,13 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblSotien.Text = gd.SoTien.ToString() + " VNĐ";
+            lblSotien.Text = gd.SoTien.ToString("N0") + " VNĐ";
             lblTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
             lblNguoinhan.Text = gd.TenTKNhan.ToString();
             lblSTK.Text = gd.SoTKNhan.ToString();
             lblNganhang.Text = gd.NganHangNhan.ToString();
             lblNoidung.Text = gd.LoiNhan.ToString();
+            lblHienThiLoai.Text = gd.LoaiGD.ToString();
             foreach (Form form in Application.OpenForms)
             {
                 if (form.GetType() == typeof(FrmNguoidung))

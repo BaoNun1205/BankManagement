@@ -68,6 +68,7 @@
             this.btnHuyBo.Text = "Hủy Bỏ";
             this.btnHuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.btnHuyBo.UseVisualStyleBackColor = false;
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
             // btnXacNhan
             // 
