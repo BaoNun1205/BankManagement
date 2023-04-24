@@ -92,7 +92,7 @@
             this.btnVetrangchu.BorderSize = 2;
             this.btnVetrangchu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVetrangchu.FlatAppearance.BorderSize = 0;
-            this.btnVetrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVetrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVetrangchu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnVetrangchu.ForeColor = System.Drawing.Color.Black;
             this.btnVetrangchu.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow5;

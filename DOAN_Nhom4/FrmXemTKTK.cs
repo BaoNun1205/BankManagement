@@ -46,22 +46,6 @@ namespace DOAN_Nhom4
             
         }
 
-        private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TietKiem tkiem = new TietKiem();
-            tkiem = tietkiemDAO.LayHangTKTK("TenTKTK", cbTenTKTK.Text);
-            DateTime ngayToihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
-            ngayDangky = tkiem.NgayDangky;
-            lblMatietkiem.Text = tkiem.Id.ToString();
-            txtKihan.Text = tkiem.KiHan.ToString();
-            txtTiengoc.Text = tkiem.TienGoc.ToString();
-            lblTienlai.Text = tkiem.TienLai.ToString();
-            lblLaisuat.Text = tkiem.LaiSuat.ToString();
-            lblTongtien.Text = tkiem.TongTien.ToString();
-            lblNgaydangky.Text = tkiem.NgayDangky.ToString("dd/MM/yyyy");
-            lblNgaytoihan.Text = ngayToihan.ToString("dd/MM/yyyy");
-        }
-
         private void btnRuttien_Click(object sender, EventArgs e)
         {
             if (cbTenTKTK.Text == "")
@@ -89,6 +73,22 @@ namespace DOAN_Nhom4
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
+        }
+
+        private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TietKiem tkiem = new TietKiem();
+            tkiem = tietkiemDAO.LayHangTKTK("TenTKTK", cbTenTKTK.Text);
+            DateTime ngayToihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
+            ngayDangky = tkiem.NgayDangky;
+            lblMatietkiem.Text = tkiem.Id.ToString();
+            txtKihan.Text = tkiem.KiHan.ToString();
+            txtTiengoc.Text = tkiem.TienGoc.ToString();
+            lblTienlai.Text = tkiem.TienLai.ToString();
+            lblLaisuat.Text = tkiem.LaiSuat.ToString();
+            lblTongtien.Text = tkiem.TongTien.ToString();
+            lblNgaydangky.Text = tkiem.NgayDangky.ToString("dd/MM/yyyy");
+            lblNgaytoihan.Text = ngayToihan.ToString("dd/MM/yyyy");
         }
     }
 }
