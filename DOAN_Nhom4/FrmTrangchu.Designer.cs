@@ -50,7 +50,7 @@
             // ptbLoGo
             // 
             this.ptbLoGo.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
-            this.ptbLoGo.Location = new System.Drawing.Point(478, 193);
+            this.ptbLoGo.Location = new System.Drawing.Point(472, 197);
             this.ptbLoGo.Name = "ptbLoGo";
             this.ptbLoGo.Size = new System.Drawing.Size(195, 154);
             this.ptbLoGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
