@@ -231,7 +231,7 @@
             // 
             // pnlNguoidung
             // 
-            this.pnlNguoidung.Location = new System.Drawing.Point(267, 88);
+            this.pnlNguoidung.Location = new System.Drawing.Point(265, 88);
             this.pnlNguoidung.Name = "pnlNguoidung";
             this.pnlNguoidung.Size = new System.Drawing.Size(1139, 720);
             this.pnlNguoidung.TabIndex = 54;
@@ -315,7 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1407, 808);
+            this.ClientSize = new System.Drawing.Size(1405, 808);
             this.Controls.Add(this.pnlLuachonCD);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlNguoidung);
