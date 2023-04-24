@@ -22,7 +22,6 @@ namespace DOAN_Nhom4
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
-        private DateTime ngayDangky = DateTime.Now;
         private string tenTKTK;
         private BigInteger tienGoc;
         private int kiHan;
@@ -209,7 +208,7 @@ namespace DOAN_Nhom4
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
             tenTKTK = txtTenTKTK.Text;
-            TietKiem tkiem = new TietKiem(ID, ngayDangky, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
+            TietKiem tkiem = new TietKiem(ID, DateTime.Now, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
             GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, ID.ToString(), int.Parse(txtSotien.Text), "");
             tkiemDAO.Them(tkiem);
             lsgdDAO.Them(gd);

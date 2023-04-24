@@ -29,21 +29,10 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void addForm(Form form)
-        {
-            pnlNguoiDung.Controls.Clear();
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            form.FormBorderStyle = FormBorderStyle.None;
-            pnlNguoiDung.Controls.Add(form);
-            pnlNguoiDung.Tag = form;
-            form.Show();
-        }
-
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             FrmVay frmVay = new FrmVay(nguoiDung, tknh,pnlNguoiDung);
-            addForm(frmVay);
+            DOAN_Nhom4.ClassAddForm.addForm(frmVay, pnlNguoiDung);
         }
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)

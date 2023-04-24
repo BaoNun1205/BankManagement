@@ -76,6 +76,7 @@ namespace DOAN_Nhom4
                 if (reader.Read())
                 {
                     tkiem.Id = int.Parse(reader["ID"].ToString());
+                    tkiem.NgayDangky = DateTime.Parse(reader["NgayDangKy"].ToString());
                     tkiem.TenTKTK = reader["TenTKTK"].ToString();
                     tkiem.TienGoc = BigInteger.Parse(reader["TienGoc"].ToString());
                     tkiem.KiHan = int.Parse(reader["KiHan"].ToString());
