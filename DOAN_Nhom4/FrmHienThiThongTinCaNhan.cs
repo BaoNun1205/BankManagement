@@ -35,5 +35,15 @@ namespace DOAN_Nhom4
             lblNgaySinhValue.Text = kh.NgaySinh.ToString("MM/dd/yyyy");
             lblSdtValue.Text = kh.Sdt.ToString();
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
