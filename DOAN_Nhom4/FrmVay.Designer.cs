@@ -32,6 +32,7 @@ namespace DOAN_Nhom4
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVay));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pBQuaylai = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -89,10 +90,9 @@ namespace DOAN_Nhom4
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pBQuaylai = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBQuaylai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,6 +161,17 @@ namespace DOAN_Nhom4
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1139, 720);
             this.panel1.TabIndex = 0;
+            // 
+            // pBQuaylai
+            // 
+            this.pBQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
+            this.pBQuaylai.Location = new System.Drawing.Point(10, 10);
+            this.pBQuaylai.Name = "pBQuaylai";
+            this.pBQuaylai.Size = new System.Drawing.Size(39, 34);
+            this.pBQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBQuaylai.TabIndex = 117;
+            this.pBQuaylai.TabStop = false;
+            this.pBQuaylai.Click += new System.EventHandler(this.pBQuaylai_Click);
             // 
             // label36
             // 
@@ -890,17 +901,6 @@ namespace DOAN_Nhom4
             this.label2.Text = "ĐĂNG KÝ VAY NỢ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pBQuaylai
-            // 
-            this.pBQuaylai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow3;
-            this.pBQuaylai.Location = new System.Drawing.Point(10, 10);
-            this.pBQuaylai.Name = "pBQuaylai";
-            this.pBQuaylai.Size = new System.Drawing.Size(39, 34);
-            this.pBQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBQuaylai.TabIndex = 117;
-            this.pBQuaylai.TabStop = false;
-            this.pBQuaylai.Click += new System.EventHandler(this.pBQuaylai_Click);
-            // 
             // FrmVay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -915,8 +915,8 @@ namespace DOAN_Nhom4
             this.Load += new System.EventHandler(this.FrmVay_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBQuaylai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

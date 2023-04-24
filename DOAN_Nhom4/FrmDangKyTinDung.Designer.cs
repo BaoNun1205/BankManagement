@@ -509,11 +509,11 @@
             this.lblNo3.AutoSize = true;
             this.lblNo3.BackColor = System.Drawing.Color.Silver;
             this.lblNo3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNo3.Font = new System.Drawing.Font("Bell MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNo3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNo3.Location = new System.Drawing.Point(548, 472);
             this.lblNo3.Name = "lblNo3";
-            this.lblNo3.Size = new System.Drawing.Size(24, 26);
+            this.lblNo3.Size = new System.Drawing.Size(25, 26);
             this.lblNo3.TabIndex = 11;
             this.lblNo3.Text = "3";
             // 
@@ -543,11 +543,11 @@
             this.lblNo2.AutoSize = true;
             this.lblNo2.BackColor = System.Drawing.Color.Silver;
             this.lblNo2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNo2.Font = new System.Drawing.Font("Bell MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNo2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNo2.Location = new System.Drawing.Point(548, 127);
             this.lblNo2.Name = "lblNo2";
-            this.lblNo2.Size = new System.Drawing.Size(24, 26);
+            this.lblNo2.Size = new System.Drawing.Size(25, 26);
             this.lblNo2.TabIndex = 8;
             this.lblNo2.Text = "2";
             // 
@@ -577,11 +577,11 @@
             this.lblNo1.AutoSize = true;
             this.lblNo1.BackColor = System.Drawing.Color.Silver;
             this.lblNo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNo1.Font = new System.Drawing.Font("Bell MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNo1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNo1.Location = new System.Drawing.Point(39, 131);
             this.lblNo1.Name = "lblNo1";
-            this.lblNo1.Size = new System.Drawing.Size(24, 26);
+            this.lblNo1.Size = new System.Drawing.Size(25, 26);
             this.lblNo1.TabIndex = 5;
             this.lblNo1.Text = "1";
             // 
@@ -714,9 +714,9 @@
             // ptbQuayLai
             // 
             this.ptbQuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.ptbQuayLai.Location = new System.Drawing.Point(3, 3);
+            this.ptbQuayLai.Location = new System.Drawing.Point(11, 11);
             this.ptbQuayLai.Name = "ptbQuayLai";
-            this.ptbQuayLai.Size = new System.Drawing.Size(41, 45);
+            this.ptbQuayLai.Size = new System.Drawing.Size(39, 36);
             this.ptbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbQuayLai.TabIndex = 79;
             this.ptbQuayLai.TabStop = false;
