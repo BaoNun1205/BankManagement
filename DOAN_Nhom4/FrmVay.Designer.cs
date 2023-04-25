@@ -800,11 +800,11 @@ namespace DOAN_Nhom4
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Silver;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(577, 348);
+            this.label6.Location = new System.Drawing.Point(577, 343);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 26);
+            this.label6.Size = new System.Drawing.Size(30, 29);
             this.label6.TabIndex = 11;
             this.label6.Text = "3";
             // 
@@ -834,11 +834,11 @@ namespace DOAN_Nhom4
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(577, 136);
+            this.label4.Location = new System.Drawing.Point(577, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 26);
+            this.label4.Size = new System.Drawing.Size(30, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "2";
             // 
@@ -868,11 +868,11 @@ namespace DOAN_Nhom4
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Silver;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(30, 133);
+            this.label3.Location = new System.Drawing.Point(30, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 26);
+            this.label3.Size = new System.Drawing.Size(30, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "1";
             // 
