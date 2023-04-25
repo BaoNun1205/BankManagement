@@ -35,7 +35,10 @@ namespace DOAN_Nhom4
 
         private void btn_KhoanTungVay_Click(object sender, EventArgs e)
         {
-
+            FrmCacKhoanDaVay frmkhoandavay = new FrmCacKhoanDaVay();
+            this.Hide();
+            frmkhoandavay.ShowDialog();
+            this.Close();
         }
     }
 }

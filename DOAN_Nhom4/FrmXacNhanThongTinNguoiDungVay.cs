@@ -101,8 +101,7 @@ namespace DOAN_Nhom4
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
-            ThongTinNguoiDungVay tmp = ttNgDung;
-            qlDAO.Them(tmp);
+            qlDAO.Them(ttNgDung);
             GiaoDich gd = new GiaoDich("Dang ky khoan vay", "HHB", "","", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
             lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
