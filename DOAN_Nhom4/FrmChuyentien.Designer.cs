@@ -41,6 +41,8 @@
             this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlChuyentien = new System.Windows.Forms.Panel();
+            this.cbTennguoinhan = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblTenTKhoan = new System.Windows.Forms.Label();
             this.lblSoDuString = new System.Windows.Forms.Label();
             this.lblSoDu = new System.Windows.Forms.Label();
@@ -70,7 +72,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnHuy.Location = new System.Drawing.Point(244, 544);
+            this.btnHuy.Location = new System.Drawing.Point(161, 544);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(156, 58);
@@ -91,7 +93,7 @@
             this.btnTieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTieptuc.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTieptuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnTieptuc.Location = new System.Drawing.Point(597, 544);
+            this.btnTieptuc.Location = new System.Drawing.Point(643, 544);
             this.btnTieptuc.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTieptuc.Name = "btnTieptuc";
             this.btnTieptuc.Size = new System.Drawing.Size(156, 58);
@@ -147,11 +149,11 @@
             this.txtLoiNhan.BackColor = System.Drawing.Color.White;
             this.txtLoiNhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLoiNhan.ForeColor = System.Drawing.Color.Black;
-            this.txtLoiNhan.Location = new System.Drawing.Point(453, 358);
+            this.txtLoiNhan.Location = new System.Drawing.Point(549, 358);
             this.txtLoiNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtLoiNhan.Multiline = true;
             this.txtLoiNhan.Name = "txtLoiNhan";
-            this.txtLoiNhan.Size = new System.Drawing.Size(450, 145);
+            this.txtLoiNhan.Size = new System.Drawing.Size(354, 145);
             this.txtLoiNhan.TabIndex = 10;
             // 
             // label3
@@ -218,13 +220,16 @@
             // pnlChuyentien
             // 
             this.pnlChuyentien.BackColor = System.Drawing.Color.White;
+            this.pnlChuyentien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChuyentien.Controls.Add(this.cbTennguoinhan);
+            this.pnlChuyentien.Controls.Add(this.label6);
+            this.pnlChuyentien.Controls.Add(this.txtSTK);
             this.pnlChuyentien.Controls.Add(this.lblTenTKhoan);
             this.pnlChuyentien.Controls.Add(this.lblSoDuString);
             this.pnlChuyentien.Controls.Add(this.lblSoDu);
             this.pnlChuyentien.Controls.Add(this.lblTenTK);
             this.pnlChuyentien.Controls.Add(this.btnHuy);
             this.pnlChuyentien.Controls.Add(this.txtSoTien);
-            this.pnlChuyentien.Controls.Add(this.txtSTK);
             this.pnlChuyentien.Controls.Add(this.btnTieptuc);
             this.pnlChuyentien.Controls.Add(this.label2);
             this.pnlChuyentien.Controls.Add(this.cbTenNH);
@@ -235,17 +240,39 @@
             this.pnlChuyentien.Location = new System.Drawing.Point(93, 52);
             this.pnlChuyentien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlChuyentien.Name = "pnlChuyentien";
-            this.pnlChuyentien.Size = new System.Drawing.Size(961, 620);
+            this.pnlChuyentien.Size = new System.Drawing.Size(961, 631);
             this.pnlChuyentien.TabIndex = 11;
+            // 
+            // cbTennguoinhan
+            // 
+            this.cbTennguoinhan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTennguoinhan.FormattingEnabled = true;
+            this.cbTennguoinhan.Location = new System.Drawing.Point(667, 180);
+            this.cbTennguoinhan.Name = "cbTennguoinhan";
+            this.cbTennguoinhan.Size = new System.Drawing.Size(236, 24);
+            this.cbTennguoinhan.TabIndex = 30;
+            this.cbTennguoinhan.SelectedIndexChanged += new System.EventHandler(this.cbTennguoinhan_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label6.Location = new System.Drawing.Point(549, 182);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 19);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Người nhận:";
             // 
             // lblTenTKhoan
             // 
             this.lblTenTKhoan.AutoSize = true;
-            this.lblTenTKhoan.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTenTKhoan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTenTKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTenTKhoan.Location = new System.Drawing.Point(549, 165);
+            this.lblTenTKhoan.Location = new System.Drawing.Point(302, 205);
             this.lblTenTKhoan.Name = "lblTenTKhoan";
-            this.lblTenTKhoan.Size = new System.Drawing.Size(20, 25);
+            this.lblTenTKhoan.Size = new System.Drawing.Size(15, 19);
             this.lblTenTKhoan.TabIndex = 28;
             this.lblTenTKhoan.Text = "-";
             // 
@@ -323,5 +350,7 @@
         private Label lblSoDu;
         private Label lblSoDuString;
         private Label lblTenTKhoan;
+        private Label label6;
+        private ComboBox cbTennguoinhan;
     }
 }

@@ -97,7 +97,7 @@
             this.btnVetrangchu.ForeColor = System.Drawing.Color.Black;
             this.btnVetrangchu.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow5;
             this.btnVetrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVetrangchu.Location = new System.Drawing.Point(2, 1);
+            this.btnVetrangchu.Location = new System.Drawing.Point(1, 3);
             this.btnVetrangchu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnVetrangchu.Name = "btnVetrangchu";
             this.btnVetrangchu.Size = new System.Drawing.Size(140, 31);

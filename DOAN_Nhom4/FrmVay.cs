@@ -152,5 +152,11 @@ namespace DOAN_Nhom4
             // Khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
             Process.Start(psi);
         }
+
+        private void pBQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmtienIchVay, pnlNguoiDung);
+        }
     }
 }

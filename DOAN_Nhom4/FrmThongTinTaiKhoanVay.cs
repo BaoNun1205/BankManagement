@@ -60,8 +60,14 @@ namespace DOAN_Nhom4
                     ttNgDung.PhiTraCham = 50000;
             }
             txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
+        }        
+
+        private void pBQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmtienIchVay, pnlNguoiDung);
         }
-        
+
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
@@ -70,7 +76,7 @@ namespace DOAN_Nhom4
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
-            FrmXacNhanGiaoDichVay frmgdvay = new FrmXacNhanGiaoDichVay(nguoiDung,tknh, ttNgDung, pnlNguoiDung);
+            FrmXacNhanGiaoDichVay frmgdvay = new FrmXacNhanGiaoDichVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmgdvay, pnlNguoiDung);
         }
     }

@@ -76,6 +76,7 @@ namespace DOAN_Nhom4
                 if (reader.Read())
                 {
                     tkiem.Id = int.Parse(reader["ID"].ToString());
+                    tkiem.NgayDangky = DateTime.Parse(reader["NgayDangKy"].ToString());
                     tkiem.TenTKTK = reader["TenTKTK"].ToString();
                     tkiem.TienGoc = BigInteger.Parse(reader["TienGoc"].ToString());
                     tkiem.KiHan = int.Parse(reader["KiHan"].ToString());
@@ -93,6 +94,37 @@ namespace DOAN_Nhom4
                 conn.Close();
             }
             return tkiem;
+        }
+
+        public NguoiDung LayThongTinKhachHang(string sqlStr)
+        {
+            NguoiDung ngDung = new NguoiDung();
+            conn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    ngDung.TenNH = reader["TenNH"].ToString();
+                    ngDung.SoTK =  reader["SoTK"].ToString();
+                    ngDung.tenTK = reader["TenKH"].ToString();
+                    ngDung.ngaySinh = DateTime.Parse(reader["NgaySinh"].ToString());
+                    ngDung.Cccd = reader["CCCD"].ToString();
+                    ngDung.Email = reader["Email"].ToString();
+                    ngDung.Sdt = reader["SDT"].ToString();
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ngDung;
         }
 
         public void xuLi(string kh, string tknh)

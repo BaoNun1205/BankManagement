@@ -60,10 +60,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblNo3 = new System.Windows.Forms.Label();
             this.lblThongTinKhac = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblNo2 = new System.Windows.Forms.Label();
             this.lblThongTinDichVu = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNo1 = new System.Windows.Forms.Label();
@@ -84,6 +82,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.ptbTheTinDung = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).BeginInit();
@@ -504,19 +504,6 @@
             this.panel4.Size = new System.Drawing.Size(575, 1);
             this.panel4.TabIndex = 12;
             // 
-            // lblNo3
-            // 
-            this.lblNo3.AutoSize = true;
-            this.lblNo3.BackColor = System.Drawing.Color.Silver;
-            this.lblNo3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNo3.Font = new System.Drawing.Font("Bell MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNo3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNo3.Location = new System.Drawing.Point(548, 472);
-            this.lblNo3.Name = "lblNo3";
-            this.lblNo3.Size = new System.Drawing.Size(24, 26);
-            this.lblNo3.TabIndex = 11;
-            this.lblNo3.Text = "3";
-            // 
             // lblThongTinKhac
             // 
             this.lblThongTinKhac.AutoSize = true;
@@ -537,19 +524,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(575, 1);
             this.panel3.TabIndex = 9;
-            // 
-            // lblNo2
-            // 
-            this.lblNo2.AutoSize = true;
-            this.lblNo2.BackColor = System.Drawing.Color.Silver;
-            this.lblNo2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNo2.Font = new System.Drawing.Font("Bell MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNo2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNo2.Location = new System.Drawing.Point(548, 127);
-            this.lblNo2.Name = "lblNo2";
-            this.lblNo2.Size = new System.Drawing.Size(24, 26);
-            this.lblNo2.TabIndex = 8;
-            this.lblNo2.Text = "2";
             // 
             // lblThongTinDichVu
             // 
@@ -577,11 +551,11 @@
             this.lblNo1.AutoSize = true;
             this.lblNo1.BackColor = System.Drawing.Color.Silver;
             this.lblNo1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNo1.Font = new System.Drawing.Font("Bell MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNo1.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNo1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNo1.Location = new System.Drawing.Point(39, 131);
+            this.lblNo1.Location = new System.Drawing.Point(39, 126);
             this.lblNo1.Name = "lblNo1";
-            this.lblNo1.Size = new System.Drawing.Size(24, 26);
+            this.lblNo1.Size = new System.Drawing.Size(30, 29);
             this.lblNo1.TabIndex = 5;
             this.lblNo1.Text = "1";
             // 
@@ -613,6 +587,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtHanMuc);
             this.panel1.Controls.Add(this.txtSoTaiKhoang);
             this.panel1.Controls.Add(this.label1);
@@ -658,10 +634,8 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblHoTen);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.lblNo3);
             this.panel1.Controls.Add(this.lblThongTinKhac);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.lblNo2);
             this.panel1.Controls.Add(this.lblThongTinDichVu);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblNo1);
@@ -714,9 +688,9 @@
             // ptbQuayLai
             // 
             this.ptbQuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.ptbQuayLai.Location = new System.Drawing.Point(3, 3);
+            this.ptbQuayLai.Location = new System.Drawing.Point(11, 11);
             this.ptbQuayLai.Name = "ptbQuayLai";
-            this.ptbQuayLai.Size = new System.Drawing.Size(41, 45);
+            this.ptbQuayLai.Size = new System.Drawing.Size(39, 36);
             this.ptbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbQuayLai.TabIndex = 79;
             this.ptbQuayLai.TabStop = false;
@@ -824,6 +798,32 @@
             this.label29.TabIndex = 42;
             this.label29.Text = "*";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(548, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 29);
+            this.label4.TabIndex = 84;
+            this.label4.Text = "2";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(548, 468);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 29);
+            this.label5.TabIndex = 85;
+            this.label5.Text = "3";
+            // 
             // FrmDangKyTinDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -876,10 +876,8 @@
         private Label label10;
         private Label lblHoTen;
         private Panel panel4;
-        private Label lblNo3;
         private Label lblThongTinKhac;
         private Panel panel3;
-        private Label lblNo2;
         private Label lblThongTinDichVu;
         private Panel panel2;
         private Label lblNo1;
@@ -900,5 +898,7 @@
         private Label label2;
         private TextBox txtHanMuc;
         private TextBox txtSoTaiKhoang;
+        private Label label5;
+        private Label label4;
     }
 }
