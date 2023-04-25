@@ -28,22 +28,12 @@ namespace DOAN_Nhom4
         }
         private void FrmHienThiThongTinCaNhan_Load(object sender, EventArgs e)
         {
-            lblChuTKValue.Text = kh.TenTK.ToString();
+            txtChutaikhoan.Text = kh.TenTK.ToString();
             lblSoTkValue.Text = kh.SoTK.ToString();
             lblSoDuValue.Text = tknh.SoDu.ToString("N0") + " VNĐ";
-            lblCccdValue.Text = kh.Cccd.ToString();
-            lblNgaySinhValue.Text = kh.NgaySinh.ToString("MM/dd/yyyy");
-            lblSdtValue.Text = kh.Sdt.ToString();
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
+            txtCCCD.Text = kh.Cccd.ToString();
+            txtNgaysinh.Text = kh.NgaySinh.ToString("MM/dd/yyyy");
+            txtSDT.Text = kh.Sdt.ToString();
         }
     }
 }

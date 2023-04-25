@@ -37,10 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblSdtValue = new System.Windows.Forms.Label();
-            this.lblNgaySinhValue = new System.Windows.Forms.Label();
-            this.lblCccdValue = new System.Windows.Forms.Label();
-            this.lblChuTKValue = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtNgaysinh = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.txtChutaikhoan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -136,11 +136,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lblSdtValue);
+            this.panel3.Controls.Add(this.txtSDT);
+            this.panel3.Controls.Add(this.txtNgaysinh);
+            this.panel3.Controls.Add(this.txtCCCD);
+            this.panel3.Controls.Add(this.txtChutaikhoan);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.lblNgaySinhValue);
-            this.panel3.Controls.Add(this.lblCccdValue);
-            this.panel3.Controls.Add(this.lblChuTKValue);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -151,60 +151,52 @@
             this.panel3.Size = new System.Drawing.Size(1115, 334);
             this.panel3.TabIndex = 2;
             // 
-            // lblSdtValue
+            // txtSDT
             // 
-            this.lblSdtValue.AutoSize = true;
-            this.lblSdtValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSdtValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSdtValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblSdtValue.Location = new System.Drawing.Point(854, 207);
-            this.lblSdtValue.Name = "lblSdtValue";
-            this.lblSdtValue.Size = new System.Drawing.Size(32, 31);
-            this.lblSdtValue.TabIndex = 19;
-            this.lblSdtValue.Text = " -";
+            this.txtSDT.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txtSDT.Location = new System.Drawing.Point(805, 204);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
+            this.txtSDT.Size = new System.Drawing.Size(262, 36);
+            this.txtSDT.TabIndex = 23;
             // 
-            // lblNgaySinhValue
+            // txtNgaysinh
             // 
-            this.lblNgaySinhValue.AutoSize = true;
-            this.lblNgaySinhValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblNgaySinhValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNgaySinhValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblNgaySinhValue.Location = new System.Drawing.Point(854, 91);
-            this.lblNgaySinhValue.Name = "lblNgaySinhValue";
-            this.lblNgaySinhValue.Size = new System.Drawing.Size(32, 31);
-            this.lblNgaySinhValue.TabIndex = 18;
-            this.lblNgaySinhValue.Text = " -";
+            this.txtNgaysinh.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNgaysinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txtNgaysinh.Location = new System.Drawing.Point(228, 204);
+            this.txtNgaysinh.Name = "txtNgaysinh";
+            this.txtNgaysinh.ReadOnly = true;
+            this.txtNgaysinh.Size = new System.Drawing.Size(262, 36);
+            this.txtNgaysinh.TabIndex = 22;
             // 
-            // lblCccdValue
+            // txtCCCD
             // 
-            this.lblCccdValue.AutoSize = true;
-            this.lblCccdValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCccdValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCccdValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblCccdValue.Location = new System.Drawing.Point(297, 209);
-            this.lblCccdValue.Name = "lblCccdValue";
-            this.lblCccdValue.Size = new System.Drawing.Size(32, 31);
-            this.lblCccdValue.TabIndex = 17;
-            this.lblCccdValue.Text = " -";
+            this.txtCCCD.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCCCD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txtCCCD.Location = new System.Drawing.Point(805, 94);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.ReadOnly = true;
+            this.txtCCCD.Size = new System.Drawing.Size(262, 36);
+            this.txtCCCD.TabIndex = 21;
             // 
-            // lblChuTKValue
+            // txtChutaikhoan
             // 
-            this.lblChuTKValue.AutoSize = true;
-            this.lblChuTKValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblChuTKValue.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblChuTKValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblChuTKValue.Location = new System.Drawing.Point(297, 97);
-            this.lblChuTKValue.Name = "lblChuTKValue";
-            this.lblChuTKValue.Size = new System.Drawing.Size(32, 31);
-            this.lblChuTKValue.TabIndex = 16;
-            this.lblChuTKValue.Text = " -";
+            this.txtChutaikhoan.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtChutaikhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.txtChutaikhoan.Location = new System.Drawing.Point(228, 93);
+            this.txtChutaikhoan.Name = "txtChutaikhoan";
+            this.txtChutaikhoan.ReadOnly = true;
+            this.txtChutaikhoan.Size = new System.Drawing.Size(262, 33);
+            this.txtChutaikhoan.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label9.Location = new System.Drawing.Point(669, 209);
+            this.label9.Location = new System.Drawing.Point(623, 207);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(152, 29);
             this.label9.TabIndex = 11;
@@ -215,7 +207,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label8.Location = new System.Drawing.Point(669, 91);
+            this.label8.Location = new System.Drawing.Point(80, 207);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 29);
             this.label8.TabIndex = 10;
@@ -226,7 +218,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label7.Location = new System.Drawing.Point(52, 209);
+            this.label7.Location = new System.Drawing.Point(558, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 29);
             this.label7.TabIndex = 9;
@@ -237,7 +229,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label6.Location = new System.Drawing.Point(52, 97);
+            this.label6.Location = new System.Drawing.Point(38, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 29);
             this.label6.TabIndex = 8;
@@ -314,20 +306,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1115, 697);
             this.panel4.TabIndex = 1;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 32);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(560, 426);
+            this.pictureBox3.Size = new System.Drawing.Size(560, 380);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // FrmHienThiThongTinCaNhan
             // 
@@ -372,10 +362,6 @@
         private Label label3;
         private Label label4;
         private Panel panel3;
-        private Label lblSdtValue;
-        private Label lblNgaySinhValue;
-        private Label lblCccdValue;
-        private Label lblChuTKValue;
         private Label label9;
         private Label label8;
         private Label label7;
@@ -387,5 +373,9 @@
         private Label lblSoTkValue;
         private Panel panel4;
         private PictureBox pictureBox3;
+        private TextBox txtSDT;
+        private TextBox txtNgaysinh;
+        private TextBox txtCCCD;
+        private TextBox txtChutaikhoan;
     }
 }
