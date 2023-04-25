@@ -38,7 +38,7 @@ namespace DOAN_Nhom4
             lblNguoinhan.Text = gd.TenTKNhan.ToString();
             lblSTK.Text = gd.SoTKNhan.ToString();
             lblNganhang.Text = gd.NganHangNhan.ToString();
-            lblNoidung.Text = gd.LoiNhan.ToString();
+            txtNoidung.Text = gd.LoiNhan.ToString();
             lblHienThiLoai.Text = gd.LoaiGD.ToString();
             foreach (Form form in Application.OpenForms)
             {
