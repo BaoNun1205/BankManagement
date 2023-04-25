@@ -69,7 +69,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(59)))), ((int)(((byte)(158)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -209,7 +209,7 @@
             this.lblTenTK.BackColor = System.Drawing.Color.Transparent;
             this.lblTenTK.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTenTK.ForeColor = System.Drawing.Color.White;
-            this.lblTenTK.Location = new System.Drawing.Point(110, 3);
+            this.lblTenTK.Location = new System.Drawing.Point(62, 46);
             this.lblTenTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenTK.Name = "lblTenTK";
             this.lblTenTK.Size = new System.Drawing.Size(30, 29);
@@ -222,12 +222,12 @@
             this.lblXinchao.BackColor = System.Drawing.Color.Transparent;
             this.lblXinchao.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblXinchao.ForeColor = System.Drawing.Color.White;
-            this.lblXinchao.Location = new System.Drawing.Point(5, 3);
+            this.lblXinchao.Location = new System.Drawing.Point(62, 3);
             this.lblXinchao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXinchao.Name = "lblXinchao";
-            this.lblXinchao.Size = new System.Drawing.Size(110, 29);
+            this.lblXinchao.Size = new System.Drawing.Size(111, 29);
             this.lblXinchao.TabIndex = 43;
-            this.lblXinchao.Text = "Xin chào,";
+            this.lblXinchao.Text = "Xin chào!";
             // 
             // pnlNguoidung
             // 

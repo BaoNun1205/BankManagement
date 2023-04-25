@@ -86,11 +86,11 @@
             // lblVayTien
             // 
             this.lblVayTien.AutoSize = true;
-            this.lblVayTien.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVayTien.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVayTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.lblVayTien.Location = new System.Drawing.Point(223, 101);
             this.lblVayTien.Name = "lblVayTien";
-            this.lblVayTien.Size = new System.Drawing.Size(105, 32);
+            this.lblVayTien.Size = new System.Drawing.Size(105, 28);
             this.lblVayTien.TabIndex = 0;
             this.lblVayTien.Text = "Vay Tiền";
             this.lblVayTien.Click += new System.EventHandler(this.lblVayTien_Click);
