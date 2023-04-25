@@ -32,8 +32,8 @@
             this.panelVayTien = new System.Windows.Forms.Panel();
             this.ptbVayTien = new System.Windows.Forms.PictureBox();
             this.lblVayTien = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlNapTienDienTHoai = new System.Windows.Forms.Panel();
+            this.ptbNapTienDienThoai = new System.Windows.Forms.PictureBox();
             this.lblNapDienThoai = new System.Windows.Forms.Label();
             this.panelTinDung = new System.Windows.Forms.Panel();
             this.ptbTinDung = new System.Windows.Forms.PictureBox();
@@ -45,8 +45,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelVayTien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlNapTienDienTHoai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbNapTienDienThoai)).BeginInit();
             this.panelTinDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).BeginInit();
             this.panelTietkiem.SuspendLayout();
@@ -95,24 +95,25 @@
             this.lblVayTien.Text = "Vay Tiền";
             this.lblVayTien.Click += new System.EventHandler(this.lblVayTien_Click);
             // 
-            // panel6
+            // pnlNapTienDienTHoai
             // 
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Controls.Add(this.lblNapDienThoai);
-            this.panel6.Location = new System.Drawing.Point(0, 368);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(565, 349);
-            this.panel6.TabIndex = 5;
+            this.pnlNapTienDienTHoai.Controls.Add(this.ptbNapTienDienThoai);
+            this.pnlNapTienDienTHoai.Controls.Add(this.lblNapDienThoai);
+            this.pnlNapTienDienTHoai.Location = new System.Drawing.Point(0, 368);
+            this.pnlNapTienDienTHoai.Name = "pnlNapTienDienTHoai";
+            this.pnlNapTienDienTHoai.Size = new System.Drawing.Size(565, 349);
+            this.pnlNapTienDienTHoai.TabIndex = 5;
+            this.pnlNapTienDienTHoai.Click += new System.EventHandler(this.pnlNapTienDienTHoai_Click);
             // 
-            // pictureBox2
+            // ptbNapTienDienThoai
             // 
-            this.pictureBox2.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
-            this.pictureBox2.Location = new System.Drawing.Point(241, 155);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(92, 67);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.ptbNapTienDienThoai.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
+            this.ptbNapTienDienThoai.Location = new System.Drawing.Point(241, 155);
+            this.ptbNapTienDienThoai.Name = "ptbNapTienDienThoai";
+            this.ptbNapTienDienThoai.Size = new System.Drawing.Size(92, 67);
+            this.ptbNapTienDienThoai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbNapTienDienThoai.TabIndex = 3;
+            this.ptbNapTienDienThoai.TabStop = false;
             // 
             // lblNapDienThoai
             // 
@@ -219,7 +220,7 @@
             this.Controls.Add(this.panelTietkiem);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelTinDung);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnlNapTienDienTHoai);
             this.Controls.Add(this.panelVayTien);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,9 +231,9 @@
             this.panelVayTien.ResumeLayout(false);
             this.panelVayTien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlNapTienDienTHoai.ResumeLayout(false);
+            this.pnlNapTienDienTHoai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbNapTienDienThoai)).EndInit();
             this.panelTinDung.ResumeLayout(false);
             this.panelTinDung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).EndInit();
@@ -247,7 +248,7 @@
         #endregion
         private Panel panel2;
         private Panel panelVayTien;
-        private Panel panel6;
+        private Panel pnlNapTienDienTHoai;
         private Panel panelTinDung;
         private Panel panelTietkiem;
         private Label lblVayTien;
@@ -255,7 +256,7 @@
         private Label lblTinDung;
         private PictureBox ptbVayTien;
         private PictureBox ptbTinDung;
-        private PictureBox pictureBox2;
+        private PictureBox ptbNapTienDienThoai;
         private PictureBox ptbTietkiem;
         private Label lblTietkiem;
         private PictureBox pictureBox1;
