@@ -44,10 +44,10 @@
             this.btn_KhoanDangVay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_KhoanDangVay.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_KhoanDangVay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_KhoanDangVay.Location = new System.Drawing.Point(151, 76);
+            this.btn_KhoanDangVay.Location = new System.Drawing.Point(117, 57);
             this.btn_KhoanDangVay.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn_KhoanDangVay.Name = "btn_KhoanDangVay";
-            this.btn_KhoanDangVay.Size = new System.Drawing.Size(191, 51);
+            this.btn_KhoanDangVay.Size = new System.Drawing.Size(200, 38);
             this.btn_KhoanDangVay.TabIndex = 24;
             this.btn_KhoanDangVay.Text = "Đang Vay";
             this.btn_KhoanDangVay.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
@@ -65,10 +65,10 @@
             this.btn_KhoanTungVay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_KhoanTungVay.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_KhoanTungVay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_KhoanTungVay.Location = new System.Drawing.Point(151, 198);
+            this.btn_KhoanTungVay.Location = new System.Drawing.Point(117, 146);
             this.btn_KhoanTungVay.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn_KhoanTungVay.Name = "btn_KhoanTungVay";
-            this.btn_KhoanTungVay.Size = new System.Drawing.Size(191, 87);
+            this.btn_KhoanTungVay.Size = new System.Drawing.Size(200, 65);
             this.btn_KhoanTungVay.TabIndex = 25;
             this.btn_KhoanTungVay.Text = "Các Khoản Từng Vay";
             this.btn_KhoanTungVay.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
@@ -86,10 +86,10 @@
             this.btn_QuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_QuayLai.Font = new System.Drawing.Font("Tahoma", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_QuayLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_QuayLai.Location = new System.Drawing.Point(151, 356);
+            this.btn_QuayLai.Location = new System.Drawing.Point(117, 267);
             this.btn_QuayLai.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn_QuayLai.Name = "btn_QuayLai";
-            this.btn_QuayLai.Size = new System.Drawing.Size(191, 51);
+            this.btn_QuayLai.Size = new System.Drawing.Size(200, 38);
             this.btn_QuayLai.TabIndex = 26;
             this.btn_QuayLai.Text = "Quay Lại";
             this.btn_QuayLai.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
@@ -98,13 +98,14 @@
             // 
             // FrmQLTKVay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(523, 440);
+            this.ClientSize = new System.Drawing.Size(458, 330);
             this.Controls.Add(this.btn_QuayLai);
             this.Controls.Add(this.btn_KhoanTungVay);
             this.Controls.Add(this.btn_KhoanDangVay);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmQLTKVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQLTKVay";

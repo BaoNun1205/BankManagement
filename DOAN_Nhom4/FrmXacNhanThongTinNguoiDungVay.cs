@@ -20,6 +20,7 @@ namespace DOAN_Nhom4
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
+        QLThongTinVayDAO qlDAO = new QLThongTinVayDAO();
         public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
@@ -89,7 +90,7 @@ namespace DOAN_Nhom4
             ttNgDung.TongSoTienPhaiTra = tongsotien;
             ttNgDung.PhiTraCham = 0;
             tknh.SoDu += ttNgDung.SoTienVay;
-            tknhDAO.SuaSoDu(tknh);
+            tknhDAO.SuaSoDu(tknh);           
         }
 
         private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
@@ -100,6 +101,8 @@ namespace DOAN_Nhom4
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
+            ThongTinNguoiDungVay tmp = ttNgDung;
+            qlDAO.Them(tmp);
             GiaoDich gd = new GiaoDich("Dang ky khoan vay", "HHB", "","", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
             lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
