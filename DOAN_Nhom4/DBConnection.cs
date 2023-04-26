@@ -96,6 +96,37 @@ namespace DOAN_Nhom4
             return tkiem;
         }
 
+        public NguoiDung LayThongTinKhachHang(string sqlStr)
+        {
+            NguoiDung ngDung = new NguoiDung();
+            conn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    ngDung.TenNH = reader["TenNH"].ToString();
+                    ngDung.SoTK =  reader["SoTK"].ToString();
+                    ngDung.tenTK = reader["TenKH"].ToString();
+                    ngDung.ngaySinh = DateTime.Parse(reader["NgaySinh"].ToString());
+                    ngDung.Cccd = reader["CCCD"].ToString();
+                    ngDung.Email = reader["Email"].ToString();
+                    ngDung.Sdt = reader["SDT"].ToString();
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return ngDung;
+        }
+
         public void xuLi(string kh, string tknh)
         {
             conn.Open();
@@ -288,6 +319,34 @@ namespace DOAN_Nhom4
                 conn.Close();
             }
             return ttTinDung;
+        }
+
+        public SoDienThoai XuLiSoDienThoai(string sqlStr)
+        {
+            SoDienThoai sdt = new SoDienThoai();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    sdt.Sdt = reader.GetString(0);
+                    sdt.SoDu = reader.GetInt64(1);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return sdt;
         }
         public bool IsEmail(string email)
         {

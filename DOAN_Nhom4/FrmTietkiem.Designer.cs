@@ -55,6 +55,8 @@
             this.btn3thang = new CustomButton.VBButton();
             this.btn1thang = new CustomButton.VBButton();
             this.btn6thang = new CustomButton.VBButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +66,8 @@
             // pnlTietkiem
             // 
             this.pnlTietkiem.BackColor = System.Drawing.Color.White;
+            this.pnlTietkiem.Controls.Add(this.label2);
+            this.pnlTietkiem.Controls.Add(this.comboBox1);
             this.pnlTietkiem.Controls.Add(this.lblTKTK);
             this.pnlTietkiem.Controls.Add(this.panel1);
             this.pnlTietkiem.Controls.Add(this.panel6);
@@ -87,12 +91,12 @@
             // 
             this.lblTKTK.AutoSize = true;
             this.lblTKTK.BackColor = System.Drawing.Color.White;
-            this.lblTKTK.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTKTK.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTKTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTKTK.Location = new System.Drawing.Point(787, 20);
+            this.lblTKTK.Location = new System.Drawing.Point(827, 14);
             this.lblTKTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTKTK.Name = "lblTKTK";
-            this.lblTKTK.Size = new System.Drawing.Size(269, 32);
+            this.lblTKTK.Size = new System.Drawing.Size(232, 30);
             this.lblTKTK.TabIndex = 60;
             this.lblTKTK.Text = "Xem tài khoản tiết kiệm";
             this.lblTKTK.Click += new System.EventHandler(this.lblTKTK_Click);
@@ -443,6 +447,30 @@
             this.btn6thang.UseVisualStyleBackColor = false;
             this.btn6thang.Click += new System.EventHandler(this.btn6thang_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sổ tự đóng khi đến hạn",
+            "Sổ tự chuyển tiền lãi sang tiền gốc",
+            "Sổ sẽ tiếp tục được gửi với lãi suất như cũ"});
+            this.comboBox1.Location = new System.Drawing.Point(763, 93);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(219, 29);
+            this.comboBox1.TabIndex = 66;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label2.Location = new System.Drawing.Point(597, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 21);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "Chọn loại sổ tiết kiệm";
+            // 
             // FrmTietkiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -452,7 +480,7 @@
             this.Controls.Add(this.pnlTietkiem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTietkiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tiết kiệm";
@@ -494,5 +522,7 @@
         private CustomButton.VBButton btn3thang;
         private CustomButton.VBButton btn1thang;
         private Label label13;
+        private Label label2;
+        private ComboBox comboBox1;
     }
 }

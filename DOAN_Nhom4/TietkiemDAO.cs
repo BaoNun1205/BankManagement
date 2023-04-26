@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
         public List<string> LayCotTKTK(string tenCot)
         {
             List<string> cot = new List<string>();
-            string sql = string.Format("SELECT TenTKTK FROM TaiKhoanTietKiem");
+            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem");
             cot = data.LayCot(sql, tenCot);
             return cot;
         }

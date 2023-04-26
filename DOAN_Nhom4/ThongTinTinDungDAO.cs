@@ -70,5 +70,11 @@ namespace DOAN_Nhom4
             tttd.PhiTraCham = 0;
             tttd.PhiPhat = 0;
         }
+
+        public void ThanhToanPhi(ThongTinTinDung tttd, GiaoDich gd)
+        {
+            tttd.SoTienDaSuDung = tttd.SoTienDaSuDung + gd.SoTien;
+            Update(tttd);
+        }
     }
 }

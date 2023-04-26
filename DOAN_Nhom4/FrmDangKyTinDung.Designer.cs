@@ -68,6 +68,8 @@
             this.blbThongTinCaNhan = new System.Windows.Forms.Label();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtHanMuc = new System.Windows.Forms.TextBox();
             this.txtSoTaiKhoang = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,8 +84,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.ptbTheTinDung = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).BeginInit();
@@ -141,7 +141,7 @@
             this.dtpNgayMoThe.CustomFormat = "MM/dd/yyyy";
             this.dtpNgayMoThe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpNgayMoThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayMoThe.Location = new System.Drawing.Point(742, 525);
+            this.dtpNgayMoThe.Location = new System.Drawing.Point(794, 523);
             this.dtpNgayMoThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayMoThe.Name = "dtpNgayMoThe";
             this.dtpNgayMoThe.Size = new System.Drawing.Size(248, 26);
@@ -153,7 +153,7 @@
             this.lblNgayMoThe.BackColor = System.Drawing.Color.White;
             this.lblNgayMoThe.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNgayMoThe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblNgayMoThe.Location = new System.Drawing.Point(612, 533);
+            this.lblNgayMoThe.Location = new System.Drawing.Point(612, 531);
             this.lblNgayMoThe.Name = "lblNgayMoThe";
             this.lblNgayMoThe.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNgayMoThe.Size = new System.Drawing.Size(87, 16);
@@ -167,10 +167,10 @@
             "HHB Visa Flexi",
             "HHB Visa Platinum Cashback",
             "HHB Visa Infinite"});
-            this.cb_LoaiThe.Location = new System.Drawing.Point(740, 207);
+            this.cb_LoaiThe.Location = new System.Drawing.Point(794, 203);
             this.cb_LoaiThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_LoaiThe.Name = "cb_LoaiThe";
-            this.cb_LoaiThe.Size = new System.Drawing.Size(285, 23);
+            this.cb_LoaiThe.Size = new System.Drawing.Size(288, 23);
             this.cb_LoaiThe.TabIndex = 43;
             this.cb_LoaiThe.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiThe_SelectedIndexChanged);
             // 
@@ -577,7 +577,7 @@
             this.lblTieuDe.BackColor = System.Drawing.Color.White;
             this.lblTieuDe.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTieuDe.Location = new System.Drawing.Point(295, 32);
+            this.lblTieuDe.Location = new System.Drawing.Point(302, 21);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(538, 65);
             this.lblTieuDe.TabIndex = 3;
@@ -647,18 +647,44 @@
             this.panel1.Size = new System.Drawing.Size(1139, 720);
             this.panel1.TabIndex = 1;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(548, 468);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 29);
+            this.label5.TabIndex = 85;
+            this.label5.Text = "3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(548, 122);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 29);
+            this.label4.TabIndex = 84;
+            this.label4.Text = "2";
+            // 
             // txtHanMuc
             // 
-            this.txtHanMuc.Location = new System.Drawing.Point(740, 439);
+            this.txtHanMuc.Location = new System.Drawing.Point(794, 439);
             this.txtHanMuc.Name = "txtHanMuc";
-            this.txtHanMuc.Size = new System.Drawing.Size(285, 23);
+            this.txtHanMuc.Size = new System.Drawing.Size(288, 23);
             this.txtHanMuc.TabIndex = 83;
             // 
             // txtSoTaiKhoang
             // 
-            this.txtSoTaiKhoang.Location = new System.Drawing.Point(740, 167);
+            this.txtSoTaiKhoang.Location = new System.Drawing.Point(794, 167);
             this.txtSoTaiKhoang.Name = "txtSoTaiKhoang";
-            this.txtSoTaiKhoang.Size = new System.Drawing.Size(285, 23);
+            this.txtSoTaiKhoang.Size = new System.Drawing.Size(288, 23);
             this.txtSoTaiKhoang.TabIndex = 82;
             // 
             // label1
@@ -667,7 +693,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(706, 174);
+            this.label1.Location = new System.Drawing.Point(730, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 16);
             this.label1.TabIndex = 81;
@@ -679,7 +705,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(585, 174);
+            this.label2.Location = new System.Drawing.Point(606, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 16);
             this.label2.TabIndex = 80;
@@ -688,7 +714,7 @@
             // ptbQuayLai
             // 
             this.ptbQuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.ptbQuayLai.Location = new System.Drawing.Point(11, 11);
+            this.ptbQuayLai.Location = new System.Drawing.Point(30, 41);
             this.ptbQuayLai.Name = "ptbQuayLai";
             this.ptbQuayLai.Size = new System.Drawing.Size(39, 36);
             this.ptbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -724,7 +750,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(706, 446);
+            this.label3.Location = new System.Drawing.Point(730, 446);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(12, 16);
             this.label3.TabIndex = 66;
@@ -771,7 +797,7 @@
             this.label26.BackColor = System.Drawing.Color.White;
             this.label26.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(706, 533);
+            this.label26.Location = new System.Drawing.Point(730, 536);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(12, 16);
             this.label26.TabIndex = 62;
@@ -792,37 +818,11 @@
             this.label29.BackColor = System.Drawing.Color.White;
             this.label29.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(706, 210);
+            this.label29.Location = new System.Drawing.Point(730, 210);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(12, 16);
             this.label29.TabIndex = 42;
             this.label29.Text = "*";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(548, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 29);
-            this.label4.TabIndex = 84;
-            this.label4.Text = "2";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Silver;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Lucida Handwriting", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(548, 468);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 29);
-            this.label5.TabIndex = 85;
-            this.label5.Text = "3";
             // 
             // FrmDangKyTinDung
             // 

@@ -87,5 +87,11 @@ namespace DOAN_Nhom4
         {
             panelTietkiem_Click(sender, e);
         }
+
+        private void pnlNapTienDienTHoai_Click(object sender, EventArgs e)
+        {
+            FrmNapTienDienThoai frmNapTienDienThoai = new FrmNapTienDienThoai(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmNapTienDienThoai, pnlNguoiDung);
+        }
     }
 }

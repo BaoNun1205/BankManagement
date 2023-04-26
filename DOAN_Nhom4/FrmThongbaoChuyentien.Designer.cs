@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongbaoChuyentien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNoidung = new System.Windows.Forms.TextBox();
             this.btnVetrangchu = new CustomButton.VBButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblSotien = new System.Windows.Forms.Label();
-            this.lblNoidung = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblNganhang = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,10 +57,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.txtNoidung);
             this.panel1.Controls.Add(this.btnVetrangchu);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.lblSotien);
-            this.panel1.Controls.Add(this.lblNoidung);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblNganhang);
             this.panel1.Controls.Add(this.label9);
@@ -80,8 +80,18 @@
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 642);
+            this.panel1.Size = new System.Drawing.Size(617, 690);
             this.panel1.TabIndex = 2;
+            // 
+            // txtNoidung
+            // 
+            this.txtNoidung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNoidung.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNoidung.Location = new System.Drawing.Point(329, 581);
+            this.txtNoidung.Multiline = true;
+            this.txtNoidung.Name = "txtNoidung";
+            this.txtNoidung.Size = new System.Drawing.Size(235, 97);
+            this.txtNoidung.TabIndex = 33;
             // 
             // btnVetrangchu
             // 
@@ -92,12 +102,12 @@
             this.btnVetrangchu.BorderSize = 2;
             this.btnVetrangchu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVetrangchu.FlatAppearance.BorderSize = 0;
-            this.btnVetrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVetrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVetrangchu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnVetrangchu.ForeColor = System.Drawing.Color.Black;
             this.btnVetrangchu.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow5;
             this.btnVetrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVetrangchu.Location = new System.Drawing.Point(2, 1);
+            this.btnVetrangchu.Location = new System.Drawing.Point(1, 3);
             this.btnVetrangchu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnVetrangchu.Name = "btnVetrangchu";
             this.btnVetrangchu.Size = new System.Drawing.Size(140, 31);
@@ -128,17 +138,6 @@
             this.lblSotien.TabIndex = 20;
             this.lblSotien.Text = "Số tiền";
             // 
-            // lblNoidung
-            // 
-            this.lblNoidung.AutoSize = true;
-            this.lblNoidung.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNoidung.Location = new System.Drawing.Point(357, 574);
-            this.lblNoidung.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNoidung.Name = "lblNoidung";
-            this.lblNoidung.Size = new System.Drawing.Size(27, 27);
-            this.lblNoidung.TabIndex = 19;
-            this.lblNoidung.Text = " -";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -156,7 +155,7 @@
             // 
             this.lblNganhang.AutoSize = true;
             this.lblNganhang.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNganhang.Location = new System.Drawing.Point(357, 519);
+            this.lblNganhang.Location = new System.Drawing.Point(329, 519);
             this.lblNganhang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNganhang.Name = "lblNganhang";
             this.lblNganhang.Size = new System.Drawing.Size(27, 27);
@@ -180,7 +179,7 @@
             // 
             this.lblSTK.AutoSize = true;
             this.lblSTK.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSTK.Location = new System.Drawing.Point(357, 467);
+            this.lblSTK.Location = new System.Drawing.Point(329, 467);
             this.lblSTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSTK.Name = "lblSTK";
             this.lblSTK.Size = new System.Drawing.Size(27, 27);
@@ -204,7 +203,7 @@
             // 
             this.lblNguoinhan.AutoSize = true;
             this.lblNguoinhan.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNguoinhan.Location = new System.Drawing.Point(357, 412);
+            this.lblNguoinhan.Location = new System.Drawing.Point(329, 412);
             this.lblNguoinhan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNguoinhan.Name = "lblNguoinhan";
             this.lblNguoinhan.Size = new System.Drawing.Size(27, 27);
@@ -238,7 +237,7 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTime.Location = new System.Drawing.Point(357, 256);
+            this.lblTime.Location = new System.Drawing.Point(329, 256);
             this.lblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(27, 27);
@@ -262,7 +261,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(357, 310);
+            this.label5.Location = new System.Drawing.Point(329, 310);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 27);
@@ -286,7 +285,7 @@
             // 
             this.lblHienThiLoai.AutoSize = true;
             this.lblHienThiLoai.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHienThiLoai.Location = new System.Drawing.Point(357, 207);
+            this.lblHienThiLoai.Location = new System.Drawing.Point(329, 207);
             this.lblHienThiLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHienThiLoai.Name = "lblHienThiLoai";
             this.lblHienThiLoai.Size = new System.Drawing.Size(127, 27);
@@ -333,7 +332,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(618, 642);
+            this.ClientSize = new System.Drawing.Size(614, 688);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -353,7 +352,6 @@
         #endregion
 
         private Panel panel1;
-        private Label lblNoidung;
         private Label label10;
         private Label lblNganhang;
         private Label label9;
@@ -373,5 +371,6 @@
         private Label lblSotien;
         private Panel panel4;
         private CustomButton.VBButton btnVetrangchu;
+        private TextBox txtNoidung;
     }
 }

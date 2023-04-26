@@ -50,7 +50,7 @@
             // ptbLoGo
             // 
             this.ptbLoGo.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
-            this.ptbLoGo.Location = new System.Drawing.Point(472, 197);
+            this.ptbLoGo.Location = new System.Drawing.Point(469, 197);
             this.ptbLoGo.Name = "ptbLoGo";
             this.ptbLoGo.Size = new System.Drawing.Size(195, 154);
             this.ptbLoGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -61,7 +61,7 @@
             // 
             this.lblXemLsgd.AutoSize = true;
             this.lblXemLsgd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblXemLsgd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblXemLsgd.ForeColor = System.Drawing.Color.Black;
             this.lblXemLsgd.Location = new System.Drawing.Point(917, 9);
             this.lblXemLsgd.Name = "lblXemLsgd";
             this.lblXemLsgd.Size = new System.Drawing.Size(210, 30);
@@ -73,7 +73,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblDate.ForeColor = System.Drawing.Color.Black;
             this.lblDate.Location = new System.Drawing.Point(428, 420);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(103, 37);
@@ -91,9 +91,9 @@
             this.lblTime.ForeColor = System.Drawing.Color.Black;
             this.lblTime.Location = new System.Drawing.Point(520, 386);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(90, 37);
+            this.lblTime.Size = new System.Drawing.Size(105, 37);
             this.lblTime.TabIndex = 18;
-            this.lblTime.Text = "label1";
+            this.lblTime.Text = "lblTime";
             // 
             // FrmTrangchu
             // 

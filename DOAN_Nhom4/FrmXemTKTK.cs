@@ -42,8 +42,7 @@ namespace DOAN_Nhom4
         }
         private void FrmXemTKTK_Load(object sender, EventArgs e)
         {
-            cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());
-            
+            cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());           
         }
 
         private void btnRuttien_Click(object sender, EventArgs e)

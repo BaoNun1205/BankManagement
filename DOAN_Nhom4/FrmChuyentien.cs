@@ -13,21 +13,25 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
-        public NguoiDung kh;
+        public NguoiDung nguoiDung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         NguoiDungDAO khDAO = new NguoiDungDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        ChuyenTienDAO ChuyenTienDAO = new ChuyenTienDAO();
+        List<string> danhSachLuaChon = new List<string>();
         public FrmChuyentien()
         {
             InitializeComponent();
         }
-        public FrmChuyentien(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        public FrmChuyentien(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
-            this.kh = kh;
+            this.nguoiDung = nguoiDung;
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
+            danhSachLuaChon = ChuyenTienDAO.LayThongTinSTKNhan();
+            cbTennguoinhan.Items.AddRange(danhSachLuaChon.ToArray());
         }
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
@@ -36,26 +40,77 @@ namespace DOAN_Nhom4
        
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(this.kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu(nguoiDung, tknh);
             DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
+        enum KiemTraTenNguoiNhan
+        {
+            hople,
+            khongtontai,
+            chinhban
+        }
+
+        KiemTraTenNguoiNhan kt;
+
+        public void IsTonTai()
+        {
+            NguoiDung ngDung = new NguoiDung();
+            TaiKhoanNganHang tk = new TaiKhoanNganHang();
+            ngDung = khDAO.LayKhachHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
+            if (tk != null)
+            {
+                kt = KiemTraTenNguoiNhan.hople;
+                cbTennguoinhan.Text = ngDung.TenTK.ToString();
+                cbTennguoinhan.ForeColor = Color.Black;
+            }
+            else
+            {
+                kt = KiemTraTenNguoiNhan.khongtontai;
+                cbTennguoinhan.Text = "Không tồn tại";
+                cbTennguoinhan.ForeColor = Color.Black;
+            }
+            if (txtSTK.Text == nguoiDung.soTK)
+            {
+                kt = KiemTraTenNguoiNhan.chinhban;
+                cbTennguoinhan.Text = "Không thể chuyển tiền cho cho chính bạn";
+                cbTennguoinhan.ForeColor = Color.Red;
+            }
+        }
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            if (lblTenTKhoan.Text != "Khong ton tai" && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
+            if (cbTenNH.Text == "" || txtSTK.Text == "" || cbTennguoinhan.Text == "" || txtSoTien.Text == "")
             {
-                GiaoDich gd = new GiaoDich("Chuyen Tien", kh.TenNH, kh.TenTK, kh.SoTK, cbTenNH.Text, lblTenTKhoan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(kh, tknh, gd, pnlNguoidung);
+                { MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            }
+            else if (kt == KiemTraTenNguoiNhan.hople && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
+            {
+                if (txtLoiNhan.Text == "") txtLoiNhan.Text = nguoiDung.TenTK.ToString() + " da chuyen tien den " + cbTennguoinhan.Text; 
+                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNH, nguoiDung.TenTK, nguoiDung.SoTK, cbTenNH.Text, cbTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh, gd, pnlNguoidung);
                 frmxacnhan.ShowDialog();
                 this.Close();
             }
             else
             {
-                if (lblTenTKhoan.Text == "Khong ton tai")
-                    MessageBox.Show("Tai khoan khong ton tai");
+                if (kt == KiemTraTenNguoiNhan.khongtontai)
+                    { MessageBox.Show("Tài khoản không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                else if (kt == KiemTraTenNguoiNhan.chinhban)
+                    { MessageBox.Show("Không thể chuyển tiền cho cho chính bạn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                 else
-                    MessageBox.Show("So du cua ban khong du");
+                    { MessageBox.Show("Số dư của bạn không đủ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                XoaThongTin();
             }
+        }
+
+        void XoaThongTin()
+        {
+            cbTenNH.Text = "";
+            txtSTK.Text = "";
+            cbTennguoinhan.Text = "";
+            txtSoTien.Text = "";
+            txtLoiNhan.Text = "";
         }
 
         private void txtSTK_TextChanged(object sender, EventArgs e)
@@ -68,20 +123,12 @@ namespace DOAN_Nhom4
             IsTonTai();
         }
 
-        public void IsTonTai()
+        private void cbTennguoinhan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung();
-            TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            kh = khDAO.LayKhachHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
-            if (tk != null)
-            {
-                lblTenTKhoan.Text = kh.TenTK.ToString();
-            }
-            else
-            {
-                lblTenTKhoan.Text = "Khong ton tai";
-            }
+            NguoiDung ngDung = new NguoiDung();
+            ngDung = ChuyenTienDAO.LayThongTinKhachHang("TenKH", cbTennguoinhan.Text);
+            cbTenNH.Text = ngDung.tenNH.ToString();
+            txtSTK.Text = ngDung.soTK.ToString();
         }
     }
 }
