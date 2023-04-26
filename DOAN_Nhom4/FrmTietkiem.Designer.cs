@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTietkiem));
             this.pnlTietkiem = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbLoaiSTK = new System.Windows.Forms.ComboBox();
             this.lblTKTK = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSotien = new System.Windows.Forms.TextBox();
@@ -55,8 +57,6 @@
             this.btn3thang = new CustomButton.VBButton();
             this.btn1thang = new CustomButton.VBButton();
             this.btn6thang = new CustomButton.VBButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlTietkiem.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +67,7 @@
             // 
             this.pnlTietkiem.BackColor = System.Drawing.Color.White;
             this.pnlTietkiem.Controls.Add(this.label2);
-            this.pnlTietkiem.Controls.Add(this.comboBox1);
+            this.pnlTietkiem.Controls.Add(this.cbLoaiSTK);
             this.pnlTietkiem.Controls.Add(this.lblTKTK);
             this.pnlTietkiem.Controls.Add(this.panel1);
             this.pnlTietkiem.Controls.Add(this.panel6);
@@ -81,11 +81,33 @@
             this.pnlTietkiem.Controls.Add(this.btn3thang);
             this.pnlTietkiem.Controls.Add(this.btn1thang);
             this.pnlTietkiem.Controls.Add(this.btn6thang);
-            this.pnlTietkiem.Location = new System.Drawing.Point(39, 20);
+            this.pnlTietkiem.Location = new System.Drawing.Point(35, 20);
             this.pnlTietkiem.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlTietkiem.Name = "pnlTietkiem";
             this.pnlTietkiem.Size = new System.Drawing.Size(1071, 690);
             this.pnlTietkiem.TabIndex = 0;
+            this.pnlTietkiem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTietkiem_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label2.Location = new System.Drawing.Point(568, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 21);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "Chọn loại sổ tiết kiệm";
+            // 
+            // cbLoaiSTK
+            // 
+            this.cbLoaiSTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbLoaiSTK.FormattingEnabled = true;
+            this.cbLoaiSTK.Location = new System.Drawing.Point(734, 93);
+            this.cbLoaiSTK.Name = "cbLoaiSTK";
+            this.cbLoaiSTK.Size = new System.Drawing.Size(302, 29);
+            this.cbLoaiSTK.TabIndex = 66;
+            this.cbLoaiSTK.SelectedIndexChanged += new System.EventHandler(this.cbLoaiSTK_SelectedIndexChanged);
             // 
             // lblTKTK
             // 
@@ -93,7 +115,7 @@
             this.lblTKTK.BackColor = System.Drawing.Color.White;
             this.lblTKTK.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTKTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTKTK.Location = new System.Drawing.Point(827, 14);
+            this.lblTKTK.Location = new System.Drawing.Point(814, 16);
             this.lblTKTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTKTK.Name = "lblTKTK";
             this.lblTKTK.Size = new System.Drawing.Size(232, 30);
@@ -447,30 +469,6 @@
             this.btn6thang.UseVisualStyleBackColor = false;
             this.btn6thang.Click += new System.EventHandler(this.btn6thang_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Sổ tự đóng khi đến hạn",
-            "Sổ tự chuyển tiền lãi sang tiền gốc",
-            "Sổ sẽ tiếp tục được gửi với lãi suất như cũ"});
-            this.comboBox1.Location = new System.Drawing.Point(763, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 29);
-            this.comboBox1.TabIndex = 66;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(597, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 21);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "Chọn loại sổ tiết kiệm";
-            // 
             // FrmTietkiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -484,6 +482,7 @@
             this.Name = "FrmTietkiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tiết kiệm";
+            this.Load += new System.EventHandler(this.FrmTietkiem_Load);
             this.pnlTietkiem.ResumeLayout(false);
             this.pnlTietkiem.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -523,6 +522,6 @@
         private CustomButton.VBButton btn1thang;
         private Label label13;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cbLoaiSTK;
     }
 }

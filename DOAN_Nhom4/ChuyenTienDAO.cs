@@ -20,11 +20,11 @@ namespace DOAN_Nhom4
             return ngDung;
         }
 
-        public List<string> LayThongTinSTKNhan()
+        public List<string> LayThongTinSTKNhan(string stkgui)
         {
             List<string> cot = new List<string>();
-            string sql = string.Format("select distinct TenTKNhan from hr.LichSuGiaoDich where LoaiGD = 'Chuyen Tien'");
-            cot = data.LayCot(sql, "TenTKNhan");
+            string sql = string.Format("select distinct SoTKNhan from hr.LichSuGiaoDich where LoaiGD = 'Chuyen Tien' and SoTKGui = '{0}'", stkgui);
+            cot = data.LayCot(sql, "SoTKNhan");
             return cot;
         }
     }

@@ -9,7 +9,7 @@ namespace DOAN_Nhom4
 {
     public class TietKiem
     {
-        private int id;
+        private int maTietkiem;
         private DateTime ngayDangky;
         private string tenTKTK;
         private BigInteger tienGoc;
@@ -20,9 +20,9 @@ namespace DOAN_Nhom4
 
         public TietKiem() { }
 
-        public TietKiem(int id, DateTime ngayDangky, string tenTKTK, BigInteger tienGoc, int kiHan, double laiSuat, BigInteger tienLai, BigInteger tongTien)
+        public TietKiem(int maTietkiem, DateTime ngayDangky, string tenTKTK, BigInteger tienGoc, int kiHan, double laiSuat, BigInteger tienLai, BigInteger tongTien)
         {
-            this.id = id;
+            this.maTietkiem = maTietkiem;
             this.ngayDangky= ngayDangky;
             this.tenTKTK = tenTKTK;
             this.tienGoc = tienGoc;
@@ -32,7 +32,7 @@ namespace DOAN_Nhom4
             this.tongTien = tongTien;
         }
 
-        public int Id { get => id; set => id = value; }
+        public int MaTietKiem { get => maTietkiem; set => maTietkiem = value; }
         public DateTime NgayDangky { get => ngayDangky; set => ngayDangky = value; }
         public string TenTKTK { get => tenTKTK; set => tenTKTK = value; }
         public BigInteger TienGoc { get => tienGoc; set => tienGoc = value; }

@@ -47,5 +47,13 @@ namespace DOAN_Nhom4
             this.email = "";
             this.sdt = "";
         }
+
+        public string ThongTinCoBan
+        {
+            get
+            {
+                return string.Format("{0} - {1} - {2}", TenNH, TenTK, SoTK);
+            }
+        }
     }
 }

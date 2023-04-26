@@ -444,6 +444,7 @@
             this.Name = "FrmXemTKTK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmXemTKTK";
+            this.Load += new System.EventHandler(this.FrmXemTKTK_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBQuaylai)).EndInit();

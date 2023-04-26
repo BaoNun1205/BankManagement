@@ -8,13 +8,14 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DOAN_Nhom4
 {
     public partial class FrmTietkiem : Form
     {
         private Random rand;
-        int ID;
+        int maTietKiem;
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
@@ -40,8 +41,23 @@ namespace DOAN_Nhom4
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
             rand = new Random();
-            ID = rand.Next(100000, 999999);
-        }       
+            maTietKiem = rand.Next(100000, 999999);
+        }
+
+        public enum LoaiSoTietKiem
+        {
+            Loai1,
+            Loai2,
+            Loai3
+        }
+
+        private void FrmTietkiem_Load(object sender, EventArgs e)
+        {
+            foreach (LoaiSoTietKiem gt in Enum.GetValues(typeof(LoaiSoTietKiem)))
+            {
+                cbLoaiSTK.Items.Add(new KeyValuePair<LoaiSoTietKiem, string>(gt, gt.NoiDungLoaiSoTietKiem()));
+            }
+        }
 
         private void txtSotien_Enter(object sender, EventArgs e)
         {
@@ -208,8 +224,8 @@ namespace DOAN_Nhom4
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
             tenTKTK = txtTenTKTK.Text;
-            TietKiem tkiem = new TietKiem(ID, DateTime.Now, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
-            GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, ID.ToString(), int.Parse(txtSotien.Text), "");
+            TietKiem tkiem = new TietKiem(maTietKiem, DateTime.Now, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
+            GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
             tkiemDAO.Them(tkiem);
             lsgdDAO.Them(gd);
             MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -221,6 +237,16 @@ namespace DOAN_Nhom4
         {
             FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
+        }
+
+        private void pnlTietkiem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbLoaiSTK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -75,7 +75,7 @@ namespace DOAN_Nhom4
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    tkiem.Id = int.Parse(reader["ID"].ToString());
+                    tkiem.MaTietKiem = int.Parse(reader["ID"].ToString());
                     tkiem.NgayDangky = DateTime.Parse(reader["NgayDangKy"].ToString());
                     tkiem.TenTKTK = reader["TenTKTK"].ToString();
                     tkiem.TienGoc = BigInteger.Parse(reader["TienGoc"].ToString());

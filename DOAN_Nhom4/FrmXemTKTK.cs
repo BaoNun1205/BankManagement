@@ -18,6 +18,7 @@ namespace DOAN_Nhom4
         TietkiemDAO tietkiemDAO = new TietkiemDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
+        List<TietKiem> danhSachTietKiem = new List<TietKiem>();
         List<string> danhSachLuaChon = new List<string>();
 
         private NguoiDung kh;
@@ -37,12 +38,19 @@ namespace DOAN_Nhom4
             this.kh = kh;
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
-            danhSachLuaChon = tietkiemDAO.LayCotTKTK("TenTKTK");
-            cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());
         }
+
         private void FrmXemTKTK_Load(object sender, EventArgs e)
         {
-            cbTenTKTK.Items.AddRange(danhSachLuaChon.ToArray());           
+            danhSachLuaChon = tietkiemDAO.LayCotTKTK("ID");
+            foreach (string matk in danhSachLuaChon)
+            {
+                TietKiem tkiem = new TietKiem();
+                tkiem = tietkiemDAO.LayHangTKTK("ID", matk);
+                danhSachTietKiem.Add(tkiem);
+            }    
+            cbTenTKTK.Items.AddRange(danhSachTietKiem.ToArray());
+            cbTenTKTK.DisplayMember = "TenTKTK";
         }
 
         private void btnRuttien_Click(object sender, EventArgs e)
@@ -56,7 +64,7 @@ namespace DOAN_Nhom4
                 if (luachon == DialogResult.Yes)
                 {
                     TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), ngayDangky, cbTenTKTK.Text, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
-                    GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.Id.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
+                    GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
                     tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
                     tknhDAO.Sua(tknh);
                     tietkiemDAO.Rut(tkiem);
@@ -76,18 +84,20 @@ namespace DOAN_Nhom4
 
         private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TietKiem tkiem = new TietKiem();
-            tkiem = tietkiemDAO.LayHangTKTK("TenTKTK", cbTenTKTK.Text);
-            DateTime ngayToihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
-            ngayDangky = tkiem.NgayDangky;
-            lblMatietkiem.Text = tkiem.Id.ToString();
-            txtKihan.Text = tkiem.KiHan.ToString();
-            txtTiengoc.Text = tkiem.TienGoc.ToString();
-            lblTienlai.Text = tkiem.TienLai.ToString();
-            lblLaisuat.Text = tkiem.LaiSuat.ToString();
-            lblTongtien.Text = tkiem.TongTien.ToString();
-            lblNgaydangky.Text = tkiem.NgayDangky.ToString("dd/MM/yyyy");
-            lblNgaytoihan.Text = ngayToihan.ToString("dd/MM/yyyy");
+            if (cbTenTKTK.SelectedItem != null && cbTenTKTK.SelectedItem is TietKiem)
+            {
+                TietKiem tkiem = (TietKiem)cbTenTKTK.SelectedItem;
+                DateTime ngayToihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
+                ngayDangky = tkiem.NgayDangky;
+                lblMatietkiem.Text = tkiem.MaTietKiem.ToString();
+                txtKihan.Text = tkiem.KiHan.ToString();
+                txtTiengoc.Text = tkiem.TienGoc.ToString();
+                lblTienlai.Text = tkiem.TienLai.ToString();
+                lblLaisuat.Text = tkiem.LaiSuat.ToString();
+                lblTongtien.Text = tkiem.TongTien.ToString();
+                lblNgaydangky.Text = tkiem.NgayDangky.ToString("dd/MM/yyyy");
+                lblNgaytoihan.Text = ngayToihan.ToString("dd/MM/yyyy");
+            }
         }
     }
 }
