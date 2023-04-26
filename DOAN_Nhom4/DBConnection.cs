@@ -320,6 +320,34 @@ namespace DOAN_Nhom4
             }
             return ttTinDung;
         }
+
+        public SoDienThoai XuLiSoDienThoai(string sqlStr)
+        {
+            SoDienThoai sdt = new SoDienThoai();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    sdt.Sdt = reader.GetString(0);
+                    sdt.SoDu = reader.GetInt64(1);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return sdt;
+        }
         public bool IsEmail(string email)
         {
             string strRegex = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";

@@ -42,7 +42,7 @@
             this.btnTKTinDung = new CustomButton.VBButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSDTNap = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblSDTGanDay = new System.Windows.Forms.Label();
             this.lblBoTrong = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.btn200k = new CustomButton.VBButton();
             this.btn300k = new CustomButton.VBButton();
             this.btn500k = new CustomButton.VBButton();
-            this.vbButton1 = new CustomButton.VBButton();
+            this.btnXacNhan = new CustomButton.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Myriad Pro", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(379, 9);
@@ -167,8 +167,8 @@
             // 
             // btnTKThe
             // 
-            this.btnTKThe.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTKThe.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTKThe.BackColor = System.Drawing.Color.White;
+            this.btnTKThe.BackgroundColor = System.Drawing.Color.White;
             this.btnTKThe.BorderColor = System.Drawing.Color.White;
             this.btnTKThe.BorderRadius = 10;
             this.btnTKThe.BorderSize = 2;
@@ -179,17 +179,18 @@
             this.btnTKThe.Location = new System.Drawing.Point(39, 274);
             this.btnTKThe.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTKThe.Name = "btnTKThe";
-            this.btnTKThe.Size = new System.Drawing.Size(180, 43);
+            this.btnTKThe.Size = new System.Drawing.Size(180, 58);
             this.btnTKThe.TabIndex = 87;
             this.btnTKThe.Text = "-";
             this.btnTKThe.TextColor = System.Drawing.Color.Black;
             this.btnTKThe.UseVisualStyleBackColor = false;
+            this.btnTKThe.Click += new System.EventHandler(this.btnTKThe_Click);
             // 
             // btnTKTinDung
             // 
-            this.btnTKTinDung.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTKTinDung.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTKTinDung.BorderColor = System.Drawing.Color.White;
+            this.btnTKTinDung.BackColor = System.Drawing.Color.White;
+            this.btnTKTinDung.BackgroundColor = System.Drawing.Color.White;
+            this.btnTKTinDung.BorderColor = System.Drawing.Color.Transparent;
             this.btnTKTinDung.BorderRadius = 10;
             this.btnTKTinDung.BorderSize = 2;
             this.btnTKTinDung.FlatAppearance.BorderSize = 0;
@@ -199,11 +200,12 @@
             this.btnTKTinDung.Location = new System.Drawing.Point(313, 274);
             this.btnTKTinDung.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTKTinDung.Name = "btnTKTinDung";
-            this.btnTKTinDung.Size = new System.Drawing.Size(180, 43);
+            this.btnTKTinDung.Size = new System.Drawing.Size(180, 58);
             this.btnTKTinDung.TabIndex = 88;
             this.btnTKTinDung.Text = "-";
             this.btnTKTinDung.TextColor = System.Drawing.Color.Black;
             this.btnTKTinDung.UseVisualStyleBackColor = false;
+            this.btnTKTinDung.Click += new System.EventHandler(this.btnTKTinDung_Click);
             // 
             // panel4
             // 
@@ -224,14 +226,14 @@
             this.btnSDTNap.TabIndex = 89;
             this.btnSDTNap.Text = "Số điện thoại được nạp";
             // 
-            // textBox1
+            // txtSoDienThoai
             // 
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(27, 422);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(500, 32);
-            this.textBox1.TabIndex = 91;
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoDienThoai.ForeColor = System.Drawing.Color.Black;
+            this.txtSoDienThoai.Location = new System.Drawing.Point(27, 422);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(500, 32);
+            this.txtSoDienThoai.TabIndex = 91;
             // 
             // panel5
             // 
@@ -304,6 +306,7 @@
             this.btn20k.Text = "20.000";
             this.btn20k.TextColor = System.Drawing.Color.Black;
             this.btn20k.UseVisualStyleBackColor = false;
+            this.btn20k.Click += new System.EventHandler(this.btn20k_Click);
             // 
             // btn10k
             // 
@@ -324,6 +327,7 @@
             this.btn10k.Text = "10.000";
             this.btn10k.TextColor = System.Drawing.Color.Black;
             this.btn10k.UseVisualStyleBackColor = false;
+            this.btn10k.Click += new System.EventHandler(this.btn10k_Click);
             // 
             // btn30k
             // 
@@ -344,6 +348,7 @@
             this.btn30k.Text = "30.000";
             this.btn30k.TextColor = System.Drawing.Color.Black;
             this.btn30k.UseVisualStyleBackColor = false;
+            this.btn30k.Click += new System.EventHandler(this.btn30k_Click);
             // 
             // btn50k
             // 
@@ -364,6 +369,7 @@
             this.btn50k.Text = "50.000";
             this.btn50k.TextColor = System.Drawing.Color.Black;
             this.btn50k.UseVisualStyleBackColor = false;
+            this.btn50k.Click += new System.EventHandler(this.btn50k_Click);
             // 
             // btn100k
             // 
@@ -384,6 +390,7 @@
             this.btn100k.Text = "100.000";
             this.btn100k.TextColor = System.Drawing.Color.Black;
             this.btn100k.UseVisualStyleBackColor = false;
+            this.btn100k.Click += new System.EventHandler(this.btn100k_Click);
             // 
             // btn200k
             // 
@@ -404,6 +411,7 @@
             this.btn200k.Text = "200.000";
             this.btn200k.TextColor = System.Drawing.Color.Black;
             this.btn200k.UseVisualStyleBackColor = false;
+            this.btn200k.Click += new System.EventHandler(this.btn200k_Click);
             // 
             // btn300k
             // 
@@ -424,6 +432,7 @@
             this.btn300k.Text = "300.000";
             this.btn300k.TextColor = System.Drawing.Color.Black;
             this.btn300k.UseVisualStyleBackColor = false;
+            this.btn300k.Click += new System.EventHandler(this.btn300k_Click);
             // 
             // btn500k
             // 
@@ -444,26 +453,28 @@
             this.btn500k.Text = "500.000";
             this.btn500k.TextColor = System.Drawing.Color.Black;
             this.btn500k.UseVisualStyleBackColor = false;
+            this.btn500k.Click += new System.EventHandler(this.btn500k_Click);
             // 
-            // vbButton1
+            // btnXacNhan
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.vbButton1.BorderColor = System.Drawing.Color.Black;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 2;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.vbButton1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vbButton1.ForeColor = System.Drawing.Color.Black;
-            this.vbButton1.Location = new System.Drawing.Point(725, 589);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(290, 66);
-            this.vbButton1.TabIndex = 106;
-            this.vbButton1.Text = "Tiếp theo";
-            this.vbButton1.TextColor = System.Drawing.Color.Black;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btnXacNhan.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXacNhan.BorderColor = System.Drawing.Color.Black;
+            this.btnXacNhan.BorderRadius = 20;
+            this.btnXacNhan.BorderSize = 2;
+            this.btnXacNhan.FlatAppearance.BorderSize = 0;
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXacNhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnXacNhan.ForeColor = System.Drawing.Color.Black;
+            this.btnXacNhan.Location = new System.Drawing.Point(725, 589);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(290, 66);
+            this.btnXacNhan.TabIndex = 106;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.TextColor = System.Drawing.Color.Black;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // FrmNapTienDienThoai
             // 
@@ -471,7 +482,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.btn500k);
             this.Controls.Add(this.btn300k);
             this.Controls.Add(this.btn200k);
@@ -485,7 +496,7 @@
             this.Controls.Add(this.lblBoTrong);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.lblSDTGanDay);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSoDienThoai);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnSDTNap);
             this.Controls.Add(this.btnTKTinDung);
@@ -501,6 +512,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNapTienDienThoai";
             this.Text = "FrmNapTienDienThoai";
+            this.Load += new System.EventHandler(this.FrmNapTienDienThoai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -527,7 +539,7 @@
         private Panel panel4;
         private Label btnSDTNap;
         private Label lblMenhGiaNap;
-        private TextBox textBox1;
+        private TextBox txtSoDienThoai;
         private Panel panel5;
         private Label lblSDTGanDay;
         private Label lblBoTrong;
@@ -541,6 +553,6 @@
         private CustomButton.VBButton btn200k;
         private CustomButton.VBButton btn300k;
         private CustomButton.VBButton btn500k;
-        private CustomButton.VBButton vbButton1;
+        private CustomButton.VBButton btnXacNhan;
     }
 }

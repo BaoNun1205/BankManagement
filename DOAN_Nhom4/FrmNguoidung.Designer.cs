@@ -55,7 +55,7 @@
             // 
             // pnlDanhmuc
             // 
-            this.pnlDanhmuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.pnlDanhmuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.pnlDanhmuc.Controls.Add(this.pictureBox1);
             this.pnlDanhmuc.Controls.Add(this.btnCaidat);
             this.pnlDanhmuc.Controls.Add(this.btnHotro);
@@ -81,8 +81,8 @@
             // 
             // btnCaidat
             // 
-            this.btnCaidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnCaidat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnCaidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.btnCaidat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.btnCaidat.BorderColor = System.Drawing.Color.Transparent;
             this.btnCaidat.BorderRadius = 0;
             this.btnCaidat.BorderSize = 2;
@@ -90,24 +90,24 @@
             this.btnCaidat.FlatAppearance.BorderSize = 0;
             this.btnCaidat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaidat.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCaidat.ForeColor = System.Drawing.Color.White;
+            this.btnCaidat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnCaidat.Image = global::DOAN_Nhom4.Properties.Resources.settings2;
             this.btnCaidat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaidat.Location = new System.Drawing.Point(2, 720);
+            this.btnCaidat.Location = new System.Drawing.Point(0, 721);
             this.btnCaidat.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnCaidat.Name = "btnCaidat";
             this.btnCaidat.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnCaidat.Size = new System.Drawing.Size(263, 88);
+            this.btnCaidat.Size = new System.Drawing.Size(265, 88);
             this.btnCaidat.TabIndex = 41;
             this.btnCaidat.Text = "  Cài đặt";
-            this.btnCaidat.TextColor = System.Drawing.Color.White;
+            this.btnCaidat.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnCaidat.UseVisualStyleBackColor = false;
             this.btnCaidat.Click += new System.EventHandler(this.btnCaidat_Click);
             // 
             // btnHotro
             // 
-            this.btnHotro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnHotro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHotro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnHotro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnHotro.BorderColor = System.Drawing.Color.Transparent;
             this.btnHotro.BorderRadius = 0;
             this.btnHotro.BorderSize = 2;
@@ -130,8 +130,8 @@
             // 
             // btnTienich
             // 
-            this.btnTienich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnTienich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTienich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnTienich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnTienich.BorderColor = System.Drawing.Color.Transparent;
             this.btnTienich.BorderRadius = 0;
             this.btnTienich.BorderSize = 2;
@@ -155,8 +155,8 @@
             // 
             // btnChuyentien
             // 
-            this.btnChuyentien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnChuyentien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnChuyentien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnChuyentien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnChuyentien.BorderColor = System.Drawing.Color.Transparent;
             this.btnChuyentien.BorderRadius = 0;
             this.btnChuyentien.BorderSize = 2;
@@ -180,8 +180,8 @@
             // 
             // btnTaikhoan
             // 
-            this.btnTaikhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnTaikhoan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTaikhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnTaikhoan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnTaikhoan.BorderColor = System.Drawing.Color.Transparent;
             this.btnTaikhoan.BorderRadius = 0;
             this.btnTaikhoan.BorderSize = 2;
@@ -238,7 +238,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.panel3.Controls.Add(this.ptbMini);
             this.panel3.Controls.Add(this.pBThoat);
             this.panel3.Controls.Add(this.lblXinchao);
@@ -284,10 +284,10 @@
             // 
             // btnDangxuat
             // 
-            this.btnDangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangxuat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDangxuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangxuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnDangxuat.Location = new System.Drawing.Point(0, 43);
             this.btnDangxuat.Name = "btnDangxuat";
             this.btnDangxuat.Size = new System.Drawing.Size(153, 45);
@@ -298,10 +298,10 @@
             // 
             // btnBaomat
             // 
-            this.btnBaomat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnBaomat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.btnBaomat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaomat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBaomat.ForeColor = System.Drawing.Color.White;
+            this.btnBaomat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
             this.btnBaomat.Location = new System.Drawing.Point(0, -1);
             this.btnBaomat.Name = "btnBaomat";
             this.btnBaomat.Size = new System.Drawing.Size(153, 45);
