@@ -40,7 +40,7 @@ namespace DOAN_Nhom4
         {
             string sql = string.Format("SELECT SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay");
             return data.LayDanhSach(sql);
-        }
+        }        
         public void TimKiemDangThanhToan()
         {
             string sql = string.Format("SELECT SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay WHERE ThoiGianVay > 0");

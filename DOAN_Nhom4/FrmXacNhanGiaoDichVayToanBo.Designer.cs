@@ -1,6 +1,6 @@
 ﻿namespace DOAN_Nhom4
 {
-    partial class FrmXacNhanGiaoDichVay
+    partial class FrmXacNhanGiaoDichVayToanBo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
+            this.btn_HuyBo = new CustomButton.VBButton();
+            this.btn_XacNhan = new CustomButton.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHienThiTong = new System.Windows.Forms.Label();
             this.lblHienThiTraCham = new System.Windows.Forms.Label();
-            this.lblHienThiLai = new System.Windows.Forms.Label();
-            this.lblHienThiNoGoc = new System.Windows.Forms.Label();
             this.lblHienThiTKVay = new System.Windows.Forms.Label();
             this.lblHienThiTKNguon = new System.Windows.Forms.Label();
             this.txt_NgayGiaoDich = new System.Windows.Forms.DateTimePicker();
@@ -42,31 +41,57 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btn_HuyBo = new CustomButton.VBButton();
-            this.btn_XacNhan = new CustomButton.VBButton();
+            this.lblHienThiNoGoc = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label5
+            // btn_HuyBo
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label5.Location = new System.Drawing.Point(437, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(534, 58);
-            this.label5.TabIndex = 98;
-            this.label5.Text = "XÁC NHẬN GIAO DỊCH";
+            this.btn_HuyBo.BackColor = System.Drawing.SystemColors.Menu;
+            this.btn_HuyBo.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.btn_HuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_HuyBo.BorderRadius = 20;
+            this.btn_HuyBo.BorderSize = 0;
+            this.btn_HuyBo.FlatAppearance.BorderSize = 0;
+            this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_HuyBo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_HuyBo.Location = new System.Drawing.Point(363, 663);
+            this.btn_HuyBo.Name = "btn_HuyBo";
+            this.btn_HuyBo.Size = new System.Drawing.Size(246, 63);
+            this.btn_HuyBo.TabIndex = 105;
+            this.btn_HuyBo.Text = "Hủy Bỏ";
+            this.btn_HuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_HuyBo.UseVisualStyleBackColor = false;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
+            // 
+            // btn_XacNhan
+            // 
+            this.btn_XacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_XacNhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btn_XacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_XacNhan.BorderRadius = 20;
+            this.btn_XacNhan.BorderSize = 0;
+            this.btn_XacNhan.FlatAppearance.BorderSize = 0;
+            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XacNhan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_XacNhan.ForeColor = System.Drawing.SystemColors.Window;
+            this.btn_XacNhan.Location = new System.Drawing.Point(634, 663);
+            this.btn_XacNhan.Name = "btn_XacNhan";
+            this.btn_XacNhan.Size = new System.Drawing.Size(246, 63);
+            this.btn_XacNhan.TabIndex = 104;
+            this.btn_XacNhan.Text = "Thanh Toán";
+            this.btn_XacNhan.TextColor = System.Drawing.SystemColors.Window;
+            this.btn_XacNhan.UseVisualStyleBackColor = false;
+            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblHienThiTong);
             this.panel1.Controls.Add(this.lblHienThiTraCham);
-            this.panel1.Controls.Add(this.lblHienThiLai);
             this.panel1.Controls.Add(this.lblHienThiNoGoc);
             this.panel1.Controls.Add(this.lblHienThiTKVay);
             this.panel1.Controls.Add(this.lblHienThiTKNguon);
@@ -76,19 +101,18 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(315, 121);
+            this.panel1.Location = new System.Drawing.Point(224, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(781, 530);
-            this.panel1.TabIndex = 99;
+            this.panel1.TabIndex = 103;
             // 
             // lblHienThiTong
             // 
             this.lblHienThiTong.AutoSize = true;
             this.lblHienThiTong.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHienThiTong.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblHienThiTong.Location = new System.Drawing.Point(367, 399);
+            this.lblHienThiTong.Location = new System.Drawing.Point(367, 377);
             this.lblHienThiTong.Name = "lblHienThiTong";
             this.lblHienThiTong.Size = new System.Drawing.Size(15, 23);
             this.lblHienThiTong.TabIndex = 121;
@@ -99,40 +123,18 @@
             this.lblHienThiTraCham.AutoSize = true;
             this.lblHienThiTraCham.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHienThiTraCham.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblHienThiTraCham.Location = new System.Drawing.Point(367, 317);
+            this.lblHienThiTraCham.Location = new System.Drawing.Point(367, 286);
             this.lblHienThiTraCham.Name = "lblHienThiTraCham";
             this.lblHienThiTraCham.Size = new System.Drawing.Size(15, 23);
             this.lblHienThiTraCham.TabIndex = 120;
             this.lblHienThiTraCham.Text = "-";
-            // 
-            // lblHienThiLai
-            // 
-            this.lblHienThiLai.AutoSize = true;
-            this.lblHienThiLai.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHienThiLai.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblHienThiLai.Location = new System.Drawing.Point(367, 243);
-            this.lblHienThiLai.Name = "lblHienThiLai";
-            this.lblHienThiLai.Size = new System.Drawing.Size(15, 23);
-            this.lblHienThiLai.TabIndex = 119;
-            this.lblHienThiLai.Text = "-";
-            // 
-            // lblHienThiNoGoc
-            // 
-            this.lblHienThiNoGoc.AutoSize = true;
-            this.lblHienThiNoGoc.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHienThiNoGoc.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblHienThiNoGoc.Location = new System.Drawing.Point(368, 171);
-            this.lblHienThiNoGoc.Name = "lblHienThiNoGoc";
-            this.lblHienThiNoGoc.Size = new System.Drawing.Size(15, 23);
-            this.lblHienThiNoGoc.TabIndex = 118;
-            this.lblHienThiNoGoc.Text = "-";
             // 
             // lblHienThiTKVay
             // 
             this.lblHienThiTKVay.AutoSize = true;
             this.lblHienThiTKVay.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHienThiTKVay.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblHienThiTKVay.Location = new System.Drawing.Point(368, 100);
+            this.lblHienThiTKVay.Location = new System.Drawing.Point(367, 119);
             this.lblHienThiTKVay.Name = "lblHienThiTKVay";
             this.lblHienThiTKVay.Size = new System.Drawing.Size(15, 23);
             this.lblHienThiTKVay.TabIndex = 117;
@@ -173,7 +175,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label6.Location = new System.Drawing.Point(91, 104);
+            this.label6.Location = new System.Drawing.Point(90, 123);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(110, 19);
@@ -212,7 +214,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label3.Location = new System.Drawing.Point(91, 403);
+            this.label3.Location = new System.Drawing.Point(91, 381);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(179, 19);
@@ -225,25 +227,24 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(91, 321);
+            this.label2.Location = new System.Drawing.Point(91, 290);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(157, 19);
             this.label2.TabIndex = 105;
             this.label2.Text = "Số tiền phí trả chậm";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label1.Location = new System.Drawing.Point(91, 245);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(105, 19);
-            this.label1.TabIndex = 103;
-            this.label1.Text = "Số tiền trả lãi";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label5.Location = new System.Drawing.Point(346, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(534, 58);
+            this.label5.TabIndex = 102;
+            this.label5.Text = "XÁC NHẬN GIAO DỊCH";
             // 
             // label11
             // 
@@ -251,67 +252,39 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label11.Location = new System.Drawing.Point(91, 175);
+            this.label11.Location = new System.Drawing.Point(90, 203);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(141, 19);
+            this.label11.Size = new System.Drawing.Size(127, 19);
             this.label11.TabIndex = 102;
-            this.label11.Text = "Số tiền trả nợ gốc";
+            this.label11.Text = "Số tiền đang nợ";
             // 
-            // btn_HuyBo
+            // lblHienThiNoGoc
             // 
-            this.btn_HuyBo.BackColor = System.Drawing.SystemColors.Menu;
-            this.btn_HuyBo.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.btn_HuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_HuyBo.BorderRadius = 20;
-            this.btn_HuyBo.BorderSize = 0;
-            this.btn_HuyBo.FlatAppearance.BorderSize = 0;
-            this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_HuyBo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_HuyBo.Location = new System.Drawing.Point(454, 683);
-            this.btn_HuyBo.Name = "btn_HuyBo";
-            this.btn_HuyBo.Size = new System.Drawing.Size(246, 63);
-            this.btn_HuyBo.TabIndex = 101;
-            this.btn_HuyBo.Text = "Hủy Bỏ";
-            this.btn_HuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_HuyBo.UseVisualStyleBackColor = false;
-            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
+            this.lblHienThiNoGoc.AutoSize = true;
+            this.lblHienThiNoGoc.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHienThiNoGoc.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblHienThiNoGoc.Location = new System.Drawing.Point(367, 199);
+            this.lblHienThiNoGoc.Name = "lblHienThiNoGoc";
+            this.lblHienThiNoGoc.Size = new System.Drawing.Size(15, 23);
+            this.lblHienThiNoGoc.TabIndex = 118;
+            this.lblHienThiNoGoc.Text = "-";
             // 
-            // btn_XacNhan
-            // 
-            this.btn_XacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XacNhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_XacNhan.BorderRadius = 20;
-            this.btn_XacNhan.BorderSize = 0;
-            this.btn_XacNhan.FlatAppearance.BorderSize = 0;
-            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XacNhan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XacNhan.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_XacNhan.Location = new System.Drawing.Point(725, 683);
-            this.btn_XacNhan.Name = "btn_XacNhan";
-            this.btn_XacNhan.Size = new System.Drawing.Size(246, 63);
-            this.btn_XacNhan.TabIndex = 100;
-            this.btn_XacNhan.Text = "Thanh Toán";
-            this.btn_XacNhan.TextColor = System.Drawing.SystemColors.Window;
-            this.btn_XacNhan.UseVisualStyleBackColor = false;
-            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
-            // 
-            // FrmXacNhanGiaoDichVay
+            // FrmXacNhanGiaoDichVayToanBo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1247, 811);
+            this.ClientSize = new System.Drawing.Size(1229, 764);
             this.Controls.Add(this.btn_HuyBo);
             this.Controls.Add(this.btn_XacNhan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmXacNhanGiaoDichVay";
-            this.Text = "FrmXacNhanGiaoDichVay";
-            this.Load += new System.EventHandler(this.FrmXacNhanGiaoDichVay_Load);
+            this.Name = "FrmXacNhanGiaoDichVayToanBo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmXacNhanGiaoDichVayToanBo";
+            this.Load += new System.EventHandler(this.FrmXacNhanGiaoDichVayToanBo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -320,23 +293,22 @@
         }
 
         #endregion
-        private Label label5;
+
+        private CustomButton.VBButton btn_HuyBo;
+        private CustomButton.VBButton btn_XacNhan;
         private Panel panel1;
+        private Label lblHienThiTong;
+        private Label lblHienThiTraCham;
+        private Label lblHienThiNoGoc;
+        private Label lblHienThiTKVay;
+        private Label lblHienThiTKNguon;
+        private DateTimePicker txt_NgayGiaoDich;
         private Label label6;
         private Label label7;
         private Label label4;
         private Label label3;
         private Label label2;
-        private Label label1;
         private Label label11;
-        private DateTimePicker txt_NgayGiaoDich;
-        private CustomButton.VBButton btn_HuyBo;
-        private CustomButton.VBButton btn_XacNhan;
-        private Label lblHienThiNoGoc;
-        private Label lblHienThiTKVay;
-        private Label lblHienThiTKNguon;
-        private Label lblHienThiTong;
-        private Label lblHienThiTraCham;
-        private Label lblHienThiLai;
+        private Label label5;
     }
 }
