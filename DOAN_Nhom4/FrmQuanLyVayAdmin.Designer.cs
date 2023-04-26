@@ -33,13 +33,14 @@
             this.btn_QuayLai = new CustomButton.VBButton();
             this.txt_SoTKVay = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Vay)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.BackColor = System.Drawing.Color.Teal;
-            this.btn_Xoa.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_Xoa.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Xoa.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_Xoa.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_Xoa.BorderRadius = 20;
             this.btn_Xoa.BorderSize = 0;
@@ -47,7 +48,7 @@
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(99, 183);
+            this.btn_Xoa.Location = new System.Drawing.Point(82, 225);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(201, 60);
             this.btn_Xoa.TabIndex = 28;
@@ -60,18 +61,18 @@
             // 
             this.gv_Vay.BackgroundColor = System.Drawing.SystemColors.Window;
             this.gv_Vay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_Vay.Location = new System.Drawing.Point(363, 32);
+            this.gv_Vay.Location = new System.Drawing.Point(346, 74);
             this.gv_Vay.Name = "gv_Vay";
             this.gv_Vay.RowHeadersWidth = 51;
             this.gv_Vay.RowTemplate.Height = 29;
-            this.gv_Vay.Size = new System.Drawing.Size(939, 716);
+            this.gv_Vay.Size = new System.Drawing.Size(1333, 718);
             this.gv_Vay.TabIndex = 32;
             this.gv_Vay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Vay_CellClick);
             // 
             // btn_QuayLai
             // 
-            this.btn_QuayLai.BackColor = System.Drawing.Color.Teal;
-            this.btn_QuayLai.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_QuayLai.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_QuayLai.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_QuayLai.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_QuayLai.BorderRadius = 20;
             this.btn_QuayLai.BorderSize = 0;
@@ -79,7 +80,7 @@
             this.btn_QuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_QuayLai.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_QuayLai.ForeColor = System.Drawing.Color.White;
-            this.btn_QuayLai.Location = new System.Drawing.Point(99, 374);
+            this.btn_QuayLai.Location = new System.Drawing.Point(82, 416);
             this.btn_QuayLai.Name = "btn_QuayLai";
             this.btn_QuayLai.Size = new System.Drawing.Size(201, 60);
             this.btn_QuayLai.TabIndex = 33;
@@ -91,7 +92,7 @@
             // txt_SoTKVay
             // 
             this.txt_SoTKVay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SoTKVay.Location = new System.Drawing.Point(173, 251);
+            this.txt_SoTKVay.Location = new System.Drawing.Point(156, 293);
             this.txt_SoTKVay.Name = "txt_SoTKVay";
             this.txt_SoTKVay.Size = new System.Drawing.Size(127, 27);
             this.txt_SoTKVay.TabIndex = 34;
@@ -102,18 +103,30 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(42, 252);
+            this.label1.Location = new System.Drawing.Point(25, 294);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 19);
             this.label1.TabIndex = 35;
             this.label1.Text = "Tài khoản vay";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label2.Location = new System.Drawing.Point(508, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(792, 38);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "CÁC KHOẢN ĐANG TRONG THỜI GIAN THANH TOÁN";
             // 
             // FrmQuanLyVayAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1341, 760);
+            this.ClientSize = new System.Drawing.Size(1710, 829);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_SoTKVay);
             this.Controls.Add(this.btn_QuayLai);
@@ -135,5 +148,6 @@
         private CustomButton.VBButton btn_QuayLai;
         private TextBox txt_SoTKVay;
         private Label label1;
+        private Label label2;
     }
 }

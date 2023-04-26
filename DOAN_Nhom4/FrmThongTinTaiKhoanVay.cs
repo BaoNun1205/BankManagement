@@ -79,5 +79,11 @@ namespace DOAN_Nhom4
             FrmXacNhanGiaoDichVay frmgdvay = new FrmXacNhanGiaoDichVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmgdvay, pnlNguoiDung);
         }
+
+        private void btn_ThanhToanToanBo_Click(object sender, EventArgs e)
+        {
+            FrmXacNhanGiaoDichVayToanBo frmgdvaytoanbo = new FrmXacNhanGiaoDichVayToanBo(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmgdvaytoanbo, pnlNguoiDung);
+        }
     }
 }

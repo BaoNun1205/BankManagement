@@ -46,8 +46,9 @@ namespace DOAN_Nhom4
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            ThongTinNguoiDungVay ttNgDung = qlDAO.TKValid(int.Parse(txt_SoTKVay.Text));
-            qlDAO.Xoa(int.Parse(txt_SoTKVay.Text));
+            ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay();
+            ttNgDung.SoTKVay = txt_SoTKVay.Text;
+            qlDAO.Xoa(ttNgDung);
             Refresh();
             MessageBox.Show("Đã xóa khoản vay!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             HienThi();
