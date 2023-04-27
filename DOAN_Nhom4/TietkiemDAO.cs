@@ -15,11 +15,11 @@ namespace DOAN_Nhom4
         DBConnection data = new DBConnection();
         public TietkiemDAO() { }
 
-        public TietKiem LayHangTKTK(string Cot, string giaTri)
+        public TietKiem LayThongTinSoTietKiem(string Cot, string giaTri)
         {
             TietKiem tktk = new TietKiem();
             string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE {0} = '{1}'", Cot, giaTri);
-            tktk = data.LayHangTKTK(sql);
+            tktk = data.LayThongTinSoTietKiem(sql);
             return tktk;
         }
 

@@ -64,7 +64,7 @@ namespace DOAN_Nhom4
             return cot;
         }
 
-        public TietKiem LayHangTKTK(string sqlStr)
+        public TietKiem LayThongTinSoTietKiem(string sqlStr)
         {
             TietKiem tkiem = new TietKiem();
             conn.Open();
@@ -75,9 +75,10 @@ namespace DOAN_Nhom4
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    tkiem.MaTietKiem = int.Parse(reader["ID"].ToString());
+                    tkiem.MaTietKiem = int.Parse(reader["MaTietKiem"].ToString());
                     tkiem.NgayDangky = DateTime.Parse(reader["NgayDangKy"].ToString());
                     tkiem.TenTKTK = reader["TenTKTK"].ToString();
+                    tkiem.LoaiSo = int.Parse(reader["LoaiSo"].ToString());
                     tkiem.TienGoc = BigInteger.Parse(reader["TienGoc"].ToString());
                     tkiem.KiHan = int.Parse(reader["KiHan"].ToString());
                     tkiem.LaiSuat = double.Parse(reader["LaiSuat"].ToString());
