@@ -21,5 +21,10 @@ namespace DOAN_Nhom4
             string sql = string.Format("DELETE FROM KhachHangNoXau WHERE SoTK = '{0}'", kh.SoTK);
             data.xuLi(sql);
         }
+        public KHNoXau IsNull(TaiKhoanNganHang tknh)
+        {
+            string sql = string.Format("SELECT * FROM KhachHangNoXau WHERE SoTK = '{0}'", tknh.SoTK);
+            return data.XuLiKHNoXau(sql);
+        }
     }
 }
