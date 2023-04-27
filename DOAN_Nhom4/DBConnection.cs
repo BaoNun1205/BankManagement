@@ -320,7 +320,35 @@ namespace DOAN_Nhom4
             }
             return ttTinDung;
         }
-
+        public KHNoXau XuLiKHNoXau(string sqlStr)
+        {
+            KHNoXau KHNoXau = new KHNoXau();
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    KHNoXau.SoTK = reader.GetString(0);
+                    KHNoXau.TenTK = reader.GetString(1);
+                    KHNoXau.Cccd = reader.GetString(2);
+                    KHNoXau.NgayNo = reader.GetDateTime(3);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return KHNoXau;
+        }
         public SoDienThoai XuLiSoDienThoai(string sqlStr)
         {
             SoDienThoai sdt = new SoDienThoai();

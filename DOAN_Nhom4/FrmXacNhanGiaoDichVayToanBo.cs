@@ -48,15 +48,15 @@ namespace DOAN_Nhom4
         {
             lblHienThiTKNguon.Text = nguoiDung.SoTK;
             lblHienThiTKVay.Text = nguoiDung.SoTK;
-            lblHienThiNoGoc.Text = ttNgDung.SoTienVay.ToString("N0");
+            lblHienThiNoGoc.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
             lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
-            lblHienThiTong.Text = (ttNgDung.SoTienVay + ttNgDung.PhiTraCham).ToString("N0");
+            lblHienThiTong.Text = (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham).ToString("N0");
             txt_NgayGiaoDich.Value = DateTime.Now;
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            tknh.SoDu -= (ttNgDung.SoTienVay + ttNgDung.PhiTraCham);
+            tknh.SoDu -= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham);
             tknhDAO.Sua(tknh);
             GiaoDich gd = new GiaoDich("Thanh toan toan bo khoan vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienVay, "Thanh toan khoan vay");
             lsgdDAO.Them(gd);
