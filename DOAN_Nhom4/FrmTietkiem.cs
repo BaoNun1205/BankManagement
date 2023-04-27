@@ -24,6 +24,7 @@ namespace DOAN_Nhom4
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
         private string tenTKTK;
+        private int loaiSo;
         private BigInteger tienGoc;
         private int kiHan;
         private double laiSuat;
@@ -40,8 +41,6 @@ namespace DOAN_Nhom4
             this.kh = kh;
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
-            rand = new Random();
-            maTietKiem = rand.Next(100000, 999999);
         }
 
         public enum LoaiSoTietKiem
@@ -53,9 +52,26 @@ namespace DOAN_Nhom4
 
         private void FrmTietkiem_Load(object sender, EventArgs e)
         {
+            rand = new Random();
+            maTietKiem = rand.Next(100000, 999999);
             foreach (LoaiSoTietKiem gt in Enum.GetValues(typeof(LoaiSoTietKiem)))
             {
                 cbLoaiSTK.Items.Add(new KeyValuePair<LoaiSoTietKiem, string>(gt, gt.NoiDungLoaiSoTietKiem()));
+            }
+        }
+
+        private void cbLoaiSTK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLoaiSTK.SelectedItem != null)
+            {
+                KeyValuePair<LoaiSoTietKiem, string> selectedValue = (KeyValuePair<LoaiSoTietKiem, string>)cbLoaiSTK.SelectedItem;
+                LoaiSoTietKiem loai = selectedValue.Key;
+                string noidung = selectedValue.Value;
+
+                if (loai == LoaiSoTietKiem.Loai1) loaiSo = 1;
+                if (loai == LoaiSoTietKiem.Loai2) loaiSo = 2;
+                if (loai == LoaiSoTietKiem.Loai3) loaiSo = 3;
+                //Sử dụng giá trị enum và nội dung của nó ở đây
             }
         }
 
@@ -224,7 +240,7 @@ namespace DOAN_Nhom4
             tknh.SoDu = tknh.SoDu - tienGoc;
             tknhDAO.Sua(tknh);
             tenTKTK = txtTenTKTK.Text;
-            TietKiem tkiem = new TietKiem(maTietKiem, DateTime.Now, tenTKTK, tienGoc, kiHan, laiSuat, tienLai, tongTien);
+            TietKiem tkiem = new TietKiem(maTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
             GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
             tkiemDAO.Them(tkiem);
             lsgdDAO.Them(gd);
@@ -240,11 +256,6 @@ namespace DOAN_Nhom4
         }
 
         private void pnlTietkiem_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbLoaiSTK_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -42,11 +42,11 @@ namespace DOAN_Nhom4
 
         private void FrmXemTKTK_Load(object sender, EventArgs e)
         {
-            danhSachLuaChon = tietkiemDAO.LayCotTKTK("ID");
+            danhSachLuaChon = tietkiemDAO.LayCotTKTK("MaTietKiem");
             foreach (string matk in danhSachLuaChon)
             {
                 TietKiem tkiem = new TietKiem();
-                tkiem = tietkiemDAO.LayHangTKTK("ID", matk);
+                tkiem = tietkiemDAO.LayHangTKTK("MaTietKiem", matk);
                 danhSachTietKiem.Add(tkiem);
             }    
             cbTenTKTK.Items.AddRange(danhSachTietKiem.ToArray());
@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
                 DialogResult luachon = MessageBox.Show("Nếu rút trước thời hạn, bạn sẽ không được tính tiền lãi, bạn chắc chắn muốn rút không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (luachon == DialogResult.Yes)
                 {
-                    TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), ngayDangky, cbTenTKTK.Text, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
+                    TietKiem tkiem = new TietKiem(int.Parse(lblMatietkiem.Text), ngayDangky, cbTenTKTK.Text, 1, BigInteger.Parse(txtTiengoc.Text), int.Parse(txtKihan.Text), double.Parse(lblLaisuat.Text), BigInteger.Parse(lblTienlai.Text), BigInteger.Parse(lblTongtien.Text));
                     GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
                     tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
                     tknhDAO.Sua(tknh);

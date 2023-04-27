@@ -240,12 +240,12 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lbl2.Location = new System.Drawing.Point(106, 96);
+            this.lbl2.Location = new System.Drawing.Point(106, 94);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(42, 32);
+            this.lbl2.Size = new System.Drawing.Size(154, 32);
             this.lbl2.TabIndex = 137;
-            this.lbl2.Text = "ID:";
+            this.lbl2.Text = "Mã tiết kiệm:";
             // 
             // lblTienlai
             // 
@@ -264,7 +264,7 @@
             this.lblMatietkiem.AutoSize = true;
             this.lblMatietkiem.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMatietkiem.ForeColor = System.Drawing.Color.Black;
-            this.lblMatietkiem.Location = new System.Drawing.Point(172, 96);
+            this.lblMatietkiem.Location = new System.Drawing.Point(264, 96);
             this.lblMatietkiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMatietkiem.Name = "lblMatietkiem";
             this.lblMatietkiem.Size = new System.Drawing.Size(20, 29);
