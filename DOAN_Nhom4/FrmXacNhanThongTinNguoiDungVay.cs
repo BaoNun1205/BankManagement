@@ -47,6 +47,7 @@ namespace DOAN_Nhom4
             txt_SPVay.Text = ttNgDung.SpVay;
             txt_SoTienVay.Text = ttNgDung.SoTienVay.ToString("N0");
             txt_ThoiGianVay.Text = ttNgDung.ThoiGianVay.ToString();
+            txt_KhoanVay.Text = ttNgDung.LoaiKhoanVay;
             double lai;
             if (ttNgDung.SpVay == "NHU CAU NHA O")
             {

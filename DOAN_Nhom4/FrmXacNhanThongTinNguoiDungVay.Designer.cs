@@ -68,6 +68,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Huy = new CustomButton.VBButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_KhoanVay = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -76,7 +78,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(458, 20);
+            this.label2.Location = new System.Drawing.Point(458, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(414, 45);
             this.label2.TabIndex = 4;
@@ -229,7 +231,7 @@
             this.label32.BackColor = System.Drawing.Color.White;
             this.label32.Font = new System.Drawing.Font("Arial", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label32.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label32.Location = new System.Drawing.Point(90, 125);
+            this.label32.Location = new System.Drawing.Point(102, 104);
             this.label32.Name = "label32";
             this.label32.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label32.Size = new System.Drawing.Size(88, 21);
@@ -242,7 +244,7 @@
             this.label31.BackColor = System.Drawing.Color.White;
             this.label31.Font = new System.Drawing.Font("Arial", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label31.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label31.Location = new System.Drawing.Point(21, 82);
+            this.label31.Location = new System.Drawing.Point(21, 65);
             this.label31.Name = "label31";
             this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label31.Size = new System.Drawing.Size(169, 21);
@@ -376,7 +378,7 @@
             this.txt_ChiNhanhVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ChiNhanhVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_ChiNhanhVay.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_ChiNhanhVay.Location = new System.Drawing.Point(211, 81);
+            this.txt_ChiNhanhVay.Location = new System.Drawing.Point(211, 64);
             this.txt_ChiNhanhVay.Name = "txt_ChiNhanhVay";
             this.txt_ChiNhanhVay.ReadOnly = true;
             this.txt_ChiNhanhVay.Size = new System.Drawing.Size(298, 21);
@@ -388,7 +390,7 @@
             this.txt_NgayVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_NgayVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_NgayVay.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_NgayVay.Location = new System.Drawing.Point(211, 123);
+            this.txt_NgayVay.Location = new System.Drawing.Point(211, 104);
             this.txt_NgayVay.Name = "txt_NgayVay";
             this.txt_NgayVay.ReadOnly = true;
             this.txt_NgayVay.Size = new System.Drawing.Size(298, 21);
@@ -562,12 +564,39 @@
             this.textBox2.TabIndex = 81;
             this.textBox2.Text = "tháng";
             // 
+            // txt_KhoanVay
+            // 
+            this.txt_KhoanVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_KhoanVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_KhoanVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_KhoanVay.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_KhoanVay.Location = new System.Drawing.Point(211, 143);
+            this.txt_KhoanVay.Name = "txt_KhoanVay";
+            this.txt_KhoanVay.ReadOnly = true;
+            this.txt_KhoanVay.Size = new System.Drawing.Size(298, 21);
+            this.txt_KhoanVay.TabIndex = 83;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Arial", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label6.Location = new System.Drawing.Point(87, 143);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label6.Size = new System.Drawing.Size(100, 21);
+            this.label6.TabIndex = 82;
+            this.label6.Text = "Khoản vay";
+            // 
             // FrmXacNhanThongTinNguoiDungVay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1302, 840);
+            this.Controls.Add(this.txt_KhoanVay);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.panel1);
@@ -660,5 +689,7 @@
         private Panel panel1;
         private CustomButton.VBButton btn_Huy;
         private TextBox textBox2;
+        private TextBox txt_KhoanVay;
+        private Label label6;
     }
 }

@@ -33,11 +33,16 @@ namespace DOAN_Nhom4
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             KHNoXau kh = KHNoXauDAO.IsNull(tknh);
-
+            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(tknh.SoTK);
             if (kh == null)
             {
-                FrmVay frmVay = new FrmVay(nguoiDung, tknh, pnlNguoiDung);
-                DOAN_Nhom4.ClassAddForm.addForm(frmVay, pnlNguoiDung);
+                if (ttNgDung == null)
+                {
+                    FrmVay frmVay = new FrmVay(nguoiDung, tknh, pnlNguoiDung);
+                    DOAN_Nhom4.ClassAddForm.addForm(frmVay, pnlNguoiDung);
+                }
+                else
+                    MessageBox.Show("Bạn đang có khoản vay!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
