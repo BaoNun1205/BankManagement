@@ -33,6 +33,10 @@ namespace DOAN_Nhom4
         }
         private void FrmVay_Load(object sender, EventArgs e)
         {
+            HienThi();
+        }
+        private void HienThi()
+        {
             txt_HoTen.Text = nguoiDung.TenTK;
             txt_CCCD.Text = nguoiDung.Cccd;
             txt_SDT.Text = nguoiDung.Sdt;
@@ -77,7 +81,19 @@ namespace DOAN_Nhom4
                             ThongTinNguoiDungVay tmp = ttNgDungDAO.TKValid(nguoiDung.SoTK);
                             if (tmp == null)
                             {
-                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), s, txt_NgayVay.Value);
+                                string txt_LoaiKhoanVay = "";
+                                if (rb_TheChap.Checked)
+                                {
+                                    txt_LoaiKhoanVay = rb_TheChap.Text;
+                                }
+                                if (rb_TinChap.Checked)
+                                {
+                                    txt_LoaiKhoanVay = rb_TinChap.Text;
+                                    cb_SPVay.Text = "TIEU DUNG KHONG CO TAI SAN DAM BAO";
+                                    txt_TaiSan.Text = "Trong";
+                                    txt_GiaTriTaiSan.Text = "0";
+                                }
+                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(txt_LoaiKhoanVay, nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), txt_TaiSan.Text, int.Parse(txt_GiaTriTaiSan.Text), s, txt_NgayVay.Value);
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                                 DOAN_Nhom4.ClassAddForm.addForm(xacnhan, pnlNguoiDung);
                             }
@@ -98,9 +114,19 @@ namespace DOAN_Nhom4
         }
         public bool IsNull(object sender, EventArgs e)
         {
-            if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+            if (rb_TinChap.Checked)
             {
-                return true;
+                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+                {
+                    return true;
+                }
+            }
+            if(rb_TheChap.Checked)
+            {
+                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && txt_TaiSan.Text != null && txt_GiaTriTaiSan.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+                {
+                    return true;
+                }
             }
             return false;
         }
@@ -157,6 +183,26 @@ namespace DOAN_Nhom4
         {
             FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmtienIchVay, pnlNguoiDung);
+        }
+
+        private void rb_TinChap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_TinChap.Checked)
+            {
+                cb_SPVay.Enabled = false;
+                txt_TaiSan.Enabled = false;
+                txt_GiaTriTaiSan.Enabled = false;
+            }
+        }
+
+        private void rb_TheChap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb_TheChap.Checked)
+            {
+                cb_SPVay.Enabled = true;
+                txt_TaiSan.Enabled = true;
+                txt_GiaTriTaiSan.Enabled = true;
+            }
         }
     }
 }

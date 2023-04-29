@@ -9,6 +9,7 @@ namespace DOAN_Nhom4
 {
     public class ThongTinNguoiDungVay
     {
+        private string loaiKhoanVay;
         private string soTKVay;
         private string danhXung;
         private string hoTen;
@@ -21,6 +22,8 @@ namespace DOAN_Nhom4
         private string spVay;
         private BigInteger soTienVay;
         private int thoiGianVay;
+        private string taiSan;
+        private BigInteger giaTriTaiSan;
         private string chiNhanhVay;
         private DateTime ngayVay;
         private double lai;
@@ -28,7 +31,9 @@ namespace DOAN_Nhom4
         private DateTime ngayDenHan;
         private BigInteger tongSoTienPhaiTra;
         private BigInteger phiTraCham;
+        
 
+        public string LoaiKhoanVay { get => loaiKhoanVay; set => loaiKhoanVay = value; }
         public string SoTKVay { get => soTKVay; set => soTKVay = value; }
         public string DanhXung { get => danhXung; set => danhXung = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
@@ -41,6 +46,8 @@ namespace DOAN_Nhom4
         public string SpVay { get => spVay; set => spVay = value; }
         public BigInteger SoTienVay { get => soTienVay; set => soTienVay = value; }
         public int ThoiGianVay { get => thoiGianVay; set => thoiGianVay = value; }
+        public string TaiSan { get => taiSan; set => taiSan = value; }
+        public BigInteger GiaTriTaiSan { get => giaTriTaiSan; set => giaTriTaiSan = value; }
         public string ChiNhanhVay { get => chiNhanhVay; set => chiNhanhVay = value; }
         public DateTime NgayVay { get => ngayVay; set => ngayVay = value; }
         public double Lai { get => lai; set => lai = value; }
@@ -50,8 +57,9 @@ namespace DOAN_Nhom4
         public BigInteger PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
 
         public ThongTinNguoiDungVay() { }
-        public ThongTinNguoiDungVay(string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay, string chiNhanhVay, DateTime ngayVay)
+        public ThongTinNguoiDungVay(string loaiKhoanVay, string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay,string taiSan, BigInteger giaTriTaiSan, string chiNhanhVay, DateTime ngayVay)
         {
+            this.loaiKhoanVay = loaiKhoanVay;
             this.soTKVay = soTKVay;
             this.danhXung = danhXung;
             this.hoTen = hoTen;
@@ -64,6 +72,8 @@ namespace DOAN_Nhom4
             this.spVay = spVay;
             this.soTienVay = soTienVay;
             this.thoiGianVay = thoiGianVay;
+            this.taiSan = taiSan;
+            this.giaTriTaiSan = giaTriTaiSan;
             this.chiNhanhVay = chiNhanhVay;
             this.ngayVay = ngayVay;
         }

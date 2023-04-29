@@ -16,7 +16,7 @@ namespace DOAN_Nhom4
 
         public void Them(ThongTinNguoiDungVay ttNgDung)
         {
-            string sql = string.Format("INSERT INTO KhachHangVay(SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, SoTienHangThang, NgayDenHan, TongSoTienPhaiTra, PhiTraCham) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', {10}, {11}, '{12}', '{13}', '{14}', {15}, '{16}', {17}, {18})", ttNgDung.SoTKVay,ttNgDung.DanhXung, ttNgDung.HoTen, ttNgDung.Cccd, ttNgDung.DiaChi, ttNgDung.Sdt, ttNgDung.Email,ttNgDung.NgheNghiep, ttNgDung.ThuNhap, ttNgDung.SpVay,ttNgDung.SoTienVay, ttNgDung.ThoiGianVay, ttNgDung.ChiNhanhVay, ttNgDung.NgayVay, ttNgDung.Lai.ToString(), ttNgDung.SoTienHangThang, ttNgDung.NgayDenHan, ttNgDung.TongSoTienPhaiTra, ttNgDung.PhiTraCham);
+            string sql = string.Format("INSERT INTO KhachHangVay(LoaiKhoanVay, SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay,TaiSanTheChap, GiaTriTaiSan, ChiNhanhVay, NgayVay, LaiSuat, SoTienHangThang, NgayDenHan, TongSoTienPhaiTra, PhiTraCham) VALUES(N'{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', {11}, {12}, '{13}', {14}, '{15}', '{16}', '{17}', {18}, '{19}', {20}, {21})", ttNgDung.LoaiKhoanVay, ttNgDung.SoTKVay,ttNgDung.DanhXung, ttNgDung.HoTen, ttNgDung.Cccd, ttNgDung.DiaChi, ttNgDung.Sdt, ttNgDung.Email,ttNgDung.NgheNghiep, ttNgDung.ThuNhap, ttNgDung.SpVay,ttNgDung.SoTienVay, ttNgDung.ThoiGianVay,ttNgDung.TaiSan, ttNgDung.GiaTriTaiSan, ttNgDung.ChiNhanhVay, ttNgDung.NgayVay, ttNgDung.Lai.ToString(), ttNgDung.SoTienHangThang, ttNgDung.NgayDenHan, ttNgDung.TongSoTienPhaiTra, ttNgDung.PhiTraCham);
             data.xuLi(sql);
         }
         public void Sua(ThongTinNguoiDungVay ttNgDung)
@@ -38,18 +38,8 @@ namespace DOAN_Nhom4
         }
         public DataTable HienThi()
         {
-            string sql = string.Format("SELECT SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay");
+            string sql = string.Format("SELECT LoaiKhoanVay, SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay");
             return data.LayDanhSach(sql);
         }        
-        public void TimKiemDangThanhToan()
-        {
-            string sql = string.Format("SELECT SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay WHERE ThoiGianVay > 0");
-            data.xuLi(sql);
-        }
-        public void TimKiemThanhToanXong()
-        {
-            string sql = string.Format("SELECT SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay WHERE ThoiGianVay = 0");
-            data.xuLi(sql);
-        }
     }
 }

@@ -247,25 +247,28 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    ttNgDung.SoTKVay = reader.GetString(0);
-                    ttNgDung.DanhXung = reader.GetString(1);
-                    ttNgDung.HoTen = reader.GetString(2);
-                    ttNgDung.Cccd = reader.GetString(3);
-                    ttNgDung.DiaChi = reader.GetString(4);
-                    ttNgDung.Sdt = reader.GetString(5);
-                    ttNgDung.Email = reader.GetString(6);
-                    ttNgDung.NgheNghiep = reader.GetString(7);
-                    ttNgDung.ThuNhap = reader.GetString(8);
-                    ttNgDung.SpVay = reader.GetString(9);
-                    ttNgDung.SoTienVay = reader.GetInt64(10);
-                    ttNgDung.ThoiGianVay = reader.GetInt32(11);
-                    ttNgDung.ChiNhanhVay = reader.GetString(12);
-                    ttNgDung.NgayVay = reader.GetDateTime(13);
-                    ttNgDung.Lai = double.Parse(reader.GetString(14));
-                    ttNgDung.SoTienHangThang = reader.GetInt64(15);
-                    ttNgDung.NgayDenHan = reader.GetDateTime(16);
-                    ttNgDung.TongSoTienPhaiTra = reader.GetInt64(17);
-                    ttNgDung.PhiTraCham = reader.GetInt64(18);
+                    ttNgDung.LoaiKhoanVay = reader.GetString(0);
+                    ttNgDung.SoTKVay = reader.GetString(1);
+                    ttNgDung.DanhXung = reader.GetString(2);
+                    ttNgDung.HoTen = reader.GetString(3);
+                    ttNgDung.Cccd = reader.GetString(4);
+                    ttNgDung.DiaChi = reader.GetString(5);
+                    ttNgDung.Sdt = reader.GetString(6);
+                    ttNgDung.Email = reader.GetString(7);
+                    ttNgDung.NgheNghiep = reader.GetString(8);
+                    ttNgDung.ThuNhap = reader.GetString(9);
+                    ttNgDung.SpVay = reader.GetString(10);
+                    ttNgDung.SoTienVay = reader.GetInt64(11);
+                    ttNgDung.ThoiGianVay = reader.GetInt32(12);
+                    ttNgDung.TaiSan = reader.GetString(13);
+                    ttNgDung.GiaTriTaiSan = reader.GetInt64(14);
+                    ttNgDung.ChiNhanhVay = reader.GetString(15);
+                    ttNgDung.NgayVay = reader.GetDateTime(16);
+                    ttNgDung.Lai = double.Parse(reader.GetString(17));
+                    ttNgDung.SoTienHangThang = reader.GetInt64(18);
+                    ttNgDung.NgayDenHan = reader.GetDateTime(19);
+                    ttNgDung.TongSoTienPhaiTra = reader.GetInt64(20);
+                    ttNgDung.PhiTraCham = reader.GetInt64(21);
                 }
                 else
                     return null;
