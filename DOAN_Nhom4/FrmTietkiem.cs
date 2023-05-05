@@ -14,8 +14,6 @@ namespace DOAN_Nhom4
 {
     public partial class FrmTietkiem : Form
     {
-        private Random rand;
-        int maTietKiem;
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
@@ -23,6 +21,8 @@ namespace DOAN_Nhom4
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
+        private Random rand;
+        int maTietKiem;
         private string tenTKTK;
         private int loaiSo;
         private BigInteger tienGoc;
@@ -218,9 +218,7 @@ namespace DOAN_Nhom4
                 tenTKTK = txtTenTKTK.Text;
                 TietKiem tkiem = new TietKiem(maTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
                 GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
-                NguoiDung ngdung = new NguoiDung();
-                ngdung = kh;
-                tkiemDAO.Them(tkiem, ngdung);
+                tkiemDAO.Them(tkiem, kh);
                 lsgdDAO.Them(gd);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
