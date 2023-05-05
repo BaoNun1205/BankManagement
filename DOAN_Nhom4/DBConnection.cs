@@ -160,8 +160,8 @@ namespace DOAN_Nhom4
             try
             {
                 conn.Open();
-                SqlCommand cmdKH = new SqlCommand(sqlStr, conn);
-                cmdKH.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

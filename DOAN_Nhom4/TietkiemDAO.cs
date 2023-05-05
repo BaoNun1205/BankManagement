@@ -46,9 +46,9 @@ namespace DOAN_Nhom4
             return tienGoc + tienLai;
         }
 
-        public void Them(TietKiem tkiem)
+        public void Them(TietKiem tkiem, NguoiDung ngdung)
         {
-            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
+            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenNH, SoTK, MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", ngdung.TenNH, ngdung.SoTK, tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
             data.xuLi(sqlTkiem);
         }
 
