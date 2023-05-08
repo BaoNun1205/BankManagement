@@ -18,8 +18,8 @@ namespace DOAN_Nhom4
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         private ThongTinTinDung tttd = new ThongTinTinDung();
         private int menhGia = 0;
-        private string Stk;
-        private string loaiTaiKhoan;
+        private string Stk = "";
+        private string loaiTaiKhoan = "";
         private LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         private SoDienThoaiDAO sdtDAO = new SoDienThoaiDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -165,15 +165,34 @@ namespace DOAN_Nhom4
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            GiaoDich gd = new GiaoDich("Nap tien dien thoai", loaiTaiKhoan, kh.TenTK, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
-            lsgdDAO.Them(gd);
-            SoDienThoai sdt = sdtDAO.LaySoDienThoai("SDT", gd.SoTKNhan);
-            sdtDAO.ThanhToanVienThong(sdt, gd);
-            tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKGui, "TenNH", gd.NganHangGui);
-            FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
-            this.Hide();
-            frmThongbaoChuyentien.ShowDialog();
-            this.Close();
+            if (loaiTaiKhoan != "")
+            {
+                if (menhGia != 0)
+                {
+                    GiaoDich gd = new GiaoDich("Nap tien dien thoai", loaiTaiKhoan, kh.TenTK, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
+                    if (gd.SoTKNhan == "")
+                    {
+                        gd.SoTKNhan = kh.Sdt;
+                    }
+                    lsgdDAO.Them(gd);
+                    SoDienThoai sdt = sdtDAO.LaySoDienThoai("SDT", gd.SoTKNhan);
+                    sdtDAO.ThanhToanVienThong(sdt, gd);
+                    tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK, "TenNH", tknh.TenNH);
+                    FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
+                    this.Hide();
+                    frmThongbaoChuyentien.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Vui long chon menh gia nap");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chua chon loai thanh toan!");
+            }
+            
         }
     }
 }
