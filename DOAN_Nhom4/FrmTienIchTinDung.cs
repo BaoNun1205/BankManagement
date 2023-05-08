@@ -30,18 +30,21 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void lblThongTin_Click(object sender, EventArgs e)
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
-
+            tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
+            if (tttd == null)
+            {
+                FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
+                DOAN_Nhom4.ClassAddForm.addForm(frmDangKyTinDung, pnlNguoiDung);
+            }
+            else
+            {
+                MessageBox.Show("Bạn đã có tài khoản tín dụng!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btn_ThanhToan_Click(object sender, EventArgs e)
-        {
-            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmDangKyTinDung, pnlNguoiDung);
-        }
-
-        private void vbButton1_Click(object sender, EventArgs e)
+        private void btnThongTinThe_Click(object sender, EventArgs e)
         {
             tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             if (tttdDAO != null)
@@ -50,7 +53,7 @@ namespace DOAN_Nhom4
                 DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
             }
             else
-                MessageBox.Show("Bạn không có khoản vay nào!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn không có tài khoản tín dụng nào!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
         }
     }
