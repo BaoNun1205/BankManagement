@@ -93,7 +93,7 @@ namespace DOAN_Nhom4
                                     txt_TaiSan.Text = "Trong";
                                     txt_GiaTriTaiSan.Text = "0";
                                 }
-                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay(txt_LoaiKhoanVay, nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), txt_TaiSan.Text, int.Parse(txt_GiaTriTaiSan.Text), s, txt_NgayVay.Value);
+                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), txt_TaiSan.Text, int.Parse(txt_GiaTriTaiSan.Text), s, txt_NgayVay.Value);
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                                 DOAN_Nhom4.ClassAddForm.addForm(xacnhan, pnlNguoiDung);
                             }

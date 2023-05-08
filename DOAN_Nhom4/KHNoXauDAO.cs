@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
         public KHNoXauDAO() { }
         public void Them(KHNoXau kh)
         {
-            string sql = string.Format("INSERT INTO KhachHangNoXau(SoTK, TenTK, CCCD, NgayNo) Values('{0}', '{1}', '{2}', '{3}')", kh.SoTK, kh.TenTK, kh.Cccd, kh.NgayNo);
+            string sql = string.Format("INSERT INTO KhachHangNoXau(SoTK, TenTK, CCCD, NgayNo, TenNH) Values('{0}', '{1}', '{2}', '{3}', '{4}')", kh.SoTK, kh.TenTK, kh.Cccd, kh.NgayNo, kh.TenNH);
             data.xuLi(sql);
         }
         public void Xoa(KHNoXau kh)

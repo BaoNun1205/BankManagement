@@ -12,6 +12,7 @@ namespace DOAN_Nhom4
         private string tenTK;
         private string cccd;
         private DateTime ngayNo;
+        private string tenNH;
         public string SoTK
         {
             get { return soTK; }
@@ -35,13 +36,19 @@ namespace DOAN_Nhom4
                 ngayNo = value;
             }
         }
-        public KHNoXau() { }
-        public KHNoXau(string soTK, string tenTK, string cccd, DateTime ngayNo)
+        public string TenNH
         {
-            SoTK = soTK;
-            TenTK = tenTK;
-            Cccd = cccd;
-            NgayNo = ngayNo;
+            get { return tenNH; }
+            set { tenNH = value; }
+        }
+        public KHNoXau() { }
+        public KHNoXau(string soTK, string tenTK, string cccd, DateTime ngayNo, string tenNH)
+        {
+            this.soTK = soTK;
+            this.tenTK = tenTK;
+            this.cccd = cccd;
+            this.ngayNo = ngayNo;
+            this.tenNH = tenNH;
         }
     }
 }

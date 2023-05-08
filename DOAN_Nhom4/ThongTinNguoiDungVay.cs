@@ -9,6 +9,7 @@ namespace DOAN_Nhom4
 {
     public class ThongTinNguoiDungVay
     {
+        private string tenNH;
         private string loaiKhoanVay;
         private string soTKVay;
         private string danhXung;
@@ -32,7 +33,7 @@ namespace DOAN_Nhom4
         private BigInteger tongSoTienPhaiTra;
         private BigInteger phiTraCham;
         
-
+        public string TenNH { get =>  tenNH;  set => tenNH = value;  }
         public string LoaiKhoanVay { get => loaiKhoanVay; set => loaiKhoanVay = value; }
         public string SoTKVay { get => soTKVay; set => soTKVay = value; }
         public string DanhXung { get => danhXung; set => danhXung = value; }
@@ -57,8 +58,9 @@ namespace DOAN_Nhom4
         public BigInteger PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
 
         public ThongTinNguoiDungVay() { }
-        public ThongTinNguoiDungVay(string loaiKhoanVay, string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay,string taiSan, BigInteger giaTriTaiSan, string chiNhanhVay, DateTime ngayVay)
+        public ThongTinNguoiDungVay(string tenNH, string loaiKhoanVay, string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay,string taiSan, BigInteger giaTriTaiSan, string chiNhanhVay, DateTime ngayVay)
         {
+            this.tenNH = tenNH;
             this.loaiKhoanVay = loaiKhoanVay;
             this.soTKVay = soTKVay;
             this.danhXung = danhXung;
