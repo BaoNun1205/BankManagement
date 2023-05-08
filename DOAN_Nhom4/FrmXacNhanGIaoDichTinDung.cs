@@ -46,15 +46,22 @@ namespace DOAN_Nhom4
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenTK, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTKTinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
-            tknhDAO.RutTien(tknh, gd);
-            tttdDAO.CapNhatTinDungHangThang(tttd);
-            tttdDAO.Update(tttd);
-            tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
-            lsgdDAO.Them(gd);
-            FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
-            frmThongbaoChuyentien.ShowDialog();
-            this.Close();
+            if (tknh.SoDu >= Int64.Parse(lblHienThiTongSoTien.Text))
+            {
+                GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenTK, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTKTinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
+                tknhDAO.RutTien(tknh, gd);
+                tttdDAO.CapNhatTinDungHangThang(tttd);
+                tttdDAO.Update(tttd);
+                tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
+                lsgdDAO.Them(gd);
+                FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
+                frmThongbaoChuyentien.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Số dư của bạn không đủ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)

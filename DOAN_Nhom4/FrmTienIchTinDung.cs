@@ -47,7 +47,7 @@ namespace DOAN_Nhom4
         private void btnThongTinThe_Click(object sender, EventArgs e)
         {
             tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
-            if (tttdDAO != null)
+            if (tttd != null)
             {
                 lblNgaySaoKe frmThongTinTaiKhoangTinDung = new lblNgaySaoKe(kh, tknh, pnlNguoiDung, tttd);
                 DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
