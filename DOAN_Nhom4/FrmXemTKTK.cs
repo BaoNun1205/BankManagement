@@ -42,7 +42,7 @@ namespace DOAN_Nhom4
 
         private void FrmXemTKTK_Load(object sender, EventArgs e)
         {
-            danhSachLuaChon = tietkiemDAO.LayCotTKTK("MaTietKiem");
+            danhSachLuaChon = tietkiemDAO.LayCotTKTK("MaTietKiem", tknh);
             foreach (string matk in danhSachLuaChon)
             {
                 TietKiem tkiem = new TietKiem();

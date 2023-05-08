@@ -116,7 +116,7 @@
             this.btnCaidat.FlatAppearance.BorderSize = 0;
             this.btnCaidat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaidat.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCaidat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnCaidat.ForeColor = System.Drawing.Color.White;
             this.btnCaidat.Image = global::DOAN_Nhom4.Properties.Resources.settings2;
             this.btnCaidat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaidat.Location = new System.Drawing.Point(0, 721);
@@ -126,7 +126,7 @@
             this.btnCaidat.Size = new System.Drawing.Size(265, 88);
             this.btnCaidat.TabIndex = 41;
             this.btnCaidat.Text = "  Cài đặt";
-            this.btnCaidat.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnCaidat.TextColor = System.Drawing.Color.White;
             this.btnCaidat.UseVisualStyleBackColor = false;
             this.btnCaidat.Click += new System.EventHandler(this.btnCaidat_Click);
             // 
@@ -314,7 +314,7 @@
             this.btnDangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangxuat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDangxuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnDangxuat.ForeColor = System.Drawing.Color.White;
             this.btnDangxuat.Location = new System.Drawing.Point(0, 43);
             this.btnDangxuat.Name = "btnDangxuat";
             this.btnDangxuat.Size = new System.Drawing.Size(153, 45);
@@ -328,7 +328,7 @@
             this.btnBaomat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.btnBaomat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaomat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBaomat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnBaomat.ForeColor = System.Drawing.Color.White;
             this.btnBaomat.Location = new System.Drawing.Point(0, -1);
             this.btnBaomat.Name = "btnBaomat";
             this.btnBaomat.Size = new System.Drawing.Size(153, 45);

@@ -24,10 +24,10 @@ namespace DOAN_Nhom4
             return tktk;
         }
 
-        public List<string> LayCotTKTK(string tenCot)
+        public List<string> LayCotTKTK(string tenCot, TaiKhoanNganHang tknh)
         {
             List<string> cot = new List<string>();
-            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem");
+            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNH, tknh.SoTK);
             cot = data.LayCot(sql, tenCot);
             return cot;
         }
@@ -46,9 +46,9 @@ namespace DOAN_Nhom4
             return tienGoc + tienLai;
         }
 
-        public void Them(TietKiem tkiem, NguoiDung ngdung)
+        public void Them(TietKiem tkiem, TaiKhoanNganHang tknh)
         {      
-            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenNH, SoTK, MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", ngdung.TenNH, ngdung.SoTK, tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
+            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenNH, SoTK, MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", tknh.TenNH, tknh.SoTK, tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
             data.xuLi(sqlTkiem);
         }
 
@@ -82,7 +82,7 @@ namespace DOAN_Nhom4
         {
             List<string> matks = new List<string>();
             List<TietKiem> tkiems = new List<TietKiem>();
-            matks = LayCotTKTK("MaTietKiem");
+            matks = LayCotTKTK("MaTietKiem", tknh);
             foreach (string matk in matks)
             {
                 TietKiem tkiem = new TietKiem();
