@@ -59,7 +59,7 @@ namespace DOAN_Nhom4
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
-            FrmThongTinTaiKhoangTinDung frmThongTinTaiKhoangTinDung = new FrmThongTinTaiKhoangTinDung(kh, tknh, pnlNguoiDung, tttd);
+            lblNgaySaoKe frmThongTinTaiKhoangTinDung = new lblNgaySaoKe(kh, tknh, pnlNguoiDung, tttd);
             DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
         }
     }

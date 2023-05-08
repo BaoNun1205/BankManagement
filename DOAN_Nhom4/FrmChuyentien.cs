@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
             }
             cbTennguoinhan.Items.AddRange(danhSachNguoiDung.ToArray());
             cbTennguoinhan.DisplayMember = "ThongTinCoBan";
-            lblSoDu.Text = tknh.SoDu.ToString();
+            lblSoDu.Text = tknh.SoDu.ToString("N0") + " VNĐ";
         }
        
         private void btnHuy_Click(object sender, EventArgs e)

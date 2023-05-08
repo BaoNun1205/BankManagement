@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
-    public partial class FrmThongTinTaiKhoangTinDung : Form
+    public partial class lblNgaySaoKe : Form
     {
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private  ThongTinTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
-        public FrmThongTinTaiKhoangTinDung()
+        public lblNgaySaoKe()
         {
             InitializeComponent();
         }
 
-        public FrmThongTinTaiKhoangTinDung(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
+        public lblNgaySaoKe(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
         {
             InitializeComponent();
             this.kh = kh;
@@ -36,10 +36,12 @@ namespace DOAN_Nhom4
         {
             lblHienThiSoTK.Text = tttd.SoTKTinDung.ToString();
             lblHienThiLoaiThe.Text = tttd.LoaiThe.ToString();
-            lblHienThiNgayDaoHan.Text = tttd.NgayDaoHan.ToString("dd/MM/yyyy");
+            lblHienThiHanThanhToan.Text = tttd.HanThanhToan.ToString("dd/MM/yyyy");
+            lblHienThiNgaySaoKe.Text = tttd.NgaySaoKe.ToString("dd/MM/yyyy");
             lblHienThiHanMuc.Text = tttd.HanMuc.ToString("N0");
-            lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString();
+            lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString() + '%';
             lblHienThiSoTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString("N0");
+            lblHienThiSoTienSuDungSau.Text = tttd.SoTienSuDungSau.ToString("N0");
             if (tttdDAO.IsNgayDenHan(tttd))
             {
                 CapNhatPhi();
@@ -50,8 +52,15 @@ namespace DOAN_Nhom4
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            FrmXacNhanGIaoDichTinDung frmXacNhanGIaoDichTinDung = new FrmXacNhanGIaoDichTinDung(kh, tknh, pnlNguoiDung, tttd);
-            DOAN_Nhom4.ClassAddForm.addForm(frmXacNhanGIaoDichTinDung, pnlNguoiDung);
+            if (DateTime.Now > tttd.NgaySaoKe)
+            {
+                FrmXacNhanGIaoDichTinDung frmXacNhanGIaoDichTinDung = new FrmXacNhanGIaoDichTinDung(kh, tknh, pnlNguoiDung, tttd);
+                DOAN_Nhom4.ClassAddForm.addForm(frmXacNhanGIaoDichTinDung, pnlNguoiDung);
+            }
+            else
+            {
+                MessageBox.Show("Chưa đến ngày sao kê!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         public void CapNhatPhi()
