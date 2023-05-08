@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
                 DialogResult luachon = MessageBox.Show("Nếu rút trước thời hạn, bạn sẽ không được tính tiền lãi, bạn chắc chắn muốn rút không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (luachon == DialogResult.Yes)
                 {                   
-                    TietKiem tkiem = tietkiemDAO.LayThongTinSoTietKiem("MaTietKiem", lblMatietkiem.Text);
+                    TietKiem tkiem = tietkiemDAO.LayThongTinSoTietKiem("MaTietKiem", lblMaTietKiem.Text);
                     GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
                     tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
                     tknhDAO.Sua(tknh);
@@ -89,7 +89,7 @@ namespace DOAN_Nhom4
                 TietKiem tkiem = (TietKiem)cbTenTKTK.SelectedItem;
                 DateTime ngayToihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
                 ngayDangky = tkiem.NgayDangky;
-                lblMatietkiem.Text = tkiem.MaTietKiem.ToString();
+                lblMaTietKiem.Text = tkiem.MaTietKiem.ToString();
                 txtKihan.Text = tkiem.KiHan.ToString();
                 txtTiengoc.Text = tkiem.TienGoc.ToString();
                 lblTienlai.Text = tkiem.TienLai.ToString();

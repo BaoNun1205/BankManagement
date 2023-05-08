@@ -22,7 +22,7 @@ namespace DOAN_Nhom4
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
         private Random rand;
-        int maTietKiem;
+        int MaTietKiem;
         private string tenTKTK;
         private int loaiSo;
         private BigInteger tienGoc;
@@ -54,7 +54,7 @@ namespace DOAN_Nhom4
         {
             tkiemDAO.KiemTraSoTietKiem(tknh);
             rand = new Random();
-            maTietKiem = rand.Next(100000, 999999);
+            MaTietKiem = rand.Next(100000, 999999);
             foreach (LoaiSoTietKiem gt in Enum.GetValues(typeof(LoaiSoTietKiem)))
             {
                 cbLoaiSTK.Items.Add(new KeyValuePair<LoaiSoTietKiem, string>(gt, gt.NoiDungLoaiSoTietKiem()));
@@ -211,20 +211,22 @@ namespace DOAN_Nhom4
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            if (KiemTraThongTin() == true)
+           /* if (KiemTraThongTin() == true)
             {
-                tknh.SoDu = tknh.SoDu - tienGoc;
-                tknhDAO.Sua(tknh);
+                //tknh.SoDu = tknh.SoDu - tienGoc;
+                //tknhDAO.Sua(tknh);
                 tenTKTK = txtTenTKTK.Text;
-                TietKiem tkiem = new TietKiem(maTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
-                GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
-                tkiemDAO.Them(tkiem, kh);
-                lsgdDAO.Them(gd);
+                TietKiem tkiem = new TietKiem(MaTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
+                GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, MaTietKiem.ToString(), int.Parse(txtSotien.Text), "");
+                //tkiemDAO.Them(tkiem, kh);
+                //tkiemDAO.Them2(tkiem);
+                //lsgdDAO.Them(gd);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
                 DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
-            }    
-            else MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }   */ 
+            MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
         }
 
         private void lblTKTK_Click(object sender, EventArgs e)

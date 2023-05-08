@@ -44,7 +44,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lblTienlai = new System.Windows.Forms.Label();
-            this.lblMatietkiem = new System.Windows.Forms.Label();
+            this.lblMaTietKiem = new System.Windows.Forms.Label();
             this.lblLaisuat = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.lbl2);
             this.panel1.Controls.Add(this.lblTienlai);
-            this.panel1.Controls.Add(this.lblMatietkiem);
+            this.panel1.Controls.Add(this.lblMaTietKiem);
             this.panel1.Controls.Add(this.lblLaisuat);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label6);
@@ -259,17 +259,17 @@
             this.lblTienlai.TabIndex = 136;
             this.lblTienlai.Text = " ";
             // 
-            // lblMatietkiem
+            // lblMaTietKiem
             // 
-            this.lblMatietkiem.AutoSize = true;
-            this.lblMatietkiem.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMatietkiem.ForeColor = System.Drawing.Color.Black;
-            this.lblMatietkiem.Location = new System.Drawing.Point(264, 96);
-            this.lblMatietkiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMatietkiem.Name = "lblMatietkiem";
-            this.lblMatietkiem.Size = new System.Drawing.Size(20, 29);
-            this.lblMatietkiem.TabIndex = 135;
-            this.lblMatietkiem.Text = " ";
+            this.lblMaTietKiem.AutoSize = true;
+            this.lblMaTietKiem.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMaTietKiem.ForeColor = System.Drawing.Color.Black;
+            this.lblMaTietKiem.Location = new System.Drawing.Point(264, 96);
+            this.lblMaTietKiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMaTietKiem.Name = "lblMaTietKiem";
+            this.lblMaTietKiem.Size = new System.Drawing.Size(20, 29);
+            this.lblMaTietKiem.TabIndex = 135;
+            this.lblMaTietKiem.Text = " ";
             // 
             // lblLaisuat
             // 
@@ -472,7 +472,7 @@
         private Panel panel7;
         private Label lbl2;
         private Label lblTienlai;
-        private Label lblMatietkiem;
+        private Label lblMaTietKiem;
         private Label lblLaisuat;
         private Panel panel4;
         private Label label6;
