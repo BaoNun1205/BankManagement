@@ -45,12 +45,6 @@
             lblDate.Location = new Point(x2, y2 + 2*lblTime.Height);
         }
 
-        private void lblXemLsgd_Click(object sender, EventArgs e)
-        {
-            FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh);
-            DOAN_Nhom4.ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();

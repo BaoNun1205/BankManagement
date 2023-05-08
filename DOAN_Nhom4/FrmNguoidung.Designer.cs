@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNguoidung));
             this.pnlDanhmuc = new System.Windows.Forms.Panel();
+            this.btnHotro = new CustomButton.VBButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCaidat = new CustomButton.VBButton();
-            this.btnHotro = new CustomButton.VBButton();
+            this.btnLsgd = new CustomButton.VBButton();
             this.btnTienich = new CustomButton.VBButton();
             this.btnChuyentien = new CustomButton.VBButton();
             this.btnTaikhoan = new CustomButton.VBButton();
             this.lblTenTK = new System.Windows.Forms.Label();
             this.lblXinchao = new System.Windows.Forms.Label();
             this.pnlNguoidung = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlTrendau = new System.Windows.Forms.Panel();
             this.ptbMini = new System.Windows.Forms.PictureBox();
             this.pBThoat = new System.Windows.Forms.PictureBox();
             this.pnlLuachonCD = new System.Windows.Forms.Panel();
@@ -47,7 +48,7 @@
             this.btnBaomat = new System.Windows.Forms.Button();
             this.pnlDanhmuc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.pnlTrendau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).BeginInit();
             this.pnlLuachonCD.SuspendLayout();
@@ -56,9 +57,10 @@
             // pnlDanhmuc
             // 
             this.pnlDanhmuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.pnlDanhmuc.Controls.Add(this.btnHotro);
             this.pnlDanhmuc.Controls.Add(this.pictureBox1);
             this.pnlDanhmuc.Controls.Add(this.btnCaidat);
-            this.pnlDanhmuc.Controls.Add(this.btnHotro);
+            this.pnlDanhmuc.Controls.Add(this.btnLsgd);
             this.pnlDanhmuc.Controls.Add(this.btnTienich);
             this.pnlDanhmuc.Controls.Add(this.btnChuyentien);
             this.pnlDanhmuc.Controls.Add(this.btnTaikhoan);
@@ -66,6 +68,30 @@
             this.pnlDanhmuc.Name = "pnlDanhmuc";
             this.pnlDanhmuc.Size = new System.Drawing.Size(265, 809);
             this.pnlDanhmuc.TabIndex = 53;
+            // 
+            // btnHotro
+            // 
+            this.btnHotro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnHotro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnHotro.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHotro.BorderRadius = 0;
+            this.btnHotro.BorderSize = 2;
+            this.btnHotro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHotro.FlatAppearance.BorderSize = 0;
+            this.btnHotro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHotro.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHotro.ForeColor = System.Drawing.Color.White;
+            this.btnHotro.Image = global::DOAN_Nhom4.Properties.Resources.customer_support1;
+            this.btnHotro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHotro.Location = new System.Drawing.Point(0, 360);
+            this.btnHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnHotro.Name = "btnHotro";
+            this.btnHotro.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnHotro.Size = new System.Drawing.Size(264, 88);
+            this.btnHotro.TabIndex = 55;
+            this.btnHotro.Text = "  Hỗ trợ";
+            this.btnHotro.TextColor = System.Drawing.Color.White;
+            this.btnHotro.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -104,29 +130,30 @@
             this.btnCaidat.UseVisualStyleBackColor = false;
             this.btnCaidat.Click += new System.EventHandler(this.btnCaidat_Click);
             // 
-            // btnHotro
+            // btnLsgd
             // 
-            this.btnHotro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btnHotro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btnHotro.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHotro.BorderRadius = 0;
-            this.btnHotro.BorderSize = 2;
-            this.btnHotro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHotro.FlatAppearance.BorderSize = 0;
-            this.btnHotro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHotro.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHotro.ForeColor = System.Drawing.Color.White;
-            this.btnHotro.Image = global::DOAN_Nhom4.Properties.Resources.customer_support1;
-            this.btnHotro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHotro.Location = new System.Drawing.Point(2, 360);
-            this.btnHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnHotro.Name = "btnHotro";
-            this.btnHotro.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnHotro.Size = new System.Drawing.Size(264, 88);
-            this.btnHotro.TabIndex = 39;
-            this.btnHotro.Text = "  Hỗ trợ";
-            this.btnHotro.TextColor = System.Drawing.Color.White;
-            this.btnHotro.UseVisualStyleBackColor = false;
+            this.btnLsgd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnLsgd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.btnLsgd.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLsgd.BorderRadius = 0;
+            this.btnLsgd.BorderSize = 2;
+            this.btnLsgd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLsgd.FlatAppearance.BorderSize = 0;
+            this.btnLsgd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLsgd.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLsgd.ForeColor = System.Drawing.Color.White;
+            this.btnLsgd.Image = global::DOAN_Nhom4.Properties.Resources.payment;
+            this.btnLsgd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLsgd.Location = new System.Drawing.Point(1, 450);
+            this.btnLsgd.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnLsgd.Name = "btnLsgd";
+            this.btnLsgd.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnLsgd.Size = new System.Drawing.Size(264, 88);
+            this.btnLsgd.TabIndex = 39;
+            this.btnLsgd.Text = "          Lịch sử              giao dịch";
+            this.btnLsgd.TextColor = System.Drawing.Color.White;
+            this.btnLsgd.UseVisualStyleBackColor = false;
+            this.btnLsgd.Click += new System.EventHandler(this.btnLsgd_Click);
             // 
             // btnTienich
             // 
@@ -236,18 +263,18 @@
             this.pnlNguoidung.Size = new System.Drawing.Size(1139, 720);
             this.pnlNguoidung.TabIndex = 54;
             // 
-            // panel3
+            // pnlTrendau
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.panel3.Controls.Add(this.ptbMini);
-            this.panel3.Controls.Add(this.pBThoat);
-            this.panel3.Controls.Add(this.lblXinchao);
-            this.panel3.Controls.Add(this.lblTenTK);
-            this.panel3.Location = new System.Drawing.Point(265, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1150, 91);
-            this.panel3.TabIndex = 55;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.pnlTrendau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.pnlTrendau.Controls.Add(this.ptbMini);
+            this.pnlTrendau.Controls.Add(this.pBThoat);
+            this.pnlTrendau.Controls.Add(this.lblXinchao);
+            this.pnlTrendau.Controls.Add(this.lblTenTK);
+            this.pnlTrendau.Location = new System.Drawing.Point(265, 0);
+            this.pnlTrendau.Name = "pnlTrendau";
+            this.pnlTrendau.Size = new System.Drawing.Size(1150, 91);
+            this.pnlTrendau.TabIndex = 55;
+            this.pnlTrendau.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTrendau_MouseDown);
             // 
             // ptbMini
             // 
@@ -317,7 +344,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1405, 808);
             this.Controls.Add(this.pnlLuachonCD);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlTrendau);
             this.Controls.Add(this.pnlNguoidung);
             this.Controls.Add(this.pnlDanhmuc);
             this.ForeColor = System.Drawing.Color.CornflowerBlue;
@@ -329,8 +356,8 @@
             this.Load += new System.EventHandler(this.FrmNguoidung_Load);
             this.pnlDanhmuc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlTrendau.ResumeLayout(false);
+            this.pnlTrendau.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).EndInit();
             this.pnlLuachonCD.ResumeLayout(false);
@@ -342,12 +369,12 @@
 
         private Panel pnlDanhmuc;
         private CustomButton.VBButton btnCaidat;
-        private CustomButton.VBButton btnHotro;
+        private CustomButton.VBButton btnLsgd;
         private CustomButton.VBButton btnTienich;
         private CustomButton.VBButton btnChuyentien;
         private CustomButton.VBButton btnTaikhoan;
         private Panel pnlNguoidung;
-        private Panel panel3;
+        private Panel pnlTrendau;
         private Label lblTenTK;
         private Label lblXinchao;
         private PictureBox pBThoat;
@@ -356,5 +383,6 @@
         private Panel pnlLuachonCD;
         private Button btnDangxuat;
         private Button btnBaomat;
+        private CustomButton.VBButton btnHotro;
     }
 }

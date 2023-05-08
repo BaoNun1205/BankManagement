@@ -75,12 +75,6 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void panel3_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void ptbMini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -110,6 +104,18 @@ namespace DOAN_Nhom4
         {
             if (pnlLuachonCD.Visible == true) pnlLuachonCD.Visible = false;
             else pnlLuachonCD.Visible = true;
+        }
+
+        private void pnlTrendau_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnLsgd_Click(object sender, EventArgs e)
+        {
+            FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh);
+            DOAN_Nhom4.ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
         }
     }
 }

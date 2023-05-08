@@ -86,7 +86,6 @@
             this.pnlTietkiem.Name = "pnlTietkiem";
             this.pnlTietkiem.Size = new System.Drawing.Size(1071, 690);
             this.pnlTietkiem.TabIndex = 0;
-            this.pnlTietkiem.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTietkiem_Paint);
             // 
             // label2
             // 

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrangchu));
             this.label2 = new System.Windows.Forms.Label();
             this.ptbLoGo = new System.Windows.Forms.PictureBox();
-            this.lblXemLsgd = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new System.Windows.Forms.Label();
@@ -56,18 +55,6 @@
             this.ptbLoGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbLoGo.TabIndex = 14;
             this.ptbLoGo.TabStop = false;
-            // 
-            // lblXemLsgd
-            // 
-            this.lblXemLsgd.AutoSize = true;
-            this.lblXemLsgd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblXemLsgd.ForeColor = System.Drawing.Color.Black;
-            this.lblXemLsgd.Location = new System.Drawing.Point(917, 9);
-            this.lblXemLsgd.Name = "lblXemLsgd";
-            this.lblXemLsgd.Size = new System.Drawing.Size(210, 30);
-            this.lblXemLsgd.TabIndex = 15;
-            this.lblXemLsgd.Text = "Xem lịch sử giao dịch";
-            this.lblXemLsgd.Click += new System.EventHandler(this.lblXemLsgd_Click);
             // 
             // lblDate
             // 
@@ -103,7 +90,6 @@
             this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblXemLsgd);
             this.Controls.Add(this.ptbLoGo);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.Color.Black;
@@ -126,7 +112,6 @@
 
         private Label label2;
         private PictureBox ptbLoGo;
-        private Label lblXemLsgd;
         private Label lblDate;
         private System.Windows.Forms.Timer timer1;
         private Label lblTime;
