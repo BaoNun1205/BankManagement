@@ -43,7 +43,6 @@
             this.pnlChuyentien = new System.Windows.Forms.Panel();
             this.cbTennguoinhan = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblTenTKhoan = new System.Windows.Forms.Label();
             this.lblSoDuString = new System.Windows.Forms.Label();
             this.lblSoDu = new System.Windows.Forms.Label();
             this.lblTenTK = new System.Windows.Forms.Label();
@@ -224,7 +223,6 @@
             this.pnlChuyentien.Controls.Add(this.cbTennguoinhan);
             this.pnlChuyentien.Controls.Add(this.label6);
             this.pnlChuyentien.Controls.Add(this.txtSTK);
-            this.pnlChuyentien.Controls.Add(this.lblTenTKhoan);
             this.pnlChuyentien.Controls.Add(this.lblSoDuString);
             this.pnlChuyentien.Controls.Add(this.lblSoDu);
             this.pnlChuyentien.Controls.Add(this.lblTenTK);
@@ -264,17 +262,6 @@
             this.label6.Size = new System.Drawing.Size(98, 19);
             this.label6.TabIndex = 29;
             this.label6.Text = "Người nhận:";
-            // 
-            // lblTenTKhoan
-            // 
-            this.lblTenTKhoan.AutoSize = true;
-            this.lblTenTKhoan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTenTKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTenTKhoan.Location = new System.Drawing.Point(302, 205);
-            this.lblTenTKhoan.Name = "lblTenTKhoan";
-            this.lblTenTKhoan.Size = new System.Drawing.Size(15, 19);
-            this.lblTenTKhoan.TabIndex = 28;
-            this.lblTenTKhoan.Text = "-";
             // 
             // lblSoDuString
             // 
@@ -349,7 +336,6 @@
         private Label lblTenTK;
         private Label lblSoDu;
         private Label lblSoDuString;
-        private Label lblTenTKhoan;
         private Label label6;
         private ComboBox cbTennguoinhan;
     }
