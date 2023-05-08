@@ -34,8 +34,8 @@
             this.ptbTheTinDungFlexi = new System.Windows.Forms.PictureBox();
             this.LblGioiThieu = new System.Windows.Forms.Label();
             this.lblCacLoaiThe = new System.Windows.Forms.Label();
-            this.btn_ThanhToan = new CustomButton.VBButton();
-            this.vbButton1 = new CustomButton.VBButton();
+            this.btnDangKy = new CustomButton.VBButton();
+            this.btnThongTinThe = new CustomButton.VBButton();
             this.lblThongTinThem = new System.Windows.Forms.Label();
             this.lblThongTinMoRong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDungPlatinum)).BeginInit();
@@ -45,30 +45,29 @@
             // lblTinDung
             // 
             this.lblTinDung.AutoSize = true;
-            this.lblTinDung.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTinDung.Font = new System.Drawing.Font("Myriad Pro", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTinDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblTinDung.Location = new System.Drawing.Point(428, 52);
+            this.lblTinDung.Location = new System.Drawing.Point(412, 52);
             this.lblTinDung.Name = "lblTinDung";
-            this.lblTinDung.Size = new System.Drawing.Size(298, 65);
+            this.lblTinDung.Size = new System.Drawing.Size(338, 79);
             this.lblTinDung.TabIndex = 0;
             this.lblTinDung.Text = "HHB CARD";
             // 
             // lblThongTin
             // 
             this.lblThongTin.AutoSize = true;
-            this.lblThongTin.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblThongTin.Font = new System.Drawing.Font("Myriad Pro", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblThongTin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(59)))), ((int)(((byte)(158)))));
-            this.lblThongTin.Location = new System.Drawing.Point(298, 149);
+            this.lblThongTin.Location = new System.Drawing.Point(290, 149);
             this.lblThongTin.Name = "lblThongTin";
-            this.lblThongTin.Size = new System.Drawing.Size(570, 28);
+            this.lblThongTin.Size = new System.Drawing.Size(610, 33);
             this.lblThongTin.TabIndex = 1;
             this.lblThongTin.Text = "DỊCH VỤ DÀNH CHO CÁ NHÂN VÀ DOANH NGHIỆP";
-            this.lblThongTin.Click += new System.EventHandler(this.lblThongTin_Click);
             // 
             // ptbTheTinDungPlatinum
             // 
             this.ptbTheTinDungPlatinum.Image = global::DOAN_Nhom4.Properties.Resources.hhb_visa_platinum_cashback;
-            this.ptbTheTinDungPlatinum.Location = new System.Drawing.Point(12, 246);
+            this.ptbTheTinDungPlatinum.Location = new System.Drawing.Point(8, 246);
             this.ptbTheTinDungPlatinum.Name = "ptbTheTinDungPlatinum";
             this.ptbTheTinDungPlatinum.Size = new System.Drawing.Size(425, 237);
             this.ptbTheTinDungPlatinum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +77,7 @@
             // ptbTheTinDungFlexi
             // 
             this.ptbTheTinDungFlexi.Image = global::DOAN_Nhom4.Properties.Resources.hhb_visa_Flexi;
-            this.ptbTheTinDungFlexi.Location = new System.Drawing.Point(703, 242);
+            this.ptbTheTinDungFlexi.Location = new System.Drawing.Point(706, 242);
             this.ptbTheTinDungFlexi.Name = "ptbTheTinDungFlexi";
             this.ptbTheTinDungFlexi.Size = new System.Drawing.Size(424, 241);
             this.ptbTheTinDungFlexi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,10 +87,10 @@
             // LblGioiThieu
             // 
             this.LblGioiThieu.AutoSize = true;
-            this.LblGioiThieu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblGioiThieu.Location = new System.Drawing.Point(443, 271);
+            this.LblGioiThieu.Font = new System.Drawing.Font("Myriad Pro", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblGioiThieu.Location = new System.Drawing.Point(440, 271);
             this.LblGioiThieu.Name = "LblGioiThieu";
-            this.LblGioiThieu.Size = new System.Drawing.Size(261, 66);
+            this.LblGioiThieu.Size = new System.Drawing.Size(262, 63);
             this.LblGioiThieu.TabIndex = 78;
             this.LblGioiThieu.Text = "Trãi nghiệm phong cách sống\r\nhiện đại và tận hưởng các dịch vụ \r\ncao cấp với thẻ " +
     "tín dung HHB";
@@ -100,63 +99,63 @@
             // lblCacLoaiThe
             // 
             this.lblCacLoaiThe.AutoSize = true;
-            this.lblCacLoaiThe.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCacLoaiThe.Location = new System.Drawing.Point(437, 371);
+            this.lblCacLoaiThe.Font = new System.Drawing.Font("Myriad Pro", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCacLoaiThe.Location = new System.Drawing.Point(441, 382);
             this.lblCacLoaiThe.Name = "lblCacLoaiThe";
-            this.lblCacLoaiThe.Size = new System.Drawing.Size(265, 66);
+            this.lblCacLoaiThe.Size = new System.Drawing.Size(257, 63);
             this.lblCacLoaiThe.TabIndex = 79;
             this.lblCacLoaiThe.Text = "Thẻ HHB Visa Infinite\r\nThẻ HHB Visa Flexi\r\nThẻ HHB Visa Platinum CashBack";
             this.lblCacLoaiThe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_ThanhToan
+            // btnDangKy
             // 
-            this.btn_ThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_ThanhToan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_ThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ThanhToan.BorderRadius = 20;
-            this.btn_ThanhToan.BorderSize = 0;
-            this.btn_ThanhToan.FlatAppearance.BorderSize = 0;
-            this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThanhToan.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ThanhToan.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(443, 510);
-            this.btn_ThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(244, 63);
-            this.btn_ThanhToan.TabIndex = 86;
-            this.btn_ThanhToan.Text = "Đăng ký ngay";
-            this.btn_ThanhToan.TextColor = System.Drawing.SystemColors.Window;
-            this.btn_ThanhToan.UseVisualStyleBackColor = false;
-            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
+            this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangKy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDangKy.BorderRadius = 20;
+            this.btnDangKy.BorderSize = 0;
+            this.btnDangKy.FlatAppearance.BorderSize = 0;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Myriad Pro", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDangKy.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDangKy.Location = new System.Drawing.Point(454, 510);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(244, 63);
+            this.btnDangKy.TabIndex = 86;
+            this.btnDangKy.Text = "Đăng ký ngay";
+            this.btnDangKy.TextColor = System.Drawing.SystemColors.Window;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
-            // vbButton1
+            // btnThongTinThe
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vbButton1.ForeColor = System.Drawing.SystemColors.Window;
-            this.vbButton1.Location = new System.Drawing.Point(443, 599);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(244, 63);
-            this.vbButton1.TabIndex = 87;
-            this.vbButton1.Text = "Thông tin thẻ";
-            this.vbButton1.TextColor = System.Drawing.SystemColors.Window;
-            this.vbButton1.UseVisualStyleBackColor = false;
-            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
+            this.btnThongTinThe.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnThongTinThe.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.btnThongTinThe.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThongTinThe.BorderRadius = 20;
+            this.btnThongTinThe.BorderSize = 0;
+            this.btnThongTinThe.FlatAppearance.BorderSize = 0;
+            this.btnThongTinThe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongTinThe.Font = new System.Drawing.Font("Myriad Pro", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThongTinThe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnThongTinThe.Location = new System.Drawing.Point(454, 599);
+            this.btnThongTinThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThongTinThe.Name = "btnThongTinThe";
+            this.btnThongTinThe.Size = new System.Drawing.Size(244, 63);
+            this.btnThongTinThe.TabIndex = 87;
+            this.btnThongTinThe.Text = "Thông tin thẻ";
+            this.btnThongTinThe.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnThongTinThe.UseVisualStyleBackColor = false;
+            this.btnThongTinThe.Click += new System.EventHandler(this.btnThongTinThe_Click);
             // 
             // lblThongTinThem
             // 
             this.lblThongTinThem.AutoSize = true;
-            this.lblThongTinThem.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblThongTinThem.Location = new System.Drawing.Point(12, 510);
+            this.lblThongTinThem.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblThongTinThem.Location = new System.Drawing.Point(-1, 510);
             this.lblThongTinThem.Name = "lblThongTinThem";
-            this.lblThongTinThem.Size = new System.Drawing.Size(420, 84);
+            this.lblThongTinThem.Size = new System.Drawing.Size(454, 90);
             this.lblThongTinThem.TabIndex = 88;
             this.lblThongTinThem.Text = "Hoàn toàn chủ động chi tiêu từ việc\r\nthanh toán khi mua sắm, ăn uống và giải \r\ntr" +
     "í khắp Việt Nam";
@@ -165,10 +164,10 @@
             // lblThongTinMoRong
             // 
             this.lblThongTinMoRong.AutoSize = true;
-            this.lblThongTinMoRong.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblThongTinMoRong.Location = new System.Drawing.Point(704, 510);
+            this.lblThongTinMoRong.Font = new System.Drawing.Font("Myriad Pro", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblThongTinMoRong.Location = new System.Drawing.Point(697, 510);
             this.lblThongTinMoRong.Name = "lblThongTinMoRong";
-            this.lblThongTinMoRong.Size = new System.Drawing.Size(423, 84);
+            this.lblThongTinMoRong.Size = new System.Drawing.Size(448, 90);
             this.lblThongTinMoRong.TabIndex = 89;
             this.lblThongTinMoRong.Text = "Giao dịch và thanh toán dễ dàng tại\r\nhàng nghìn máy ATM và điểm chấp nhận\r\nthanh " +
     "toán thẻ trên toàn quốc";
@@ -178,11 +177,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.lblThongTinMoRong);
             this.Controls.Add(this.lblThongTinThem);
-            this.Controls.Add(this.vbButton1);
-            this.Controls.Add(this.btn_ThanhToan);
+            this.Controls.Add(this.btnThongTinThe);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.lblCacLoaiThe);
             this.Controls.Add(this.LblGioiThieu);
             this.Controls.Add(this.ptbTheTinDungFlexi);
@@ -207,8 +207,8 @@
         private PictureBox ptbTheTinDungFlexi;
         private Label LblGioiThieu;
         private Label lblCacLoaiThe;
-        private CustomButton.VBButton btn_ThanhToan;
-        private CustomButton.VBButton vbButton1;
+        private CustomButton.VBButton btnDangKy;
+        private CustomButton.VBButton btnThongTinThe;
         private Label lblThongTinThem;
         private Label lblThongTinMoRong;
     }
