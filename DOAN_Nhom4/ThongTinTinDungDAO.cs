@@ -13,18 +13,18 @@ namespace DOAN_Nhom4
         public ThongTinTinDungDAO () { }
         public void Them(ThongTinTinDung tttd)
         {
-            string sql = string.Format("INSERT INTO TaiKhoanTinDung(SoTKTinDung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, LoaiThe, NgayDaoHan, HanMuc, LaiSuat, SoTienDaSuDung, NgayMoThe, PhiTraCham, PhiPhat) " +
-                                        "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', {10}, '{11}', {12}, '{13}', {14}, {15})",
+            string sql = string.Format("INSERT INTO TaiKhoanTinDung(SoTKTinDung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, LoaiThe, HanThanhToan, NgaySaoKe, HanMuc, LaiSuat, SoTienDaSuDung, SoTienSuDungSau, NgayMoThe, PhiTraCham, PhiPhat) " +
+                                        "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', {11}, {12}, {13}, {14}, '{15}', {16}, {17})",
                                         tttd.SoTKTinDung, tttd.HoTen, tttd.Cccd, tttd.DiaChi, tttd.Sdt, tttd.Email, tttd.NgheNghiep, tttd.ThuNhap,
-                                        tttd.LoaiThe, tttd.NgayDaoHan, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat);
+                                        tttd.LoaiThe, tttd.HanThanhToan, tttd.NgaySaoKe, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.SoTienSuDungSau, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat);
             data.xuLi(sql);
         }
         public void Update(ThongTinTinDung tttd)
         {
-            string sql = string.Format("UPDATE TaiKhoanTinDung SET HoTen = '{0}', CCCD = '{1}', DiaChi = '{2}', SDT = '{3}', Email = '{4}', NgheNghiep = '{5}', ThuNhap = '{6}', LoaiThe = '{7}', NgayDaoHan = '{8}', HanMuc = {9}, " +
-                                        "LaiSuat = '{10}', SoTienDaSuDung = {11}, NgayMoThe = '{12}', PhiTraCham = {13}, PhiPhat = {14} Where SoTkTinDung = '{15}'", 
+            string sql = string.Format("UPDATE TaiKhoanTinDung SET HoTen = '{0}', CCCD = '{1}', DiaChi = '{2}', SDT = '{3}', Email = '{4}', NgheNghiep = '{5}', ThuNhap = '{6}', LoaiThe = '{7}', HanThanhToan = '{8}', NgaySaoKe = '{9}', HanMuc = {10}, " +
+                                        "LaiSuat = {11}, SoTienDaSuDung = {12}, SoTienSuDungSau = {13}, NgayMoThe = '{14}', PhiTraCham = {15}, PhiPhat = {16} Where SoTkTinDung = '{17}'", 
                                         tttd.HoTen, tttd.Cccd, tttd.DiaChi, tttd.Sdt, tttd.Email, tttd.NgheNghiep, tttd.ThuNhap,
-                                        tttd.LoaiThe, tttd.NgayDaoHan, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat, tttd.SoTKTinDung);
+                                        tttd.LoaiThe, tttd.HanThanhToan, tttd.NgaySaoKe, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.SoTienSuDungSau, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat, tttd.SoTKTinDung);
             data.xuLi(sql);
         }
         public void Xoa(ThongTinTinDung tttd)
@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
 
         public bool IsNgayDenHan(ThongTinTinDung tttd)
         {
-            if (DateTime.Now > tttd.NgayDaoHan)
+            if (DateTime.Now > tttd.HanThanhToan)
             {
                 return true;
             }
@@ -65,16 +65,35 @@ namespace DOAN_Nhom4
 
         public void CapNhatTinDungHangThang(ThongTinTinDung tttd)
         {
-            tttd.NgayDaoHan = tttd.NgayDaoHan.AddMonths(1);
-            tttd.SoTienDaSuDung = 0;
+            tttd.HanThanhToan = tttd.HanThanhToan.AddMonths(1);
+            tttd.NgaySaoKe = tttd.HanThanhToan.Subtract(new TimeSpan(15, 0, 0, 0));
+            tttd.SoTienDaSuDung = tttd.SoTienSuDungSau;
+            tttd.SoTienSuDungSau = 0;
             tttd.PhiTraCham = 0;
             tttd.PhiPhat = 0;
         }
 
-        public void ThanhToanPhi(ThongTinTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhiTruocNgaySaoKe(ThongTinTinDung tttd, GiaoDich gd)
         {
             tttd.SoTienDaSuDung = tttd.SoTienDaSuDung + gd.SoTien;
             Update(tttd);
+        }
+        public void ThanhToanPhiSauNgaySaoKe(ThongTinTinDung tttd, GiaoDich gd)
+        {
+            tttd.SoTienSuDungSau = tttd.SoTienSuDungSau + gd.SoTien;
+            Update(tttd);
+        }
+
+        public void ThanhToanPhi(ThongTinTinDung tttd, GiaoDich gd)
+        {
+            if (DateTime.Now > tttd.NgaySaoKe)
+            {
+                ThanhToanPhiSauNgaySaoKe(tttd, gd);
+            }
+            else
+            {
+                ThanhToanPhiTruocNgaySaoKe(tttd, gd);
+            }
         }
     }
 }

@@ -303,13 +303,15 @@ namespace DOAN_Nhom4
                     ttTinDung.NgheNghiep = reader.GetString(6);
                     ttTinDung.ThuNhap = reader.GetString(7);
                     ttTinDung.LoaiThe = reader.GetString(8);
-                    ttTinDung.NgayDaoHan = reader.GetDateTime(9);
-                    ttTinDung.HanMuc = reader.GetInt64(10);
-                    ttTinDung.LaiSuat = double.Parse(reader.GetString(11));
-                    ttTinDung.SoTienDaSuDung = reader.GetInt64(12);
-                    ttTinDung.NgayMoThe = reader.GetDateTime(13);
-                    ttTinDung.PhiTraCham = reader.GetInt64(14);
-                    ttTinDung.PhiPhat = reader.GetInt64(15);
+                    ttTinDung.HanThanhToan = reader.GetDateTime(9);
+                    ttTinDung.NgaySaoKe = reader.GetDateTime(10);
+                    ttTinDung.HanMuc = reader.GetInt64(11);
+                    ttTinDung.LaiSuat = double.Parse(reader.GetString(12));
+                    ttTinDung.SoTienDaSuDung = reader.GetInt64(13);
+                    ttTinDung.SoTienSuDungSau = reader.GetInt64(14);
+                    ttTinDung.NgayMoThe = reader.GetDateTime(15);
+                    ttTinDung.PhiTraCham = reader.GetInt64(16);
+                    ttTinDung.PhiPhat = reader.GetInt64(17);
                 }
                 else
                     return null;

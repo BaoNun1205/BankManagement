@@ -46,7 +46,7 @@ namespace DOAN_Nhom4
             tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             if (tttdDAO != null)
             {
-                FrmThongTinTaiKhoangTinDung frmThongTinTaiKhoangTinDung = new FrmThongTinTaiKhoangTinDung(kh, tknh, pnlNguoiDung, tttd);
+                lblNgaySaoKe frmThongTinTaiKhoangTinDung = new lblNgaySaoKe(kh, tknh, pnlNguoiDung, tttd);
                 DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
             }
             else

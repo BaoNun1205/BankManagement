@@ -74,7 +74,7 @@ namespace DOAN_Nhom4
         {
             double lai = laiSuat();
             ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoang.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
-                                                            cb_LoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), int.Parse(txtHanMuc.Text), lai, 0, dtpNgayMoThe.Value, 0, 0);
+                                                            cb_LoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), lai, 0, 0, dtpNgayMoThe.Value, 0, 0);
             tttdDAO.Them(ttTinDung);
         }
 
