@@ -38,11 +38,11 @@ namespace DOAN_Nhom4
         {
             if (cb_hienthipass.Checked)
             {
-                txtMatkhau.UseSystemPasswordChar = true;
+                txtMatkhau.UseSystemPasswordChar = false;
             }
             else
             {
-                txtMatkhau.UseSystemPasswordChar = false;
+                txtMatkhau.UseSystemPasswordChar = true;
             }
         }
         private void btn_doimatkhau_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
 
         private void txtMatkhau_TextChanged(object sender, EventArgs e)
         {
-            txtMatkhau.UseSystemPasswordChar = false;
+            txtMatkhau.UseSystemPasswordChar = true;
         }
     }
 }
