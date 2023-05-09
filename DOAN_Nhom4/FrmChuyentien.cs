@@ -44,7 +44,7 @@ namespace DOAN_Nhom4
             }
             cbTennguoinhan.Items.AddRange(danhSachNguoiDung.ToArray());
             cbTennguoinhan.DisplayMember = "ThongTinCoBan";
-            lblSoDu.Text = tknh.SoDu.ToString("N0") + " VNĐ";
+            lblSoDu.Text = tknh.SoDu.ToString("N0") + " VND";
         }
        
         private void btnHuy_Click(object sender, EventArgs e)
@@ -71,32 +71,37 @@ namespace DOAN_Nhom4
             if (tk != null)
             {
                 kt = KiemTraTenNguoiNhan.hople;
-                cbTennguoinhan.Text = ngDung.TenTK.ToString();
-                cbTennguoinhan.ForeColor = Color.Black;
+                txtTennguoinhan.Text = ngDung.TenTK.ToString();
+                txtTennguoinhan.ForeColor = Color.Black;
             }
             else
             {
                 kt = KiemTraTenNguoiNhan.khongtontai;
-                cbTennguoinhan.Text = "Không tồn tại";
-                cbTennguoinhan.ForeColor = Color.Black;
+                txtTennguoinhan.Text = "Không tồn tại";
+                txtTennguoinhan.ForeColor = Color.Black;
             }
             if (txtSTK.Text == nguoiDung.soTK)
             {
                 kt = KiemTraTenNguoiNhan.chinhban;
-                cbTennguoinhan.Text = "Không thể chuyển tiền cho cho chính bạn";
-                cbTennguoinhan.ForeColor = Color.Red;
+                txtTennguoinhan.Text = "Không thể chuyển tiền cho cho chính bạn";
+                txtTennguoinhan.ForeColor = Color.Red;
             }
         }
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            if (cbTenNH.Text == "" || txtSTK.Text == "" || cbTennguoinhan.Text == "" || txtSoTien.Text == "")
+            if (cbTenNH.Text == "" || txtSTK.Text == "" || txtTennguoinhan.Text == "" || txtSoTien.Text == "")
             {
-                { MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (kt == KiemTraTenNguoiNhan.hople && int.Parse(lblSoDu.Text) > int.Parse(txtSoTien.Text))
+            else if (int.Parse(txtSoTien.Text) < 10000)
             {
-                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenTK.ToString(), txtSoTien.Text, cbTennguoinhan.Text); 
-                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNH, nguoiDung.TenTK, nguoiDung.SoTK, cbTenNH.Text, cbTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                MessageBox.Show("Vui lòng nhập tối thiểu 10000VNĐ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            } 
+                
+            else if (kt == KiemTraTenNguoiNhan.hople && tknh.SoDu >= int.Parse(txtSoTien.Text))
+            {
+                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenTK.ToString(), txtSoTien.Text, txtTennguoinhan.Text); 
+                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNH, nguoiDung.TenTK, nguoiDung.SoTK, cbTenNH.Text, txtTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh, gd, pnlNguoidung);
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -139,6 +144,7 @@ namespace DOAN_Nhom4
                 NguoiDung ngDung = (NguoiDung)cbTennguoinhan.SelectedItem;
                 cbTenNH.Text = ngDung.tenNH.ToString();
                 txtSTK.Text = ngDung.soTK.ToString();
+                txtTennguoinhan.Text = ngDung.TenTK.ToString();
             }
         }
     }
