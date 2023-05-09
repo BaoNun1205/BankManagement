@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.pb_QuayLai);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -67,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Teal;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(308, 35);
@@ -90,8 +90,8 @@
             // 
             // btn_ChuyenTien
             // 
-            this.btn_ChuyenTien.BackColor = System.Drawing.Color.Teal;
-            this.btn_ChuyenTien.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_ChuyenTien.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_ChuyenTien.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_ChuyenTien.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_ChuyenTien.BorderRadius = 0;
             this.btn_ChuyenTien.BorderSize = 0;
@@ -111,8 +111,8 @@
             // 
             // btn_RutTien
             // 
-            this.btn_RutTien.BackColor = System.Drawing.Color.Teal;
-            this.btn_RutTien.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_RutTien.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_RutTien.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_RutTien.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_RutTien.BorderRadius = 0;
             this.btn_RutTien.BorderSize = 0;
@@ -132,8 +132,8 @@
             // 
             // btn_NapTien
             // 
-            this.btn_NapTien.BackColor = System.Drawing.Color.Teal;
-            this.btn_NapTien.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_NapTien.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_NapTien.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_NapTien.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_NapTien.BorderRadius = 0;
             this.btn_NapTien.BorderSize = 0;

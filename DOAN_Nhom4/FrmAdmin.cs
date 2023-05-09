@@ -119,14 +119,6 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Chua nhap du thong tin");
         }
 
-        private void btn_DichVu_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmAdminDichVu frmaddv = new FrmAdminDichVu();
-            frmaddv.ShowDialog();
-            this.Close();
-        }
-
         private void btn_Refersh_Click(object sender, EventArgs e)
         {
             Refresh();
@@ -137,6 +129,14 @@ namespace DOAN_Nhom4
             FrmQLTKVay frmqltkvay = new FrmQLTKVay();
             this.Hide();
             frmqltkvay.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_DV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAdminDichVu frmaddv = new FrmAdminDichVu();
+            frmaddv.ShowDialog();
             this.Close();
         }
     }
