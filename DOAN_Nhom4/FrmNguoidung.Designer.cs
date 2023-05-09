@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNguoidung));
             this.pnlDanhmuc = new System.Windows.Forms.Panel();
-            this.btnHotro = new CustomButton.VBButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCaidat = new CustomButton.VBButton();
             this.btnLsgd = new CustomButton.VBButton();
@@ -57,7 +56,6 @@
             // pnlDanhmuc
             // 
             this.pnlDanhmuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.pnlDanhmuc.Controls.Add(this.btnHotro);
             this.pnlDanhmuc.Controls.Add(this.pictureBox1);
             this.pnlDanhmuc.Controls.Add(this.btnCaidat);
             this.pnlDanhmuc.Controls.Add(this.btnLsgd);
@@ -68,30 +66,6 @@
             this.pnlDanhmuc.Name = "pnlDanhmuc";
             this.pnlDanhmuc.Size = new System.Drawing.Size(265, 809);
             this.pnlDanhmuc.TabIndex = 53;
-            // 
-            // btnHotro
-            // 
-            this.btnHotro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btnHotro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.btnHotro.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHotro.BorderRadius = 0;
-            this.btnHotro.BorderSize = 2;
-            this.btnHotro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHotro.FlatAppearance.BorderSize = 0;
-            this.btnHotro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHotro.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHotro.ForeColor = System.Drawing.Color.White;
-            this.btnHotro.Image = global::DOAN_Nhom4.Properties.Resources.customer_support1;
-            this.btnHotro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHotro.Location = new System.Drawing.Point(0, 360);
-            this.btnHotro.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnHotro.Name = "btnHotro";
-            this.btnHotro.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnHotro.Size = new System.Drawing.Size(264, 88);
-            this.btnHotro.TabIndex = 55;
-            this.btnHotro.Text = "  Hỗ trợ";
-            this.btnHotro.TextColor = System.Drawing.Color.White;
-            this.btnHotro.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -144,7 +118,7 @@
             this.btnLsgd.ForeColor = System.Drawing.Color.White;
             this.btnLsgd.Image = global::DOAN_Nhom4.Properties.Resources.payment;
             this.btnLsgd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLsgd.Location = new System.Drawing.Point(1, 450);
+            this.btnLsgd.Location = new System.Drawing.Point(1, 360);
             this.btnLsgd.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnLsgd.Name = "btnLsgd";
             this.btnLsgd.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
@@ -236,7 +210,7 @@
             this.lblTenTK.BackColor = System.Drawing.Color.Transparent;
             this.lblTenTK.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTenTK.ForeColor = System.Drawing.Color.White;
-            this.lblTenTK.Location = new System.Drawing.Point(62, 46);
+            this.lblTenTK.Location = new System.Drawing.Point(41, 45);
             this.lblTenTK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenTK.Name = "lblTenTK";
             this.lblTenTK.Size = new System.Drawing.Size(30, 29);
@@ -249,7 +223,7 @@
             this.lblXinchao.BackColor = System.Drawing.Color.Transparent;
             this.lblXinchao.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblXinchao.ForeColor = System.Drawing.Color.White;
-            this.lblXinchao.Location = new System.Drawing.Point(62, 3);
+            this.lblXinchao.Location = new System.Drawing.Point(41, 9);
             this.lblXinchao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXinchao.Name = "lblXinchao";
             this.lblXinchao.Size = new System.Drawing.Size(111, 29);
@@ -383,6 +357,5 @@
         private Panel pnlLuachonCD;
         private Button btnDangxuat;
         private Button btnBaomat;
-        private CustomButton.VBButton btnHotro;
     }
 }
