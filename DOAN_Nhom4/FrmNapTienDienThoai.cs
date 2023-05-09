@@ -207,7 +207,6 @@ namespace DOAN_Nhom4
             {
                 MessageBox.Show("Chưa chọn loại thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
     }
 }
