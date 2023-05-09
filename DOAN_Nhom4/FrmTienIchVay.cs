@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             KHNoXau kh = KHNoXauDAO.IsNull(tknh);
-            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(tknh.SoTK);
+            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.soTK);
             if (kh == null)
             {
                 if (ttNgDung == null)
@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
                 }
                 else
                     MessageBox.Show("Bạn đang có khoản vay!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }   
             else
             {
                 DateTime startDate = kh.NgayNo;

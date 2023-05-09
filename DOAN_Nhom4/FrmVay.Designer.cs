@@ -531,7 +531,6 @@ namespace DOAN_Nhom4
             this.label28.Size = new System.Drawing.Size(150, 19);
             this.label28.TabIndex = 44;
             this.label28.Text = "Số tiền vay dự kiến";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // cb_SPVay
             // 
@@ -1022,7 +1021,6 @@ namespace DOAN_Nhom4
             this.label2.Size = new System.Drawing.Size(584, 81);
             this.label2.TabIndex = 3;
             this.label2.Text = "ĐĂNG KÝ VAY NỢ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FrmVay
             // 

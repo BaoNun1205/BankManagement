@@ -247,28 +247,29 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    ttNgDung.LoaiKhoanVay = reader.GetString(0);
-                    ttNgDung.SoTKVay = reader.GetString(1);
-                    ttNgDung.DanhXung = reader.GetString(2);
-                    ttNgDung.HoTen = reader.GetString(3);
-                    ttNgDung.Cccd = reader.GetString(4);
-                    ttNgDung.DiaChi = reader.GetString(5);
-                    ttNgDung.Sdt = reader.GetString(6);
-                    ttNgDung.Email = reader.GetString(7);
-                    ttNgDung.NgheNghiep = reader.GetString(8);
-                    ttNgDung.ThuNhap = reader.GetString(9);
-                    ttNgDung.SpVay = reader.GetString(10);
-                    ttNgDung.SoTienVay = reader.GetInt64(11);
-                    ttNgDung.ThoiGianVay = reader.GetInt32(12);
-                    ttNgDung.TaiSan = reader.GetString(13);
-                    ttNgDung.GiaTriTaiSan = reader.GetInt64(14);
-                    ttNgDung.ChiNhanhVay = reader.GetString(15);
-                    ttNgDung.NgayVay = reader.GetDateTime(16);
-                    ttNgDung.Lai = double.Parse(reader.GetString(17));
-                    ttNgDung.SoTienHangThang = reader.GetInt64(18);
-                    ttNgDung.NgayDenHan = reader.GetDateTime(19);
-                    ttNgDung.TongSoTienPhaiTra = reader.GetInt64(20);
-                    ttNgDung.PhiTraCham = reader.GetInt64(21);
+                    ttNgDung.TenNH = reader.GetString(0);
+                    ttNgDung.LoaiKhoanVay = reader.GetString(1);
+                    ttNgDung.SoTKVay = reader.GetString(2);
+                    ttNgDung.DanhXung = reader.GetString(3);
+                    ttNgDung.HoTen = reader.GetString(4);
+                    ttNgDung.Cccd = reader.GetString(5);
+                    ttNgDung.DiaChi = reader.GetString(6);
+                    ttNgDung.Sdt = reader.GetString(7);
+                    ttNgDung.Email = reader.GetString(8); 
+                    ttNgDung.NgheNghiep = reader.GetString(9);
+                    ttNgDung.ThuNhap = reader.GetString(10);
+                    ttNgDung.SpVay = reader.GetString(11);
+                    ttNgDung.SoTienVay = reader.GetInt64(12);
+                    ttNgDung.ThoiGianVay = reader.GetInt32(13);
+                    ttNgDung.TaiSan = reader.GetString(14);
+                    ttNgDung.GiaTriTaiSan = reader.GetInt64(15);
+                    ttNgDung.ChiNhanhVay = reader.GetString(16);
+                    ttNgDung.NgayVay = reader.GetDateTime(17);
+                    ttNgDung.Lai = double.Parse(reader.GetString(18));
+                    ttNgDung.SoTienHangThang = reader.GetInt64(19);
+                    ttNgDung.NgayDenHan = reader.GetDateTime(20);
+                    ttNgDung.TongSoTienPhaiTra = reader.GetInt64(21);
+                    ttNgDung.PhiTraCham = reader.GetInt64(22);
                 }
                 else
                     return null;
@@ -341,6 +342,7 @@ namespace DOAN_Nhom4
                     KHNoXau.TenTK = reader.GetString(1);
                     KHNoXau.Cccd = reader.GetString(2);
                     KHNoXau.NgayNo = reader.GetDateTime(3);
+                    KHNoXau.TenNH = reader.GetString(4);
                 }
                 else
                     return null;

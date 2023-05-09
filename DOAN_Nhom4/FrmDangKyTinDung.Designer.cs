@@ -34,7 +34,7 @@
             this.cb_DongY = new System.Windows.Forms.CheckBox();
             this.dtpNgayMoThe = new System.Windows.Forms.DateTimePicker();
             this.lblNgayMoThe = new System.Windows.Forms.Label();
-            this.cb_LoaiThe = new System.Windows.Forms.ComboBox();
+            this.cbLoaiThe = new System.Windows.Forms.ComboBox();
             this.lblLoaiTheTinDung = new System.Windows.Forms.Label();
             this.cb_ThuNhap = new System.Windows.Forms.ComboBox();
             this.cb_NgheNghiep = new System.Windows.Forms.ComboBox();
@@ -71,7 +71,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtHanMuc = new System.Windows.Forms.TextBox();
-            this.txtSoTaiKhoang = new System.Windows.Forms.TextBox();
+            this.txtSoTaiKhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ptbQuayLai = new System.Windows.Forms.PictureBox();
@@ -123,6 +123,7 @@
             this.llbl_DieuKhoan.TabIndex = 58;
             this.llbl_DieuKhoan.TabStop = true;
             this.llbl_DieuKhoan.Text = "Điều Khoản Sử Dụng";
+            this.llbl_DieuKhoan.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbl_DieuKhoan_LinkClicked);
             // 
             // cb_DongY
             // 
@@ -160,19 +161,19 @@
             this.lblNgayMoThe.TabIndex = 53;
             this.lblNgayMoThe.Text = "Ngày mở thẻ";
             // 
-            // cb_LoaiThe
+            // cbLoaiThe
             // 
-            this.cb_LoaiThe.FormattingEnabled = true;
-            this.cb_LoaiThe.Items.AddRange(new object[] {
+            this.cbLoaiThe.FormattingEnabled = true;
+            this.cbLoaiThe.Items.AddRange(new object[] {
             "HHB Visa Flexi",
             "HHB Visa Platinum Cashback",
             "HHB Visa Infinite"});
-            this.cb_LoaiThe.Location = new System.Drawing.Point(794, 203);
-            this.cb_LoaiThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cb_LoaiThe.Name = "cb_LoaiThe";
-            this.cb_LoaiThe.Size = new System.Drawing.Size(288, 23);
-            this.cb_LoaiThe.TabIndex = 43;
-            this.cb_LoaiThe.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiThe_SelectedIndexChanged);
+            this.cbLoaiThe.Location = new System.Drawing.Point(794, 203);
+            this.cbLoaiThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbLoaiThe.Name = "cbLoaiThe";
+            this.cbLoaiThe.Size = new System.Drawing.Size(288, 23);
+            this.cbLoaiThe.TabIndex = 43;
+            this.cbLoaiThe.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiThe_SelectedIndexChanged);
             // 
             // lblLoaiTheTinDung
             // 
@@ -590,7 +591,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtHanMuc);
-            this.panel1.Controls.Add(this.txtSoTaiKhoang);
+            this.panel1.Controls.Add(this.txtSoTaiKhoan);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.ptbQuayLai);
@@ -607,7 +608,7 @@
             this.panel1.Controls.Add(this.cb_DongY);
             this.panel1.Controls.Add(this.dtpNgayMoThe);
             this.panel1.Controls.Add(this.lblNgayMoThe);
-            this.panel1.Controls.Add(this.cb_LoaiThe);
+            this.panel1.Controls.Add(this.cbLoaiThe);
             this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.lblLoaiTheTinDung);
             this.panel1.Controls.Add(this.cb_ThuNhap);
@@ -680,12 +681,12 @@
             this.txtHanMuc.Size = new System.Drawing.Size(288, 23);
             this.txtHanMuc.TabIndex = 83;
             // 
-            // txtSoTaiKhoang
+            // txtSoTaiKhoan
             // 
-            this.txtSoTaiKhoang.Location = new System.Drawing.Point(794, 167);
-            this.txtSoTaiKhoang.Name = "txtSoTaiKhoang";
-            this.txtSoTaiKhoang.Size = new System.Drawing.Size(288, 23);
-            this.txtSoTaiKhoang.TabIndex = 82;
+            this.txtSoTaiKhoan.Location = new System.Drawing.Point(794, 167);
+            this.txtSoTaiKhoan.Name = "txtSoTaiKhoan";
+            this.txtSoTaiKhoan.Size = new System.Drawing.Size(288, 23);
+            this.txtSoTaiKhoan.TabIndex = 82;
             // 
             // label1
             // 
@@ -850,7 +851,7 @@
         private CheckBox cb_DongY;
         private DateTimePicker dtpNgayMoThe;
         private Label lblNgayMoThe;
-        private ComboBox cb_LoaiThe;
+        private ComboBox cbLoaiThe;
         private Label lblLoaiTheTinDung;
         private ComboBox cb_ThuNhap;
         private ComboBox cb_NgheNghiep;
@@ -897,7 +898,7 @@
         private Label label1;
         private Label label2;
         private TextBox txtHanMuc;
-        private TextBox txtSoTaiKhoang;
+        private TextBox txtSoTaiKhoan;
         private Label label5;
         private Label label4;
     }

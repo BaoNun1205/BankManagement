@@ -40,7 +40,15 @@ namespace DOAN_Nhom4
         {
             btnTKThe.Text = tknh.SoTK.ToString();
             tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
-            btnTKTinDung.Text = tttd.SoTKTinDung.ToString();
+            if (tttd != null)
+            {
+                btnTKTinDung.Text = tttd.SoTKTinDung.ToString();
+            }
+            else
+            {
+                btnTKTinDung.Text = "";
+                btnTKTinDung.Enabled = false;
+            }
         }
 
         private void btn10k_Click(object sender, EventArgs e)
@@ -170,27 +178,34 @@ namespace DOAN_Nhom4
                 if (menhGia != 0)
                 {
                     GiaoDich gd = new GiaoDich("Nap tien dien thoai", loaiTaiKhoan, kh.TenTK, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
-                    if (gd.SoTKNhan == "")
+                    if (loaiTaiKhoan == "HHB" && tknh.SoDu < gd.SoTien)
                     {
-                        gd.SoTKNhan = kh.Sdt;
+                        MessageBox.Show("Số dư của bạn không đủ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    lsgdDAO.Them(gd);
-                    SoDienThoai sdt = sdtDAO.LaySoDienThoai("SDT", gd.SoTKNhan);
-                    sdtDAO.ThanhToanVienThong(sdt, gd);
-                    tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK, "TenNH", tknh.TenNH);
-                    FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
-                    this.Hide();
-                    frmThongbaoChuyentien.ShowDialog();
-                    this.Close();
+                    else
+                    {
+                        if (gd.SoTKNhan == "")
+                        {
+                            gd.SoTKNhan = kh.Sdt;
+                        }
+                        lsgdDAO.Them(gd);
+                        SoDienThoai sdt = sdtDAO.LaySoDienThoai("SDT", gd.SoTKNhan);
+                        sdtDAO.ThanhToanVienThong(sdt, gd);
+                        tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK, "TenNH", tknh.TenNH);
+                        FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
+                        this.Hide();
+                        frmThongbaoChuyentien.ShowDialog();
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Vui long chon menh gia nap");
+                    MessageBox.Show("Vui lòng chọn mệnh giá nạp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Chua chon loai thanh toan!");
+                MessageBox.Show("Chưa chọn loại thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
