@@ -139,5 +139,13 @@ namespace DOAN_Nhom4
             frmqltkvay.ShowDialog();
             this.Close();
         }
+
+        private void btn_DV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAdminDichVu frmaddv = new FrmAdminDichVu();
+            frmaddv.ShowDialog();
+            this.Close();
+        }
     }
 }

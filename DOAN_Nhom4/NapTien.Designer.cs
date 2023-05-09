@@ -44,10 +44,10 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(201, 309);
+            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label10.Location = new System.Drawing.Point(176, 232);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 23);
+            this.label10.Size = new System.Drawing.Size(59, 19);
             this.label10.TabIndex = 39;
             this.label10.Text = "Số Tiền";
             // 
@@ -55,9 +55,10 @@
             // 
             this.txt_SoTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SoTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTien.Location = new System.Drawing.Point(201, 335);
+            this.txt_SoTien.Location = new System.Drawing.Point(176, 251);
+            this.txt_SoTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SoTien.Name = "txt_SoTien";
-            this.txt_SoTien.Size = new System.Drawing.Size(244, 30);
+            this.txt_SoTien.Size = new System.Drawing.Size(214, 26);
             this.txt_SoTien.TabIndex = 38;
             // 
             // label8
@@ -65,10 +66,10 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(201, 220);
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(176, 165);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 23);
+            this.label8.Size = new System.Drawing.Size(103, 19);
             this.label8.TabIndex = 37;
             this.label8.Text = "Số Điện Thoại";
             // 
@@ -76,9 +77,10 @@
             // 
             this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SDT.Location = new System.Drawing.Point(201, 246);
+            this.txt_SDT.Location = new System.Drawing.Point(176, 184);
+            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(244, 30);
+            this.txt_SDT.Size = new System.Drawing.Size(214, 26);
             this.txt_SDT.TabIndex = 36;
             // 
             // label7
@@ -86,10 +88,10 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(201, 140);
+            this.label7.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label7.Location = new System.Drawing.Point(176, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 23);
+            this.label7.Size = new System.Drawing.Size(143, 19);
             this.label7.TabIndex = 35;
             this.label7.Text = "Căn Cước Công Dân";
             // 
@@ -97,9 +99,10 @@
             // 
             this.txt_CCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_CCCD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_CCCD.Location = new System.Drawing.Point(201, 166);
+            this.txt_CCCD.Location = new System.Drawing.Point(176, 124);
+            this.txt_CCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_CCCD.Name = "txt_CCCD";
-            this.txt_CCCD.Size = new System.Drawing.Size(244, 30);
+            this.txt_CCCD.Size = new System.Drawing.Size(214, 26);
             this.txt_CCCD.TabIndex = 34;
             // 
             // label5
@@ -107,10 +110,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(201, 49);
+            this.label5.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(176, 37);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 23);
+            this.label5.Size = new System.Drawing.Size(97, 19);
             this.label5.TabIndex = 33;
             this.label5.Text = "Số Tài Khoản";
             // 
@@ -118,15 +121,16 @@
             // 
             this.txt_SoTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SoTK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTK.Location = new System.Drawing.Point(201, 75);
+            this.txt_SoTK.Location = new System.Drawing.Point(176, 56);
+            this.txt_SoTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SoTK.Name = "txt_SoTK";
-            this.txt_SoTK.Size = new System.Drawing.Size(244, 30);
+            this.txt_SoTK.Size = new System.Drawing.Size(214, 26);
             this.txt_SoTK.TabIndex = 32;
             // 
             // btn_NapTien
             // 
-            this.btn_NapTien.BackColor = System.Drawing.Color.Teal;
-            this.btn_NapTien.BackgroundColor = System.Drawing.Color.Teal;
+            this.btn_NapTien.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_NapTien.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_NapTien.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_NapTien.BorderRadius = 20;
             this.btn_NapTien.BorderSize = 0;
@@ -134,9 +138,10 @@
             this.btn_NapTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NapTien.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_NapTien.ForeColor = System.Drawing.Color.White;
-            this.btn_NapTien.Location = new System.Drawing.Point(222, 427);
+            this.btn_NapTien.Location = new System.Drawing.Point(194, 320);
+            this.btn_NapTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_NapTien.Name = "btn_NapTien";
-            this.btn_NapTien.Size = new System.Drawing.Size(199, 55);
+            this.btn_NapTien.Size = new System.Drawing.Size(174, 41);
             this.btn_NapTien.TabIndex = 40;
             this.btn_NapTien.Text = "Nạp Tiền";
             this.btn_NapTien.TextColor = System.Drawing.Color.White;
@@ -145,7 +150,7 @@
             // 
             // NapTien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.btn_NapTien);
@@ -157,8 +162,9 @@
             this.Controls.Add(this.txt_CCCD);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_SoTK);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NapTien";
-            this.Size = new System.Drawing.Size(600, 512);
+            this.Size = new System.Drawing.Size(525, 384);
             this.ResumeLayout(false);
             this.PerformLayout();
 

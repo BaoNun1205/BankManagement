@@ -57,6 +57,7 @@
             this.btn_Sua = new CustomButton.VBButton();
             this.btn_DichVu = new CustomButton.VBButton();
             this.btn_Refersh = new CustomButton.VBButton();
+            this.btn_DV = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKH)).BeginInit();
             this.SuspendLayout();
@@ -426,12 +427,34 @@
             this.btn_Refersh.UseVisualStyleBackColor = false;
             this.btn_Refersh.Click += new System.EventHandler(this.btn_Refersh_Click);
             // 
+            // btn_DV
+            // 
+            this.btn_DV.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_DV.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btn_DV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DV.BorderRadius = 20;
+            this.btn_DV.BorderSize = 0;
+            this.btn_DV.FlatAppearance.BorderSize = 0;
+            this.btn_DV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DV.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_DV.ForeColor = System.Drawing.Color.White;
+            this.btn_DV.Location = new System.Drawing.Point(621, 669);
+            this.btn_DV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DV.Name = "btn_DV";
+            this.btn_DV.Size = new System.Drawing.Size(176, 45);
+            this.btn_DV.TabIndex = 32;
+            this.btn_DV.Text = "Dịch Vụ";
+            this.btn_DV.TextColor = System.Drawing.Color.White;
+            this.btn_DV.UseVisualStyleBackColor = false;
+            this.btn_DV.Click += new System.EventHandler(this.btn_DV_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
+            this.Controls.Add(this.btn_DV);
             this.Controls.Add(this.btn_Refersh);
             this.Controls.Add(this.btn_DichVu);
             this.Controls.Add(this.btn_Sua);
@@ -504,5 +527,6 @@
         private CustomButton.VBButton btn_Sua;
         private CustomButton.VBButton btn_DichVu;
         private CustomButton.VBButton btn_Refersh;
+        private CustomButton.VBButton btn_DV;
     }
 }
