@@ -46,6 +46,8 @@
             this.lblSoDuString = new System.Windows.Forms.Label();
             this.lblSoDu = new System.Windows.Forms.Label();
             this.lblTenTK = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTennguoinhan = new System.Windows.Forms.TextBox();
             this.pnlChuyentien.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnHuy.Location = new System.Drawing.Point(161, 544);
+            this.btnHuy.Location = new System.Drawing.Point(161, 595);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(156, 58);
@@ -92,7 +94,7 @@
             this.btnTieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTieptuc.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTieptuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btnTieptuc.Location = new System.Drawing.Point(643, 544);
+            this.btnTieptuc.Location = new System.Drawing.Point(643, 595);
             this.btnTieptuc.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTieptuc.Name = "btnTieptuc";
             this.btnTieptuc.Size = new System.Drawing.Size(156, 58);
@@ -148,7 +150,7 @@
             this.txtLoiNhan.BackColor = System.Drawing.Color.White;
             this.txtLoiNhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLoiNhan.ForeColor = System.Drawing.Color.Black;
-            this.txtLoiNhan.Location = new System.Drawing.Point(549, 358);
+            this.txtLoiNhan.Location = new System.Drawing.Point(549, 415);
             this.txtLoiNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtLoiNhan.Multiline = true;
             this.txtLoiNhan.Name = "txtLoiNhan";
@@ -172,7 +174,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label4.Location = new System.Drawing.Point(48, 358);
+            this.label4.Location = new System.Drawing.Point(48, 415);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 29);
@@ -197,7 +199,7 @@
             this.txtSoTien.BackColor = System.Drawing.Color.White;
             this.txtSoTien.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSoTien.ForeColor = System.Drawing.Color.Black;
-            this.txtSoTien.Location = new System.Drawing.Point(549, 237);
+            this.txtSoTien.Location = new System.Drawing.Point(549, 300);
             this.txtSoTien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtSoTien.Multiline = true;
             this.txtSoTien.Name = "txtSoTien";
@@ -209,7 +211,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label5.Location = new System.Drawing.Point(48, 242);
+            this.label5.Location = new System.Drawing.Point(48, 311);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 29);
@@ -220,6 +222,8 @@
             // 
             this.pnlChuyentien.BackColor = System.Drawing.Color.White;
             this.pnlChuyentien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChuyentien.Controls.Add(this.txtTennguoinhan);
+            this.pnlChuyentien.Controls.Add(this.label7);
             this.pnlChuyentien.Controls.Add(this.cbTennguoinhan);
             this.pnlChuyentien.Controls.Add(this.label6);
             this.pnlChuyentien.Controls.Add(this.txtSTK);
@@ -235,19 +239,19 @@
             this.pnlChuyentien.Controls.Add(this.label3);
             this.pnlChuyentien.Controls.Add(this.label4);
             this.pnlChuyentien.Controls.Add(this.label5);
-            this.pnlChuyentien.Location = new System.Drawing.Point(93, 52);
+            this.pnlChuyentien.Location = new System.Drawing.Point(93, 10);
             this.pnlChuyentien.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlChuyentien.Name = "pnlChuyentien";
-            this.pnlChuyentien.Size = new System.Drawing.Size(961, 631);
+            this.pnlChuyentien.Size = new System.Drawing.Size(961, 700);
             this.pnlChuyentien.TabIndex = 11;
             // 
             // cbTennguoinhan
             // 
             this.cbTennguoinhan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbTennguoinhan.FormattingEnabled = true;
-            this.cbTennguoinhan.Location = new System.Drawing.Point(667, 180);
+            this.cbTennguoinhan.Location = new System.Drawing.Point(606, 254);
             this.cbTennguoinhan.Name = "cbTennguoinhan";
-            this.cbTennguoinhan.Size = new System.Drawing.Size(236, 24);
+            this.cbTennguoinhan.Size = new System.Drawing.Size(297, 24);
             this.cbTennguoinhan.TabIndex = 30;
             this.cbTennguoinhan.SelectedIndexChanged += new System.EventHandler(this.cbTennguoinhan_SelectedIndexChanged);
             // 
@@ -256,19 +260,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label6.Location = new System.Drawing.Point(549, 182);
+            this.label6.Location = new System.Drawing.Point(549, 257);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 19);
+            this.label6.Size = new System.Drawing.Size(52, 19);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Người nhận:";
+            this.label6.Text = "Gợi ý:";
             // 
             // lblSoDuString
             // 
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuString.Location = new System.Drawing.Point(549, 295);
+            this.lblSoDuString.Location = new System.Drawing.Point(549, 357);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(88, 32);
             this.lblSoDuString.TabIndex = 27;
@@ -279,7 +283,7 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(643, 295);
+            this.lblSoDu.Location = new System.Drawing.Point(643, 357);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(31, 32);
             this.lblSoDu.TabIndex = 26;
@@ -294,6 +298,30 @@
             this.lblTenTK.Size = new System.Drawing.Size(10, 15);
             this.lblTenTK.TabIndex = 25;
             this.lblTenTK.Text = " ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label7.Location = new System.Drawing.Point(48, 194);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(181, 29);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Tên người nhận";
+            // 
+            // txtTennguoinhan
+            // 
+            this.txtTennguoinhan.BackColor = System.Drawing.Color.White;
+            this.txtTennguoinhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTennguoinhan.ForeColor = System.Drawing.Color.Black;
+            this.txtTennguoinhan.Location = new System.Drawing.Point(549, 183);
+            this.txtTennguoinhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtTennguoinhan.Multiline = true;
+            this.txtTennguoinhan.Name = "txtTennguoinhan";
+            this.txtTennguoinhan.Size = new System.Drawing.Size(354, 40);
+            this.txtTennguoinhan.TabIndex = 32;
             // 
             // FrmChuyentien
             // 
@@ -338,5 +366,7 @@
         private Label lblSoDuString;
         private Label label6;
         private ComboBox cbTennguoinhan;
+        private TextBox txtTennguoinhan;
+        private Label label7;
     }
 }
