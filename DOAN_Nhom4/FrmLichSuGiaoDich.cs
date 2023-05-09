@@ -33,6 +33,7 @@ namespace DOAN_Nhom4
             GvTongNhan.Visible = false;
             GvLSGD.Visible = true;
             GvLSGD.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
+            HienThi();
         }
 
         private void btn_TienRa_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace DOAN_Nhom4
             GvTongNhan.Visible = false;
             GvLSGD.Visible = true;
             GvLSGD.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
+            HienThi();
         }
 
         public int LayGiaTri()
@@ -68,13 +70,43 @@ namespace DOAN_Nhom4
             GvTongNhan.Visible = true;
             GvTongGui.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
             GvTongNhan.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
+            HienThiToanBo();
         }
 
         private void FrmLichSuGiaoDich_Load(object sender, EventArgs e)
         {
             GvTongGui.Visible = false;
-            GvTongNhan.Visible = false;
-            
+            GvTongNhan.Visible = false;            
+        }
+
+        private void HienThi()
+        {
+            GvLSGD.Columns[0].HeaderText = "Mã giao dịch";
+            GvLSGD.Columns[1].HeaderText = "Loại giao dịch";
+            GvLSGD.Columns[2].HeaderText = "Thời gian";
+            GvLSGD.Columns[3].HeaderText = "Ngân hàng nhận";
+            GvLSGD.Columns[4].HeaderText = "Số tài khoản nhận";
+            GvLSGD.Columns[5].HeaderText = "Số tiền";
+            GvLSGD.Columns[6].HeaderText = "Lời nhắn";
+        }
+
+        private void HienThiToanBo()
+        {
+            GvTongGui.Columns[0].HeaderText = "Mã giao dịch";
+            GvTongGui.Columns[1].HeaderText = "Loaị giao dịch";
+            GvTongGui.Columns[2].HeaderText = "Thời gian";
+            GvTongGui.Columns[3].HeaderText = "Ngân hàng nhận";
+            GvTongGui.Columns[4].HeaderText = "Số tài khoản nhận";
+            GvTongGui.Columns[5].HeaderText = "Số tiền";
+            GvTongGui.Columns[6].HeaderText = "Lời nhắn";
+
+            GvTongNhan.Columns[0].HeaderText = "Mã giao dịch";
+            GvTongNhan.Columns[1].HeaderText = "Loaị giao dịch";
+            GvTongNhan.Columns[2].HeaderText = "Thời gian";
+            GvTongNhan.Columns[3].HeaderText = "Ngân hàng nhận";
+            GvTongNhan.Columns[4].HeaderText = "Số tài khoản nhận";
+            GvTongNhan.Columns[5].HeaderText = "Số tiền";
+            GvTongNhan.Columns[6].HeaderText = "Lời nhắn";
         }
 
         private void vbButton2_Click(object sender, EventArgs e)
