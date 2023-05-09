@@ -55,7 +55,6 @@
             this.btn_Them = new CustomButton.VBButton();
             this.btn_Xoa = new CustomButton.VBButton();
             this.btn_Sua = new CustomButton.VBButton();
-            this.btn_DichVu = new CustomButton.VBButton();
             this.btn_Refersh = new CustomButton.VBButton();
             this.btn_DV = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
@@ -70,18 +69,18 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1139, 86);
+            this.panel1.Size = new System.Drawing.Size(1405, 86);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(414, 32);
+            this.label1.Location = new System.Drawing.Point(575, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 26);
+            this.label1.Size = new System.Drawing.Size(374, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "HỆ THỐNG QUẢN LÝ NGÂN HÀNG";
             // 
@@ -271,7 +270,7 @@
             this.gvQLKH.Name = "gvQLKH";
             this.gvQLKH.RowHeadersWidth = 51;
             this.gvQLKH.RowTemplate.Height = 29;
-            this.gvQLKH.Size = new System.Drawing.Size(750, 387);
+            this.gvQLKH.Size = new System.Drawing.Size(1040, 498);
             this.gvQLKH.TabIndex = 21;
             this.gvQLKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvQLKH_CellClick);
             // 
@@ -333,7 +332,7 @@
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Them.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(330, 608);
+            this.btn_Them.Location = new System.Drawing.Point(455, 669);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(176, 45);
@@ -354,7 +353,7 @@
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(621, 608);
+            this.btn_Xoa.Location = new System.Drawing.Point(746, 669);
             this.btn_Xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(176, 45);
@@ -375,7 +374,7 @@
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
-            this.btn_Sua.Location = new System.Drawing.Point(904, 608);
+            this.btn_Sua.Location = new System.Drawing.Point(1029, 669);
             this.btn_Sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(176, 45);
@@ -384,27 +383,6 @@
             this.btn_Sua.TextColor = System.Drawing.Color.White;
             this.btn_Sua.UseVisualStyleBackColor = false;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
-            // btn_DichVu
-            // 
-            this.btn_DichVu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_DichVu.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btn_DichVu.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_DichVu.BorderRadius = 20;
-            this.btn_DichVu.BorderSize = 0;
-            this.btn_DichVu.FlatAppearance.BorderSize = 0;
-            this.btn_DichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DichVu.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DichVu.ForeColor = System.Drawing.Color.White;
-            this.btn_DichVu.Location = new System.Drawing.Point(1197, 658);
-            this.btn_DichVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_DichVu.Name = "btn_DichVu";
-            this.btn_DichVu.Size = new System.Drawing.Size(176, 45);
-            this.btn_DichVu.TabIndex = 30;
-            this.btn_DichVu.Text = "Dịch Vụ Khác";
-            this.btn_DichVu.TextColor = System.Drawing.Color.White;
-            this.btn_DichVu.UseVisualStyleBackColor = false;
-            this.btn_DichVu.Click += new System.EventHandler(this.btn_DichVu_Click);
             // 
             // btn_Refersh
             // 
@@ -417,7 +395,7 @@
             this.btn_Refersh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refersh.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Refersh.ForeColor = System.Drawing.Color.White;
-            this.btn_Refersh.Location = new System.Drawing.Point(1342, 586);
+            this.btn_Refersh.Location = new System.Drawing.Point(455, 730);
             this.btn_Refersh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Refersh.Name = "btn_Refersh";
             this.btn_Refersh.Size = new System.Drawing.Size(176, 45);
@@ -429,22 +407,22 @@
             // 
             // btn_DV
             // 
-            this.btn_DV.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_DV.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btn_DV.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_DV.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.btn_DV.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_DV.BorderRadius = 20;
             this.btn_DV.BorderSize = 0;
             this.btn_DV.FlatAppearance.BorderSize = 0;
             this.btn_DV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DV.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DV.ForeColor = System.Drawing.Color.White;
-            this.btn_DV.Location = new System.Drawing.Point(621, 669);
+            this.btn_DV.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_DV.Location = new System.Drawing.Point(746, 730);
             this.btn_DV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DV.Name = "btn_DV";
             this.btn_DV.Size = new System.Drawing.Size(176, 45);
             this.btn_DV.TabIndex = 32;
             this.btn_DV.Text = "Dịch Vụ";
-            this.btn_DV.TextColor = System.Drawing.Color.White;
+            this.btn_DV.TextColor = System.Drawing.SystemColors.Highlight;
             this.btn_DV.UseVisualStyleBackColor = false;
             this.btn_DV.Click += new System.EventHandler(this.btn_DV_Click);
             // 
@@ -453,10 +431,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1139, 720);
+            this.ClientSize = new System.Drawing.Size(1405, 808);
             this.Controls.Add(this.btn_DV);
             this.Controls.Add(this.btn_Refersh);
-            this.Controls.Add(this.btn_DichVu);
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Them);
@@ -525,7 +502,6 @@
         private CustomButton.VBButton btn_Them;
         private CustomButton.VBButton btn_Xoa;
         private CustomButton.VBButton btn_Sua;
-        private CustomButton.VBButton btn_DichVu;
         private CustomButton.VBButton btn_Refersh;
         private CustomButton.VBButton btn_DV;
     }
