@@ -35,7 +35,6 @@
             this.btn_TienRa = new CustomButton.VBButton();
             this.btn_TienVao = new CustomButton.VBButton();
             this.btn_ToanBo = new CustomButton.VBButton();
-            this.vbButton3 = new CustomButton.VBButton();
             this.btn_XuatExcel = new CustomButton.VBButton();
             this.cmNgay = new System.Windows.Forms.ComboBox();
             this.vbButton1 = new CustomButton.VBButton();
@@ -54,7 +53,6 @@
             this.panel1.Controls.Add(this.btn_TienRa);
             this.panel1.Controls.Add(this.btn_TienVao);
             this.panel1.Controls.Add(this.btn_ToanBo);
-            this.panel1.Controls.Add(this.vbButton3);
             this.panel1.Controls.Add(this.btn_XuatExcel);
             this.panel1.Controls.Add(this.cmNgay);
             this.panel1.Controls.Add(this.vbButton1);
@@ -67,11 +65,14 @@
             // 
             // GvTongGui
             // 
+            this.GvTongGui.AllowUserToAddRows = false;
+            this.GvTongGui.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GvTongGui.BackgroundColor = System.Drawing.Color.White;
             this.GvTongGui.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GvTongGui.Location = new System.Drawing.Point(189, 441);
             this.GvTongGui.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GvTongGui.Name = "GvTongGui";
+            this.GvTongGui.RowHeadersVisible = false;
             this.GvTongGui.RowHeadersWidth = 82;
             this.GvTongGui.RowTemplate.Height = 41;
             this.GvTongGui.Size = new System.Drawing.Size(711, 191);
@@ -79,11 +80,14 @@
             // 
             // GvTongNhan
             // 
+            this.GvTongNhan.AllowUserToAddRows = false;
+            this.GvTongNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GvTongNhan.BackgroundColor = System.Drawing.Color.White;
             this.GvTongNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GvTongNhan.Location = new System.Drawing.Point(189, 260);
             this.GvTongNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GvTongNhan.Name = "GvTongNhan";
+            this.GvTongNhan.RowHeadersVisible = false;
             this.GvTongNhan.RowHeadersWidth = 82;
             this.GvTongNhan.RowTemplate.Height = 41;
             this.GvTongNhan.Size = new System.Drawing.Size(711, 179);
@@ -91,11 +95,14 @@
             // 
             // GvLSGD
             // 
+            this.GvLSGD.AllowUserToAddRows = false;
+            this.GvLSGD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GvLSGD.BackgroundColor = System.Drawing.Color.White;
             this.GvLSGD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GvLSGD.Location = new System.Drawing.Point(189, 260);
             this.GvLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GvLSGD.Name = "GvLSGD";
+            this.GvLSGD.RowHeadersVisible = false;
             this.GvLSGD.RowHeadersWidth = 51;
             this.GvLSGD.RowTemplate.Height = 29;
             this.GvLSGD.Size = new System.Drawing.Size(711, 372);
@@ -164,26 +171,6 @@
             this.btn_ToanBo.UseVisualStyleBackColor = false;
             this.btn_ToanBo.Click += new System.EventHandler(this.btn_ToanBo_Click);
             // 
-            // vbButton3
-            // 
-            this.vbButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton3.BorderRadius = 20;
-            this.vbButton3.BorderSize = 0;
-            this.vbButton3.FlatAppearance.BorderSize = 0;
-            this.vbButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vbButton3.ForeColor = System.Drawing.Color.White;
-            this.vbButton3.Location = new System.Drawing.Point(596, 144);
-            this.vbButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.vbButton3.Name = "vbButton3";
-            this.vbButton3.Size = new System.Drawing.Size(304, 38);
-            this.vbButton3.TabIndex = 32;
-            this.vbButton3.Text = "Tìm kiếm ";
-            this.vbButton3.TextColor = System.Drawing.Color.White;
-            this.vbButton3.UseVisualStyleBackColor = false;
-            // 
             // btn_XuatExcel
             // 
             this.btn_XuatExcel.BackColor = System.Drawing.Color.LightSlateGray;
@@ -195,7 +182,7 @@
             this.btn_XuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XuatExcel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_XuatExcel.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatExcel.Location = new System.Drawing.Point(189, 144);
+            this.btn_XuatExcel.Location = new System.Drawing.Point(390, 146);
             this.btn_XuatExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_XuatExcel.Name = "btn_XuatExcel";
             this.btn_XuatExcel.Size = new System.Drawing.Size(303, 38);
@@ -284,7 +271,6 @@
         private CustomButton.VBButton btn_TienRa;
         private CustomButton.VBButton btn_TienVao;
         private CustomButton.VBButton btn_ToanBo;
-        private CustomButton.VBButton vbButton3;
         private CustomButton.VBButton btn_XuatExcel;
         private ComboBox cmNgay;
         private CustomButton.VBButton vbButton1;

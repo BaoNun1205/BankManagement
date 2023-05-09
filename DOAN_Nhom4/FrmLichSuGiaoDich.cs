@@ -27,11 +27,6 @@ namespace DOAN_Nhom4
             this.kh = kh;
         }
 
-        private void picBoxQuaylai_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btn_TienVao_Click(object sender, EventArgs e)
         {
             GvTongGui.Visible = false;
@@ -79,6 +74,7 @@ namespace DOAN_Nhom4
         {
             GvTongGui.Visible = false;
             GvTongNhan.Visible = false;
+            
         }
 
         private void vbButton2_Click(object sender, EventArgs e)
