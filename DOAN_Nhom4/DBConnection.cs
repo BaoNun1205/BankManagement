@@ -396,7 +396,7 @@ namespace DOAN_Nhom4
             Regex regex = new Regex(strRegex);
             return regex.IsMatch(numberphone);
         }
-
+        /*
         public void XuatExcel(string sql)
         {
             try
@@ -452,5 +452,71 @@ namespace DOAN_Nhom4
                 conn.Close();
             }
         }
+        */
+
+        public void XuatExcel(string sql)
+        {
+            try
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    // Thực thi câu truy vấn và tạo một SqlDataReader
+                    using (SqlDataReader dataReader = command.ExecuteReader())
+                    {
+                        // Tạo một đối tượng ExcelPackage mới
+                        ExcelPackage excelPackage = new ExcelPackage();
+
+                        // Tạo một worksheet mới và thiết lập tên cho nó
+                        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("MyWorksheet");
+
+                        // Thiết lập cột tiêu đề cho worksheet
+                        for (int i = 0; i < dataReader.FieldCount; i++)
+                        {
+                            worksheet.Cells[1, i + 1].Value = dataReader.GetName(i);
+                        }
+
+                        // Thiết lập dữ liệu cho worksheet
+                        int row = 2;
+                        while (dataReader.Read())
+                        {
+                            for (int i = 0; i < dataReader.FieldCount; i++)
+                            {
+                                worksheet.Cells[row, i + 1].Value = dataReader.GetValue(i).ToString();
+                            }
+                            row++;
+                        }
+
+                        // Khởi tạo hộp thoại lưu tập tin
+                        SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                        saveFileDialog1.Filter = "Excel Workbook (*.xlsx)|*.xlsx";
+                        saveFileDialog1.Title = "Save Excel File";
+                        saveFileDialog1.ShowDialog();
+
+                        // Nếu người dùng đã chọn đường dẫn lưu
+                        if (saveFileDialog1.FileName != "")
+                        {
+                            // Lưu workbook vào đường dẫn đã chọn
+                            FileStream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create);
+                            excelPackage.SaveAs(stream);
+                            stream.Close();
+                        }
+
+                        // Giải phóng tài nguyên
+                        excelPackage.Dispose();
+                    }
+                }
+                MessageBox.Show("Export successful!");
+            }
+            catch
+            {
+                MessageBox.Show("Loi");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
