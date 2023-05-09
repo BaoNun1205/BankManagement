@@ -190,12 +190,19 @@ namespace DOAN_Nhom4
                         }
                         lsgdDAO.Them(gd);
                         SoDienThoai sdt = sdtDAO.LaySoDienThoai("SDT", gd.SoTKNhan);
-                        sdtDAO.ThanhToanVienThong(sdt, gd);
-                        tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK, "TenNH", tknh.TenNH);
-                        FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
-                        this.Hide();
-                        frmThongbaoChuyentien.ShowDialog();
-                        this.Close();
+                        if (sdt != null)
+                        {
+                            sdtDAO.ThanhToanVienThong(sdt, gd);
+                            tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", tknh.SoTK, "TenNH", tknh.TenNH);
+                            FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
+                            this.Hide();
+                            frmThongbaoChuyentien.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Số điện thoại không tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
