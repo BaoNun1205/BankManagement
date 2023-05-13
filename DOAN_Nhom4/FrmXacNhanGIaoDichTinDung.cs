@@ -38,7 +38,7 @@ namespace DOAN_Nhom4
             lblHienThiTKNguon.Text = tknh.SoTK;
             lblHienThiTKTinDung.Text = tttd.SoTKTinDung;
             lblHienThiTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString();
-            txt_NgayGiaoDich.Value = DateTime.Now;
+            lblHienThiNgayGiaoDich.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
             lblHienThiPhiTraCham.Text = tttd.PhiTraCham.ToString();
             lblHienThiPhiPhat.Text = tttd.PhiPhat.ToString();
             lblHienThiTongSoTien.Text = (tttd.PhiTraCham + tttd.PhiPhat + tttd.SoTienDaSuDung).ToString();
