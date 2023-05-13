@@ -62,7 +62,7 @@ namespace DOAN_Nhom4
 
         KiemTraTenNguoiNhan kt;
 
-        public void IsTonTai()
+        public void HienThiThongTin()
         {
             NguoiDung ngDung = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
@@ -129,12 +129,12 @@ namespace DOAN_Nhom4
 
         private void txtSTK_TextChanged(object sender, EventArgs e)
         {
-            IsTonTai();
+            HienThiThongTin();
         }
 
         private void cbTenNH_TextChanged(object sender, EventArgs e)
         {
-            IsTonTai();
+            HienThiThongTin();
         }
 
         private void cbTennguoinhan_SelectedIndexChanged(object sender, EventArgs e)
