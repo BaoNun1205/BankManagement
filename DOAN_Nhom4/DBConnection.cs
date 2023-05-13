@@ -75,15 +75,15 @@ namespace DOAN_Nhom4
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    tkiem.MaTietKiem = int.Parse(reader["MaTietKiem"].ToString());
-                    tkiem.NgayDangky = DateTime.Parse(reader["NgayDangKy"].ToString());
-                    tkiem.TenTKTK = reader["TenTKTK"].ToString();
-                    tkiem.LoaiSo = int.Parse(reader["LoaiSo"].ToString());
-                    tkiem.TienGoc = BigInteger.Parse(reader["TienGoc"].ToString());
-                    tkiem.KiHan = int.Parse(reader["KiHan"].ToString());
-                    tkiem.LaiSuat = double.Parse(reader["LaiSuat"].ToString());
-                    tkiem.TienLai = BigInteger.Parse(reader["TienLai"].ToString());
-                    tkiem.TongTien = BigInteger.Parse(reader["TongTien"].ToString());
+                    tkiem.MaTietKiem = reader.GetInt32(2);
+                    tkiem.NgayDangky = reader.GetDateTime(3);
+                    tkiem.TenTKTK = reader.GetString(4);
+                    tkiem.LoaiSo = reader.GetInt32(5);
+                    tkiem.TienGoc = reader.GetInt64(6);
+                    tkiem.KiHan = reader.GetInt32(7);
+                    tkiem.LaiSuat = Math.Round((double)reader.GetFloat(8), 2);
+                    tkiem.TienLai = reader.GetInt64(9);
+                    tkiem.TongTien = reader.GetInt64(10);
                 }
             }
             catch (Exception exc)
@@ -108,13 +108,13 @@ namespace DOAN_Nhom4
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    ngDung.TenNH = reader["TenNH"].ToString();
-                    ngDung.SoTK =  reader["SoTK"].ToString();
-                    ngDung.tenTK = reader["TenKH"].ToString();
-                    ngDung.ngaySinh = DateTime.Parse(reader["NgaySinh"].ToString());
-                    ngDung.Cccd = reader["CCCD"].ToString();
-                    ngDung.Email = reader["Email"].ToString();
-                    ngDung.Sdt = reader["SDT"].ToString();
+                    ngDung.TenNH = reader.GetString(0);
+                    ngDung.SoTK = reader.GetString(1);
+                    ngDung.tenTK = reader.GetString(2);
+                    ngDung.ngaySinh = reader.GetDateTime(3);
+                    ngDung.Cccd = reader.GetString(4);
+                    ngDung.Email = reader.GetString(5);
+                    ngDung.Sdt = reader.GetString(6);
                 }
             }
             catch (Exception exc)

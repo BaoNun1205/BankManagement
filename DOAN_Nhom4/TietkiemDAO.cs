@@ -52,12 +52,6 @@ namespace DOAN_Nhom4
             data.xuLi(sqlTkiem);
         }
 
-        public void Them2(TietKiem tkiem)
-        {
-            string sqlTkiem = string.Format("INSERT INTO TKiem(MaTKiem, NgayDangKy, TenTKTK) VALUES ('{0}', '{1}', '{2}')", tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK);
-            data.xuLi(sqlTkiem);
-        }
-
         public void Rut(TietKiem tkiem)
         {
             string sqlTkiem = string.Format("DELETE FROM TaiKhoanTietKiem WHERE MaTietKiem ='{0}'", tkiem.MaTietKiem);
