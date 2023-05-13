@@ -58,7 +58,6 @@ namespace DOAN_Nhom4
             ThongKe.Series.Add(lineSeries);
             Controls.Add(ThongKe);
 
-            List<double> yValues = new List<double>(); // Danh sách giá trị của cột y
             List<DateTime> xValues = new List<DateTime>(); // Danh sách giá trị của cột x
 
             DateTime currentDate = DateTime.Now.Date; // Thời điểm hiện tại
@@ -70,7 +69,6 @@ namespace DOAN_Nhom4
                 xValues.Add(date); // Thêm giá trị của cột x vào danh sách
             }
 
-            //ThongKe.Series[0].Values = new ChartValues<double>(yValues); // Thiết lập giá trị của cột y
             ThongKe.AxisX.Clear(); // Xóa các giá trị cột x hiện tại
             ThongKe.AxisX.Add(new LiveCharts.Wpf.Axis // Thêm các giá trị mới của cột x
             {
