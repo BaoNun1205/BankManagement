@@ -57,27 +57,31 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Số tài khoản không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        public void IsTonTai()
+        public void HienThiThongTin()
         {
             NguoiDung ngDung = new NguoiDung();
+            TaiKhoanNganHang tk = new TaiKhoanNganHang();
             ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
             if (ngDung != null)
             {
                 txt_TenTK.Text = ngDung.TenTK.ToString();
                 txt_CCCD.Text = ngDung.Cccd.ToString();
                 txt_SDT.Text = ngDung.Sdt.ToString();
+                lblSoDu.Text = tk.SoDu.ToString();
             }
             else
             {
                 txt_TenTK.Text = "";
                 txt_CCCD.Text = "";
                 txt_SDT.Text = "";
+                lblSoDu.Text = "-";
             }
         }
 
         private void txt_SoTK_TextChanged(object sender, EventArgs e)
         {
-            IsTonTai();
+            HienThiThongTin();
         }
     }
 }

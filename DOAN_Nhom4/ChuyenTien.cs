@@ -76,5 +76,53 @@ namespace DOAN_Nhom4
                 "Vietinbank", "VietCapital Bank"};
             cb_TenNH.Items.AddRange(items);
         }
+
+        public void HienThiThongTinNguoiChuyen()
+        {
+            NguoiDung ngDung = new NguoiDung();
+            TaiKhoanNganHang tk = new TaiKhoanNganHang();
+            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text);           
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text);
+            if (ngDung != null)
+            {
+                txt_SoTKChuyen.Text = ngDung.SoTK.ToString();
+                txt_TenTKChuyen.Text = ngDung.TenTK.ToString();
+                txt_CCCD.Text = ngDung.Cccd.ToString();
+                txt_SDT.Text = ngDung.Sdt.ToString();
+                lblSoDu.Text = tk.SoDu.ToString();
+            }
+            else
+            {
+                txt_SoTKChuyen.Text = "";
+                txt_CCCD.Text = "";
+                txt_SDT.Text = "";
+                lblSoDu.Text = "-";
+            }
+        }
+
+        public void HienThiThongTinNguoiNhan()
+        {
+            NguoiDung ngDung = new NguoiDung();
+            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+
+            if (ngDung != null)
+            {
+                txt_TenTKNhan.Text = ngDung.TenTK.ToString();
+            }
+            else
+            {
+                txt_TenTKNhan.Text = "";
+            }
+        }
+
+        private void txt_SoTKChuyen_TextChanged(object sender, EventArgs e)
+        {
+            HienThiThongTinNguoiChuyen();
+        }
+
+        private void txt_SoTKNhan_TextChanged(object sender, EventArgs e)
+        {
+            HienThiThongTinNguoiNhan();
+        }
     }
 }

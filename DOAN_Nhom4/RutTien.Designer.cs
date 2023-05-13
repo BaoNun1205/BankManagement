@@ -129,9 +129,9 @@
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
             this.lblSoDu.Location = new System.Drawing.Point(344, 245);
             this.lblSoDu.Name = "lblSoDu";
-            this.lblSoDu.Size = new System.Drawing.Size(19, 19);
+            this.lblSoDu.Size = new System.Drawing.Size(15, 19);
             this.lblSoDu.TabIndex = 55;
-            this.lblSoDu.Text = " -";
+            this.lblSoDu.Text = "-";
             // 
             // btn_RutTien
             // 
