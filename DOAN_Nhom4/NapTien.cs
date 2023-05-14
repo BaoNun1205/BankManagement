@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
             }
             else
             {
-                txt_TenTK.Text = "";
+                txt_TenTK.Text = "Khong ton tai";
                 txt_CCCD.Text = "";
                 txt_SDT.Text = "";
                 lblSoDu.Text = "-";
@@ -72,6 +72,16 @@ namespace DOAN_Nhom4
             }
             else
                 MessageBox.Show("Số tài khoản không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btn_HuyBo_Click(object sender, EventArgs e)
+        {
+            txt_SoTK.Text = "";
+            txt_SoTien.Text = "";
+            txt_CCCD.Text = "";
+            txt_SDT.Text = "";
+            txt_TenTK.Text = "";
+            lblSoDu.Text = "-";
         }
     }
 }

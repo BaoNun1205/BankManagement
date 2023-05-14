@@ -47,7 +47,7 @@ namespace DOAN_Nhom4
         public NguoiDung LayKhachHang(string cotThuNhat, string giaTriThuNhat, string cotThuHai, string giaTriThuHai)
         {
             NguoiDung khachHang = new NguoiDung();
-            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}'", cotThuNhat, giaTriThuNhat, cotThuHai, giaTriThuHai);
+            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}' AND {2} = '{3}'", cotThuNhat, giaTriThuNhat, cotThuHai, giaTriThuHai);
             khachHang = data.Xuli(sql);
             return khachHang;
         }

@@ -86,6 +86,7 @@
             this.txt_TenTK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_TenTK.Location = new System.Drawing.Point(286, 93);
             this.txt_TenTK.Name = "txt_TenTK";
+            this.txt_TenTK.ReadOnly = true;
             this.txt_TenTK.Size = new System.Drawing.Size(244, 30);
             this.txt_TenTK.TabIndex = 58;
             // 
@@ -107,6 +108,7 @@
             this.btn_HuyBo.Text = "Hủy Bỏ";
             this.btn_HuyBo.TextColor = System.Drawing.Color.SteelBlue;
             this.btn_HuyBo.UseVisualStyleBackColor = false;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
             // lblSoDuString
             // 
@@ -189,6 +191,7 @@
             this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_SDT.Location = new System.Drawing.Point(286, 223);
             this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.ReadOnly = true;
             this.txt_SDT.Size = new System.Drawing.Size(244, 30);
             this.txt_SDT.TabIndex = 50;
             // 
@@ -210,6 +213,7 @@
             this.txt_CCCD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_CCCD.Location = new System.Drawing.Point(285, 157);
             this.txt_CCCD.Name = "txt_CCCD";
+            this.txt_CCCD.ReadOnly = true;
             this.txt_CCCD.Size = new System.Drawing.Size(244, 30);
             this.txt_CCCD.TabIndex = 48;
             // 

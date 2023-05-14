@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminDichVu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_QuayLai = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,18 +46,16 @@
             this.panel1.Controls.Add(this.pb_QuayLai);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 96);
+            this.panel1.Size = new System.Drawing.Size(949, 128);
             this.panel1.TabIndex = 32;
             // 
             // pb_QuayLai
             // 
-            this.pb_QuayLai.Image = ((System.Drawing.Image)(resources.GetObject("pb_QuayLai.Image")));
-            this.pb_QuayLai.Location = new System.Drawing.Point(-2, 2);
-            this.pb_QuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_QuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow;
+            this.pb_QuayLai.Location = new System.Drawing.Point(0, 0);
             this.pb_QuayLai.Name = "pb_QuayLai";
-            this.pb_QuayLai.Size = new System.Drawing.Size(46, 36);
+            this.pb_QuayLai.Size = new System.Drawing.Size(70, 58);
             this.pb_QuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_QuayLai.TabIndex = 25;
             this.pb_QuayLai.TabStop = false;
@@ -70,9 +67,9 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(308, 35);
+            this.label1.Location = new System.Drawing.Point(352, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 26);
+            this.label1.Size = new System.Drawing.Size(276, 31);
             this.label1.TabIndex = 24;
             this.label1.Text = "DỊCH VỤ NGÂN HÀNG";
             // 
@@ -82,10 +79,9 @@
             this.panel2.Controls.Add(this.btn_ChuyenTien);
             this.panel2.Controls.Add(this.btn_RutTien);
             this.panel2.Controls.Add(this.btn_NapTien);
-            this.panel2.Location = new System.Drawing.Point(0, 95);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 127);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(168, 406);
+            this.panel2.Size = new System.Drawing.Size(192, 541);
             this.panel2.TabIndex = 33;
             // 
             // btn_ChuyenTien
@@ -99,10 +95,9 @@
             this.btn_ChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChuyenTien.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_ChuyenTien.ForeColor = System.Drawing.Color.White;
-            this.btn_ChuyenTien.Location = new System.Drawing.Point(-2, 325);
-            this.btn_ChuyenTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ChuyenTien.Location = new System.Drawing.Point(-2, 433);
             this.btn_ChuyenTien.Name = "btn_ChuyenTien";
-            this.btn_ChuyenTien.Size = new System.Drawing.Size(168, 83);
+            this.btn_ChuyenTien.Size = new System.Drawing.Size(192, 111);
             this.btn_ChuyenTien.TabIndex = 43;
             this.btn_ChuyenTien.Text = "Chuyển Tiền";
             this.btn_ChuyenTien.TextColor = System.Drawing.Color.White;
@@ -120,10 +115,9 @@
             this.btn_RutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RutTien.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_RutTien.ForeColor = System.Drawing.Color.White;
-            this.btn_RutTien.Location = new System.Drawing.Point(-2, 155);
-            this.btn_RutTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_RutTien.Location = new System.Drawing.Point(-2, 207);
             this.btn_RutTien.Name = "btn_RutTien";
-            this.btn_RutTien.Size = new System.Drawing.Size(168, 83);
+            this.btn_RutTien.Size = new System.Drawing.Size(192, 111);
             this.btn_RutTien.TabIndex = 42;
             this.btn_RutTien.Text = "Rút Tiền";
             this.btn_RutTien.TextColor = System.Drawing.Color.White;
@@ -141,10 +135,9 @@
             this.btn_NapTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NapTien.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_NapTien.ForeColor = System.Drawing.Color.White;
-            this.btn_NapTien.Location = new System.Drawing.Point(-2, -2);
-            this.btn_NapTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NapTien.Location = new System.Drawing.Point(-2, -3);
             this.btn_NapTien.Name = "btn_NapTien";
-            this.btn_NapTien.Size = new System.Drawing.Size(168, 83);
+            this.btn_NapTien.Size = new System.Drawing.Size(192, 111);
             this.btn_NapTien.TabIndex = 41;
             this.btn_NapTien.Text = "Nạp Tiền";
             this.btn_NapTien.TextColor = System.Drawing.Color.White;
@@ -153,13 +146,12 @@
             // 
             // FrmAdminDichVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(829, 502);
+            this.ClientSize = new System.Drawing.Size(947, 669);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmAdminDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Dịch Vụ";

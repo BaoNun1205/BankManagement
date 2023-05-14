@@ -22,52 +22,7 @@ namespace DOAN_Nhom4
         NguoiDungDAO ndDAO = new NguoiDungDAO();
         DBConnection db = new DBConnection();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
-        private void btn_ChuyenTien_Click(object sender, EventArgs e)
-        {
-            TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
-            tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text);
-            NguoiDung ndGui = new NguoiDung();
-            ndGui = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text);
-            TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
-            tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKNhan.Text);
-            NguoiDung ndNhan = new NguoiDung();
-            ndNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text);
-            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, BigInteger.Parse(txt_SoTien.Text), "Chuyen tien");      
-            if (tkGui != null)
-            {
-                if (tkNhan != null)
-                {
-                    if (txt_CCCD.Text == ndGui.Cccd)
-                    {
-                        if (txt_SDT.Text == ndGui.Sdt && db.IsPhone(txt_SDT.Text))
-                        {
-                            if (gd.SoTien > 0 && gd.SoTien <= tkGui.SoDu)
-                            {
-                                tknhDAO.ChuyenTien(tkGui, gd, tkNhan);
-                                lsgdDAO.Them(gd);
-                                txt_SoTKNhan.Text = "";
-                                txt_SoTKChuyen.Text = "";
-                                cb_TenNH.SelectedIndex = 0;
-                                txt_SoTien.Text = "";
-                                txt_CCCD.Text = "";
-                                txt_SDT.Text = "";
-                                MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                                MessageBox.Show("Số tiền không hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else
-                            MessageBox.Show("Số điện thoại không đúng hoặc không hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                        MessageBox.Show("Số căn cước công dân không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    MessageBox.Show("Số tài khoản nhận không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-                MessageBox.Show("Số tài khoản chuyển không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
+
 
         private void ChuyenTien_Load(object sender, EventArgs e)
         {
@@ -94,6 +49,7 @@ namespace DOAN_Nhom4
             else
             {
                 txt_SoTKChuyen.Text = "";
+                txt_TenTKChuyen.Text = "Khong ton tai";
                 txt_CCCD.Text = "";
                 txt_SDT.Text = "";
                 lblSoDu.Text = "-";
@@ -102,16 +58,15 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTinNguoiNhan()
         {
-            NguoiDung ngDung = new NguoiDung();
-            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
-
-            if (ngDung != null)
+            NguoiDung ngDungNhan = new NguoiDung();
+            ngDungNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+            if (ngDungNhan != null)
             {
-                txt_TenTKNhan.Text = ngDung.TenTK.ToString();
+                txt_TenTKNhan.Text = ngDungNhan.TenTK.ToString();
             }
             else
             {
-                txt_TenTKNhan.Text = "";
+                txt_TenTKNhan.Text = "Khong ton tai";
             }
         }
 
@@ -123,6 +78,56 @@ namespace DOAN_Nhom4
         private void txt_SoTKNhan_TextChanged(object sender, EventArgs e)
         {
             HienThiThongTinNguoiNhan();
+        }
+
+        private void btn_ChuyenTien_Click(object sender, EventArgs e)
+        {
+            TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
+            tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text);
+            NguoiDung ndGui = new NguoiDung();
+            ndGui = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text);
+            TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
+            tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKNhan.Text);
+            NguoiDung ndNhan = new NguoiDung();
+            ndNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text);
+            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, BigInteger.Parse(txt_SoTien.Text), "Chuyen tien");
+            if (tkGui != null)
+            {
+                if (tkNhan != null)
+                {
+                    if (gd.SoTien > 0 && gd.SoTien <= tkGui.SoDu)
+                    {
+                        tknhDAO.ChuyenTien(tkGui, gd, tkNhan);
+                        lsgdDAO.Them(gd);
+                        txt_SoTKNhan.Text = "";
+                        txt_SoTKChuyen.Text = "";
+                        cb_TenNH.Text = "HHB";
+                        txt_SoTien.Text = "";
+                        txt_CCCD.Text = "";
+                        txt_SDT.Text = "";
+                        MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("Số tiền không hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);      
+                }
+                else
+                    MessageBox.Show("Số tài khoản nhận không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+                MessageBox.Show("Số tài khoản chuyển không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btn_HuyBo_Click(object sender, EventArgs e)
+        {
+            txt_SoTKChuyen.Text = "";
+            txt_SoTien.Text = "";
+            txt_CCCD.Text = "";
+            txt_SDT.Text = "";
+            txt_TenTKNhan.Text = "";
+            txt_TenTKChuyen.Text = "";
+            txt_TenTKNhan.Text = "";
+            cb_TenNH.Text = "HHB";
+            lblSoDu.Text = "-";
         }
     }
 }
