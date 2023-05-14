@@ -109,7 +109,7 @@ namespace DOAN_Nhom4
 
         private void btnThongke_Click(object sender, EventArgs e)
         {
-            FrmThongKeTien frmthongke = new FrmThongKeTien();
+            FrmThongKeTien frmthongke = new FrmThongKeTien(kh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmthongke, pnlNguoiDung);
         }
     }

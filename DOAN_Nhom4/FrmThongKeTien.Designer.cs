@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.ThongKe = new LiveCharts.WinForms.CartesianChart();
-            this.vbButton1 = new CustomButton.VBButton();
-            this.vbButton2 = new CustomButton.VBButton();
-            this.vbButton3 = new CustomButton.VBButton();
+            this.btnTongTienVao = new CustomButton.VBButton();
+            this.btnTongTienRa = new CustomButton.VBButton();
+            this.btnToanBo = new CustomButton.VBButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKhoangthoigian = new System.Windows.Forms.Label();
@@ -46,62 +46,65 @@
             this.ThongKe.TabIndex = 3;
             this.ThongKe.Text = "cartesianChart1";
             // 
-            // vbButton1
+            // btnTongTienVao
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 0;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(135, 47);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(138, 41);
-            this.vbButton1.TabIndex = 6;
-            this.vbButton1.Text = "Tổng tiền vào";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btnTongTienVao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTongTienVao.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTongTienVao.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTongTienVao.BorderRadius = 0;
+            this.btnTongTienVao.BorderSize = 0;
+            this.btnTongTienVao.FlatAppearance.BorderSize = 0;
+            this.btnTongTienVao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTongTienVao.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTongTienVao.ForeColor = System.Drawing.Color.White;
+            this.btnTongTienVao.Location = new System.Drawing.Point(135, 47);
+            this.btnTongTienVao.Name = "btnTongTienVao";
+            this.btnTongTienVao.Size = new System.Drawing.Size(138, 41);
+            this.btnTongTienVao.TabIndex = 6;
+            this.btnTongTienVao.Text = "Tổng tiền vào";
+            this.btnTongTienVao.TextColor = System.Drawing.Color.White;
+            this.btnTongTienVao.UseVisualStyleBackColor = false;
+            this.btnTongTienVao.Click += new System.EventHandler(this.btnTongTienVao_Click);
             // 
-            // vbButton2
+            // btnTongTienRa
             // 
-            this.vbButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton2.BorderRadius = 0;
-            this.vbButton2.BorderSize = 0;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(279, 47);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(138, 41);
-            this.vbButton2.TabIndex = 7;
-            this.vbButton2.Text = "Tổng tiền ra";
-            this.vbButton2.TextColor = System.Drawing.Color.White;
-            this.vbButton2.UseVisualStyleBackColor = false;
+            this.btnTongTienRa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTongTienRa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnTongTienRa.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTongTienRa.BorderRadius = 0;
+            this.btnTongTienRa.BorderSize = 0;
+            this.btnTongTienRa.FlatAppearance.BorderSize = 0;
+            this.btnTongTienRa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTongTienRa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTongTienRa.ForeColor = System.Drawing.Color.White;
+            this.btnTongTienRa.Location = new System.Drawing.Point(279, 47);
+            this.btnTongTienRa.Name = "btnTongTienRa";
+            this.btnTongTienRa.Size = new System.Drawing.Size(138, 41);
+            this.btnTongTienRa.TabIndex = 7;
+            this.btnTongTienRa.Text = "Tổng tiền ra";
+            this.btnTongTienRa.TextColor = System.Drawing.Color.White;
+            this.btnTongTienRa.UseVisualStyleBackColor = false;
+            this.btnTongTienRa.Click += new System.EventHandler(this.btnTongTienRa_Click);
             // 
-            // vbButton3
+            // btnToanBo
             // 
-            this.vbButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.vbButton3.BorderRadius = 0;
-            this.vbButton3.BorderSize = 0;
-            this.vbButton3.FlatAppearance.BorderSize = 0;
-            this.vbButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.vbButton3.ForeColor = System.Drawing.Color.White;
-            this.vbButton3.Location = new System.Drawing.Point(423, 47);
-            this.vbButton3.Name = "vbButton3";
-            this.vbButton3.Size = new System.Drawing.Size(138, 41);
-            this.vbButton3.TabIndex = 8;
-            this.vbButton3.Text = "Toàn bộ";
-            this.vbButton3.TextColor = System.Drawing.Color.White;
-            this.vbButton3.UseVisualStyleBackColor = false;
+            this.btnToanBo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnToanBo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnToanBo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnToanBo.BorderRadius = 0;
+            this.btnToanBo.BorderSize = 0;
+            this.btnToanBo.FlatAppearance.BorderSize = 0;
+            this.btnToanBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToanBo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnToanBo.ForeColor = System.Drawing.Color.White;
+            this.btnToanBo.Location = new System.Drawing.Point(423, 47);
+            this.btnToanBo.Name = "btnToanBo";
+            this.btnToanBo.Size = new System.Drawing.Size(138, 41);
+            this.btnToanBo.TabIndex = 8;
+            this.btnToanBo.Text = "Toàn bộ";
+            this.btnToanBo.TextColor = System.Drawing.Color.White;
+            this.btnToanBo.UseVisualStyleBackColor = false;
+            this.btnToanBo.Click += new System.EventHandler(this.btnToanBo_Click);
             // 
             // comboBox1
             // 
@@ -147,9 +150,9 @@
             this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.lblKhoangthoigian);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.vbButton3);
-            this.Controls.Add(this.vbButton2);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.btnToanBo);
+            this.Controls.Add(this.btnTongTienRa);
+            this.Controls.Add(this.btnTongTienVao);
             this.Controls.Add(this.ThongKe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmThongKeTien";
@@ -163,9 +166,9 @@
 
         #endregion
         private LiveCharts.WinForms.CartesianChart ThongKe;
-        private CustomButton.VBButton vbButton1;
-        private CustomButton.VBButton vbButton2;
-        private CustomButton.VBButton vbButton3;
+        private CustomButton.VBButton btnTongTienVao;
+        private CustomButton.VBButton btnTongTienRa;
+        private CustomButton.VBButton btnToanBo;
         private ComboBox comboBox1;
         private Panel panel1;
         private Label lblKhoangthoigian;
