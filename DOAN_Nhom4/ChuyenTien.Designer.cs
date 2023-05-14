@@ -277,6 +277,22 @@
             // 
             this.cb_TenNH.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cb_TenNH.FormattingEnabled = true;
+            this.cb_TenNH.Items.AddRange(new object[] {
+            "HHB",
+            "ACB",
+            "Agribank",
+            "BIDV",
+            "Đông Á Bank",
+            "Eximbank",
+            "HDBank",
+            "MBBank",
+            "OCB",
+            "Sacombank",
+            "SHB",
+            "TPBank",
+            "Vietcombank",
+            "VietinBank",
+            "VietCapital Bank"});
             this.cb_TenNH.Location = new System.Drawing.Point(369, 51);
             this.cb_TenNH.Name = "cb_TenNH";
             this.cb_TenNH.Size = new System.Drawing.Size(244, 31);

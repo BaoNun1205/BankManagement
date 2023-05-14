@@ -26,8 +26,8 @@ namespace DOAN_Nhom4
         {
             NguoiDung ngDung = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
+            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
                 txt_TenTK.Text = ngDung.TenTK.ToString();
@@ -52,9 +52,9 @@ namespace DOAN_Nhom4
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkRut = new TaiKhoanNganHang();
-            tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
+            tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             NguoiDung ndRut = new NguoiDung();
-            ndRut = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
+            ndRut = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", BigInteger.Parse(txt_SoTien.Text), "Rut tien ra khoi tai khoan");
             if (tkRut != null)
             {

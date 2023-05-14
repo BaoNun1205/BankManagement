@@ -80,7 +80,7 @@ namespace DOAN_Nhom4
                 txtTennguoinhan.Text = "Không tồn tại";
                 txtTennguoinhan.ForeColor = Color.Black;
             }
-            if (txtSTK.Text == nguoiDung.soTK)
+            if (txtSTK.Text == nguoiDung.soTK && cbTenNH.Text == nguoiDung.TenNH)
             {
                 kt = KiemTraTenNguoiNhan.chinhban;
                 txtTennguoinhan.Text = "Không thể chuyển tiền cho cho chính bạn";

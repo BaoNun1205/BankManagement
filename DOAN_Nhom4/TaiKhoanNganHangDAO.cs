@@ -41,18 +41,10 @@ namespace DOAN_Nhom4
             return true;
         }
 
-        public TaiKhoanNganHang LayTaiKhoanNganHang(string Cot, string giaTri)
+        public TaiKhoanNganHang LayTaiKhoanNganHang(string CotSoTK, string GTSoTK, string CotTenNH, string GTTenNH)
         {
             TaiKhoanNganHang tknh = new TaiKhoanNganHang();
-            string sql = string.Format("SELECT * FROM TaiKhoanNganHang WHERE {0} = '{1}'", Cot, giaTri);
-            tknh = data.XuLi(sql);
-            return tknh;
-        }
-
-        public TaiKhoanNganHang LayTaiKhoanNganHang(string cotThuNhat, string giaTriThuNhat, string cotThuHai, string giaTriThuHai)
-        {
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang();
-            string sql = string.Format("SELECT * FROM TaiKhoanNganHang WHERE {0} = '{1}' AND {2} = '{3}'", cotThuNhat, giaTriThuNhat, cotThuHai, giaTriThuHai);
+            string sql = string.Format("SELECT * FROM TaiKhoanNganHang WHERE {0} = '{1}' AND {2} = '{3}'", CotSoTK, GTSoTK, CotTenNH, GTTenNH);
             tknh = data.XuLi(sql);
             return tknh;
         }
@@ -61,12 +53,12 @@ namespace DOAN_Nhom4
         {
             TaiKhoanNganHang taiKhoanNhan = LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
             BigInteger soTienNhan = gd.SoTien + taiKhoanNhan.SoDu;
-            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienNhan, taiKhoanNhan.SoTK);
+            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienNhan, taiKhoanNhan.SoTK, taiKhoanNhan.TenNH);
             data.xuLi(sqlStrNhan);
 
             TaiKhoanNganHang taiKhoanGui = LayTaiKhoanNganHang("SoTk", gd.SoTKGui, "TenNH", gd.NganHangGui);
             BigInteger soTienGui = taiKhoanGui.SoDu - gd.SoTien;
-            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienGui, taiKhoanGui.SoTK);
+            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienGui, taiKhoanGui.SoTK, taiKhoanGui.TenNH);
             data.xuLi(sqlStrGui);
         }
         public void NapTien(TaiKhoanNganHang tkNap, GiaoDich gd)
