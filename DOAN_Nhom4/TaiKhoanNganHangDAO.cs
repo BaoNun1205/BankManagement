@@ -53,12 +53,12 @@ namespace DOAN_Nhom4
         {
             TaiKhoanNganHang taiKhoanNhan = LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
             BigInteger soTienNhan = gd.SoTien + taiKhoanNhan.SoDu;
-            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienNhan, taiKhoanNhan.SoTK);
+            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienNhan, taiKhoanNhan.SoTK, taiKhoanNhan.TenNH);
             data.xuLi(sqlStrNhan);
 
             TaiKhoanNganHang taiKhoanGui = LayTaiKhoanNganHang("SoTk", gd.SoTKGui, "TenNH", gd.NganHangGui);
             BigInteger soTienGui = taiKhoanGui.SoDu - gd.SoTien;
-            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", soTienGui, taiKhoanGui.SoTK);
+            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienGui, taiKhoanGui.SoTK, taiKhoanGui.TenNH);
             data.xuLi(sqlStrGui);
         }
         public void NapTien(TaiKhoanNganHang tkNap, GiaoDich gd)
