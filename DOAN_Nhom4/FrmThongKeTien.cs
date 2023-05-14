@@ -51,10 +51,11 @@ namespace DOAN_Nhom4
 
         private void FrmThongKeTien_Load(object sender, EventArgs e)
         {
-            lblFrom.Text = DateTime.Now.Subtract(new TimeSpan(6, 0, 0, 0)).ToString("yyyy-MM-dd");
-            lblTo.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            string ngayBatDau = DateTime.Now.Subtract(new TimeSpan(6, 0, 0, 0)).ToString("yyyy-MM-dd");
+            string ngayKetThuc = DateTime.Now.ToString("yyyy-MM-dd");
+            lblKhoangthoigian.Text = string.Format("Từ ngày {0} đến ngày {1}", ngayBatDau, ngayKetThuc);
             var lineSeries = new LineSeries();
-            lineSeries = thongKeDAO.ThongKeTienGui(lblFrom.Text, lblTo.Text, "HHB", "1234");
+            lineSeries = thongKeDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, "HHB", "1234");
             ThongKe.Series.Add(lineSeries);
             Controls.Add(ThongKe);
 

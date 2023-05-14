@@ -114,7 +114,7 @@ namespace DOAN_Nhom4
 
         private void btnLsgd_Click(object sender, EventArgs e)
         {
-            FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh);
+            FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh, pnlNguoidung);
             DOAN_Nhom4.ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
         }
     }

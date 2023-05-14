@@ -13,7 +13,8 @@ namespace DOAN_Nhom4
 {
     public partial class FrmLichSuGiaoDich : Form
     {
-        public NguoiDung kh;
+        private NguoiDung kh;
+        private Panel pnlNguoiDung;
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
         public FrmLichSuGiaoDich()
@@ -21,10 +22,11 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmLichSuGiaoDich(NguoiDung kh)
+        public FrmLichSuGiaoDich(NguoiDung kh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
+            this.pnlNguoiDung = pnlNguoiDung;
         }
 
         private void btn_TienVao_Click(object sender, EventArgs e)
@@ -112,6 +114,12 @@ namespace DOAN_Nhom4
         private void vbButton2_Click(object sender, EventArgs e)
         {
             lsgdDAO.XuatExcel();
+        }
+
+        private void btnThongke_Click(object sender, EventArgs e)
+        {
+            FrmThongKeTien frmthongke = new FrmThongKeTien();
+            DOAN_Nhom4.ClassAddForm.addForm(frmthongke, pnlNguoiDung);
         }
     }
 }

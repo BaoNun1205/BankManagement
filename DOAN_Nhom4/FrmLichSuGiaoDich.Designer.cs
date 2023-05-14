@@ -35,10 +35,11 @@
             this.btn_TienRa = new CustomButton.VBButton();
             this.btn_TienVao = new CustomButton.VBButton();
             this.btn_ToanBo = new CustomButton.VBButton();
-            this.btn_XuatExcel = new CustomButton.VBButton();
             this.cmNgay = new System.Windows.Forms.ComboBox();
             this.vbButton1 = new CustomButton.VBButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_XuatExcel = new CustomButton.VBButton();
+            this.btnThongke = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GvTongGui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GvTongNhan)).BeginInit();
@@ -47,6 +48,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnThongke);
             this.panel1.Controls.Add(this.GvTongGui);
             this.panel1.Controls.Add(this.GvTongNhan);
             this.panel1.Controls.Add(this.GvLSGD);
@@ -171,27 +173,6 @@
             this.btn_ToanBo.UseVisualStyleBackColor = false;
             this.btn_ToanBo.Click += new System.EventHandler(this.btn_ToanBo_Click);
             // 
-            // btn_XuatExcel
-            // 
-            this.btn_XuatExcel.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btn_XuatExcel.BackgroundColor = System.Drawing.Color.LightSlateGray;
-            this.btn_XuatExcel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_XuatExcel.BorderRadius = 0;
-            this.btn_XuatExcel.BorderSize = 0;
-            this.btn_XuatExcel.FlatAppearance.BorderSize = 0;
-            this.btn_XuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XuatExcel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XuatExcel.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatExcel.Location = new System.Drawing.Point(97, 146);
-            this.btn_XuatExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_XuatExcel.Name = "btn_XuatExcel";
-            this.btn_XuatExcel.Size = new System.Drawing.Size(890, 38);
-            this.btn_XuatExcel.TabIndex = 31;
-            this.btn_XuatExcel.Text = "Xuất excel";
-            this.btn_XuatExcel.TextColor = System.Drawing.Color.White;
-            this.btn_XuatExcel.UseVisualStyleBackColor = false;
-            this.btn_XuatExcel.Click += new System.EventHandler(this.vbButton2_Click);
-            // 
             // cmNgay
             // 
             this.cmNgay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -204,7 +185,7 @@
             "7 ngày gần đây nhất",
             "30 ngày gần đây nhất",
             "100 ngày gần đây nhất"});
-            this.cmNgay.Location = new System.Drawing.Point(426, 82);
+            this.cmNgay.Location = new System.Drawing.Point(426, 81);
             this.cmNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmNgay.Name = "cmNgay";
             this.cmNgay.Size = new System.Drawing.Size(514, 36);
@@ -216,7 +197,7 @@
             this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             this.vbButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 20;
+            this.vbButton1.BorderRadius = 0;
             this.vbButton1.BorderSize = 0;
             this.vbButton1.FlatAppearance.BorderSize = 0;
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -242,6 +223,48 @@
             this.label1.Size = new System.Drawing.Size(296, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "Lịch sử giao dịch tài khoản";
+            // 
+            // btn_XuatExcel
+            // 
+            this.btn_XuatExcel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_XuatExcel.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.btn_XuatExcel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_XuatExcel.BorderRadius = 0;
+            this.btn_XuatExcel.BorderSize = 0;
+            this.btn_XuatExcel.FlatAppearance.BorderSize = 0;
+            this.btn_XuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XuatExcel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_XuatExcel.ForeColor = System.Drawing.Color.White;
+            this.btn_XuatExcel.Location = new System.Drawing.Point(97, 146);
+            this.btn_XuatExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_XuatExcel.Name = "btn_XuatExcel";
+            this.btn_XuatExcel.Size = new System.Drawing.Size(444, 38);
+            this.btn_XuatExcel.TabIndex = 31;
+            this.btn_XuatExcel.Text = "Xuất excel";
+            this.btn_XuatExcel.TextColor = System.Drawing.Color.White;
+            this.btn_XuatExcel.UseVisualStyleBackColor = false;
+            this.btn_XuatExcel.Click += new System.EventHandler(this.vbButton2_Click);
+            // 
+            // btnThongke
+            // 
+            this.btnThongke.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnThongke.BackgroundColor = System.Drawing.Color.LightSlateGray;
+            this.btnThongke.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThongke.BorderRadius = 0;
+            this.btnThongke.BorderSize = 0;
+            this.btnThongke.FlatAppearance.BorderSize = 0;
+            this.btnThongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongke.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThongke.ForeColor = System.Drawing.Color.White;
+            this.btnThongke.Location = new System.Drawing.Point(543, 146);
+            this.btnThongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThongke.Name = "btnThongke";
+            this.btnThongke.Size = new System.Drawing.Size(444, 38);
+            this.btnThongke.TabIndex = 61;
+            this.btnThongke.Text = "Thống kê chi tiết";
+            this.btnThongke.TextColor = System.Drawing.Color.White;
+            this.btnThongke.UseVisualStyleBackColor = false;
+            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // FrmLichSuGiaoDich
             // 
@@ -271,11 +294,12 @@
         private CustomButton.VBButton btn_TienRa;
         private CustomButton.VBButton btn_TienVao;
         private CustomButton.VBButton btn_ToanBo;
-        private CustomButton.VBButton btn_XuatExcel;
         private ComboBox cmNgay;
         private CustomButton.VBButton vbButton1;
         private Label label1;
         private DataGridView GvTongGui;
         private DataGridView GvTongNhan;
+        private CustomButton.VBButton btnThongke;
+        private CustomButton.VBButton btn_XuatExcel;
     }
 }
