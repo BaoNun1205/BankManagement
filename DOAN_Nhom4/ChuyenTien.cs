@@ -26,10 +26,7 @@ namespace DOAN_Nhom4
 
         private void ChuyenTien_Load(object sender, EventArgs e)
         {
-            string[] items = { "HHB", "ACB", "Agribank", "BIDV", "Đông Á Bank", "Eximbank",
-                "HDBank",  "MBBank", "OCB", "Sacombank", "SHB", "TPBank", "Vietcombank",
-                "Vietinbank", "VietCapital Bank"};
-            cb_TenNH.Items.AddRange(items);
+
         }
 
         public void HienThiThongTinNguoiChuyen()
