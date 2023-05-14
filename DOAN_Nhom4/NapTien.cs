@@ -26,8 +26,8 @@ namespace DOAN_Nhom4
         {
             NguoiDung ngDung = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
+            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
                 txt_TenTK.Text = ngDung.TenTK.ToString();
@@ -51,9 +51,9 @@ namespace DOAN_Nhom4
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
-            tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text);
+            tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             NguoiDung ndNap = new NguoiDung();
-            ndNap = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text);
+            ndNap = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenTK, tkNap.SoTK, BigInteger.Parse(txt_SoTien.Text), "Nap tien vao tai khoan");
             if (tkNap != null)
             {

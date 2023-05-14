@@ -16,7 +16,8 @@ namespace DOAN_Nhom4
         {
             string sqlStr = string.Format("SELECT KhachHang.TenNH, KhachHang.SoTK, KhachHang.TenKH, TaiKhoanNganHang.TenDN, TaiKhoanNganHang.MatKhau, TaiKhoanNganHang.SoDu, KhachHang.NgaySinh, KhachHang.CCCD, KhachHang.Email, KhachHang.SDT, TaiKhoanNganHang.NgayDangKy "
                                         + "FROM KhachHang "
-                                        + "JOIN TaiKhoanNganHang ON KhachHang.TenNH = TaiKhoanNganHang.TenNH AND KhachHang.SoTK = TaiKhoanNganHang.SoTK");
+                                        + "JOIN TaiKhoanNganHang ON KhachHang.TenNH = TaiKhoanNganHang.TenNH AND KhachHang.SoTK = TaiKhoanNganHang.SoTK "
+                                        + "WHERE KhachHang.TenNH = 'HHB'");
             return data.LayDanhSach(sqlStr);
         }
         public void Them(NguoiDung kh)
@@ -27,27 +28,19 @@ namespace DOAN_Nhom4
 
         public void Xoa(NguoiDung kh)
         {
-            string sqlKH = string.Format("DELETE FROM KhachHang WHERE SoTK ='{0}'", kh.SoTK);
+            string sqlKH = string.Format("DELETE FROM KhachHang WHERE SoTK ='{0}' AND TenNH = '{1}'", kh.SoTK, kh.TenNH);
             data.xuLi(sqlKH);
         }
         public void Sua(NguoiDung kh)
         {
-            string sqlKH = string.Format("UPDATE KhachHang SET TenKH = '{0}', NgaySinh = '{1}', CCCD = '{2}', Email = '{3}', SDT = '{4}' WHERE SoTK ='{5}'", kh.TenTK, kh.NgaySinh, kh.Cccd, kh.Email, kh.Sdt, kh.SoTK);
+            string sqlKH = string.Format("UPDATE KhachHang SET TenKH = '{0}', NgaySinh = '{1}', CCCD = '{2}', Email = '{3}', SDT = '{4}' WHERE SoTK ='{5}' AND TenNH = '{6}'", kh.TenTK, kh.NgaySinh, kh.Cccd, kh.Email, kh.Sdt, kh.SoTK, kh.TenNH);
             data.xuLi(sqlKH);
         }
 
-        public NguoiDung LayKhachHang(string Cot, string giaTri)
+        public NguoiDung LayKhachHang(string CotSoTK, string GTSoTK, string CotTenNH, string GTTenNH)
         {
             NguoiDung khachHang = new NguoiDung();
-            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}'", Cot, giaTri);
-            khachHang = data.Xuli(sql);
-            return khachHang;
-        }
-
-        public NguoiDung LayKhachHang(string cotThuNhat, string giaTriThuNhat, string cotThuHai, string giaTriThuHai)
-        {
-            NguoiDung khachHang = new NguoiDung();
-            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}' AND {2} = '{3}'", cotThuNhat, giaTriThuNhat, cotThuHai, giaTriThuHai);
+            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}' AND {2} = '{3}'", CotSoTK, GTSoTK, CotTenNH, GTTenNH);
             khachHang = data.Xuli(sql);
             return khachHang;
         }
