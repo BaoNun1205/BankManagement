@@ -41,13 +41,13 @@
             this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlChuyentien = new System.Windows.Forms.Panel();
+            this.txtTennguoinhan = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbTennguoinhan = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSoDuString = new System.Windows.Forms.Label();
             this.lblSoDu = new System.Windows.Forms.Label();
             this.lblTenTK = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTennguoinhan = new System.Windows.Forms.TextBox();
             this.pnlChuyentien.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -245,6 +245,30 @@
             this.pnlChuyentien.Size = new System.Drawing.Size(961, 700);
             this.pnlChuyentien.TabIndex = 11;
             // 
+            // txtTennguoinhan
+            // 
+            this.txtTennguoinhan.BackColor = System.Drawing.Color.White;
+            this.txtTennguoinhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTennguoinhan.ForeColor = System.Drawing.Color.Black;
+            this.txtTennguoinhan.Location = new System.Drawing.Point(549, 183);
+            this.txtTennguoinhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtTennguoinhan.Multiline = true;
+            this.txtTennguoinhan.Name = "txtTennguoinhan";
+            this.txtTennguoinhan.Size = new System.Drawing.Size(354, 40);
+            this.txtTennguoinhan.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label7.Location = new System.Drawing.Point(48, 194);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(181, 29);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Tên người nhận";
+            // 
             // cbTennguoinhan
             // 
             this.cbTennguoinhan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -299,35 +323,11 @@
             this.lblTenTK.TabIndex = 25;
             this.lblTenTK.Text = " ";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label7.Location = new System.Drawing.Point(48, 194);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 29);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Tên người nhận";
-            // 
-            // txtTennguoinhan
-            // 
-            this.txtTennguoinhan.BackColor = System.Drawing.Color.White;
-            this.txtTennguoinhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTennguoinhan.ForeColor = System.Drawing.Color.Black;
-            this.txtTennguoinhan.Location = new System.Drawing.Point(549, 183);
-            this.txtTennguoinhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.txtTennguoinhan.Multiline = true;
-            this.txtTennguoinhan.Name = "txtTennguoinhan";
-            this.txtTennguoinhan.Size = new System.Drawing.Size(354, 40);
-            this.txtTennguoinhan.TabIndex = 32;
-            // 
             // FrmChuyentien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
             this.Controls.Add(this.pnlChuyentien);
             this.Controls.Add(this.label1);
