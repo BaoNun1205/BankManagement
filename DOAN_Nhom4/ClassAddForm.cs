@@ -22,6 +22,18 @@ namespace DOAN_Nhom4
             form.Show();
         }
 
+        static public void addUserControl(UserControl userControl, Panel pnlDichvu)
+        {
+            pnlDichvu.Controls.Clear();
+            userControl.Dock = DockStyle.Fill;
+            int x = (pnlDichvu.Width - userControl.Width) / 2;
+            int y = (pnlDichvu.Height - userControl.Height) / 2;
+            userControl.Location = new Point(x, y);
+            pnlDichvu.Controls.Add(userControl);
+            pnlDichvu.Tag = userControl;
+        }
+
+
         public static string NoiDungLoaiSoTietKiem(this LoaiSoTietKiem gt)
         {
             switch (gt)
