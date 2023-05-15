@@ -55,6 +55,9 @@ namespace DOAN_Nhom4
         {
             return data.IsPhone(kh.Sdt);
         }
-
+        public bool IsEmail(NguoiDung kh)
+        {
+            return data.IsEmail(kh.Email);
+        }
     }
 }

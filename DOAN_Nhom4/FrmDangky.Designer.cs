@@ -274,7 +274,7 @@
             this.txtNgayDangKy.CustomFormat = "MM/dd/yyyy";
             this.txtNgayDangKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtNgayDangKy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNgayDangKy.Location = new System.Drawing.Point(233, 388);
+            this.txtNgayDangKy.Location = new System.Drawing.Point(233, 391);
             this.txtNgayDangKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNgayDangKy.Name = "txtNgayDangKy";
             this.txtNgayDangKy.Size = new System.Drawing.Size(169, 23);
@@ -286,7 +286,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label9.Location = new System.Drawing.Point(37, 388);
+            this.label9.Location = new System.Drawing.Point(37, 391);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 21);
             this.label9.TabIndex = 45;

@@ -31,12 +31,24 @@ namespace DOAN_Nhom4
         {
             NguoiDung kh = new NguoiDung("HHB", txtSoTK.Text, txtTenTK.Text, timeNgaySinh.Value, txtCCCD.Text, txtEmail.Text, txtSDT.Text);
             TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txtSoTK.Text, txtTenDN.Text, txtMatkhau.Text, 100000, txtNgayDangKy.Value);
-            khDAO.Them(kh);
-            tknhDAO.Them(tknh);
-            FrmDangnhap frmdangnhap = new FrmDangnhap();
-            this.Hide();
-            frmdangnhap.ShowDialog();
-            this.Close();
+            if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
+            {
+                if (!khDAO.IsPhone(kh))
+                    MessageBox.Show("So dien thoai khong hop le");
+                else if (!khDAO.IsEmail(kh))
+                    MessageBox.Show("Email khong hop le");
+                else
+                {
+                    khDAO.Them(kh);
+                    tknhDAO.Them(tknh);
+                    FrmDangnhap frmdangnhap = new FrmDangnhap();
+                    this.Hide();
+                    frmdangnhap.ShowDialog();
+                    this.Close();
+                }
+            }
+            else
+                MessageBox.Show("Chua nhap du thong tin");
         }
     }
 }
