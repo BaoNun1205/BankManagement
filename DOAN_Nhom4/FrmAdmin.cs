@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Numerics;
 
 namespace DOAN_Nhom4
 {
@@ -70,23 +71,34 @@ namespace DOAN_Nhom4
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
-        {
+        {           
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
-            if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
+            if (txt_SoDu.Text != "")
             {
-                if (!khDAO.IsPhone(kh))
-                    MessageBox.Show("So dien thoai khong hop le");
-                else
+                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, BigInteger.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+                if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
                 {
-                    khDAO.Them(kh);
-                    tknhDAO.Them(tknh);
-                    HienThi();
-                    Refresh();
+                    if (!khDAO.IsPhone(kh))
+                        MessageBox.Show("So dien thoai khong hop le");
+                    else if(!khDAO.IsEmail(kh))
+                        MessageBox.Show("Email khong hop le");
+                    else if(tknh.SoDu <= 0)
+                        MessageBox.Show("So du khong hop le");
+                    else
+                    {
+                        khDAO.Them(kh);
+                        tknhDAO.Them(tknh);
+                        HienThi();
+                        Refresh();
+                    }
                 }
+                else
+                    MessageBox.Show("Chua nhap du thong tin");
             }
             else
+            {
                 MessageBox.Show("Chua nhap du thong tin");
+            }
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -102,21 +114,32 @@ namespace DOAN_Nhom4
         private void btn_Sua_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
-            if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
+            if (txt_SoDu.Text != "")
             {
-                if (khDAO.IsPhone(kh) == false)
-                    MessageBox.Show("So dien thoai khong hop le");
-                else
+                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, BigInteger.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+                if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
                 {
-                    khDAO.Sua(kh);
-                    tknhDAO.Sua(tknh);
-                    HienThi();
-                    Refresh();
+                    if (!khDAO.IsPhone(kh))
+                        MessageBox.Show("So dien thoai khong hop le");
+                    else if (!khDAO.IsEmail(kh))
+                        MessageBox.Show("Email khong hop le");
+                    else if (tknh.SoDu <= 0)
+                        MessageBox.Show("So du khong hop le");
+                    else
+                    {
+                        khDAO.Sua(kh);
+                        tknhDAO.Sua(tknh);
+                        HienThi();
+                        Refresh();
+                    }
                 }
+                else
+                    MessageBox.Show("Chua nhap du thong tin");
             }
             else
+            {
                 MessageBox.Show("Chua nhap du thong tin");
+            }
         }
 
         private void btn_Refersh_Click(object sender, EventArgs e)

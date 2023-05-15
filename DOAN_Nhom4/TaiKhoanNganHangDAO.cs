@@ -36,7 +36,7 @@ namespace DOAN_Nhom4
         }
         public bool IsEmpty(TaiKhoanNganHang tknh)
         {
-            if (tknh.SoTK != "" && tknh.MatKhau != "" && tknh.TenDN != "" && tknh.SoDu != 0)
+            if (tknh.SoTK != "" && tknh.MatKhau != "" && tknh.TenDN != "" && tknh.SoDu.ToString() != "")
                 return false;
             return true;
         }

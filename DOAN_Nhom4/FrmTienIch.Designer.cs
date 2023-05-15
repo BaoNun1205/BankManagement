@@ -66,9 +66,9 @@
             // 
             this.panelVayTien.Controls.Add(this.ptbVayTien);
             this.panelVayTien.Controls.Add(this.lblVayTien);
-            this.panelVayTien.Location = new System.Drawing.Point(0, 0);
+            this.panelVayTien.Location = new System.Drawing.Point(0, 2);
             this.panelVayTien.Name = "panelVayTien";
-            this.panelVayTien.Size = new System.Drawing.Size(565, 351);
+            this.panelVayTien.Size = new System.Drawing.Size(565, 349);
             this.panelVayTien.TabIndex = 4;
             this.panelVayTien.Click += new System.EventHandler(this.panelVayTien_Click);
             // 
@@ -132,9 +132,9 @@
             // 
             this.panelTinDung.Controls.Add(this.ptbTinDung);
             this.panelTinDung.Controls.Add(this.lblTinDung);
-            this.panelTinDung.Location = new System.Drawing.Point(578, 0);
+            this.panelTinDung.Location = new System.Drawing.Point(578, 2);
             this.panelTinDung.Name = "panelTinDung";
-            this.panelTinDung.Size = new System.Drawing.Size(558, 351);
+            this.panelTinDung.Size = new System.Drawing.Size(558, 349);
             this.panelTinDung.TabIndex = 6;
             this.panelTinDung.Click += new System.EventHandler(this.panelTinDung_Click);
             // 
@@ -197,7 +197,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
-            this.pictureBox1.Location = new System.Drawing.Point(518, 304);
+            this.pictureBox1.Location = new System.Drawing.Point(518, 308);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -112,5 +112,55 @@ namespace DOAN_Nhom4
             FrmThongKe frmthongke = new FrmThongKe(kh, pnlNguoiDung);
             DOAN_Nhom4.ClassAddForm.addForm(frmthongke, pnlNguoiDung);
         }
+
+        private void btn_TienRa_MouseEnter(object sender, EventArgs e)
+        {
+            btn_TienRa.BackColor = Color.FromArgb(2, 69, 158);
+        }
+
+        private void btn_TienRa_MouseLeave(object sender, EventArgs e)
+        {
+            btn_TienRa.BackColor = Color.LightSlateGray;
+        }
+
+        private void btn_TienVao_MouseEnter(object sender, EventArgs e)
+        {
+            btn_TienVao.BackColor = Color.FromArgb(2, 69, 158);
+        }
+
+        private void btn_TienVao_MouseLeave(object sender, EventArgs e)
+        {
+            btn_TienVao.BackColor = Color.LightSlateGray;
+        }
+
+        private void btn_ToanBo_MouseEnter(object sender, EventArgs e)
+        {
+            btn_ToanBo.BackColor = Color.FromArgb(2, 69, 158);
+        }
+
+        private void btn_ToanBo_MouseLeave(object sender, EventArgs e)
+        {
+            btn_ToanBo.BackColor = Color.LightSlateGray;
+        }
+
+        private void btn_XuatExcel_MouseEnter(object sender, EventArgs e)
+        {
+            btn_XuatExcel.BackColor = Color.FromArgb(2, 69, 158);
+        }
+
+        private void btn_XuatExcel_MouseLeave(object sender, EventArgs e)
+        {
+            btn_XuatExcel.BackColor = Color.LightSlateGray;
+        }
+
+        private void btnThongke_MouseEnter(object sender, EventArgs e)
+        {
+            btnThongke.BackColor = Color.FromArgb(2, 69, 158);
+        }
+
+        private void btnThongke_MouseLeave(object sender, EventArgs e)
+        {
+            btnThongke.BackColor = Color.LightSlateGray;
+        }
     }
 }

@@ -21,39 +21,23 @@ namespace DOAN_Nhom4
         private void FrmAdminDichVu_Load(object sender, EventArgs e)
         {
             NapTien nt = new NapTien();
-            this.Controls.Add(nt);
-            nt.Location = new Point(185, 127);
-            nt.Size = new Size(763, 542);
-            nt.Show();
-            nt.BringToFront();
+            ClassAddForm.addUserControl(nt, pnlDichvu);
         }
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             NapTien nt = new NapTien();
-            this.Controls.Add(nt);
-            nt.Location = new Point(185, 127);
-            nt.Size = new Size(763, 542);
-            nt.Show();
-            nt.BringToFront();
+            ClassAddForm.addUserControl(nt, pnlDichvu);
         }
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             RutTien rt = new RutTien();
-            this.Controls.Add(rt);
-            rt.Location = new Point(185, 127);
-            rt.Size = new Size(763, 542);
-            rt.Show();
-            rt.BringToFront();
+            ClassAddForm.addUserControl(rt, pnlDichvu);
         }
 
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
             ChuyenTien ct = new ChuyenTien();
-            this.Controls.Add(ct);
-            ct.Location = new Point(185, 127);
-            ct.Size = new Size(763, 542);
-            ct.Show();
-            ct.BringToFront();
+            ClassAddForm.addUserControl(ct, pnlDichvu);
         }
 
         private void pb_QuayLai_Click(object sender, EventArgs e)
