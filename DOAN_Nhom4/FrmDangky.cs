@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
         public FrmDangky()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
