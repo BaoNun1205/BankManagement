@@ -12,8 +12,6 @@ using OfficeOpenXml;
 using System.IO;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using System.Windows.Forms;
-using LiveCharts.Wpf;
-using LiveCharts;
 
 namespace DOAN_Nhom4
 {
@@ -520,22 +518,14 @@ namespace DOAN_Nhom4
             }
         }
 
-        public LineSeries ThongKeTien(string sql)
+        public DataTable ThongKeTien(string sql)
         {
-            var lineSeries = new LineSeries();
+            DataTable dt = new DataTable();
             try
             {
                 conn.Open();
-
-                // Truy vấn cơ sở dữ liệu để lấy các giá trị bạn muốn hiển thị trên biểu đồ
-                SqlCommand command = new SqlCommand(sql, conn);
-                var reader = command.ExecuteReader();
-                var values = new ChartValues<decimal>();
-                while (reader.Read())
-                {
-                    values.Add(reader.GetDecimal(0));
-                }
-                lineSeries.Values = values;
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                adapter.Fill(dt);
             }
             catch
             {
@@ -545,7 +535,8 @@ namespace DOAN_Nhom4
             {
                 conn.Close();
             }
-            return lineSeries;
+            return dt;
         }
+        
     }
 }

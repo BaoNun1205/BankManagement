@@ -1,7 +1,7 @@
-﻿using LiveCharts;
-using LiveCharts.Wpf;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
         DBConnection data = new DBConnection();
         public ThongKeDAO() { }
 
-        public LineSeries ThongKeTienGui(string from, string to, string nganHang, string soTK)
+        public DataTable ThongKeTienGui(string from, string to, string nganHang, string soTK)
         {
             string sqlStr = string.Format("SELECT COALESCE(SUM(ls.SoTien), 0) AS TongTien, d.ThoiGian " +
                                            "FROM ( " +
@@ -25,10 +25,10 @@ namespace DOAN_Nhom4
                                            "ON d.ThoiGian = CONVERT(date, ls.ThoiGian, 103) AND ls.NganHangGui = '{2}' AND ls.SoTKGui = '{3}'" +
                                            "WHERE d.ThoiGian BETWEEN '{0}' AND '{1}' " +
                                            "GROUP BY d.ThoiGian",from, to, nganHang, soTK);
-            return data.ThongKeTien(sqlStr);
+            return data.LayDanhSach(sqlStr);
         }
 
-        public LineSeries ThongKeTienNhan(string from, string to, string nganHang, string soTK)
+        public DataTable ThongKeTienNhan(string from, string to, string nganHang, string soTK)
         {
             string sqlStr = string.Format("SELECT COALESCE(SUM(ls.SoTien), 0) AS TongTien, d.ThoiGian " +
                                            "FROM ( " +
@@ -39,10 +39,10 @@ namespace DOAN_Nhom4
                                            "ON d.ThoiGian = CONVERT(date, ls.ThoiGian, 103) AND ls.NganHangNhan = '{2}' AND ls.SoTKNhan = '{3}'" +
                                            "WHERE d.ThoiGian BETWEEN '{0}' AND '{1}' " +
                                            "GROUP BY d.ThoiGian", from, to, nganHang, soTK);
-            return data.ThongKeTien(sqlStr);
+            return data.LayDanhSach(sqlStr);
         }
 
-        public LineSeries ThongKeTienTong(string from, string to, string nganHang, string soTK)
+        public DataTable ThongKeTienTong(string from, string to, string nganHang, string soTK)
         {
             string sqlStr = string.Format("SELECT COALESCE(SUM(ls.SoTien), 0) AS TongTien, d.ThoiGian " +
                                            "FROM ( " +
@@ -53,10 +53,10 @@ namespace DOAN_Nhom4
                                            "ON d.ThoiGian = CONVERT(date, ls.ThoiGian, 103) AND (ls.NganHangNhan = '{2}' AND ls.SoTKNhan = '{3}') OR (ls.NganHangGui = '{2}' AND ls.SoTKGui = '{3}')" +
                                            "WHERE d.ThoiGian BETWEEN '{0}' AND '{1}' " +
                                            "GROUP BY d.ThoiGian", from, to, nganHang, soTK);
-            return data.ThongKeTien(sqlStr);
+            return data.LayDanhSach(sqlStr);
         }
 
-        public LineSeries ThongKeGiaoDichChuyenTien(string from, string to, string loaiGD)
+        public DataTable ThongKeGiaoDichChuyenTien(string from, string to, string loaiGD)
         {
             string sqlStr = string.Format("SELECT COALESCE(SUM(ls.SoTien), 0) AS TongTien, d.ThoiGian " +
                                            "FROM ( " +
@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
                                            "ON d.ThoiGian = CONVERT(date, ls.ThoiGian, 103) AND ls.LoaiGD = '{2}'" +
                                            "WHERE d.ThoiGian BETWEEN '{0}' AND '{1}' " +
                                            "GROUP BY d.ThoiGian", from, to, loaiGD);
-            return data.ThongKeTien(sqlStr);
+            return data.LayDanhSach(sqlStr);
         }
     }
 }
