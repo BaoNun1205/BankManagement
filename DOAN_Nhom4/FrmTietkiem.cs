@@ -120,17 +120,9 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = "6%";
             laiSuat = 0.06;
             HienThiThongTin();
-
-              btn1thang.ForeColor = Color.White;
-              btn1thang.BackColor = Color.FromArgb(2, 69, 158);
-              btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
-              btn3thang.BackColor = Color.White;
-              btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
-              btn6thang.BackColor = Color.White;
-              btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
-              btn12thang.BackColor = Color.White;
-              btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
-              btn18thang.BackColor = Color.White;
+            HienThiMacDinh();
+            btn1thang.ForeColor = Color.White;
+            btn1thang.BackColor = Color.FromArgb(2, 69, 158);
         }
 
         private void btn3thang_Click(object sender, EventArgs e)
@@ -139,17 +131,9 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = "6%";
             laiSuat = 0.06;
             HienThiThongTin();
-
+            HienThiMacDinh();
             btn3thang.ForeColor = Color.White;
             btn3thang.BackColor = Color.FromArgb(2, 69, 158);
-            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn1thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn6thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn18thang.BackColor = Color.White;
         }
 
         private void btn6thang_Click(object sender, EventArgs e)
@@ -158,17 +142,9 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = "8%";
             laiSuat = 0.08;
             HienThiThongTin();
-
+            HienThiMacDinh();
             btn6thang.ForeColor = Color.White;
             btn6thang.BackColor = Color.FromArgb(2, 69, 158);
-            btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn3thang.BackColor = Color.White;
-            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn1thang.BackColor = Color.White;
-            btn12thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn12thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn18thang.BackColor = Color.White;
         }
 
         private void btn12thang_Click(object sender, EventArgs e)
@@ -177,17 +153,9 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = "8,6%";
             laiSuat = 0.086;
             HienThiThongTin();
-
+            HienThiMacDinh();
             btn12thang.ForeColor = Color.White;
             btn12thang.BackColor = Color.FromArgb(2, 69, 158);
-            btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn3thang.BackColor = Color.White;
-            btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn6thang.BackColor = Color.White;
-            btn1thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn1thang.BackColor = Color.White;
-            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
-            btn18thang.BackColor = Color.White;
         }
 
         private void btn18thang_Click(object sender, EventArgs e)
@@ -196,9 +164,15 @@ namespace DOAN_Nhom4
             lblLaisuat.Text = "9%";
             laiSuat = 0.09;
             HienThiThongTin();
-
+            HienThiMacDinh();
             btn18thang.ForeColor = Color.White;
             btn18thang.BackColor = Color.FromArgb(2, 69, 158);
+        }
+
+        private void HienThiMacDinh()
+        {
+            btn18thang.ForeColor = Color.FromArgb(2, 69, 158);
+            btn18thang.BackColor = Color.White;
             btn3thang.ForeColor = Color.FromArgb(2, 69, 158);
             btn3thang.BackColor = Color.White;
             btn6thang.ForeColor = Color.FromArgb(2, 69, 158);
@@ -222,7 +196,7 @@ namespace DOAN_Nhom4
                 tknhDAO.Sua(tknh);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
-                DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
+                ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
             } 
             else MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);         
         }
@@ -230,7 +204,7 @@ namespace DOAN_Nhom4
         private void lblTKTK_Click(object sender, EventArgs e)
         {
             FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
+            ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
         }
     }
 }
