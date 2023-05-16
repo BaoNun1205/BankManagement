@@ -32,7 +32,7 @@ namespace DOAN_Nhom4
             this.kh = kh;
             this.tknh = tknh;
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
+            ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
         private void FrmNguoidung_Load(object sender, EventArgs e)
@@ -43,31 +43,31 @@ namespace DOAN_Nhom4
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
             FrmHienThiThongTinCaNhan frmHienThiThongTinCaNhan = new FrmHienThiThongTinCaNhan(kh, tknh);
-            DOAN_Nhom4.ClassAddForm.addForm(frmHienThiThongTinCaNhan, pnlNguoidung);
+            ClassAddForm.addForm(frmHienThiThongTinCaNhan, pnlNguoidung);
         }
 
         private void btnChuyentien_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
+            ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
+            ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
         }
 
         private void btnTietkiem_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
+            ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
         }
 
         private void btnTienich_Click(object sender, EventArgs e)
         {
             FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoidung);
+            ClassAddForm.addForm(frmTienIch, pnlNguoidung);
         }
 
         private void pBThoat_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace DOAN_Nhom4
         private void btnBaomat_Click(object sender, EventArgs e)
         {
             FrmBaomat frmBaomat = new FrmBaomat(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmBaomat, pnlNguoidung);
+            ClassAddForm.addForm(frmBaomat, pnlNguoidung);
             pnlLuachonCD.Visible = false;
         }
 
@@ -115,7 +115,7 @@ namespace DOAN_Nhom4
         private void btnLsgd_Click(object sender, EventArgs e)
         {
             FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
+            ClassAddForm.addForm(frmLichSuGiaoDich, pnlNguoidung);
         }
     }
 }

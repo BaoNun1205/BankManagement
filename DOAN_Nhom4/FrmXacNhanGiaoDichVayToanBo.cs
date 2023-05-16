@@ -42,7 +42,7 @@ namespace DOAN_Nhom4
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
+            ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
         private void HienThi()
         {
@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
             ttNgDungDAO.Xoa(ttNgDung);
             MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(FrmTienIchVay, pnlNguoiDung);
+            ClassAddForm.addForm(FrmTienIchVay, pnlNguoiDung);
         }
     }
 }

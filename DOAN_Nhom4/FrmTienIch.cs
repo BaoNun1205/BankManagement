@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
         private void panelVayTien_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
+            ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
 
         private void ptbVayTien_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace DOAN_Nhom4
         private void panelTinDung_Click(object sender, EventArgs e)
         {
             FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
+            ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
 
         private void lblTinDung_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace DOAN_Nhom4
         private void panelTietkiem_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoiDung);
+            ClassAddForm.addForm(frmtietkiem, pnlNguoiDung);
         }
 
         private void lblTietkiem_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace DOAN_Nhom4
         private void pnlNapTienDienThoai_Click(object sender, EventArgs e)
         {
             FrmNapTienDienThoai frmNapTienDienThoai = new FrmNapTienDienThoai(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmNapTienDienThoai, pnlNguoiDung);
+            ClassAddForm.addForm(frmNapTienDienThoai, pnlNguoiDung);
         }
 
         private void ptbNapTienDienThoai_Click(object sender, EventArgs e)

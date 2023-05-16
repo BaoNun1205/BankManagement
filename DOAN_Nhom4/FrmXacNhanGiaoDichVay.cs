@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
+            ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace DOAN_Nhom4
                 lsgdDAO.Them(gd);
                 MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-                DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+                ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
             }
             else
             {
@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-                DOAN_Nhom4.ClassAddForm.addForm(FrmTienIchVay, pnlNguoiDung);
+                ClassAddForm.addForm(FrmTienIchVay, pnlNguoiDung);
             }
             
         }
