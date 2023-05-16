@@ -63,17 +63,17 @@ namespace DOAN_Nhom4
             }
         }
 
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
+            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
+        }
+
         public void CapNhatPhi()
         {
             tttd.PhiPhat = tttdDAO.PhiPhat(tttd);
             tttd.PhiTraCham = tttdDAO.PhiTraCham(tttd);
             tttdDAO.Update(tttd);
-        }
-
-        private void btnHuyBo_Click(object sender, EventArgs e)
-        {
-            FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
-            ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
     }
 }

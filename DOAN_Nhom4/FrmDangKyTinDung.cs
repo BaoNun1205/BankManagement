@@ -78,9 +78,8 @@ namespace DOAN_Nhom4
             {
                 if (cb_DongY.Checked == true)
                 {
-                    double lai = laiSuat();
                     ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoan.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
-                                                                    cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), lai, 0, 0, dtpNgayMoThe.Value, 0, 0);
+                                                                    cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), (double)laiSuat(), 0, 0, dtpNgayMoThe.Value, 0, 0);
                     tttdDAO.Them(ttTinDung);
                     MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
@@ -96,6 +95,8 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Phải nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        
 
         private double laiSuat()
         {
@@ -136,7 +137,7 @@ namespace DOAN_Nhom4
 
         public bool IsNull(object sender, EventArgs e)
         {
-            if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "" && cb_ThuNhap.Text != "" && txtSoTaiKhoan.Text != "" && cbLoaiThe.Text != "" && txtHanMuc.Text != "")
+            if (txt_DiaChi.Text != ""  && cb_NgheNghiep.Text != "" && cb_ThuNhap.Text != "" && txtSoTaiKhoan.Text != "" && cbLoaiThe.Text != "" && txtHanMuc.Text != "")
             {
                 return true;
             }
