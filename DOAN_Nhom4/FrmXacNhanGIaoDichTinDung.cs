@@ -49,11 +49,11 @@ namespace DOAN_Nhom4
             if (tknh.SoDu >= Int64.Parse(lblHienThiTongSoTien.Text))
             {
                 GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenTK, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTKTinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
+                lsgdDAO.Them(gd);
                 tknhDAO.RutTien(tknh, gd);
                 tttdDAO.CapNhatTinDungHangThang(tttd);
                 tttdDAO.Update(tttd);
                 tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
-                lsgdDAO.Them(gd);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();
