@@ -51,10 +51,12 @@
             this.lblSoDuValue = new System.Windows.Forms.Label();
             this.lblSoTkValue = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.ptbTheTinDung = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -297,6 +299,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.ptbTheTinDung);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label3);
@@ -307,14 +310,23 @@
             this.panel4.Size = new System.Drawing.Size(1115, 697);
             this.panel4.TabIndex = 1;
             // 
+            // ptbTheTinDung
+            // 
+            this.ptbTheTinDung.Location = new System.Drawing.Point(681, 125);
+            this.ptbTheTinDung.Name = "ptbTheTinDung";
+            this.ptbTheTinDung.Size = new System.Drawing.Size(326, 199);
+            this.ptbTheTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTheTinDung.TabIndex = 61;
+            this.ptbTheTinDung.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-1, 32);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 36);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(560, 380);
+            this.pictureBox3.Size = new System.Drawing.Size(560, 368);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
@@ -347,6 +359,7 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -377,5 +390,6 @@
         private TextBox txtNgaysinh;
         private TextBox txtCCCD;
         private TextBox txtChutaikhoan;
+        private PictureBox ptbTheTinDung;
     }
 }
