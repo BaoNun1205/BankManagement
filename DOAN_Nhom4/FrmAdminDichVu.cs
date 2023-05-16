@@ -21,23 +21,23 @@ namespace DOAN_Nhom4
         private void FrmAdminDichVu_Load(object sender, EventArgs e)
         {
             NapTien nt = new NapTien();
-            ClassAddForm.addUserControl(nt, pnlDichvu);
+            Utility.addUserControl(nt, pnlDichvu);
         }
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             NapTien nt = new NapTien();
-            ClassAddForm.addUserControl(nt, pnlDichvu);
+            Utility.addUserControl(nt, pnlDichvu);
         }
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             RutTien rt = new RutTien();
-            ClassAddForm.addUserControl(rt, pnlDichvu);
+            Utility.addUserControl(rt, pnlDichvu);
         }
 
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
             ChuyenTien ct = new ChuyenTien();
-            ClassAddForm.addUserControl(ct, pnlDichvu);
+            Utility.addUserControl(ct, pnlDichvu);
         }
 
         private void pb_QuayLai_Click(object sender, EventArgs e)

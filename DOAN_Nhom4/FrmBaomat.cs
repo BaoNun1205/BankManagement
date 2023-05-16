@@ -48,7 +48,7 @@ namespace DOAN_Nhom4
         private void btn_doimatkhau_Click(object sender, EventArgs e)
         {
             FrmDoimatkhau frmDoiMatKhau = new FrmDoimatkhau(ngdung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmDoiMatKhau, pnlNguoiDung);
+            DOAN_Nhom4.Utility.addForm(frmDoiMatKhau, pnlNguoiDung);
         }
 
         private void btn_dangxuat_Click(object sender, EventArgs e)

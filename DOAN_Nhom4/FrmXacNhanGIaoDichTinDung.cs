@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             lblNgaySaoKe frmThongTinTaiKhoangTinDung = new lblNgaySaoKe(kh, tknh, pnlNguoiDung, tttd);
-            ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
+            Utility.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
         }
     }
 }

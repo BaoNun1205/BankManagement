@@ -107,13 +107,13 @@ namespace DOAN_Nhom4
             lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIch, pnlNguoiDung);
+            DOAN_Nhom4.Utility.addForm(frmTienIch, pnlNguoiDung);
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
+            DOAN_Nhom4.Utility.addForm(frmTienIchVay, pnlNguoiDung);
         }
     }
 }

@@ -196,7 +196,7 @@ namespace DOAN_Nhom4
                 tknhDAO.Sua(tknh);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
-                ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
+                Utility.addForm(frmtietkiem, pnlNguoidung);
             } 
             else MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);         
         }
@@ -204,7 +204,7 @@ namespace DOAN_Nhom4
         private void lblTKTK_Click(object sender, EventArgs e)
         {
             FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
-            ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
+            Utility.addForm(frmxemtktk, pnlNguoidung);
         }
     }
 }

@@ -36,7 +36,7 @@ namespace DOAN_Nhom4
             if (tttd == null)
             {
                 FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
-                ClassAddForm.addForm(frmDangKyTinDung, pnlNguoiDung);
+                Utility.addForm(frmDangKyTinDung, pnlNguoiDung);
             }
             else
             {
@@ -50,7 +50,7 @@ namespace DOAN_Nhom4
             if (tttd != null)
             {
                 lblNgaySaoKe frmThongTinTaiKhoangTinDung = new lblNgaySaoKe(kh, tknh, pnlNguoiDung, tttd);
-                ClassAddForm.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
+                Utility.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
             }
             else
                 MessageBox.Show("Bạn không có tài khoản tín dụng nào!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

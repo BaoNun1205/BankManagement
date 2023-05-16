@@ -55,13 +55,13 @@ namespace DOAN_Nhom4
         private void lbllLoaiThe_Click(object sender, EventArgs e)
         {
             FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
-            ClassAddForm.addForm(frmThongTinTheHHBVisaFlexi, pnlNguoiDung);
+            Utility.addForm(frmThongTinTheHHBVisaFlexi, pnlNguoiDung);
         }
 
         private void ptbQuayLai_Click(object sender, EventArgs e)
         {
             FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
-            ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
+            Utility.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
 
         private void FrmDangKyTinDung_Load(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace DOAN_Nhom4
                     tttdDAO.Them(ttTinDung);
                     MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
-                    ClassAddForm.addForm(frmTienIch, pnlNguoiDung);
+                    Utility.addForm(frmTienIch, pnlNguoiDung);
                 }
                 else
                 {

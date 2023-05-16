@@ -50,7 +50,7 @@ namespace DOAN_Nhom4
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(nguoiDung, tknh);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtrangchu, pnlNguoidung);
+            DOAN_Nhom4.Utility.addForm(frmtrangchu, pnlNguoidung);
         }
 
         enum KiemTraTenNguoiNhan

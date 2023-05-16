@@ -95,7 +95,7 @@ namespace DOAN_Nhom4
                                 }
                                 ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, BigInteger.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), txt_TaiSan.Text, int.Parse(txt_GiaTriTaiSan.Text), s, txt_NgayVay.Value);
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-                                DOAN_Nhom4.ClassAddForm.addForm(xacnhan, pnlNguoiDung);
+                                Utility.addForm(xacnhan, pnlNguoiDung);
                             }
                             else
                                 MessageBox.Show("Bạn đang có 1 khoản vay khác !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -182,7 +182,7 @@ namespace DOAN_Nhom4
         private void pBQuaylai_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtienIchVay, pnlNguoiDung);
+            DOAN_Nhom4.Utility.addForm(frmtienIchVay, pnlNguoiDung);
         }
 
         private void rb_TinChap_CheckedChanged(object sender, EventArgs e)

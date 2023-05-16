@@ -7,7 +7,7 @@ using static DOAN_Nhom4.FrmTietkiem;
 
 namespace DOAN_Nhom4
 {
-    public static class ClassAddForm
+    public static class Utility
     {
         static public void addForm(Form form, Panel pnlNguoidung)
         {

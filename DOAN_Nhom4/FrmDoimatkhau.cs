@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
         private void picBoxQuaylai_Click(object sender, EventArgs e)
         {
             FrmBaomat frmBaoMat = new FrmBaomat(kh, tknh, pnlNguoiDung);
-            ClassAddForm.addForm(frmBaoMat, pnlNguoiDung);
+            Utility.addForm(frmBaoMat, pnlNguoiDung);
         }
 
         private void txt_XacNhanMatKhau_Enter(object sender, EventArgs e)
