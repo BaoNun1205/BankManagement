@@ -34,7 +34,7 @@ namespace DOAN_Nhom4
             this.ttNgDung = ttNgDung;
             this.pnlNguoiDung = pnlNguoiDung;
         }
-        private void HienThi()
+        private void XuLi()
         {
             txt_DanhXung.Text = ttNgDung.DanhXung;
             txt_HoTen.Text = ttNgDung.HoTen;
@@ -48,37 +48,32 @@ namespace DOAN_Nhom4
             txt_SoTienVay.Text = ttNgDung.SoTienVay.ToString("N0");
             txt_ThoiGianVay.Text = ttNgDung.ThoiGianVay.ToString();
             txt_KhoanVay.Text = ttNgDung.LoaiKhoanVay;
+            Dictionary<string, double> laiDictionary = new Dictionary<string, double>
+            {
+                { "NHU CAU NHA O", 9 },
+                { "SAN XUAT KINH DOANH", 5 },
+                { "MUA O TO", 7 },
+                { "TIEU DUNG KHONG CO TAI SAN BAO DAM", 12 },
+                { "TIEU DUNG DAM BAO BANG BAT DONG SAN", 8 }
+            };
             double lai;
-            if (ttNgDung.SpVay == "NHU CAU NHA O")
+            if (laiDictionary.ContainsKey(ttNgDung.SpVay))
             {
-                lai = 9;
-            }
-            else if (ttNgDung.SpVay == "SAN XUAT KINH DOANH")
-            {
-                lai = 5;
-            }
-            else if (ttNgDung.SpVay == "MUA O TO")
-            {
-                lai = 7;
-            }
-            else if (ttNgDung.SpVay == "TIEU DUNG KHONG CO TAI SAN BAO DAM")
-            {
-                lai = 12;
-            }
-            else if (ttNgDung.SpVay == "TIEU DUNG DAM BAO BANG BAT DONG SAN")
-            {
-                lai = 8;
+                lai = laiDictionary[ttNgDung.SpVay];
             }
             else
+            {
                 lai = 7;
+            }
+            //chua biet lam sao cho gon
             ttNgDung.Lai = lai;
             txt_LaiSuat.Text = lai.ToString();
-            double soTienVay = double.Parse(txt_SoTienVay.Text);
+            double soTienVay = double.Parse(ttNgDung.SoTienVay.ToString());
             double laithang = lai / 1200;
-            double number = Math.Pow((1 + laithang), int.Parse(txt_ThoiGianVay.Text));
+            double number = Math.Pow((1 + laithang), int.Parse(ttNgDung.ThoiGianVay.ToString()));
             double tmp = (soTienVay * laithang * number) / (number - 1);
             BigInteger tienhangthang = new BigInteger(tmp);
-            BigInteger tongsotien = tienhangthang * int.Parse(txt_ThoiGianVay.Text);
+            BigInteger tongsotien = tienhangthang * int.Parse(ttNgDung.ThoiGianVay.ToString());
             txt_TongSoTien.Text = tongsotien.ToString("N0");
             ttNgDung.SoTienHangThang = tienhangthang;
             txt_SoTienHangThang.Text = tienhangthang.ToString("N0");
@@ -96,7 +91,7 @@ namespace DOAN_Nhom4
 
         private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
         {
-            HienThi();
+            XuLi();
         }
 
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
