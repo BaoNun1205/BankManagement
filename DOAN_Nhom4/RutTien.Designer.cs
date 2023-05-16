@@ -117,7 +117,7 @@
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuString.Location = new System.Drawing.Point(249, 245);
+            this.lblSoDuString.Location = new System.Drawing.Point(249, 254);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(54, 19);
             this.lblSoDuString.TabIndex = 56;
@@ -128,7 +128,7 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(344, 245);
+            this.lblSoDu.Location = new System.Drawing.Point(344, 254);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(15, 19);
             this.lblSoDu.TabIndex = 55;

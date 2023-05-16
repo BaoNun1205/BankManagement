@@ -31,6 +31,7 @@ namespace DOAN_Nhom4
             userControl.Location = new Point(x, y);
             pnlDichvu.Controls.Add(userControl);
             pnlDichvu.Tag = userControl;
+            userControl.Show();
         }
 
 
