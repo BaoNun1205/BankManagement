@@ -51,33 +51,40 @@ namespace DOAN_Nhom4
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            if (IsNull(sender, e) == true)
+            ThongTinTinDung td = tttdDAO.LayThongTinTinDung("SoTKTinDung", txtSoTaiKhoan.Text);
+            if (td == null)
             {
-                if (cb_DongY.Checked == true)
+                if (IsNull(sender, e) == true)
                 {
-                    if (Int64.Parse(txtHanMuc.Text) >= hanMucToiThieu && Int64.Parse(txtHanMuc.Text) <= hanMucToiDa)
+                    if (cb_DongY.Checked == true)
                     {
-                        ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoan.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
-                                                                        cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), laiSuat, 0, 0, dtpNgayMoThe.Value, 0, 0);
-                        tttdDAO.Them(ttTinDung);
-                        MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
-                        Utility.addForm(frmTienIch, pnlNguoiDung);
+                        if (Int64.Parse(txtHanMuc.Text) >= hanMucToiThieu && Int64.Parse(txtHanMuc.Text) <= hanMucToiDa)
+                        {
+                            ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoan.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
+                                                                            cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), laiSuat, 0, 0, dtpNgayMoThe.Value, 0, 0);
+                            tttdDAO.Them(ttTinDung);
+                            MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
+                            Utility.addForm(frmTienIch, pnlNguoiDung);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hạn mức của thẻ không phù hợp!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Hạn mức của thẻ không phù hợp", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                        MessageBox.Show("Bạn chưa đồng ý với điều khoản điều kiện của chúng tôi!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Bạn chưa đồng ý với điều khoản điều kiện của chúng tôi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Phải nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Phải nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Số tài khoản đã tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         
