@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.ptbQuayLai = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblThongTinNapTien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,11 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSDTNap = new System.Windows.Forms.Label();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lblSDTGanDay = new System.Windows.Forms.Label();
             this.lblBoTrong = new System.Windows.Forms.Label();
-            this.lblSDTGanDay1 = new System.Windows.Forms.Label();
-            this.lblSDTGanDay2 = new System.Windows.Forms.Label();
             this.btn20k = new CustomButton.VBButton();
             this.btn10k = new CustomButton.VBButton();
             this.btn30k = new CustomButton.VBButton();
@@ -57,7 +52,6 @@
             this.btn300k = new CustomButton.VBButton();
             this.btn500k = new CustomButton.VBButton();
             this.btnXacNhan = new CustomButton.VBButton();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -73,16 +67,6 @@
             this.label1.Size = new System.Drawing.Size(353, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "DỊCH VỤ VIỄN THÔNG";
-            // 
-            // ptbQuayLai
-            // 
-            this.ptbQuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.ptbQuayLai.Location = new System.Drawing.Point(27, 16);
-            this.ptbQuayLai.Name = "ptbQuayLai";
-            this.ptbQuayLai.Size = new System.Drawing.Size(39, 36);
-            this.ptbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbQuayLai.TabIndex = 80;
-            this.ptbQuayLai.TabStop = false;
             // 
             // panel1
             // 
@@ -235,25 +219,6 @@
             this.txtSoDienThoai.Size = new System.Drawing.Size(500, 32);
             this.txtSoDienThoai.TabIndex = 91;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel5.Location = new System.Drawing.Point(27, 552);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(500, 1);
-            this.panel5.TabIndex = 93;
-            // 
-            // lblSDTGanDay
-            // 
-            this.lblSDTGanDay.AutoSize = true;
-            this.lblSDTGanDay.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSDTGanDay.ForeColor = System.Drawing.Color.Black;
-            this.lblSDTGanDay.Location = new System.Drawing.Point(27, 524);
-            this.lblSDTGanDay.Name = "lblSDTGanDay";
-            this.lblSDTGanDay.Size = new System.Drawing.Size(295, 25);
-            this.lblSDTGanDay.TabIndex = 92;
-            this.lblSDTGanDay.Text = "Số điện thoại được nạp gần đây";
-            // 
             // lblBoTrong
             // 
             this.lblBoTrong.AutoSize = true;
@@ -264,28 +229,6 @@
             this.lblBoTrong.Size = new System.Drawing.Size(313, 25);
             this.lblBoTrong.TabIndex = 94;
             this.lblBoTrong.Text = "Bỏ trống nếu nạp cho chính mình";
-            // 
-            // lblSDTGanDay1
-            // 
-            this.lblSDTGanDay1.AutoSize = true;
-            this.lblSDTGanDay1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSDTGanDay1.ForeColor = System.Drawing.Color.Black;
-            this.lblSDTGanDay1.Location = new System.Drawing.Point(27, 578);
-            this.lblSDTGanDay1.Name = "lblSDTGanDay1";
-            this.lblSDTGanDay1.Size = new System.Drawing.Size(19, 25);
-            this.lblSDTGanDay1.TabIndex = 95;
-            this.lblSDTGanDay1.Text = "-";
-            // 
-            // lblSDTGanDay2
-            // 
-            this.lblSDTGanDay2.AutoSize = true;
-            this.lblSDTGanDay2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSDTGanDay2.ForeColor = System.Drawing.Color.Black;
-            this.lblSDTGanDay2.Location = new System.Drawing.Point(27, 630);
-            this.lblSDTGanDay2.Name = "lblSDTGanDay2";
-            this.lblSDTGanDay2.Size = new System.Drawing.Size(19, 25);
-            this.lblSDTGanDay2.TabIndex = 96;
-            this.lblSDTGanDay2.Text = "-";
             // 
             // btn20k
             // 
@@ -491,11 +434,7 @@
             this.Controls.Add(this.btn30k);
             this.Controls.Add(this.btn10k);
             this.Controls.Add(this.btn20k);
-            this.Controls.Add(this.lblSDTGanDay2);
-            this.Controls.Add(this.lblSDTGanDay1);
             this.Controls.Add(this.lblBoTrong);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.lblSDTGanDay);
             this.Controls.Add(this.txtSoDienThoai);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnSDTNap);
@@ -507,13 +446,11 @@
             this.Controls.Add(this.lblTKNguon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ptbQuayLai);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNapTienDienThoai";
             this.Text = "FrmNapTienDienThoai";
             this.Load += new System.EventHandler(this.FrmNapTienDienThoai_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -526,7 +463,6 @@
         #endregion
 
         private Label label1;
-        private PictureBox ptbQuayLai;
         private Panel panel1;
         private Label lblThongTinNapTien;
         private Panel panel2;
@@ -540,11 +476,7 @@
         private Label btnSDTNap;
         private Label lblMenhGiaNap;
         private TextBox txtSoDienThoai;
-        private Panel panel5;
-        private Label lblSDTGanDay;
         private Label lblBoTrong;
-        private Label lblSDTGanDay1;
-        private Label lblSDTGanDay2;
         private CustomButton.VBButton btn20k;
         private CustomButton.VBButton btn10k;
         private CustomButton.VBButton btn30k;
