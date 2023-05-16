@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,10 @@ namespace DOAN_Nhom4
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
-        DBConnection db = new DBConnection();
+
+        private BigInteger hanMucToiThieu = 0;
+        private BigInteger hanMucToiDa = 0;
+        private double laiSuat = 0;
         Image[] images = new Image[]
         {
             Properties.Resources.hhb_visa_Flexi,
@@ -37,33 +41,6 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string[] hanMuc = {"10.000.000 - 80.000.000 VND", "80.000.000 VND - ... VND ", "300.000.000 VND - ... VND "};
-            int selectedIndex = cbLoaiThe.SelectedIndex;
-            if (selectedIndex >= 0)
-            {
-                ptbTheTinDung.Image = images[selectedIndex];
-                lblThongTinTIen.Text = hanMuc[selectedIndex];
-            }
-            else
-            {
-                ptbTheTinDung.Image = null;
-            }
-        }
-
-        private void lbllLoaiThe_Click(object sender, EventArgs e)
-        {
-            FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
-            Utility.addForm(frmThongTinTheHHBVisaFlexi, pnlNguoiDung);
-        }
-
-        private void ptbQuayLai_Click(object sender, EventArgs e)
-        {
-            FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
-            Utility.addForm(frmTienIchTinDung, pnlNguoiDung);
-        }
-
         private void FrmDangKyTinDung_Load(object sender, EventArgs e)
         {
             txt_HoTen.Text = kh.tenTK;
@@ -78,12 +55,20 @@ namespace DOAN_Nhom4
             {
                 if (cb_DongY.Checked == true)
                 {
-                    ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoan.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
-                                                                    cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), (double)laiSuat(), 0, 0, dtpNgayMoThe.Value, 0, 0);
-                    tttdDAO.Them(ttTinDung);
-                    MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
-                    Utility.addForm(frmTienIch, pnlNguoiDung);
+                    if (Int64.Parse(txtHanMuc.Text) >= hanMucToiThieu && Int64.Parse(txtHanMuc.Text) <= hanMucToiDa)
+                    {
+                        ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoan.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
+                                                                        cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), laiSuat, 0, 0, dtpNgayMoThe.Value, 0, 0);
+                        tttdDAO.Them(ttTinDung);
+                        MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
+                        Utility.addForm(frmTienIch, pnlNguoiDung);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hạn mức của thẻ không phù hợp", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
                 }
                 else
                 {
@@ -95,24 +80,17 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Phải nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         
-
-        private double laiSuat()
+        private void lbllLoaiThe_Click(object sender, EventArgs e)
         {
-            int giaTri = cbLoaiThe.SelectedIndex;
-            if (giaTri == 1)
-            {
-                return 18;
-            }
-            else if (giaTri == 2)
-            {
-                return 16.5;
-            }
-            else
-            {
-                return 16.5;
-            }
+            FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
+            Utility.addForm(frmThongTinTheHHBVisaFlexi, pnlNguoiDung);
+        }
+
+        private void ptbQuayLai_Click(object sender, EventArgs e)
+        {
+            FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
+            Utility.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
 
         private void llbl_DieuKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -133,6 +111,25 @@ namespace DOAN_Nhom4
 
             // Khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
             Process.Start(psi);
+        }
+
+        private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BigInteger[] hanMuc = { 10000000, 80000000, 80000000, 10000000000, 300000000, 10000000000 };
+            double[] lai = { 18, 16.5, 16.5 };
+            int selectedIndex = cbLoaiThe.SelectedIndex;
+            if (selectedIndex >= 0)
+            {
+                ptbTheTinDung.Image = images[selectedIndex];
+                lblThongTinTIen.Text = hanMuc[selectedIndex * 1 + selectedIndex].ToString("N0") + " VNĐ" + " - " + hanMuc[selectedIndex * 1 + 1 + selectedIndex].ToString("N0") + " VNĐ";
+                hanMucToiThieu = hanMuc[selectedIndex * 1 + selectedIndex];
+                hanMucToiDa = hanMuc[selectedIndex * 1 + 1 + selectedIndex];
+                laiSuat = lai[selectedIndex];
+            }
+            else
+            {
+                ptbTheTinDung.Image = null;
+            }
         }
 
         public bool IsNull(object sender, EventArgs e)
