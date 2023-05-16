@@ -73,6 +73,7 @@ namespace DOAN_Nhom4
                 if (totalDays > 90) 
                 {
                     KHNoXau kh = new KHNoXau();
+                    kh.TenNH = nguoiDung.TenNH;
                     kh.SoTK = tknh.SoTK;
                     kh.TenTK = nguoiDung.tenTK;
                     kh.Cccd = nguoiDung.Cccd;
