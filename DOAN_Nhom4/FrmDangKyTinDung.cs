@@ -122,7 +122,7 @@ namespace DOAN_Nhom4
 
         private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BigInteger[] hanMuc = { 10000000, 80000000, 80000000, 10000000000, 300000000, 10000000000 };
+            BigInteger[] hanMuc = { 1000000, 45000000, 80000000, 250000000, 300000000, 10000000000 };
             double[] lai = { 18, 16.5, 16.5 };
             int selectedIndex = cbLoaiThe.SelectedIndex;
             if (selectedIndex >= 0)
