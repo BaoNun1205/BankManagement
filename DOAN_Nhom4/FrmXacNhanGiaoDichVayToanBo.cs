@@ -58,7 +58,7 @@ namespace DOAN_Nhom4
         {
             tknh.SoDu -= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham);
             tknhDAO.Sua(tknh);
-            GiaoDich gd = new GiaoDich("Thanh toan toan bo khoan vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.TongSoTienPhaiTra, "Thanh toan khoan vay");
+            GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.TongSoTienPhaiTra, "Thanh toan khoan vay");
             lsgdDAO.Them(gd);
             ttNgDungDAO.Xoa(ttNgDung);
             MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

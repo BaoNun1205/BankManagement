@@ -177,7 +177,7 @@ namespace DOAN_Nhom4
             {
                 if (menhGia != 0)
                 {
-                    GiaoDich gd = new GiaoDich("Nap tien dien thoai", loaiTaiKhoan, kh.TenTK, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
+                    GiaoDich gd = new GiaoDich("Nap Tien Dien Thoai", loaiTaiKhoan, kh.TenTK, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
                     if (loaiTaiKhoan == "HHB" && tknh.SoDu < gd.SoTien)
                     {
                         MessageBox.Show("Số dư của bạn không đủ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

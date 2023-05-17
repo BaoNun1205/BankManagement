@@ -53,7 +53,7 @@ namespace DOAN_Nhom4
             {
                 ttNgDungDAO.Sua(ttNgDung);
                 tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh toan khoan vay 1 thang", "HHB",nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB",nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
                 lsgdDAO.Them(gd);
                 MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
@@ -62,14 +62,13 @@ namespace DOAN_Nhom4
             else
             {
                 tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh toan khoan vay 1 thang", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
                 lsgdDAO.Them(gd);
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
                 Utility.addForm(FrmTienIchVay, pnlNguoiDung);
-            }
-            
+            }         
         }
 
         private void FrmXacNhanGiaoDichVay_Load(object sender, EventArgs e)

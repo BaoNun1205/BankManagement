@@ -122,7 +122,7 @@ namespace DOAN_Nhom4
             // btnTienVao
             // 
             this.btnTienVao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.btnTienVao.Font = new System.Drawing.Font("Myriad Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTienVao.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTienVao.ForeColor = System.Drawing.Color.White;
             this.btnTienVao.Location = new System.Drawing.Point(600, 91);
             this.btnTienVao.Name = "btnTienVao";
@@ -135,7 +135,7 @@ namespace DOAN_Nhom4
             // btnTienRa
             // 
             this.btnTienRa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.btnTienRa.Font = new System.Drawing.Font("Myriad Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTienRa.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTienRa.ForeColor = System.Drawing.Color.White;
             this.btnTienRa.Location = new System.Drawing.Point(780, 91);
             this.btnTienRa.Name = "btnTienRa";
@@ -148,7 +148,7 @@ namespace DOAN_Nhom4
             // btnTong
             // 
             this.btnTong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.btnTong.Font = new System.Drawing.Font("Myriad Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTong.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTong.ForeColor = System.Drawing.Color.White;
             this.btnTong.Location = new System.Drawing.Point(960, 91);
             this.btnTong.Name = "btnTong";

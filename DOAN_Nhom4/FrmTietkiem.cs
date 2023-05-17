@@ -189,7 +189,7 @@ namespace DOAN_Nhom4
             {
                 tenTKTK = txtTenTKTK.Text;
                 TietKiem tkiem = new TietKiem(MaTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
-                GiaoDich gd = new GiaoDich("Gui tiet kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, MaTietKiem.ToString(), int.Parse(txtSotien.Text), "");
+                GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, MaTietKiem.ToString(), int.Parse(txtSotien.Text), "");
                 tkiemDAO.Them(tkiem, tknh);
                 lsgdDAO.Them(gd);
                 tknh.SoDu = tknh.SoDu - tienGoc;

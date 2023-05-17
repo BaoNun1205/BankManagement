@@ -64,7 +64,7 @@ namespace DOAN_Nhom4
                 if (luachon == DialogResult.Yes)
                 {                   
                     TietKiem tkiem = tietkiemDAO.LayThongTinSoTietKiem("MaTietKiem", lblMaTietKiem.Text);
-                    GiaoDich gd = new GiaoDich("Rut tiet kiem", kh.TenNH, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
+                    GiaoDich gd = new GiaoDich("Rut Tiet Kiem", kh.TenNH, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
                     tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
                     tknhDAO.Sua(tknh);
                     tietkiemDAO.Rut(tkiem);
