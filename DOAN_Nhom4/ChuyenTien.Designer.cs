@@ -74,7 +74,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_SoTKNhan);
-            this.panel1.Location = new System.Drawing.Point(48, 44);
+            this.panel1.Location = new System.Drawing.Point(52, 44);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(845, 516);
@@ -155,7 +155,7 @@
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuString.Location = new System.Drawing.Point(463, 358);
+            this.lblSoDuString.Location = new System.Drawing.Point(89, 367);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(75, 28);
             this.lblSoDuString.TabIndex = 93;
@@ -178,7 +178,7 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(550, 358);
+            this.lblSoDu.Location = new System.Drawing.Point(171, 367);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(20, 28);
             this.lblSoDu.TabIndex = 92;
@@ -250,10 +250,10 @@
             this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_HuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btn_HuyBo.Location = new System.Drawing.Point(171, 411);
+            this.btn_HuyBo.Location = new System.Drawing.Point(162, 443);
             this.btn_HuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_HuyBo.Name = "btn_HuyBo";
-            this.btn_HuyBo.Size = new System.Drawing.Size(232, 64);
+            this.btn_HuyBo.Size = new System.Drawing.Size(238, 56);
             this.btn_HuyBo.TabIndex = 83;
             this.btn_HuyBo.Text = "Hủy Bỏ";
             this.btn_HuyBo.TextColor = System.Drawing.Color.SteelBlue;
@@ -271,10 +271,10 @@
             this.btn_ChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChuyenTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ChuyenTien.ForeColor = System.Drawing.Color.White;
-            this.btn_ChuyenTien.Location = new System.Drawing.Point(430, 411);
+            this.btn_ChuyenTien.Location = new System.Drawing.Point(455, 443);
             this.btn_ChuyenTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ChuyenTien.Name = "btn_ChuyenTien";
-            this.btn_ChuyenTien.Size = new System.Drawing.Size(232, 64);
+            this.btn_ChuyenTien.Size = new System.Drawing.Size(238, 56);
             this.btn_ChuyenTien.TabIndex = 82;
             this.btn_ChuyenTien.Text = "Chuyển Tiền";
             this.btn_ChuyenTien.TextColor = System.Drawing.Color.White;
