@@ -58,16 +58,19 @@ namespace DOAN_Nhom4
         {
             int numrow;
             numrow = e.RowIndex;
-            txt_SoTK.Text = gvQLKH.Rows[numrow].Cells[1].Value.ToString();
-            txt_TenTK.Text = gvQLKH.Rows[numrow].Cells[2].Value.ToString();
-            txt_TenDN.Text = gvQLKH.Rows[numrow].Cells[3].Value.ToString();
-            txt_MatKhau.Text = gvQLKH.Rows[numrow].Cells[4].Value.ToString();
-            txt_SoDu.Text = gvQLKH.Rows[numrow].Cells[5].Value.ToString();
-            txt_NgaySinh.Text = gvQLKH.Rows[numrow].Cells[6].Value.ToString();
-            txt_CCCD.Text = gvQLKH.Rows[numrow].Cells[7].Value.ToString();
-            txt_Email.Text = gvQLKH.Rows[numrow].Cells[8].Value.ToString();
-            txt_SDT.Text = gvQLKH.Rows[numrow].Cells[9].Value.ToString();
-            txt_NgayDangKyThe.Text = gvQLKH.Rows[numrow].Cells[10].Value.ToString();
+            if (numrow >= 0)
+            {
+                txt_SoTK.Text = gvQLKH.Rows[numrow].Cells[1].Value.ToString();
+                txt_TenTK.Text = gvQLKH.Rows[numrow].Cells[2].Value.ToString();
+                txt_TenDN.Text = gvQLKH.Rows[numrow].Cells[3].Value.ToString();
+                txt_MatKhau.Text = gvQLKH.Rows[numrow].Cells[4].Value.ToString();
+                txt_SoDu.Text = gvQLKH.Rows[numrow].Cells[5].Value.ToString();
+                txt_NgaySinh.Text = gvQLKH.Rows[numrow].Cells[6].Value.ToString();
+                txt_CCCD.Text = gvQLKH.Rows[numrow].Cells[7].Value.ToString();
+                txt_Email.Text = gvQLKH.Rows[numrow].Cells[8].Value.ToString();
+                txt_SDT.Text = gvQLKH.Rows[numrow].Cells[9].Value.ToString();
+                txt_NgayDangKyThe.Text = gvQLKH.Rows[numrow].Cells[10].Value.ToString();
+            }
         }
 
         private void btn_Them_Click(object sender, EventArgs e)

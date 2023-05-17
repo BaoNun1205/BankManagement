@@ -117,7 +117,7 @@
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuString.Location = new System.Drawing.Point(453, 384);
+            this.lblSoDuString.Location = new System.Drawing.Point(453, 394);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(75, 28);
             this.lblSoDuString.TabIndex = 56;
@@ -128,7 +128,7 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(548, 384);
+            this.lblSoDu.Location = new System.Drawing.Point(548, 394);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(20, 28);
             this.lblSoDu.TabIndex = 55;
@@ -145,7 +145,7 @@
             this.btn_RutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_RutTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_RutTien.ForeColor = System.Drawing.Color.White;
-            this.btn_RutTien.Location = new System.Drawing.Point(410, 454);
+            this.btn_RutTien.Location = new System.Drawing.Point(438, 454);
             this.btn_RutTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_RutTien.Name = "btn_RutTien";
             this.btn_RutTien.Size = new System.Drawing.Size(236, 56);
