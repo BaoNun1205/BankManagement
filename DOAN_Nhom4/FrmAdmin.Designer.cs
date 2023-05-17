@@ -59,6 +59,7 @@
             this.btn_Sua = new CustomButton.VBButton();
             this.btn_Refersh = new CustomButton.VBButton();
             this.btn_DV = new CustomButton.VBButton();
+            this.btn_DangXuat = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKH)).BeginInit();
             this.SuspendLayout();
@@ -462,12 +463,33 @@
             this.btn_DV.UseVisualStyleBackColor = false;
             this.btn_DV.Click += new System.EventHandler(this.btn_DV_Click);
             // 
+            // btn_DangXuat
+            // 
+            this.btn_DangXuat.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_DangXuat.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_DangXuat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DangXuat.BorderRadius = 0;
+            this.btn_DangXuat.BorderSize = 0;
+            this.btn_DangXuat.FlatAppearance.BorderSize = 0;
+            this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DangXuat.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_DangXuat.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_DangXuat.Location = new System.Drawing.Point(1514, 761);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DangXuat.Name = "btn_DangXuat";
+            this.btn_DangXuat.Size = new System.Drawing.Size(220, 45);
+            this.btn_DangXuat.TabIndex = 33;
+            this.btn_DangXuat.Text = "Đăng xuất";
+            this.btn_DangXuat.TextColor = System.Drawing.SystemColors.Highlight;
+            this.btn_DangXuat.UseVisualStyleBackColor = false;
+            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1582, 837);
+            this.ClientSize = new System.Drawing.Size(1773, 834);
             this.Controls.Add(this.btn_DV);
             this.Controls.Add(this.btn_Refersh);
             this.Controls.Add(this.btn_Sua);
@@ -542,5 +564,6 @@
         private CustomButton.VBButton btn_Sua;
         private CustomButton.VBButton btn_Refersh;
         private CustomButton.VBButton btn_DV;
+        private CustomButton.VBButton btn_DangXuat;
     }
 }

@@ -157,5 +157,13 @@ namespace DOAN_Nhom4
             frmaddv.ShowDialog();
             this.Close();
         }
+
+        private void btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmDangnhap frmdn = new FrmDangnhap();
+            frmdn.ShowDialog();
+            this.Close();
+        }
     }
 }

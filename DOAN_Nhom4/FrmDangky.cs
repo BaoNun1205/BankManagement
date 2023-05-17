@@ -30,7 +30,7 @@ namespace DOAN_Nhom4
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
             NguoiDung kh = new NguoiDung("HHB", txtSoTK.Text, txtTenTK.Text, timeNgaySinh.Value, txtCCCD.Text, txtEmail.Text, txtSDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txtSoTK.Text, txtTenDN.Text, txtMatkhau.Text, 100000, txtNgayDangKy.Value);
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txtSoTK.Text, txtTenDN.Text, txtMatkhau.Text, 0, txtNgayDangKy.Value);
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (!khDAO.IsPhone(kh))
