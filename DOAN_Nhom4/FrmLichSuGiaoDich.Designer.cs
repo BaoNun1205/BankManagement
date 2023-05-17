@@ -65,10 +65,10 @@
             this.panel1.Controls.Add(this.cmNgay);
             this.panel1.Controls.Add(this.vbButton1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(33, 33);
+            this.panel1.Location = new System.Drawing.Point(33, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1076, 634);
+            this.panel1.Size = new System.Drawing.Size(1076, 656);
             this.panel1.TabIndex = 1;
             // 
             // btnThongke
@@ -82,10 +82,10 @@
             this.btnThongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongke.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnThongke.ForeColor = System.Drawing.Color.White;
-            this.btnThongke.Location = new System.Drawing.Point(543, 146);
+            this.btnThongke.Location = new System.Drawing.Point(541, 136);
             this.btnThongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongke.Name = "btnThongke";
-            this.btnThongke.Size = new System.Drawing.Size(444, 38);
+            this.btnThongke.Size = new System.Drawing.Size(532, 38);
             this.btnThongke.TabIndex = 61;
             this.btnThongke.Text = "Thống kê chi tiết";
             this.btnThongke.TextColor = System.Drawing.Color.White;
@@ -122,14 +122,14 @@
             this.GvTongGui.DefaultCellStyle = dataGridViewCellStyle2;
             this.GvTongGui.EnableHeadersVisualStyles = false;
             this.GvTongGui.GridColor = System.Drawing.Color.LightSlateGray;
-            this.GvTongGui.Location = new System.Drawing.Point(97, 441);
+            this.GvTongGui.Location = new System.Drawing.Point(3, 454);
             this.GvTongGui.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GvTongGui.Name = "GvTongGui";
             this.GvTongGui.RowHeadersVisible = false;
             this.GvTongGui.RowHeadersWidth = 82;
             this.GvTongGui.RowTemplate.Height = 40;
             this.GvTongGui.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GvTongGui.Size = new System.Drawing.Size(890, 191);
+            this.GvTongGui.Size = new System.Drawing.Size(1070, 201);
             this.GvTongGui.TabIndex = 59;
             // 
             // GvTongNhan
@@ -160,14 +160,14 @@
             this.GvTongNhan.DefaultCellStyle = dataGridViewCellStyle4;
             this.GvTongNhan.EnableHeadersVisualStyles = false;
             this.GvTongNhan.GridColor = System.Drawing.Color.LightSlateGray;
-            this.GvTongNhan.Location = new System.Drawing.Point(97, 260);
+            this.GvTongNhan.Location = new System.Drawing.Point(2, 251);
             this.GvTongNhan.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GvTongNhan.Name = "GvTongNhan";
             this.GvTongNhan.RowHeadersVisible = false;
             this.GvTongNhan.RowHeadersWidth = 82;
             this.GvTongNhan.RowTemplate.Height = 40;
             this.GvTongNhan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GvTongNhan.Size = new System.Drawing.Size(890, 179);
+            this.GvTongNhan.Size = new System.Drawing.Size(1070, 201);
             this.GvTongNhan.TabIndex = 58;
             // 
             // GvLSGD
@@ -198,14 +198,14 @@
             this.GvLSGD.DefaultCellStyle = dataGridViewCellStyle6;
             this.GvLSGD.EnableHeadersVisualStyles = false;
             this.GvLSGD.GridColor = System.Drawing.Color.LightSlateGray;
-            this.GvLSGD.Location = new System.Drawing.Point(97, 260);
+            this.GvLSGD.Location = new System.Drawing.Point(3, 251);
             this.GvLSGD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GvLSGD.Name = "GvLSGD";
             this.GvLSGD.RowHeadersVisible = false;
             this.GvLSGD.RowHeadersWidth = 51;
             this.GvLSGD.RowTemplate.Height = 40;
             this.GvLSGD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GvLSGD.Size = new System.Drawing.Size(890, 372);
+            this.GvLSGD.Size = new System.Drawing.Size(1070, 403);
             this.GvLSGD.TabIndex = 39;
             // 
             // btn_TienRa
@@ -219,10 +219,10 @@
             this.btn_TienRa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TienRa.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_TienRa.ForeColor = System.Drawing.Color.White;
-            this.btn_TienRa.Location = new System.Drawing.Point(394, 202);
+            this.btn_TienRa.Location = new System.Drawing.Point(362, 192);
             this.btn_TienRa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TienRa.Name = "btn_TienRa";
-            this.btn_TienRa.Size = new System.Drawing.Size(296, 36);
+            this.btn_TienRa.Size = new System.Drawing.Size(352, 36);
             this.btn_TienRa.TabIndex = 35;
             this.btn_TienRa.Text = "Tiền ra";
             this.btn_TienRa.TextColor = System.Drawing.Color.White;
@@ -242,10 +242,10 @@
             this.btn_TienVao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TienVao.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_TienVao.ForeColor = System.Drawing.Color.White;
-            this.btn_TienVao.Location = new System.Drawing.Point(691, 202);
+            this.btn_TienVao.Location = new System.Drawing.Point(720, 192);
             this.btn_TienVao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TienVao.Name = "btn_TienVao";
-            this.btn_TienVao.Size = new System.Drawing.Size(296, 36);
+            this.btn_TienVao.Size = new System.Drawing.Size(353, 36);
             this.btn_TienVao.TabIndex = 34;
             this.btn_TienVao.Text = "Tiền vào";
             this.btn_TienVao.TextColor = System.Drawing.Color.White;
@@ -265,10 +265,10 @@
             this.btn_ToanBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ToanBo.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_ToanBo.ForeColor = System.Drawing.Color.White;
-            this.btn_ToanBo.Location = new System.Drawing.Point(97, 202);
+            this.btn_ToanBo.Location = new System.Drawing.Point(3, 192);
             this.btn_ToanBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ToanBo.Name = "btn_ToanBo";
-            this.btn_ToanBo.Size = new System.Drawing.Size(296, 36);
+            this.btn_ToanBo.Size = new System.Drawing.Size(353, 36);
             this.btn_ToanBo.TabIndex = 33;
             this.btn_ToanBo.Text = "Toàn bộ";
             this.btn_ToanBo.TextColor = System.Drawing.Color.White;
@@ -288,10 +288,10 @@
             this.btn_XuatExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XuatExcel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_XuatExcel.ForeColor = System.Drawing.Color.White;
-            this.btn_XuatExcel.Location = new System.Drawing.Point(97, 146);
+            this.btn_XuatExcel.Location = new System.Drawing.Point(3, 136);
             this.btn_XuatExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_XuatExcel.Name = "btn_XuatExcel";
-            this.btn_XuatExcel.Size = new System.Drawing.Size(444, 38);
+            this.btn_XuatExcel.Size = new System.Drawing.Size(532, 38);
             this.btn_XuatExcel.TabIndex = 31;
             this.btn_XuatExcel.Text = "Xuất excel";
             this.btn_XuatExcel.TextColor = System.Drawing.Color.White;
@@ -312,7 +312,7 @@
             "7 ngày gần đây nhất",
             "30 ngày gần đây nhất",
             "100 ngày gần đây nhất"});
-            this.cmNgay.Location = new System.Drawing.Point(426, 81);
+            this.cmNgay.Location = new System.Drawing.Point(485, 71);
             this.cmNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmNgay.Name = "cmNgay";
             this.cmNgay.Size = new System.Drawing.Size(514, 36);
@@ -330,10 +330,10 @@
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.vbButton1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(97, 69);
+            this.vbButton1.Location = new System.Drawing.Point(3, 60);
             this.vbButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(890, 59);
+            this.vbButton1.Size = new System.Drawing.Size(1070, 59);
             this.vbButton1.TabIndex = 29;
             this.vbButton1.Text = "        Thời gian giao dịch";
             this.vbButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,7 +345,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(97, 20);
+            this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(331, 29);
             this.label1.TabIndex = 28;

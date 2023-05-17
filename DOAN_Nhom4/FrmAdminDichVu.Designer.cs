@@ -56,11 +56,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(241, 20);
+            this.label1.Location = new System.Drawing.Point(295, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(394, 44);
+            this.label1.Size = new System.Drawing.Size(365, 39);
             this.label1.TabIndex = 24;
             this.label1.Text = "DỊCH VỤ NGÂN HÀNG";
             // 
@@ -98,7 +98,7 @@
             this.btn_ChuyenTien.BorderSize = 0;
             this.btn_ChuyenTien.FlatAppearance.BorderSize = 0;
             this.btn_ChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChuyenTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_ChuyenTien.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_ChuyenTien.ForeColor = System.Drawing.Color.White;
             this.btn_ChuyenTien.Location = new System.Drawing.Point(0, 524);
             this.btn_ChuyenTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -119,7 +119,7 @@
             this.btn_RutTien.BorderSize = 0;
             this.btn_RutTien.FlatAppearance.BorderSize = 0;
             this.btn_RutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RutTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_RutTien.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_RutTien.ForeColor = System.Drawing.Color.White;
             this.btn_RutTien.Location = new System.Drawing.Point(0, 311);
             this.btn_RutTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -140,7 +140,7 @@
             this.btn_NapTien.BorderSize = 0;
             this.btn_NapTien.FlatAppearance.BorderSize = 0;
             this.btn_NapTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NapTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_NapTien.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_NapTien.ForeColor = System.Drawing.Color.White;
             this.btn_NapTien.Location = new System.Drawing.Point(0, 95);
             this.btn_NapTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

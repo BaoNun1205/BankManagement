@@ -152,17 +152,25 @@ namespace DOAN_Nhom4
 
         private void btn_DV_Click(object sender, EventArgs e)
         {
-            this.Hide();
             FrmAdminDichVu frmaddv = new FrmAdminDichVu();
+            this.Hide();
             frmaddv.ShowDialog();
             this.Close();
         }
 
         private void btnDangxuat_Click(object sender, EventArgs e)
         {
-            this.Hide();
             FrmDangnhap frmdn = new FrmDangnhap();
+            this.Hide();
             frmdn.ShowDialog();
+            this.Close();
+        }
+
+        private void btnThongke_Click(object sender, EventArgs e)
+        {
+            FrmThongKeAdmin thongKeAdmin = new FrmThongKeAdmin();
+            this.Hide();
+            thongKeAdmin.ShowDialog();
             this.Close();
         }
     }
