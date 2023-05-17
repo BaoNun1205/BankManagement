@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
             {
                 ThongTinTinDung tttd = tttdDAO.LayThongTinTinDung("SoTKTinDung", gd.SoTKGui);
                 tttdDAO.ThanhToanPhi(tttd, gd);
-                tttdDAO.Update(tttd);
+                tttdDAO.Sua(tttd);
                 NapTienDienThoai(sdt, gd);
             }
             else

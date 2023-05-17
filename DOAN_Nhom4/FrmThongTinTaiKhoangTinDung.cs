@@ -73,7 +73,7 @@ namespace DOAN_Nhom4
         {
             tttd.PhiPhat = tttdDAO.PhiPhat(tttd);
             tttd.PhiTraCham = tttdDAO.PhiTraCham(tttd);
-            tttdDAO.Update(tttd);
+            tttdDAO.Sua(tttd);
         }
     }
 }

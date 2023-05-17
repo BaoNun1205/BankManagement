@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
         private ThongTinTinDung tktd;
         private ThongTinTinDungDAO tktdDAO = new ThongTinTinDungDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+
         public FrmHienThiThongTinCaNhan()
         {
             InitializeComponent();
@@ -37,8 +38,11 @@ namespace DOAN_Nhom4
         }
         private void FrmHienThiThongTinCaNhan_Load(object sender, EventArgs e)
         {
+            ThongTinTinDung tttd = new ThongTinTinDung();
+            tttd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             txtChutaikhoan.Text = kh.TenTK.ToString();
             lblSoTkValue.Text = kh.SoTK.ToString();
+            lblSoTKTinDung.Text = tttd.SoTKTinDung.ToString();
             lblSoDuValue.Text = tknh.SoDu.ToString("N0") + " VNĐ";
             txtCCCD.Text = kh.Cccd.ToString();
             txtNgaysinh.Text = kh.NgaySinh.ToString("MM/dd/yyyy");

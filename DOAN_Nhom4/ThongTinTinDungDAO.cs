@@ -19,7 +19,7 @@ namespace DOAN_Nhom4
                                         tttd.LoaiThe, tttd.HanThanhToan, tttd.NgaySaoKe, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.SoTienSuDungSau, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat);
             data.xuLi(sql);
         }
-        public void Update(ThongTinTinDung tttd)
+        public void Sua(ThongTinTinDung tttd)
         {
             string sql = string.Format("UPDATE TaiKhoanTinDung SET HoTen = '{0}', CCCD = '{1}', DiaChi = '{2}', SDT = '{3}', Email = '{4}', NgheNghiep = '{5}', ThuNhap = '{6}', LoaiThe = '{7}', HanThanhToan = '{8}', NgaySaoKe = '{9}', HanMuc = {10}, " +
                                         "LaiSuat = {11}, SoTienDaSuDung = {12}, SoTienSuDungSau = {13}, NgayMoThe = '{14}', PhiTraCham = {15}, PhiPhat = {16} Where SoTkTinDung = '{17}'", 
@@ -76,12 +76,12 @@ namespace DOAN_Nhom4
         public void ThanhToanPhiTruocNgaySaoKe(ThongTinTinDung tttd, GiaoDich gd)
         {
             tttd.SoTienDaSuDung = tttd.SoTienDaSuDung + gd.SoTien;
-            Update(tttd);
+            Sua(tttd);
         }
         public void ThanhToanPhiSauNgaySaoKe(ThongTinTinDung tttd, GiaoDich gd)
         {
             tttd.SoTienSuDungSau = tttd.SoTienSuDungSau + gd.SoTien;
-            Update(tttd);
+            Sua(tttd);
         }
 
         public void ThanhToanPhi(ThongTinTinDung tttd, GiaoDich gd)

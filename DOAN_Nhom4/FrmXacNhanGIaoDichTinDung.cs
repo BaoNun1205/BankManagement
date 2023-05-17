@@ -52,7 +52,7 @@ namespace DOAN_Nhom4
                 lsgdDAO.Them(gd);
                 tknhDAO.RutTien(tknh, gd);
                 tttdDAO.CapNhatTinDungHangThang(tttd);
-                tttdDAO.Update(tttd);
+                tttdDAO.Sua(tttd);
                 tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
                 frmThongbaoChuyentien.ShowDialog();
