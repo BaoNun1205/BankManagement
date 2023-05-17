@@ -467,24 +467,19 @@
             // 
             // btn_DangXuat
             // 
-            this.btn_DangXuat.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_DangXuat.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_DangXuat.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_DangXuat.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_DangXuat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_DangXuat.BorderRadius = 0;
+            this.btn_DangXuat.BorderRadius = 20;
             this.btn_DangXuat.BorderSize = 0;
-            this.btn_DangXuat.FlatAppearance.BorderSize = 0;
             this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DangXuat.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangXuat.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_DangXuat.Location = new System.Drawing.Point(1514, 761);
-            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_DangXuat.Location = new System.Drawing.Point(0, 0);
             this.btn_DangXuat.Name = "btn_DangXuat";
-            this.btn_DangXuat.Size = new System.Drawing.Size(220, 45);
-            this.btn_DangXuat.TabIndex = 33;
-            this.btn_DangXuat.Text = "Đăng xuất";
-            this.btn_DangXuat.TextColor = System.Drawing.SystemColors.Highlight;
+            this.btn_DangXuat.Size = new System.Drawing.Size(150, 40);
+            this.btn_DangXuat.TabIndex = 0;
+            this.btn_DangXuat.TextColor = System.Drawing.Color.White;
             this.btn_DangXuat.UseVisualStyleBackColor = false;
-            this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
             // 
             // btnDangxuat
             // 
@@ -505,6 +500,7 @@
             this.btnDangxuat.Text = "Đăng xuất";
             this.btnDangxuat.TextColor = System.Drawing.SystemColors.Highlight;
             this.btnDangxuat.UseVisualStyleBackColor = false;
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
             // btnThongke
             // 

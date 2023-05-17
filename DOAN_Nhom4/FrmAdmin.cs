@@ -158,7 +158,7 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void btn_DangXuat_Click(object sender, EventArgs e)
+        private void btnDangxuat_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmDangnhap frmdn = new FrmDangnhap();
