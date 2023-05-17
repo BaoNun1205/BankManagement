@@ -71,7 +71,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1773, 107);
+            this.panel1.Size = new System.Drawing.Size(1582, 107);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -80,7 +80,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(641, 31);
+            this.label1.Location = new System.Drawing.Point(532, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(551, 41);
             this.label1.TabIndex = 1;
@@ -94,7 +94,7 @@
             this.txt_TenDN.Location = new System.Drawing.Point(36, 156);
             this.txt_TenDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_TenDN.Name = "txt_TenDN";
-            this.txt_TenDN.Size = new System.Drawing.Size(214, 29);
+            this.txt_TenDN.Size = new System.Drawing.Size(189, 29);
             this.txt_TenDN.TabIndex = 4;
             // 
             // label3
@@ -129,7 +129,7 @@
             this.txt_MatKhau.Location = new System.Drawing.Point(36, 216);
             this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Size = new System.Drawing.Size(214, 29);
+            this.txt_MatKhau.Size = new System.Drawing.Size(189, 29);
             this.txt_MatKhau.TabIndex = 6;
             // 
             // label5
@@ -152,7 +152,7 @@
             this.txt_SoTK.Location = new System.Drawing.Point(36, 275);
             this.txt_SoTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SoTK.Name = "txt_SoTK";
-            this.txt_SoTK.Size = new System.Drawing.Size(214, 29);
+            this.txt_SoTK.Size = new System.Drawing.Size(189, 29);
             this.txt_SoTK.TabIndex = 8;
             // 
             // label6
@@ -175,7 +175,7 @@
             this.txt_TenTK.Location = new System.Drawing.Point(36, 334);
             this.txt_TenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_TenTK.Name = "txt_TenTK";
-            this.txt_TenTK.Size = new System.Drawing.Size(214, 29);
+            this.txt_TenTK.Size = new System.Drawing.Size(189, 29);
             this.txt_TenTK.TabIndex = 10;
             // 
             // label7
@@ -198,7 +198,7 @@
             this.txt_CCCD.Location = new System.Drawing.Point(37, 461);
             this.txt_CCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_CCCD.Name = "txt_CCCD";
-            this.txt_CCCD.Size = new System.Drawing.Size(214, 29);
+            this.txt_CCCD.Size = new System.Drawing.Size(188, 29);
             this.txt_CCCD.TabIndex = 12;
             // 
             // label8
@@ -221,7 +221,7 @@
             this.txt_SDT.Location = new System.Drawing.Point(37, 526);
             this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(214, 29);
+            this.txt_SDT.Size = new System.Drawing.Size(188, 29);
             this.txt_SDT.TabIndex = 14;
             // 
             // label9
@@ -244,7 +244,7 @@
             this.txt_NgaySinh.Location = new System.Drawing.Point(37, 397);
             this.txt_NgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_NgaySinh.Name = "txt_NgaySinh";
-            this.txt_NgaySinh.Size = new System.Drawing.Size(214, 29);
+            this.txt_NgaySinh.Size = new System.Drawing.Size(188, 29);
             this.txt_NgaySinh.TabIndex = 18;
             // 
             // label10
@@ -267,7 +267,7 @@
             this.txt_SoDu.Location = new System.Drawing.Point(37, 647);
             this.txt_SoDu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_SoDu.Name = "txt_SoDu";
-            this.txt_SoDu.Size = new System.Drawing.Size(214, 29);
+            this.txt_SoDu.Size = new System.Drawing.Size(188, 29);
             this.txt_SoDu.TabIndex = 19;
             // 
             // gvQLKH
@@ -297,14 +297,14 @@
             this.gvQLKH.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvQLKH.EnableHeadersVisualStyles = false;
             this.gvQLKH.GridColor = System.Drawing.Color.LightSlateGray;
-            this.gvQLKH.Location = new System.Drawing.Point(289, 156);
+            this.gvQLKH.Location = new System.Drawing.Point(266, 156);
             this.gvQLKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gvQLKH.Name = "gvQLKH";
             this.gvQLKH.RowHeadersVisible = false;
             this.gvQLKH.RowHeadersWidth = 51;
             this.gvQLKH.RowTemplate.Height = 40;
             this.gvQLKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvQLKH.Size = new System.Drawing.Size(1445, 584);
+            this.gvQLKH.Size = new System.Drawing.Size(1280, 584);
             this.gvQLKH.TabIndex = 21;
             this.gvQLKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvQLKH_CellClick);
             // 
@@ -318,7 +318,7 @@
             this.txt_NgayDangKyThe.Location = new System.Drawing.Point(37, 711);
             this.txt_NgayDangKyThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_NgayDangKyThe.Name = "txt_NgayDangKyThe";
-            this.txt_NgayDangKyThe.Size = new System.Drawing.Size(214, 29);
+            this.txt_NgayDangKyThe.Size = new System.Drawing.Size(188, 29);
             this.txt_NgayDangKyThe.TabIndex = 23;
             this.txt_NgayDangKyThe.Value = new System.DateTime(2023, 4, 11, 0, 0, 0, 0);
             // 
@@ -354,7 +354,7 @@
             this.txt_Email.Location = new System.Drawing.Point(37, 585);
             this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(214, 29);
+            this.txt_Email.Size = new System.Drawing.Size(188, 29);
             this.txt_Email.TabIndex = 24;
             // 
             // btn_Them
@@ -368,7 +368,7 @@
             this.btn_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Them.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Them.ForeColor = System.Drawing.Color.White;
-            this.btn_Them.Location = new System.Drawing.Point(287, 761);
+            this.btn_Them.Location = new System.Drawing.Point(266, 761);
             this.btn_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(127, 45);
@@ -389,7 +389,7 @@
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(420, 761);
+            this.btn_Xoa.Location = new System.Drawing.Point(399, 761);
             this.btn_Xoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(127, 45);
@@ -410,7 +410,7 @@
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
-            this.btn_Sua.Location = new System.Drawing.Point(553, 761);
+            this.btn_Sua.Location = new System.Drawing.Point(532, 761);
             this.btn_Sua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(127, 45);
@@ -431,7 +431,7 @@
             this.btn_Refersh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refersh.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Refersh.ForeColor = System.Drawing.Color.White;
-            this.btn_Refersh.Location = new System.Drawing.Point(686, 761);
+            this.btn_Refersh.Location = new System.Drawing.Point(665, 761);
             this.btn_Refersh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Refersh.Name = "btn_Refersh";
             this.btn_Refersh.Size = new System.Drawing.Size(127, 45);
@@ -452,7 +452,7 @@
             this.btn_DV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DV.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_DV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_DV.Location = new System.Drawing.Point(1514, 761);
+            this.btn_DV.Location = new System.Drawing.Point(1326, 761);
             this.btn_DV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DV.Name = "btn_DV";
             this.btn_DV.Size = new System.Drawing.Size(220, 45);
@@ -467,7 +467,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1773, 834);
+            this.ClientSize = new System.Drawing.Size(1582, 837);
             this.Controls.Add(this.btn_DV);
             this.Controls.Add(this.btn_Refersh);
             this.Controls.Add(this.btn_Sua);
