@@ -33,8 +33,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -46,19 +44,24 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblHanmuc = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblSoTKTinDung = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblSoDuValue = new System.Windows.Forms.Label();
-            this.lblSoTkValue = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSoTk = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.ptbTheTinDung = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -105,28 +108,6 @@
             this.label14.Size = new System.Drawing.Size(0, 15);
             this.label14.TabIndex = 55;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(24, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Thông tin tài khoản";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(275, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(236, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ngân hàng HHB Bank";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -150,17 +131,17 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(12, 376);
+            this.panel3.Location = new System.Drawing.Point(12, 421);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1115, 334);
+            this.panel3.Size = new System.Drawing.Size(1115, 289);
             this.panel3.TabIndex = 2;
             // 
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.txtSDT.Location = new System.Drawing.Point(805, 204);
+            this.txtSDT.Location = new System.Drawing.Point(803, 181);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(262, 36);
@@ -170,7 +151,7 @@
             // 
             this.txtNgaysinh.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNgaysinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.txtNgaysinh.Location = new System.Drawing.Point(228, 204);
+            this.txtNgaysinh.Location = new System.Drawing.Point(228, 181);
             this.txtNgaysinh.Name = "txtNgaysinh";
             this.txtNgaysinh.ReadOnly = true;
             this.txtNgaysinh.Size = new System.Drawing.Size(262, 36);
@@ -180,7 +161,7 @@
             // 
             this.txtCCCD.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCCCD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.txtCCCD.Location = new System.Drawing.Point(805, 94);
+            this.txtCCCD.Location = new System.Drawing.Point(803, 70);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.ReadOnly = true;
             this.txtCCCD.Size = new System.Drawing.Size(262, 36);
@@ -190,7 +171,7 @@
             // 
             this.txtChutaikhoan.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChutaikhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.txtChutaikhoan.Location = new System.Drawing.Point(228, 93);
+            this.txtChutaikhoan.Location = new System.Drawing.Point(228, 73);
             this.txtChutaikhoan.Name = "txtChutaikhoan";
             this.txtChutaikhoan.ReadOnly = true;
             this.txtChutaikhoan.Size = new System.Drawing.Size(262, 33);
@@ -201,7 +182,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label9.Location = new System.Drawing.Point(623, 207);
+            this.label9.Location = new System.Drawing.Point(623, 188);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(152, 29);
             this.label9.TabIndex = 11;
@@ -212,7 +193,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label8.Location = new System.Drawing.Point(80, 207);
+            this.label8.Location = new System.Drawing.Point(80, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 29);
             this.label8.TabIndex = 10;
@@ -223,7 +204,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label7.Location = new System.Drawing.Point(558, 97);
+            this.label7.Location = new System.Drawing.Point(558, 77);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 29);
             this.label7.TabIndex = 9;
@@ -234,7 +215,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label6.Location = new System.Drawing.Point(38, 97);
+            this.label6.Location = new System.Drawing.Point(38, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 29);
             this.label6.TabIndex = 8;
@@ -244,14 +225,38 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Window;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lblHanmuc);
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.lblSoTKTinDung);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(558, -1);
+            this.panel5.Location = new System.Drawing.Point(556, -1);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(556, 86);
+            this.panel5.Size = new System.Drawing.Size(558, 125);
             this.panel5.TabIndex = 18;
+            // 
+            // lblHanmuc
+            // 
+            this.lblHanmuc.AutoSize = true;
+            this.lblHanmuc.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHanmuc.ForeColor = System.Drawing.Color.Red;
+            this.lblHanmuc.Location = new System.Drawing.Point(219, 86);
+            this.lblHanmuc.Name = "lblHanmuc";
+            this.lblHanmuc.Size = new System.Drawing.Size(18, 25);
+            this.lblHanmuc.TabIndex = 66;
+            this.lblHanmuc.Text = " ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(44, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Hạn mức";
             // 
             // label15
             // 
@@ -269,7 +274,7 @@
             this.lblSoTKTinDung.AutoSize = true;
             this.lblSoTKTinDung.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSoTKTinDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblSoTKTinDung.Location = new System.Drawing.Point(246, 52);
+            this.lblSoTKTinDung.Location = new System.Drawing.Point(219, 52);
             this.lblSoTKTinDung.Name = "lblSoTKTinDung";
             this.lblSoTKTinDung.Size = new System.Drawing.Size(18, 25);
             this.lblSoTKTinDung.TabIndex = 63;
@@ -286,23 +291,12 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Số tài khoản";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label1.Location = new System.Drawing.Point(24, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 25);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Số tài khoản";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(24, 85);
+            this.label10.Location = new System.Drawing.Point(42, 86);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 25);
             this.label10.TabIndex = 16;
@@ -313,35 +307,19 @@
             this.lblSoDuValue.AutoSize = true;
             this.lblSoDuValue.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblSoDuValue.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuValue.Location = new System.Drawing.Point(213, 84);
+            this.lblSoDuValue.Location = new System.Drawing.Point(219, 86);
             this.lblSoDuValue.Name = "lblSoDuValue";
             this.lblSoDuValue.Size = new System.Drawing.Size(18, 25);
             this.lblSoDuValue.TabIndex = 1;
             this.lblSoDuValue.Text = " ";
             // 
-            // lblSoTkValue
-            // 
-            this.lblSoTkValue.AutoSize = true;
-            this.lblSoTkValue.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSoTkValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.lblSoTkValue.Location = new System.Drawing.Point(213, 52);
-            this.lblSoTkValue.Name = "lblSoTkValue";
-            this.lblSoTkValue.Size = new System.Drawing.Size(18, 25);
-            this.lblSoTkValue.TabIndex = 0;
-            this.lblSoTkValue.Text = " ";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.ptbTheTinDung);
-            this.panel4.Controls.Add(this.lblSoDuValue);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.lblSoTkValue);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(12, 13);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -349,9 +327,57 @@
             this.panel4.Size = new System.Drawing.Size(1115, 697);
             this.panel4.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.lblSoDuValue);
+            this.panel1.Controls.Add(this.lblSoTk);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(558, 125);
+            this.panel1.TabIndex = 62;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label3.Location = new System.Drawing.Point(42, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(261, 29);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Tài khoản ngân hàng";
+            // 
+            // lblSoTk
+            // 
+            this.lblSoTk.AutoSize = true;
+            this.lblSoTk.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSoTk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.lblSoTk.Location = new System.Drawing.Point(219, 52);
+            this.lblSoTk.Name = "lblSoTk";
+            this.lblSoTk.Size = new System.Drawing.Size(18, 25);
+            this.lblSoTk.TabIndex = 63;
+            this.lblSoTk.Text = " ";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.label17.Location = new System.Drawing.Point(42, 52);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(143, 25);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "Số tài khoản";
+            // 
             // ptbTheTinDung
             // 
-            this.ptbTheTinDung.Location = new System.Drawing.Point(681, 125);
+            this.ptbTheTinDung.Location = new System.Drawing.Point(677, 165);
             this.ptbTheTinDung.Name = "ptbTheTinDung";
             this.ptbTheTinDung.Size = new System.Drawing.Size(326, 199);
             this.ptbTheTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -362,7 +388,7 @@
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-1, 36);
+            this.pictureBox3.Location = new System.Drawing.Point(-3, 79);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(560, 368);
@@ -397,7 +423,8 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -410,8 +437,6 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private Label label2;
-        private Label label3;
         private Label label4;
         private Panel panel3;
         private Label label9;
@@ -419,10 +444,8 @@
         private Label label7;
         private Label label6;
         private Panel panel5;
-        private Label label1;
         private Label label10;
         private Label lblSoDuValue;
-        private Label lblSoTkValue;
         private Panel panel4;
         private PictureBox pictureBox3;
         private TextBox txtSDT;
@@ -433,5 +456,11 @@
         private Label lblSoTKTinDung;
         private Label label5;
         private Label label15;
+        private Label lblHanmuc;
+        private Label label1;
+        private Panel panel1;
+        private Label label3;
+        private Label lblSoTk;
+        private Label label17;
     }
 }
