@@ -93,9 +93,9 @@ namespace DOAN_Nhom4
             if (luachon == DialogResult.Yes)
             {
                 FrmDangnhap frmDangnhap = new FrmDangnhap();
-                Application.OpenForms["frmNguoiDung"].Hide();
+                this.Hide();
                 frmDangnhap.ShowDialog();
-                Application.OpenForms["frmNguoiDung"].Close();
+                this.Close();
             }
             else pnlLuachonCD.Visible = false;
         }
