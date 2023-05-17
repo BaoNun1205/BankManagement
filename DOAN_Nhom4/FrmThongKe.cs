@@ -35,7 +35,7 @@ namespace DOAN_Nhom4
 
         private void FrmThongKe_Load(object sender, EventArgs e)
         {
-            lblHienThiNgay.Text = string.Format("{0}-{1}", ngayBatDau, ngayKetThuc);
+            lblHienThiNgay.Text = string.Format("{0} đến {1}", ngayBatDau, ngayKetThuc);
             ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
             ThongKe.Series["TienGui"].XValueMember = "ThoiGian";
             ThongKe.Series["TienGui"].YValueMembers = "TongTien";
