@@ -147,14 +147,6 @@ namespace DOAN_Nhom4
             Refresh();
         }
 
-        private void btn_QuanLyVay_Click(object sender, EventArgs e)
-        {
-            FrmQLTKVay frmqltkvay = new FrmQLTKVay();
-            this.Hide();
-            frmqltkvay.ShowDialog();
-            this.Close();
-        }
-
         private void btn_DV_Click(object sender, EventArgs e)
         {
             this.Hide();

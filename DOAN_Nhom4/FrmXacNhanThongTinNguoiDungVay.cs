@@ -20,7 +20,6 @@ namespace DOAN_Nhom4
         public TaiKhoanNganHang tknh;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
-        QLThongTinVayDAO qlDAO = new QLThongTinVayDAO();
         public FrmXacNhanThongTinNguoiDungVay()
         {
             InitializeComponent();
@@ -97,7 +96,6 @@ namespace DOAN_Nhom4
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
-            qlDAO.Them(ttNgDung);
             GiaoDich gd = new GiaoDich("Dang ky khoan vay", "HHB", "","", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
             lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
