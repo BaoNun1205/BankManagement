@@ -40,7 +40,7 @@ namespace DOAN_Nhom4
                 txt_TenTKChuyen.Text = ngDung.TenTK.ToString();
                 txt_CCCD.Text = ngDung.Cccd.ToString();
                 txt_SDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.ToString();
+                lblSoDu.Text = tk.SoDu.ToString("N0");
             }
             else
             {
@@ -54,15 +54,26 @@ namespace DOAN_Nhom4
         public void HienThiThongTinNguoiNhan()
         {
             NguoiDung ngDungNhan = new NguoiDung();
-            NguoiDung ngDungChuyen = new NguoiDung();
             ngDungNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+            if (ngDungNhan != null)
+            {
+                txt_TenTKNhan.Text = ngDungNhan.TenTK.ToString();
+            }
+            else
+            {
+                txt_TenTKNhan.Text = "Khong ton tai";
+            }
+        }
+        public void HienThiThongTinNguoiNhanCoDieuKien()
+        {
+            NguoiDung ngDungNhan = new NguoiDung();
+            ngDungNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+            NguoiDung ngDungChuyen = new NguoiDung();
             ngDungChuyen = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");
             if (ngDungNhan != null)
             {
-                if(ngDungNhan.TenNH == ngDungChuyen.TenNH && ngDungNhan.SoTK == ngDungChuyen.SoTK)
-                {
+                if (ngDungChuyen.TenNH == ngDungNhan.TenNH && ngDungChuyen.SoTK == ngDungNhan.SoTK)
                     txt_TenTKNhan.Text = "Khong duoc chuyen cho chinh minh";
-                }
                 else
                     txt_TenTKNhan.Text = ngDungNhan.TenTK.ToString();
             }
@@ -71,7 +82,6 @@ namespace DOAN_Nhom4
                 txt_TenTKNhan.Text = "Khong ton tai";
             }
         }
-
         private void txt_SoTKChuyen_TextChanged(object sender, EventArgs e)
         {
             HienThiThongTinNguoiChuyen();
@@ -79,7 +89,14 @@ namespace DOAN_Nhom4
 
         private void txt_SoTKNhan_TextChanged(object sender, EventArgs e)
         {
-            HienThiThongTinNguoiNhan();
+            if(txt_SoTKChuyen.Text == "")
+            {
+                HienThiThongTinNguoiNhan();
+            }
+            else
+            {
+                HienThiThongTinNguoiNhanCoDieuKien();
+            }
         }
 
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
@@ -99,7 +116,7 @@ namespace DOAN_Nhom4
                 {
                     if (tkGui.TenNH != tkNhan.TenNH|| tkGui.TenNH == tkNhan.TenNH && tkGui.SoTK != tkNhan.SoTK)
                     {
-                        if (gd.SoTien > 100000 && gd.SoTien <= tkGui.SoDu)
+                        if (gd.SoTien >= 100000 && gd.SoTien <= tkGui.SoDu)
                         {
                             tknhDAO.ChuyenTien(tkGui, gd, tkNhan);
                             lsgdDAO.Them(gd);
