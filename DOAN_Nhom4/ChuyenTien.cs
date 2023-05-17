@@ -99,7 +99,7 @@ namespace DOAN_Nhom4
                 {
                     if (tkGui.TenNH != tkNhan.TenNH|| tkGui.TenNH == tkNhan.TenNH && tkGui.SoTK != tkNhan.SoTK)
                     {
-                        if (gd.SoTien > 0 && gd.SoTien <= tkGui.SoDu)
+                        if (gd.SoTien > 100000 && gd.SoTien <= tkGui.SoDu)
                         {
                             tknhDAO.ChuyenTien(tkGui, gd, tkNhan);
                             lsgdDAO.Them(gd);

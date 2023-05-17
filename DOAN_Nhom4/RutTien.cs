@@ -58,7 +58,7 @@ namespace DOAN_Nhom4
             GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", BigInteger.Parse(txt_SoTien.Text), "Rut tien ra khoi tai khoan");
             if (tkRut != null)
             {
-                if (gd.SoTien > 0 && gd.SoTien <= tkRut.SoDu)
+                if (gd.SoTien > 100000 && gd.SoTien <= tkRut.SoDu)
                 {
                     tknhDAO.RutTien(tkRut, gd);
                     lsgdDAO.Them(gd);

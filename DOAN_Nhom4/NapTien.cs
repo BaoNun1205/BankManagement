@@ -53,7 +53,7 @@ namespace DOAN_Nhom4
             GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenTK, tkNap.SoTK, BigInteger.Parse(txt_SoTien.Text), "Nap tien vao tai khoan");
             if (tkNap != null)
             {
-                if (gd.SoTien > 0)
+                if (gd.SoTien > 100000)
                 {
                     tknhDAO.NapTien(tkNap, gd);
                     lsgdDAO.Them(gd);
