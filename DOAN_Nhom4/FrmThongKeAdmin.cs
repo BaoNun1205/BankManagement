@@ -30,7 +30,7 @@ namespace DOAN_Nhom4
             lblHienThiVay.Text = tkDAO.DemSoLuongVay().ToString();
             lblHienThiNoXau.Text = tkDAO.DemSoLuongNoXau().ToString();
             HienThiLsgd();
-            ThongKe.DataSource = tkDAO.ThongKeGiaoDichVayTien(ngayBatDau, ngayKetThuc);
+            ThongKe.DataSource = tkDAO.ThongKeGiaoDichChuyenTien(ngayBatDau, ngayKetThuc);
             ThongKe.Series["ChuyenTien"].XValueMember = "ThoiGian";
             ThongKe.Series["ChuyenTien"].YValueMembers = "TongTien";
             ThongKe.Legends[1].Enabled = false;
@@ -98,7 +98,7 @@ namespace DOAN_Nhom4
             MacDinh();
             ThongKe.Series["Vay"].Enabled = true;
             ThongKe.Legends[4].Enabled = true;
-            ThongKe.DataSource = tkDAO.ThongKeGiaoDichVienThong(ngayBatDau, ngayKetThuc);
+            ThongKe.DataSource = tkDAO.ThongKeGiaoDichVayTien(ngayBatDau, ngayKetThuc);
             ThongKe.Series["Vay"].XValueMember = "ThoiGian";
             ThongKe.Series["Vay"].YValueMembers = "TongTien";
         }
