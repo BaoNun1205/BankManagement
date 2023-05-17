@@ -56,14 +56,19 @@ namespace DOAN_Nhom4
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            tknh.SoDu -= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham);
-            tknhDAO.Sua(tknh);
-            GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.TongSoTienPhaiTra, "Thanh toan khoan vay");
-            lsgdDAO.Them(gd);
-            ttNgDungDAO.Xoa(ttNgDung);
-            MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            Utility.addForm(FrmTienIchVay, pnlNguoiDung);
+            if (tknh.SoDu >= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham))
+            {
+                tknh.SoDu -= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham);
+                tknhDAO.Sua(tknh);
+                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.TongSoTienPhaiTra, "Thanh toan khoan vay");
+                lsgdDAO.Them(gd);
+                ttNgDungDAO.Xoa(ttNgDung);
+                MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmTienIchVay FrmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+                Utility.addForm(FrmTienIchVay, pnlNguoiDung);
+            }
+            else
+                MessageBox.Show("Số dư không đủ để thực hiện", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

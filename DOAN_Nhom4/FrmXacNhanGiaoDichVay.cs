@@ -51,13 +51,21 @@ namespace DOAN_Nhom4
             tknh.SoDu -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             if (ttNgDung.ThoiGianVay != 0)
             {
-                ttNgDungDAO.Sua(ttNgDung);
-                tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB",nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
-                lsgdDAO.Them(gd);
-                MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-                Utility.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+                if (tknh.SoDu >= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham))
+                {
+                    ttNgDungDAO.Sua(ttNgDung);
+                    tknhDAO.Sua(tknh);
+                    GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                    lsgdDAO.Them(gd);
+                    MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+                    Utility.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+                }
+                else
+                {
+                    tknh.SoDu += (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
+                    MessageBox.Show("Số dư không đủ để thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {

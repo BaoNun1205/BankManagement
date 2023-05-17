@@ -40,11 +40,14 @@ namespace DOAN_Nhom4
         {
             ThongTinTinDung tttd = new ThongTinTinDung();
             tttd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
+            if (tttd != null)
+            {
+                lblSoTKTinDung.Text = tttd.SoTKTinDung.ToString();
+                lblHanmuc.Text = tttd.HanMuc.ToString("N0") + "VNĐ";
+            }
             txtChutaikhoan.Text = kh.TenTK.ToString();
             lblSoTk.Text = kh.SoTK.ToString();
-            lblSoTKTinDung.Text = tttd.SoTKTinDung.ToString();
             lblSoDuValue.Text = tknh.SoDu.ToString("N0") + " VNĐ";
-            lblHanmuc.Text = tttd.HanMuc.ToString("N0") + "VNĐ";
             txtCCCD.Text = kh.Cccd.ToString();
             txtNgaysinh.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
             txtSDT.Text = kh.Sdt.ToString();
