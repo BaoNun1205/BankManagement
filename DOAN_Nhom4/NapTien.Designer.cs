@@ -116,7 +116,7 @@
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuString.Location = new System.Drawing.Point(453, 393);
+            this.lblSoDuString.Location = new System.Drawing.Point(453, 394);
             this.lblSoDuString.Name = "lblSoDuString";
             this.lblSoDuString.Size = new System.Drawing.Size(75, 28);
             this.lblSoDuString.TabIndex = 56;
@@ -127,7 +127,7 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(548, 393);
+            this.lblSoDu.Location = new System.Drawing.Point(548, 394);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(20, 28);
             this.lblSoDu.TabIndex = 55;

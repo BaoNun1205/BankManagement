@@ -54,21 +54,21 @@ namespace DOAN_Nhom4
             chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
             chartArea1.AxisX.MajorTickMark.Size = 3F;
             chartArea1.AxisX.Title = "Ngày";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Myriad Pro", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             chartArea1.AxisY.LineColor = System.Drawing.Color.White;
             chartArea1.AxisY.LineWidth = 0;
             chartArea1.AxisY.MajorTickMark.LineWidth = 0;
             chartArea1.AxisY.Title = "VNĐ";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Myriad Pro", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             chartArea1.Name = "ChartArea1";
             this.ThongKe.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Myriad Pro", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
-            legend2.Font = new System.Drawing.Font("Myriad Pro", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legend2";
-            legend3.Font = new System.Drawing.Font("Myriad Pro", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            legend3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             legend3.IsTextAutoFit = false;
             legend3.Name = "Legend3";
             this.ThongKe.Legends.Add(legend1);
@@ -103,7 +103,7 @@ namespace DOAN_Nhom4
             this.ThongKe.Size = new System.Drawing.Size(1103, 512);
             this.ThongKe.TabIndex = 0;
             this.ThongKe.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Myriad Pro", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             title1.Name = "title";
             title1.Text = "THỐNG KÊ";
             this.ThongKe.Titles.Add(title1);
@@ -111,7 +111,7 @@ namespace DOAN_Nhom4
             // lblHienThiNgay
             // 
             this.lblHienThiNgay.AutoSize = true;
-            this.lblHienThiNgay.Font = new System.Drawing.Font("Myriad Pro SemiExt", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHienThiNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHienThiNgay.ForeColor = System.Drawing.Color.Black;
             this.lblHienThiNgay.Location = new System.Drawing.Point(109, 168);
             this.lblHienThiNgay.Name = "lblHienThiNgay";
@@ -124,7 +124,7 @@ namespace DOAN_Nhom4
             this.btnTienVao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
             this.btnTienVao.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTienVao.ForeColor = System.Drawing.Color.White;
-            this.btnTienVao.Location = new System.Drawing.Point(600, 91);
+            this.btnTienVao.Location = new System.Drawing.Point(779, 91);
             this.btnTienVao.Name = "btnTienVao";
             this.btnTienVao.Size = new System.Drawing.Size(137, 47);
             this.btnTienVao.TabIndex = 2;
@@ -135,9 +135,9 @@ namespace DOAN_Nhom4
             // btnTienRa
             // 
             this.btnTienRa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.btnTienRa.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTienRa.Font = new System.Drawing.Font("Myriad Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTienRa.ForeColor = System.Drawing.Color.White;
-            this.btnTienRa.Location = new System.Drawing.Point(780, 91);
+            this.btnTienRa.Location = new System.Drawing.Point(598, 91);
             this.btnTienRa.Name = "btnTienRa";
             this.btnTienRa.Size = new System.Drawing.Size(137, 47);
             this.btnTienRa.TabIndex = 3;
@@ -148,7 +148,7 @@ namespace DOAN_Nhom4
             // btnTong
             // 
             this.btnTong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.btnTong.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTong.Font = new System.Drawing.Font("Myriad Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTong.ForeColor = System.Drawing.Color.White;
             this.btnTong.Location = new System.Drawing.Point(960, 91);
             this.btnTong.Name = "btnTong";

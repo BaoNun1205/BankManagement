@@ -51,17 +51,17 @@ namespace DOAN_Nhom4
             tktd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             if (tktd != null)
             {
-                if (tktd.LoaiThe == "HHB Visa Flexi")
+                if (tktd.HanMuc >= 300000000)
                 {
-                    ptbTheTinDung.Image = images[0];
+                    ptbTheTinDung.Image = images[2];
                 }
-                if (tktd.LoaiThe == "HHB Visa Platinum Cashback")
+                else if (tktd.HanMuc >= 80000000)
                 {
                     ptbTheTinDung.Image = images[1];
                 }
-                if (tktd.LoaiThe == "HHB Visa Infinite")
+                else
                 {
-                    ptbTheTinDung.Image = images[2];
+                    ptbTheTinDung.Image = images[0];
                 }
             }
 
