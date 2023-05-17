@@ -111,5 +111,13 @@ namespace DOAN_Nhom4
             ThongKe.Series["TietKiem"].Enabled = false;
             ThongKe.Series["Vay"].Enabled = false;
         }
+
+        private void pb_QuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAdmin frmad = new FrmAdmin();
+            frmad.ShowDialog();
+            this.Close();
+        }
     }
 }

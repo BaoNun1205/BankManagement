@@ -62,15 +62,18 @@
             this.lblNoXau = new System.Windows.Forms.Label();
             this.lblHienThiNoXau = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pb_QuayLai = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLGD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_QuayLai)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
+            this.panel1.Controls.Add(this.pb_QuayLai);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -392,6 +395,18 @@
             this.panel2.Size = new System.Drawing.Size(466, 324);
             this.panel2.TabIndex = 37;
             // 
+            // pb_QuayLai
+            // 
+            this.pb_QuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow4;
+            this.pb_QuayLai.Location = new System.Drawing.Point(3, 2);
+            this.pb_QuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_QuayLai.Name = "pb_QuayLai";
+            this.pb_QuayLai.Size = new System.Drawing.Size(35, 34);
+            this.pb_QuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_QuayLai.TabIndex = 26;
+            this.pb_QuayLai.TabStop = false;
+            this.pb_QuayLai.Click += new System.EventHandler(this.pb_QuayLai_Click);
+            // 
             // FrmThongKeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -418,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ThongKe)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_QuayLai)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,5 +460,6 @@
         private Label lblNoXau;
         private Label lblHienThiNoXau;
         private Panel panel2;
+        private PictureBox pb_QuayLai;
     }
 }

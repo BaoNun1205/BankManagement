@@ -83,7 +83,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Tahoma", 23.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(586, 35);
+            this.label1.Location = new System.Drawing.Point(556, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(534, 37);
             this.label1.TabIndex = 1;
