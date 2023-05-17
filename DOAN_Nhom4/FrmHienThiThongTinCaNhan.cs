@@ -48,7 +48,7 @@ namespace DOAN_Nhom4
 
         private void HienThiTheTinDung()
         {
-            tktd = tktdDAO.LayThongTinTinDung("SoTKTinDung", tknh.SoTK);
+            tktd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             if (tktd != null)
             {
                 if (tktd.LoaiThe == "HHB Visa Flexi")

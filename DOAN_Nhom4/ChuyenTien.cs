@@ -37,7 +37,6 @@ namespace DOAN_Nhom4
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txt_SoTKChuyen.Text = ngDung.SoTK.ToString();
                 txt_TenTKChuyen.Text = ngDung.TenTK.ToString();
                 txt_CCCD.Text = ngDung.Cccd.ToString();
                 txt_SDT.Text = ngDung.Sdt.ToString();
@@ -45,7 +44,6 @@ namespace DOAN_Nhom4
             }
             else
             {
-                txt_SoTKChuyen.Text = "";
                 txt_TenTKChuyen.Text = "Khong ton tai";
                 txt_CCCD.Text = "";
                 txt_SDT.Text = "";
