@@ -62,10 +62,9 @@
             this.panel1.Controls.Add(this.txt_CCCD);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txt_SoTK);
-            this.panel1.Location = new System.Drawing.Point(66, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(75, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(828, 550);
+            this.panel1.Size = new System.Drawing.Size(946, 733);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -74,9 +73,9 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(142, 127);
+            this.label1.Location = new System.Drawing.Point(162, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 28);
+            this.label1.Size = new System.Drawing.Size(203, 37);
             this.label1.TabIndex = 59;
             this.label1.Text = "Tên Tài Khoản";
             // 
@@ -84,11 +83,10 @@
             // 
             this.txt_TenTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_TenTK.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TenTK.Location = new System.Drawing.Point(454, 125);
-            this.txt_TenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_TenTK.Location = new System.Drawing.Point(519, 167);
             this.txt_TenTK.Name = "txt_TenTK";
             this.txt_TenTK.ReadOnly = true;
-            this.txt_TenTK.Size = new System.Drawing.Size(298, 36);
+            this.txt_TenTK.Size = new System.Drawing.Size(340, 43);
             this.txt_TenTK.TabIndex = 58;
             // 
             // btn_HuyBo
@@ -102,10 +100,9 @@
             this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_HuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btn_HuyBo.Location = new System.Drawing.Point(148, 454);
-            this.btn_HuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_HuyBo.Location = new System.Drawing.Point(169, 605);
             this.btn_HuyBo.Name = "btn_HuyBo";
-            this.btn_HuyBo.Size = new System.Drawing.Size(238, 56);
+            this.btn_HuyBo.Size = new System.Drawing.Size(272, 75);
             this.btn_HuyBo.TabIndex = 57;
             this.btn_HuyBo.Text = "Hủy Bỏ";
             this.btn_HuyBo.TextColor = System.Drawing.Color.SteelBlue;
@@ -116,9 +113,9 @@
             this.lblSoDuString.AutoSize = true;
             this.lblSoDuString.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDuString.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDuString.Location = new System.Drawing.Point(453, 384);
+            this.lblSoDuString.Location = new System.Drawing.Point(518, 512);
             this.lblSoDuString.Name = "lblSoDuString";
-            this.lblSoDuString.Size = new System.Drawing.Size(75, 28);
+            this.lblSoDuString.Size = new System.Drawing.Size(96, 35);
             this.lblSoDuString.TabIndex = 56;
             this.lblSoDuString.Text = "Số dư: ";
             // 
@@ -127,9 +124,9 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(548, 384);
+            this.lblSoDu.Location = new System.Drawing.Point(626, 512);
             this.lblSoDu.Name = "lblSoDu";
-            this.lblSoDu.Size = new System.Drawing.Size(20, 28);
+            this.lblSoDu.Size = new System.Drawing.Size(26, 35);
             this.lblSoDu.TabIndex = 55;
             this.lblSoDu.Text = "-";
             // 
@@ -144,10 +141,9 @@
             this.btn_NapTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NapTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_NapTien.ForeColor = System.Drawing.Color.White;
-            this.btn_NapTien.Location = new System.Drawing.Point(410, 454);
-            this.btn_NapTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NapTien.Location = new System.Drawing.Point(469, 605);
             this.btn_NapTien.Name = "btn_NapTien";
-            this.btn_NapTien.Size = new System.Drawing.Size(236, 56);
+            this.btn_NapTien.Size = new System.Drawing.Size(270, 75);
             this.btn_NapTien.TabIndex = 54;
             this.btn_NapTien.Text = "Nạp Tiền";
             this.btn_NapTien.TextColor = System.Drawing.Color.White;
@@ -159,9 +155,9 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(211, 354);
+            this.label10.Location = new System.Drawing.Point(241, 472);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 28);
+            this.label10.Size = new System.Drawing.Size(114, 37);
             this.label10.TabIndex = 53;
             this.label10.Text = "Số Tiền";
             // 
@@ -169,10 +165,9 @@
             // 
             this.txt_SoTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SoTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTien.Location = new System.Drawing.Point(453, 346);
-            this.txt_SoTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_SoTien.Location = new System.Drawing.Point(518, 461);
             this.txt_SoTien.Name = "txt_SoTien";
-            this.txt_SoTien.Size = new System.Drawing.Size(298, 36);
+            this.txt_SoTien.Size = new System.Drawing.Size(340, 43);
             this.txt_SoTien.TabIndex = 52;
             // 
             // label8
@@ -181,9 +176,9 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(146, 272);
+            this.label8.Location = new System.Drawing.Point(167, 363);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 28);
+            this.label8.Size = new System.Drawing.Size(198, 37);
             this.label8.TabIndex = 51;
             this.label8.Text = "Số Điện Thoại";
             // 
@@ -191,11 +186,10 @@
             // 
             this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SDT.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SDT.Location = new System.Drawing.Point(454, 270);
-            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_SDT.Location = new System.Drawing.Point(519, 360);
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.ReadOnly = true;
-            this.txt_SDT.Size = new System.Drawing.Size(298, 36);
+            this.txt_SDT.Size = new System.Drawing.Size(340, 43);
             this.txt_SDT.TabIndex = 50;
             // 
             // label7
@@ -204,9 +198,9 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(88, 198);
+            this.label7.Location = new System.Drawing.Point(101, 264);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(213, 28);
+            this.label7.Size = new System.Drawing.Size(277, 37);
             this.label7.TabIndex = 49;
             this.label7.Text = "Căn Cước Công Dân";
             // 
@@ -214,11 +208,10 @@
             // 
             this.txt_CCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_CCCD.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_CCCD.Location = new System.Drawing.Point(454, 198);
-            this.txt_CCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_CCCD.Location = new System.Drawing.Point(519, 264);
             this.txt_CCCD.Name = "txt_CCCD";
             this.txt_CCCD.ReadOnly = true;
-            this.txt_CCCD.Size = new System.Drawing.Size(298, 36);
+            this.txt_CCCD.Size = new System.Drawing.Size(340, 43);
             this.txt_CCCD.TabIndex = 48;
             // 
             // label5
@@ -227,9 +220,9 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(153, 54);
+            this.label5.Location = new System.Drawing.Point(175, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 28);
+            this.label5.Size = new System.Drawing.Size(188, 37);
             this.label5.TabIndex = 47;
             this.label5.Text = "Số Tài Khoản";
             // 
@@ -237,21 +230,20 @@
             // 
             this.txt_SoTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SoTK.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTK.Location = new System.Drawing.Point(453, 54);
-            this.txt_SoTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_SoTK.Location = new System.Drawing.Point(518, 72);
             this.txt_SoTK.Name = "txt_SoTK";
-            this.txt_SoTK.Size = new System.Drawing.Size(298, 36);
+            this.txt_SoTK.Size = new System.Drawing.Size(340, 43);
             this.txt_SoTK.TabIndex = 46;
+            this.txt_SoTK.TextChanged += new System.EventHandler(this.txt_SoTK_TextChanged);
             // 
             // NapTien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NapTien";
-            this.Size = new System.Drawing.Size(960, 616);
+            this.Size = new System.Drawing.Size(1097, 821);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

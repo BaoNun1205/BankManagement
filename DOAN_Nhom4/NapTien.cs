@@ -44,10 +44,6 @@ namespace DOAN_Nhom4
             }
         }
 
-        private void txt_SoTK_TextChanged(object sender, EventArgs e)
-        {
-            HienThiThongTin();
-        }
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
@@ -82,6 +78,11 @@ namespace DOAN_Nhom4
             txt_SDT.Text = "";
             txt_TenTK.Text = "";
             lblSoDu.Text = "-";
+        }
+
+        private void txt_SoTK_TextChanged(object sender, EventArgs e)
+        {
+            HienThiThongTin();
         }
     }
 }
