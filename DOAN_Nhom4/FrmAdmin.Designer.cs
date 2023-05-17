@@ -60,6 +60,8 @@
             this.btn_Refersh = new CustomButton.VBButton();
             this.btn_DV = new CustomButton.VBButton();
             this.btn_DangXuat = new CustomButton.VBButton();
+            this.btnDangxuat = new CustomButton.VBButton();
+            this.btnThongke = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvQLKH)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +83,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(532, 33);
+            this.label1.Location = new System.Drawing.Point(551, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(551, 41);
             this.label1.TabIndex = 1;
@@ -444,22 +446,22 @@
             // 
             // btn_DV
             // 
-            this.btn_DV.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_DV.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_DV.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_DV.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.btn_DV.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_DV.BorderRadius = 0;
             this.btn_DV.BorderSize = 0;
             this.btn_DV.FlatAppearance.BorderSize = 0;
             this.btn_DV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DV.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn_DV.Location = new System.Drawing.Point(1388, 761);
+            this.btn_DV.ForeColor = System.Drawing.Color.White;
+            this.btn_DV.Location = new System.Drawing.Point(1146, 761);
             this.btn_DV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DV.Name = "btn_DV";
-            this.btn_DV.Size = new System.Drawing.Size(220, 45);
+            this.btn_DV.Size = new System.Drawing.Size(182, 45);
             this.btn_DV.TabIndex = 32;
             this.btn_DV.Text = "Dịch Vụ";
-            this.btn_DV.TextColor = System.Drawing.SystemColors.Highlight;
+            this.btn_DV.TextColor = System.Drawing.Color.White;
             this.btn_DV.UseVisualStyleBackColor = false;
             this.btn_DV.Click += new System.EventHandler(this.btn_DV_Click);
             // 
@@ -484,12 +486,54 @@
             this.btn_DangXuat.UseVisualStyleBackColor = false;
             this.btn_DangXuat.Click += new System.EventHandler(this.btn_DangXuat_Click);
             // 
+            // btnDangxuat
+            // 
+            this.btnDangxuat.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDangxuat.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDangxuat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDangxuat.BorderRadius = 0;
+            this.btnDangxuat.BorderSize = 0;
+            this.btnDangxuat.FlatAppearance.BorderSize = 0;
+            this.btnDangxuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangxuat.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDangxuat.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDangxuat.Location = new System.Drawing.Point(1481, 761);
+            this.btnDangxuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangxuat.Name = "btnDangxuat";
+            this.btnDangxuat.Size = new System.Drawing.Size(127, 45);
+            this.btnDangxuat.TabIndex = 33;
+            this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.TextColor = System.Drawing.SystemColors.Highlight;
+            this.btnDangxuat.UseVisualStyleBackColor = false;
+            // 
+            // btnThongke
+            // 
+            this.btnThongke.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnThongke.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnThongke.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThongke.BorderRadius = 0;
+            this.btnThongke.BorderSize = 0;
+            this.btnThongke.FlatAppearance.BorderSize = 0;
+            this.btnThongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongke.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThongke.ForeColor = System.Drawing.Color.White;
+            this.btnThongke.Location = new System.Drawing.Point(861, 761);
+            this.btnThongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThongke.Name = "btnThongke";
+            this.btnThongke.Size = new System.Drawing.Size(127, 45);
+            this.btnThongke.TabIndex = 34;
+            this.btnThongke.Text = "Thống kê";
+            this.btnThongke.TextColor = System.Drawing.Color.White;
+            this.btnThongke.UseVisualStyleBackColor = false;
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1645, 834);
+            this.Controls.Add(this.btnThongke);
+            this.Controls.Add(this.btnDangxuat);
             this.Controls.Add(this.btn_DV);
             this.Controls.Add(this.btn_Refersh);
             this.Controls.Add(this.btn_Sua);
@@ -565,5 +609,7 @@
         private CustomButton.VBButton btn_Refersh;
         private CustomButton.VBButton btn_DV;
         private CustomButton.VBButton btn_DangXuat;
+        private CustomButton.VBButton btnDangxuat;
+        private CustomButton.VBButton btnThongke;
     }
 }
