@@ -24,6 +24,7 @@ namespace DOAN_Nhom4
 
         private void FrmThongKeAdmin_Load(object sender, EventArgs e)
         {
+            HienThiDuLieuLen();
             HienThiLsgd();
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichChuyenTien(ngayBatDau, ngayKetThuc);
             ThongKe.Series["ChuyenTien"].XValueMember = "ThoiGian";
@@ -49,7 +50,11 @@ namespace DOAN_Nhom4
 
         private void HienThiDuLieuLen()
         {
-
+            lblHienThiSoLuongTaiKhoang.Text = tkDAO.DemSoLuongTaiKhoang().ToString();
+            lblHienThiTinDung.Text = tkDAO.DemSoLuongTinDung().ToString();
+            lblHienThiTietKiem.Text = tkDAO.DemSoLuongSoTietKiem().ToString();
+            lblHienThiVay.Text = tkDAO.DemSoLuongVay().ToString();
+            lblHienThiNoXau.Text = tkDAO.DemSoLuongNoXau().ToString();
         }
 
         private void btnChuyenTien_Click(object sender, EventArgs e)
