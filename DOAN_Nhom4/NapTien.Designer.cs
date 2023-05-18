@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_TenTK = new System.Windows.Forms.TextBox();
             this.btn_HuyBo = new CustomButton.VBButton();
@@ -48,6 +49,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_TenTK);
             this.panel1.Controls.Add(this.btn_HuyBo);
@@ -67,6 +69,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(828, 550);
             this.panel1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(615, 384);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 16);
+            this.label2.TabIndex = 101;
+            this.label2.Text = "Tối thiểu 100,000VNĐ";
             // 
             // label1
             // 
@@ -110,6 +124,7 @@
             this.btn_HuyBo.Text = "Hủy Bỏ";
             this.btn_HuyBo.TextColor = System.Drawing.Color.SteelBlue;
             this.btn_HuyBo.UseVisualStyleBackColor = false;
+            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
             // lblSoDuString
             // 
@@ -127,7 +142,7 @@
             this.lblSoDu.AutoSize = true;
             this.lblSoDu.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblSoDu.ForeColor = System.Drawing.Color.Red;
-            this.lblSoDu.Location = new System.Drawing.Point(548, 394);
+            this.lblSoDu.Location = new System.Drawing.Point(533, 394);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(20, 28);
             this.lblSoDu.TabIndex = 55;
@@ -277,5 +292,6 @@
         private TextBox txt_CCCD;
         private Label label5;
         private TextBox txt_SoTK;
+        private Label label2;
     }
 }
