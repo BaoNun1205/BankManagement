@@ -76,11 +76,11 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(616, 384);
+            this.label2.Location = new System.Drawing.Point(612, 384);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 16);
+            this.label2.Size = new System.Drawing.Size(140, 16);
             this.label2.TabIndex = 101;
-            this.label2.Text = "Tối thiểu 100,000VNĐ";
+            this.label2.Text = "Tối thiểu 100,000 VNĐ";
             // 
             // label1
             // 

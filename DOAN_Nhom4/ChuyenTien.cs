@@ -35,7 +35,7 @@ namespace DOAN_Nhom4
                 txt_TenTKChuyen.Text = ngDung.TenTK.ToString();
                 txt_CCCD.Text = ngDung.Cccd.ToString();
                 txt_SDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.ToString("N0") + "VNĐ";
+                lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
             }
             else
             {
