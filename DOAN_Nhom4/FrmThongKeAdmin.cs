@@ -24,11 +24,7 @@ namespace DOAN_Nhom4
 
         private void FrmThongKeAdmin_Load(object sender, EventArgs e)
         {
-            lblHienThiSoLuongTaiKhoang.Text = tkDAO.DemSoLuongTaiKhoang().ToString();
-            lblHienThiTinDung.Text = tkDAO.DemSoLuongTinDung().ToString();
-            lblHienThiTietKiem.Text = tkDAO.DemSoLuongSoTietKiem().ToString();
-            lblHienThiVay.Text = tkDAO.DemSoLuongVay().ToString();
-            lblHienThiNoXau.Text = tkDAO.DemSoLuongNoXau().ToString();
+            HienThiDuLieuLen();
             HienThiLsgd();
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichChuyenTien(ngayBatDau, ngayKetThuc);
             ThongKe.Series["ChuyenTien"].XValueMember = "ThoiGian";
@@ -52,64 +48,74 @@ namespace DOAN_Nhom4
             gvQLGD.Columns[7].HeaderText = "Thời gian";
         }
 
+        private void HienThiDuLieuLen()
+        {
+            lblHienThiSoLuongTaiKhoang.Text = tkDAO.DemSoLuongTaiKhoang().ToString();
+            lblHienThiTinDung.Text = tkDAO.DemSoLuongTinDung().ToString();
+            lblHienThiTietKiem.Text = tkDAO.DemSoLuongSoTietKiem().ToString();
+            lblHienThiVay.Text = tkDAO.DemSoLuongVay().ToString();
+            lblHienThiNoXau.Text = tkDAO.DemSoLuongNoXau().ToString();
+        }
+
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
-            MacDinh();
-            ThongKe.Series["ChuyenTien"].Enabled = true;
+            MacDinhDoThi();
+            string s = "ChuyenTien";
             ThongKe.Legends[0].Enabled = true;
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichChuyenTien(ngayBatDau, ngayKetThuc);
-            ThongKe.Series["ChuyenTien"].XValueMember = "ThoiGian";
-            ThongKe.Series["ChuyenTien"].YValueMembers = "TongTien";
-            
+            HienThiDuLieuDoThi(s);
         }
 
         private void btnVienThong_Click(object sender, EventArgs e)
         {
-            MacDinh();
-            ThongKe.Series["VienThong"].Enabled = true;
+            MacDinhDoThi();
+            string s = "VienThong";
             ThongKe.Legends[1].Enabled = true;
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichVienThong(ngayBatDau, ngayKetThuc);
-            ThongKe.Series["VienThong"].XValueMember = "ThoiGian";
-            ThongKe.Series["VienThong"].YValueMembers = "TongTien";
+            HienThiDuLieuDoThi(s);
         }
 
         private void btnTinDung_Click(object sender, EventArgs e)
         {
-            MacDinh();
-            ThongKe.Series["TinDung"].Enabled = true;
+            MacDinhDoThi();
+            string s = "TinDung";
             ThongKe.Legends[2].Enabled = true;
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichTinDung(ngayBatDau, ngayKetThuc);
-            ThongKe.Series["TinDung"].XValueMember = "ThoiGian";
-            ThongKe.Series["TinDung"].YValueMembers = "TongTien";
+            HienThiDuLieuDoThi(s);
         }
 
         private void btnTietKiem_Click(object sender, EventArgs e)
         {
-            MacDinh();
-            ThongKe.Series["TietKiem"].Enabled = true;
+            MacDinhDoThi();
+            string s = "TietKiem";
             ThongKe.Legends[3].Enabled = true;
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichTietKiem(ngayBatDau, ngayKetThuc);
-            ThongKe.Series["TietKiem"].XValueMember = "ThoiGian";
-            ThongKe.Series["TietKiem"].YValueMembers = "TongTien";
+            HienThiDuLieuDoThi(s);
         }
 
         private void btnVay_Click(object sender, EventArgs e)
         {
-            MacDinh();
-            ThongKe.Series["Vay"].Enabled = true;
+            MacDinhDoThi();
+            string s = "Vay";
             ThongKe.Legends[4].Enabled = true;
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichVayTien(ngayBatDau, ngayKetThuc);
-            ThongKe.Series["Vay"].XValueMember = "ThoiGian";
-            ThongKe.Series["Vay"].YValueMembers = "TongTien";
+            HienThiDuLieuDoThi(s);
         }
 
-        public void MacDinh()
+        public void MacDinhDoThi()
         {
             ThongKe.Series["ChuyenTien"].Enabled = false;
             ThongKe.Series["VienThong"].Enabled = false;
             ThongKe.Series["TinDung"].Enabled = false;
             ThongKe.Series["TietKiem"].Enabled = false;
             ThongKe.Series["Vay"].Enabled = false;
+        }
+
+        public void HienThiDuLieuDoThi(string s)
+        {
+            ThongKe.Series[s].Enabled = true;
+            ThongKe.Series[s].XValueMember = "ThoiGian";
+            ThongKe.Series[s].YValueMembers = "TongTien";
         }
 
         private void pb_QuayLai_Click(object sender, EventArgs e)
