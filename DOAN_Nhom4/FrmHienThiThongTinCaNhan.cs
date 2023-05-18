@@ -40,7 +40,7 @@ namespace DOAN_Nhom4
         {
             ThongTinTinDung tttd = new ThongTinTinDung();
             tttd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
-            if (tttd != null)
+            if (tttd != null) //hien thi the tin dung neu co
             {
                 lblSoTKTinDung.Text = tttd.SoTKTinDung.ToString();
                 lblHanmuc.Text = tttd.HanMuc.ToString("N0") + "VNĐ";
@@ -58,7 +58,7 @@ namespace DOAN_Nhom4
         {
             tktd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             if (tktd != null)
-            {
+            {   //kiem tra dieu kien han muc cua the
                 if (tktd.HanMuc >= 300000000)
                 {
                     ptbTheTinDung.Image = images[2];

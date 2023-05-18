@@ -146,6 +146,7 @@ namespace DOAN_Nhom4
             txt_TenTKNhan.Text = "";
             cb_TenNH.Text = "HHB";
             lblSoDu.Text = "-";
+            txt_LoiNhan.Text = "";
         }
     }
 }

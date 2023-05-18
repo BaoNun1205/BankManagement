@@ -50,20 +50,5 @@ namespace DOAN_Nhom4
             FrmDoimatkhau frmDoiMatKhau = new FrmDoimatkhau(ngdung, tknh, pnlNguoiDung);
             DOAN_Nhom4.Utility.addForm(frmDoiMatKhau, pnlNguoiDung);
         }
-
-        private void btn_dangxuat_Click(object sender, EventArgs e)
-        {
-            FrmDangnhap frmDangnhap = new FrmDangnhap();
-            Application.OpenForms["frmBaoMat"].Hide();
-            Application.OpenForms["frmNguoiDung"].Hide();
-            frmDangnhap.ShowDialog();
-            Application.OpenForms["frmBaoMat"].Close();
-            Application.OpenForms["frmNguoiDung"].Close();
-        }
-
-        private void txtMatkhau_TextChanged(object sender, EventArgs e)
-        {
-            txtMatkhau.UseSystemPasswordChar = true;
-        }
     }
 }

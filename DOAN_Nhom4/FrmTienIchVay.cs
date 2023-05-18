@@ -34,9 +34,9 @@ namespace DOAN_Nhom4
         {
             KHNoXau kh = KHNoXauDAO.IsNull(tknh);
             ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.soTK);
-            if (kh == null)
+            if (kh == null) //kiem tra co no xau nao khong
             {
-                if (ttNgDung == null)
+                if (ttNgDung == null) //kiem tra co khoan vay nao khong
                 {
                     FrmVay frmVay = new FrmVay(nguoiDung, tknh, pnlNguoiDung);
                     Utility.addForm(frmVay, pnlNguoiDung);
@@ -50,7 +50,7 @@ namespace DOAN_Nhom4
                 DateTime endDate = DateTime.Now;
                 TimeSpan span = endDate - startDate;
                 double totalDays = span.TotalDays;
-                if (totalDays > 1825)
+                if (totalDays >= 1825) //thoi gian no xau >= 5 nam thi duoc xoa no xau
                 {
                     KHNoXauDAO.Xoa(kh);
                     FrmVay frmVay = new FrmVay(nguoiDung, tknh, pnlNguoiDung);
@@ -64,13 +64,13 @@ namespace DOAN_Nhom4
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
             ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTK);           
-            if (ttNgDung != null)
+            if (ttNgDung != null) //kiem tra xem co khoan vay hay chua
             {
                 DateTime startDate = ttNgDung.NgayDenHan;
                 DateTime endDate = DateTime.Now;
                 TimeSpan span = endDate - startDate;
                 double totalDays = span.TotalDays;
-                if (totalDays > 90) 
+                if (totalDays > 90) //qua han thanh toan 3 thang => cap nhat no xau va xoa khoan vay
                 {
                     KHNoXau kh = new KHNoXau();
                     kh.TenNH = nguoiDung.TenNH;

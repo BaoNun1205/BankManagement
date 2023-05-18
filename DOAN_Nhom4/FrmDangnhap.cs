@@ -56,14 +56,18 @@ namespace DOAN_Nhom4
             if (dg == DialogResult.Yes)
                 Application.Exit();
         }
+        Dictionary<string, string> credentials = new Dictionary<string, string>()
+        {
+            { "admin", "1" }
+        };
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
             TaiKhoanNganHang tknh = new TaiKhoanNganHang();
             NguoiDung nguoiDung = new NguoiDung();
-            if (rdb_Admin.Checked == true)
+            if (rdb_Admin.Checked == true) //dang nhap voi tu cach admin
             {
-                if (txtUserName.Text == "admin" && txtPass.Text == "1")
+                if (credentials.ContainsKey(txtUserName.Text) && credentials[txtUserName.Text] == txtPass.Text)
                 {
                     FrmAdmin frmad = new FrmAdmin();
                     this.Hide();
@@ -78,7 +82,7 @@ namespace DOAN_Nhom4
                     txtUserName.Focus();
                 }
             }
-            else if (rdb_NguoiDung.Checked == true)
+            else if (rdb_NguoiDung.Checked == true) //dang nhap voi tu cach nguoi dung
             {
                 if (dnDAO.XacNhanDangNhap(dn))
                 {

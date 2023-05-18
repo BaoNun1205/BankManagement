@@ -149,16 +149,6 @@ namespace DOAN_Nhom4
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void llbl_DieuKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Khởi tạo đường dẫn của trình duyệt web mặc định trên máy tính
