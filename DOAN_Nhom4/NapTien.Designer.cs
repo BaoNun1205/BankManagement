@@ -152,6 +152,7 @@
             this.btn_NapTien.Text = "Nạp Tiền";
             this.btn_NapTien.TextColor = System.Drawing.Color.White;
             this.btn_NapTien.UseVisualStyleBackColor = false;
+            this.btn_NapTien.Click += new System.EventHandler(this.btn_NapTien_Click);
             // 
             // label10
             // 
