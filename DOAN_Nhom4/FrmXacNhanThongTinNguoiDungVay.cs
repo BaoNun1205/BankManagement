@@ -71,8 +71,8 @@ namespace DOAN_Nhom4
             double laithang = lai / 1200;
             double number = Math.Pow((1 + laithang), int.Parse(ttNgDung.ThoiGianVay.ToString()));
             double tmp = (soTienVay * laithang * number) / (number - 1);
-            BigInteger tienhangthang = new BigInteger(tmp);
-            BigInteger tongsotien = tienhangthang * int.Parse(ttNgDung.ThoiGianVay.ToString());
+            decimal tienhangthang = new decimal(tmp);
+            decimal tongsotien = tienhangthang * int.Parse(ttNgDung.ThoiGianVay.ToString());
             txt_TongSoTien.Text = tongsotien.ToString("N0");
             ttNgDung.SoTienHangThang = tienhangthang;
             txt_SoTienHangThang.Text = tienhangthang.ToString("N0");

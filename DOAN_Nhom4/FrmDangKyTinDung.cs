@@ -19,8 +19,8 @@ namespace DOAN_Nhom4
         private Panel pnlNguoiDung;
         ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
 
-        private BigInteger hanMucToiThieu = 0;
-        private BigInteger hanMucToiDa = 0;
+        private decimal hanMucToiThieu = 0;
+        private decimal hanMucToiDa = 0;
         private double laiSuat = 0;
         Image[] images = new Image[]
         {
@@ -122,7 +122,7 @@ namespace DOAN_Nhom4
 
         private void cb_LoaiThe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BigInteger[] hanMuc = { 1000000, 45000000, 80000000, 250000000, 300000000, 10000000000 };
+            decimal[] hanMuc = { 1000000, 45000000, 80000000, 250000000, 300000000, 10000000000 };
             double[] lai = { 18, 16.5, 16.5 };
             int selectedIndex = cbLoaiThe.SelectedIndex;
             if (selectedIndex >= 0)

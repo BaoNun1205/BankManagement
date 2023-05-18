@@ -25,11 +25,11 @@ namespace DOAN_Nhom4
         int MaTietKiem;
         private string tenTKTK;
         private int loaiSo;
-        private BigInteger tienGoc;
+        private decimal tienGoc;
         private int kiHan;
         private double laiSuat;
-        private BigInteger tienLai;
-        private BigInteger tongTien;
+        private decimal tienLai;
+        private decimal tongTien;
         public FrmTietkiem()
         {
             InitializeComponent();
@@ -93,12 +93,12 @@ namespace DOAN_Nhom4
 
         private void HienThiThongTin()
         {
-            BigInteger kt;
-            if (BigInteger.TryParse(txtSotien.Text, out kt))
+            decimal kt;
+            if (decimal.TryParse(txtSotien.Text, out kt))
             {
-                if (tkiemDAO.ktSotien(BigInteger.Parse(txtSotien.Text), tknh.SoDu) == true)
+                if (tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), tknh.SoDu) == true)
                 {
-                    tienGoc = BigInteger.Parse(txtSotien.Text);
+                    tienGoc = decimal.Parse(txtSotien.Text);
                     tienLai = tkiemDAO.TienLai(tienGoc, laiSuat, kiHan);
                     lblTongtienlai.Text = tienLai.ToString();
                     tongTien = tkiemDAO.TongTien(tienGoc, tienLai);

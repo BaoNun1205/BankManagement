@@ -78,7 +78,7 @@ namespace DOAN_Nhom4
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
             if (txt_SoDu.Text != "")
             {
-                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, BigInteger.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, decimal.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
                 if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
                 {
                     if (!khDAO.IsPhone(kh))
@@ -119,7 +119,7 @@ namespace DOAN_Nhom4
             NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
             if (txt_SoDu.Text != "")
             {
-                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, BigInteger.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, decimal.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
                 if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
                 {
                     if (!khDAO.IsPhone(kh))

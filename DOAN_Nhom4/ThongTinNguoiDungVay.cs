@@ -21,17 +21,17 @@ namespace DOAN_Nhom4
         private string ngheNghiep;
         private string thuNhap;
         private string spVay;
-        private BigInteger soTienVay;
+        private decimal soTienVay;
         private int thoiGianVay;
         private string taiSan;
-        private BigInteger giaTriTaiSan;
+        private decimal giaTriTaiSan;
         private string chiNhanhVay;
         private DateTime ngayVay;
         private double lai;
-        private BigInteger soTienHangThang;
+        private decimal soTienHangThang;
         private DateTime ngayDenHan;
-        private BigInteger tongSoTienPhaiTra;
-        private BigInteger phiTraCham;
+        private decimal tongSoTienPhaiTra;
+        private decimal phiTraCham;
         
         public string TenNH { get =>  tenNH;  set => tenNH = value;  }
         public string LoaiKhoanVay { get => loaiKhoanVay; set => loaiKhoanVay = value; }
@@ -45,20 +45,20 @@ namespace DOAN_Nhom4
         public string NgheNghiep { get => ngheNghiep; set => ngheNghiep = value; }
         public string ThuNhap { get => thuNhap; set => thuNhap = value; }
         public string SpVay { get => spVay; set => spVay = value; }
-        public BigInteger SoTienVay { get => soTienVay; set => soTienVay = value; }
+        public decimal SoTienVay { get => soTienVay; set => soTienVay = value; }
         public int ThoiGianVay { get => thoiGianVay; set => thoiGianVay = value; }
         public string TaiSan { get => taiSan; set => taiSan = value; }
-        public BigInteger GiaTriTaiSan { get => giaTriTaiSan; set => giaTriTaiSan = value; }
+        public decimal GiaTriTaiSan { get => giaTriTaiSan; set => giaTriTaiSan = value; }
         public string ChiNhanhVay { get => chiNhanhVay; set => chiNhanhVay = value; }
         public DateTime NgayVay { get => ngayVay; set => ngayVay = value; }
         public double Lai { get => lai; set => lai = value; }
-        public BigInteger SoTienHangThang { get => soTienHangThang; set => soTienHangThang = value; }
+        public decimal SoTienHangThang { get => soTienHangThang; set => soTienHangThang = value; }
         public DateTime NgayDenHan { get => ngayDenHan; set => ngayDenHan = value; }
-        public BigInteger TongSoTienPhaiTra { get => tongSoTienPhaiTra; set => tongSoTienPhaiTra = value; }
-        public BigInteger PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
+        public decimal TongSoTienPhaiTra { get => tongSoTienPhaiTra; set => tongSoTienPhaiTra = value; }
+        public decimal PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
 
         public ThongTinNguoiDungVay() { }
-        public ThongTinNguoiDungVay(string tenNH, string loaiKhoanVay, string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, BigInteger soTienVay, int thoiGianVay,string taiSan, BigInteger giaTriTaiSan, string chiNhanhVay, DateTime ngayVay)
+        public ThongTinNguoiDungVay(string tenNH, string loaiKhoanVay, string soTKVay, string danhXung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string spVay, decimal soTienVay, int thoiGianVay,string taiSan, decimal giaTriTaiSan, string chiNhanhVay, DateTime ngayVay)
         {
             this.tenNH = tenNH;
             this.loaiKhoanVay = loaiKhoanVay;

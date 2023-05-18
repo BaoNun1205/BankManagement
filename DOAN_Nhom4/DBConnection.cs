@@ -79,11 +79,11 @@ namespace DOAN_Nhom4
                     tkiem.NgayDangky = reader.GetDateTime(3);
                     tkiem.TenTKTK = reader.GetString(4);
                     tkiem.LoaiSo = reader.GetInt32(5);
-                    tkiem.TienGoc = reader.GetInt64(6);
+                    tkiem.TienGoc = reader.GetDecimal(6);
                     tkiem.KiHan = reader.GetInt32(7);
                     tkiem.LaiSuat = Math.Round((double)reader.GetFloat(8), 2);
-                    tkiem.TienLai = reader.GetInt64(9);
-                    tkiem.TongTien = reader.GetInt64(10);
+                    tkiem.TienLai = reader.GetDecimal(9);
+                    tkiem.TongTien = reader.GetDecimal(10);
                 }
             }
             catch (Exception exc)
@@ -188,7 +188,7 @@ namespace DOAN_Nhom4
                     tknh.SoTK = reader.GetString(1);
                     tknh.TenDN = reader.GetString(2);
                     tknh.MatKhau = reader.GetString(3);
-                    tknh.SoDu = reader.GetInt64(4);
+                    tknh.SoDu = reader.GetDecimal(4);
                 }
                 else
                     return null;
@@ -259,17 +259,17 @@ namespace DOAN_Nhom4
                     ttNgDung.NgheNghiep = reader.GetString(9);
                     ttNgDung.ThuNhap = reader.GetString(10);
                     ttNgDung.SpVay = reader.GetString(11);
-                    ttNgDung.SoTienVay = reader.GetInt64(12);
+                    ttNgDung.SoTienVay = reader.GetDecimal(12);
                     ttNgDung.ThoiGianVay = reader.GetInt32(13);
                     ttNgDung.TaiSan = reader.GetString(14);
-                    ttNgDung.GiaTriTaiSan = reader.GetInt64(15);
+                    ttNgDung.GiaTriTaiSan = reader.GetDecimal(15);
                     ttNgDung.ChiNhanhVay = reader.GetString(16);
                     ttNgDung.NgayVay = reader.GetDateTime(17);
                     ttNgDung.Lai = double.Parse(reader.GetString(18));
-                    ttNgDung.SoTienHangThang = reader.GetInt64(19);
+                    ttNgDung.SoTienHangThang = reader.GetDecimal(19);
                     ttNgDung.NgayDenHan = reader.GetDateTime(20);
-                    ttNgDung.TongSoTienPhaiTra = reader.GetInt64(21);
-                    ttNgDung.PhiTraCham = reader.GetInt64(22);
+                    ttNgDung.TongSoTienPhaiTra = reader.GetDecimal(21);
+                    ttNgDung.PhiTraCham = reader.GetDecimal(22);
                 }
                 else
                     return null;
@@ -306,13 +306,13 @@ namespace DOAN_Nhom4
                     ttTinDung.LoaiThe = reader.GetString(8);
                     ttTinDung.HanThanhToan = reader.GetDateTime(9);
                     ttTinDung.NgaySaoKe = reader.GetDateTime(10);
-                    ttTinDung.HanMuc = reader.GetInt64(11);
+                    ttTinDung.HanMuc = reader.GetDecimal(11);
                     ttTinDung.LaiSuat = double.Parse(reader.GetString(12));
-                    ttTinDung.SoTienDaSuDung = reader.GetInt64(13);
-                    ttTinDung.SoTienSuDungSau = reader.GetInt64(14);
+                    ttTinDung.SoTienDaSuDung = reader.GetDecimal(13);
+                    ttTinDung.SoTienSuDungSau = reader.GetDecimal(14);
                     ttTinDung.NgayMoThe = reader.GetDateTime(15);
-                    ttTinDung.PhiTraCham = reader.GetInt64(16);
-                    ttTinDung.PhiPhat = reader.GetInt64(17);
+                    ttTinDung.PhiTraCham = reader.GetDecimal(16);
+                    ttTinDung.PhiPhat = reader.GetDecimal(17);
                 }
                 else
                     return null;
@@ -369,7 +369,7 @@ namespace DOAN_Nhom4
                 {
                     reader.Read();
                     sdt.Sdt = reader.GetString(0);
-                    sdt.SoDu = reader.GetInt64(1);
+                    sdt.SoDu = reader.GetDecimal(1);
                 }
                 else
                     return null;

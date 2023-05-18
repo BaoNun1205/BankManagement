@@ -31,17 +31,17 @@ namespace DOAN_Nhom4
             cot = data.LayCot(sql, tenCot);
             return cot;
         }
-        public bool ktSotien(BigInteger tienGoc, BigInteger soDu)
+        public bool ktSotien(decimal tienGoc, decimal soDu)
         {
             if (tienGoc <= soDu && tienGoc >= 100000 && tienGoc % 100000 == 0) return true;
             else return false;
         }
-        public BigInteger TienLai(BigInteger tienGoc, double laiSuat, int thoigian)
+        public decimal TienLai(decimal tienGoc, double laiSuat, int thoigian)
         {
-            return (BigInteger)((decimal)tienGoc * (decimal)laiSuat * thoigian / 12);
+            return tienGoc * (decimal)laiSuat * thoigian / 12;
         }
 
-        public BigInteger TongTien(BigInteger tienGoc, BigInteger tienLai)
+        public decimal TongTien(decimal tienGoc, decimal tienLai)
         {
             return tienGoc + tienLai;
         }

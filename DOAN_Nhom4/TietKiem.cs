@@ -13,15 +13,15 @@ namespace DOAN_Nhom4
         private DateTime ngayDangky;
         private string tenTKTK;
         private int loaiSo;
-        private BigInteger tienGoc;
+        private decimal tienGoc;
         private int kiHan;
         private double laiSuat;
-        private BigInteger tienLai;
-        private BigInteger tongTien;
+        private decimal tienLai;
+        private decimal tongTien;
 
         public TietKiem() { }
 
-        public TietKiem(int maTietKiem, DateTime ngayDangky, string tenTKTK, int loaiSo, BigInteger tienGoc, int kiHan, double laiSuat, BigInteger tienLai, BigInteger tongTien)
+        public TietKiem(int maTietKiem, DateTime ngayDangky, string tenTKTK, int loaiSo, decimal tienGoc, int kiHan, double laiSuat, decimal tienLai, decimal tongTien)
         {
             this.maTietKiem = maTietKiem;
             this.ngayDangky= ngayDangky;
@@ -38,10 +38,10 @@ namespace DOAN_Nhom4
         public DateTime NgayDangky { get => ngayDangky; set => ngayDangky = value; }
         public string TenTKTK { get => tenTKTK; set => tenTKTK = value; }
         public int LoaiSo { get => loaiSo; set => loaiSo = value; }
-        public BigInteger TienGoc { get => tienGoc; set => tienGoc = value; }
+        public decimal TienGoc { get => tienGoc; set => tienGoc = value; }
         public int KiHan { get => kiHan; set => kiHan = value; }
         public double LaiSuat { get => laiSuat; set => laiSuat = value; }
-        public BigInteger TienLai { get => tienLai; set => tienLai = value; }
-        public BigInteger TongTien { get => tongTien; set => tongTien = value; }
+        public decimal TienLai { get => tienLai; set => tienLai = value; }
+        public decimal TongTien { get => tongTien; set => tongTien = value; }
     }
 }

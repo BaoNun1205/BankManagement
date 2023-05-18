@@ -20,13 +20,13 @@ namespace DOAN_Nhom4
         private string loaiThe;
         private DateTime hanThanhToan;
         private DateTime ngaySaoKe;
-        private BigInteger hanMuc;
+        private decimal hanMuc;
         private double laiSuat;
-        private BigInteger soTienDaSuDung;
-        private BigInteger soTienSuDungSau;
+        private decimal soTienDaSuDung;
+        private decimal soTienSuDungSau;
         private DateTime ngayMoThe;
-        private BigInteger phiTraCham;
-        private BigInteger phiPhat;
+        private decimal phiTraCham;
+        private decimal phiPhat;
 
         public string SoTKTinDung { get => soTKTinDung; set => soTKTinDung = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
@@ -39,17 +39,17 @@ namespace DOAN_Nhom4
         public string LoaiThe { get => loaiThe; set => loaiThe = value; }
         public DateTime HanThanhToan { get => hanThanhToan; set => hanThanhToan = value; }
         public DateTime NgaySaoKe { get => ngaySaoKe; set => ngaySaoKe = value; }
-        public BigInteger HanMuc { get => hanMuc; set => hanMuc = value; }
+        public decimal HanMuc { get => hanMuc; set => hanMuc = value; }
         public double LaiSuat { get => laiSuat; set => laiSuat = value; }
-        public BigInteger SoTienDaSuDung { get => soTienDaSuDung; set => soTienDaSuDung = value; }
-        public BigInteger SoTienSuDungSau { get => soTienSuDungSau; set => soTienSuDungSau = value; }
+        public decimal SoTienDaSuDung { get => soTienDaSuDung; set => soTienDaSuDung = value; }
+        public decimal SoTienSuDungSau { get => soTienSuDungSau; set => soTienSuDungSau = value; }
         public DateTime NgayMoThe { get => ngayMoThe; set => ngayMoThe = value; }
-        public BigInteger PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
-        public BigInteger PhiPhat { get => phiPhat; set => phiPhat = value; }
+        public decimal PhiTraCham { get => phiTraCham; set => phiTraCham = value; }
+        public decimal PhiPhat { get => phiPhat; set => phiPhat = value; }
         public ThongTinTinDung() { }
 
         public ThongTinTinDung(string soTKTinDung, string hoTen, string cccd, string diaChi, string sdt, string email, string ngheNghiep, string thuNhap, string loaiThe, 
-                                DateTime hanThanhToan, DateTime ngaySaoKe, BigInteger hanMuc, double laiSuat, BigInteger soTienDaSuDung, BigInteger soTienSuDungSau, DateTime ngayMoThe, BigInteger phiTraCham, BigInteger phiPhat)
+                                DateTime hanThanhToan, DateTime ngaySaoKe, decimal hanMuc, double laiSuat, decimal soTienDaSuDung, decimal soTienSuDungSau, DateTime ngayMoThe, decimal phiTraCham, decimal phiPhat)
         {
             this.soTKTinDung = soTKTinDung;
             this.hoTen = hoTen;

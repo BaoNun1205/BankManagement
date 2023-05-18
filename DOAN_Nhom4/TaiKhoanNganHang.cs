@@ -13,18 +13,18 @@ namespace DOAN_Nhom4
         private string soTK;
         private string tenDN;
         private string matKhau;
-        private BigInteger soDu;
+        private decimal soDu;
         private DateTime ngayDangKy;
 
         public string TenNH { get => tenNH; set => tenNH = value; }
         public string SoTK { get => soTK; set => soTK = value; }
         public string TenDN { get => tenDN; set => tenDN = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
-        public BigInteger SoDu { get => soDu; set => soDu = value; }
+        public decimal SoDu { get => soDu; set => soDu = value; }
         public DateTime NgayDangKy { get => ngayDangKy; set => ngayDangKy = value; }
 
         public TaiKhoanNganHang() { }
-        public TaiKhoanNganHang(string tenNH, string soTK, string tenDN, string matKhau, BigInteger soDu, DateTime ngayDangKy)
+        public TaiKhoanNganHang(string tenNH, string soTK, string tenDN, string matKhau, decimal soDu, DateTime ngayDangKy)
         {
             this.tenNH = tenNH;
             this.soTK = soTK;

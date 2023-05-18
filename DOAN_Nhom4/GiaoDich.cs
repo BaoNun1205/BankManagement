@@ -31,7 +31,7 @@ namespace DOAN_Nhom4
 
         public GiaoDich() { }
 
-        public GiaoDich(string loaiGD, string nganHangGui, string tenTKGui, string soTKGui, string nganHangNhan, string tenTKNhan, string soTKNhan, BigInteger soTien, string loiNhan)
+        public GiaoDich(string loaiGD, string nganHangGui, string tenTKGui, string soTKGui, string nganHangNhan, string tenTKNhan, string soTKNhan, decimal soTien, string loiNhan)
         {
             this.loaiGD = loaiGD;
             this.nganHangGui = nganHangGui;

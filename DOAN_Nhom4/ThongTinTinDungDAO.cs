@@ -40,11 +40,11 @@ namespace DOAN_Nhom4
             return ttTinDung;
         }
 
-        public BigInteger PhiTraCham(ThongTinTinDung tttd)
+        public decimal PhiTraCham(ThongTinTinDung tttd)
         {
             decimal tienLaiSuat = (decimal)tttd.LaiSuat / 100 / 12;
-            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
-            return (BigInteger)(tienDaSuDung * tienLaiSuat);
+            decimal tienDaSuDung = tttd.SoTienDaSuDung;
+            return tienDaSuDung * tienLaiSuat;
         }
 
         public bool IsNgayDenHan(ThongTinTinDung tttd)
@@ -56,11 +56,11 @@ namespace DOAN_Nhom4
             return false;
         }
 
-        public BigInteger PhiPhat(ThongTinTinDung tttd)
+        public decimal PhiPhat(ThongTinTinDung tttd)
         {
             decimal tienPhat = (decimal)0.04;
-            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
-            return (BigInteger)(tienDaSuDung * tienPhat);
+            decimal tienDaSuDung = tttd.SoTienDaSuDung;
+            return tienDaSuDung * tienPhat;
         }
 
         public void CapNhatTinDungHangThang(ThongTinTinDung tttd)

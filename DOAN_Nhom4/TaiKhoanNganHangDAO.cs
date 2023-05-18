@@ -52,24 +52,24 @@ namespace DOAN_Nhom4
         public void ChuyenTien(TaiKhoanNganHang tkGui, GiaoDich gd, TaiKhoanNganHang tkNhan)
         {
             TaiKhoanNganHang taiKhoanNhan = LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
-            BigInteger soTienNhan = gd.SoTien + taiKhoanNhan.SoDu;
+            decimal soTienNhan = gd.SoTien + taiKhoanNhan.SoDu;
             string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienNhan, taiKhoanNhan.SoTK, taiKhoanNhan.TenNH);
             data.xuLi(sqlStrNhan);
 
             TaiKhoanNganHang taiKhoanGui = LayTaiKhoanNganHang("SoTk", gd.SoTKGui, "TenNH", gd.NganHangGui);
-            BigInteger soTienGui = taiKhoanGui.SoDu - gd.SoTien;
+            decimal soTienGui = taiKhoanGui.SoDu - gd.SoTien;
             string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienGui, taiKhoanGui.SoTK, taiKhoanGui.TenNH);
             data.xuLi(sqlStrGui);
         }
         public void NapTien(TaiKhoanNganHang tkNap, GiaoDich gd)
         {
-            BigInteger SoDu = gd.SoTien + tkNap.SoDu;
+            decimal SoDu = gd.SoTien + tkNap.SoDu;
             string sqlStrNap = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", SoDu, tkNap.SoTK, tkNap.TenNH);
             data.xuLi(sqlStrNap);        
         }
         public void RutTien(TaiKhoanNganHang tkRut, GiaoDich gd)
         {
-            BigInteger SoDu = tkRut.SoDu - gd.SoTien;
+            decimal SoDu = tkRut.SoDu - gd.SoTien;
             string sqlStrRut = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", SoDu, tkRut.SoTK, tkRut.TenNH);
             data.xuLi(sqlStrRut);
         }

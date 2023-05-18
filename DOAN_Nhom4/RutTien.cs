@@ -55,7 +55,7 @@ namespace DOAN_Nhom4
             tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
             NguoiDung ndRut = new NguoiDung();
             ndRut = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
-            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", BigInteger.Parse(txt_SoTien.Text), "Rut tien ra khoi tai khoan");
+            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", decimal.Parse(txt_SoTien.Text), "Rut tien ra khoi tai khoan");
             if (tkRut != null)
             {
                 if (gd.SoTien >= 100000 && gd.SoTien <= tkRut.SoDu)

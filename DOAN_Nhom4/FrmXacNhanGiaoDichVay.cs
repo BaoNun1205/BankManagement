@@ -42,7 +42,7 @@ namespace DOAN_Nhom4
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            BigInteger sotienlai = BigInteger.Parse(lblHienThiLai.Text, NumberStyles.AllowThousands);
+            decimal sotienlai = decimal.Parse(lblHienThiLai.Text, NumberStyles.AllowThousands);
             ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             ttNgDung.ThoiGianVay -= 1;
@@ -87,7 +87,7 @@ namespace DOAN_Nhom4
         {
             lblHienThiTKNguon.Text = nguoiDung.SoTK;
             lblHienThiTKVay.Text = nguoiDung.SoTK;
-            BigInteger tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
+            decimal tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
             lblHienThiNoGoc.Text = tmp.ToString("N0");
             lblHienThiLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString("N0");
             lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
