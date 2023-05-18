@@ -44,21 +44,6 @@ namespace DOAN_Nhom4
             }
         }
 
-        private void btn_HuyBo_Click(object sender, EventArgs e)
-        {
-            txt_SoTK.Text = "";
-            txt_SoTien.Text = "";
-            txt_CCCD.Text = "";
-            txt_SDT.Text = "";
-            txt_TenTK.Text = "";
-            lblSoDu.Text = "-";
-        }
-
-        private void txt_SoTK_TextChanged(object sender, EventArgs e)
-        {
-            HienThiThongTin();
-        }
-
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
