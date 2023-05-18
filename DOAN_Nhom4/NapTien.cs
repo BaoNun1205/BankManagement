@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
                 txt_TenTK.Text = ngDung.TenTK.ToString();
                 txt_CCCD.Text = ngDung.Cccd.ToString();
                 txt_SDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.ToString("N0");
+                lblSoDu.Text = tk.SoDu.ToString("N0") + "VNĐ";
             }
             else
             {
@@ -69,7 +69,6 @@ namespace DOAN_Nhom4
             else
                 MessageBox.Show("Số tài khoản không đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
             txt_SoTK.Text = "";

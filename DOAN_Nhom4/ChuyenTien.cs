@@ -24,11 +24,6 @@ namespace DOAN_Nhom4
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
 
-        private void ChuyenTien_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void HienThiThongTinNguoiChuyen()
         {
             NguoiDung ngDung = new NguoiDung();
@@ -40,7 +35,7 @@ namespace DOAN_Nhom4
                 txt_TenTKChuyen.Text = ngDung.TenTK.ToString();
                 txt_CCCD.Text = ngDung.Cccd.ToString();
                 txt_SDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.ToString("N0");
+                lblSoDu.Text = tk.SoDu.ToString("N0") + "VNĐ";
             }
             else
             {
@@ -109,7 +104,7 @@ namespace DOAN_Nhom4
             tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
             NguoiDung ndNhan = new NguoiDung();
             ndNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
-            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, BigInteger.Parse(txt_SoTien.Text), "Chuyen tien");
+            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, BigInteger.Parse(txt_SoTien.Text), txt_LoiNhan.Text);
             if (tkGui != null)
             {
                 if (tkNhan != null)
@@ -126,6 +121,7 @@ namespace DOAN_Nhom4
                             txt_SoTien.Text = "";
                             txt_CCCD.Text = "";
                             txt_SDT.Text = "";
+                            txt_LoiNhan.Text = "";
                             MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
