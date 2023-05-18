@@ -10,14 +10,14 @@ namespace DOAN_Nhom4
     internal class SoDienThoai
     {
         private string sdt;
-        private BigInteger soDu;
+        private decimal soDu;
 
         public string Sdt { get => sdt; set => sdt = value; }
-        public BigInteger SoDu { get => soDu; set => soDu = value; }
+        public decimal SoDu { get => soDu; set => soDu = value; }
 
         public SoDienThoai() { }
 
-        public SoDienThoai(string sdt, BigInteger soDu)
+        public SoDienThoai(string sdt, decimal soDu)
         {
             this.sdt = sdt;
             this.soDu = soDu;

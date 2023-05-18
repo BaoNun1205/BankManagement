@@ -16,7 +16,7 @@ namespace DOAN_Nhom4
         private string nganHangNhan;
         private string tenTKNhan;
         private string soTKNhan;
-        private BigInteger soTien;
+        private decimal soTien;
         private string loiNhan;
 
         public string LoaiGD { get => loaiGD; set => loaiGD = value; }
@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
         public string NganHangNhan { get => nganHangNhan; set => nganHangNhan = value; }
         public string TenTKNhan { get => tenTKNhan; set => tenTKNhan = value; }
         public string SoTKNhan { get => soTKNhan; set => soTKNhan = value; }
-        public BigInteger SoTien { get => soTien; set => soTien = value; }
+        public decimal SoTien { get => soTien; set => soTien = value; }
         public string LoiNhan { get => loiNhan; set => loiNhan = value; }
 
         public GiaoDich() { }
