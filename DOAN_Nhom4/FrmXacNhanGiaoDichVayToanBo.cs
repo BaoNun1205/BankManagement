@@ -39,22 +39,13 @@ namespace DOAN_Nhom4
             HienThi();
         }
 
-        private void btn_HuyBo_Click(object sender, EventArgs e)
+        private void btnHuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
             Utility.addForm(frmTienIchVay, pnlNguoiDung);
         }
-        private void HienThi()
-        {
-            lblHienThiTKNguon.Text = nguoiDung.SoTK;
-            lblHienThiTKVay.Text = nguoiDung.SoTK;
-            lblHienThiNoGoc.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
-            lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
-            lblHienThiTong.Text = (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham).ToString("N0");
-            txt_NgayGiaoDich.Value = DateTime.Now;
-        }
 
-        private void btn_XacNhan_Click(object sender, EventArgs e)
+        private void btnXacNhan_Click(object sender, EventArgs e)
         {
             if (tknh.SoDu >= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham))
             {
@@ -69,6 +60,16 @@ namespace DOAN_Nhom4
             }
             else
                 MessageBox.Show("Số dư không đủ để thực hiện", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void HienThi()
+        {
+            lblHienThiTKNguon.Text = nguoiDung.SoTK;
+            lblHienThiTKVay.Text = nguoiDung.SoTK;
+            lblHienThiNoGoc.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
+            lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
+            lblHienThiTong.Text = (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham).ToString("N0");
+            txtNgayGiaoDich.Value = DateTime.Now;
         }
     }
 }

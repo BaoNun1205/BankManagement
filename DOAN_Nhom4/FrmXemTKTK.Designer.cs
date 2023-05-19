@@ -429,7 +429,7 @@
             this.pBQuaylai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBQuaylai.TabIndex = 116;
             this.pBQuaylai.TabStop = false;
-            this.pBQuaylai.Click += new System.EventHandler(this.pBQuaylai_Click);
+            this.pBQuaylai.Click += new System.EventHandler(this.pbQuaylai_Click);
             // 
             // FrmXemTKTK
             // 

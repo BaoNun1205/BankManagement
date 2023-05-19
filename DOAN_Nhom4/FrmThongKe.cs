@@ -36,6 +36,7 @@ namespace DOAN_Nhom4
         private void FrmThongKe_Load(object sender, EventArgs e)
         {
             lblHienThiNgay.Text = string.Format("{0} đến {1}", ngayBatDau, ngayKetThuc);
+            // Ban dau cho do thi tien gui hien thi khi vua mo form
             ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
             ThongKe.Series["TienGui"].XValueMember = "ThoiGian";
             ThongKe.Series["TienGui"].YValueMembers = "TongTien";
@@ -45,35 +46,43 @@ namespace DOAN_Nhom4
 
         private void btnTienRa_Click(object sender, EventArgs e)
         {
-            ThongKe.Series["TienGui"].Enabled = true;
-            ThongKe.Series["TienTong"].Enabled = false;
-            ThongKe.Series["TienNhan"].Enabled = false;
-            ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
-            ThongKe.Series["TienGui"].XValueMember = "ThoiGian";
-            ThongKe.Series["TienGui"].YValueMembers = "TongTien";
+            string s = "TienGui";
+            MacDinhDoThi();
             ThongKe.Legends[1].Enabled = true;
+            ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            HienThiDuLieuDoThi(s);
         }
 
         private void btnTienVao_Click(object sender, EventArgs e)
         {
-            ThongKe.Series["TienNhan"].Enabled = true;
-            ThongKe.Series["TienTong"].Enabled = false;
-            ThongKe.Series["TienGui"].Enabled = false;
-            ThongKe.DataSource = tkDAO.ThongKeTienNhan(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
-            ThongKe.Series["TienNhan"].XValueMember = "ThoiGian";
-            ThongKe.Series["TienNhan"].YValueMembers = "TongTien";
+            string s = "TienNhan";
+            MacDinhDoThi();
             ThongKe.Legends[0].Enabled = true;
+            ThongKe.DataSource = tkDAO.ThongKeTienNhan(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            HienThiDuLieuDoThi(s);
         }
 
         private void btnTong_Click(object sender, EventArgs e)
         {
-            ThongKe.Series["TienTong"].Enabled = true;
-            ThongKe.Series["TienNhan"].Enabled = false;
-            ThongKe.Series["TienGui"].Enabled = false;
-            ThongKe.DataSource = tkDAO.ThongKeTienTong(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
-            ThongKe.Series["TienTong"].XValueMember = "ThoiGian";
-            ThongKe.Series["TienTong"].YValueMembers = "TongTien";
+            string s = "TienTong";
+            MacDinhDoThi();
             ThongKe.Legends[2].Enabled = true;
+            ThongKe.DataSource = tkDAO.ThongKeTienTong(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            HienThiDuLieuDoThi(s);
+        }
+
+        private void MacDinhDoThi() // Ban dau cho cac do thi khong hien thi
+        {
+            ThongKe.Series["TienGui"].Enabled = false;
+            ThongKe.Series["TienNhan"].Enabled = false;
+            ThongKe.Series["TienTong"].Enabled = false;
+        }
+
+        public void HienThiDuLieuDoThi(string s) // Dung de hien thi du lieu len do thi
+        {
+            ThongKe.Series[s].Enabled = true;
+            ThongKe.Series[s].XValueMember = "ThoiGian";
+            ThongKe.Series[s].YValueMembers = "TongTien";
         }
     }
 }

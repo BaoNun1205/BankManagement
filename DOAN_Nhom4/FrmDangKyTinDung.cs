@@ -104,18 +104,15 @@ namespace DOAN_Nhom4
         {
             // Khởi tạo đường dẫn của trình duyệt web mặc định trên máy tính
             string browserPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Google\\Chrome\\Application\\chrome.exe";
-
             // Nếu không tìm thấy trình duyệt Chrome, có thể sử dụng trình duyệt mặc định khác như Microsoft Edge
             if (!File.Exists(browserPath))
             {
                 browserPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Microsoft\\Edge\\Application\\msedge.exe";
             }
-
             // Tạo đối tượng ProcessStartInfo để khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
             ProcessStartInfo psi = new ProcessStartInfo(browserPath);
             psi.Arguments = "https://drive.google.com/file/d/15wFnLSiI73IQEGaXN6nqpYnXDy-h2csA/view?usp=sharing";
             psi.UseShellExecute = true;
-
             // Khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
             Process.Start(psi);
         }

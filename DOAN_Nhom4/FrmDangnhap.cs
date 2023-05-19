@@ -16,6 +16,11 @@ namespace DOAN_Nhom4
         NguoiDungDAO khDAO = new NguoiDungDAO();
         DangNhapDAO dnDAO = new DangNhapDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+
+        Dictionary<string, string> credentials = new Dictionary<string, string>()
+        {
+            { "admin", "1" }
+        };
         public FrmDangnhap()
         {
             InitializeComponent();
@@ -24,24 +29,6 @@ namespace DOAN_Nhom4
         {
             this.txtPass.PasswordChar = '*';
         }
-        
-        private void txtPass_TextChanged(object sender, EventArgs e)
-        {
-
-            txtPass.UseSystemPasswordChar = false;
-        }
-
-        private void cb_showpass_CheckedChanged(object sender, EventArgs e)
-        {
-            if(cb_showpass.Checked)
-            {
-                txtPass.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                txtPass.UseSystemPasswordChar = false;
-            }
-        }
 
         private void lblXoa_Click(object sender, EventArgs e)
         {
@@ -49,6 +36,7 @@ namespace DOAN_Nhom4
             txtPass.Clear();
             txtUserName.Focus();
         }
+
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult dg = MessageBox.Show("Bạn có chắc muốn thoát không?",
@@ -56,10 +44,7 @@ namespace DOAN_Nhom4
             if (dg == DialogResult.Yes)
                 Application.Exit();
         }
-        Dictionary<string, string> credentials = new Dictionary<string, string>()
-        {
-            { "admin", "1" }
-        };
+
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
@@ -109,12 +94,31 @@ namespace DOAN_Nhom4
                 MessageBox.Show("Chưa chọn loại đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
         private void btnDangky_Click(object sender, EventArgs e)
         {
             FrmDangky frmdangky = new FrmDangky();
             this.Hide();
             frmdangky.ShowDialog();
             this.Close();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+            txtPass.UseSystemPasswordChar = false;
+        }
+
+        private void cb_showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cb_showpass.Checked)
+            {
+                txtPass.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = false;
+            }
         }
     }
 }

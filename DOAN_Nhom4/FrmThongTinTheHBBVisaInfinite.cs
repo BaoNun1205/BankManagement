@@ -28,17 +28,6 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void addForm(Form form)
-        {
-            pnlNguoiDung.Controls.Clear();
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            form.FormBorderStyle = FormBorderStyle.None;
-            pnlNguoiDung.Controls.Add(form);
-            pnlNguoiDung.Tag = form;
-            form.Show();
-        }
-
         private void ptbQuayLai_Click(object sender, EventArgs e)
         {
             FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
@@ -49,6 +38,17 @@ namespace DOAN_Nhom4
         {
             FrmThongTinTheHHBVisaFlexi frmThongTinTheHHBVisaFlexi = new FrmThongTinTheHHBVisaFlexi(kh, tknh, pnlNguoiDung);
             addForm(frmThongTinTheHHBVisaFlexi);
+        }
+
+        private void addForm(Form form)
+        {
+            pnlNguoiDung.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            form.FormBorderStyle = FormBorderStyle.None;
+            pnlNguoiDung.Controls.Add(form);
+            pnlNguoiDung.Tag = form;
+            form.Show();
         }
     }
 }

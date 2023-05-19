@@ -35,28 +35,6 @@ namespace DOAN_Nhom4
             ThongKe.Legends[4].Enabled = false;
         }
 
-        private void HienThiLsgd()
-        {
-            gvQLGD.DataSource = lsgdDAO.HienThi();
-            gvQLGD.Columns[0].HeaderText = "Mã giao dịch";
-            gvQLGD.Columns[1].HeaderText = "Loại giao dịch";
-            gvQLGD.Columns[2].HeaderText = "Ngân hàng gửi";
-            gvQLGD.Columns[3].HeaderText = "Số tài khoản gửi";
-            gvQLGD.Columns[4].HeaderText = "Ngân hàng nhận";
-            gvQLGD.Columns[5].HeaderText = "Số tài khoản nhận";
-            gvQLGD.Columns[6].HeaderText = "Số tiền";
-            gvQLGD.Columns[7].HeaderText = "Thời gian";
-        }
-
-        private void HienThiDuLieuLen()
-        {
-            lblHienThiSoLuongTaiKhoang.Text = tkDAO.DemSoLuongTaiKhoang().ToString();
-            lblHienThiTinDung.Text = tkDAO.DemSoLuongTinDung().ToString();
-            lblHienThiTietKiem.Text = tkDAO.DemSoLuongSoTietKiem().ToString();
-            lblHienThiVay.Text = tkDAO.DemSoLuongVay().ToString();
-            lblHienThiNoXau.Text = tkDAO.DemSoLuongNoXau().ToString();
-        }
-
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
             MacDinhDoThi();
@@ -102,6 +80,14 @@ namespace DOAN_Nhom4
             HienThiDuLieuDoThi(s);
         }
 
+        private void pb_QuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAdmin frmad = new FrmAdmin();
+            frmad.ShowDialog();
+            this.Close();
+        }
+
         public void MacDinhDoThi()
         {
             ThongKe.Series["ChuyenTien"].Enabled = false;
@@ -118,12 +104,26 @@ namespace DOAN_Nhom4
             ThongKe.Series[s].YValueMembers = "TongTien";
         }
 
-        private void pb_QuayLai_Click(object sender, EventArgs e)
+        private void HienThiLsgd() // Cai dat tieng viet cho cac title cua bang
         {
-            this.Hide();
-            FrmAdmin frmad = new FrmAdmin();
-            frmad.ShowDialog();
-            this.Close();
+            gvQLGD.DataSource = lsgdDAO.HienThi();
+            gvQLGD.Columns[0].HeaderText = "Mã giao dịch";
+            gvQLGD.Columns[1].HeaderText = "Loại giao dịch";
+            gvQLGD.Columns[2].HeaderText = "Ngân hàng gửi";
+            gvQLGD.Columns[3].HeaderText = "Số tài khoản gửi";
+            gvQLGD.Columns[4].HeaderText = "Ngân hàng nhận";
+            gvQLGD.Columns[5].HeaderText = "Số tài khoản nhận";
+            gvQLGD.Columns[6].HeaderText = "Số tiền";
+            gvQLGD.Columns[7].HeaderText = "Thời gian";
+        }
+
+        private void HienThiDuLieuLen() // Hien thi thong ke co ban ve so luong cac tai khoan
+        {
+            lblHienThiSoLuongTaiKhoang.Text = tkDAO.DemSoLuongTaiKhoang().ToString();
+            lblHienThiTinDung.Text = tkDAO.DemSoLuongTinDung().ToString();
+            lblHienThiTietKiem.Text = tkDAO.DemSoLuongSoTietKiem().ToString();
+            lblHienThiVay.Text = tkDAO.DemSoLuongVay().ToString();
+            lblHienThiNoXau.Text = tkDAO.DemSoLuongNoXau().ToString();
         }
     }
 }

@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
             tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
             if (tttd != null)
             {
-                lblNgaySaoKe frmThongTinTaiKhoangTinDung = new lblNgaySaoKe(kh, tknh, pnlNguoiDung, tttd);
+                FrmThongTinNguoiDungTinDung frmThongTinTaiKhoangTinDung = new FrmThongTinNguoiDungTinDung(kh, tknh, pnlNguoiDung, tttd);
                 Utility.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
             }
             else

@@ -34,6 +34,11 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
+        private void FrmXacNhanGiaoDichVay_Load(object sender, EventArgs e)
+        {
+            HienThi();
+        }
+
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
@@ -79,10 +84,6 @@ namespace DOAN_Nhom4
             }         
         }
 
-        private void FrmXacNhanGiaoDichVay_Load(object sender, EventArgs e)
-        {
-            HienThi();
-        }
         private void HienThi()
         {
             lblHienThiTKNguon.Text = nguoiDung.SoTK;

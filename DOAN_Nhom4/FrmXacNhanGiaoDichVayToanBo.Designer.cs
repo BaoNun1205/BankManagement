@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_HuyBo = new CustomButton.VBButton();
-            this.btn_XacNhan = new CustomButton.VBButton();
+            this.btnHuyBo = new CustomButton.VBButton();
+            this.btnXacNhan = new CustomButton.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHienThiTong = new System.Windows.Forms.Label();
             this.lblHienThiTraCham = new System.Windows.Forms.Label();
             this.lblHienThiNoGoc = new System.Windows.Forms.Label();
             this.lblHienThiTKVay = new System.Windows.Forms.Label();
             this.lblHienThiTKNguon = new System.Windows.Forms.Label();
-            this.txt_NgayGiaoDich = new System.Windows.Forms.DateTimePicker();
+            this.txtNgayGiaoDich = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,47 +47,47 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_HuyBo
+            // btnHuyBo
             // 
-            this.btn_HuyBo.BackColor = System.Drawing.SystemColors.Menu;
-            this.btn_HuyBo.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.btn_HuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_HuyBo.BorderRadius = 20;
-            this.btn_HuyBo.BorderSize = 0;
-            this.btn_HuyBo.FlatAppearance.BorderSize = 0;
-            this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_HuyBo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_HuyBo.Location = new System.Drawing.Point(318, 497);
-            this.btn_HuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_HuyBo.Name = "btn_HuyBo";
-            this.btn_HuyBo.Size = new System.Drawing.Size(215, 47);
-            this.btn_HuyBo.TabIndex = 105;
-            this.btn_HuyBo.Text = "Hủy Bỏ";
-            this.btn_HuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_HuyBo.UseVisualStyleBackColor = false;
-            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
+            this.btnHuyBo.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnHuyBo.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.btnHuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuyBo.BorderRadius = 20;
+            this.btnHuyBo.BorderSize = 0;
+            this.btnHuyBo.FlatAppearance.BorderSize = 0;
+            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyBo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHuyBo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHuyBo.Location = new System.Drawing.Point(318, 497);
+            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(215, 47);
+            this.btnHuyBo.TabIndex = 105;
+            this.btnHuyBo.Text = "Hủy Bỏ";
+            this.btnHuyBo.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHuyBo.UseVisualStyleBackColor = false;
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
-            // btn_XacNhan
+            // btnXacNhan
             // 
-            this.btn_XacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XacNhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_XacNhan.BorderRadius = 20;
-            this.btn_XacNhan.BorderSize = 0;
-            this.btn_XacNhan.FlatAppearance.BorderSize = 0;
-            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XacNhan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XacNhan.ForeColor = System.Drawing.SystemColors.Window;
-            this.btn_XacNhan.Location = new System.Drawing.Point(555, 497);
-            this.btn_XacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_XacNhan.Name = "btn_XacNhan";
-            this.btn_XacNhan.Size = new System.Drawing.Size(215, 47);
-            this.btn_XacNhan.TabIndex = 104;
-            this.btn_XacNhan.Text = "Thanh Toán";
-            this.btn_XacNhan.TextColor = System.Drawing.SystemColors.Window;
-            this.btn_XacNhan.UseVisualStyleBackColor = false;
-            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
+            this.btnXacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXacNhan.BorderRadius = 20;
+            this.btnXacNhan.BorderSize = 0;
+            this.btnXacNhan.FlatAppearance.BorderSize = 0;
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXacNhan.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnXacNhan.Location = new System.Drawing.Point(555, 497);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(215, 47);
+            this.btnXacNhan.TabIndex = 104;
+            this.btnXacNhan.Text = "Thanh Toán";
+            this.btnXacNhan.TextColor = System.Drawing.SystemColors.Window;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // panel1
             // 
@@ -97,7 +97,7 @@
             this.panel1.Controls.Add(this.lblHienThiNoGoc);
             this.panel1.Controls.Add(this.lblHienThiTKVay);
             this.panel1.Controls.Add(this.lblHienThiTKNguon);
-            this.panel1.Controls.Add(this.txt_NgayGiaoDich);
+            this.panel1.Controls.Add(this.txtNgayGiaoDich);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
@@ -165,24 +165,24 @@
             this.lblHienThiTKNguon.TabIndex = 116;
             this.lblHienThiTKNguon.Text = "-";
             // 
-            // txt_NgayGiaoDich
+            // txtNgayGiaoDich
             // 
-            this.txt_NgayGiaoDich.CalendarFont = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_NgayGiaoDich.CalendarForeColor = System.Drawing.SystemColors.Desktop;
-            this.txt_NgayGiaoDich.CalendarMonthBackground = System.Drawing.SystemColors.Desktop;
-            this.txt_NgayGiaoDich.CalendarTitleBackColor = System.Drawing.SystemColors.Desktop;
-            this.txt_NgayGiaoDich.CalendarTitleForeColor = System.Drawing.SystemColors.Desktop;
-            this.txt_NgayGiaoDich.CalendarTrailingForeColor = System.Drawing.SystemColors.Desktop;
-            this.txt_NgayGiaoDich.CustomFormat = "MM/dd/yyyy";
-            this.txt_NgayGiaoDich.Enabled = false;
-            this.txt_NgayGiaoDich.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_NgayGiaoDich.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_NgayGiaoDich.Location = new System.Drawing.Point(322, 352);
-            this.txt_NgayGiaoDich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_NgayGiaoDich.Name = "txt_NgayGiaoDich";
-            this.txt_NgayGiaoDich.Size = new System.Drawing.Size(285, 29);
-            this.txt_NgayGiaoDich.TabIndex = 114;
-            this.txt_NgayGiaoDich.Value = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
+            this.txtNgayGiaoDich.CalendarFont = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNgayGiaoDich.CalendarForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtNgayGiaoDich.CalendarMonthBackground = System.Drawing.SystemColors.Desktop;
+            this.txtNgayGiaoDich.CalendarTitleBackColor = System.Drawing.SystemColors.Desktop;
+            this.txtNgayGiaoDich.CalendarTitleForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtNgayGiaoDich.CalendarTrailingForeColor = System.Drawing.SystemColors.Desktop;
+            this.txtNgayGiaoDich.CustomFormat = "MM/dd/yyyy";
+            this.txtNgayGiaoDich.Enabled = false;
+            this.txtNgayGiaoDich.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNgayGiaoDich.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgayGiaoDich.Location = new System.Drawing.Point(322, 352);
+            this.txtNgayGiaoDich.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNgayGiaoDich.Name = "txtNgayGiaoDich";
+            this.txtNgayGiaoDich.Size = new System.Drawing.Size(285, 29);
+            this.txtNgayGiaoDich.TabIndex = 114;
+            this.txtNgayGiaoDich.Value = new System.DateTime(2023, 4, 27, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -280,8 +280,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1075, 573);
-            this.Controls.Add(this.btn_HuyBo);
-            this.Controls.Add(this.btn_XacNhan);
+            this.Controls.Add(this.btnHuyBo);
+            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -299,15 +299,15 @@
 
         #endregion
 
-        private CustomButton.VBButton btn_HuyBo;
-        private CustomButton.VBButton btn_XacNhan;
+        private CustomButton.VBButton btnHuyBo;
+        private CustomButton.VBButton btnXacNhan;
         private Panel panel1;
         private Label lblHienThiTong;
         private Label lblHienThiTraCham;
         private Label lblHienThiNoGoc;
         private Label lblHienThiTKVay;
         private Label lblHienThiTKNguon;
-        private DateTimePicker txt_NgayGiaoDich;
+        private DateTimePicker txtNgayGiaoDich;
         private Label label6;
         private Label label7;
         private Label label4;

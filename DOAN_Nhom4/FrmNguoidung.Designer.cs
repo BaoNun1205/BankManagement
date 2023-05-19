@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNguoidung));
             this.pnlDanhmuc = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbTrangChu = new System.Windows.Forms.PictureBox();
             this.btnCaidat = new CustomButton.VBButton();
             this.btnLsgd = new CustomButton.VBButton();
             this.btnTienich = new CustomButton.VBButton();
@@ -40,23 +40,23 @@
             this.lblXinchao = new System.Windows.Forms.Label();
             this.pnlNguoidung = new System.Windows.Forms.Panel();
             this.pnlTrendau = new System.Windows.Forms.Panel();
-            this.ptbMini = new System.Windows.Forms.PictureBox();
-            this.pBThoat = new System.Windows.Forms.PictureBox();
+            this.pbMini = new System.Windows.Forms.PictureBox();
+            this.pbThoat = new System.Windows.Forms.PictureBox();
             this.pnlLuachonCD = new System.Windows.Forms.Panel();
             this.btnDangxuat = new System.Windows.Forms.Button();
             this.btnBaomat = new System.Windows.Forms.Button();
             this.pnlDanhmuc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTrangChu)).BeginInit();
             this.pnlTrendau.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThoat)).BeginInit();
             this.pnlLuachonCD.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDanhmuc
             // 
             this.pnlDanhmuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.pnlDanhmuc.Controls.Add(this.pictureBox1);
+            this.pnlDanhmuc.Controls.Add(this.pbTrangChu);
             this.pnlDanhmuc.Controls.Add(this.btnCaidat);
             this.pnlDanhmuc.Controls.Add(this.btnLsgd);
             this.pnlDanhmuc.Controls.Add(this.btnTienich);
@@ -67,17 +67,16 @@
             this.pnlDanhmuc.Size = new System.Drawing.Size(265, 809);
             this.pnlDanhmuc.TabIndex = 53;
             // 
-            // pictureBox1
+            // pbTrangChu
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
-            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbTrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(23)))), ((int)(((byte)(52)))));
+            this.pbTrangChu.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f;
+            this.pbTrangChu.Location = new System.Drawing.Point(-1, 0);
+            this.pbTrangChu.Name = "pbTrangChu";
+            this.pbTrangChu.Size = new System.Drawing.Size(266, 91);
+            this.pbTrangChu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTrangChu.TabIndex = 54;
+            this.pbTrangChu.TabStop = false;
             // 
             // btnCaidat
             // 
@@ -240,8 +239,8 @@
             // pnlTrendau
             // 
             this.pnlTrendau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(115)))), ((int)(((byte)(165)))));
-            this.pnlTrendau.Controls.Add(this.ptbMini);
-            this.pnlTrendau.Controls.Add(this.pBThoat);
+            this.pnlTrendau.Controls.Add(this.pbMini);
+            this.pnlTrendau.Controls.Add(this.pbThoat);
             this.pnlTrendau.Controls.Add(this.lblXinchao);
             this.pnlTrendau.Controls.Add(this.lblTenTK);
             this.pnlTrendau.Location = new System.Drawing.Point(265, 0);
@@ -250,27 +249,27 @@
             this.pnlTrendau.TabIndex = 55;
             this.pnlTrendau.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTrendau_MouseDown);
             // 
-            // ptbMini
+            // pbMini
             // 
-            this.ptbMini.Image = global::DOAN_Nhom4.Properties.Resources.minus;
-            this.ptbMini.Location = new System.Drawing.Point(1051, 3);
-            this.ptbMini.Name = "ptbMini";
-            this.ptbMini.Size = new System.Drawing.Size(45, 35);
-            this.ptbMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbMini.TabIndex = 53;
-            this.ptbMini.TabStop = false;
-            this.ptbMini.Click += new System.EventHandler(this.ptbMini_Click);
+            this.pbMini.Image = global::DOAN_Nhom4.Properties.Resources.minus;
+            this.pbMini.Location = new System.Drawing.Point(1051, 3);
+            this.pbMini.Name = "pbMini";
+            this.pbMini.Size = new System.Drawing.Size(45, 35);
+            this.pbMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMini.TabIndex = 53;
+            this.pbMini.TabStop = false;
+            this.pbMini.Click += new System.EventHandler(this.pbMini_Click);
             // 
-            // pBThoat
+            // pbThoat
             // 
-            this.pBThoat.Image = global::DOAN_Nhom4.Properties.Resources.cancel2;
-            this.pBThoat.Location = new System.Drawing.Point(1093, 3);
-            this.pBThoat.Name = "pBThoat";
-            this.pBThoat.Size = new System.Drawing.Size(45, 35);
-            this.pBThoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBThoat.TabIndex = 52;
-            this.pBThoat.TabStop = false;
-            this.pBThoat.Click += new System.EventHandler(this.pBThoat_Click);
+            this.pbThoat.Image = global::DOAN_Nhom4.Properties.Resources.cancel2;
+            this.pbThoat.Location = new System.Drawing.Point(1093, 3);
+            this.pbThoat.Name = "pbThoat";
+            this.pbThoat.Size = new System.Drawing.Size(45, 35);
+            this.pbThoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbThoat.TabIndex = 52;
+            this.pbThoat.TabStop = false;
+            this.pbThoat.Click += new System.EventHandler(this.pbThoat_Click);
             // 
             // pnlLuachonCD
             // 
@@ -329,11 +328,11 @@
             this.Text = "FrmNguoidung";
             this.Load += new System.EventHandler(this.FrmNguoidung_Load);
             this.pnlDanhmuc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTrangChu)).EndInit();
             this.pnlTrendau.ResumeLayout(false);
             this.pnlTrendau.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBThoat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbThoat)).EndInit();
             this.pnlLuachonCD.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -351,9 +350,9 @@
         private Panel pnlTrendau;
         private Label lblTenTK;
         private Label lblXinchao;
-        private PictureBox pBThoat;
-        private PictureBox ptbMini;
-        private PictureBox pictureBox1;
+        private PictureBox pbThoat;
+        private PictureBox pbMini;
+        private PictureBox pbTrangChu;
         private Panel pnlLuachonCD;
         private Button btnDangxuat;
         private Button btnBaomat;

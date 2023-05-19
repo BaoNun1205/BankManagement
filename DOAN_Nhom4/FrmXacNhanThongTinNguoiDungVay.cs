@@ -33,6 +33,28 @@ namespace DOAN_Nhom4
             this.ttNgDung = ttNgDung;
             this.pnlNguoiDung = pnlNguoiDung;
         }
+
+        private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
+        {
+            XuLi();
+        }
+
+        private void btn_XacNhanVay_Click(object sender, EventArgs e)
+        {
+            ngDungVay.Them(ttNgDung);
+            GiaoDich gd = new GiaoDich("Vay Tien", "HHB", "", "", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
+            lsgdDAO.Them(gd);
+            MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
+            Utility.addForm(frmTienIch, pnlNguoiDung);
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            Utility.addForm(frmTienIchVay, pnlNguoiDung);
+        }
+
         private void XuLi()
         {
             txt_DanhXung.Text = ttNgDung.DanhXung;
@@ -86,27 +108,6 @@ namespace DOAN_Nhom4
             ttNgDung.PhiTraCham = 0;
             tknh.SoDu += ttNgDung.SoTienVay;
             tknhDAO.SuaSoDu(tknh);           
-        }
-
-        private void XacNhanThongTinNguoiDungVay_Load(object sender, EventArgs e)
-        {
-            XuLi();
-        }
-
-        private void btn_XacNhanVay_Click(object sender, EventArgs e)
-        {
-            ngDungVay.Them(ttNgDung);
-            GiaoDich gd = new GiaoDich("Vay Tien", "HHB", "","", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
-            lsgdDAO.Them(gd);
-            MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.Utility.addForm(frmTienIch, pnlNguoiDung);
-        }
-
-        private void btn_Huy_Click(object sender, EventArgs e)
-        {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.Utility.addForm(frmTienIchVay, pnlNguoiDung);
         }
     }
 }

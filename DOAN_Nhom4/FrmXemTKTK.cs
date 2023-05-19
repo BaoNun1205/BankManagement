@@ -15,17 +15,16 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXemTKTK : Form
     {
-        TietkiemDAO tietkiemDAO = new TietkiemDAO();
-        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
-        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
-        List<TietKiem> danhSachTietKiem = new List<TietKiem>();
-        List<string> danhSachLuaChon = new List<string>();
-
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
+        TietkiemDAO tietkiemDAO = new TietkiemDAO();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
         private DateTime ngayDangky;
+        List<TietKiem> danhSachTietKiem = new List<TietKiem>();
+        List<string> danhSachLuaChon = new List<string>();
 
         public FrmXemTKTK()
         {
@@ -76,7 +75,7 @@ namespace DOAN_Nhom4
             }
         }
 
-        private void pBQuaylai_Click(object sender, EventArgs e)
+        private void pbQuaylai_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
             Utility.addForm(frmtietkiem, pnlNguoidung);

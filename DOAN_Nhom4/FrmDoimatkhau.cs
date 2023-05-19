@@ -36,15 +36,6 @@ namespace DOAN_Nhom4
             Utility.addForm(frmBaoMat, pnlNguoiDung);
         }
 
-        private void txt_XacNhanMatKhau_Enter(object sender, EventArgs e)
-        {
-            if (txt_XacNhanMatKhau.ForeColor != Color.Black)
-            {
-                txt_XacNhanMatKhau.Text = "";
-                txt_XacNhanMatKhau.ForeColor = Color.Black;
-            }
-        }
-
         private void btn_DoiMatKhau_Click(object sender, EventArgs e)
         {
             if (txt_MatKhauCu.Text != tknh.MatKhau)
@@ -54,8 +45,8 @@ namespace DOAN_Nhom4
             else if (txt_MatKhauMoi.Text == txt_MatKhauCu.Text)
             {
                 MessageBox.Show("Mật khẩu mới không được giống mật khẩu cũ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }    
-            else if (txt_XacNhanMatKhau.Text != txt_MatKhauMoi.Text) 
+            }
+            else if (txt_XacNhanMatKhau.Text != txt_MatKhauMoi.Text)
             {
                 MessageBox.Show("Xác nhận mật khẩu chưa chính xác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -70,12 +61,16 @@ namespace DOAN_Nhom4
                 frmDangnhap.ShowDialog();
                 Application.OpenForms["frmBaoMat"].Close();
                 Application.OpenForms["frmNguoiDung"].Close();
-            }    
+            }
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void txt_XacNhanMatKhau_Enter(object sender, EventArgs e)
         {
-
+            if (txt_XacNhanMatKhau.ForeColor != Color.Black)
+            {
+                txt_XacNhanMatKhau.Text = "";
+                txt_XacNhanMatKhau.ForeColor = Color.Black;
+            }
         }
 
         private void txt_MatKhauCu_MouseClick(object sender, MouseEventArgs e)

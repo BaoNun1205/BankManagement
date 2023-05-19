@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
-    public partial class lblNgaySaoKe : Form
+    public partial class FrmThongTinNguoiDungTinDung : Form
     {
         private NguoiDung kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private  ThongTinTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
-        public lblNgaySaoKe()
+        public FrmThongTinNguoiDungTinDung()
         {
             InitializeComponent();
         }
 
-        public lblNgaySaoKe(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
+        public FrmThongTinNguoiDungTinDung(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
         {
             InitializeComponent();
             this.kh = kh;
@@ -66,7 +66,7 @@ namespace DOAN_Nhom4
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.Utility.addForm(frmTienIchTinDung, pnlNguoiDung);
+            Utility.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
 
         public void CapNhatPhi()

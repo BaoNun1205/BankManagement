@@ -35,13 +35,6 @@ namespace DOAN_Nhom4
         {
             HienThi();
         }
-        private void HienThi()
-        {
-            txt_HoTen.Text = nguoiDung.TenTK;
-            txt_CCCD.Text = nguoiDung.Cccd;
-            txt_SDT.Text = nguoiDung.Sdt;
-            txt_Email.Text = nguoiDung.Email;
-        }
 
         private void txt_DiaChiLienLac_Click(object sender, EventArgs e)
         {
@@ -112,23 +105,11 @@ namespace DOAN_Nhom4
             else
                 MessageBox.Show("Phải nhập đủ thông tin!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        public bool IsNull(object sender, EventArgs e)
+
+        private void pbQuaylai_Click(object sender, EventArgs e)
         {
-            if (rb_TinChap.Checked)
-            {
-                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
-                {
-                    return true;
-                }
-            }
-            if(rb_TheChap.Checked)
-            {
-                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && txt_TaiSan.Text != null && txt_GiaTriTaiSan.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
-                {
-                    return true;
-                }
-            }
-            return false;
+            FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            Utility.addForm(frmtienIchVay, pnlNguoiDung);
         }
 
         private void cb_DiaChiLienLac_MouseClick(object sender, MouseEventArgs e)
@@ -153,26 +134,17 @@ namespace DOAN_Nhom4
         {
             // Khởi tạo đường dẫn của trình duyệt web mặc định trên máy tính
             string browserPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Google\\Chrome\\Application\\chrome.exe";
-
             // Nếu không tìm thấy trình duyệt Chrome, có thể sử dụng trình duyệt mặc định khác như Microsoft Edge
             if (!File.Exists(browserPath))
             {
                 browserPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Microsoft\\Edge\\Application\\msedge.exe";
             }
-
             // Tạo đối tượng ProcessStartInfo để khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
             ProcessStartInfo psi = new ProcessStartInfo(browserPath);
             psi.Arguments = "https://drive.google.com/file/d/1gRKFDUcnpDgO02YW1CQytsyrTVaftXwg/view?usp=share_link";
             psi.UseShellExecute = true;
-
             // Khởi động trình duyệt web với đường dẫn liên kết được chuyền vào
             Process.Start(psi);
-        }
-
-        private void pBQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.Utility.addForm(frmtienIchVay, pnlNguoiDung);
         }
 
         private void rb_TinChap_CheckedChanged(object sender, EventArgs e)
@@ -193,6 +165,33 @@ namespace DOAN_Nhom4
                 txt_TaiSan.Enabled = true;
                 txt_GiaTriTaiSan.Enabled = true;
             }
+        }
+
+        private void HienThi()
+        {
+            txt_HoTen.Text = nguoiDung.TenTK;
+            txt_CCCD.Text = nguoiDung.Cccd;
+            txt_SDT.Text = nguoiDung.Sdt;
+            txt_Email.Text = nguoiDung.Email;
+        }
+
+        public bool IsNull(object sender, EventArgs e)
+        {
+            if (rb_TinChap.Checked)
+            {
+                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+                {
+                    return true;
+                }
+            }
+            if(rb_TheChap.Checked)
+            {
+                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && txt_TaiSan.Text != null && txt_GiaTriTaiSan.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

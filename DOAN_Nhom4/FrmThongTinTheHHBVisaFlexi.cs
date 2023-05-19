@@ -28,6 +28,18 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
+        private void pbQuayLai_Click(object sender, EventArgs e)
+        {
+            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
+            addForm(frmDangKyTinDung);
+        }
+
+        private void pbChuyenTrang_Click(object sender, EventArgs e)
+        {
+            FrmThongTinTheHHBVisaPlatinumCashBack frmThongTinTheHHBVisaPlatinumCashBack = new FrmThongTinTheHHBVisaPlatinumCashBack(kh, tknh, pnlNguoiDung);
+            addForm(frmThongTinTheHHBVisaPlatinumCashBack);
+        }
+
         private void addForm(Form form)
         {
             pnlNguoiDung.Controls.Clear();
@@ -37,18 +49,6 @@ namespace DOAN_Nhom4
             pnlNguoiDung.Controls.Add(form);
             pnlNguoiDung.Tag = form;
             form.Show();
-        }
-
-        private void ptbQuayLai_Click(object sender, EventArgs e)
-        {
-            FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
-            addForm(frmDangKyTinDung);
-        }
-
-        private void ptbChuyenTrang_Click(object sender, EventArgs e)
-        {
-            FrmThongTinTheHHBVisaPlatinumCashBack frmThongTinTheHHBVisaPlatinumCashBack = new FrmThongTinTheHHBVisaPlatinumCashBack(kh, tknh, pnlNguoiDung);
-            addForm(frmThongTinTheHHBVisaPlatinumCashBack);
         }
     }
 }

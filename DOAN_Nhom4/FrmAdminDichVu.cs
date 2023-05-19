@@ -16,18 +16,19 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        
 
         private void FrmAdminDichVu_Load(object sender, EventArgs e)
         {
             NapTien nt = new NapTien();
             Utility.addUserControl(nt, pnlDichvu);
         }
+
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             NapTien nt = new NapTien();
             Utility.addUserControl(nt, pnlDichvu);
         }
+
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             RutTien rt = new RutTien();

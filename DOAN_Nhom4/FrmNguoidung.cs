@@ -17,6 +17,7 @@ namespace DOAN_Nhom4
         public TaiKhoanNganHang tknh;
         public ThongTinNguoiDungVay ttNgDung;
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -52,7 +53,7 @@ namespace DOAN_Nhom4
             Utility.addForm(frmchuyentien, pnlNguoidung);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbTrangChu_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
             Utility.addForm(frmtrangchu, pnlNguoidung);
@@ -70,12 +71,12 @@ namespace DOAN_Nhom4
             Utility.addForm(frmTienIch, pnlNguoidung);
         }
 
-        private void pBThoat_Click(object sender, EventArgs e)
+        private void pbThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void ptbMini_Click(object sender, EventArgs e)
+        private void pbMini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -106,16 +107,16 @@ namespace DOAN_Nhom4
             else pnlLuachonCD.Visible = true;
         }
 
-        private void pnlTrendau_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnLsgd_Click(object sender, EventArgs e)
         {
             FrmLichSuGiaoDich frmLichSuGiaoDich = new FrmLichSuGiaoDich(kh, pnlNguoidung);
             Utility.addForm(frmLichSuGiaoDich, pnlNguoidung);
+        }
+
+        private void pnlTrendau_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -30,11 +30,35 @@ namespace DOAN_Nhom4
             this.tknh = tknh;
         }
 
-
         private void FrmThongTinTaiKhoanVay_Load(object sender, EventArgs e)
         {
             HienThi();
         }        
+        
+        private void pBQuaylai_Click(object sender, EventArgs e)
+        {
+            FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            Utility.addForm(frmtienIchVay, pnlNguoiDung);
+        }
+
+        private void btn_HuyBo_Click(object sender, EventArgs e)
+        {
+            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
+            Utility.addForm(frmTienIchVay, pnlNguoiDung);
+        }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            FrmXacNhanGiaoDichVay frmgdvay = new FrmXacNhanGiaoDichVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+            Utility.addForm(frmgdvay, pnlNguoiDung);
+        }
+
+        private void btn_ThanhToanToanBo_Click(object sender, EventArgs e)
+        {
+            FrmXacNhanGiaoDichVayToanBo frmgdvaytoanbo = new FrmXacNhanGiaoDichVayToanBo(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
+            Utility.addForm(frmgdvaytoanbo, pnlNguoiDung);
+        }
+
         private void HienThi()
         {
             txt_NgayDenHan.Value = ttNgDung.NgayDenHan;
@@ -64,29 +88,6 @@ namespace DOAN_Nhom4
                     ttNgDung.PhiTraCham = 50000; //qua han thanh toan
             }
             txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
-        }
-        private void pBQuaylai_Click(object sender, EventArgs e)
-        {
-            FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            Utility.addForm(frmtienIchVay, pnlNguoiDung);
-        }
-
-        private void btn_HuyBo_Click(object sender, EventArgs e)
-        {
-            FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            Utility.addForm(frmTienIchVay, pnlNguoiDung);
-        }
-
-        private void btn_ThanhToan_Click(object sender, EventArgs e)
-        {
-            FrmXacNhanGiaoDichVay frmgdvay = new FrmXacNhanGiaoDichVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-            Utility.addForm(frmgdvay, pnlNguoiDung);
-        }
-
-        private void btn_ThanhToanToanBo_Click(object sender, EventArgs e)
-        {
-            FrmXacNhanGiaoDichVayToanBo frmgdvaytoanbo = new FrmXacNhanGiaoDichVayToanBo(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-            Utility.addForm(frmgdvaytoanbo, pnlNguoiDung);
         }
     }
 }

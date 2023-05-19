@@ -1,6 +1,6 @@
 ﻿namespace DOAN_Nhom4
 {
-    partial class lblNgaySaoKe
+    partial class FrmThongTinNguoiDungTinDung
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lblNgaySaoKe));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinNguoiDungTinDung));
             this.btnHuyBo = new CustomButton.VBButton();
             this.btnThanhToan = new CustomButton.VBButton();
             this.lblPhiTraCham = new System.Windows.Forms.Label();

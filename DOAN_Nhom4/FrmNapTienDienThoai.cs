@@ -17,12 +17,13 @@ namespace DOAN_Nhom4
         private Panel pnlNguoiDung;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         private ThongTinTinDung tttd = new ThongTinTinDung();
-        private int menhGia = 0;
-        private string Stk = "";
-        private string loaiTaiKhoan = "";
         private LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         private SoDienThoaiDAO sdtDAO = new SoDienThoaiDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+
+        private int menhGia = 0;
+        private string Stk = "";
+        private string loaiTaiKhoan = "";
         public FrmNapTienDienThoai()
         {
             InitializeComponent();
@@ -50,7 +51,29 @@ namespace DOAN_Nhom4
                 btnTKTinDung.Enabled = false;
             }
         }
+        
+        // Cac button chon loai thanh toan
+        private void btnTKTinDung_Click(object sender, EventArgs e)
+        {
+            btnTKThe.ForeColor = Color.Black;
+            btnTKThe.BackColor = Color.WhiteSmoke;
+            btnTKTinDung.ForeColor = Color.White;
+            btnTKTinDung.BackColor = Color.FromArgb(75, 115, 165);
+            Stk = btnTKTinDung.Text;
+            loaiTaiKhoan = "Tai Khoan Tin Dung";
+        }
 
+        private void btnTKThe_Click(object sender, EventArgs e)
+        {
+            btnTKThe.ForeColor = Color.White;
+            btnTKThe.BackColor = Color.FromArgb(75, 115, 165);
+            btnTKTinDung.ForeColor = Color.Black;
+            btnTKTinDung.BackColor = Color.WhiteSmoke;
+            Stk = btnTKThe.Text;
+            loaiTaiKhoan = "HHB";
+        }
+
+        // Cac button chon menh gia khi nap
         private void btn10k_Click(object sender, EventArgs e)
         {
             TienMacDinh();
@@ -123,54 +146,6 @@ namespace DOAN_Nhom4
             menhGia = 500000;
         }
 
-        public void TienMacDinh()
-        {
-            btn10k.ForeColor = Color.Black;
-            btn10k.BackColor = Color.WhiteSmoke;
-            btn10k.BorderColor = Color.Black;
-            btn20k.ForeColor = Color.Black;
-            btn20k.BackColor = Color.WhiteSmoke;
-            btn20k.BorderColor = Color.Black;
-            btn30k.ForeColor = Color.Black;
-            btn30k.BackColor = Color.WhiteSmoke;
-            btn30k.BorderColor = Color.Black;
-            btn50k.ForeColor = Color.Black;
-            btn50k.BackColor = Color.WhiteSmoke;
-            btn50k.BorderColor = Color.Black;
-            btn100k.ForeColor = Color.Black;
-            btn100k.BackColor = Color.WhiteSmoke;
-            btn100k.BorderColor = Color.Black;
-            btn200k.ForeColor = Color.Black;
-            btn200k.BackColor = Color.WhiteSmoke;
-            btn200k.BorderColor = Color.Black;
-            btn300k.ForeColor = Color.Black;
-            btn300k.BackColor = Color.WhiteSmoke;
-            btn300k.BorderColor = Color.Black;
-            btn500k.ForeColor = Color.Black;
-            btn500k.BackColor = Color.WhiteSmoke;
-            btn500k.BorderColor = Color.Black;
-        }
-
-        private void btnTKTinDung_Click(object sender, EventArgs e)
-        {
-            btnTKThe.ForeColor = Color.Black;
-            btnTKThe.BackColor = Color.WhiteSmoke;
-            btnTKTinDung.ForeColor = Color.White;
-            btnTKTinDung.BackColor = Color.FromArgb(75, 115, 165);
-            Stk = btnTKTinDung.Text;
-            loaiTaiKhoan = "Tai Khoan Tin Dung";
-        }
-
-        private void btnTKThe_Click(object sender, EventArgs e)
-        {
-            btnTKThe.ForeColor = Color.White;
-            btnTKThe.BackColor = Color.FromArgb(75, 115, 165);
-            btnTKTinDung.ForeColor = Color.Black;
-            btnTKTinDung.BackColor = Color.WhiteSmoke;
-            Stk = btnTKThe.Text;
-            loaiTaiKhoan = "HHB";
-        }
-
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             if (loaiTaiKhoan != "")
@@ -214,6 +189,34 @@ namespace DOAN_Nhom4
             {
                 MessageBox.Show("Chưa chọn loại thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void TienMacDinh() // Mac dinh ban dau cho tat ca nut chua duoc chon
+        {
+            btn10k.ForeColor = Color.Black;
+            btn10k.BackColor = Color.WhiteSmoke;
+            btn10k.BorderColor = Color.Black;
+            btn20k.ForeColor = Color.Black;
+            btn20k.BackColor = Color.WhiteSmoke;
+            btn20k.BorderColor = Color.Black;
+            btn30k.ForeColor = Color.Black;
+            btn30k.BackColor = Color.WhiteSmoke;
+            btn30k.BorderColor = Color.Black;
+            btn50k.ForeColor = Color.Black;
+            btn50k.BackColor = Color.WhiteSmoke;
+            btn50k.BorderColor = Color.Black;
+            btn100k.ForeColor = Color.Black;
+            btn100k.BackColor = Color.WhiteSmoke;
+            btn100k.BorderColor = Color.Black;
+            btn200k.ForeColor = Color.Black;
+            btn200k.BackColor = Color.WhiteSmoke;
+            btn200k.BorderColor = Color.Black;
+            btn300k.ForeColor = Color.Black;
+            btn300k.BackColor = Color.WhiteSmoke;
+            btn300k.BorderColor = Color.Black;
+            btn500k.ForeColor = Color.Black;
+            btn500k.BackColor = Color.WhiteSmoke;
+            btn500k.BorderColor = Color.Black;
         }
     }
 }

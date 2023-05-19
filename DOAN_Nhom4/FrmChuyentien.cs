@@ -20,12 +20,22 @@ namespace DOAN_Nhom4
         NguoiDungDAO khDAO = new NguoiDungDAO();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         ChuyenTienDAO ChuyenTienDAO = new ChuyenTienDAO();
+
         List<string> danhSachSTKNgDung = new List<string>();
         List<NguoiDung> danhSachNguoiDung = new List<NguoiDung>();
+
+        enum KiemTraTenNguoiNhan
+        {
+            hople,
+            khongtontai,
+            chinhban
+        }
+        KiemTraTenNguoiNhan kt;
         public FrmChuyentien()
         {
             InitializeComponent();
         }
+
         public FrmChuyentien(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
@@ -33,6 +43,7 @@ namespace DOAN_Nhom4
             this.tknh = tknh;
             this.pnlNguoidung = pnlNguoidung;
         }
+
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
             danhSachSTKNgDung = ChuyenTienDAO.LayThongTinSTKNhan(nguoiDung.SoTK);
@@ -53,14 +64,57 @@ namespace DOAN_Nhom4
             DOAN_Nhom4.Utility.addForm(frmtrangchu, pnlNguoidung);
         }
 
-        enum KiemTraTenNguoiNhan
+        private void btnTieptuc_Click(object sender, EventArgs e)
         {
-            hople,
-            khongtontai,
-            chinhban
+            if (cbTenNH.Text == "" || txtSTK.Text == "" || txtTennguoinhan.Text == "" || txtSoTien.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (int.Parse(txtSoTien.Text) < 10000)
+            {
+                MessageBox.Show("Vui lòng nhập tối thiểu 10000VNĐ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            else if (kt == KiemTraTenNguoiNhan.hople && tknh.SoDu >= int.Parse(txtSoTien.Text))
+            {
+                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenTK.ToString(), txtSoTien.Text, txtTennguoinhan.Text);
+                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNH, nguoiDung.TenTK, nguoiDung.SoTK, cbTenNH.Text, txtTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh, gd, pnlNguoidung);
+                frmxacnhan.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                if (kt == KiemTraTenNguoiNhan.khongtontai)
+                { MessageBox.Show("Tài khoản không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                else if (kt == KiemTraTenNguoiNhan.chinhban)
+                { MessageBox.Show("Không thể chuyển tiền cho cho chính bạn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                else
+                { MessageBox.Show("Số dư của bạn không đủ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                XoaThongTin();
+            }
         }
 
-        KiemTraTenNguoiNhan kt;
+        private void txtSTK_TextChanged(object sender, EventArgs e)
+        {
+            HienThiThongTin();
+        }
+
+        private void cbTenNH_TextChanged(object sender, EventArgs e)
+        {
+            HienThiThongTin();
+        }
+
+        private void cbTennguoinhan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is NguoiDung)
+            {
+                NguoiDung ngDung = (NguoiDung)cbTennguoinhan.SelectedItem;
+                cbTenNH.Text = ngDung.tenNH.ToString();
+                txtSTK.Text = ngDung.soTK.ToString();
+                txtTennguoinhan.Text = ngDung.TenTK.ToString();
+            }
+        }
 
         public void HienThiThongTin()
         {
@@ -87,37 +141,7 @@ namespace DOAN_Nhom4
                 txtTennguoinhan.ForeColor = Color.Red;
             }
         }
-        private void btnTieptuc_Click(object sender, EventArgs e)
-        {
-            if (cbTenNH.Text == "" || txtSTK.Text == "" || txtTennguoinhan.Text == "" || txtSoTien.Text == "")
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ các thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (int.Parse(txtSoTien.Text) < 10000)
-            {
-                MessageBox.Show("Vui lòng nhập tối thiểu 10000VNĐ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } 
-                
-            else if (kt == KiemTraTenNguoiNhan.hople && tknh.SoDu >= int.Parse(txtSoTien.Text))
-            {
-                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenTK.ToString(), txtSoTien.Text, txtTennguoinhan.Text); 
-                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNH, nguoiDung.TenTK, nguoiDung.SoTK, cbTenNH.Text, txtTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
-                FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh, gd, pnlNguoidung);
-                frmxacnhan.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                if (kt == KiemTraTenNguoiNhan.khongtontai)
-                    { MessageBox.Show("Tài khoản không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-                else if (kt == KiemTraTenNguoiNhan.chinhban)
-                    { MessageBox.Show("Không thể chuyển tiền cho cho chính bạn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-                else
-                    { MessageBox.Show("Số dư của bạn không đủ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-                XoaThongTin();
-            }
-        }
-
+        
         void XoaThongTin()
         {
             cbTenNH.Text = "";
@@ -125,27 +149,6 @@ namespace DOAN_Nhom4
             cbTennguoinhan.Text = "";
             txtSoTien.Text = "";
             txtLoiNhan.Text = "";
-        }
-
-        private void txtSTK_TextChanged(object sender, EventArgs e)
-        {
-            HienThiThongTin();
-        }
-
-        private void cbTenNH_TextChanged(object sender, EventArgs e)
-        {
-            HienThiThongTin();
-        }
-
-        private void cbTennguoinhan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is NguoiDung)
-            {
-                NguoiDung ngDung = (NguoiDung)cbTennguoinhan.SelectedItem;
-                cbTenNH.Text = ngDung.tenNH.ToString();
-                txtSTK.Text = ngDung.soTK.ToString();
-                txtTennguoinhan.Text = ngDung.TenTK.ToString();
-            }
         }
     }
 }

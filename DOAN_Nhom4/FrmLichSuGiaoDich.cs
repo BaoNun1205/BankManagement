@@ -29,45 +29,31 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void btn_TienVao_Click(object sender, EventArgs e)
+        private void FrmLichSuGiaoDich_Load(object sender, EventArgs e)
         {
-            GvTongGui.Visible = false;
-            GvTongNhan.Visible = false;
+            // Cho cac bang ban dau khong hien thi
+            BangMacDinh();
+        }
+
+        private void btnTienVao_Click(object sender, EventArgs e)
+        {
+            BangMacDinh();
             GvLSGD.Visible = true;
             GvLSGD.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
             HienThiTienVao(GvLSGD);
         }
 
-        private void btn_TienRa_Click(object sender, EventArgs e)
+        private void btnTienRa_Click(object sender, EventArgs e)
         {
-            GvTongGui.Visible = false;
-            GvTongNhan.Visible = false;
+            BangMacDinh();
             GvLSGD.Visible = true;
             GvLSGD.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
             HienThiTienRa(GvLSGD);
         }
 
-        public int LayGiaTri()
+        private void btnToanBo_Click(object sender, EventArgs e)
         {
-            if (cmNgay.SelectedItem == null)
-                return 1000;
-            string selectedCountry = cmNgay.SelectedItem.ToString();
-            if (selectedCountry == "1 ngày gần đây nhất")
-                return 1;
-            if (selectedCountry == "3 ngày gần đây nhất")
-                return 3;
-            if (selectedCountry == "7 ngày gần đây nhất")
-                return 7;
-            if (selectedCountry == "30 ngày gần đây nhất")
-                return 30;
-            if (selectedCountry == "100 ngày gần đây nhất")
-                return 100;
-            return 1000;
-        }
-
-        private void btn_ToanBo_Click(object sender, EventArgs e)
-        {
-            GvLSGD.Visible = false;
+            BangMacDinh();
             GvTongGui.Visible = true;
             GvTongNhan.Visible = true;
             GvTongGui.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
@@ -76,10 +62,33 @@ namespace DOAN_Nhom4
             HienThiTienVao(GvTongGui);
         }
 
-        private void FrmLichSuGiaoDich_Load(object sender, EventArgs e)
+        private void btnXuatExcel_Click(object sender, EventArgs e)
         {
-            GvTongGui.Visible = false;
-            GvTongNhan.Visible = false;            
+            lsgdDAO.XuatExcel();
+        }
+
+        private void btnThongke_Click(object sender, EventArgs e)
+        {
+            FrmThongKe frmthongke = new FrmThongKe(kh, pnlNguoiDung);
+            Utility.addForm(frmthongke, pnlNguoiDung);
+        }
+
+        public int LayGiaTri() // lay gia tri de hien thi so ngay gan nhat
+        {
+            if (cmNgay.SelectedItem == null)
+                return 1000;
+            int selectedIndex = cmNgay.SelectedIndex;
+            if (selectedIndex == 0)
+                return 1;
+            if (selectedIndex == 1)
+                return 3;
+            if (selectedIndex == 2)
+                return 7;
+            if (selectedIndex == 3)
+                return 30;
+            if (selectedIndex == 4)
+                return 100;
+            return 1000;
         }
 
         private void HienThiTienRa(DataGridView gv)
@@ -102,55 +111,53 @@ namespace DOAN_Nhom4
             gv.Columns[5].HeaderText = "Số tiền";
             gv.Columns[6].HeaderText = "Lời nhắn";
         }
-        private void vbButton2_Click(object sender, EventArgs e)
+
+        private void BangMacDinh()
         {
-            lsgdDAO.XuatExcel();
+            GvTongGui.Visible = false;
+            GvTongNhan.Visible = false;
+            GvLSGD.Visible = false;
         }
 
-        private void btnThongke_Click(object sender, EventArgs e)
+        // Cac ham phia duoi de doi mau khi di chuot vao
+        private void btnTienRa_MouseEnter(object sender, EventArgs e)
         {
-            FrmThongKe frmthongke = new FrmThongKe(kh, pnlNguoiDung);
-            Utility.addForm(frmthongke, pnlNguoiDung);
+            btnTienRa.BackColor = Color.FromArgb(2, 69, 158);
         }
 
-        private void btn_TienRa_MouseEnter(object sender, EventArgs e)
+        private void btnTienRa_MouseLeave(object sender, EventArgs e)
         {
-            btn_TienRa.BackColor = Color.FromArgb(2, 69, 158);
+            btnTienRa.BackColor = Color.LightSlateGray;
         }
 
-        private void btn_TienRa_MouseLeave(object sender, EventArgs e)
+        private void btnTienVao_MouseEnter(object sender, EventArgs e)
         {
-            btn_TienRa.BackColor = Color.LightSlateGray;
+            btnTienVao.BackColor = Color.FromArgb(2, 69, 158);
         }
 
-        private void btn_TienVao_MouseEnter(object sender, EventArgs e)
+        private void btnTienVao_MouseLeave(object sender, EventArgs e)
         {
-            btn_TienVao.BackColor = Color.FromArgb(2, 69, 158);
+            btnTienVao.BackColor = Color.LightSlateGray;
         }
 
-        private void btn_TienVao_MouseLeave(object sender, EventArgs e)
+        private void btnToanBo_MouseEnter(object sender, EventArgs e)
         {
-            btn_TienVao.BackColor = Color.LightSlateGray;
-        }
-
-        private void btn_ToanBo_MouseEnter(object sender, EventArgs e)
-        {
-            btn_ToanBo.BackColor = Color.FromArgb(2, 69, 158);
+            btnToanBo.BackColor = Color.FromArgb(2, 69, 158);
         }
 
         private void btn_ToanBo_MouseLeave(object sender, EventArgs e)
         {
-            btn_ToanBo.BackColor = Color.LightSlateGray;
+            btnToanBo.BackColor = Color.LightSlateGray;
         }
 
-        private void btn_XuatExcel_MouseEnter(object sender, EventArgs e)
+        private void btnXuatExcel_MouseEnter(object sender, EventArgs e)
         {
-            btn_XuatExcel.BackColor = Color.FromArgb(2, 69, 158);
+            btnXuatExcel.BackColor = Color.FromArgb(2, 69, 158);
         }
 
-        private void btn_XuatExcel_MouseLeave(object sender, EventArgs e)
+        private void btnXuatExcel_MouseLeave(object sender, EventArgs e)
         {
-            btn_XuatExcel.BackColor = Color.LightSlateGray;
+            btnXuatExcel.BackColor = Color.LightSlateGray;
         }
 
         private void btnThongke_MouseEnter(object sender, EventArgs e)

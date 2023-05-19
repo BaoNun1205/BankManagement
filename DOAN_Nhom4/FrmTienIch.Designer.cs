@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelVayTien = new System.Windows.Forms.Panel();
-            this.ptbVayTien = new System.Windows.Forms.PictureBox();
+            this.pnlVayTien = new System.Windows.Forms.Panel();
+            this.pbVayTien = new System.Windows.Forms.PictureBox();
             this.lblVayTien = new System.Windows.Forms.Label();
             this.pnlNapTienDienThoai = new System.Windows.Forms.Panel();
-            this.ptbNapTienDienThoai = new System.Windows.Forms.PictureBox();
+            this.pbNapTienDienThoai = new System.Windows.Forms.PictureBox();
             this.lblNapDienThoai = new System.Windows.Forms.Label();
-            this.panelTinDung = new System.Windows.Forms.Panel();
-            this.ptbTinDung = new System.Windows.Forms.PictureBox();
+            this.pnlTinDung = new System.Windows.Forms.Panel();
+            this.pbTinDung = new System.Windows.Forms.PictureBox();
             this.lblTinDung = new System.Windows.Forms.Label();
-            this.panelTietkiem = new System.Windows.Forms.Panel();
-            this.ptbTietkiem = new System.Windows.Forms.PictureBox();
+            this.pnlTietkiem = new System.Windows.Forms.Panel();
+            this.pbTietkiem = new System.Windows.Forms.PictureBox();
             this.lblTietkiem = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbTrangChu = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelVayTien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).BeginInit();
+            this.pnlVayTien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVayTien)).BeginInit();
             this.pnlNapTienDienThoai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbNapTienDienThoai)).BeginInit();
-            this.panelTinDung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).BeginInit();
-            this.panelTietkiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTietkiem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNapTienDienThoai)).BeginInit();
+            this.pnlTinDung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTinDung)).BeginInit();
+            this.pnlTietkiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTietkiem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTrangChu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,26 +62,26 @@
             this.panel2.Size = new System.Drawing.Size(1139, 5);
             this.panel2.TabIndex = 1;
             // 
-            // panelVayTien
+            // pnlVayTien
             // 
-            this.panelVayTien.Controls.Add(this.ptbVayTien);
-            this.panelVayTien.Controls.Add(this.lblVayTien);
-            this.panelVayTien.Location = new System.Drawing.Point(0, 2);
-            this.panelVayTien.Name = "panelVayTien";
-            this.panelVayTien.Size = new System.Drawing.Size(565, 349);
-            this.panelVayTien.TabIndex = 4;
-            this.panelVayTien.Click += new System.EventHandler(this.panelVayTien_Click);
+            this.pnlVayTien.Controls.Add(this.pbVayTien);
+            this.pnlVayTien.Controls.Add(this.lblVayTien);
+            this.pnlVayTien.Location = new System.Drawing.Point(0, 2);
+            this.pnlVayTien.Name = "pnlVayTien";
+            this.pnlVayTien.Size = new System.Drawing.Size(565, 349);
+            this.pnlVayTien.TabIndex = 4;
+            this.pnlVayTien.Click += new System.EventHandler(this.pnlVayTien_Click);
             // 
-            // ptbVayTien
+            // pbVayTien
             // 
-            this.ptbVayTien.Image = global::DOAN_Nhom4.Properties.Resources.vaytien;
-            this.ptbVayTien.Location = new System.Drawing.Point(225, 141);
-            this.ptbVayTien.Name = "ptbVayTien";
-            this.ptbVayTien.Size = new System.Drawing.Size(99, 79);
-            this.ptbVayTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbVayTien.TabIndex = 1;
-            this.ptbVayTien.TabStop = false;
-            this.ptbVayTien.Click += new System.EventHandler(this.ptbVayTien_Click);
+            this.pbVayTien.Image = global::DOAN_Nhom4.Properties.Resources.vaytien;
+            this.pbVayTien.Location = new System.Drawing.Point(225, 141);
+            this.pbVayTien.Name = "pbVayTien";
+            this.pbVayTien.Size = new System.Drawing.Size(99, 79);
+            this.pbVayTien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbVayTien.TabIndex = 1;
+            this.pbVayTien.TabStop = false;
+            this.pbVayTien.Click += new System.EventHandler(this.pbVayTien_Click);
             // 
             // lblVayTien
             // 
@@ -97,7 +97,7 @@
             // 
             // pnlNapTienDienThoai
             // 
-            this.pnlNapTienDienThoai.Controls.Add(this.ptbNapTienDienThoai);
+            this.pnlNapTienDienThoai.Controls.Add(this.pbNapTienDienThoai);
             this.pnlNapTienDienThoai.Controls.Add(this.lblNapDienThoai);
             this.pnlNapTienDienThoai.Location = new System.Drawing.Point(0, 368);
             this.pnlNapTienDienThoai.Name = "pnlNapTienDienThoai";
@@ -105,16 +105,16 @@
             this.pnlNapTienDienThoai.TabIndex = 5;
             this.pnlNapTienDienThoai.Click += new System.EventHandler(this.pnlNapTienDienThoai_Click);
             // 
-            // ptbNapTienDienThoai
+            // pbNapTienDienThoai
             // 
-            this.ptbNapTienDienThoai.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
-            this.ptbNapTienDienThoai.Location = new System.Drawing.Point(241, 155);
-            this.ptbNapTienDienThoai.Name = "ptbNapTienDienThoai";
-            this.ptbNapTienDienThoai.Size = new System.Drawing.Size(92, 67);
-            this.ptbNapTienDienThoai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbNapTienDienThoai.TabIndex = 3;
-            this.ptbNapTienDienThoai.TabStop = false;
-            this.ptbNapTienDienThoai.Click += new System.EventHandler(this.ptbNapTienDienThoai_Click);
+            this.pbNapTienDienThoai.Image = global::DOAN_Nhom4.Properties.Resources.naptiendienthoai;
+            this.pbNapTienDienThoai.Location = new System.Drawing.Point(241, 155);
+            this.pbNapTienDienThoai.Name = "pbNapTienDienThoai";
+            this.pbNapTienDienThoai.Size = new System.Drawing.Size(92, 67);
+            this.pbNapTienDienThoai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNapTienDienThoai.TabIndex = 3;
+            this.pbNapTienDienThoai.TabStop = false;
+            this.pbNapTienDienThoai.Click += new System.EventHandler(this.pbNapTienDienThoai_Click);
             // 
             // lblNapDienThoai
             // 
@@ -128,26 +128,26 @@
             this.lblNapDienThoai.Text = "Nạp Tiền Điện Thoại";
             this.lblNapDienThoai.Click += new System.EventHandler(this.lblNapDienThoai_Click);
             // 
-            // panelTinDung
+            // pnlTinDung
             // 
-            this.panelTinDung.Controls.Add(this.ptbTinDung);
-            this.panelTinDung.Controls.Add(this.lblTinDung);
-            this.panelTinDung.Location = new System.Drawing.Point(578, 2);
-            this.panelTinDung.Name = "panelTinDung";
-            this.panelTinDung.Size = new System.Drawing.Size(558, 349);
-            this.panelTinDung.TabIndex = 6;
-            this.panelTinDung.Click += new System.EventHandler(this.panelTinDung_Click);
+            this.pnlTinDung.Controls.Add(this.pbTinDung);
+            this.pnlTinDung.Controls.Add(this.lblTinDung);
+            this.pnlTinDung.Location = new System.Drawing.Point(578, 2);
+            this.pnlTinDung.Name = "pnlTinDung";
+            this.pnlTinDung.Size = new System.Drawing.Size(558, 349);
+            this.pnlTinDung.TabIndex = 6;
+            this.pnlTinDung.Click += new System.EventHandler(this.pnlTinDung_Click);
             // 
-            // ptbTinDung
+            // pbTinDung
             // 
-            this.ptbTinDung.Image = global::DOAN_Nhom4.Properties.Resources.tindungonline;
-            this.ptbTinDung.Location = new System.Drawing.Point(246, 153);
-            this.ptbTinDung.Name = "ptbTinDung";
-            this.ptbTinDung.Size = new System.Drawing.Size(92, 67);
-            this.ptbTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTinDung.TabIndex = 2;
-            this.ptbTinDung.TabStop = false;
-            this.ptbTinDung.Click += new System.EventHandler(this.ptbTinDung_Click);
+            this.pbTinDung.Image = global::DOAN_Nhom4.Properties.Resources.tindungonline;
+            this.pbTinDung.Location = new System.Drawing.Point(246, 153);
+            this.pbTinDung.Name = "pbTinDung";
+            this.pbTinDung.Size = new System.Drawing.Size(92, 67);
+            this.pbTinDung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTinDung.TabIndex = 2;
+            this.pbTinDung.TabStop = false;
+            this.pbTinDung.Click += new System.EventHandler(this.pbTinDung_Click);
             // 
             // lblTinDung
             // 
@@ -161,26 +161,26 @@
             this.lblTinDung.Text = "Tín Dụng Online";
             this.lblTinDung.Click += new System.EventHandler(this.lblTinDung_Click);
             // 
-            // panelTietkiem
+            // pnlTietkiem
             // 
-            this.panelTietkiem.Controls.Add(this.ptbTietkiem);
-            this.panelTietkiem.Controls.Add(this.lblTietkiem);
-            this.panelTietkiem.Location = new System.Drawing.Point(578, 368);
-            this.panelTietkiem.Name = "panelTietkiem";
-            this.panelTietkiem.Size = new System.Drawing.Size(558, 349);
-            this.panelTietkiem.TabIndex = 7;
-            this.panelTietkiem.Click += new System.EventHandler(this.panelTietkiem_Click);
+            this.pnlTietkiem.Controls.Add(this.pbTietkiem);
+            this.pnlTietkiem.Controls.Add(this.lblTietkiem);
+            this.pnlTietkiem.Location = new System.Drawing.Point(578, 368);
+            this.pnlTietkiem.Name = "pnlTietkiem";
+            this.pnlTietkiem.Size = new System.Drawing.Size(558, 349);
+            this.pnlTietkiem.TabIndex = 7;
+            this.pnlTietkiem.Click += new System.EventHandler(this.pnlTietkiem_Click);
             // 
-            // ptbTietkiem
+            // pbTietkiem
             // 
-            this.ptbTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.piggy_bank2;
-            this.ptbTietkiem.Location = new System.Drawing.Point(246, 155);
-            this.ptbTietkiem.Name = "ptbTietkiem";
-            this.ptbTietkiem.Size = new System.Drawing.Size(92, 67);
-            this.ptbTietkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTietkiem.TabIndex = 3;
-            this.ptbTietkiem.TabStop = false;
-            this.ptbTietkiem.Click += new System.EventHandler(this.ptbTietkiem_Click);
+            this.pbTietkiem.Image = global::DOAN_Nhom4.Properties.Resources.piggy_bank2;
+            this.pbTietkiem.Location = new System.Drawing.Point(246, 155);
+            this.pbTietkiem.Name = "pbTietkiem";
+            this.pbTietkiem.Size = new System.Drawing.Size(92, 67);
+            this.pbTietkiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTietkiem.TabIndex = 3;
+            this.pbTietkiem.TabStop = false;
+            this.pbTietkiem.Click += new System.EventHandler(this.pbTietkiem_Click);
             // 
             // lblTietkiem
             // 
@@ -194,15 +194,15 @@
             this.lblTietkiem.Text = "Tiết kiệm";
             this.lblTietkiem.Click += new System.EventHandler(this.lblTietkiem_Click);
             // 
-            // pictureBox1
+            // pbTrangChu
             // 
-            this.pictureBox1.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
-            this.pictureBox1.Location = new System.Drawing.Point(518, 308);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbTrangChu.Image = global::DOAN_Nhom4.Properties.Resources.z4156388208487_6cfd569e12217b8073a7fbfcc22c322f1;
+            this.pbTrangChu.Location = new System.Drawing.Point(518, 308);
+            this.pbTrangChu.Name = "pbTrangChu";
+            this.pbTrangChu.Size = new System.Drawing.Size(106, 108);
+            this.pbTrangChu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTrangChu.TabIndex = 0;
+            this.pbTrangChu.TabStop = false;
             // 
             // panel4
             // 
@@ -218,50 +218,49 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1137, 720);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panelTietkiem);
+            this.Controls.Add(this.pbTrangChu);
+            this.Controls.Add(this.pnlTietkiem);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panelTinDung);
+            this.Controls.Add(this.pnlTinDung);
             this.Controls.Add(this.pnlNapTienDienThoai);
-            this.Controls.Add(this.panelVayTien);
+            this.Controls.Add(this.pnlVayTien);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTienIch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienIch";
-            this.Load += new System.EventHandler(this.FrmTienIch_Load);
-            this.panelVayTien.ResumeLayout(false);
-            this.panelVayTien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbVayTien)).EndInit();
+            this.pnlVayTien.ResumeLayout(false);
+            this.pnlVayTien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVayTien)).EndInit();
             this.pnlNapTienDienThoai.ResumeLayout(false);
             this.pnlNapTienDienThoai.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbNapTienDienThoai)).EndInit();
-            this.panelTinDung.ResumeLayout(false);
-            this.panelTinDung.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTinDung)).EndInit();
-            this.panelTietkiem.ResumeLayout(false);
-            this.panelTietkiem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTietkiem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNapTienDienThoai)).EndInit();
+            this.pnlTinDung.ResumeLayout(false);
+            this.pnlTinDung.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTinDung)).EndInit();
+            this.pnlTietkiem.ResumeLayout(false);
+            this.pnlTietkiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTietkiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTrangChu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Panel panel2;
-        private Panel panelVayTien;
+        private Panel pnlVayTien;
         private Panel pnlNapTienDienThoai;
-        private Panel panelTinDung;
-        private Panel panelTietkiem;
+        private Panel pnlTinDung;
+        private Panel pnlTietkiem;
         private Label lblVayTien;
         private Label lblNapDienThoai;
         private Label lblTinDung;
-        private PictureBox ptbVayTien;
-        private PictureBox ptbTinDung;
-        private PictureBox ptbNapTienDienThoai;
-        private PictureBox ptbTietkiem;
+        private PictureBox pbVayTien;
+        private PictureBox pbTinDung;
+        private PictureBox pbNapTienDienThoai;
+        private PictureBox pbTietkiem;
         private Label lblTietkiem;
-        private PictureBox pictureBox1;
+        private PictureBox pbTrangChu;
         private Panel panel4;
     }
 }

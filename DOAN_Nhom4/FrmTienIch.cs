@@ -28,7 +28,7 @@ namespace DOAN_Nhom4
             this.pnlNguoiDung = pnlNguoiDung;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbTrangChu_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
             this.Hide();
@@ -36,27 +36,23 @@ namespace DOAN_Nhom4
             this.Close();
         }
 
-        private void FrmTienIch_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void panelVayTien_Click(object sender, EventArgs e)
+        private void pnlVayTien_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(kh, tknh, pnlNguoiDung);
             Utility.addForm(frmTienIchVay, pnlNguoiDung);
         }
 
-        private void ptbVayTien_Click(object sender, EventArgs e)
+        private void pbVayTien_Click(object sender, EventArgs e)
         {
-            panelVayTien_Click(sender, e);
+            pnlVayTien_Click(sender, e);
         }
 
         private void lblVayTien_Click(object sender, EventArgs e)
         {
-            panelVayTien_Click(sender, e);
+            pnlVayTien_Click(sender, e);
         }
 
-        private void panelTinDung_Click(object sender, EventArgs e)
+        private void pnlTinDung_Click(object sender, EventArgs e)
         {
             FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
             Utility.addForm(frmTienIchTinDung, pnlNguoiDung);
@@ -64,20 +60,20 @@ namespace DOAN_Nhom4
 
         private void lblTinDung_Click(object sender, EventArgs e)
         {
-            panelTinDung_Click(sender, e);
+            pnlTinDung_Click(sender, e);
         }
 
-        private void ptbTinDung_Click(object sender, EventArgs e)
+        private void pbTinDung_Click(object sender, EventArgs e)
         {
-            panelTinDung_Click(sender, e);
+            pnlTinDung_Click(sender, e);
         }
 
-        private void ptbTietkiem_Click(object sender, EventArgs e)
+        private void pbTietkiem_Click(object sender, EventArgs e)
         {
-            panelTietkiem_Click(sender, e);
+            pnlTietkiem_Click(sender, e);
         }
 
-        private void panelTietkiem_Click(object sender, EventArgs e)
+        private void pnlTietkiem_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoiDung);
             Utility.addForm(frmtietkiem, pnlNguoiDung);
@@ -85,7 +81,7 @@ namespace DOAN_Nhom4
 
         private void lblTietkiem_Click(object sender, EventArgs e)
         {
-            panelTietkiem_Click(sender, e);
+            pnlTietkiem_Click(sender, e);
         }
 
         private void pnlNapTienDienThoai_Click(object sender, EventArgs e)
@@ -94,7 +90,7 @@ namespace DOAN_Nhom4
             Utility.addForm(frmNapTienDienThoai, pnlNguoiDung);
         }
 
-        private void ptbNapTienDienThoai_Click(object sender, EventArgs e)
+        private void pbNapTienDienThoai_Click(object sender, EventArgs e)
         {
             pnlNapTienDienThoai_Click(sender, e);
         }

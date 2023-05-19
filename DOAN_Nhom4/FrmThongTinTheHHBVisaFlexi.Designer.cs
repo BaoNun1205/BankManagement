@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ptbQuayLai = new System.Windows.Forms.PictureBox();
+            this.pbQuayLai = new System.Windows.Forms.PictureBox();
             this.lblTheTinDung = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ptbTheTinDung = new System.Windows.Forms.PictureBox();
             this.ptbThongTin = new System.Windows.Forms.PictureBox();
-            this.ptbChuyenTrang = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).BeginInit();
+            this.pbChuyenTrang = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuayLai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThongTin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbChuyenTrang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChuyenTrang)).BeginInit();
             this.SuspendLayout();
             // 
-            // ptbQuayLai
+            // pbQuayLai
             // 
-            this.ptbQuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
-            this.ptbQuayLai.Location = new System.Drawing.Point(2, 1);
-            this.ptbQuayLai.Name = "ptbQuayLai";
-            this.ptbQuayLai.Size = new System.Drawing.Size(41, 45);
-            this.ptbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbQuayLai.TabIndex = 67;
-            this.ptbQuayLai.TabStop = false;
-            this.ptbQuayLai.Click += new System.EventHandler(this.ptbQuayLai_Click);
+            this.pbQuayLai.Image = global::DOAN_Nhom4.Properties.Resources.left_arrow1;
+            this.pbQuayLai.Location = new System.Drawing.Point(2, 1);
+            this.pbQuayLai.Name = "pbQuayLai";
+            this.pbQuayLai.Size = new System.Drawing.Size(41, 45);
+            this.pbQuayLai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbQuayLai.TabIndex = 67;
+            this.pbQuayLai.TabStop = false;
+            this.pbQuayLai.Click += new System.EventHandler(this.pbQuayLai_Click);
             // 
             // lblTheTinDung
             // 
@@ -93,16 +93,16 @@
             this.ptbThongTin.TabIndex = 71;
             this.ptbThongTin.TabStop = false;
             // 
-            // ptbChuyenTrang
+            // pbChuyenTrang
             // 
-            this.ptbChuyenTrang.Image = global::DOAN_Nhom4.Properties.Resources.right_arrow1;
-            this.ptbChuyenTrang.Location = new System.Drawing.Point(1094, 340);
-            this.ptbChuyenTrang.Name = "ptbChuyenTrang";
-            this.ptbChuyenTrang.Size = new System.Drawing.Size(41, 45);
-            this.ptbChuyenTrang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbChuyenTrang.TabIndex = 72;
-            this.ptbChuyenTrang.TabStop = false;
-            this.ptbChuyenTrang.Click += new System.EventHandler(this.ptbChuyenTrang_Click);
+            this.pbChuyenTrang.Image = global::DOAN_Nhom4.Properties.Resources.right_arrow1;
+            this.pbChuyenTrang.Location = new System.Drawing.Point(1094, 340);
+            this.pbChuyenTrang.Name = "pbChuyenTrang";
+            this.pbChuyenTrang.Size = new System.Drawing.Size(41, 45);
+            this.pbChuyenTrang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbChuyenTrang.TabIndex = 72;
+            this.pbChuyenTrang.TabStop = false;
+            this.pbChuyenTrang.Click += new System.EventHandler(this.pbChuyenTrang_Click);
             // 
             // FrmThongTinTheHHBVisaFlexi
             // 
@@ -110,19 +110,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1139, 720);
-            this.Controls.Add(this.ptbChuyenTrang);
+            this.Controls.Add(this.pbChuyenTrang);
             this.Controls.Add(this.ptbThongTin);
             this.Controls.Add(this.ptbTheTinDung);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ptbQuayLai);
+            this.Controls.Add(this.pbQuayLai);
             this.Controls.Add(this.lblTheTinDung);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmThongTinTheHHBVisaFlexi";
             this.Text = "FrmThongTinTheHHBVisaFlexi";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbQuayLai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuayLai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTheTinDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbThongTin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbChuyenTrang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChuyenTrang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,11 +130,11 @@
 
         #endregion
 
-        private PictureBox ptbQuayLai;
+        private PictureBox pbQuayLai;
         private Label lblTheTinDung;
         private Panel panel1;
         private PictureBox ptbTheTinDung;
         private PictureBox ptbThongTin;
-        private PictureBox ptbChuyenTrang;
+        private PictureBox pbChuyenTrang;
     }
 }
