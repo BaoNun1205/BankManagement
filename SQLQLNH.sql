@@ -247,25 +247,3 @@ PRIMARY KEY CLUSTERED ([TenNH] ASC, [SoTK] ASC),
 FOREIGN KEY ([TenNH], [SoTK]) REFERENCES [dbo].[KhachHang] ([TenNH], [SoTK])
 )
 
-CREATE TABLE hr.KhachHangTungVay(
-SoTKVay INT IDENTITY(1,1) Primary Key,
-DanhXung varchar(10), 
-HoTen varchar(255),
-CCCD varchar(255),
-DiaChi varchar(255),
-SDT varchar(100),
-Email varchar(100),
-NgheNghiep varchar(255),
-ThuNhap varchar(255),
-SPVay varchar(255),
-SoTienVay DECIMAL,
-ThoiGianVay int,
-ChiNhanhVay varchar(255),
-NgayVay Date,
-LaiSuat varchar(10),
-SoTienHangThang DECIMAL,
-NgayDenHan Date,
-TongSoTienPhaiTra DECIMAL,
-PhiTraCham DECIMAL
-)
-
