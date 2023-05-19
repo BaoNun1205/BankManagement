@@ -93,7 +93,7 @@ namespace DOAN_Nhom4
             lblHienThiLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString("N0");
             lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
             lblHienThiTong.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).ToString("N0");
-            txt_NgayGiaoDich.Value = DateTime.Now;
+            txtNgayGiaoDich.Value = DateTime.Now;
         }
     }
 }

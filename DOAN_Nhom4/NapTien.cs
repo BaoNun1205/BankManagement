@@ -26,20 +26,20 @@ namespace DOAN_Nhom4
         {
             NguoiDung ngDung = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
+            ngDung = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txt_TenTK.Text = ngDung.TenTK.ToString();
-                txt_CCCD.Text = ngDung.Cccd.ToString();
-                txt_SDT.Text = ngDung.Sdt.ToString();
+                txtTenTK.Text = ngDung.TenTK.ToString();
+                txtCCCD.Text = ngDung.Cccd.ToString();
+                txtSDT.Text = ngDung.Sdt.ToString();
                 lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
             }
             else
             {
-                txt_TenTK.Text = "Khong ton tai";
-                txt_CCCD.Text = "";
-                txt_SDT.Text = "";
+                txtTenTK.Text = "Khong ton tai";
+                txtCCCD.Text = "";
+                txtSDT.Text = "";
                 lblSoDu.Text = "-";
             }
         }
@@ -47,20 +47,20 @@ namespace DOAN_Nhom4
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
-            tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
+            tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
             NguoiDung ndNap = new NguoiDung();
-            ndNap = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
-            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenTK, tkNap.SoTK, decimal.Parse(txt_SoTien.Text), "Nap tien vao tai khoan");
+            ndNap = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenTK, tkNap.SoTK, decimal.Parse(txtSoTien.Text), "Nap tien vao tai khoan");
             if (tkNap != null)
             {
                 if (gd.SoTien >= 100000)
                 {
                     tknhDAO.NapTien(tkNap, gd);
                     lsgdDAO.Them(gd);
-                    txt_SoTK.Text = "";
-                    txt_SoTien.Text = "";
-                    txt_CCCD.Text = "";
-                    txt_SDT.Text = "";
+                    txtSoTK.Text = "";
+                    txtSoTien.Text = "";
+                    txtCCCD.Text = "";
+                    txtSDT.Text = "";
                     MessageBox.Show("Nạp tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -71,11 +71,11 @@ namespace DOAN_Nhom4
         }
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
-            txt_SoTK.Text = "";
-            txt_SoTien.Text = "";
-            txt_CCCD.Text = "";
-            txt_SDT.Text = "";
-            txt_TenTK.Text = "";
+            txtSoTK.Text = "";
+            txtSoTien.Text = "";
+            txtCCCD.Text = "";
+            txtSDT.Text = "";
+            txtTenTK.Text = "";
             lblSoDu.Text = "-";
         }
 

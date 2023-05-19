@@ -28,65 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_DangKy = new CustomButton.VBButton();
-            this.btn_XemKhoanVay = new CustomButton.VBButton();
+            this.btnDangKy = new CustomButton.VBButton();
+            this.btnXemKhoanVay = new CustomButton.VBButton();
             this.SuspendLayout();
             // 
-            // btn_DangKy
+            // btnDangKy
             // 
-            this.btn_DangKy.BackColor = System.Drawing.Color.White;
-            this.btn_DangKy.BackgroundColor = System.Drawing.Color.White;
-            this.btn_DangKy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_DangKy.BorderRadius = 20;
-            this.btn_DangKy.BorderSize = 2;
-            this.btn_DangKy.FlatAppearance.BorderSize = 0;
-            this.btn_DangKy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_DangKy.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DangKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_DangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DangKy.Location = new System.Drawing.Point(377, 231);
-            this.btn_DangKy.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(396, 98);
-            this.btn_DangKy.TabIndex = 1;
-            this.btn_DangKy.Text = "Đăng Ký Khoản Vay";
-            this.btn_DangKy.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_DangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_DangKy.UseVisualStyleBackColor = false;
-            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
+            this.btnDangKy.BackColor = System.Drawing.Color.White;
+            this.btnDangKy.BackgroundColor = System.Drawing.Color.White;
+            this.btnDangKy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangKy.BorderRadius = 20;
+            this.btnDangKy.BorderSize = 2;
+            this.btnDangKy.FlatAppearance.BorderSize = 0;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDangKy.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDangKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangKy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDangKy.Location = new System.Drawing.Point(431, 308);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(453, 131);
+            this.btnDangKy.TabIndex = 1;
+            this.btnDangKy.Text = "Đăng Ký Khoản Vay";
+            this.btnDangKy.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnDangKy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
-            // btn_XemKhoanVay
+            // btnXemKhoanVay
             // 
-            this.btn_XemKhoanVay.BackColor = System.Drawing.Color.White;
-            this.btn_XemKhoanVay.BackgroundColor = System.Drawing.Color.White;
-            this.btn_XemKhoanVay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XemKhoanVay.BorderRadius = 20;
-            this.btn_XemKhoanVay.BorderSize = 2;
-            this.btn_XemKhoanVay.FlatAppearance.BorderSize = 0;
-            this.btn_XemKhoanVay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_XemKhoanVay.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XemKhoanVay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XemKhoanVay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XemKhoanVay.Location = new System.Drawing.Point(377, 382);
-            this.btn_XemKhoanVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_XemKhoanVay.Name = "btn_XemKhoanVay";
-            this.btn_XemKhoanVay.Size = new System.Drawing.Size(396, 94);
-            this.btn_XemKhoanVay.TabIndex = 2;
-            this.btn_XemKhoanVay.Text = "Xem Thông Tin Khoản Vay";
-            this.btn_XemKhoanVay.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XemKhoanVay.UseVisualStyleBackColor = false;
-            this.btn_XemKhoanVay.Click += new System.EventHandler(this.btn_XemKhoanVay_Click);
+            this.btnXemKhoanVay.BackColor = System.Drawing.Color.White;
+            this.btnXemKhoanVay.BackgroundColor = System.Drawing.Color.White;
+            this.btnXemKhoanVay.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXemKhoanVay.BorderRadius = 20;
+            this.btnXemKhoanVay.BorderSize = 2;
+            this.btnXemKhoanVay.FlatAppearance.BorderSize = 0;
+            this.btnXemKhoanVay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXemKhoanVay.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXemKhoanVay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXemKhoanVay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXemKhoanVay.Location = new System.Drawing.Point(431, 509);
+            this.btnXemKhoanVay.Name = "btnXemKhoanVay";
+            this.btnXemKhoanVay.Size = new System.Drawing.Size(453, 125);
+            this.btnXemKhoanVay.TabIndex = 2;
+            this.btnXemKhoanVay.Text = "Xem Thông Tin Khoản Vay";
+            this.btnXemKhoanVay.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXemKhoanVay.UseVisualStyleBackColor = false;
+            this.btnXemKhoanVay.Click += new System.EventHandler(this.btn_XemKhoanVay_Click);
             // 
             // FrmTienIchVay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1139, 720);
-            this.Controls.Add(this.btn_XemKhoanVay);
-            this.Controls.Add(this.btn_DangKy);
+            this.ClientSize = new System.Drawing.Size(1302, 960);
+            this.Controls.Add(this.btnXemKhoanVay);
+            this.Controls.Add(this.btnDangKy);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmTienIchVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienIchVay";
@@ -95,7 +93,7 @@
         }
 
         #endregion
-        private CustomButton.VBButton btn_DangKy;
-        private CustomButton.VBButton btn_XemKhoanVay;
+        private CustomButton.VBButton btnDangKy;
+        private CustomButton.VBButton btnXemKhoanVay;
     }
 }

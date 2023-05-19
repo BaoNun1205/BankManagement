@@ -61,10 +61,10 @@ namespace DOAN_Nhom4
 
         private void HienThi()
         {
-            txt_NgayDenHan.Value = ttNgDung.NgayDenHan;
-            txt_DuNo.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
-            txt_LaiSuat.Text = ttNgDung.Lai.ToString() + "%/năm";
-            txt_SoTienHangThang.Text = ttNgDung.SoTienHangThang.ToString("N0");
+            txtNgayDenHan.Value = ttNgDung.NgayDenHan;
+            txtDuNo.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
+            txtLaiSuat.Text = ttNgDung.Lai.ToString() + "%/năm";
+            txtSoTienHangThang.Text = ttNgDung.SoTienHangThang.ToString("N0");
             if (ttNgDung.NgayDenHan.Year > DateTime.Now.Year) //chua qua han thanh toan, phi tra cham = 0
             {
                 ttNgDung.PhiTraCham = 0;
@@ -87,7 +87,7 @@ namespace DOAN_Nhom4
                 else
                     ttNgDung.PhiTraCham = 50000; //qua han thanh toan
             }
-            txt_PhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
+            txtPhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
         }
     }
 }

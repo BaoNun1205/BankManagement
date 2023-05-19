@@ -30,56 +30,56 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_LoiNhan = new System.Windows.Forms.RichTextBox();
+            this.txtLoiNhan = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_TenTKNhan = new System.Windows.Forms.TextBox();
+            this.txtTenTKNhan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_TenTKChuyen = new System.Windows.Forms.TextBox();
+            this.txtTenTKChuyen = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblSoDuString = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblSoDu = new System.Windows.Forms.Label();
-            this.txt_SoTien = new System.Windows.Forms.TextBox();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.txt_CCCD = new System.Windows.Forms.TextBox();
+            this.txtSoTien = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_SoTKChuyen = new System.Windows.Forms.TextBox();
-            this.btn_HuyBo = new CustomButton.VBButton();
-            this.btn_ChuyenTien = new CustomButton.VBButton();
-            this.cb_TenNH = new System.Windows.Forms.ComboBox();
+            this.txtSoTKChuyen = new System.Windows.Forms.TextBox();
+            this.btnHuyBo = new CustomButton.VBButton();
+            this.btnChuyenTien = new CustomButton.VBButton();
+            this.cbTenNH = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_SoTKNhan = new System.Windows.Forms.TextBox();
+            this.txtSoTKNhan = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txt_LoiNhan);
+            this.panel1.Controls.Add(this.txtLoiNhan);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txt_TenTKNhan);
+            this.panel1.Controls.Add(this.txtTenTKNhan);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txt_TenTKChuyen);
+            this.panel1.Controls.Add(this.txtTenTKChuyen);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblSoDuString);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.lblSoDu);
-            this.panel1.Controls.Add(this.txt_SoTien);
-            this.panel1.Controls.Add(this.txt_SDT);
-            this.panel1.Controls.Add(this.txt_CCCD);
+            this.panel1.Controls.Add(this.txtSoTien);
+            this.panel1.Controls.Add(this.txtSDT);
+            this.panel1.Controls.Add(this.txtCCCD);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txt_SoTKChuyen);
-            this.panel1.Controls.Add(this.btn_HuyBo);
-            this.panel1.Controls.Add(this.btn_ChuyenTien);
-            this.panel1.Controls.Add(this.cb_TenNH);
+            this.panel1.Controls.Add(this.txtSoTKChuyen);
+            this.panel1.Controls.Add(this.btnHuyBo);
+            this.panel1.Controls.Add(this.btnChuyenTien);
+            this.panel1.Controls.Add(this.cbTenNH);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txt_SoTKNhan);
+            this.panel1.Controls.Add(this.txtSoTKNhan);
             this.panel1.Location = new System.Drawing.Point(59, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(966, 688);
@@ -97,15 +97,15 @@
             this.label10.TabIndex = 100;
             this.label10.Text = "Tối thiểu 100,000 VNĐ";
             // 
-            // txt_LoiNhan
+            // txtLoiNhan
             // 
-            this.txt_LoiNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_LoiNhan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_LoiNhan.Location = new System.Drawing.Point(541, 469);
-            this.txt_LoiNhan.Name = "txt_LoiNhan";
-            this.txt_LoiNhan.Size = new System.Drawing.Size(341, 76);
-            this.txt_LoiNhan.TabIndex = 99;
-            this.txt_LoiNhan.Text = "";
+            this.txtLoiNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLoiNhan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLoiNhan.Location = new System.Drawing.Point(541, 469);
+            this.txtLoiNhan.Name = "txtLoiNhan";
+            this.txtLoiNhan.Size = new System.Drawing.Size(341, 76);
+            this.txtLoiNhan.TabIndex = 99;
+            this.txtLoiNhan.Text = "";
             // 
             // label9
             // 
@@ -131,15 +131,15 @@
             this.label6.TabIndex = 97;
             this.label6.Text = "Tên Tài Khoản Nhận";
             // 
-            // txt_TenTKNhan
+            // txtTenTKNhan
             // 
-            this.txt_TenTKNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenTKNhan.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TenTKNhan.Location = new System.Drawing.Point(541, 267);
-            this.txt_TenTKNhan.Name = "txt_TenTKNhan";
-            this.txt_TenTKNhan.ReadOnly = true;
-            this.txt_TenTKNhan.Size = new System.Drawing.Size(340, 43);
-            this.txt_TenTKNhan.TabIndex = 96;
+            this.txtTenTKNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenTKNhan.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTenTKNhan.Location = new System.Drawing.Point(541, 267);
+            this.txtTenTKNhan.Name = "txtTenTKNhan";
+            this.txtTenTKNhan.ReadOnly = true;
+            this.txtTenTKNhan.Size = new System.Drawing.Size(340, 43);
+            this.txtTenTKNhan.TabIndex = 96;
             // 
             // label3
             // 
@@ -165,15 +165,15 @@
             this.label7.TabIndex = 87;
             this.label7.Text = "Căn Cước Công Dân";
             // 
-            // txt_TenTKChuyen
+            // txtTenTKChuyen
             // 
-            this.txt_TenTKChuyen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_TenTKChuyen.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TenTKChuyen.Location = new System.Drawing.Point(113, 160);
-            this.txt_TenTKChuyen.Name = "txt_TenTKChuyen";
-            this.txt_TenTKChuyen.ReadOnly = true;
-            this.txt_TenTKChuyen.Size = new System.Drawing.Size(341, 43);
-            this.txt_TenTKChuyen.TabIndex = 94;
+            this.txtTenTKChuyen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenTKChuyen.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTenTKChuyen.Location = new System.Drawing.Point(113, 160);
+            this.txtTenTKChuyen.Name = "txtTenTKChuyen";
+            this.txtTenTKChuyen.ReadOnly = true;
+            this.txtTenTKChuyen.Size = new System.Drawing.Size(341, 43);
+            this.txtTenTKChuyen.TabIndex = 94;
             // 
             // label4
             // 
@@ -221,34 +221,34 @@
             this.lblSoDu.TabIndex = 92;
             this.lblSoDu.Text = "-";
             // 
-            // txt_SoTien
+            // txtSoTien
             // 
-            this.txt_SoTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SoTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTien.Location = new System.Drawing.Point(541, 368);
-            this.txt_SoTien.Name = "txt_SoTien";
-            this.txt_SoTien.Size = new System.Drawing.Size(340, 43);
-            this.txt_SoTien.TabIndex = 90;
+            this.txtSoTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoTien.Location = new System.Drawing.Point(541, 368);
+            this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Size = new System.Drawing.Size(340, 43);
+            this.txtSoTien.TabIndex = 90;
             // 
-            // txt_SDT
+            // txtSDT
             // 
-            this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SDT.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SDT.Location = new System.Drawing.Point(113, 365);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.ReadOnly = true;
-            this.txt_SDT.Size = new System.Drawing.Size(341, 43);
-            this.txt_SDT.TabIndex = 88;
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSDT.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSDT.Location = new System.Drawing.Point(113, 365);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
+            this.txtSDT.Size = new System.Drawing.Size(341, 43);
+            this.txtSDT.TabIndex = 88;
             // 
-            // txt_CCCD
+            // txtCCCD
             // 
-            this.txt_CCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_CCCD.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_CCCD.Location = new System.Drawing.Point(114, 265);
-            this.txt_CCCD.Name = "txt_CCCD";
-            this.txt_CCCD.ReadOnly = true;
-            this.txt_CCCD.Size = new System.Drawing.Size(340, 43);
-            this.txt_CCCD.TabIndex = 86;
+            this.txtCCCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCCCD.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCCCD.Location = new System.Drawing.Point(114, 265);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.ReadOnly = true;
+            this.txtCCCD.Size = new System.Drawing.Size(340, 43);
+            this.txtCCCD.TabIndex = 86;
             // 
             // label5
             // 
@@ -262,61 +262,61 @@
             this.label5.TabIndex = 85;
             this.label5.Text = "Số Tài Khoản Chuyển";
             // 
-            // txt_SoTKChuyen
+            // txtSoTKChuyen
             // 
-            this.txt_SoTKChuyen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SoTKChuyen.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTKChuyen.Location = new System.Drawing.Point(114, 52);
-            this.txt_SoTKChuyen.Name = "txt_SoTKChuyen";
-            this.txt_SoTKChuyen.Size = new System.Drawing.Size(340, 43);
-            this.txt_SoTKChuyen.TabIndex = 84;
-            this.txt_SoTKChuyen.TextChanged += new System.EventHandler(this.txt_SoTKChuyen_TextChanged);
+            this.txtSoTKChuyen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoTKChuyen.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoTKChuyen.Location = new System.Drawing.Point(114, 52);
+            this.txtSoTKChuyen.Name = "txtSoTKChuyen";
+            this.txtSoTKChuyen.Size = new System.Drawing.Size(340, 43);
+            this.txtSoTKChuyen.TabIndex = 84;
+            this.txtSoTKChuyen.TextChanged += new System.EventHandler(this.txt_SoTKChuyen_TextChanged);
             // 
-            // btn_HuyBo
+            // btnHuyBo
             // 
-            this.btn_HuyBo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_HuyBo.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_HuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_HuyBo.BorderRadius = 20;
-            this.btn_HuyBo.BorderSize = 0;
-            this.btn_HuyBo.FlatAppearance.BorderSize = 0;
-            this.btn_HuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HuyBo.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_HuyBo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btn_HuyBo.Location = new System.Drawing.Point(185, 591);
-            this.btn_HuyBo.Name = "btn_HuyBo";
-            this.btn_HuyBo.Size = new System.Drawing.Size(272, 75);
-            this.btn_HuyBo.TabIndex = 83;
-            this.btn_HuyBo.Text = "Hủy Bỏ";
-            this.btn_HuyBo.TextColor = System.Drawing.Color.SteelBlue;
-            this.btn_HuyBo.UseVisualStyleBackColor = false;
-            this.btn_HuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
+            this.btnHuyBo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnHuyBo.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.btnHuyBo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuyBo.BorderRadius = 20;
+            this.btnHuyBo.BorderSize = 0;
+            this.btnHuyBo.FlatAppearance.BorderSize = 0;
+            this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyBo.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHuyBo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnHuyBo.Location = new System.Drawing.Point(185, 591);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(272, 75);
+            this.btnHuyBo.TabIndex = 83;
+            this.btnHuyBo.Text = "Hủy Bỏ";
+            this.btnHuyBo.TextColor = System.Drawing.Color.SteelBlue;
+            this.btnHuyBo.UseVisualStyleBackColor = false;
+            this.btnHuyBo.Click += new System.EventHandler(this.btn_HuyBo_Click);
             // 
-            // btn_ChuyenTien
+            // btnChuyenTien
             // 
-            this.btn_ChuyenTien.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_ChuyenTien.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.btn_ChuyenTien.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ChuyenTien.BorderRadius = 20;
-            this.btn_ChuyenTien.BorderSize = 0;
-            this.btn_ChuyenTien.FlatAppearance.BorderSize = 0;
-            this.btn_ChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChuyenTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ChuyenTien.ForeColor = System.Drawing.Color.White;
-            this.btn_ChuyenTien.Location = new System.Drawing.Point(520, 591);
-            this.btn_ChuyenTien.Name = "btn_ChuyenTien";
-            this.btn_ChuyenTien.Size = new System.Drawing.Size(272, 75);
-            this.btn_ChuyenTien.TabIndex = 82;
-            this.btn_ChuyenTien.Text = "Chuyển Tiền";
-            this.btn_ChuyenTien.TextColor = System.Drawing.Color.White;
-            this.btn_ChuyenTien.UseVisualStyleBackColor = false;
-            this.btn_ChuyenTien.Click += new System.EventHandler(this.btn_ChuyenTien_Click);
+            this.btnChuyenTien.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnChuyenTien.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btnChuyenTien.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnChuyenTien.BorderRadius = 20;
+            this.btnChuyenTien.BorderSize = 0;
+            this.btnChuyenTien.FlatAppearance.BorderSize = 0;
+            this.btnChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChuyenTien.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChuyenTien.ForeColor = System.Drawing.Color.White;
+            this.btnChuyenTien.Location = new System.Drawing.Point(520, 591);
+            this.btnChuyenTien.Name = "btnChuyenTien";
+            this.btnChuyenTien.Size = new System.Drawing.Size(272, 75);
+            this.btnChuyenTien.TabIndex = 82;
+            this.btnChuyenTien.Text = "Chuyển Tiền";
+            this.btnChuyenTien.TextColor = System.Drawing.Color.White;
+            this.btnChuyenTien.UseVisualStyleBackColor = false;
+            this.btnChuyenTien.Click += new System.EventHandler(this.btn_ChuyenTien_Click);
             // 
-            // cb_TenNH
+            // cbTenNH
             // 
-            this.cb_TenNH.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cb_TenNH.FormattingEnabled = true;
-            this.cb_TenNH.Items.AddRange(new object[] {
+            this.cbTenNH.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTenNH.FormattingEnabled = true;
+            this.cbTenNH.Items.AddRange(new object[] {
             "HHB",
             "ACB",
             "Agribank",
@@ -332,11 +332,11 @@
             "Vietcombank",
             "VietinBank",
             "VietCapital Bank"});
-            this.cb_TenNH.Location = new System.Drawing.Point(541, 52);
-            this.cb_TenNH.Name = "cb_TenNH";
-            this.cb_TenNH.Size = new System.Drawing.Size(340, 43);
-            this.cb_TenNH.TabIndex = 81;
-            this.cb_TenNH.Text = "HHB";
+            this.cbTenNH.Location = new System.Drawing.Point(541, 52);
+            this.cbTenNH.Name = "cbTenNH";
+            this.cbTenNH.Size = new System.Drawing.Size(340, 43);
+            this.cbTenNH.TabIndex = 81;
+            this.cbTenNH.Text = "HHB";
             // 
             // label2
             // 
@@ -362,15 +362,15 @@
             this.label1.TabIndex = 79;
             this.label1.Text = "Số Tài Khoản Nhận";
             // 
-            // txt_SoTKNhan
+            // txtSoTKNhan
             // 
-            this.txt_SoTKNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_SoTKNhan.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTKNhan.Location = new System.Drawing.Point(541, 161);
-            this.txt_SoTKNhan.Name = "txt_SoTKNhan";
-            this.txt_SoTKNhan.Size = new System.Drawing.Size(340, 43);
-            this.txt_SoTKNhan.TabIndex = 78;
-            this.txt_SoTKNhan.TextChanged += new System.EventHandler(this.txt_SoTKNhan_TextChanged);
+            this.txtSoTKNhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoTKNhan.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoTKNhan.Location = new System.Drawing.Point(541, 161);
+            this.txtSoTKNhan.Name = "txtSoTKNhan";
+            this.txtSoTKNhan.Size = new System.Drawing.Size(340, 43);
+            this.txtSoTKNhan.TabIndex = 78;
+            this.txtSoTKNhan.TextChanged += new System.EventHandler(this.txt_SoTKNhan_TextChanged);
             // 
             // ChuyenTien
             // 
@@ -390,26 +390,26 @@
 
         private Panel panel1;
         private Label label3;
-        private TextBox txt_TenTKChuyen;
+        private TextBox txtTenTKChuyen;
         private Label lblSoDuString;
         private Label lblSoDu;
         private Label label4;
-        private TextBox txt_SoTien;
+        private TextBox txtSoTien;
         private Label label8;
-        private TextBox txt_SDT;
+        private TextBox txtSDT;
         private Label label7;
-        private TextBox txt_CCCD;
+        private TextBox txtCCCD;
         private Label label5;
-        private TextBox txt_SoTKChuyen;
-        private CustomButton.VBButton btn_HuyBo;
-        private CustomButton.VBButton btn_ChuyenTien;
-        private ComboBox cb_TenNH;
+        private TextBox txtSoTKChuyen;
+        private CustomButton.VBButton btnHuyBo;
+        private CustomButton.VBButton btnChuyenTien;
+        private ComboBox cbTenNH;
         private Label label2;
         private Label label1;
-        private TextBox txt_SoTKNhan;
+        private TextBox txtSoTKNhan;
         private Label label6;
-        private TextBox txt_TenTKNhan;
-        private RichTextBox txt_LoiNhan;
+        private TextBox txtTenTKNhan;
+        private RichTextBox txtLoiNhan;
         private Label label9;
         private Label label10;
     }

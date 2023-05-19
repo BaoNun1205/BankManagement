@@ -42,33 +42,33 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.txt_DanhXung = new System.Windows.Forms.TextBox();
-            this.txt_HoTen = new System.Windows.Forms.TextBox();
-            this.txt_CCCD = new System.Windows.Forms.TextBox();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.txt_Email = new System.Windows.Forms.TextBox();
-            this.txt_NgheNghiep = new System.Windows.Forms.TextBox();
-            this.txt_ThuNhap = new System.Windows.Forms.TextBox();
-            this.txt_SPVay = new System.Windows.Forms.TextBox();
-            this.txt_SoTienVay = new System.Windows.Forms.TextBox();
-            this.txt_ThoiGianVay = new System.Windows.Forms.TextBox();
-            this.txt_ChiNhanhVay = new System.Windows.Forms.TextBox();
-            this.txt_NgayVay = new System.Windows.Forms.TextBox();
-            this.txt_TongSoTien = new System.Windows.Forms.TextBox();
+            this.txtDanhXung = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNgheNghiep = new System.Windows.Forms.TextBox();
+            this.txtThuNhap = new System.Windows.Forms.TextBox();
+            this.txtSPVay = new System.Windows.Forms.TextBox();
+            this.txtSoTienVay = new System.Windows.Forms.TextBox();
+            this.txtThoiGianVay = new System.Windows.Forms.TextBox();
+            this.txtChiNhanhVay = new System.Windows.Forms.TextBox();
+            this.txtNgayVay = new System.Windows.Forms.TextBox();
+            this.txtTongSoTien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_LaiSuat = new System.Windows.Forms.TextBox();
+            this.txtLaiSuat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_SoTienHangThang = new System.Windows.Forms.TextBox();
+            this.txtSoTienHangThang = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_XacNhanVay = new CustomButton.VBButton();
-            this.txt_TinhTien = new System.Windows.Forms.TextBox();
+            this.btnXacNhanVay = new CustomButton.VBButton();
+            this.txtTinhTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Huy = new CustomButton.VBButton();
+            this.btnHuy = new CustomButton.VBButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txt_KhoanVay = new System.Windows.Forms.TextBox();
+            this.txtKhoanVay = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -78,9 +78,9 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(401, 8);
+            this.label2.Location = new System.Drawing.Point(458, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(340, 37);
+            this.label2.Size = new System.Drawing.Size(414, 45);
             this.label2.TabIndex = 4;
             this.label2.Text = "XÁC NHẬN THÔNG TIN";
             // 
@@ -90,10 +90,10 @@
             this.label23.BackColor = System.Drawing.Color.White;
             this.label23.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label23.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label23.Location = new System.Drawing.Point(101, 310);
+            this.label23.Location = new System.Drawing.Point(115, 413);
             this.label23.Name = "label23";
             this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label23.Size = new System.Drawing.Size(50, 16);
+            this.label23.Size = new System.Drawing.Size(61, 19);
             this.label23.TabIndex = 42;
             this.label23.Text = "Địa chỉ";
             // 
@@ -103,10 +103,10 @@
             this.label21.BackColor = System.Drawing.Color.White;
             this.label21.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label21.Location = new System.Drawing.Point(598, 144);
+            this.label21.Location = new System.Drawing.Point(683, 192);
             this.label21.Name = "label21";
             this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label21.Size = new System.Drawing.Size(136, 16);
+            this.label21.Size = new System.Drawing.Size(155, 19);
             this.label21.TabIndex = 41;
             this.label21.Text = "Thu nhập bình quân";
             // 
@@ -116,10 +116,10 @@
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label19.Location = new System.Drawing.Point(66, 497);
+            this.label19.Location = new System.Drawing.Point(75, 663);
             this.label19.Name = "label19";
             this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(87, 16);
+            this.label19.Size = new System.Drawing.Size(101, 19);
             this.label19.TabIndex = 40;
             this.label19.Text = "Nghề nghiệp";
             // 
@@ -129,10 +129,10 @@
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label17.Location = new System.Drawing.Point(111, 436);
+            this.label17.Location = new System.Drawing.Point(127, 581);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label17.Size = new System.Drawing.Size(41, 16);
+            this.label17.Size = new System.Drawing.Size(49, 19);
             this.label17.TabIndex = 39;
             this.label17.Text = "Email";
             // 
@@ -142,10 +142,10 @@
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label15.Location = new System.Drawing.Point(15, 370);
+            this.label15.Location = new System.Drawing.Point(17, 493);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label15.Size = new System.Drawing.Size(136, 16);
+            this.label15.Size = new System.Drawing.Size(159, 19);
             this.label15.TabIndex = 38;
             this.label15.Text = "Số điện thoại liên hệ";
             // 
@@ -155,10 +155,10 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label13.Location = new System.Drawing.Point(17, 254);
+            this.label13.Location = new System.Drawing.Point(19, 339);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(132, 16);
+            this.label13.Size = new System.Drawing.Size(157, 19);
             this.label13.TabIndex = 37;
             this.label13.Text = "Căn cước công dân";
             // 
@@ -168,10 +168,10 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label11.Location = new System.Drawing.Point(87, 200);
+            this.label11.Location = new System.Drawing.Point(99, 267);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(67, 16);
+            this.label11.Size = new System.Drawing.Size(77, 19);
             this.label11.TabIndex = 36;
             this.label11.Text = "Họ và tên";
             // 
@@ -181,9 +181,9 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label8.Location = new System.Drawing.Point(76, 146);
+            this.label8.Location = new System.Drawing.Point(87, 195);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 16);
+            this.label8.Size = new System.Drawing.Size(89, 19);
             this.label8.TabIndex = 35;
             this.label8.Text = "Danh xưng";
             // 
@@ -193,10 +193,10 @@
             this.label26.BackColor = System.Drawing.Color.White;
             this.label26.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label26.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label26.Location = new System.Drawing.Point(639, 308);
+            this.label26.Location = new System.Drawing.Point(730, 411);
             this.label26.Name = "label26";
             this.label26.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label26.Size = new System.Drawing.Size(93, 16);
+            this.label26.Size = new System.Drawing.Size(108, 19);
             this.label26.TabIndex = 50;
             this.label26.Text = "Thời gian vay";
             // 
@@ -206,10 +206,10 @@
             this.label28.BackColor = System.Drawing.Color.White;
             this.label28.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label28.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label28.Location = new System.Drawing.Point(602, 255);
+            this.label28.Location = new System.Drawing.Point(688, 340);
             this.label28.Name = "label28";
             this.label28.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label28.Size = new System.Drawing.Size(128, 16);
+            this.label28.Size = new System.Drawing.Size(150, 19);
             this.label28.TabIndex = 49;
             this.label28.Text = "Số tiền vay dự kiến";
             // 
@@ -219,9 +219,9 @@
             this.label30.BackColor = System.Drawing.Color.White;
             this.label30.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label30.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label30.Location = new System.Drawing.Point(634, 200);
+            this.label30.Location = new System.Drawing.Point(725, 267);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(97, 16);
+            this.label30.Size = new System.Drawing.Size(113, 19);
             this.label30.TabIndex = 48;
             this.label30.Text = "Sản phẩm vay";
             // 
@@ -231,10 +231,10 @@
             this.label32.BackColor = System.Drawing.Color.White;
             this.label32.Font = new System.Drawing.Font("Arial", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label32.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label32.Location = new System.Drawing.Point(89, 78);
+            this.label32.Location = new System.Drawing.Point(102, 104);
             this.label32.Name = "label32";
             this.label32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label32.Size = new System.Drawing.Size(72, 17);
+            this.label32.Size = new System.Drawing.Size(88, 21);
             this.label32.TabIndex = 55;
             this.label32.Text = "Ngày vay";
             // 
@@ -244,182 +244,168 @@
             this.label31.BackColor = System.Drawing.Color.White;
             this.label31.Font = new System.Drawing.Font("Arial", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label31.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label31.Location = new System.Drawing.Point(18, 49);
+            this.label31.Location = new System.Drawing.Point(21, 65);
             this.label31.Name = "label31";
             this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label31.Size = new System.Drawing.Size(138, 17);
+            this.label31.Size = new System.Drawing.Size(169, 21);
             this.label31.TabIndex = 54;
             this.label31.Text = "Chi nhánh cho vay";
             // 
-            // txt_DanhXung
+            // txtDanhXung
             // 
-            this.txt_DanhXung.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_DanhXung.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_DanhXung.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_DanhXung.Location = new System.Drawing.Point(199, 144);
-            this.txt_DanhXung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_DanhXung.Name = "txt_DanhXung";
-            this.txt_DanhXung.ReadOnly = true;
-            this.txt_DanhXung.Size = new System.Drawing.Size(261, 17);
-            this.txt_DanhXung.TabIndex = 56;
+            this.txtDanhXung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDanhXung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDanhXung.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDanhXung.Location = new System.Drawing.Point(227, 192);
+            this.txtDanhXung.Name = "txtDanhXung";
+            this.txtDanhXung.ReadOnly = true;
+            this.txtDanhXung.Size = new System.Drawing.Size(298, 21);
+            this.txtDanhXung.TabIndex = 56;
             // 
-            // txt_HoTen
+            // txtHoTen
             // 
-            this.txt_HoTen.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_HoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_HoTen.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_HoTen.Location = new System.Drawing.Point(199, 199);
-            this.txt_HoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_HoTen.Name = "txt_HoTen";
-            this.txt_HoTen.ReadOnly = true;
-            this.txt_HoTen.Size = new System.Drawing.Size(261, 17);
-            this.txt_HoTen.TabIndex = 57;
+            this.txtHoTen.BackColor = System.Drawing.SystemColors.Window;
+            this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtHoTen.Location = new System.Drawing.Point(227, 265);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.ReadOnly = true;
+            this.txtHoTen.Size = new System.Drawing.Size(298, 21);
+            this.txtHoTen.TabIndex = 57;
             // 
-            // txt_CCCD
+            // txtCCCD
             // 
-            this.txt_CCCD.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_CCCD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_CCCD.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_CCCD.Location = new System.Drawing.Point(199, 253);
-            this.txt_CCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_CCCD.Name = "txt_CCCD";
-            this.txt_CCCD.ReadOnly = true;
-            this.txt_CCCD.Size = new System.Drawing.Size(261, 17);
-            this.txt_CCCD.TabIndex = 58;
+            this.txtCCCD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCCCD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCCCD.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCCCD.Location = new System.Drawing.Point(227, 337);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.ReadOnly = true;
+            this.txtCCCD.Size = new System.Drawing.Size(298, 21);
+            this.txtCCCD.TabIndex = 58;
             // 
-            // txt_DiaChi
+            // txtDiaChi
             // 
-            this.txt_DiaChi.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_DiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_DiaChi.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_DiaChi.Location = new System.Drawing.Point(199, 308);
-            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.ReadOnly = true;
-            this.txt_DiaChi.Size = new System.Drawing.Size(346, 17);
-            this.txt_DiaChi.TabIndex = 59;
+            this.txtDiaChi.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDiaChi.Location = new System.Drawing.Point(227, 411);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.ReadOnly = true;
+            this.txtDiaChi.Size = new System.Drawing.Size(395, 21);
+            this.txtDiaChi.TabIndex = 59;
             // 
-            // txt_SDT
+            // txtSDT
             // 
-            this.txt_SDT.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SDT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SDT.Location = new System.Drawing.Point(199, 369);
-            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.ReadOnly = true;
-            this.txt_SDT.Size = new System.Drawing.Size(261, 17);
-            this.txt_SDT.TabIndex = 60;
+            this.txtSDT.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSDT.Location = new System.Drawing.Point(227, 492);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
+            this.txtSDT.Size = new System.Drawing.Size(298, 21);
+            this.txtSDT.TabIndex = 60;
             // 
-            // txt_Email
+            // txtEmail
             // 
-            this.txt_Email.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Email.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Email.Location = new System.Drawing.Point(199, 435);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.ReadOnly = true;
-            this.txt_Email.Size = new System.Drawing.Size(261, 17);
-            this.txt_Email.TabIndex = 61;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.Location = new System.Drawing.Point(227, 580);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(298, 21);
+            this.txtEmail.TabIndex = 61;
             // 
-            // txt_NgheNghiep
+            // txtNgheNghiep
             // 
-            this.txt_NgheNghiep.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_NgheNghiep.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NgheNghiep.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_NgheNghiep.Location = new System.Drawing.Point(199, 496);
-            this.txt_NgheNghiep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_NgheNghiep.Name = "txt_NgheNghiep";
-            this.txt_NgheNghiep.ReadOnly = true;
-            this.txt_NgheNghiep.Size = new System.Drawing.Size(346, 17);
-            this.txt_NgheNghiep.TabIndex = 62;
+            this.txtNgheNghiep.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNgheNghiep.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgheNghiep.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNgheNghiep.Location = new System.Drawing.Point(227, 661);
+            this.txtNgheNghiep.Name = "txtNgheNghiep";
+            this.txtNgheNghiep.ReadOnly = true;
+            this.txtNgheNghiep.Size = new System.Drawing.Size(395, 21);
+            this.txtNgheNghiep.TabIndex = 62;
             // 
-            // txt_ThuNhap
+            // txtThuNhap
             // 
-            this.txt_ThuNhap.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ThuNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ThuNhap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_ThuNhap.Location = new System.Drawing.Point(772, 144);
-            this.txt_ThuNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_ThuNhap.Name = "txt_ThuNhap";
-            this.txt_ThuNhap.ReadOnly = true;
-            this.txt_ThuNhap.Size = new System.Drawing.Size(261, 17);
-            this.txt_ThuNhap.TabIndex = 63;
+            this.txtThuNhap.BackColor = System.Drawing.SystemColors.Window;
+            this.txtThuNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtThuNhap.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtThuNhap.Location = new System.Drawing.Point(882, 192);
+            this.txtThuNhap.Name = "txtThuNhap";
+            this.txtThuNhap.ReadOnly = true;
+            this.txtThuNhap.Size = new System.Drawing.Size(298, 21);
+            this.txtThuNhap.TabIndex = 63;
             // 
-            // txt_SPVay
+            // txtSPVay
             // 
-            this.txt_SPVay.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SPVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SPVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SPVay.Location = new System.Drawing.Point(772, 199);
-            this.txt_SPVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_SPVay.Name = "txt_SPVay";
-            this.txt_SPVay.ReadOnly = true;
-            this.txt_SPVay.Size = new System.Drawing.Size(367, 17);
-            this.txt_SPVay.TabIndex = 64;
+            this.txtSPVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSPVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSPVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSPVay.Location = new System.Drawing.Point(882, 265);
+            this.txtSPVay.Name = "txtSPVay";
+            this.txtSPVay.ReadOnly = true;
+            this.txtSPVay.Size = new System.Drawing.Size(419, 21);
+            this.txtSPVay.TabIndex = 64;
             // 
-            // txt_SoTienVay
+            // txtSoTienVay
             // 
-            this.txt_SoTienVay.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SoTienVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SoTienVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTienVay.Location = new System.Drawing.Point(772, 254);
-            this.txt_SoTienVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_SoTienVay.Name = "txt_SoTienVay";
-            this.txt_SoTienVay.ReadOnly = true;
-            this.txt_SoTienVay.Size = new System.Drawing.Size(261, 17);
-            this.txt_SoTienVay.TabIndex = 65;
+            this.txtSoTienVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSoTienVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSoTienVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoTienVay.Location = new System.Drawing.Point(882, 339);
+            this.txtSoTienVay.Name = "txtSoTienVay";
+            this.txtSoTienVay.ReadOnly = true;
+            this.txtSoTienVay.Size = new System.Drawing.Size(298, 21);
+            this.txtSoTienVay.TabIndex = 65;
             // 
-            // txt_ThoiGianVay
+            // txtThoiGianVay
             // 
-            this.txt_ThoiGianVay.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ThoiGianVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ThoiGianVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_ThoiGianVay.Location = new System.Drawing.Point(772, 308);
-            this.txt_ThoiGianVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_ThoiGianVay.Name = "txt_ThoiGianVay";
-            this.txt_ThoiGianVay.ReadOnly = true;
-            this.txt_ThoiGianVay.Size = new System.Drawing.Size(261, 17);
-            this.txt_ThoiGianVay.TabIndex = 66;
+            this.txtThoiGianVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtThoiGianVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtThoiGianVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtThoiGianVay.Location = new System.Drawing.Point(882, 411);
+            this.txtThoiGianVay.Name = "txtThoiGianVay";
+            this.txtThoiGianVay.ReadOnly = true;
+            this.txtThoiGianVay.Size = new System.Drawing.Size(298, 21);
+            this.txtThoiGianVay.TabIndex = 66;
             // 
-            // txt_ChiNhanhVay
+            // txtChiNhanhVay
             // 
-            this.txt_ChiNhanhVay.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_ChiNhanhVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ChiNhanhVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_ChiNhanhVay.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_ChiNhanhVay.Location = new System.Drawing.Point(185, 48);
-            this.txt_ChiNhanhVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_ChiNhanhVay.Name = "txt_ChiNhanhVay";
-            this.txt_ChiNhanhVay.ReadOnly = true;
-            this.txt_ChiNhanhVay.Size = new System.Drawing.Size(261, 17);
-            this.txt_ChiNhanhVay.TabIndex = 67;
+            this.txtChiNhanhVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtChiNhanhVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtChiNhanhVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtChiNhanhVay.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtChiNhanhVay.Location = new System.Drawing.Point(211, 64);
+            this.txtChiNhanhVay.Name = "txtChiNhanhVay";
+            this.txtChiNhanhVay.ReadOnly = true;
+            this.txtChiNhanhVay.Size = new System.Drawing.Size(298, 21);
+            this.txtChiNhanhVay.TabIndex = 67;
             // 
-            // txt_NgayVay
+            // txtNgayVay
             // 
-            this.txt_NgayVay.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_NgayVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NgayVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_NgayVay.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_NgayVay.Location = new System.Drawing.Point(185, 78);
-            this.txt_NgayVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_NgayVay.Name = "txt_NgayVay";
-            this.txt_NgayVay.ReadOnly = true;
-            this.txt_NgayVay.Size = new System.Drawing.Size(261, 17);
-            this.txt_NgayVay.TabIndex = 68;
+            this.txtNgayVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNgayVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgayVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNgayVay.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtNgayVay.Location = new System.Drawing.Point(211, 104);
+            this.txtNgayVay.Name = "txtNgayVay";
+            this.txtNgayVay.ReadOnly = true;
+            this.txtNgayVay.Size = new System.Drawing.Size(298, 21);
+            this.txtNgayVay.TabIndex = 68;
             // 
-            // txt_TongSoTien
+            // txtTongSoTien
             // 
-            this.txt_TongSoTien.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_TongSoTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TongSoTien.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TongSoTien.Location = new System.Drawing.Point(772, 435);
-            this.txt_TongSoTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_TongSoTien.Name = "txt_TongSoTien";
-            this.txt_TongSoTien.ReadOnly = true;
-            this.txt_TongSoTien.Size = new System.Drawing.Size(261, 17);
-            this.txt_TongSoTien.TabIndex = 70;
+            this.txtTongSoTien.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTongSoTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongSoTien.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTongSoTien.Location = new System.Drawing.Point(882, 580);
+            this.txtTongSoTien.Name = "txtTongSoTien";
+            this.txtTongSoTien.ReadOnly = true;
+            this.txtTongSoTien.Size = new System.Drawing.Size(298, 21);
+            this.txtTongSoTien.TabIndex = 70;
             // 
             // label1
             // 
@@ -427,24 +413,23 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(595, 435);
+            this.label1.Location = new System.Drawing.Point(680, 580);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(138, 16);
+            this.label1.Size = new System.Drawing.Size(158, 19);
             this.label1.TabIndex = 69;
             this.label1.Text = "Tổng số tiền phải trả";
             // 
-            // txt_LaiSuat
+            // txtLaiSuat
             // 
-            this.txt_LaiSuat.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_LaiSuat.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_LaiSuat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_LaiSuat.Location = new System.Drawing.Point(772, 369);
-            this.txt_LaiSuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_LaiSuat.Name = "txt_LaiSuat";
-            this.txt_LaiSuat.ReadOnly = true;
-            this.txt_LaiSuat.Size = new System.Drawing.Size(261, 17);
-            this.txt_LaiSuat.TabIndex = 72;
+            this.txtLaiSuat.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLaiSuat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLaiSuat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLaiSuat.Location = new System.Drawing.Point(882, 492);
+            this.txtLaiSuat.Name = "txtLaiSuat";
+            this.txtLaiSuat.ReadOnly = true;
+            this.txtLaiSuat.Size = new System.Drawing.Size(298, 21);
+            this.txtLaiSuat.TabIndex = 72;
             // 
             // label3
             // 
@@ -452,24 +437,23 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(676, 370);
+            this.label3.Location = new System.Drawing.Point(773, 493);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 71;
             this.label3.Text = "Lãi suất";
             // 
-            // txt_SoTienHangThang
+            // txtSoTienHangThang
             // 
-            this.txt_SoTienHangThang.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_SoTienHangThang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SoTienHangThang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_SoTienHangThang.Location = new System.Drawing.Point(772, 496);
-            this.txt_SoTienHangThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_SoTienHangThang.Name = "txt_SoTienHangThang";
-            this.txt_SoTienHangThang.ReadOnly = true;
-            this.txt_SoTienHangThang.Size = new System.Drawing.Size(261, 17);
-            this.txt_SoTienHangThang.TabIndex = 74;
+            this.txtSoTienHangThang.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSoTienHangThang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSoTienHangThang.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSoTienHangThang.Location = new System.Drawing.Point(882, 661);
+            this.txtSoTienHangThang.Name = "txtSoTienHangThang";
+            this.txtSoTienHangThang.ReadOnly = true;
+            this.txtSoTienHangThang.Size = new System.Drawing.Size(298, 21);
+            this.txtSoTienHangThang.TabIndex = 74;
             // 
             // label4
             // 
@@ -477,45 +461,43 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label4.Location = new System.Drawing.Point(553, 496);
+            this.label4.Location = new System.Drawing.Point(632, 661);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(179, 16);
+            this.label4.Size = new System.Drawing.Size(206, 19);
             this.label4.TabIndex = 73;
             this.label4.Text = "Số tiền phải trả hàng tháng";
             // 
-            // btn_XacNhanVay
+            // btnXacNhanVay
             // 
-            this.btn_XacNhanVay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XacNhanVay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_XacNhanVay.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_XacNhanVay.BorderRadius = 20;
-            this.btn_XacNhanVay.BorderSize = 0;
-            this.btn_XacNhanVay.FlatAppearance.BorderSize = 0;
-            this.btn_XacNhanVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XacNhanVay.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_XacNhanVay.ForeColor = System.Drawing.Color.White;
-            this.btn_XacNhanVay.Location = new System.Drawing.Point(451, 561);
-            this.btn_XacNhanVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_XacNhanVay.Name = "btn_XacNhanVay";
-            this.btn_XacNhanVay.Size = new System.Drawing.Size(257, 47);
-            this.btn_XacNhanVay.TabIndex = 75;
-            this.btn_XacNhanVay.Text = "XÁC NHẬN VAY";
-            this.btn_XacNhanVay.TextColor = System.Drawing.Color.White;
-            this.btn_XacNhanVay.UseVisualStyleBackColor = false;
-            this.btn_XacNhanVay.Click += new System.EventHandler(this.btn_XacNhanVay_Click);
+            this.btnXacNhanVay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXacNhanVay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnXacNhanVay.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXacNhanVay.BorderRadius = 20;
+            this.btnXacNhanVay.BorderSize = 0;
+            this.btnXacNhanVay.FlatAppearance.BorderSize = 0;
+            this.btnXacNhanVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhanVay.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXacNhanVay.ForeColor = System.Drawing.Color.White;
+            this.btnXacNhanVay.Location = new System.Drawing.Point(515, 748);
+            this.btnXacNhanVay.Name = "btnXacNhanVay";
+            this.btnXacNhanVay.Size = new System.Drawing.Size(294, 63);
+            this.btnXacNhanVay.TabIndex = 75;
+            this.btnXacNhanVay.Text = "XÁC NHẬN VAY";
+            this.btnXacNhanVay.TextColor = System.Drawing.Color.White;
+            this.btnXacNhanVay.UseVisualStyleBackColor = false;
+            this.btnXacNhanVay.Click += new System.EventHandler(this.btn_XacNhanVay_Click);
             // 
-            // txt_TinhTien
+            // txtTinhTien
             // 
-            this.txt_TinhTien.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_TinhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TinhTien.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TinhTien.Location = new System.Drawing.Point(738, 454);
-            this.txt_TinhTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_TinhTien.Name = "txt_TinhTien";
-            this.txt_TinhTien.ReadOnly = true;
-            this.txt_TinhTien.Size = new System.Drawing.Size(400, 12);
-            this.txt_TinhTien.TabIndex = 77;
+            this.txtTinhTien.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTinhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTinhTien.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTinhTien.Location = new System.Drawing.Point(843, 605);
+            this.txtTinhTien.Name = "txtTinhTien";
+            this.txtTinhTien.ReadOnly = true;
+            this.txtTinhTien.Size = new System.Drawing.Size(457, 15);
+            this.txtTinhTien.TabIndex = 77;
             // 
             // label5
             // 
@@ -523,10 +505,10 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label5.Location = new System.Drawing.Point(657, 454);
+            this.label5.Location = new System.Drawing.Point(751, 605);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(72, 14);
+            this.label5.Size = new System.Drawing.Size(87, 16);
             this.label5.TabIndex = 76;
             this.label5.Text = "Cách tính tiền";
             // 
@@ -535,69 +517,64 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(798, 369);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(912, 492);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(49, 17);
+            this.textBox1.Size = new System.Drawing.Size(56, 21);
             this.textBox1.TabIndex = 78;
             this.textBox1.Text = "%/năm";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Location = new System.Drawing.Point(550, 141);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(629, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 375);
+            this.panel1.Size = new System.Drawing.Size(1, 500);
             this.panel1.TabIndex = 79;
             // 
-            // btn_Huy
+            // btnHuy
             // 
-            this.btn_Huy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_Huy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.btn_Huy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Huy.BorderRadius = 20;
-            this.btn_Huy.BorderSize = 0;
-            this.btn_Huy.FlatAppearance.BorderSize = 0;
-            this.btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Huy.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Huy.ForeColor = System.Drawing.Color.White;
-            this.btn_Huy.Location = new System.Drawing.Point(111, 566);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(129, 38);
-            this.btn_Huy.TabIndex = 80;
-            this.btn_Huy.Text = "HỦY";
-            this.btn_Huy.TextColor = System.Drawing.Color.White;
-            this.btn_Huy.UseVisualStyleBackColor = false;
-            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuy.BorderRadius = 20;
+            this.btnHuy.BorderSize = 0;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(127, 755);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(147, 51);
+            this.btnHuy.TabIndex = 80;
+            this.btnHuy.Text = "HỦY";
+            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(807, 308);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(922, 411);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(49, 17);
+            this.textBox2.Size = new System.Drawing.Size(56, 21);
             this.textBox2.TabIndex = 81;
             this.textBox2.Text = "tháng";
             // 
-            // txt_KhoanVay
+            // txtKhoanVay
             // 
-            this.txt_KhoanVay.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_KhoanVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_KhoanVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_KhoanVay.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_KhoanVay.Location = new System.Drawing.Point(185, 107);
-            this.txt_KhoanVay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_KhoanVay.Name = "txt_KhoanVay";
-            this.txt_KhoanVay.ReadOnly = true;
-            this.txt_KhoanVay.Size = new System.Drawing.Size(261, 17);
-            this.txt_KhoanVay.TabIndex = 83;
+            this.txtKhoanVay.BackColor = System.Drawing.SystemColors.Window;
+            this.txtKhoanVay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKhoanVay.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtKhoanVay.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtKhoanVay.Location = new System.Drawing.Point(211, 143);
+            this.txtKhoanVay.Name = "txtKhoanVay";
+            this.txtKhoanVay.ReadOnly = true;
+            this.txtKhoanVay.Size = new System.Drawing.Size(298, 21);
+            this.txtKhoanVay.TabIndex = 83;
             // 
             // label6
             // 
@@ -605,47 +582,47 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Arial", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label6.Location = new System.Drawing.Point(76, 107);
+            this.label6.Location = new System.Drawing.Point(87, 143);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.Size = new System.Drawing.Size(100, 21);
             this.label6.TabIndex = 82;
             this.label6.Text = "Khoản vay";
             // 
             // FrmXacNhanThongTinNguoiDungVay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1139, 630);
-            this.Controls.Add(this.txt_KhoanVay);
+            this.ClientSize = new System.Drawing.Size(1302, 840);
+            this.Controls.Add(this.txtKhoanVay);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.btn_Huy);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txt_TinhTien);
+            this.Controls.Add(this.txtTinhTien);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btn_XacNhanVay);
-            this.Controls.Add(this.txt_SoTienHangThang);
+            this.Controls.Add(this.btnXacNhanVay);
+            this.Controls.Add(this.txtSoTienHangThang);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_LaiSuat);
+            this.Controls.Add(this.txtLaiSuat);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_TongSoTien);
+            this.Controls.Add(this.txtTongSoTien);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_NgayVay);
-            this.Controls.Add(this.txt_ChiNhanhVay);
-            this.Controls.Add(this.txt_ThoiGianVay);
-            this.Controls.Add(this.txt_SoTienVay);
-            this.Controls.Add(this.txt_SPVay);
-            this.Controls.Add(this.txt_ThuNhap);
-            this.Controls.Add(this.txt_NgheNghiep);
-            this.Controls.Add(this.txt_Email);
-            this.Controls.Add(this.txt_SDT);
-            this.Controls.Add(this.txt_DiaChi);
-            this.Controls.Add(this.txt_CCCD);
-            this.Controls.Add(this.txt_HoTen);
-            this.Controls.Add(this.txt_DanhXung);
+            this.Controls.Add(this.txtNgayVay);
+            this.Controls.Add(this.txtChiNhanhVay);
+            this.Controls.Add(this.txtThoiGianVay);
+            this.Controls.Add(this.txtSoTienVay);
+            this.Controls.Add(this.txtSPVay);
+            this.Controls.Add(this.txtThuNhap);
+            this.Controls.Add(this.txtNgheNghiep);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtCCCD);
+            this.Controls.Add(this.txtHoTen);
+            this.Controls.Add(this.txtDanhXung);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label26);
@@ -661,7 +638,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmXacNhanThongTinNguoiDungVay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XacNhanThongTinNguoiDungVay";
@@ -687,33 +663,33 @@
         private Label label30;
         private Label label32;
         private Label label31;
-        private TextBox txt_DanhXung;
-        private TextBox txt_HoTen;
-        private TextBox txt_CCCD;
-        private TextBox txt_DiaChi;
-        private TextBox txt_SDT;
-        private TextBox txt_Email;
-        private TextBox txt_NgheNghiep;
-        private TextBox txt_ThuNhap;
-        private TextBox txt_SPVay;
-        private TextBox txt_SoTienVay;
-        private TextBox txt_ThoiGianVay;
-        private TextBox txt_ChiNhanhVay;
-        private TextBox txt_NgayVay;
-        private TextBox txt_TongSoTien;
+        private TextBox txtDanhXung;
+        private TextBox txtHoTen;
+        private TextBox txtCCCD;
+        private TextBox txtDiaChi;
+        private TextBox txtSDT;
+        private TextBox txtEmail;
+        private TextBox txtNgheNghiep;
+        private TextBox txtThuNhap;
+        private TextBox txtSPVay;
+        private TextBox txtSoTienVay;
+        private TextBox txtThoiGianVay;
+        private TextBox txtChiNhanhVay;
+        private TextBox txtNgayVay;
+        private TextBox txtTongSoTien;
         private Label label1;
-        private TextBox txt_LaiSuat;
+        private TextBox txtLaiSuat;
         private Label label3;
-        private TextBox txt_SoTienHangThang;
+        private TextBox txtSoTienHangThang;
         private Label label4;
-        private CustomButton.VBButton btn_XacNhanVay;
-        private TextBox txt_TinhTien;
+        private CustomButton.VBButton btnXacNhanVay;
+        private TextBox txtTinhTien;
         private Label label5;
         private TextBox textBox1;
         private Panel panel1;
-        private CustomButton.VBButton btn_Huy;
+        private CustomButton.VBButton btnHuy;
         private TextBox textBox2;
-        private TextBox txt_KhoanVay;
+        private TextBox txtKhoanVay;
         private Label label6;
     }
 }

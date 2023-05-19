@@ -26,20 +26,20 @@ namespace DOAN_Nhom4
         {
             NguoiDung ngDung = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
+            ngDung = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txt_TenTK.Text = ngDung.TenTK.ToString();
-                txt_CCCD.Text = ngDung.Cccd.ToString();
-                txt_SDT.Text = ngDung.Sdt.ToString();
+                txtTenTK.Text = ngDung.TenTK.ToString();
+                txtCCCD.Text = ngDung.Cccd.ToString();
+                txtSDT.Text = ngDung.Sdt.ToString();
                 lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
             }
             else
             {
-                txt_TenTK.Text = "Khong ton tai";
-                txt_CCCD.Text = "";
-                txt_SDT.Text = "";
+                txtTenTK.Text = "Khong ton tai";
+                txtCCCD.Text = "";
+                txtSDT.Text = "";
                 lblSoDu.Text = "-";
             }
         }
@@ -52,20 +52,20 @@ namespace DOAN_Nhom4
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkRut = new TaiKhoanNganHang();
-            tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
+            tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
             NguoiDung ndRut = new NguoiDung();
-            ndRut = ndDAO.LayKhachHang("SoTK", txt_SoTK.Text, "TenNH", "HHB");
-            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", decimal.Parse(txt_SoTien.Text), "Rut tien ra khoi tai khoan");
+            ndRut = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", decimal.Parse(txtSoTien.Text), "Rut tien ra khoi tai khoan");
             if (tkRut != null)
             {
                 if (gd.SoTien >= 100000 && gd.SoTien <= tkRut.SoDu)
                 {
                     tknhDAO.RutTien(tkRut, gd);
                     lsgdDAO.Them(gd);
-                    txt_SoTK.Text = "";
-                    txt_SoTien.Text = "";
-                    txt_CCCD.Text = "";
-                    txt_SDT.Text = "";
+                    txtSoTK.Text = "";
+                    txtSoTien.Text = "";
+                    txtCCCD.Text = "";
+                    txtSDT.Text = "";
                     MessageBox.Show("Rút tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -77,11 +77,11 @@ namespace DOAN_Nhom4
 
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
-            txt_SoTK.Text = "";
-            txt_SoTien.Text = "";
-            txt_CCCD.Text = "";
-            txt_SDT.Text = "";
-            txt_TenTK.Text = "";
+            txtSoTK.Text = "";
+            txtSoTien.Text = "";
+            txtCCCD.Text = "";
+            txtSDT.Text = "";
+            txtTenTK.Text = "";
             lblSoDu.Text = "-";
         }
     }

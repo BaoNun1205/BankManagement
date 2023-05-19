@@ -28,20 +28,20 @@ namespace DOAN_Nhom4
         {
             NguoiDung ngDung = new NguoiDung();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");           
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");
+            ngDung = ndDAO.LayKhachHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");           
+            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txt_TenTKChuyen.Text = ngDung.TenTK.ToString();
-                txt_CCCD.Text = ngDung.Cccd.ToString();
-                txt_SDT.Text = ngDung.Sdt.ToString();
+                txtTenTKChuyen.Text = ngDung.TenTK.ToString();
+                txtCCCD.Text = ngDung.Cccd.ToString();
+                txtSDT.Text = ngDung.Sdt.ToString();
                 lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
             }
             else
             {
-                txt_TenTKChuyen.Text = "Khong ton tai";
-                txt_CCCD.Text = "";
-                txt_SDT.Text = "";
+                txtTenTKChuyen.Text = "Khong ton tai";
+                txtCCCD.Text = "";
+                txtSDT.Text = "";
                 lblSoDu.Text = "-";
             }
         }
@@ -49,32 +49,32 @@ namespace DOAN_Nhom4
         public void HienThiThongTinNguoiNhan()
         {
             NguoiDung ngDungNhan = new NguoiDung();
-            ngDungNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+            ngDungNhan = ndDAO.LayKhachHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
             if (ngDungNhan != null)
             {
-                txt_TenTKNhan.Text = ngDungNhan.TenTK.ToString();
+                txtTenTKNhan.Text = ngDungNhan.TenTK.ToString();
             }
             else
             {
-                txt_TenTKNhan.Text = "Khong ton tai";
+                txtTenTKNhan.Text = "Khong ton tai";
             }
         }
         public void HienThiThongTinNguoiNhanCoDieuKien()
         {
             NguoiDung ngDungNhan = new NguoiDung();
-            ngDungNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+            ngDungNhan = ndDAO.LayKhachHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
             NguoiDung ngDungChuyen = new NguoiDung();
-            ngDungChuyen = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");
+            ngDungChuyen = ndDAO.LayKhachHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
             if (ngDungNhan != null)
             {
                 if (ngDungChuyen.TenNH == ngDungNhan.TenNH && ngDungChuyen.SoTK == ngDungNhan.SoTK)
-                    txt_TenTKNhan.Text = "Khong duoc chuyen cho chinh minh";
+                    txtTenTKNhan.Text = "Khong duoc chuyen cho chinh minh";
                 else
-                    txt_TenTKNhan.Text = ngDungNhan.TenTK.ToString();
+                    txtTenTKNhan.Text = ngDungNhan.TenTK.ToString();
             }
             else
             {
-                txt_TenTKNhan.Text = "Khong ton tai";
+                txtTenTKNhan.Text = "Khong ton tai";
             }
         }
         private void txt_SoTKChuyen_TextChanged(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace DOAN_Nhom4
 
         private void txt_SoTKNhan_TextChanged(object sender, EventArgs e)
         {
-            if(txt_SoTKChuyen.Text == "")
+            if(txtSoTKChuyen.Text == "")
             {
                 HienThiThongTinNguoiNhan();
             }
@@ -97,14 +97,14 @@ namespace DOAN_Nhom4
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
-            tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");
+            tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
             NguoiDung ndGui = new NguoiDung();
-            ndGui = ndDAO.LayKhachHang("SoTK", txt_SoTKChuyen.Text, "TenNH", "HHB");
+            ndGui = ndDAO.LayKhachHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
             TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
-            tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
+            tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
             NguoiDung ndNhan = new NguoiDung();
-            ndNhan = ndDAO.LayKhachHang("SoTK", txt_SoTKNhan.Text, "TenNH", cb_TenNH.Text);
-            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, decimal.Parse(txt_SoTien.Text), txt_LoiNhan.Text);
+            ndNhan = ndDAO.LayKhachHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
+            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, decimal.Parse(txtSoTien.Text), txtLoiNhan.Text);
             if (tkGui != null)
             {
                 if (tkNhan != null)
@@ -115,13 +115,13 @@ namespace DOAN_Nhom4
                         {
                             chuyentienDAO.ChuyenTien(tkGui, gd, tkNhan);
                             lsgdDAO.Them(gd);
-                            txt_SoTKNhan.Text = "";
-                            txt_SoTKChuyen.Text = "";
-                            cb_TenNH.Text = "HHB";
-                            txt_SoTien.Text = "";
-                            txt_CCCD.Text = "";
-                            txt_SDT.Text = "";
-                            txt_LoiNhan.Text = "";
+                            txtSoTKNhan.Text = "";
+                            txtSoTKChuyen.Text = "";
+                            cbTenNH.Text = "HHB";
+                            txtSoTien.Text = "";
+                            txtCCCD.Text = "";
+                            txtSDT.Text = "";
+                            txtLoiNhan.Text = "";
                             MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
@@ -137,16 +137,16 @@ namespace DOAN_Nhom4
 
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
-            txt_SoTKChuyen.Text = "";
-            txt_SoTien.Text = "";
-            txt_CCCD.Text = "";
-            txt_SDT.Text = "";
-            txt_TenTKNhan.Text = "";
-            txt_TenTKChuyen.Text = "";
-            txt_TenTKNhan.Text = "";
-            cb_TenNH.Text = "HHB";
+            txtSoTKChuyen.Text = "";
+            txtSoTien.Text = "";
+            txtCCCD.Text = "";
+            txtSDT.Text = "";
+            txtTenTKNhan.Text = "";
+            txtTenTKChuyen.Text = "";
+            txtTenTKNhan.Text = "";
+            cbTenNH.Text = "HHB";
             lblSoDu.Text = "-";
-            txt_LoiNhan.Text = "";
+            txtLoiNhan.Text = "";
         }
     }
 }

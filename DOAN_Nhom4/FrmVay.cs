@@ -38,55 +38,55 @@ namespace DOAN_Nhom4
 
         private void txt_DiaChiLienLac_Click(object sender, EventArgs e)
         {
-            if (txt_DiaChiLienLac.Text == "Địa chỉ khác")
+            if (txtDiaChiLienLac.Text == "Địa chỉ khác")
             {
-                txt_DiaChiLienLac.Text = "";
-                txt_DiaChiLienLac.ForeColor = Color.Black;
+                txtDiaChiLienLac.Text = "";
+                txtDiaChiLienLac.ForeColor = Color.Black;
             }
         }
 
         private void txt_DiaChiLienLac_Leave(object sender, EventArgs e)
         {
-            if (txt_DiaChiLienLac.Text == "")
+            if (txtDiaChiLienLac.Text == "")
             {
-                txt_DiaChiLienLac.Text = "Địa chỉ khác";
-                txt_DiaChiLienLac.ForeColor = Color.Silver;
+                txtDiaChiLienLac.Text = "Địa chỉ khác";
+                txtDiaChiLienLac.ForeColor = Color.Silver;
             }
         }
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             string s;
-            if (cb_DiaChiLienLac.Checked == true)
+            if (cbDiaChiLienLac.Checked == true)
             {
                 s = "Dang ky Online";
             }
             else
-                s = txt_DiaChiLienLac.Text;
+                s = txtDiaChiLienLac.Text;
             if (IsNull(sender, e) == true)
             {
-                if (cb_DongY.Checked == true)
+                if (cbDongY.Checked == true)
                 {
-                    if (decimal.Parse(txt_SoTienVay.Text) > 0 && decimal.Parse(txt_SoTienVay.Text) % 1000 == 0)
+                    if (decimal.Parse(txtSoTienVay.Text) > 0 && decimal.Parse(txtSoTienVay.Text) % 1000 == 0)
                     {
-                        if (int.Parse(txt_ThoiGianVay.Text) >= 6 && int.Parse(txt_ThoiGianVay.Text) <= 60)
+                        if (int.Parse(txtThoiGianVay.Text) >= 6 && int.Parse(txtThoiGianVay.Text) <= 60)
                         {
                             ThongTinNguoiDungVay tmp = ttNgDungDAO.TKValid(nguoiDung.SoTK);
                             if (tmp == null)
                             {
                                 string txt_LoaiKhoanVay = "";
-                                if (rb_TheChap.Checked)
+                                if (rbTheChap.Checked)
                                 {
-                                    txt_LoaiKhoanVay = rb_TheChap.Text;
+                                    txt_LoaiKhoanVay = rbTheChap.Text;
                                 }
-                                if (rb_TinChap.Checked)
+                                if (rbTinChap.Checked)
                                 {
-                                    txt_LoaiKhoanVay = rb_TinChap.Text;
-                                    cb_SPVay.Text = "TIEU DUNG KHONG CO TAI SAN DAM BAO";
-                                    txt_TaiSan.Text = "Trong";
-                                    txt_GiaTriTaiSan.Text = "0";
+                                    txt_LoaiKhoanVay = rbTinChap.Text;
+                                    cbSPVay.Text = "TIEU DUNG KHONG CO TAI SAN DAM BAO";
+                                    txtTaiSan.Text = "Trong";
+                                    txtGiaTriTaiSan.Text = "0";
                                 }
-                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTK, cb_DanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txt_DiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cb_NgheNghiep.Text, cb_ThuNhap.Text, cb_SPVay.Text, decimal.Parse(txt_SoTienVay.Text), int.Parse(txt_ThoiGianVay.Text), txt_TaiSan.Text, int.Parse(txt_GiaTriTaiSan.Text), s, txt_NgayVay.Value);
+                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTK, cbDanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txtDiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cbNgheNghiep.Text, cbThuNhap.Text, cbSPVay.Text, decimal.Parse(txtSoTienVay.Text), int.Parse(txtThoiGianVay.Text), txtTaiSan.Text, int.Parse(txtGiaTriTaiSan.Text), s, txtNgayVay.Value);
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                                 Utility.addForm(xacnhan, pnlNguoiDung);
                             }
@@ -114,19 +114,19 @@ namespace DOAN_Nhom4
 
         private void cb_DiaChiLienLac_MouseClick(object sender, MouseEventArgs e)
         {
-            if (cb_DiaChiLienLac.Checked == true)
+            if (cbDiaChiLienLac.Checked == true)
             {
-                txt_DiaChiLienLac.ReadOnly = true;
+                txtDiaChiLienLac.ReadOnly = true;
             }
-            else if (cb_DiaChiLienLac.Checked == false)
+            else if (cbDiaChiLienLac.Checked == false)
             {
-                txt_DiaChiLienLac.ReadOnly = false;
-                if (txt_DiaChiLienLac.Text == null)
+                txtDiaChiLienLac.ReadOnly = false;
+                if (txtDiaChiLienLac.Text == null)
                 {
-                    cb_DiaChiLienLac.Enabled = false;
+                    cbDiaChiLienLac.Enabled = false;
                 }
                 else
-                    cb_DiaChiLienLac.Enabled = true;
+                    cbDiaChiLienLac.Enabled = true;
             }
         }
 
@@ -149,44 +149,44 @@ namespace DOAN_Nhom4
 
         private void rb_TinChap_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_TinChap.Checked)
+            if (rbTinChap.Checked)
             {
-                cb_SPVay.Enabled = false;
-                txt_TaiSan.Enabled = false;
-                txt_GiaTriTaiSan.Enabled = false;
+                cbSPVay.Enabled = false;
+                txtTaiSan.Enabled = false;
+                txtGiaTriTaiSan.Enabled = false;
             }
         }
 
         private void rb_TheChap_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb_TheChap.Checked)
+            if (rbTheChap.Checked)
             {
-                cb_SPVay.Enabled = true;
-                txt_TaiSan.Enabled = true;
-                txt_GiaTriTaiSan.Enabled = true;
+                cbSPVay.Enabled = true;
+                txtTaiSan.Enabled = true;
+                txtGiaTriTaiSan.Enabled = true;
             }
         }
 
         private void HienThi()
         {
-            txt_HoTen.Text = nguoiDung.TenTK;
-            txt_CCCD.Text = nguoiDung.Cccd;
-            txt_SDT.Text = nguoiDung.Sdt;
-            txt_Email.Text = nguoiDung.Email;
+            txtHoTen.Text = nguoiDung.TenTK;
+            txtCCCD.Text = nguoiDung.Cccd;
+            txtSDT.Text = nguoiDung.Sdt;
+            txtEmail.Text = nguoiDung.Email;
         }
 
         public bool IsNull(object sender, EventArgs e)
         {
-            if (rb_TinChap.Checked)
+            if (rbTinChap.Checked)
             {
-                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+                if (txtHoTen.Text != null && txtCCCD.Text != null && txtDiaChi.Text != null && txtSDT.Text != null && db.IsPhone(txtSDT.Text) == true && txtEmail.Text != null && db.IsEmail(txtEmail.Text) == true && cbNgheNghiep.Text != "Chọn" && cbThuNhap.Text != "Chọn" && txtSoTienVay.Text != null && txtThoiGianVay.Text != null && (cbDiaChiLienLac.Checked == true || txtDiaChiLienLac.Text != null))
                 {
                     return true;
                 }
             }
-            if(rb_TheChap.Checked)
+            if(rbTheChap.Checked)
             {
-                if (txt_HoTen.Text != null && txt_CCCD.Text != null && txt_DiaChi.Text != null && txt_SDT.Text != null && db.IsPhone(txt_SDT.Text) == true && txt_Email.Text != null && db.IsEmail(txt_Email.Text) == true && cb_NgheNghiep.Text != "Chọn" && cb_ThuNhap.Text != "Chọn" && cb_SPVay.Text != "Chọn" && txt_SoTienVay.Text != null && txt_ThoiGianVay.Text != null && txt_TaiSan.Text != null && txt_GiaTriTaiSan.Text != null && (cb_DiaChiLienLac.Checked == true || txt_DiaChiLienLac.Text != null))
+                if (txtHoTen.Text != null && txtCCCD.Text != null && txtDiaChi.Text != null && txtSDT.Text != null && db.IsPhone(txtSDT.Text) == true && txtEmail.Text != null && db.IsEmail(txtEmail.Text) == true && cbNgheNghiep.Text != "Chọn" && cbThuNhap.Text != "Chọn" && cbSPVay.Text != "Chọn" && txtSoTienVay.Text != null && txtThoiGianVay.Text != null && txtTaiSan.Text != null && txtGiaTriTaiSan.Text != null && (cbDiaChiLienLac.Checked == true || txtDiaChiLienLac.Text != null))
                 {
                     return true;
                 }
