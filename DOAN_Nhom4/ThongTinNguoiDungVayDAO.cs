@@ -41,14 +41,38 @@ namespace DOAN_Nhom4
             string sql = string.Format("SELECT LoaiKhoanVay, SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay");
             return data.LayDanhSach(sql);
         }        
-        public Decimal TienHangThang(ThongTinNguoiDungVay ttNgDung, double lai)
+        public Decimal TienHangThang(ThongTinNguoiDungVay ttNgDung)
         {
             double soTienVay = double.Parse(ttNgDung.SoTienVay.ToString());
-            double laithang = lai / 1200;
+            double laithang = ttNgDung.Lai / 1200;
             double number = Math.Pow((1 + laithang), int.Parse(ttNgDung.ThoiGianVay.ToString()));
             double tmp = (soTienVay * laithang * number) / (number - 1);
             decimal tienhangthang = new decimal(tmp);
             return tienhangthang;
+        }
+        public string TinhTien(ThongTinNguoiDungVay ttNgDung)
+        {
+            double laithang = ttNgDung.Lai / 12;
+            decimal tongsotien = TienHangThang(ttNgDung) * ttNgDung.ThoiGianVay;
+            string kq = String.Format("{0} x ({1} x {2}% x (1 + {3}%)^{4}) / ((1 + {5}%)^{6} - 1) = {7}",
+                ttNgDung.ThoiGianVay.ToString(), ttNgDung.SoTienVay.ToString("N0"), laithang.ToString("0.000"), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), tongsotien.ToString("N0"));
+            return kq;
+        }
+        public Decimal TongSoTien(ThongTinNguoiDungVay ttNgDung)
+        {
+            return TienHangThang(ttNgDung) * ttNgDung.ThoiGianVay;
+        }
+        public void CapNhatNgDungVay(ThongTinNguoiDungVay ttNgDung)
+        {
+            ttNgDung.SoTienHangThang = TienHangThang(ttNgDung);
+            ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
+            ttNgDung.TongSoTienPhaiTra = TongSoTien(ttNgDung);
+            ttNgDung.PhiTraCham = 0;
+        }
+        public void CapNhatTaiKhoanNganHang(TaiKhoanNganHang tknh, TaiKhoanNganHangDAO tknhDAO, ThongTinNguoiDungVay ttNgDung)
+        {
+            tknh.SoDu += ttNgDung.SoTienVay;
+            tknhDAO.SuaSoDu(tknh);
         }
     }
 }
