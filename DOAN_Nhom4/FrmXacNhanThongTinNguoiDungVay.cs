@@ -53,8 +53,8 @@ namespace DOAN_Nhom4
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
             Utility.addForm(frmTienIchVay, pnlNguoiDung);
-        }
-
+        }     
+        
         private void XuLi()
         {
             Dictionary<string, double> laiDictionary = new Dictionary<string, double>
@@ -62,18 +62,11 @@ namespace DOAN_Nhom4
                 { "NHU CAU NHA O", 9 },
                 { "SAN XUAT KINH DOANH", 5 },
                 { "MUA O TO", 7 },
-                { "TIEU DUNG KHONG CO TAI SAN BAO DAM", 12 },
-                { "TIEU DUNG DAM BAO BANG BAT DONG SAN", 8 }
+                { "TIEU DUNG KHONG CO TAI SAN DAM BAO", 12 },
+                { "TIEU DUNG DAM BAO BANG BAT DONG SAN", 8 },
+                { "CHO VAY KHAC", 7 }
             };
-            double lai;
-            if (laiDictionary.ContainsKey(ttNgDung.SpVay))
-            {
-                lai = laiDictionary[ttNgDung.SpVay];
-            }
-            else
-            {
-                lai = 7;
-            }
+            double lai = laiDictionary[ttNgDung.SpVay];
             txt_DanhXung.Text = ttNgDung.DanhXung;
             txt_HoTen.Text = ttNgDung.HoTen;
             txt_CCCD.Text = ttNgDung.Cccd;
@@ -88,7 +81,7 @@ namespace DOAN_Nhom4
             txt_KhoanVay.Text = ttNgDung.LoaiKhoanVay;
             txt_LaiSuat.Text = lai.ToString();
             ttNgDung.Lai = lai;
-            decimal tienhangthang = ngDungVay.TienHangThang(ttNgDung, lai);
+            decimal tienhangthang = ngDungVay.TienHangThang(ttNgDung);
             decimal tongsotien = tienhangthang * int.Parse(ttNgDung.ThoiGianVay.ToString());
             txt_TongSoTien.Text = tongsotien.ToString("N0") + " VNĐ";
             ttNgDung.SoTienHangThang = tienhangthang;

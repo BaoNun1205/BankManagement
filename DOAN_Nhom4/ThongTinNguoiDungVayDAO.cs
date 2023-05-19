@@ -41,10 +41,10 @@ namespace DOAN_Nhom4
             string sql = string.Format("SELECT LoaiKhoanVay, SoTKVay, DanhXung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, SPVay, SoTienVay, ThoiGianVay, ChiNhanhVay, NgayVay, LaiSuat, TongSoTienPhaiTra FROM KhachHangVay");
             return data.LayDanhSach(sql);
         }        
-        public Decimal TienHangThang(ThongTinNguoiDungVay ttNgDung, double lai)
+        public Decimal TienHangThang(ThongTinNguoiDungVay ttNgDung)
         {
             double soTienVay = double.Parse(ttNgDung.SoTienVay.ToString());
-            double laithang = lai / 1200;
+            double laithang = ttNgDung.Lai / 1200;
             double number = Math.Pow((1 + laithang), int.Parse(ttNgDung.ThoiGianVay.ToString()));
             double tmp = (soTienVay * laithang * number) / (number - 1);
             decimal tienhangthang = new decimal(tmp);
