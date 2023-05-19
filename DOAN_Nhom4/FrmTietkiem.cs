@@ -134,9 +134,9 @@ namespace DOAN_Nhom4
         {
             if (cbLoaiSTK.SelectedItem != null)
             {
-                if (cbLoaiSTK.SelectedIndex == 1) loaiSo = 1;
-                if (cbLoaiSTK.SelectedIndex == 2) loaiSo = 2;
-                if (cbLoaiSTK.SelectedIndex == 3) loaiSo = 3;
+                if (cbLoaiSTK.SelectedIndex == 0) loaiSo = 1;
+                if (cbLoaiSTK.SelectedIndex == 1) loaiSo = 2;
+                if (cbLoaiSTK.SelectedIndex == 2) loaiSo = 3;
             }
         }
 
