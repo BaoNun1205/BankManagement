@@ -50,5 +50,29 @@ namespace DOAN_Nhom4
             decimal tienhangthang = new decimal(tmp);
             return tienhangthang;
         }
+        public string TinhTien(ThongTinNguoiDungVay ttNgDung)
+        {
+            double laithang = ttNgDung.Lai / 12;
+            decimal tongsotien = TienHangThang(ttNgDung) * ttNgDung.ThoiGianVay;
+            string kq = String.Format("{0} x ({1} x {2}% x (1 + {3}%)^{4}) / ((1 + {5}%)^{6} - 1) = {7}",
+                ttNgDung.ThoiGianVay.ToString(), ttNgDung.SoTienVay.ToString("N0"), laithang.ToString("0.000"), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), tongsotien.ToString("N0"));
+            return kq;
+        }
+        public Decimal TongSoTien(ThongTinNguoiDungVay ttNgDung)
+        {
+            return TienHangThang(ttNgDung) * ttNgDung.ThoiGianVay;
+        }
+        public void CapNhatNgDungVay(ThongTinNguoiDungVay ttNgDung)
+        {
+            ttNgDung.SoTienHangThang = TienHangThang(ttNgDung);
+            ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
+            ttNgDung.TongSoTienPhaiTra = TongSoTien(ttNgDung);
+            ttNgDung.PhiTraCham = 0;
+        }
+        public void CapNhatTaiKhoanNganHang(TaiKhoanNganHang tknh, TaiKhoanNganHangDAO tknhDAO, ThongTinNguoiDungVay ttNgDung)
+        {
+            tknh.SoDu += ttNgDung.SoTienVay;
+            tknhDAO.SuaSoDu(tknh);
+        }
     }
 }

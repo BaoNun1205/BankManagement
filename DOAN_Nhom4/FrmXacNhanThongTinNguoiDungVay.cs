@@ -82,22 +82,14 @@ namespace DOAN_Nhom4
             txt_LaiSuat.Text = lai.ToString();
             ttNgDung.Lai = lai;
             decimal tienhangthang = ngDungVay.TienHangThang(ttNgDung);
-            decimal tongsotien = tienhangthang * int.Parse(ttNgDung.ThoiGianVay.ToString());
+            decimal tongsotien = ngDungVay.TongSoTien(ttNgDung);
             txt_TongSoTien.Text = tongsotien.ToString("N0") + " VNĐ";
-            ttNgDung.SoTienHangThang = tienhangthang;
             txt_SoTienHangThang.Text = tienhangthang.ToString("N0") + " VNĐ";
             txt_ChiNhanhVay.Text = ttNgDung.ChiNhanhVay;
             txt_NgayVay.Text = ttNgDung.NgayVay.ToString();
-            double soTienVay = double.Parse(ttNgDung.SoTienVay.ToString());
-            double laithang = lai / 1200;
-            laithang *= 100;
-            txt_TinhTien.Text = String.Format("{0} x ({1} x {2}% x (1 + {3}%)^{4}) / ((1 + {5}%)^{6} - 1) = {7}",
-                txt_ThoiGianVay.Text, soTienVay.ToString("N0"), laithang.ToString("0.000"), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), tongsotien.ToString("N0"));
-            ttNgDung.NgayDenHan = ttNgDung.NgayVay.AddMonths(1);
-            ttNgDung.TongSoTienPhaiTra = tongsotien;
-            ttNgDung.PhiTraCham = 0;
-            tknh.SoDu += ttNgDung.SoTienVay;
-            tknhDAO.SuaSoDu(tknh);           
+            txt_TinhTien.Text = ngDungVay.TinhTien(ttNgDung);
+            ngDungVay.CapNhatNgDungVay(ttNgDung);
+            ngDungVay.CapNhatTaiKhoanNganHang(tknh, tknhDAO, ttNgDung);          
         }
     }
 }
