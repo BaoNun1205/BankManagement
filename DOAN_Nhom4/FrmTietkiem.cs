@@ -31,12 +31,6 @@ namespace DOAN_Nhom4
         private decimal tienLai;
         private decimal tongTien;
 
-        public enum LoaiSoTietKiem
-        {
-            Loai1,
-            Loai2,
-            Loai3
-        }
         public FrmTietkiem()
         {
             InitializeComponent();
@@ -55,10 +49,6 @@ namespace DOAN_Nhom4
             tkiemDAO.KiemTraSoTietKiem(tknh);
             rand = new Random();
             MaTietKiem = rand.Next(100000, 999999);
-            foreach (LoaiSoTietKiem gt in Enum.GetValues(typeof(LoaiSoTietKiem)))
-            {
-                cbLoaiSTK.Items.Add(new KeyValuePair<LoaiSoTietKiem, string>(gt, gt.NoiDungLoaiSoTietKiem()));
-            }
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)
@@ -144,19 +134,15 @@ namespace DOAN_Nhom4
         {
             if (cbLoaiSTK.SelectedItem != null)
             {
-                KeyValuePair<LoaiSoTietKiem, string> selectedValue = (KeyValuePair<LoaiSoTietKiem, string>)cbLoaiSTK.SelectedItem;
-                LoaiSoTietKiem loai = selectedValue.Key;
-                string noidung = selectedValue.Value;
-
-                if (loai == LoaiSoTietKiem.Loai1) loaiSo = 1;
-                if (loai == LoaiSoTietKiem.Loai2) loaiSo = 2;
-                if (loai == LoaiSoTietKiem.Loai3) loaiSo = 3;
+                if (cbLoaiSTK.SelectedIndex == 1) loaiSo = 1;
+                if (cbLoaiSTK.SelectedIndex == 2) loaiSo = 2;
+                if (cbLoaiSTK.SelectedIndex == 3) loaiSo = 3;
             }
         }
 
         private void txtSotien_Enter(object sender, EventArgs e)
         {
-            if (txtSotien.Text == "Bạn muốn gửi bao nhiêu?")
+            if (!string.IsNullOrEmpty(txtSotien.Text))
             {
                 txtSotien.Text = "";
             }
@@ -172,19 +158,21 @@ namespace DOAN_Nhom4
 
         private void HienThiThongTin()
         {
-            decimal kt;
-            if (decimal.TryParse(txtSotien.Text, out kt))
+            BigInteger kt;
+            if (BigInteger.TryParse(txtSotien.Text, out kt) && tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), tknh.SoDu) == true)
             {
-                if (tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), tknh.SoDu) == true)
-                {
-                    tienGoc = decimal.Parse(txtSotien.Text);
-                    tienLai = tkiemDAO.TienLai(tienGoc, laiSuat, kiHan);
-                    lblTongtienlai.Text = tienLai.ToString();
-                    tongTien = tkiemDAO.TongTien(tienGoc, tienLai);
-                    lblTongtien.Text = tongTien.ToString();
-                }
-                else { MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            }          
+                tienGoc = decimal.Parse(txtSotien.Text);
+                tienLai = tkiemDAO.TienLai(tienGoc, laiSuat, kiHan);
+                lblTongtienlai.Text = tienLai.ToString("0");
+                tongTien = tkiemDAO.TongTien(tienGoc, tienLai);
+                lblTongtien.Text = tongTien.ToString("0");
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập lại số tiền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtSotien.Text = "Bạn muốn gửi bao nhiêu?";
+            } 
+                
         }
 
         private bool KiemTraThongTin()

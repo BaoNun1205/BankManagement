@@ -26,13 +26,13 @@ namespace DOAN_Nhom4
 
         public DataTable LichSuGiaoDichNhanNguoiDung(NguoiDung kh, int x)
         {
-            string sqlStr = String.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangGui, SoTKGui, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKNhan = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
+            string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangGui, SoTKGui, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKNhan = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
             return data.LayDanhSach(sqlStr);
         }
 
         public DataTable LichSuGiaoDichGuiNguoiDung(NguoiDung kh, int x)
         {
-            string sqlStr = String.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangNhan, SoTKNhan, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKGui = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
+            string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangNhan, SoTKNhan, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKGui = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
             return data.LayDanhSach(sqlStr);
         }
 

@@ -107,6 +107,7 @@ namespace DOAN_Nhom4
         private void HienThiLsgd() // Cai dat tieng viet cho cac title cua bang
         {
             gvQLGD.DataSource = lsgdDAO.HienThi();
+            gvQLGD.Columns[7].DefaultCellStyle.Format = "dd/MM/yyyy";
             gvQLGD.Columns[0].HeaderText = "Mã giao dịch";
             gvQLGD.Columns[1].HeaderText = "Loại giao dịch";
             gvQLGD.Columns[2].HeaderText = "Ngân hàng gửi";

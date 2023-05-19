@@ -64,6 +64,11 @@ namespace DOAN_Nhom4
             data.xuLi(sqlTkiem);
         }
 
+        public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
+        {
+            string sqlStr = string.Format("SELECT MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNH, tknh.SoTK);
+            return data.LayDanhSach(sqlStr);
+        }
 
         public DateTime NgayToiHan(DateTime ngaydangky, int kihan)
         {

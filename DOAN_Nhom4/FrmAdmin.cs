@@ -130,6 +130,7 @@ namespace DOAN_Nhom4
         {
             gvQLKH.DataSource = khDAO.HienThi();
             gvQLKH.RowHeadersVisible = false;
+            gvQLKH.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
             gvQLKH.Columns[0].HeaderText = "Tên ngân hàng";
             gvQLKH.Columns[1].HeaderText = "Số tài khoản";
             gvQLKH.Columns[2].HeaderText = "Tên tài khoản";

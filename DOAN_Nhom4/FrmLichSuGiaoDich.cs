@@ -93,6 +93,7 @@ namespace DOAN_Nhom4
 
         private void HienThiTienRa(DataGridView gv)
         {
+            gv.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             gv.Columns[0].HeaderText = "Mã giao dịch";
             gv.Columns[1].HeaderText = "Loại giao dịch";
             gv.Columns[2].HeaderText = "Thời gian";
@@ -103,6 +104,7 @@ namespace DOAN_Nhom4
         }
         private void HienThiTienVao(DataGridView gv)
         {
+            gv.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
             gv.Columns[0].HeaderText = "Mã giao dịch";
             gv.Columns[1].HeaderText = "Loại giao dịch";
             gv.Columns[2].HeaderText = "Thời gian";

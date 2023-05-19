@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Numerics;
@@ -22,10 +23,6 @@ namespace DOAN_Nhom4
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
-        private DateTime ngayDangky;
-        List<TietKiem> danhSachTietKiem = new List<TietKiem>();
-        List<string> danhSachLuaChon = new List<string>();
-
         public FrmXemTKTK()
         {
             InitializeComponent();
@@ -40,23 +37,62 @@ namespace DOAN_Nhom4
         }
 
         private void FrmXemTKTK_Load(object sender, EventArgs e)
+        {           
+            HienThi();
+            lblTongtiengui.Text = TongTienGui().ToString() + " VNĐ";
+        }
+
+        private void GvTaikhoantietkiem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            danhSachLuaChon = tietkiemDAO.LayCotTKTK("MaTietKiem", tknh);
-            foreach (string matk in danhSachLuaChon)
+            int i;
+            i = GvTaikhoantietkiem.CurrentRow.Index;
+            lblMaTietKiem.Text = GvTaikhoantietkiem.Rows[i].Cells[0].Value.ToString();
+            dtNgaydangky.Text = GvTaikhoantietkiem.Rows[i].Cells[1].Value.ToString();
+            lblTenTKTK.Text = GvTaikhoantietkiem.Rows[i].Cells[2].Value.ToString();
+            txtTiengoc.Text = GvTaikhoantietkiem.Rows[i].Cells[4].Value.ToString() + " VNĐ";
+            txtKihan.Text = GvTaikhoantietkiem.Rows[i].Cells[5].Value.ToString();
+            lblLaisuat.Text = GvTaikhoantietkiem.Rows[i].Cells[6].Value.ToString();
+            lblTienlai.Text = GvTaikhoantietkiem.Rows[i].Cells[7].Value.ToString() + " VNĐ";
+            lblTongtien.Text = GvTaikhoantietkiem.Rows[i].Cells[8].Value.ToString() + " VNĐ";
+            if (txtKihan.Text != null) dtNgaytoihan.Text = tietkiemDAO.NgayToiHan(dtNgaydangky.Value, int.Parse(txtKihan.Text)).ToString();
+        }
+
+        private decimal TongTienGui() // Tính tổng số tiền đã gửi tiết kiệm
+        {
+            int columnIndex = GvTaikhoantietkiem.Columns["TienGoc"].Index;
+            decimal tongTienGuiTK = 0;
+            foreach (DataGridViewRow row in GvTaikhoantietkiem.Rows)
             {
-                TietKiem tkiem = new TietKiem();
-                tkiem = tietkiemDAO.LayThongTinSoTietKiem("MaTietKiem", matk);
-                danhSachTietKiem.Add(tkiem);
-            }    
-            cbTenTKTK.Items.AddRange(danhSachTietKiem.ToArray());
-            cbTenTKTK.DisplayMember = "TenTKTK";
+                if (row.Cells[columnIndex].Value != null && row.Cells[columnIndex].Value != DBNull.Value)
+                {
+                    if (row.Cells[columnIndex].Value != null && row.Cells[columnIndex].Value != DBNull.Value)
+                    {
+                        tongTienGuiTK += Convert.ToDecimal(row.Cells[columnIndex].Value);
+                    }
+                }
+            }
+            return tongTienGuiTK;
+        }
+
+        private void HienThi()
+        {
+            GvTaikhoantietkiem.DataSource = tietkiemDAO.DanhSachTietKiem(tknh);
+            GvTaikhoantietkiem.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+            GvTaikhoantietkiem.Columns[0].HeaderText = "Mã tiết kiệm";
+            GvTaikhoantietkiem.Columns[1].HeaderText = "Ngày đăng ký";
+            GvTaikhoantietkiem.Columns[2].HeaderText = "Tên TKTK";
+            GvTaikhoantietkiem.Columns[3].HeaderText = "Loại sổ";
+            GvTaikhoantietkiem.Columns[4].HeaderText = "Tiền gốc";
+            GvTaikhoantietkiem.Columns[5].HeaderText = "Kì hạn";
+            GvTaikhoantietkiem.Columns[6].HeaderText = "Lãi suất";
+            GvTaikhoantietkiem.Columns[7].HeaderText = "Tiền lãi";
+            GvTaikhoantietkiem.Columns[8].HeaderText = "Tổng tiền";
         }
 
         private void btnRuttien_Click(object sender, EventArgs e)
         {
-            if (cbTenTKTK.Text == "")
-                if (cbTenTKTK.Items.Count == 0) MessageBox.Show("Bạn chưa có tài khoản tiết kiệm nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else MessageBox.Show("Vui lòng chọn tài khoản tiết kiệm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (GvTaikhoantietkiem.RowCount == 0) MessageBox.Show("Bạn chưa có tài khoản tiết kiệm nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (txtTiengoc.Text == "") MessageBox.Show("Vui lòng chọn tài khoản tiết kiệm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 DialogResult luachon = MessageBox.Show("Nếu rút trước thời hạn, bạn sẽ không được tính tiền lãi, bạn chắc chắn muốn rút không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -79,24 +115,6 @@ namespace DOAN_Nhom4
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
             Utility.addForm(frmtietkiem, pnlNguoidung);
-        }
-
-        private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbTenTKTK.SelectedItem != null && cbTenTKTK.SelectedItem is TietKiem)
-            {
-                TietKiem tkiem = (TietKiem)cbTenTKTK.SelectedItem;
-                DateTime ngayToihan = tietkiemDAO.NgayToiHan(tkiem.NgayDangky, tkiem.KiHan);
-                ngayDangky = tkiem.NgayDangky;
-                lblMaTietKiem.Text = tkiem.MaTietKiem.ToString();
-                txtKihan.Text = tkiem.KiHan.ToString();
-                txtTiengoc.Text = tkiem.TienGoc.ToString();
-                lblTienlai.Text = tkiem.TienLai.ToString();
-                lblLaisuat.Text = tkiem.LaiSuat.ToString();
-                lblTongtien.Text = tkiem.TongTien.ToString();
-                lblNgaydangky.Text = tkiem.NgayDangky.ToString("dd/MM/yyyy");
-                lblNgaytoihan.Text = ngayToihan.ToString("dd/MM/yyyy");
-            }
         }
     }
 }
