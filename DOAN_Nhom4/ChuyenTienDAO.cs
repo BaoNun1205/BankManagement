@@ -9,23 +9,28 @@ namespace DOAN_Nhom4
     internal class ChuyenTienDAO
     {
         DBConnection data = new DBConnection();
+        TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
 
         public ChuyenTienDAO() { }
 
-        public NguoiDung LayThongTinKhachHang(string Cot, string giaTri)
+        public List<GiaoDich> LayDanhSachGiaoDich(string stkgui)
         {
-            NguoiDung ngDung = new NguoiDung();
-            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}'", Cot, giaTri);
-            ngDung = data.LayThongTinKhachHang(sql);
-            return ngDung;
+            List<GiaoDich> gd = new List<GiaoDich>();
+            string sql = string.Format("SELECT * FROM hr.LichSuGiaoDich WHERE LoaiGD = 'Chuyen Tien' and SoTKGui = '{0}'", stkgui);
+            gd = data.LayDanhSachGiaoDich(sql);
+            return gd;
         }
-
-        public List<string> LayThongTinSTKNhan(string stkgui)
+        public void ChuyenTien(TaiKhoanNganHang tkGui, GiaoDich gd, TaiKhoanNganHang tkNhan)
         {
-            List<string> cot = new List<string>();
-            string sql = string.Format("select distinct SoTKNhan from hr.LichSuGiaoDich where LoaiGD = 'Chuyen Tien' and SoTKGui = '{0}'", stkgui);
-            cot = data.LayCot(sql, "SoTKNhan");
-            return cot;
+            TaiKhoanNganHang taiKhoanNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
+            decimal soTienNhan = gd.SoTien + taiKhoanNhan.SoDu;
+            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienNhan, taiKhoanNhan.SoTK, taiKhoanNhan.TenNH);
+            data.xuLi(sqlStrNhan);
+
+            TaiKhoanNganHang taiKhoanGui = tknhDAO.LayTaiKhoanNganHang("SoTk", gd.SoTKGui, "TenNH", gd.NganHangGui);
+            decimal soTienGui = taiKhoanGui.SoDu - gd.SoTien;
+            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienGui, taiKhoanGui.SoTK, taiKhoanGui.TenNH);
+            data.xuLi(sqlStrGui);
         }
     }
 }

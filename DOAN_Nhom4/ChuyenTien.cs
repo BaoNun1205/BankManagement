@@ -20,9 +20,9 @@ namespace DOAN_Nhom4
         }
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         NguoiDungDAO ndDAO = new NguoiDungDAO();
+        ChuyenTienDAO chuyentienDAO = new ChuyenTienDAO();
         DBConnection db = new DBConnection();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
-
 
         public void HienThiThongTinNguoiChuyen()
         {
@@ -113,7 +113,7 @@ namespace DOAN_Nhom4
                     {
                         if (gd.SoTien >= 10000 && gd.SoTien <= tkGui.SoDu)
                         {
-                            tknhDAO.ChuyenTien(tkGui, gd, tkNhan);
+                            chuyentienDAO.ChuyenTien(tkGui, gd, tkNhan);
                             lsgdDAO.Them(gd);
                             txt_SoTKNhan.Text = "";
                             txt_SoTKChuyen.Text = "";

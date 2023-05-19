@@ -18,6 +18,7 @@ namespace DOAN_Nhom4
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
+        ChuyenTienDAO chuyentienDAO = new ChuyenTienDAO();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         public FrmXacnhanChuyentien()
         {
@@ -45,7 +46,7 @@ namespace DOAN_Nhom4
             if (txtMatkhau.Text == tknh.MatKhau)
             {               
                 TaiKhoanNganHang tknhNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
-                tknhDAO.ChuyenTien(tknh, gd, tknhNhan);
+                chuyentienDAO.ChuyenTien(tknh, gd, tknhNhan);
                 lsgdDAO.Them(gd);
                 tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", gd.SoTKGui, "TenNH", gd.NganHangGui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoidung);

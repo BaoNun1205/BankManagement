@@ -33,10 +33,5 @@ namespace DOAN_Nhom4
             pnlDichvu.Tag = userControl;
             userControl.Show();
         }
-
-        public static string ThongTinNguoiNhanTien(this NguoiDung ngDung)
-        {
-            return $"{ngDung.TenNH} - {ngDung.TenTK} - {ngDung.SoTK}";
-        }
     }
 }

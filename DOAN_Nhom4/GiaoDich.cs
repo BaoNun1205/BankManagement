@@ -43,5 +43,13 @@ namespace DOAN_Nhom4
             this.soTien = soTien;
             this.loiNhan = loiNhan;
         }
+
+        public string ThongTinCoBan
+        {
+            get
+            {
+                return string.Format("{0} - {1} - {2}", NganHangNhan, TenTKNhan, SoTKNhan);
+            }
+        }
     }
 }

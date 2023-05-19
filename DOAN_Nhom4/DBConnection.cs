@@ -128,6 +128,84 @@ namespace DOAN_Nhom4
             return ngDung;
         }
 
+        public GiaoDich LayThongTinGiaoDich(string sqlStr)
+        {
+            GiaoDich gd = new GiaoDich();
+            conn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    gd.LoaiGD = reader.GetString(1);
+                    gd.NganHangGui = reader.GetString(2);
+                    gd.TenTKGui = reader.GetString(3);
+                    gd.SoTKGui = reader.GetString(4);
+                    gd.NganHangNhan = reader.GetString(5);
+                    gd.TenTKNhan = reader.GetString(6);
+                    gd.SoTKNhan = reader.GetString(7);
+                    gd.SoTien = reader.GetDecimal(9);
+                    gd.LoiNhan = reader.GetString(10);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return gd;
+        }
+
+        public List<GiaoDich> LayDanhSachGiaoDich(string sqlStr)
+        {
+            List<GiaoDich> danhSachGiaoDich = new List<GiaoDich>();
+            conn.Open();
+            try
+            {
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string nganHangNhan = reader.GetString(5);
+                    string soTKNhan = reader.GetString(7);
+
+                    bool KiemTraTonTai = danhSachGiaoDich.Any(gd => gd.NganHangNhan == nganHangNhan && gd.SoTKNhan == soTKNhan);
+
+                    if (!KiemTraTonTai)
+                    {
+                        GiaoDich gd = new GiaoDich();
+                        gd.LoaiGD = reader.GetString(1);
+                        gd.NganHangGui = reader.GetString(2);
+                        gd.TenTKGui = reader.GetString(3);
+                        gd.SoTKGui = reader.GetString(4);
+                        gd.NganHangNhan = reader.GetString(5);
+                        gd.TenTKNhan = reader.GetString(6);
+                        gd.SoTKNhan = reader.GetString(7);
+                        gd.SoTien = reader.GetDecimal(9);
+                        gd.LoiNhan = reader.GetString(10);
+
+                        danhSachGiaoDich.Add(gd);
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return danhSachGiaoDich;
+        }
+
+
         public void xuLi(string kh, string tknh)
         {
             conn.Open();

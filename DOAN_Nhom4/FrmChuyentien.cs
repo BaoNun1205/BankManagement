@@ -21,8 +21,7 @@ namespace DOAN_Nhom4
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         ChuyenTienDAO ChuyenTienDAO = new ChuyenTienDAO();
 
-        List<string> danhSachSTKNgDung = new List<string>();
-        List<NguoiDung> danhSachNguoiDung = new List<NguoiDung>();
+        List<GiaoDich> danhSachGiaoDich = new List<GiaoDich>();
 
         enum KiemTraTenNguoiNhan
         {
@@ -46,14 +45,8 @@ namespace DOAN_Nhom4
 
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
-            danhSachSTKNgDung = ChuyenTienDAO.LayThongTinSTKNhan(nguoiDung.SoTK);
-            foreach (string stk in danhSachSTKNgDung)
-            {
-                NguoiDung ngDung = new NguoiDung();
-                ngDung = ChuyenTienDAO.LayThongTinKhachHang("SoTK", stk);
-                danhSachNguoiDung.Add(ngDung);
-            }
-            cbTennguoinhan.Items.AddRange(danhSachNguoiDung.ToArray());
+            danhSachGiaoDich = ChuyenTienDAO.LayDanhSachGiaoDich(nguoiDung.SoTK);
+            cbTennguoinhan.Items.AddRange(danhSachGiaoDich.ToArray());
             cbTennguoinhan.DisplayMember = "ThongTinCoBan";
             lblSoDu.Text = tknh.SoDu.ToString("N0") + " VND";
         }
@@ -107,12 +100,12 @@ namespace DOAN_Nhom4
 
         private void cbTennguoinhan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is NguoiDung)
+            if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is GiaoDich)
             {
-                NguoiDung ngDung = (NguoiDung)cbTennguoinhan.SelectedItem;
-                cbTenNH.Text = ngDung.tenNH.ToString();
-                txtSTK.Text = ngDung.soTK.ToString();
-                txtTennguoinhan.Text = ngDung.TenTK.ToString();
+                GiaoDich gd = (GiaoDich)cbTennguoinhan.SelectedItem;
+                cbTenNH.Text = gd.NganHangNhan.ToString();
+                txtSTK.Text = gd.SoTKNhan.ToString();
+                txtTennguoinhan.Text = gd.TenTKNhan.ToString();
             }
         }
 

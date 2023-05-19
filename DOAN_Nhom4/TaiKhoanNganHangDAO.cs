@@ -49,18 +49,6 @@ namespace DOAN_Nhom4
             return tknh;
         }
 
-        public void ChuyenTien(TaiKhoanNganHang tkGui, GiaoDich gd, TaiKhoanNganHang tkNhan)
-        {
-            TaiKhoanNganHang taiKhoanNhan = LayTaiKhoanNganHang("SoTK", gd.SoTKNhan, "TenNH", gd.NganHangNhan);
-            decimal soTienNhan = gd.SoTien + taiKhoanNhan.SoDu;
-            string sqlStrNhan = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienNhan, taiKhoanNhan.SoTK, taiKhoanNhan.TenNH);
-            data.xuLi(sqlStrNhan);
-
-            TaiKhoanNganHang taiKhoanGui = LayTaiKhoanNganHang("SoTk", gd.SoTKGui, "TenNH", gd.NganHangGui);
-            decimal soTienGui = taiKhoanGui.SoDu - gd.SoTien;
-            string sqlStrGui = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", soTienGui, taiKhoanGui.SoTK, taiKhoanGui.TenNH);
-            data.xuLi(sqlStrGui);
-        }
         public void NapTien(TaiKhoanNganHang tkNap, GiaoDich gd)
         {
             decimal SoDu = gd.SoTien + tkNap.SoDu;
