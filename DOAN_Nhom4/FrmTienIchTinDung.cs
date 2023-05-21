@@ -16,7 +16,7 @@ namespace DOAN_Nhom4
         private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        private ThongTinTinDung tttd;
+        private TaiKhoanTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         public FrmTienIchTinDung()
         {
@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
+            tttd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
             if (tttd == null)
             {
                 FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
@@ -47,7 +47,7 @@ namespace DOAN_Nhom4
 
         private void btnThongTinThe_Click(object sender, EventArgs e)
         {
-            tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
+            tttd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
             if (tttd != null)
             {
                 FrmThongTinNguoiDungTinDung frmThongTinTaiKhoangTinDung = new FrmThongTinNguoiDungTinDung(kh, tknh, pnlNguoiDung, tttd);

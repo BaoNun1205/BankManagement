@@ -17,7 +17,7 @@ namespace DOAN_Nhom4
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
-        private ThongTinTinDung tttd = new ThongTinTinDung();
+        private TaiKhoanTinDung tttd = new TaiKhoanTinDung();
         private LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
         private SoDienThoaiDAO sdtDAO = new SoDienThoaiDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -41,10 +41,10 @@ namespace DOAN_Nhom4
         private void FrmNapTienDienThoai_Load(object sender, EventArgs e)
         {
             btnTKThe.Text = tknh.SoTK.ToString();
-            tttd = tttdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
+            tttd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
             if (tttd != null)
             {
-                btnTKTinDung.Text = tttd.SoTKTinDung.ToString();
+                btnTKTinDung.Text = tttd.SoTktinDung.ToString();
             }
             else
             {
@@ -165,7 +165,7 @@ namespace DOAN_Nhom4
                             gd.SoTKNhan = kh.Sdt;
                         }
                         lsgdDAO.Them(gd);
-                        SoDienThoai sdt = sdtDAO.LaySoDienThoai("SDT", gd.SoTKNhan);
+                        SoDienThoai sdt = sdtDAO.LaySoDienThoai(gd.SoTKNhan);
                         if (sdt != null)
                         {
                             sdtDAO.ThanhToanVienThong(sdt, gd);

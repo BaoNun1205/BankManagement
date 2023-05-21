@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -17,14 +18,14 @@ namespace DOAN_Nhom4
         private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        private  ThongTinTinDung tttd;
+        private TaiKhoanTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         public FrmThongTinNguoiDungTinDung()
         {
             InitializeComponent();
         }
 
-        public FrmThongTinNguoiDungTinDung(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
+        public FrmThongTinNguoiDungTinDung(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, TaiKhoanTinDung tttd)
         {
             InitializeComponent();
             this.kh = kh;
@@ -35,20 +36,20 @@ namespace DOAN_Nhom4
 
         private void FrmThongTinTaiKhoangTinDung_Load(object sender, EventArgs e)
         {
-            lblHienThiSoTK.Text = tttd.SoTKTinDung.ToString();
+            lblHienThiSoTK.Text = tttd.SoTktinDung.ToString();
             lblHienThiLoaiThe.Text = tttd.LoaiThe.ToString();
-            lblHienThiHanThanhToan.Text = tttd.HanThanhToan.ToString("dd/MM/yyyy");
-            lblHienThiNgaySaoKe.Text = tttd.NgaySaoKe.ToString("dd/MM/yyyy");
-            lblHienThiHanMuc.Text = tttd.HanMuc.ToString("N0");
+            lblHienThiHanThanhToan.Text = tttd.HanThanhToan.Value.ToString("dd/MM/yyyy");
+            lblHienThiNgaySaoKe.Text = tttd.NgaySaoKe.Value.ToString("dd/MM/yyyy");
+            lblHienThiHanMuc.Text = tttd.HanMuc.Value.ToString("N0");
             lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString() + '%';
-            lblHienThiSoTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString("N0");
-            lblHienThiSoTienSuDungSau.Text = tttd.SoTienSuDungSau.ToString("N0");
+            lblHienThiSoTienDaSuDung.Text = tttd.SoTienDaSuDung.Value.ToString("N0");
+            lblHienThiSoTienSuDungSau.Text = tttd.SoTienSuDungSau.Value.ToString("N0");
             if (tttdDAO.IsNgayDenHan(tttd))
             {
                 CapNhatPhi();
             }
-            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.ToString("N0");
-            lblHienThiPhiPhat.Text = tttd.PhiPhat.ToString("N0");
+            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.Value.ToString("N0");
+            lblHienThiPhiPhat.Text = tttd.PhiPhat.Value.ToString("N0");
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)

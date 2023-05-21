@@ -363,9 +363,9 @@ namespace DOAN_Nhom4
             }
             return ttNgDung;
         }
-        public ThongTinTinDung XuLiNgDungTinDung(string sqlStr)
+        public TaiKhoanTinDung XuLiNgDungTinDung(string sqlStr)
         {
-            ThongTinTinDung ttTinDung = new ThongTinTinDung();
+            TaiKhoanTinDung ttTinDung = new TaiKhoanTinDung();
             try
             {
                 conn.Open();
@@ -374,7 +374,7 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    ttTinDung.SoTKTinDung = reader.GetString(0);
+                    ttTinDung.SoTktinDung = reader.GetString(0);
                     ttTinDung.HoTen = reader.GetString(1);
                     ttTinDung.Cccd = reader.GetString(2);
                     ttTinDung.DiaChi = reader.GetString(3);
@@ -386,7 +386,7 @@ namespace DOAN_Nhom4
                     ttTinDung.HanThanhToan = reader.GetDateTime(9);
                     ttTinDung.NgaySaoKe = reader.GetDateTime(10);
                     ttTinDung.HanMuc = reader.GetDecimal(11);
-                    ttTinDung.LaiSuat = double.Parse(reader.GetString(12));
+                    ttTinDung.LaiSuat = reader.GetString(12);
                     ttTinDung.SoTienDaSuDung = reader.GetDecimal(13);
                     ttTinDung.SoTienSuDungSau = reader.GetDecimal(14);
                     ttTinDung.NgayMoThe = reader.GetDateTime(15);

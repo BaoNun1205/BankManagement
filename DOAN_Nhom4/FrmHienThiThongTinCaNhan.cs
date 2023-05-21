@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
     {
         public KhachHang kh;
         public TaiKhoanNganHang tknh;
-        private ThongTinTinDung tttd;
+        private TaiKhoanTinDung tttd;
         private ThongTinTinDungDAO tktdDAO = new ThongTinTinDungDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
 
@@ -55,12 +55,12 @@ namespace DOAN_Nhom4
 
         private void HienThiTheTinDung()
         {
-            tttd = tktdDAO.LayThongTinTinDung("CCCD", kh.Cccd);
+            tttd = tktdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
             if (tttd != null)
             {
                 // Hien thi thong tin cua the tin dung
-                lblSoTKTinDung.Text = tttd.SoTKTinDung.ToString();
-                lblHanmuc.Text = tttd.HanMuc.ToString("N0") + "VNĐ";
+                lblSoTKTinDung.Text = tttd.SoTktinDung.ToString();
+                lblHanmuc.Text = tttd.HanMuc.ToString() + "VNĐ";
                 
                 //kiem tra dieu kien han muc cua the de in ra loai the phu hop
                 if (tttd.HanMuc >= 300000000)

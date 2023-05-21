@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -9,45 +10,60 @@ namespace DOAN_Nhom4
 {
     internal class ThongTinTinDungDAO
     {
+        NganHangHhbContext hhb = new NganHangHhbContext();
         DBConnection data = new DBConnection();
         public ThongTinTinDungDAO () { }
-        public void Them(ThongTinTinDung tttd)
+        public void Them(TaiKhoanTinDung tttd)
         {
-            string sql = string.Format("INSERT INTO TaiKhoanTinDung(SoTKTinDung, HoTen, CCCD, DiaChi, SDT, Email, NgheNghiep, ThuNhap, LoaiThe, HanThanhToan, NgaySaoKe, HanMuc, LaiSuat, SoTienDaSuDung, SoTienSuDungSau, NgayMoThe, PhiTraCham, PhiPhat) " +
-                                        "VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', {11}, {12}, {13}, {14}, '{15}', {16}, {17})",
-                                        tttd.SoTKTinDung, tttd.HoTen, tttd.Cccd, tttd.DiaChi, tttd.Sdt, tttd.Email, tttd.NgheNghiep, tttd.ThuNhap,
-                                        tttd.LoaiThe, tttd.HanThanhToan, tttd.NgaySaoKe, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.SoTienSuDungSau, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat);
-            data.xuLi(sql);
+            hhb.TaiKhoanTinDungs.Add(tttd);
+            hhb.SaveChanges();
         }
-        public void Sua(ThongTinTinDung tttd)
+        public void Sua(TaiKhoanTinDung tttd)
         {
-            string sql = string.Format("UPDATE TaiKhoanTinDung SET HoTen = '{0}', CCCD = '{1}', DiaChi = '{2}', SDT = '{3}', Email = '{4}', NgheNghiep = '{5}', ThuNhap = '{6}', LoaiThe = '{7}', HanThanhToan = '{8}', NgaySaoKe = '{9}', HanMuc = {10}, " +
-                                        "LaiSuat = {11}, SoTienDaSuDung = {12}, SoTienSuDungSau = {13}, NgayMoThe = '{14}', PhiTraCham = {15}, PhiPhat = {16} Where SoTkTinDung = '{17}'", 
-                                        tttd.HoTen, tttd.Cccd, tttd.DiaChi, tttd.Sdt, tttd.Email, tttd.NgheNghiep, tttd.ThuNhap,
-                                        tttd.LoaiThe, tttd.HanThanhToan, tttd.NgaySaoKe, tttd.HanMuc, tttd.LaiSuat, tttd.SoTienDaSuDung, tttd.SoTienSuDungSau, tttd.NgayMoThe, tttd.PhiTraCham, tttd.PhiPhat, tttd.SoTKTinDung);
-            data.xuLi(sql);
+            TaiKhoanTinDung tktd = hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == tttd.SoTktinDung).FirstOrDefault();
+            tktd.SoTktinDung = tttd.SoTktinDung;
+            tktd.HoTen = tttd.HoTen;
+            tktd.Cccd = tttd.Cccd;
+            tktd.DiaChi = tttd.DiaChi;
+            tktd.Sdt = tttd.Sdt;
+            tktd.Email = tttd.Email;
+            tktd.NgheNghiep = tttd.NgheNghiep;
+            tktd.ThuNhap = tttd.ThuNhap;
+            tktd.LoaiThe = tttd.LoaiThe;
+            tktd.HanThanhToan = tttd.HanThanhToan;
+            tktd.NgaySaoKe = tttd.NgaySaoKe;
+            tktd.HanMuc = tttd.HanMuc;
+            tktd.LaiSuat = tttd.LaiSuat;
+            tktd.SoTienDaSuDung = tttd.SoTienDaSuDung;
+            tktd.SoTienSuDungSau = tttd.SoTienSuDungSau;
+            tktd.NgayMoThe = tttd.NgayMoThe;
+            tktd.PhiTraCham = tttd.PhiTraCham;
+            tktd.PhiPhat = tttd.PhiPhat;
+            hhb.SaveChanges();
         }
-        public void Xoa(ThongTinTinDung tttd)
+        public void Xoa(TaiKhoanTinDung tttd)
         {
-            string sql = string.Format("DELETE FROM TaiKhoanTinDung WHERE SoTKVay = '{0}'", tttd.SoTKTinDung);
-            data.xuLi(sql);
+            TaiKhoanTinDung tktd = hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == tttd.SoTktinDung).FirstOrDefault();
+            hhb.Remove(tktd);
+            hhb.SaveChanges();
         }
-        public ThongTinTinDung LayThongTinTinDung(string cot, string giaTri)
+        public TaiKhoanTinDung LayThongTinTinDungBangCccd(string giaTri)
         {
-            ThongTinTinDung ttTinDung = new ThongTinTinDung();
-            string sql = string.Format("SELECT * FROM TaiKhoanTinDung WHERE {0} = '{1}'", cot, giaTri);
-            ttTinDung = data.XuLiNgDungTinDung(sql);
-            return ttTinDung;
+            return hhb.TaiKhoanTinDungs.Where(tktd => tktd.Cccd == giaTri).FirstOrDefault();
+        }
+        public TaiKhoanTinDung LayThongTinTinDungBangStk(string giaTri)
+        {
+            return hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == giaTri).FirstOrDefault();
         }
 
-        public decimal PhiTraCham(ThongTinTinDung tttd)
+        public decimal PhiTraCham(TaiKhoanTinDung tttd)
         {
-            decimal tienLaiSuat = (decimal)tttd.LaiSuat / 100 / 12;
-            decimal tienDaSuDung = tttd.SoTienDaSuDung;
+            decimal tienLaiSuat = decimal.Parse(tttd.LaiSuat) / 100 / 12;
+            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
             return tienDaSuDung * tienLaiSuat;
         }
 
-        public bool IsNgayDenHan(ThongTinTinDung tttd)
+        public bool IsNgayDenHan(TaiKhoanTinDung tttd)
         {
             if (DateTime.Now > tttd.HanThanhToan)
             {
@@ -56,35 +72,35 @@ namespace DOAN_Nhom4
             return false;
         }
 
-        public decimal PhiPhat(ThongTinTinDung tttd)
+        public decimal PhiPhat(TaiKhoanTinDung tttd)
         {
             decimal tienPhat = (decimal)0.04;
-            decimal tienDaSuDung = tttd.SoTienDaSuDung;
+            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
             return tienDaSuDung * tienPhat;
         }
 
-        public void CapNhatTinDungHangThang(ThongTinTinDung tttd)
+        public void CapNhatTinDungHangThang(TaiKhoanTinDung tttd)
         {
-            tttd.HanThanhToan = tttd.HanThanhToan.AddMonths(1);
-            tttd.NgaySaoKe = tttd.HanThanhToan.Subtract(new TimeSpan(15, 0, 0, 0));
+            tttd.HanThanhToan = tttd.HanThanhToan.Value.AddMonths(1);
+            tttd.NgaySaoKe = tttd.HanThanhToan.Value.Subtract(new TimeSpan(15, 0, 0, 0));
             tttd.SoTienDaSuDung = tttd.SoTienSuDungSau;
             tttd.SoTienSuDungSau = 0;
             tttd.PhiTraCham = 0;
             tttd.PhiPhat = 0;
         }
 
-        public void ThanhToanPhiTruocNgaySaoKe(ThongTinTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhiTruocNgaySaoKe(TaiKhoanTinDung tttd, GiaoDich gd)
         {
             tttd.SoTienDaSuDung = tttd.SoTienDaSuDung + gd.SoTien;
             Sua(tttd);
         }
-        public void ThanhToanPhiSauNgaySaoKe(ThongTinTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhiSauNgaySaoKe(TaiKhoanTinDung tttd, GiaoDich gd)
         {
             tttd.SoTienSuDungSau = tttd.SoTienSuDungSau + gd.SoTien;
             Sua(tttd);
         }
 
-        public void ThanhToanPhi(ThongTinTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhi(TaiKhoanTinDung tttd, GiaoDich gd)
         {
             if (DateTime.Now > tttd.NgaySaoKe)
             {

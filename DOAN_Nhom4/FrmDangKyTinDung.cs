@@ -1,4 +1,5 @@
 ﻿using DOAN_Nhom4.Entities;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DOAN_Nhom4
 {
@@ -52,7 +54,7 @@ namespace DOAN_Nhom4
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            ThongTinTinDung td = tttdDAO.LayThongTinTinDung("SoTKTinDung", txtSoTaiKhoan.Text);
+            TaiKhoanTinDung td = tttdDAO.LayThongTinTinDungBangStk(txtSoTaiKhoan.Text);
             if (td == null)
             {
                 if (IsNull(sender, e) == true)
@@ -61,9 +63,29 @@ namespace DOAN_Nhom4
                     {
                         if (Int64.Parse(txtHanMuc.Text) >= hanMucToiThieu && Int64.Parse(txtHanMuc.Text) <= hanMucToiDa)
                         {
-                            ThongTinTinDung ttTinDung = new ThongTinTinDung(txtSoTaiKhoan.Text, txt_HoTen.Text, txt_CCCD.Text, txt_DiaChi.Text, txt_SDT.Text, txt_Email.Text, cb_NgheNghiep.Text, cb_ThuNhap.Text,
-                                                                            cbLoaiThe.Text, dtpNgayMoThe.Value.AddMonths(1), dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)), int.Parse(txtHanMuc.Text), laiSuat, 0, 0, dtpNgayMoThe.Value, 0, 0);
-                            tttdDAO.Them(ttTinDung);
+                            TaiKhoanTinDung tktd = new TaiKhoanTinDung()
+                            {
+                                SoTktinDung = txtSoTaiKhoan.Text,
+                                HoTen = txt_HoTen.Text,
+                                Cccd = txt_CCCD.Text,
+                                DiaChi = txt_DiaChi.Text,
+                                Sdt = txt_SDT.Text,
+                                Email = txt_Email.Text,
+                                NgheNghiep = cb_NgheNghiep.Text,
+                                ThuNhap = cb_ThuNhap.Text,
+                                LoaiThe = cbLoaiThe.Text,
+                                HanThanhToan = dtpNgayMoThe.Value.AddMonths(1),
+                                NgaySaoKe = dtpNgayMoThe.Value.AddMonths(1).Subtract(new TimeSpan(15, 0, 0, 0)),
+                                HanMuc = decimal.Parse(txtHanMuc.Text),
+                                LaiSuat = laiSuat.ToString(),
+                                SoTienDaSuDung = 0,
+                                SoTienSuDungSau = 0,
+                                NgayMoThe = dtpNgayMoThe.Value,
+                                PhiTraCham = 0,
+                                PhiPhat = 0
+                            };
+                               
+                            tttdDAO.Them(tktd);
                             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             FrmTienIch frmTienIch = new FrmTienIch(kh, tknh, pnlNguoiDung);
                             Utility.addForm(frmTienIch, pnlNguoiDung);
