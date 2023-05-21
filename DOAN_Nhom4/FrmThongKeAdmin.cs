@@ -27,7 +27,7 @@ namespace DOAN_Nhom4
             HienThiDuLieuLen();
             HienThiLsgd();
             ThongKe.DataSource = tkDAO.ThongKeGiaoDichChuyenTien(ngayBatDau, ngayKetThuc);
-            ThongKe.Series["ChuyenTien"].XValueMember = "ThoiGian";
+            ThongKe.Series["ChuyenTien"].XValueMember = "Ngay";
             ThongKe.Series["ChuyenTien"].YValueMembers = "TongTien";
             ThongKe.Legends[1].Enabled = false;
             ThongKe.Legends[2].Enabled = false;
@@ -100,7 +100,7 @@ namespace DOAN_Nhom4
         public void HienThiDuLieuDoThi(string s)
         {
             ThongKe.Series[s].Enabled = true;
-            ThongKe.Series[s].XValueMember = "ThoiGian";
+            ThongKe.Series[s].XValueMember = "Ngay";
             ThongKe.Series[s].YValueMembers = "TongTien";
         }
 

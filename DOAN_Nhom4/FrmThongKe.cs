@@ -39,7 +39,7 @@ namespace DOAN_Nhom4
             lblHienThiNgay.Text = string.Format("{0} đến {1}", ngayBatDau, ngayKetThuc);
             // Ban dau cho do thi tien gui hien thi khi vua mo form
             ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNh, kh.SoTk);
-            ThongKe.Series["TienGui"].XValueMember = "ThoiGian";
+            ThongKe.Series["TienGui"].XValueMember = "Ngay";
             ThongKe.Series["TienGui"].YValueMembers = "TongTien";
             ThongKe.Legends[0].Enabled = false;
             ThongKe.Legends[2].Enabled = false;
@@ -82,7 +82,7 @@ namespace DOAN_Nhom4
         public void HienThiDuLieuDoThi(string s) // Dung de hien thi du lieu len do thi
         {
             ThongKe.Series[s].Enabled = true;
-            ThongKe.Series[s].XValueMember = "ThoiGian";
+            ThongKe.Series[s].XValueMember = "Ngay";
             ThongKe.Series[s].YValueMembers = "TongTien";
         }
     }
