@@ -25,7 +25,7 @@ namespace DOAN_Nhom4
         }
         public KHNoXau IsNull(TaiKhoanNganHang tknh)
         {
-            string sql = string.Format("SELECT * FROM KhachHangNoXau WHERE SoTK = '{0}'", tknh.SoTK);
+            string sql = string.Format("SELECT * FROM KhachHangNoXau WHERE SoTK = '{0}'", tknh.SoTk);
             return data.XuLiKHNoXau(sql);
         }
     }

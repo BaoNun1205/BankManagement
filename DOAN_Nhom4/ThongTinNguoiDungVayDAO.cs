@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -72,7 +73,7 @@ namespace DOAN_Nhom4
         public void CapNhatTaiKhoanNganHang(TaiKhoanNganHang tknh, TaiKhoanNganHangDAO tknhDAO, ThongTinNguoiDungVay ttNgDung)
         {
             tknh.SoDu += ttNgDung.SoTienVay;
-            tknhDAO.SuaSoDu(tknh);
+            tknhDAO.Sua(tknh);
         }
     }
 }

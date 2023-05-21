@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
@@ -27,7 +28,7 @@ namespace DOAN_Nhom4
         public List<string> LayCotTKTK(string tenCot, TaiKhoanNganHang tknh)
         {
             List<string> cot = new List<string>();
-            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNH, tknh.SoTK);
+            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNh, tknh.SoTk);
             cot = data.LayCot(sql, tenCot);
             return cot;
         }
@@ -48,7 +49,7 @@ namespace DOAN_Nhom4
 
         public void Them(TietKiem tkiem, TaiKhoanNganHang tknh)
         {      
-            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenNH, SoTK, MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", tknh.TenNH, tknh.SoTK, tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
+            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenNH, SoTK, MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", tknh.TenNh, tknh.SoTk, tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
             data.xuLi(sqlTkiem);
         }
 
@@ -66,7 +67,7 @@ namespace DOAN_Nhom4
 
         public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
         {
-            string sqlStr = string.Format("SELECT MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNH, tknh.SoTK);
+            string sqlStr = string.Format("SELECT MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNh, tknh.SoTk);
             return data.LayDanhSach(sqlStr);
         }
 
@@ -97,14 +98,14 @@ namespace DOAN_Nhom4
                     {
                         tknh.SoDu = tknh.SoDu + tk.TongTien;
                         Rut(tk);
-                        tknhDAO.SuaSoDu(tknh);
+                        tknhDAO.Sua(tknh);
                     }
                     if (tk.LoaiSo == 2)
                     {
                         tknh.SoDu = tknh.SoDu + tk.TienLai;
                         tk.NgayDangky = DateTime.Now;
                         Sua(tk);
-                        tknhDAO.SuaSoDu(tknh);
+                        tknhDAO.Sua(tknh);
                     }
                     if (tk.LoaiSo == 3)
                     {

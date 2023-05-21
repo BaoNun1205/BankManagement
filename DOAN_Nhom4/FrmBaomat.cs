@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
 
         private void pn_baomat_Paint(object sender, PaintEventArgs e)
         {
-            txtTenDN.Text = tknh.TenDN;
+            txtTenDN.Text = tknh.TenDn;
             txtMatkhau.Text = tknh.MatKhau;
         }
 

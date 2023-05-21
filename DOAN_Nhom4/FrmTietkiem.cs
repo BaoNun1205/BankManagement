@@ -160,7 +160,7 @@ namespace DOAN_Nhom4
         private void HienThiThongTin()
         {
             BigInteger kt;
-            if (BigInteger.TryParse(txtSotien.Text, out kt) && tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), tknh.SoDu) == true)
+            if (BigInteger.TryParse(txtSotien.Text, out kt) && tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), (decimal)tknh.SoDu) == true)
             {
                 tienGoc = decimal.Parse(txtSotien.Text);
                 tienLai = tkiemDAO.TienLai(tienGoc, laiSuat, kiHan);

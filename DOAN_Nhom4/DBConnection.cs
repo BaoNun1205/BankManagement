@@ -263,9 +263,9 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    tknh.TenNH = reader.GetString(0);
-                    tknh.SoTK = reader.GetString(1);
-                    tknh.TenDN = reader.GetString(2);
+                    tknh.TenNh = reader.GetString(0);
+                    tknh.SoTk = reader.GetString(1);
+                    tknh.TenDn = reader.GetString(2);
                     tknh.MatKhau = reader.GetString(3);
                     tknh.SoDu = reader.GetDecimal(4);
                 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,56 +11,64 @@ namespace DOAN_Nhom4
 {
     internal class TaiKhoanNganHangDAO
     {
+        NganHangHhbContext hhb = new NganHangHhbContext();
         DBConnection data = new DBConnection();
         public TaiKhoanNganHangDAO() { }
 
         public void Them(TaiKhoanNganHang tknh)
         {
-            string sqlNH = string.Format("INSERT INTO TaiKhoanNganHang(TenNH, SoTK, TenDN, MatKhau, SoDu, NgayDangKy) VALUES ('{0}', '{1}', '{2}', '{3}', {4}, '{5}')", tknh.TenNH, tknh.SoTK, tknh.TenDN, tknh.MatKhau, tknh.SoDu, tknh.NgayDangKy);
-            data.xuLi(sqlNH);
+            hhb.Add(tknh);
+            hhb.SaveChanges();
         }
 
         public void Xoa(TaiKhoanNganHang tknh)
         {
-            string sqlNH = string.Format("DELETE FROM TaiKhoanNganHang WHERE SoTK ='{0}'", tknh.SoTK);
-            data.xuLi(sqlNH);
+            TaiKhoanNganHang tk = hhb.TaiKhoanNganHangs.Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk).SingleOrDefault();
+            hhb.Remove(tk);
+            hhb.SaveChanges();
         }
         public void Sua(TaiKhoanNganHang tknh)
         {
-            string sqlNH = string.Format("UPDATE TaiKhoanNganHang SET TenDN = '{0}', MatKhau = '{1}', SoDu = {2} WHERE SoTK = '{3}'", tknh.TenDN, tknh.MatKhau, tknh.SoDu, tknh.SoTK);
-            data.xuLi(sqlNH);
+            TaiKhoanNganHang tk = hhb.TaiKhoanNganHangs.Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk).SingleOrDefault();
+            tk.TenNh = tknh.TenNh;
+            tk.SoTk = tknh.SoTk;
+            tk.TenDn = tknh.TenDn;
+            tk.MatKhau = tknh.MatKhau;
+            tk.SoDu = tknh.SoDu;
+            tk.NgayDangKy = tknh.NgayDangKy;
+            hhb.SaveChanges();
         }
-        public void SuaSoDu(TaiKhoanNganHang tknh)
-        {
-            string sqlNH = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}'", tknh.SoDu, tknh.SoTK);
-            data.xuLi(sqlNH);
-        }
+
         public bool IsEmpty(TaiKhoanNganHang tknh)
         {
-            if (tknh.SoTK != "" && tknh.MatKhau != "" && tknh.TenDN != "" && tknh.SoDu.ToString() != "")
+            if (tknh.SoTk != "" && tknh.MatKhau != "" && tknh.TenDn != "" && tknh.SoDu.ToString() != "")
                 return false;
             return true;
         }
 
-        public TaiKhoanNganHang LayTaiKhoanNganHang(string CotSoTK, string GTSoTK, string CotTenNH, string GTTenNH)
+        public TaiKhoanNganHang LayTaiKhoanNganHang(string GTSoTK, string GTTenNH)
         {
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang();
-            string sql = string.Format("SELECT * FROM TaiKhoanNganHang WHERE {0} = '{1}' AND {2} = '{3}'", CotSoTK, GTSoTK, CotTenNH, GTTenNH);
-            tknh = data.XuLi(sql);
-            return tknh;
+            return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.SoTk == GTSoTK).SingleOrDefault();
+        }
+
+        public TaiKhoanNganHang LayTaiKhoanNganHangBangTenDn(string GTTenDn, string GTTenNH)
+        {
+            return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.TenDn == GTTenDn).SingleOrDefault();
         }
 
         public void NapTien(TaiKhoanNganHang tkNap, GiaoDich gd)
         {
-            decimal SoDu = gd.SoTien + tkNap.SoDu;
-            string sqlStrNap = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", SoDu, tkNap.SoTK, tkNap.TenNH);
-            data.xuLi(sqlStrNap);        
+            decimal SoDu = (decimal)(gd.SoTien + tkNap.SoDu);
+            TaiKhoanNganHang tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkNap.TenNh && tknh.SoTk == tkNap.SoTk).SingleOrDefault();
+            tknh.SoDu = SoDu;
+            hhb.SaveChanges();
         }
         public void RutTien(TaiKhoanNganHang tkRut, GiaoDich gd)
         {
-            decimal SoDu = tkRut.SoDu - gd.SoTien;
-            string sqlStrRut = string.Format("UPDATE TaiKhoanNganHang SET SoDu = {0} WHERE SoTK = '{1}' AND TenNH = '{2}'", SoDu, tkRut.SoTK, tkRut.TenNH);
-            data.xuLi(sqlStrRut);
+            decimal SoDu = (decimal)(tkRut.SoDu - gd.SoTien);
+            TaiKhoanNganHang tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkRut.TenNh && tknh.SoTk == tkRut.SoTk).SingleOrDefault();
+            tknh.SoDu = SoDu;
+            hhb.SaveChanges();
         }
     }
 }

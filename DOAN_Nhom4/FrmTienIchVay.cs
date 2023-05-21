@@ -75,7 +75,7 @@ namespace DOAN_Nhom4
                 {
                     KHNoXau kh = new KHNoXau();
                     kh.TenNH = nguoiDung.TenNh;
-                    kh.SoTK = tknh.SoTK;
+                    kh.SoTK = tknh.SoTk;
                     kh.TenTK = nguoiDung.TenKh;
                     kh.Cccd = nguoiDung.Cccd;
                     kh.NgayNo = DateTime.Now;

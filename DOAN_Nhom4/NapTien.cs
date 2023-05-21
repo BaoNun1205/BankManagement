@@ -28,13 +28,13 @@ namespace DOAN_Nhom4
             KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
             ngDung = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            tk = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
             if (ngDung != null)
             {
                 txtTenTK.Text = ngDung.TenKh.ToString();
                 txtCCCD.Text = ngDung.Cccd.ToString();
                 txtSDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
+                lblSoDu.Text = tk.SoDu.Value.ToString("N0") + " VNĐ";
             }
             else
             {
@@ -48,10 +48,10 @@ namespace DOAN_Nhom4
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
-            tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            tkNap = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
             KhachHang ndNap = new KhachHang();
             ndNap = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
-            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenKh, tkNap.SoTK, decimal.Parse(txtSoTien.Text), "Nap tien vao tai khoan");
+            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNh, ndNap.TenKh, tkNap.SoTk, decimal.Parse(txtSoTien.Text), "Nap tien vao tai khoan");
             if (tkNap != null)
             {
                 if (gd.SoTien >= 100000)

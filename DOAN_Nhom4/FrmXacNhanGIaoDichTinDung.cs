@@ -36,7 +36,7 @@ namespace DOAN_Nhom4
 
         private void FrmXacNhanGIaoDichTinDung_Load(object sender, EventArgs e)
         {
-            lblHienThiTKNguon.Text = tknh.SoTK;
+            lblHienThiTKNguon.Text = tknh.SoTk;
             lblHienThiTKTinDung.Text = tttd.SoTktinDung;
             lblHienThiTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString();
             txt_NgayGiaoDich.Value = DateTime.Now;
@@ -49,12 +49,12 @@ namespace DOAN_Nhom4
         {
             if (tknh.SoDu >= Int64.Parse(lblHienThiTongSoTien.Text))
             {
-                GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenKh, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTktinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
+                GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNh, kh.TenKh, tknh.SoTk, "TinDung", tttd.HoTen, tttd.SoTktinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
                 lsgdDAO.Them(gd);
                 tknhDAO.RutTien(tknh, gd);
                 tttdDAO.CapNhatTinDungHangThang(tttd);
                 tttdDAO.Sua(tttd);
-                tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
+                tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTKGui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();

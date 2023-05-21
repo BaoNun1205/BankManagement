@@ -22,7 +22,7 @@ namespace DOAN_Nhom4
 
         public FrmTrangchu(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
-            tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", kh.SoTk, "TenNH", kh.TenNh);
+            tknh = tknhDAO.LayTaiKhoanNganHang(kh.SoTk, kh.TenNh);
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;

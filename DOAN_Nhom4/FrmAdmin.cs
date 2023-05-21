@@ -40,9 +40,9 @@ namespace DOAN_Nhom4
             };
             TaiKhoanNganHang tknh = new TaiKhoanNganHang()
             {
-                TenNH = "HHB",
-                SoTK = txt_SoTK.Text,
-                TenDN = txt_TenDN.Text,
+                TenNh = "HHB",
+                SoTk = txt_SoTK.Text,
+                TenDn = txt_TenDN.Text,
                 MatKhau = txt_MatKhau.Text,
                 SoDu = decimal.Parse(txt_SoDu.Text),
                 NgayDangKy = txt_NgayDangKyThe.Value
@@ -88,9 +88,9 @@ namespace DOAN_Nhom4
             };
             TaiKhoanNganHang tknh = new TaiKhoanNganHang()
             {
-                TenNH = "HHB",
-                SoTK = txt_SoTK.Text,
-                TenDN = txt_TenDN.Text,
+                TenNh = "HHB",
+                SoTk = txt_SoTK.Text,
+                TenDn = txt_TenDN.Text,
                 MatKhau = txt_MatKhau.Text,
                 SoDu = decimal.Parse(txt_SoDu.Text),
                 NgayDangKy = txt_NgayDangKyThe.Value
@@ -115,9 +115,9 @@ namespace DOAN_Nhom4
             };
             TaiKhoanNganHang tknh = new TaiKhoanNganHang()
             {
-                TenNH = "HHB",
-                SoTK = txt_SoTK.Text,
-                TenDN = txt_TenDN.Text,
+                TenNh = "HHB",
+                SoTk = txt_SoTK.Text,
+                TenDn = txt_TenDN.Text,
                 MatKhau = txt_MatKhau.Text,
                 SoDu = decimal.Parse(txt_SoDu.Text),
                 NgayDangKy = txt_NgayDangKyThe.Value

@@ -74,8 +74,8 @@ namespace DOAN_Nhom4
                 {
                     if (ValidateChildren(ValidationConstraints.Enabled))
                     {
-                        tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN, "TenNH", "HHB");
-                        nguoiDung = khDAO.LayKhachHang(tknh.SoTK, "HHB");
+                        tknh = tknhDAO.LayTaiKhoanNganHangBangTenDn(dn.TenDN, "HHB");
+                        nguoiDung = khDAO.LayKhachHang(tknh.SoTk, tknh.TenNh);
                         FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
                         this.Hide();
                         frmnguoidung.ShowDialog();

@@ -34,7 +34,7 @@ namespace DOAN_Nhom4
             }
             else
             {
-                TaiKhoanNganHang tknh = tknhDAO.LayTaiKhoanNganHang("TenNH", gd.NganHangGui, "SoTK", gd.SoTKGui);
+                TaiKhoanNganHang tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTKGui);
                 tknhDAO.RutTien(tknh, gd);
                 NapTienDienThoai(sdt, gd);
             }

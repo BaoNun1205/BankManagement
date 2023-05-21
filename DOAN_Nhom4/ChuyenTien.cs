@@ -30,13 +30,13 @@ namespace DOAN_Nhom4
             KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
             ngDung = ndDAO.LayKhachHang(txtSoTKChuyen.Text,"HHB");           
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
+            tk = tknhDAO.LayTaiKhoanNganHang(txtSoTKChuyen.Text, "HHB");
             if (ngDung != null)
             {
                 txtTenTKChuyen.Text = ngDung.TenKh.ToString();
                 txtCCCD.Text = ngDung.Cccd.ToString();
                 txtSDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
+                lblSoDu.Text = tk.SoDu.Value.ToString("N0") + " VNĐ";
             }
             else
             {
@@ -98,19 +98,19 @@ namespace DOAN_Nhom4
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
-            tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
+            tkGui = tknhDAO.LayTaiKhoanNganHang(txtSoTKChuyen.Text, "HHB");
             KhachHang ndGui = new KhachHang();
             ndGui = ndDAO.LayKhachHang(txtSoTKChuyen.Text, "HHB");
             TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
-            tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
+            tkNhan = tknhDAO.LayTaiKhoanNganHang(txtSoTKNhan.Text, cbTenNH.Text);
             KhachHang ndNhan = new KhachHang();
             ndNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
-            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenKh, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenKh, tkNhan.SoTK, decimal.Parse(txtSoTien.Text), txtLoiNhan.Text);
+            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNh, ndGui.TenKh, tkGui.SoTk, tkNhan.TenNh, ndNhan.TenKh, tkNhan.SoTk, decimal.Parse(txtSoTien.Text), txtLoiNhan.Text);
             if (tkGui != null)
             {
                 if (tkNhan != null)
                 {
-                    if (tkGui.TenNH != tkNhan.TenNH|| tkGui.TenNH == tkNhan.TenNH && tkGui.SoTK != tkNhan.SoTK)
+                    if (tkGui.TenNh != tkNhan.TenNh|| tkGui.TenNh == tkNhan.TenNh && tkGui.SoTk != tkNhan.SoTk)
                     {
                         if (gd.SoTien >= 10000 && gd.SoTien <= tkGui.SoDu)
                         {

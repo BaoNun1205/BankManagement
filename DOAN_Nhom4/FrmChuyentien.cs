@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
             danhSachGiaoDich = ChuyenTienDAO.LayDanhSachGiaoDich(nguoiDung.SoTk);
             cbTennguoinhan.Items.AddRange(danhSachGiaoDich.ToArray());
             cbTennguoinhan.DisplayMember = "ThongTinCoBan";
-            lblSoDu.Text = tknh.SoDu.ToString("N0") + " VND";
+            lblSoDu.Text = tknh.SoDu.Value.ToString("N0") + " VND";
         }
        
         private void btnHuy_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace DOAN_Nhom4
             KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
             ngDung = khDAO.LayKhachHang(txtSTK.Text, cbTenNH.Text);
-            tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
+            tk = tknhDAO.LayTaiKhoanNganHang(txtSTK.Text, cbTenNH.Text);
             if (tk != null)
             {
                 kt = KiemTraTenNguoiNhan.hople;

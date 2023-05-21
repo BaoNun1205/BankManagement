@@ -42,9 +42,9 @@ namespace DOAN_Nhom4
             };
             TaiKhoanNganHang tknh = new TaiKhoanNganHang()
             {
-                TenNH = "HHB",
-                SoTK = txtSoTK.Text,
-                TenDN = txtTenDN.Text,
+                TenNh = "HHB",
+                SoTk = txtSoTK.Text,
+                TenDn = txtTenDN.Text,
                 MatKhau = txtMatkhau.Text,
                 SoDu = 50000,
                 NgayDangKy = txtNgayDangKy.Value
