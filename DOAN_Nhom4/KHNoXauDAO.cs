@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace DOAN_Nhom4
 {
     internal class KHNoXauDAO
     {
+
         KHNoXau kh = new KHNoXau();
         DBConnection data = new DBConnection();
         public KHNoXauDAO() { }

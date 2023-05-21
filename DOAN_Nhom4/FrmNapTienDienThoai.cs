@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmNapTienDienThoai : Form
     {
-        private NguoiDung kh;
+        private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
@@ -29,7 +30,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
         
-        public FrmNapTienDienThoai(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmNapTienDienThoai(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
@@ -152,7 +153,7 @@ namespace DOAN_Nhom4
             {
                 if (menhGia != 0)
                 {
-                    GiaoDich gd = new GiaoDich("Nap Tien Dien Thoai", loaiTaiKhoan, kh.TenTK, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
+                    GiaoDich gd = new GiaoDich("Nap Tien Dien Thoai", loaiTaiKhoan, kh.TenKh, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
                     if (loaiTaiKhoan == "HHB" && tknh.SoDu < gd.SoTien)
                     {
                         MessageBox.Show("Số dư của bạn không đủ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

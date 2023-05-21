@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacNhanGIaoDichTinDung : Form
     {
-        private NguoiDung kh;
+        private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private ThongTinTinDung tttd;
@@ -24,7 +25,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmXacNhanGIaoDichTinDung(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
+        public FrmXacNhanGIaoDichTinDung(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, ThongTinTinDung tttd)
         {
             InitializeComponent();
             this.kh = kh;
@@ -48,7 +49,7 @@ namespace DOAN_Nhom4
         {
             if (tknh.SoDu >= Int64.Parse(lblHienThiTongSoTien.Text))
             {
-                GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenTK, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTKTinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
+                GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNH, kh.TenKh, tknh.SoTK, "TinDung", tttd.HoTen, tttd.SoTKTinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
                 lsgdDAO.Them(gd);
                 tknhDAO.RutTien(tknh, gd);
                 tttdDAO.CapNhatTinDungHangThang(tttd);

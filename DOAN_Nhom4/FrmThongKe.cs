@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Interop.Excel;
+﻿using DOAN_Nhom4.Entities;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongKe : Form
     {
-        private NguoiDung kh;
+        private KhachHang kh;
         private Panel pnlNguoiDung;
         ThongKeDAO tkDAO = new ThongKeDAO();
         string ngayBatDau = DateTime.Now.Subtract(new TimeSpan(6, 0, 0, 0)).ToString("yyyy-MM-dd");
@@ -26,7 +27,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmThongKe(NguoiDung kh, Panel pnlNguoiDung)
+        public FrmThongKe(KhachHang kh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
@@ -37,7 +38,7 @@ namespace DOAN_Nhom4
         {
             lblHienThiNgay.Text = string.Format("{0} đến {1}", ngayBatDau, ngayKetThuc);
             // Ban dau cho do thi tien gui hien thi khi vua mo form
-            ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNh, kh.SoTk);
             ThongKe.Series["TienGui"].XValueMember = "ThoiGian";
             ThongKe.Series["TienGui"].YValueMembers = "TongTien";
             ThongKe.Legends[0].Enabled = false;
@@ -49,7 +50,7 @@ namespace DOAN_Nhom4
             string s = "TienGui";
             MacDinhDoThi();
             ThongKe.Legends[1].Enabled = true;
-            ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            ThongKe.DataSource = tkDAO.ThongKeTienGui(ngayBatDau, ngayKetThuc, kh.TenNh, kh.SoTk);
             HienThiDuLieuDoThi(s);
         }
 
@@ -58,7 +59,7 @@ namespace DOAN_Nhom4
             string s = "TienNhan";
             MacDinhDoThi();
             ThongKe.Legends[0].Enabled = true;
-            ThongKe.DataSource = tkDAO.ThongKeTienNhan(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            ThongKe.DataSource = tkDAO.ThongKeTienNhan(ngayBatDau, ngayKetThuc, kh.TenNh, kh.SoTk);
             HienThiDuLieuDoThi(s);
         }
 
@@ -67,7 +68,7 @@ namespace DOAN_Nhom4
             string s = "TienTong";
             MacDinhDoThi();
             ThongKe.Legends[2].Enabled = true;
-            ThongKe.DataSource = tkDAO.ThongKeTienTong(ngayBatDau, ngayKetThuc, kh.TenNH, kh.SoTK);
+            ThongKe.DataSource = tkDAO.ThongKeTienTong(ngayBatDau, ngayKetThuc, kh.TenNh, kh.SoTk);
             HienThiDuLieuDoThi(s);
         }
 

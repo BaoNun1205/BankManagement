@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Numerics;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using DOAN_Nhom4.Entities;
 
 namespace DOAN_Nhom4
 {
     public partial class FrmVay : Form
     {
         DBConnection db = new DBConnection();
-        public NguoiDung nguoiDung;
+        public KhachHang nguoiDung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
@@ -24,7 +25,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        public FrmVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmVay(KhachHang nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -71,7 +72,7 @@ namespace DOAN_Nhom4
                     {
                         if (int.Parse(txtThoiGianVay.Text) >= 6 && int.Parse(txtThoiGianVay.Text) <= 60)
                         {
-                            ThongTinNguoiDungVay tmp = ttNgDungDAO.TKValid(nguoiDung.SoTK);
+                            ThongTinNguoiDungVay tmp = ttNgDungDAO.TKValid(nguoiDung.SoTk);
                             if (tmp == null)
                             {
                                 string txt_LoaiKhoanVay = "";
@@ -86,7 +87,7 @@ namespace DOAN_Nhom4
                                     txtTaiSan.Text = "Trong";
                                     txtGiaTriTaiSan.Text = "0";
                                 }
-                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTK, cbDanhXung.Text, nguoiDung.TenTK, nguoiDung.Cccd, txtDiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cbNgheNghiep.Text, cbThuNhap.Text, cbSPVay.Text, decimal.Parse(txtSoTienVay.Text), int.Parse(txtThoiGianVay.Text), txtTaiSan.Text, int.Parse(txtGiaTriTaiSan.Text), s, txtNgayVay.Value);
+                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTk, cbDanhXung.Text, nguoiDung.TenKh, nguoiDung.Cccd, txtDiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cbNgheNghiep.Text, cbThuNhap.Text, cbSPVay.Text, decimal.Parse(txtSoTienVay.Text), int.Parse(txtThoiGianVay.Text), txtTaiSan.Text, int.Parse(txtGiaTriTaiSan.Text), s, txtNgayVay.Value);
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                                 Utility.addForm(xacnhan, pnlNguoiDung);
                             }
@@ -169,7 +170,7 @@ namespace DOAN_Nhom4
 
         private void HienThi()
         {
-            txtHoTen.Text = nguoiDung.TenTK;
+            txtHoTen.Text = nguoiDung.TenKh;
             txtCCCD.Text = nguoiDung.Cccd;
             txtSDT.Text = nguoiDung.Sdt;
             txtEmail.Text = nguoiDung.Email;

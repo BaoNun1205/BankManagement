@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,15 +25,15 @@ namespace DOAN_Nhom4
             data.xuLi(sqlGD);
         }
 
-        public DataTable LichSuGiaoDichNhanNguoiDung(NguoiDung kh, int x)
+        public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
         {
-            string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangGui, SoTKGui, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKNhan = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
+            string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangGui, SoTKGui, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKNhan = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTk, x);
             return data.LayDanhSach(sqlStr);
         }
 
-        public DataTable LichSuGiaoDichGuiNguoiDung(NguoiDung kh, int x)
+        public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
         {
-            string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangNhan, SoTKNhan, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKGui = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTK, x);
+            string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangNhan, SoTKNhan, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKGui = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTk, x);
             return data.LayDanhSach(sqlStr);
         }
 

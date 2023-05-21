@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,7 +50,7 @@ namespace DOAN_Nhom4
         {
             DangNhap dn = new DangNhap(txtUserName.Text, txtPass.Text);
             TaiKhoanNganHang tknh = new TaiKhoanNganHang();
-            NguoiDung nguoiDung = new NguoiDung();
+            KhachHang nguoiDung = new KhachHang();
             if (rdb_Admin.Checked == true) //dang nhap voi tu cach admin
             {
                 if (credentials.ContainsKey(txtUserName.Text) && credentials[txtUserName.Text] == txtPass.Text)
@@ -74,7 +75,7 @@ namespace DOAN_Nhom4
                     if (ValidateChildren(ValidationConstraints.Enabled))
                     {
                         tknh = tknhDAO.LayTaiKhoanNganHang("TenDN", dn.TenDN, "TenNH", "HHB");
-                        nguoiDung = khDAO.LayKhachHang("SoTK", tknh.SoTK, "TenNH", "HHB");
+                        nguoiDung = khDAO.LayKhachHang(tknh.SoTK, "HHB");
                         FrmNguoidung frmnguoidung = new FrmNguoidung(nguoiDung, tknh);
                         this.Hide();
                         frmnguoidung.ShowDialog();

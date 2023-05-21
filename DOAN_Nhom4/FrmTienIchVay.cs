@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmTienIchVay : Form
     {
-        private NguoiDung nguoiDung;
+        private KhachHang nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
@@ -22,7 +23,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        public FrmTienIchVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmTienIchVay(KhachHang nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -33,7 +34,7 @@ namespace DOAN_Nhom4
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             KHNoXau kh = KHNoXauDAO.IsNull(tknh);
-            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.soTK);
+            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTk);
             if (kh == null) //kiem tra co no xau nao khong
             {
                 if (ttNgDung == null) //kiem tra co khoan vay nao khong
@@ -63,7 +64,7 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTK);           
+            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTk);           
             if (ttNgDung != null) //kiem tra xem co khoan vay hay chua
             {
                 DateTime startDate = ttNgDung.NgayDenHan;
@@ -73,9 +74,9 @@ namespace DOAN_Nhom4
                 if (totalDays > 90) //qua han thanh toan 3 thang => cap nhat no xau va xoa khoan vay
                 {
                     KHNoXau kh = new KHNoXau();
-                    kh.TenNH = nguoiDung.TenNH;
+                    kh.TenNH = nguoiDung.TenNh;
                     kh.SoTK = tknh.SoTK;
-                    kh.TenTK = nguoiDung.tenTK;
+                    kh.TenTK = nguoiDung.TenKh;
                     kh.Cccd = nguoiDung.Cccd;
                     kh.NgayNo = DateTime.Now;
                     if(KHNoXauDAO.IsNull(tknh) == null)

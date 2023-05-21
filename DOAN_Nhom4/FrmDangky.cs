@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,8 +30,25 @@ namespace DOAN_Nhom4
         }
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txtSoTK.Text, txtTenTK.Text, timeNgaySinh.Value, txtCCCD.Text, txtEmail.Text, txtSDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txtSoTK.Text, txtTenDN.Text, txtMatkhau.Text, 0, txtNgayDangKy.Value);
+            KhachHang kh = new KhachHang()
+            {
+                TenNh = "HHB",
+                SoTk = txtSoTK.Text,
+                TenKh = txtTenTK.Text,
+                NgaySinh = timeNgaySinh.Value,
+                Cccd = txtCCCD.Text,
+                Email = txtEmail.Text,
+                Sdt = txtSDT.Text
+            };
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang()
+            {
+                TenNH = "HHB",
+                SoTK = txtSoTK.Text,
+                TenDN = txtTenDN.Text,
+                MatKhau = txtMatkhau.Text,
+                SoDu = 50000,
+                NgayDangKy = txtNgayDangKy.Value
+            };
             if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
             {
                 if (!khDAO.IsPhone(kh))

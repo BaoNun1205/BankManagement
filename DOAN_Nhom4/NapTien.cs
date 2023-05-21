@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Numerics;
+using DOAN_Nhom4.Entities;
 
 namespace DOAN_Nhom4
 {
@@ -24,13 +25,13 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTin()
         {
-            NguoiDung ngDung = new NguoiDung();
+            KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            ngDung = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txtTenTK.Text = ngDung.TenTK.ToString();
+                txtTenTK.Text = ngDung.TenKh.ToString();
                 txtCCCD.Text = ngDung.Cccd.ToString();
                 txtSDT.Text = ngDung.Sdt.ToString();
                 lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
@@ -48,9 +49,9 @@ namespace DOAN_Nhom4
         {
             TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
             tkNap = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
-            NguoiDung ndNap = new NguoiDung();
-            ndNap = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
-            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenTK, tkNap.SoTK, decimal.Parse(txtSoTien.Text), "Nap tien vao tai khoan");
+            KhachHang ndNap = new KhachHang();
+            ndNap = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
+            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNH, ndNap.TenKh, tkNap.SoTK, decimal.Parse(txtSoTien.Text), "Nap tien vao tai khoan");
             if (tkNap != null)
             {
                 if (gd.SoTien >= 100000)

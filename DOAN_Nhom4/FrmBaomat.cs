@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmBaomat : Form
     {
-        public NguoiDung ngdung;
+        public KhachHang ngdung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         public FrmBaomat()
@@ -20,7 +21,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmBaomat(NguoiDung ngdung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmBaomat(KhachHang ngdung, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.ngdung = ngdung;
@@ -31,7 +32,7 @@ namespace DOAN_Nhom4
         private void btn_doimatkhau_Click(object sender, EventArgs e)
         {
             FrmDoimatkhau frmDoiMatKhau = new FrmDoimatkhau(ngdung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.Utility.addForm(frmDoiMatKhau, pnlNguoiDung);
+            Utility.addForm(frmDoiMatKhau, pnlNguoiDung);
         }
 
         private void pn_baomat_Paint(object sender, PaintEventArgs e)

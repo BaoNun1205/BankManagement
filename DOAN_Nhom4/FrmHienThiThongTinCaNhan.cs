@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmHienThiThongTinCaNhan : Form
     {
-        public NguoiDung kh;
+        public KhachHang kh;
         public TaiKhoanNganHang tknh;
         private ThongTinTinDung tttd;
         private ThongTinTinDungDAO tktdDAO = new ThongTinTinDungDAO();
@@ -30,7 +31,7 @@ namespace DOAN_Nhom4
             Properties.Resources.hhb_visa_infinite,
         };
 
-        public FrmHienThiThongTinCaNhan(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmHienThiThongTinCaNhan(KhachHang kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
@@ -44,11 +45,11 @@ namespace DOAN_Nhom4
 
         private void HienThiTheNganHang()
         {
-            txtChutaikhoan.Text = kh.TenTK.ToString();
-            lblSoTk.Text = kh.SoTK.ToString();
+            txtChutaikhoan.Text = kh.TenKh.ToString();
+            lblSoTk.Text = kh.SoTk.ToString();
             lblSoDuValue.Text = tknh.SoDu.ToString("N0") + " VNĐ";
             txtCCCD.Text = kh.Cccd.ToString();
-            txtNgaysinh.Text = kh.NgaySinh.ToString("dd/MM/yyyy");
+            txtNgaysinh.Text = kh.NgaySinh.ToString();
             txtSDT.Text = kh.Sdt.ToString();
         }
 

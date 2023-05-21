@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXemTKTK : Form
     {
-        private NguoiDung kh;
+        private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         TietkiemDAO tietkiemDAO = new TietkiemDAO();
@@ -28,7 +29,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmXemTKTK(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        public FrmXemTKTK(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.kh = kh;
@@ -99,7 +100,7 @@ namespace DOAN_Nhom4
                 if (luachon == DialogResult.Yes)
                 {                   
                     TietKiem tkiem = tietkiemDAO.LayThongTinSoTietKiem("MaTietKiem", lblMaTietKiem.Text);
-                    GiaoDich gd = new GiaoDich("Rut Tiet Kiem", kh.TenNH, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.tenTK, kh.SoTK, tkiem.TienGoc, "");
+                    GiaoDich gd = new GiaoDich("Rut Tiet Kiem", kh.TenNh, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.TenKh, kh.SoTk, tkiem.TienGoc, "");
                     tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
                     tknhDAO.Sua(tknh);
                     tietkiemDAO.Rut(tkiem);

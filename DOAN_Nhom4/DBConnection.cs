@@ -12,6 +12,7 @@ using OfficeOpenXml;
 using System.IO;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using System.Windows.Forms;
+using DOAN_Nhom4.Entities;
 
 namespace DOAN_Nhom4
 {
@@ -97,9 +98,9 @@ namespace DOAN_Nhom4
             return tkiem;
         }
 
-        public NguoiDung LayThongTinKhachHang(string sqlStr)
+        public KhachHang LayThongTinKhachHang(string sqlStr)
         {
-            NguoiDung ngDung = new NguoiDung();
+            KhachHang ngDung = new KhachHang();
             conn.Open();
             try
             {
@@ -108,10 +109,10 @@ namespace DOAN_Nhom4
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    ngDung.TenNH = reader.GetString(0);
-                    ngDung.SoTK = reader.GetString(1);
-                    ngDung.tenTK = reader.GetString(2);
-                    ngDung.ngaySinh = reader.GetDateTime(3);
+                    ngDung.TenNh = reader.GetString(0);
+                    ngDung.SoTk = reader.GetString(1);
+                    ngDung.TenKh = reader.GetString(2);
+                    ngDung.NgaySinh = reader.GetDateTime(3);
                     ngDung.Cccd = reader.GetString(4);
                     ngDung.Email = reader.GetString(5);
                     ngDung.Sdt = reader.GetString(6);
@@ -282,9 +283,9 @@ namespace DOAN_Nhom4
             return tknh;
         }
 
-        public NguoiDung Xuli(string sqlStr)
+        public KhachHang Xuli(string sqlStr)
         {
-            NguoiDung khachHang = new NguoiDung();
+            KhachHang khachHang = new KhachHang();
             try
             {
                 conn.Open();
@@ -293,9 +294,9 @@ namespace DOAN_Nhom4
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    khachHang.TenNH = reader.GetString(0);
-                    khachHang.SoTK = reader.GetString(1);
-                    khachHang.TenTK = reader.GetString(2);
+                    khachHang.TenNh = reader.GetString(0);
+                    khachHang.SoTk = reader.GetString(1);
+                    khachHang.TenKh = reader.GetString(2);
                     khachHang.NgaySinh = reader.GetDateTime(3);
                     khachHang.Cccd = reader.GetString(4);
                     khachHang.Email = reader.GetString(5);

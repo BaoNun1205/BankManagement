@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Services.FormInput;
+﻿using DOAN_Nhom4.Entities;
+using Microsoft.VisualStudio.Services.FormInput;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmChuyentien : Form
     {
-        public NguoiDung nguoiDung;
+        public KhachHang nguoiDung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         NguoiDungDAO khDAO = new NguoiDungDAO();
@@ -35,7 +36,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmChuyentien(NguoiDung nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        public FrmChuyentien(KhachHang nguoiDung, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -45,7 +46,7 @@ namespace DOAN_Nhom4
 
         private void FrmChuyentien_Load(object sender, EventArgs e)
         {
-            danhSachGiaoDich = ChuyenTienDAO.LayDanhSachGiaoDich(nguoiDung.SoTK);
+            danhSachGiaoDich = ChuyenTienDAO.LayDanhSachGiaoDich(nguoiDung.SoTk);
             cbTennguoinhan.Items.AddRange(danhSachGiaoDich.ToArray());
             cbTennguoinhan.DisplayMember = "ThongTinCoBan";
             lblSoDu.Text = tknh.SoDu.ToString("N0") + " VND";
@@ -54,7 +55,7 @@ namespace DOAN_Nhom4
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmTrangchu frmtrangchu = new FrmTrangchu(nguoiDung, tknh);
-            DOAN_Nhom4.Utility.addForm(frmtrangchu, pnlNguoidung);
+            Utility.addForm(frmtrangchu, pnlNguoidung);
         }
 
         private void btnTieptuc_Click(object sender, EventArgs e)
@@ -70,8 +71,8 @@ namespace DOAN_Nhom4
 
             else if (kt == KiemTraTenNguoiNhan.hople && tknh.SoDu >= int.Parse(txtSoTien.Text))
             {
-                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenTK.ToString(), txtSoTien.Text, txtTennguoinhan.Text);
-                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNH, nguoiDung.TenTK, nguoiDung.SoTK, cbTenNH.Text, txtTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenKh.ToString(), txtSoTien.Text, txtTennguoinhan.Text);
+                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNh, nguoiDung.TenKh, nguoiDung.SoTk, cbTenNH.Text, txtTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh, gd, pnlNguoidung);
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -111,14 +112,14 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTin()
         {
-            NguoiDung ngDung = new NguoiDung();
+            KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = khDAO.LayKhachHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
+            ngDung = khDAO.LayKhachHang(txtSTK.Text, cbTenNH.Text);
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSTK.Text, "TenNH", cbTenNH.Text);
             if (tk != null)
             {
                 kt = KiemTraTenNguoiNhan.hople;
-                txtTennguoinhan.Text = ngDung.TenTK.ToString();
+                txtTennguoinhan.Text = ngDung.TenKh.ToString();
                 txtTennguoinhan.ForeColor = Color.Black;
             }
             else
@@ -127,7 +128,7 @@ namespace DOAN_Nhom4
                 txtTennguoinhan.Text = "Không tồn tại";
                 txtTennguoinhan.ForeColor = Color.Black;
             }
-            if (txtSTK.Text == nguoiDung.soTK && cbTenNH.Text == nguoiDung.TenNH)
+            if (txtSTK.Text == nguoiDung.SoTk && cbTenNH.Text == nguoiDung.TenNh)
             {
                 kt = KiemTraTenNguoiNhan.chinhban;
                 txtTennguoinhan.Text = "Không thể chuyển tiền cho cho chính bạn";

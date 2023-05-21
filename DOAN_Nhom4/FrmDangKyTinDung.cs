@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmDangKyTinDung : Form
     {
-        private NguoiDung kh;
+        private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
@@ -33,7 +34,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmDangKyTinDung(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
+        public FrmDangKyTinDung(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.kh = kh;
@@ -43,8 +44,8 @@ namespace DOAN_Nhom4
 
         private void FrmDangKyTinDung_Load(object sender, EventArgs e)
         {
-            txt_HoTen.Text = kh.tenTK;
-            txt_CCCD.Text = kh.cccd;
+            txt_HoTen.Text = kh.TenKh;
+            txt_CCCD.Text = kh.Cccd;
             txt_SDT.Text = kh.Sdt;
             txt_Email.Text = kh.Email;
         }

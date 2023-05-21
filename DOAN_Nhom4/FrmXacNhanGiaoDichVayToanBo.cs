@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacNhanGiaoDichVayToanBo : Form
     {
-        public NguoiDung nguoiDung;
+        public KhachHang nguoiDung;
         public ThongTinNguoiDungVay ttNgDung;
         public Panel pnlNguoiDung;
         public TaiKhoanNganHang tknh;
@@ -26,7 +27,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmXacNhanGiaoDichVayToanBo(NguoiDung nguoiDung, TaiKhoanNganHang tknh, ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
+        public FrmXacNhanGiaoDichVayToanBo(KhachHang nguoiDung, TaiKhoanNganHang tknh, ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -51,7 +52,7 @@ namespace DOAN_Nhom4
             {
                 tknh.SoDu -= (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham);
                 tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.TongSoTienPhaiTra, "Thanh toan khoan vay");
+                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.TongSoTienPhaiTra, "Thanh toan khoan vay");
                 lsgdDAO.Them(gd);
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,8 +65,8 @@ namespace DOAN_Nhom4
 
         private void HienThi()
         {
-            lblHienThiTKNguon.Text = nguoiDung.SoTK;
-            lblHienThiTKVay.Text = nguoiDung.SoTK;
+            lblHienThiTKNguon.Text = nguoiDung.SoTk;
+            lblHienThiTKVay.Text = nguoiDung.SoTk;
             lblHienThiNoGoc.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
             lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
             lblHienThiTong.Text = (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham).ToString("N0");

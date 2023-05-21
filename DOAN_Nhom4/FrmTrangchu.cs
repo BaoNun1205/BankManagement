@@ -1,8 +1,10 @@
-﻿namespace DOAN_Nhom4
+﻿using DOAN_Nhom4.Entities;
+
+namespace DOAN_Nhom4
 {
     public partial class FrmTrangchu : Form
     {
-        public NguoiDung kh;
+        public KhachHang kh;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -11,16 +13,16 @@
             InitializeComponent();
         }
 
-        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh)
+        public FrmTrangchu(KhachHang kh, TaiKhoanNganHang tknh)
         {
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;
         }
 
-        public FrmTrangchu(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        public FrmTrangchu(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
-            tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", kh.SoTK, "TenNH", kh.TenNH);
+            tknh = tknhDAO.LayTaiKhoanNganHang("SoTK", kh.SoTk, "TenNH", kh.TenNh);
             InitializeComponent();
             this.kh = kh;
             this.tknh = tknh;

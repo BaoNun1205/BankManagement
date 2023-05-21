@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmTietkiem : Form
     {
-        private NguoiDung kh;
+        private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -36,7 +37,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmTietkiem(NguoiDung kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        public FrmTietkiem(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.kh = kh;
@@ -57,7 +58,7 @@ namespace DOAN_Nhom4
             {
                 tenTKTK = txtTenTKTK.Text;
                 TietKiem tkiem = new TietKiem(MaTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
-                GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNH, kh.TenTK, kh.SoTK, "HHB", txtTenTKTK.Text, MaTietKiem.ToString(), int.Parse(txtSotien.Text), "");
+                GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNh, kh.TenKh, kh.SoTk, "HHB", txtTenTKTK.Text, MaTietKiem.ToString(), int.Parse(txtSotien.Text), "");
                 tkiemDAO.Them(tkiem, tknh);
                 lsgdDAO.Them(gd);
                 tknh.SoDu = tknh.SoDu - tienGoc;

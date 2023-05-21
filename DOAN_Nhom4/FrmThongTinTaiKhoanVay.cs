@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmThongTinTaiKhoanVay : Form
     {
-        private NguoiDung nguoiDung;
+        private KhachHang nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private ThongTinNguoiDungVay ttNgDung;
@@ -21,7 +22,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        public FrmThongTinTaiKhoanVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh,ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
+        public FrmThongTinTaiKhoanVay(KhachHang nguoiDung, TaiKhoanNganHang tknh,ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.pnlNguoiDung = pnlNguoiDung;

@@ -1,4 +1,5 @@
-﻿ using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace DOAN_Nhom4
     public partial class FrmXacnhanChuyentien : Form
     {
         private GiaoDich gd;
-        private NguoiDung kh;
+        private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
@@ -26,7 +27,7 @@ namespace DOAN_Nhom4
             this.txtMatkhau.PasswordChar = '*';
         }
 
-        public FrmXacnhanChuyentien(NguoiDung kh, TaiKhoanNganHang tknh, GiaoDich gd, Panel pnlNguoidung)
+        public FrmXacnhanChuyentien(KhachHang kh, TaiKhoanNganHang tknh, GiaoDich gd, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.txtMatkhau.PasswordChar = '*';

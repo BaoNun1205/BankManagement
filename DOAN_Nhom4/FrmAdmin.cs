@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Numerics;
+using DOAN_Nhom4.Entities;
 
 namespace DOAN_Nhom4
 {
@@ -27,10 +28,27 @@ namespace DOAN_Nhom4
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            KhachHang kh = new KhachHang()
+            {
+                TenNh = "HHB",
+                SoTk = txt_SoTK.Text,
+                TenKh = txt_TenTK.Text,
+                NgaySinh = txt_NgaySinh.Value,
+                Cccd = txt_CCCD.Text,
+                Email = txt_Email.Text,
+                Sdt = txt_SDT.Text
+            };
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang()
+            {
+                TenNH = "HHB",
+                SoTK = txt_SoTK.Text,
+                TenDN = txt_TenDN.Text,
+                MatKhau = txt_MatKhau.Text,
+                SoDu = decimal.Parse(txt_SoDu.Text),
+                NgayDangKy = txt_NgayDangKyThe.Value
+            };
             if (txt_SoDu.Text != "")
             {
-                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, decimal.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
                 if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
                 {
                     if (!khDAO.IsPhone(kh))
@@ -58,8 +76,25 @@ namespace DOAN_Nhom4
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
-            TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, int.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
+            KhachHang kh = new KhachHang()
+            {
+                TenNh = "HHB",
+                SoTk = txt_SoTK.Text,
+                TenKh = txt_TenTK.Text,
+                NgaySinh = txt_NgaySinh.Value,
+                Cccd = txt_CCCD.Text,
+                Email = txt_Email.Text,
+                Sdt = txt_SDT.Text
+            };
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang()
+            {
+                TenNH = "HHB",
+                SoTK = txt_SoTK.Text,
+                TenDN = txt_TenDN.Text,
+                MatKhau = txt_MatKhau.Text,
+                SoDu = decimal.Parse(txt_SoDu.Text),
+                NgayDangKy = txt_NgayDangKyThe.Value
+            };
             tknhDAO.Xoa(tknh);
             khDAO.Xoa(kh);
             HienThi();
@@ -68,10 +103,27 @@ namespace DOAN_Nhom4
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            NguoiDung kh = new NguoiDung("HHB", txt_SoTK.Text, txt_TenTK.Text, txt_NgaySinh.Value, txt_CCCD.Text, txt_Email.Text, txt_SDT.Text);
+            KhachHang kh = new KhachHang()
+            {
+                TenNh = "HHB",
+                SoTk = txt_SoTK.Text,
+                TenKh = txt_TenTK.Text,
+                NgaySinh = txt_NgaySinh.Value,
+                Cccd = txt_CCCD.Text,
+                Email = txt_Email.Text,
+                Sdt = txt_SDT.Text
+            };
+            TaiKhoanNganHang tknh = new TaiKhoanNganHang()
+            {
+                TenNH = "HHB",
+                SoTK = txt_SoTK.Text,
+                TenDN = txt_TenDN.Text,
+                MatKhau = txt_MatKhau.Text,
+                SoDu = decimal.Parse(txt_SoDu.Text),
+                NgayDangKy = txt_NgayDangKyThe.Value
+            };
             if (txt_SoDu.Text != "")
             {
-                TaiKhoanNganHang tknh = new TaiKhoanNganHang("HHB", txt_SoTK.Text, txt_TenDN.Text, txt_MatKhau.Text, decimal.Parse(txt_SoDu.Text), txt_NgayDangKyThe.Value);
                 if (!khDAO.IsEmpty(kh) && !tknhDAO.IsEmpty(tknh))
                 {
                     if (!khDAO.IsPhone(kh))
@@ -128,7 +180,7 @@ namespace DOAN_Nhom4
 
         private void HienThi()
         {
-            gvQLKH.DataSource = khDAO.HienThi();
+            gvQLKH.DataSource = khDAO.LayDanhSach();
             gvQLKH.RowHeadersVisible = false;
             gvQLKH.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
             gvQLKH.Columns[0].HeaderText = "Tên ngân hàng";

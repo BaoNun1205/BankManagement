@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,51 +12,68 @@ namespace DOAN_Nhom4
 {
     internal class NguoiDungDAO
     {
+        NganHangHhbContext hhb = new NganHangHhbContext();
         DBConnection data = new DBConnection();
-        public DataTable HienThi()
+        public List<object> LayDanhSach()
         {
-            string sqlStr = string.Format("SELECT KhachHang.TenNH, KhachHang.SoTK, KhachHang.TenKH, TaiKhoanNganHang.TenDN, TaiKhoanNganHang.MatKhau, TaiKhoanNganHang.SoDu, KhachHang.NgaySinh, KhachHang.CCCD, KhachHang.Email, KhachHang.SDT, TaiKhoanNganHang.NgayDangKy "
-                                        + "FROM KhachHang "
-                                        + "JOIN TaiKhoanNganHang ON KhachHang.TenNH = TaiKhoanNganHang.TenNH AND KhachHang.SoTK = TaiKhoanNganHang.SoTK "
-                                        + "WHERE KhachHang.TenNH = 'HHB'");
-            return data.LayDanhSach(sqlStr);
+            var customerAccountList = from customer in hhb.KhachHangs
+                                      join account in hhb.TaiKhoanNganHangs
+                                      on new { customer.TenNh, customer.SoTk } equals new { account.TenNh, account.SoTk }
+                                      select new
+                                      {
+                                          TenNh = customer.TenNh,
+                                          SoTK = customer.SoTk,
+                                          TenKH = customer.TenKh,
+                                          TenDN = account.TenDn,
+                                          MatKhau = account.MatKhau,
+                                          SoDu = account.SoDu,
+                                          NgaySinh = customer.NgaySinh,
+                                          CCCD = customer.Cccd,
+                                          Email = customer.Email,
+                                          SDT = customer.Sdt,
+                                          NgayDangKy = account.NgayDangKy
+                                      };
+            return customerAccountList.ToList<object>();
         }
-        public void Them(NguoiDung kh)
+        public void Them(KhachHang kh)
         {
-            string sqlKH = string.Format("INSERT INTO KhachHang(TenNH, SoTK , TenKH, NgaySinh, CCCD, Email, SDT) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", kh.TenNH, kh.SoTK, kh.TenTK, kh.NgaySinh, kh.Cccd, kh.Email, kh.Sdt);
-            data.xuLi(sqlKH);
-        }
-
-        public void Xoa(NguoiDung kh)
-        {
-            string sqlKH = string.Format("DELETE FROM KhachHang WHERE SoTK ='{0}' AND TenNH = '{1}'", kh.SoTK, kh.TenNH);
-            data.xuLi(sqlKH);
-        }
-        public void Sua(NguoiDung kh)
-        {
-            string sqlKH = string.Format("UPDATE KhachHang SET TenKH = '{0}', NgaySinh = '{1}', CCCD = '{2}', Email = '{3}', SDT = '{4}' WHERE SoTK ='{5}' AND TenNH = '{6}'", kh.TenTK, kh.NgaySinh, kh.Cccd, kh.Email, kh.Sdt, kh.SoTK, kh.TenNH);
-            data.xuLi(sqlKH);
-        }
-
-        public NguoiDung LayKhachHang(string CotSoTK, string GTSoTK, string CotTenNH, string GTTenNH)
-        {
-            NguoiDung khachHang = new NguoiDung();
-            string sql = string.Format("SELECT * FROM KhachHang WHERE {0} = '{1}' AND {2} = '{3}'", CotSoTK, GTSoTK, CotTenNH, GTTenNH);
-            khachHang = data.Xuli(sql);
-            return khachHang;
+            hhb.KhachHangs.Add(kh);
+            hhb.SaveChanges();
         }
 
-        public bool IsEmpty(NguoiDung kh)
+        public void Xoa(KhachHang kh)
         {
-            if (kh.SoTK != "" && kh.TenTK != "" && kh.Cccd != "" && kh.Sdt != "" && kh.Email != "")
+            KhachHang khachHang = hhb.KhachHangs.Where(khachHang => khachHang.SoTk == kh.SoTk && khachHang.TenNh == kh.TenNh).SingleOrDefault();
+            hhb.Remove(khachHang);
+            hhb.SaveChanges();
+        }
+        public void Sua(KhachHang kh)
+        {
+            KhachHang khachHang = hhb.KhachHangs.Where(khachHang => khachHang.SoTk == kh.SoTk && khachHang.TenNh == kh.TenNh).SingleOrDefault();
+            khachHang.NgaySinh = kh.NgaySinh;
+            khachHang.Cccd = kh.Cccd;
+            khachHang.Sdt = kh.Sdt;
+            khachHang.Email = kh.Email;
+            khachHang.TenKh = kh.TenKh;
+            hhb.SaveChanges();
+        }
+
+        public KhachHang LayKhachHang(string giaTriDau, string giaTriCuoi)
+        {
+            return hhb.KhachHangs.Where(kh => kh.SoTk == giaTriDau && kh.TenNh == giaTriCuoi).SingleOrDefault();
+        }
+
+        public bool IsEmpty(KhachHang kh)
+        {
+            if (kh.SoTk != "" && kh.TenKh != "" && kh.Cccd != "" && kh.Sdt != "" && kh.Email != "")
                 return false;
             return true;
         }
-        public bool IsPhone(NguoiDung kh)
+        public bool IsPhone(KhachHang kh)
         {
             return data.IsPhone(kh.Sdt);
         }
-        public bool IsEmail(NguoiDung kh)
+        public bool IsEmail(KhachHang kh)
         {
             return data.IsEmail(kh.Email);
         }

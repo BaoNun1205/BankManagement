@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,13 +25,13 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTin()
         {
-            NguoiDung ngDung = new NguoiDung();
+            KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
+            ngDung = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txtTenTK.Text = ngDung.TenTK.ToString();
+                txtTenTK.Text = ngDung.TenKh.ToString();
                 txtCCCD.Text = ngDung.Cccd.ToString();
                 txtSDT.Text = ngDung.Sdt.ToString();
                 lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
@@ -53,9 +54,9 @@ namespace DOAN_Nhom4
         {
             TaiKhoanNganHang tkRut = new TaiKhoanNganHang();
             tkRut = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
-            NguoiDung ndRut = new NguoiDung();
-            ndRut = ndDAO.LayKhachHang("SoTK", txtSoTK.Text, "TenNH", "HHB");
-            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenTK, tkRut.SoTK, "Tien Mat", "", "", decimal.Parse(txtSoTien.Text), "Rut tien ra khoi tai khoan");
+            KhachHang ndRut = new KhachHang();
+            ndRut = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
+            GiaoDich gd = new GiaoDich("Rut Tien", tkRut.TenNH, ndRut.TenKh, tkRut.SoTK, "Tien Mat", "", "", decimal.Parse(txtSoTien.Text), "Rut tien ra khoi tai khoan");
             if (tkRut != null)
             {
                 if (gd.SoTien >= 100000 && gd.SoTien <= tkRut.SoDu)

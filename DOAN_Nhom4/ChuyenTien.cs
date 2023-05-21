@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,13 +27,13 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTinNguoiChuyen()
         {
-            NguoiDung ngDung = new NguoiDung();
+            KhachHang ngDung = new KhachHang();
             TaiKhoanNganHang tk = new TaiKhoanNganHang();
-            ngDung = ndDAO.LayKhachHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");           
+            ngDung = ndDAO.LayKhachHang(txtSoTKChuyen.Text,"HHB");           
             tk = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
             if (ngDung != null)
             {
-                txtTenTKChuyen.Text = ngDung.TenTK.ToString();
+                txtTenTKChuyen.Text = ngDung.TenKh.ToString();
                 txtCCCD.Text = ngDung.Cccd.ToString();
                 txtSDT.Text = ngDung.Sdt.ToString();
                 lblSoDu.Text = tk.SoDu.ToString("N0") + " VNĐ";
@@ -48,11 +49,11 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTinNguoiNhan()
         {
-            NguoiDung ngDungNhan = new NguoiDung();
-            ngDungNhan = ndDAO.LayKhachHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
+            KhachHang ngDungNhan = new KhachHang();
+            ngDungNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
             if (ngDungNhan != null)
             {
-                txtTenTKNhan.Text = ngDungNhan.TenTK.ToString();
+                txtTenTKNhan.Text = ngDungNhan.TenKh.ToString();
             }
             else
             {
@@ -61,16 +62,16 @@ namespace DOAN_Nhom4
         }
         public void HienThiThongTinNguoiNhanCoDieuKien()
         {
-            NguoiDung ngDungNhan = new NguoiDung();
-            ngDungNhan = ndDAO.LayKhachHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
-            NguoiDung ngDungChuyen = new NguoiDung();
-            ngDungChuyen = ndDAO.LayKhachHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
+            KhachHang ngDungNhan = new KhachHang();
+            ngDungNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
+            KhachHang ngDungChuyen = new KhachHang();
+            ngDungChuyen = ndDAO.LayKhachHang(txtSoTKChuyen.Text, "HHB");
             if (ngDungNhan != null)
             {
-                if (ngDungChuyen.TenNH == ngDungNhan.TenNH && ngDungChuyen.SoTK == ngDungNhan.SoTK)
+                if (ngDungChuyen.TenNh == ngDungNhan.TenNh && ngDungChuyen.SoTk == ngDungNhan.SoTk)
                     txtTenTKNhan.Text = "Khong duoc chuyen cho chinh minh";
                 else
-                    txtTenTKNhan.Text = ngDungNhan.TenTK.ToString();
+                    txtTenTKNhan.Text = ngDungNhan.TenKh.ToString();
             }
             else
             {
@@ -98,13 +99,13 @@ namespace DOAN_Nhom4
         {
             TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
             tkGui = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
-            NguoiDung ndGui = new NguoiDung();
-            ndGui = ndDAO.LayKhachHang("SoTK", txtSoTKChuyen.Text, "TenNH", "HHB");
+            KhachHang ndGui = new KhachHang();
+            ndGui = ndDAO.LayKhachHang(txtSoTKChuyen.Text, "HHB");
             TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
             tkNhan = tknhDAO.LayTaiKhoanNganHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
-            NguoiDung ndNhan = new NguoiDung();
-            ndNhan = ndDAO.LayKhachHang("SoTK", txtSoTKNhan.Text, "TenNH", cbTenNH.Text);
-            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenTK, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenTK, tkNhan.SoTK, decimal.Parse(txtSoTien.Text), txtLoiNhan.Text);
+            KhachHang ndNhan = new KhachHang();
+            ndNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
+            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNH, ndGui.TenKh, tkGui.SoTK, tkNhan.TenNH, ndNhan.TenKh, tkNhan.SoTK, decimal.Parse(txtSoTien.Text), txtLoiNhan.Text);
             if (tkGui != null)
             {
                 if (tkNhan != null)

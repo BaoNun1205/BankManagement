@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN_Nhom4.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacNhanGiaoDichVay : Form
     {
-        public NguoiDung nguoiDung;
+        public KhachHang nguoiDung;
         public ThongTinNguoiDungVay ttNgDung;
         public Panel pnlNguoiDung;
         public TaiKhoanNganHang tknh;
@@ -25,7 +26,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        public FrmXacNhanGiaoDichVay(NguoiDung nguoiDung, TaiKhoanNganHang tknh, ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
+        public FrmXacNhanGiaoDichVay(KhachHang nguoiDung, TaiKhoanNganHang tknh, ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -60,7 +61,7 @@ namespace DOAN_Nhom4
                 {
                     ttNgDungDAO.Sua(ttNgDung);
                     tknhDAO.Sua(tknh);
-                    GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                    GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
                     lsgdDAO.Them(gd);
                     MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
@@ -75,7 +76,7 @@ namespace DOAN_Nhom4
             else
             {
                 tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.tenTK, nguoiDung.SoTK, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
                 lsgdDAO.Them(gd);
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -86,8 +87,8 @@ namespace DOAN_Nhom4
 
         private void HienThi()
         {
-            lblHienThiTKNguon.Text = nguoiDung.SoTK;
-            lblHienThiTKVay.Text = nguoiDung.SoTK;
+            lblHienThiTKNguon.Text = nguoiDung.SoTk;
+            lblHienThiTKVay.Text = nguoiDung.SoTk;
             decimal tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
             lblHienThiNoGoc.Text = tmp.ToString("N0");
             lblHienThiLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString("N0");
