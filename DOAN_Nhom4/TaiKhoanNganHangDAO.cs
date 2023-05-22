@@ -12,7 +12,6 @@ namespace DOAN_Nhom4
     internal class TaiKhoanNganHangDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
         public TaiKhoanNganHangDAO() { }
 
         public void Them(TaiKhoanNganHang tknh)

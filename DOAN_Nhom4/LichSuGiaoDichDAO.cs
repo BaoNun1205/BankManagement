@@ -39,16 +39,69 @@ namespace DOAN_Nhom4
             hhb.SaveChanges();
         }
 
-        public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
+        /*public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
         {
             string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangGui, SoTKGui, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKNhan = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTk, x);
             return data.LayDanhSach(sqlStr);
+        }*/
+
+        public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
+        {
+            DateTime fromDate = DateTime.Now.AddDays(-x);
+
+            var danhSachGiaoDich = hhb.LichSuGiaoDiches
+                .Where(gd => gd.SoTknhan == kh.SoTk && gd.ThoiGian >= fromDate)
+                .Select(gd => new { gd.MaGd, gd.LoaiGd, gd.ThoiGian, gd.NganHangGui, gd.SoTkgui, gd.SoTien, gd.LoiNhan })
+                .ToList();
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("MaGD");
+            dataTable.Columns.Add("LoaiGD");
+            dataTable.Columns.Add("ThoiGian");
+            dataTable.Columns.Add("NganHangGui");
+            dataTable.Columns.Add("SoTKGui");
+            dataTable.Columns.Add("SoTien");
+            dataTable.Columns.Add("LoiNhan");
+
+            foreach (var giaoDich in danhSachGiaoDich)
+            {
+                dataTable.Rows.Add(giaoDich.MaGd, giaoDich.LoaiGd, giaoDich.ThoiGian, giaoDich.NganHangGui, giaoDich.SoTkgui, giaoDich.SoTien, giaoDich.LoiNhan);
+            }
+
+            return dataTable;
         }
 
-        public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
+
+        /*public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
         {
             string sqlStr = string.Format("SELECT MaGD, LoaiGD, ThoiGian, NganHangNhan, SoTKNhan, SoTien, LoiNhan FROM hr.LichSuGiaoDich WHERE SoTKGui = '{0}' AND ThoiGian >= DATEADD(day, -{1}, GETDATE())", kh.SoTk, x);
             return data.LayDanhSach(sqlStr);
+        }*/
+
+        public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
+        {
+            DateTime fromDate = DateTime.Now.AddDays(-x);
+
+            var danhSachGiaoDich = hhb.LichSuGiaoDiches
+                .Where(gd => gd.SoTkgui == kh.SoTk && gd.ThoiGian >= fromDate)
+                .Select(gd => new { gd.MaGd, gd.LoaiGd, gd.ThoiGian, gd.NganHangNhan, gd.SoTknhan, gd.SoTien, gd.LoiNhan })
+                .ToList();
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("MaGD");
+            dataTable.Columns.Add("LoaiGD");
+            dataTable.Columns.Add("ThoiGian");
+            dataTable.Columns.Add("NganHangNhan");
+            dataTable.Columns.Add("SoTKNhan");
+            dataTable.Columns.Add("SoTien");
+            dataTable.Columns.Add("LoiNhan");
+
+            foreach (var giaoDich in danhSachGiaoDich)
+            {
+                dataTable.Rows.Add(giaoDich.MaGd, giaoDich.LoaiGd, giaoDich.ThoiGian, giaoDich.NganHangNhan, giaoDich.SoTknhan, giaoDich.SoTien, giaoDich.LoiNhan);
+            }
+
+            return dataTable;
         }
 
         public void XuatExcel()

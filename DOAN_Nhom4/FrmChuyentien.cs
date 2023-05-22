@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
             danhSachGiaoDich = ChuyenTienDAO.LayDanhSachGiaoDich(nguoiDung.SoTk);
             cbTennguoinhan.Items.AddRange(danhSachGiaoDich.ToArray());
             cbTennguoinhan.DisplayMember = "ThongTinCoBan";
-            lblSoDu.Text = tknh.SoDu.Value.ToString("N0") + " VND";
+            lblSoDu.Text = (tknh.SoDu ?? 0).ToString("N0") + " VND";
         }
        
         private void btnHuy_Click(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace DOAN_Nhom4
 
             else if (kt == KiemTraTenNguoiNhan.hople && tknh.SoDu >= int.Parse(txtSoTien.Text))
             {
-                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenKh.ToString(), txtSoTien.Text, txtTennguoinhan.Text);
+                if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenKh?.ToString(), txtSoTien.Text, txtTennguoinhan.Text);
                 LichSuGiaoDich gd = new LichSuGiaoDich()
                 {
                     LoaiGd = "Chuyen Tien",
@@ -116,22 +116,22 @@ namespace DOAN_Nhom4
             if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is LichSuGiaoDich)
             {
                 LichSuGiaoDich gd = (LichSuGiaoDich)cbTennguoinhan.SelectedItem;
-                cbTenNH.Text = gd.NganHangNhan.ToString();
-                txtSTK.Text = gd.SoTknhan.ToString();
-                txtTennguoinhan.Text = gd.TenTknhan.ToString();
+                cbTenNH.Text = gd.NganHangNhan?.ToString();
+                txtSTK.Text = gd.SoTknhan?.ToString();
+                txtTennguoinhan.Text = gd.TenTknhan?.ToString();
             }
         }
 
         public void HienThiThongTin()
         {
             KhachHang ngDung = new KhachHang();
-            TaiKhoanNganHang tk = new TaiKhoanNganHang();
+            TaiKhoanNganHang? tk = new TaiKhoanNganHang();
             ngDung = khDAO.LayKhachHang(txtSTK.Text, cbTenNH.Text);
             tk = tknhDAO.LayTaiKhoanNganHang(txtSTK.Text, cbTenNH.Text);
             if (tk != null)
             {
                 kt = KiemTraTenNguoiNhan.hople;
-                txtTennguoinhan.Text = ngDung.TenKh.ToString();
+                txtTennguoinhan.Text = ngDung.TenKh?.ToString();
                 txtTennguoinhan.ForeColor = Color.Black;
             }
             else

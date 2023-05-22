@@ -73,9 +73,30 @@ namespace DOAN_Nhom4
 
         public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
         {
-            string sqlStr = string.Format("SELECT MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNh, tknh.SoTk);
-            return data.LayDanhSach(sqlStr);
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("MaTietKiem", typeof(string));
+            dataTable.Columns.Add("NgayDangKy", typeof(DateTime));
+            dataTable.Columns.Add("TenTKTK", typeof(string));
+            dataTable.Columns.Add("LoaiSo", typeof(int));
+            dataTable.Columns.Add("TienGoc", typeof(decimal));
+            dataTable.Columns.Add("KiHan", typeof(int));
+            dataTable.Columns.Add("LaiSuat", typeof(decimal));
+            dataTable.Columns.Add("TienLai", typeof(decimal));
+            dataTable.Columns.Add("TongTien", typeof(decimal));
+
+            var danhSachTietKiem = hhb.TaiKhoanTietKiems
+                .Where(t => t.TenNh == tknh.TenNh && t.SoTk == tknh.SoTk)
+                .ToList();
+
+            foreach (var tietKiem in danhSachTietKiem)
+            {
+                dataTable.Rows.Add(tietKiem.MaTietKiem, tietKiem.NgayDangKy, tietKiem.TenTktk, tietKiem.LoaiSo, tietKiem.TienGoc,
+                                   tietKiem.KiHan, tietKiem.LaiSuat, tietKiem.TienLai, tietKiem.TongTien);
+            }
+
+            return dataTable;
         }
+
 
         public DateTime NgayToiHan(DateTime ngaydangky, int? kihan)
         {

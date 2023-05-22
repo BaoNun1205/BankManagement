@@ -26,4 +26,12 @@ public partial class LichSuGiaoDich
     public decimal? SoTien { get; set; }
 
     public string? LoiNhan { get; set; }
+
+    public string ThongTinCoBan
+    {
+        get
+        {
+            return string.Format("{0} - {1} - {2}", NganHangNhan, TenTknhan, SoTknhan);
+        }
+    }
 }

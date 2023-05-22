@@ -17,20 +17,14 @@ namespace DOAN_Nhom4
 
         public List<LichSuGiaoDich> LayDanhSachGiaoDich(string stkgui)
         {
-            List<LichSuGiaoDich> gd = new List<LichSuGiaoDich>();
-            string sql = string.Format("SELECT * FROM hr.LichSuGiaoDich WHERE LoaiGD = 'Chuyen Tien' and SoTKGui = '{0}'", stkgui);
-            gd = data.LayDanhSachGiaoDich(sql);
-            return gd;
+            var danhSachGiaoDich = hhb.LichSuGiaoDiches
+                        .Where(gd => gd.LoaiGd == "Chuyen Tien" && gd.SoTkgui == stkgui)
+                        .GroupBy(gd => new { gd.NganHangNhan, gd.SoTknhan })
+                        .Select(grp => grp.First())
+                        .ToList();
+
+            return danhSachGiaoDich;
         }
-
-        /*public List<GiaoDich> LayDanhSachGiaoDich(string stkgui)
-        {
-            var danhSachGiaoDich = from giaoDich in hhb.LichSuGiaoDiches
-                                   where giaoDich.LoaiGd == "Chuyen Tien" && giaoDich.SoTkgui == stkgui
-                                   select giaoDich;
-
-            return danhSachGiaoDich.ToList();
-        }*/
 
         public void ChuyenTien(TaiKhoanNganHang tkGui, LichSuGiaoDich gd, TaiKhoanNganHang tkNhan)
         {
