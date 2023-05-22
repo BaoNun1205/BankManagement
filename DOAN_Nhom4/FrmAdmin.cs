@@ -228,5 +228,7 @@ namespace DOAN_Nhom4
                 txt_NgayDangKyThe.Text = gvQLKH.Rows[numrow].Cells[10].Value.ToString();
             }
         }
+
+
     }
 }

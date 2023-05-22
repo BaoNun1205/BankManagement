@@ -36,7 +36,7 @@ namespace DOAN_Nhom4
                 txtTenTKChuyen.Text = ngDung.TenKh.ToString();
                 txtCCCD.Text = ngDung.Cccd.ToString();
                 txtSDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.Value.ToString("N0") + " VNĐ";
+                lblSoDu.Text = tk.SoDu?.ToString("N0") + " VNĐ";
             }
             else
             {
@@ -94,7 +94,6 @@ namespace DOAN_Nhom4
                 HienThiThongTinNguoiNhanCoDieuKien();
             }
         }
-
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
             TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
