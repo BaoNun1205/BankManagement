@@ -22,7 +22,7 @@ namespace DOAN_Nhom4
         private SoDienThoaiDAO sdtDAO = new SoDienThoaiDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
 
-        private int menhGia = 0;
+        private decimal menhGia = 0;
         private string Stk = "";
         private string loaiTaiKhoan = "";
         public FrmNapTienDienThoai()
@@ -156,7 +156,7 @@ namespace DOAN_Nhom4
                     LichSuGiaoDich gd = new LichSuGiaoDich()
                     {
                         LoaiGd = "Nap Tien Dien Thoai",
-                        NganHangGui = "HHB",
+                        NganHangGui = loaiTaiKhoan,
                         TenTkgui = kh.TenKh,
                         SoTkgui = Stk,
                         NganHangNhan = "So Dien Thoai",

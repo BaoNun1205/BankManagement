@@ -51,7 +51,7 @@ namespace DOAN_Nhom4
             return true;
         }
 
-        public TaiKhoanNganHang? LayTaiKhoanNganHang(string? GTSoTK, string? GTTenNH)
+        public TaiKhoanNganHang LayTaiKhoanNganHang(string GTSoTK, string GTTenNH)
         {
               return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.SoTk == GTSoTK).SingleOrDefault(); 
         }
@@ -73,7 +73,7 @@ namespace DOAN_Nhom4
         }
         public void RutTien(TaiKhoanNganHang tkRut, LichSuGiaoDich gd)
         {
-            decimal SoDu = ((tkRut.SoDu - gd.SoTien) ?? 0);
+            decimal SoDu = Convert.ToDecimal(tkRut.SoDu) - Convert.ToDecimal(gd.SoTien);
             TaiKhoanNganHang? tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkRut.TenNh && tknh.SoTk == tkRut.SoTk).SingleOrDefault();
             if (tknh != null)
             {
