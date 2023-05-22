@@ -23,10 +23,10 @@ namespace DOAN_Nhom4
                          {
                              MaGd = ls.MaGd,
                              LoaiGd = ls.LoaiGd,
-                             NganHangGui = ls.NganHangGui,
-                             SoTkgui = ls.SoTkgui,
                              NganHangNhan = ls.NganHangNhan,
                              SoTknhan = ls.SoTknhan,
+                             NganHangGui = ls.NganHangGui,
+                             SoTkgui = ls.SoTkgui,
                              SoTien = ls.SoTien,
                              LoiNhan = ls.LoiNhan,
                              ThoiGian = ls.ThoiGian

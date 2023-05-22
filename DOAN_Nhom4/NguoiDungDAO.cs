@@ -19,6 +19,7 @@ namespace DOAN_Nhom4
             var customerAccountList = from customer in hhb.KhachHangs
                                       join account in hhb.TaiKhoanNganHangs
                                       on new { customer.TenNh, customer.SoTk } equals new { account.TenNh, account.SoTk }
+                                      where account.TenNh == "HHB"
                                       select new
                                       {
                                           TenNh = customer.TenNh,
@@ -34,6 +35,7 @@ namespace DOAN_Nhom4
                                           NgayDangKy = account.NgayDangKy
                                       };
             return customerAccountList.ToList<object>();
+
         }
         public void Them(KhachHang kh)
         {

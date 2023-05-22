@@ -57,8 +57,8 @@ namespace DOAN_Nhom4
             BangMacDinh();
             GvTongGui.Visible = true;
             GvTongNhan.Visible = true;
-            GvTongGui.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
-            GvTongNhan.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
+            GvTongNhan.DataSource = lsgdDAO.LichSuGiaoDichGuiNguoiDung(kh, LayGiaTri());
+            GvTongGui.DataSource = lsgdDAO.LichSuGiaoDichNhanNguoiDung(kh, LayGiaTri());
             HienThiTienRa(GvTongNhan);
             HienThiTienVao(GvTongGui);
         }

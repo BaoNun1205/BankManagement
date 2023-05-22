@@ -108,12 +108,12 @@ namespace DOAN_Nhom4
             LichSuGiaoDich gd = new LichSuGiaoDich()
             {
                 LoaiGd = "Chuyen tien",
-                NganHangGui = tkGui.TenNh,
+                NganHangGui = tkGui?.TenNh,
                 TenTkgui = ndGui.TenKh,
-                SoTkgui = tkGui.SoTk,
-                NganHangNhan = tkNhan.TenNh,
+                SoTkgui = tkGui?.SoTk,
+                NganHangNhan = tkNhan?.TenNh,
                 TenTknhan = ndNhan.TenKh,
-                SoTknhan = tkNhan.SoTk,
+                SoTknhan = tkNhan?.SoTk,
                 ThoiGian = DateTime.Now,
                 SoTien = decimal.Parse(txtSoTien.Text),
                 LoiNhan = txtLoiNhan.Text
@@ -124,7 +124,7 @@ namespace DOAN_Nhom4
                 {
                     if (tkGui.TenNh != tkNhan.TenNh|| tkGui.TenNh == tkNhan.TenNh && tkGui.SoTk != tkNhan.SoTk)
                     {
-                        if (gd.SoTien >= 10000 && gd.SoTien <= tkGui.SoDu)
+                        if (gd.SoTien >= 100000 && gd.SoTien <= tkGui.SoDu)
                         {
                             chuyentienDAO.ChuyenTien(tkGui, gd, tkNhan);
                             lsgdDAO.Them(gd);
@@ -135,6 +135,7 @@ namespace DOAN_Nhom4
                             txtCCCD.Text = "";
                             txtSDT.Text = "";
                             txtLoiNhan.Text = "";
+                            lblSoDu.Text = "-";
                             MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
