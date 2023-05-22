@@ -13,25 +13,16 @@ namespace DOAN_Nhom4
 {
     internal class TietkiemDAO
     {
+        NganHangHhbContext hhb = new NganHangHhbContext();
         DBConnection data = new DBConnection();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public TietkiemDAO() { }
 
-        public TietKiem LayThongTinSoTietKiem(string Cot, string giaTri)
+        public TaiKhoanTietKiem? LayThongTinSoTietKiem(string tenNH, string soTK, int maTietKiem)
         {
-            TietKiem tktk = new TietKiem();
-            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE {0} = '{1}'", Cot, giaTri);
-            tktk = data.LayThongTinSoTietKiem(sql);
-            return tktk;
+            return hhb.TaiKhoanTietKiems.Where(tkiem => tkiem.TenNh == tenNH && tkiem.SoTk == soTK && tkiem.MaTietKiem == maTietKiem).SingleOrDefault();
         }
 
-        public List<string> LayCotTKTK(string tenCot, TaiKhoanNganHang tknh)
-        {
-            List<string> cot = new List<string>();
-            string sql = string.Format("SELECT * FROM TaiKhoanTietKiem WHERE TenNH = '{0}' and SoTK = '{1}'", tknh.TenNh, tknh.SoTk);
-            cot = data.LayCot(sql, tenCot);
-            return cot;
-        }
         public bool ktSotien(decimal tienGoc, decimal soDu)
         {
             if (tienGoc <= soDu && tienGoc >= 100000 && tienGoc % 100000 == 0) return true;
@@ -47,22 +38,36 @@ namespace DOAN_Nhom4
             return tienGoc + tienLai;
         }
 
-        public void Them(TietKiem tkiem, TaiKhoanNganHang tknh)
+        public void Them(TaiKhoanTietKiem tkiem)
         {      
-            string sqlTkiem = string.Format("INSERT INTO TaiKhoanTietKiem(TenNH, SoTK, MaTietKiem, NgayDangKy, TenTKTK, LoaiSo, TienGoc, KiHan, LaiSuat, TienLai, TongTien) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", tknh.TenNh, tknh.SoTk, tkiem.MaTietKiem, tkiem.NgayDangky, tkiem.TenTKTK, tkiem.LoaiSo, tkiem.TienGoc, tkiem.KiHan, tkiem.LaiSuat, tkiem.TienLai, tkiem.TongTien);
-            data.xuLi(sqlTkiem);
+            hhb.Add(tkiem);
+            hhb.SaveChanges();
         }
 
-        public void Rut(TietKiem tkiem)
+        public void Rut(TaiKhoanTietKiem tkiem)
         {
-            string sqlTkiem = string.Format("DELETE FROM TaiKhoanTietKiem WHERE MaTietKiem ='{0}'", tkiem.MaTietKiem);
-            data.xuLi(sqlTkiem);
+            TaiKhoanTietKiem? t = hhb.TaiKhoanTietKiems.Where(tkiem => tkiem.TenNh == tkiem.TenNh && tkiem.SoTk == tkiem.SoTk 
+                                                                && tkiem.MaTietKiem == tkiem.MaTietKiem).SingleOrDefault();
+            hhb.Remove(tkiem);
+            hhb.SaveChanges();
         }
 
-        public void Sua(TietKiem tkiem)
+        public void Sua(TaiKhoanTietKiem tkiem)
         {
-            string sqlTkiem = string.Format("UPDATE TaiKhoanTietKiem SET NgayDangKy = '{0}', TienGoc = '{1}', TienLai = '{2}', TongTien = {3} WHERE MaTietKiem = '{4}'", tkiem.NgayDangky, tkiem.TienGoc, tkiem.TienLai, tkiem.TongTien, tkiem.MaTietKiem);
-            data.xuLi(sqlTkiem);
+            TaiKhoanTietKiem? t = hhb.TaiKhoanTietKiems.Where(tkiem => tkiem.TenNh == tkiem.TenNh && tkiem.SoTk == tkiem.SoTk
+                                                                && tkiem.MaTietKiem == tkiem.MaTietKiem).SingleOrDefault();
+            tkiem.TenNh = t.TenNh;
+            tkiem.SoTk = t.SoTk;
+            tkiem.MaTietKiem = t.MaTietKiem;
+            tkiem.NgayDangKy = t.NgayDangKy;
+            tkiem.TenTktk = t.TenTktk;
+            tkiem.LoaiSo = t.LoaiSo;
+            tkiem.TienGoc = t.TienGoc;
+            tkiem.KiHan = t.KiHan;
+            tkiem.LaiSuat = t.LaiSuat;
+            tkiem.TienLai = t.TienLai;
+            tkiem.TongTien = t.TongTien;
+            hhb.SaveChanges();
         }
 
         public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
@@ -71,49 +76,57 @@ namespace DOAN_Nhom4
             return data.LayDanhSach(sqlStr);
         }
 
-        public DateTime NgayToiHan(DateTime ngaydangky, int kihan)
+        public DateTime NgayToiHan(DateTime ngaydangky, int? kihan)
         {
-            TimeSpan timeToAdd = TimeSpan.FromDays(kihan*30);
+            int kiHan = kihan ?? 0;
+            TimeSpan timeToAdd = TimeSpan.FromDays(kiHan*30);
             DateTime ngaytoihan = ngaydangky.Add(timeToAdd);
             return ngaytoihan;
         }
 
         public void KiemTraSoTietKiem(TaiKhoanNganHang tknh)
         {
-            List<string> matks = new List<string>();
-            List<TietKiem> tkiems = new List<TietKiem>();
-            matks = LayCotTKTK("MaTietKiem", tknh);
-            foreach (string matk in matks)
+            List<int> matks = new List<int>();
+            List<TaiKhoanTietKiem> tkiems = new List<TaiKhoanTietKiem>();
+            tkiems = hhb.TaiKhoanTietKiems.Select(t => new TaiKhoanTietKiem
             {
-                TietKiem tkiem = new TietKiem();
-                tkiem = LayThongTinSoTietKiem("MaTietKiem", matk);
-                tkiems.Add(tkiem);
-            }
+                TenNh = t.TenNh,
+                SoTk = t.SoTk,
+                MaTietKiem = t.MaTietKiem,
+                NgayDangKy = t.NgayDangKy,
+                TenTktk = t.TenTktk,
+                LoaiSo = t.LoaiSo,
+                TienGoc = t.TienGoc,
+                KiHan = t.KiHan,
+                LaiSuat = t.LaiSuat,
+                TienLai= t.TienLai,
+                TongTien = t.TongTien
+            }).ToList();
             
-            foreach (TietKiem tk in tkiems)
+            foreach (TaiKhoanTietKiem tkiem in tkiems)
             {
-                if (NgayToiHan(tk.NgayDangky, tk.KiHan) <= DateTime.Now)
+                if (NgayToiHan(tkiem.NgayDangKy, tkiem.KiHan) <= DateTime.Now)
                 {
-                    if (tk.LoaiSo == 1)
+                    if (tkiem.LoaiSo == 1)
                     {
-                        tknh.SoDu = tknh.SoDu + tk.TongTien;
-                        Rut(tk);
+                        tknh.SoDu = tknh.SoDu + tkiem.TongTien;
+                        Rut(tkiem);
                         tknhDAO.Sua(tknh);
                     }
-                    if (tk.LoaiSo == 2)
+                    if (tkiem.LoaiSo == 2)
                     {
-                        tknh.SoDu = tknh.SoDu + tk.TienLai;
-                        tk.NgayDangky = DateTime.Now;
-                        Sua(tk);
+                        tknh.SoDu = tknh.SoDu + tkiem.TienLai;
+                        tkiem.NgayDangKy = DateTime.Now;
+                        Sua(tkiem);
                         tknhDAO.Sua(tknh);
                     }
-                    if (tk.LoaiSo == 3)
+                    if (tkiem.LoaiSo == 3)
                     {
-                        tk.TienGoc = tk.TongTien;
-                        tk.NgayDangky = DateTime.Now;
-                        tk.TienLai = TienLai(tk.TienGoc, tk.LaiSuat, tk.KiHan);
-                        tk.TongTien = TongTien(tk.TienGoc, tk.TienLai);
-                        Sua(tk);
+                        tkiem.TienGoc = tkiem.TongTien;
+                        tkiem.NgayDangKy = DateTime.Now;
+                        tkiem.TienLai = TienLai(tkiem.TienGoc ?? 0, tkiem.LaiSuat ?? 0, tkiem.KiHan ?? 0);
+                        tkiem.TongTien = TongTien(tkiem.TienGoc ?? 0, tkiem.TienLai ?? 0);
+                        Sua(tkiem);
                     }                        
                 }
             }    

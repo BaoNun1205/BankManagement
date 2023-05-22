@@ -99,15 +99,19 @@ namespace DOAN_Nhom4
                 DialogResult luachon = MessageBox.Show("Nếu rút trước thời hạn, bạn sẽ không được tính tiền lãi, bạn chắc chắn muốn rút không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (luachon == DialogResult.Yes)
                 {                   
-                    TietKiem tkiem = tietkiemDAO.LayThongTinSoTietKiem("MaTietKiem", lblMaTietKiem.Text);
-                    GiaoDich gd = new GiaoDich("Rut Tiet Kiem", kh.TenNh, tkiem.TenTKTK, tkiem.MaTietKiem.ToString(), "HHB", kh.TenKh, kh.SoTk, tkiem.TienGoc, "");
-                    tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
-                    tknhDAO.Sua(tknh);
-                    tietkiemDAO.Rut(tkiem);
-                    lsgdDAO.Them(gd);
-                    MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
-                    Utility.addForm(frmxemtktk, pnlNguoidung);
+                    TaiKhoanTietKiem? tkiem = tietkiemDAO.LayThongTinSoTietKiem(tknh.TenNh, tknh.SoTk, int.Parse(lblMaTietKiem.Text));
+                    if (tkiem != null)
+                    {
+                       // GiaoDich gd = new GiaoDich("Rut Tiet Kiem", kh.TenNh, tkiem?.TenTktk, tkiem?.MaTietKiem.ToString(), "HHB", kh.TenKh, kh.SoTk, tkiem.TienGoc , "");
+                        tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
+                        tknhDAO.Sua(tknh);
+                        tietkiemDAO.Rut(tkiem);
+                        //lsgdDAO.Them(gd);
+                        MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
+                        Utility.addForm(frmxemtktk, pnlNguoidung);
+                    }
+                    
                 }
             }
         }

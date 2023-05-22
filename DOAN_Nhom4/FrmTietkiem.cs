@@ -23,8 +23,7 @@ namespace DOAN_Nhom4
         TietkiemDAO tkiemDAO = new TietkiemDAO();
 
         private Random rand;
-        int MaTietKiem;
-        private string tenTKTK;
+        int maTietKiem;
         private int loaiSo;
         private decimal tienGoc;
         private int kiHan;
@@ -49,18 +48,31 @@ namespace DOAN_Nhom4
         {
             tkiemDAO.KiemTraSoTietKiem(tknh);
             rand = new Random();
-            MaTietKiem = rand.Next(100000, 999999);
+            maTietKiem = rand.Next(100000, 999999);
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            if (KiemTraThongTin() == true)
+            if (KiemTraThongTin())
             {
-                tenTKTK = txtTenTKTK.Text;
-                TietKiem tkiem = new TietKiem(MaTietKiem, DateTime.Now, tenTKTK, loaiSo, tienGoc, kiHan, laiSuat, tienLai, tongTien);
-                GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNh, kh.TenKh, kh.SoTk, "HHB", txtTenTKTK.Text, MaTietKiem.ToString(), int.Parse(txtSotien.Text), "");
-                tkiemDAO.Them(tkiem, tknh);
-                lsgdDAO.Them(gd);
+                TaiKhoanTietKiem tkiem = new TaiKhoanTietKiem
+                {
+                    TenNh = tknh.TenNh,
+                    SoTk = tknh.SoTk,
+                    MaTietKiem = maTietKiem,
+                    NgayDangKy = DateTime.Now,
+                    TenTktk = txtTenTKTK.Text,
+                    LoaiSo = loaiSo,
+                    TienGoc = tienGoc,
+                    KiHan = kiHan,
+                    LaiSuat = (float)laiSuat,
+                    TienLai = tienLai,
+                    TongTien = tongTien
+                };
+
+                tkiemDAO.Them(tkiem);
+               // GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNh, kh.TenKh, kh.SoTk, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
+                //lsgdDAO.Them(gd);
                 tknh.SoDu = tknh.SoDu - tienGoc;
                 tknhDAO.Sua(tknh);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -160,7 +172,7 @@ namespace DOAN_Nhom4
         private void HienThiThongTin()
         {
             BigInteger kt;
-            if (BigInteger.TryParse(txtSotien.Text, out kt) && tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), (decimal)tknh.SoDu) == true)
+            if (BigInteger.TryParse(txtSotien.Text, out kt) && tkiemDAO.ktSotien(decimal.Parse(txtSotien.Text), tknh.SoDu ?? 0))
             {
                 tienGoc = decimal.Parse(txtSotien.Text);
                 tienLai = tkiemDAO.TienLai(tienGoc, laiSuat, kiHan);
