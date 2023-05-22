@@ -64,7 +64,7 @@ namespace DOAN_Nhom4
 
         public void NapTien(TaiKhoanNganHang tkNap, LichSuGiaoDich gd)
         {
-            decimal SoDu = ((gd.SoTien + tkNap.SoDu) ?? -);
+            decimal SoDu = ((gd.SoTien + tkNap.SoDu) ?? 0);
             TaiKhoanNganHang? tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkNap.TenNh && tknh.SoTk == tkNap.SoTk).SingleOrDefault();
             if (tknh != null)
             {
