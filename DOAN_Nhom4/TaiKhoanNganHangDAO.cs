@@ -23,20 +23,26 @@ namespace DOAN_Nhom4
 
         public void Xoa(TaiKhoanNganHang tknh)
         {
-            TaiKhoanNganHang tk = hhb.TaiKhoanNganHangs.Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk).SingleOrDefault();
-            hhb.Remove(tk);
-            hhb.SaveChanges();
+            TaiKhoanNganHang? tk = hhb.TaiKhoanNganHangs.Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk).SingleOrDefault();
+            if (tk != null)
+            {
+                hhb.Remove(tk);
+                hhb.SaveChanges();
+            }    
         }
         public void Sua(TaiKhoanNganHang tknh)
         {
-            TaiKhoanNganHang tk = hhb.TaiKhoanNganHangs.Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk).SingleOrDefault();
-            tk.TenNh = tknh.TenNh;
-            tk.SoTk = tknh.SoTk;
-            tk.TenDn = tknh.TenDn;
-            tk.MatKhau = tknh.MatKhau;
-            tk.SoDu = tknh.SoDu;
-            tk.NgayDangKy = tknh.NgayDangKy;
-            hhb.SaveChanges();
+            TaiKhoanNganHang? tk = hhb.TaiKhoanNganHangs.Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk).SingleOrDefault();
+            if (tk != null)
+            {
+                tk.TenNh = tknh.TenNh;
+                tk.SoTk = tknh.SoTk;
+                tk.TenDn = tknh.TenDn;
+                tk.MatKhau = tknh.MatKhau;
+                tk.SoDu = tknh.SoDu;
+                tk.NgayDangKy = tknh.NgayDangKy;
+                hhb.SaveChanges();
+            }          
         }
 
         public bool IsEmpty(TaiKhoanNganHang tknh)
@@ -46,12 +52,12 @@ namespace DOAN_Nhom4
             return true;
         }
 
-        public TaiKhoanNganHang LayTaiKhoanNganHang(string GTSoTK, string GTTenNH)
+        public TaiKhoanNganHang? LayTaiKhoanNganHang(string GTSoTK, string GTTenNH)
         {
             return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.SoTk == GTSoTK).SingleOrDefault();
         }
 
-        public TaiKhoanNganHang LayTaiKhoanNganHangBangTenDn(string GTTenDn, string GTTenNH)
+        public TaiKhoanNganHang? LayTaiKhoanNganHangBangTenDn(string GTTenDn, string GTTenNH)
         {
             return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.TenDn == GTTenDn).SingleOrDefault();
         }
@@ -59,16 +65,22 @@ namespace DOAN_Nhom4
         public void NapTien(TaiKhoanNganHang tkNap, LichSuGiaoDich gd)
         {
             decimal SoDu = (decimal)(gd.SoTien + tkNap.SoDu);
-            TaiKhoanNganHang tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkNap.TenNh && tknh.SoTk == tkNap.SoTk).SingleOrDefault();
-            tknh.SoDu = SoDu;
-            hhb.SaveChanges();
+            TaiKhoanNganHang? tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkNap.TenNh && tknh.SoTk == tkNap.SoTk).SingleOrDefault();
+            if (tknh != null)
+            {
+                tknh.SoDu = SoDu;
+                hhb.SaveChanges();
+            }           
         }
         public void RutTien(TaiKhoanNganHang tkRut, LichSuGiaoDich gd)
         {
             decimal SoDu = (decimal)(tkRut.SoDu - gd.SoTien);
-            TaiKhoanNganHang tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkRut.TenNh && tknh.SoTk == tkRut.SoTk).SingleOrDefault();
-            tknh.SoDu = SoDu;
-            hhb.SaveChanges();
+            TaiKhoanNganHang? tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkRut.TenNh && tknh.SoTk == tkRut.SoTk).SingleOrDefault();
+            if (tknh != null)
+            {
+                tknh.SoDu = SoDu;
+                hhb.SaveChanges();
+            }
         }
     }
 }

@@ -73,6 +73,7 @@ namespace DOAN_Nhom4
                 tkiemDAO.Them(tkiem);
                // GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNh, kh.TenKh, kh.SoTk, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
                 //lsgdDAO.Them(gd);
+
                 tknh.SoDu = tknh.SoDu - tienGoc;
                 tknhDAO.Sua(tknh);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
