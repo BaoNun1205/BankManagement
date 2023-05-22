@@ -102,11 +102,23 @@ namespace DOAN_Nhom4
                     TaiKhoanTietKiem? tkiem = tietkiemDAO.LayThongTinSoTietKiem(tknh.TenNh, tknh.SoTk, int.Parse(lblMaTietKiem.Text));
                     if (tkiem != null)
                     {
-                       // GiaoDich gd = new GiaoDich("Rut Tiet Kiem", kh.TenNh, tkiem?.TenTktk, tkiem?.MaTietKiem.ToString(), "HHB", kh.TenKh, kh.SoTk, tkiem.TienGoc , "");
+                        LichSuGiaoDich gd = new LichSuGiaoDich()
+                        {
+                            LoaiGd = "Rut Tiet Kiem",
+                            NganHangGui = kh.TenNh,
+                            TenTkgui = tkiem?.TenTktk,
+                            SoTkgui = tkiem?.MaTietKiem.ToString(),
+                            NganHangNhan = "HHB",
+                            TenTknhan = kh.TenKh,
+                            SoTknhan = kh.SoTk,
+                            ThoiGian = DateTime.Now,
+                            SoTien = tkiem.TienGoc,
+                            LoiNhan = "Rut tien tiet kiem"
+                        };
                         tknh.SoDu = tknh.SoDu + tkiem.TienGoc;
                         tknhDAO.Sua(tknh);
                         tietkiemDAO.Rut(tkiem);
-                        //lsgdDAO.Them(gd);
+                        lsgdDAO.Them(gd);
                         MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
                         Utility.addForm(frmxemtktk, pnlNguoidung);

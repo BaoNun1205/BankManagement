@@ -16,11 +16,22 @@ namespace DOAN_Nhom4
         DBConnection data = new DBConnection();
         public LichSuGiaoDichDAO() { }
 
-        public DataTable HienThi()
+        public List<object> HienThi()
         {
-            string sql = string.Format("SELECT MaGD, LoaiGD, NganHangGui, SoTKGui, NganHangNhan, SoTKNhan, SoTien, ThoiGian " +
-                                       "FROM hr.LichSuGiaoDich");
-            return data.LayDanhSach(sql);
+            var result = from ls in hhb.LichSuGiaoDiches
+                         select new
+                         {
+                             MaGd = ls.MaGd,
+                             LoaiGd = ls.LoaiGd,
+                             NganHangGui = ls.NganHangGui,
+                             SoTkgui = ls.SoTkgui,
+                             NganHangNhan = ls.NganHangNhan,
+                             SoTknhan = ls.SoTknhan,
+                             SoTien = ls.SoTien,
+                             LoiNhan = ls.LoiNhan,
+                             ThoiGian = ls.ThoiGian
+                         };
+            return result.ToList<object>();
         }
         public void Them(LichSuGiaoDich gd)
         {

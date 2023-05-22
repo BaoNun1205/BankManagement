@@ -79,9 +79,9 @@ namespace DOAN_Nhom4
         {
             lblHienThiTKNguon.Text = nguoiDung.SoTk;
             lblHienThiTKVay.Text = nguoiDung.SoTk;
-            lblHienThiNoGoc.Text = ttNgDung.TongSoTienPhaiTra.Value.ToString("N0");
-            lblHienThiTraCham.Text = ttNgDung.PhiTraCham.Value.ToString("N0");
-            lblHienThiTong.Text = (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham).Value.ToString("N0");
+            lblHienThiNoGoc.Text = ttNgDung.TongSoTienPhaiTra?.ToString("N0");
+            lblHienThiTraCham.Text = ttNgDung.PhiTraCham?.ToString("N0");
+            lblHienThiTong.Text = (ttNgDung.TongSoTienPhaiTra + ttNgDung.PhiTraCham)?.ToString("N0");
             txtNgayGiaoDich.Value = DateTime.Now;
         }
     }
