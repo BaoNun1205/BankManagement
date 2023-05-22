@@ -34,7 +34,7 @@ namespace DOAN_Nhom4
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             KHNoXau kh = KHNoXauDAO.IsNull(tknh);
-            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTk);
+            KhachHangVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung);
             if (kh == null) //kiem tra co no xau nao khong
             {
                 if (ttNgDung == null) //kiem tra co khoan vay nao khong
@@ -64,10 +64,10 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            ThongTinNguoiDungVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung.SoTk);           
+            KhachHangVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung);           
             if (ttNgDung != null) //kiem tra xem co khoan vay hay chua
             {
-                DateTime startDate = ttNgDung.NgayDenHan;
+                DateTime startDate = ttNgDung.NgayDenHan.Value;
                 DateTime endDate = DateTime.Now;
                 TimeSpan span = endDate - startDate;
                 double totalDays = span.TotalDays;

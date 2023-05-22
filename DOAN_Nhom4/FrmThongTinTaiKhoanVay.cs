@@ -17,12 +17,12 @@ namespace DOAN_Nhom4
         private KhachHang nguoiDung;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        private ThongTinNguoiDungVay ttNgDung;
+        private KhachHangVay ttNgDung;
         public FrmThongTinTaiKhoanVay()
         {
             InitializeComponent();
         }
-        public FrmThongTinTaiKhoanVay(KhachHang nguoiDung, TaiKhoanNganHang tknh,ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
+        public FrmThongTinTaiKhoanVay(KhachHang nguoiDung, TaiKhoanNganHang tknh,KhachHangVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.pnlNguoiDung = pnlNguoiDung;
@@ -62,23 +62,23 @@ namespace DOAN_Nhom4
 
         private void HienThi()
         {
-            txtNgayDenHan.Value = ttNgDung.NgayDenHan;
-            txtDuNo.Text = ttNgDung.TongSoTienPhaiTra.ToString("N0");
-            txtLaiSuat.Text = ttNgDung.Lai.ToString() + "%/năm";
-            txtSoTienHangThang.Text = ttNgDung.SoTienHangThang.ToString("N0");
-            if (ttNgDung.NgayDenHan.Year > DateTime.Now.Year) //chua qua han thanh toan, phi tra cham = 0
+            txtNgayDenHan.Value = ttNgDung.NgayDenHan.Value;
+            txtDuNo.Text = ttNgDung.TongSoTienPhaiTra.Value.ToString("N0");
+            txtLaiSuat.Text = ttNgDung.LaiSuat.ToString() + "%/năm";
+            txtSoTienHangThang.Text = ttNgDung.SoTienHangThang.Value.ToString("N0");
+            if (ttNgDung.NgayDenHan.Value.Year > DateTime.Now.Year) //chua qua han thanh toan, phi tra cham = 0
             {
                 ttNgDung.PhiTraCham = 0;
             }
             else
             {
-                if (ttNgDung.NgayDenHan.Month > DateTime.Now.Month)
+                if (ttNgDung.NgayDenHan.Value.Month > DateTime.Now.Month)
                 {
                     ttNgDung.PhiTraCham = 0;
                 }
-                else if (ttNgDung.NgayDenHan.Month == DateTime.Now.Month)
+                else if (ttNgDung.NgayDenHan.Value.Month == DateTime.Now.Month)
                 {
-                    if (ttNgDung.NgayDenHan.Date >= DateTime.Now.Date)
+                    if (ttNgDung.NgayDenHan.Value.Date >= DateTime.Now.Date)
                     {
                         ttNgDung.PhiTraCham = 0;
                     }
@@ -88,7 +88,7 @@ namespace DOAN_Nhom4
                 else
                     ttNgDung.PhiTraCham = 50000; //qua han thanh toan
             }
-            txtPhiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
+            txtPhiTraCham.Text = ttNgDung.PhiTraCham.Value.ToString("N0");
         }
     }
 }

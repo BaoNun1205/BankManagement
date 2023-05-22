@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacNhanThongTinNguoiDungVay : Form
     {
-        public ThongTinNguoiDungVay ttNgDung;
+        public KhachHangVay ttNgDung;
         public KhachHang nguoiDung;
         ThongTinNguoiDungVayDAO ngDungVay = new ThongTinNguoiDungVayDAO();
         private Panel pnlNguoiDung;
@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
             InitializeComponent();
         }
 
-        public FrmXacNhanThongTinNguoiDungVay(KhachHang nguoiDung, TaiKhoanNganHang tknh,ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
+        public FrmXacNhanThongTinNguoiDungVay(KhachHang nguoiDung, TaiKhoanNganHang tknh, KhachHangVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -43,7 +43,7 @@ namespace DOAN_Nhom4
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
-            GiaoDich gd = new GiaoDich("Vay Tien", "HHB", "", "", "HHB", ttNgDung.HoTen, ttNgDung.SoTKVay, ttNgDung.SoTienVay, "Vay no");
+            GiaoDich gd = new GiaoDich("Vay Tien", "HHB", "", "", "HHB", ttNgDung.HoTen, ttNgDung.SoTkvay, ttNgDung.SoTienVay.Value, "Vay no");
             lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
@@ -67,7 +67,7 @@ namespace DOAN_Nhom4
                 { "TIEU DUNG DAM BAO BANG BAT DONG SAN", 8 },
                 { "CHO VAY KHAC", 7 }
             };
-            double lai = laiDictionary[ttNgDung.SpVay];
+            double lai = laiDictionary[ttNgDung.Spvay];
             txtDanhXung.Text = ttNgDung.DanhXung;
             txtHoTen.Text = ttNgDung.HoTen;
             txtCCCD.Text = ttNgDung.Cccd;
@@ -76,12 +76,12 @@ namespace DOAN_Nhom4
             txtEmail.Text = ttNgDung.Email;
             txtNgheNghiep.Text = ttNgDung.NgheNghiep;
             txtThuNhap.Text = ttNgDung.ThuNhap;
-            txtSPVay.Text = ttNgDung.SpVay;
-            txtSoTienVay.Text = ttNgDung.SoTienVay.ToString("N0") + " VNĐ";
+            txtSPVay.Text = ttNgDung.Spvay;
+            txtSoTienVay.Text = ttNgDung.SoTienVay.Value.ToString("N0") + " VNĐ";
             txtThoiGianVay.Text = ttNgDung.ThoiGianVay.ToString();
             txtKhoanVay.Text = ttNgDung.LoaiKhoanVay;
             txtLaiSuat.Text = lai.ToString();
-            ttNgDung.Lai = lai;
+            ttNgDung.LaiSuat = lai.ToString();
             decimal tienhangthang = ngDungVay.TienHangThang(ttNgDung);
             decimal tongsotien = ngDungVay.TongSoTien(ttNgDung);
             txtTongSoTien.Text = tongsotien.ToString("N0") + " VNĐ";
