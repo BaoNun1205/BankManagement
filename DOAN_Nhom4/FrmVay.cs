@@ -72,7 +72,7 @@ namespace DOAN_Nhom4
                     {
                         if (int.Parse(txtThoiGianVay.Text) >= 6 && int.Parse(txtThoiGianVay.Text) <= 60)
                         {
-                            ThongTinNguoiDungVay tmp = ttNgDungDAO.TKValid(nguoiDung.SoTk);
+                            KhachHangVay tmp = ttNgDungDAO.TKValid(nguoiDung);
                             if (tmp == null)
                             {
                                 string txt_LoaiKhoanVay = "";
@@ -87,7 +87,31 @@ namespace DOAN_Nhom4
                                     txtTaiSan.Text = "Trong";
                                     txtGiaTriTaiSan.Text = "0";
                                 }
-                                ThongTinNguoiDungVay ttNgDung = new ThongTinNguoiDungVay("HHB", txt_LoaiKhoanVay, nguoiDung.SoTk, cbDanhXung.Text, nguoiDung.TenKh, nguoiDung.Cccd, txtDiaChi.Text, nguoiDung.Sdt, nguoiDung.Email, cbNgheNghiep.Text, cbThuNhap.Text, cbSPVay.Text, decimal.Parse(txtSoTienVay.Text), int.Parse(txtThoiGianVay.Text), txtTaiSan.Text, int.Parse(txtGiaTriTaiSan.Text), s, txtNgayVay.Value);
+                                KhachHangVay ttNgDung = new KhachHangVay()
+                                {
+                                    TenNh = "HHB",
+                                    LoaiKhoanVay = txt_LoaiKhoanVay,
+                                    SoTkvay = nguoiDung.SoTk,
+                                    DanhXung = cbDanhXung.Text,
+                                    HoTen = nguoiDung.TenKh,
+                                    Cccd = nguoiDung.Cccd,
+                                    DiaChi = txtDiaChi.Text,
+                                    Sdt = nguoiDung.Sdt,
+                                    Email = nguoiDung.Email,
+                                    NgheNghiep = cbNgheNghiep.Text,
+                                    ThuNhap = cbThuNhap.Text,
+                                    Spvay = cbSPVay.Text,
+                                    SoTienVay = decimal.Parse(txtSoTienVay.Text),
+                                    ThoiGianVay = int.Parse(txtThoiGianVay.Text),
+                                    TaiSanTheChap = txtTaiSan.Text,
+                                    GiaTriTaiSan = decimal.Parse(txtGiaTriTaiSan.Text),
+                                    ChiNhanhVay = s,
+                                    NgayVay = txtNgayVay.Value,
+                                    LaiSuat = "0",
+                                    SoTienHangThang = 0,
+                                    TongSoTienPhaiTra = 0,
+                                    PhiTraCham = 0
+                                };
                                 FrmXacNhanThongTinNguoiDungVay xacnhan = new FrmXacNhanThongTinNguoiDungVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
                                 Utility.addForm(xacnhan, pnlNguoiDung);
                             }

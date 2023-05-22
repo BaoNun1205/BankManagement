@@ -15,14 +15,14 @@ namespace DOAN_Nhom4
     {
         private KhachHang kh;
         private TaiKhoanNganHang tknh;
-        private GiaoDich gd;
+        private LichSuGiaoDich gd;
         private Panel pnlNguoidung;
         public FrmThongbaoChuyentien()
         {
             InitializeComponent();
         }
 
-        public FrmThongbaoChuyentien(KhachHang kh, GiaoDich gd, TaiKhoanNganHang tknh, Panel pnlNguoidung)
+        public FrmThongbaoChuyentien(KhachHang kh, LichSuGiaoDich gd, TaiKhoanNganHang tknh, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.kh = kh;
@@ -33,13 +33,13 @@ namespace DOAN_Nhom4
 
         private void FrmThongbaoChuyentien_Load(object sender, EventArgs e)
         {
-            lblSotien.Text = gd.SoTien.ToString("N0") + " VNĐ";
+            lblSotien.Text = gd.SoTien.Value.ToString("N0") + " VNĐ";
             lblTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-            lblNguoinhan.Text = gd.TenTKNhan.ToString();
-            lblSTK.Text = gd.SoTKNhan.ToString();
+            lblNguoinhan.Text = gd.TenTknhan.ToString();
+            lblSTK.Text = gd.SoTknhan.ToString();
             lblNganhang.Text = gd.NganHangNhan.ToString();
             txtNoidung.Text = gd.LoiNhan.ToString();
-            lblHienThiLoai.Text = gd.LoaiGD.ToString();
+            lblHienThiLoai.Text = gd.LoaiGd.ToString();
             foreach (Form form in Application.OpenForms)
             {
                 if (form.GetType() == typeof(FrmNguoidung))

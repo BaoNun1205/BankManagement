@@ -105,7 +105,19 @@ namespace DOAN_Nhom4
             tkNhan = tknhDAO.LayTaiKhoanNganHang(txtSoTKNhan.Text, cbTenNH.Text);
             KhachHang ndNhan = new KhachHang();
             ndNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
-            GiaoDich gd = new GiaoDich("Chuyen Tien", tkGui.TenNh, ndGui.TenKh, tkGui.SoTk, tkNhan.TenNh, ndNhan.TenKh, tkNhan.SoTk, decimal.Parse(txtSoTien.Text), txtLoiNhan.Text);
+            LichSuGiaoDich gd = new LichSuGiaoDich()
+            {
+                LoaiGd = "Chuyen tien",
+                NganHangGui = tkGui.TenNh,
+                TenTkgui = ndGui.TenKh,
+                SoTkgui = tkGui.SoTk,
+                NganHangNhan = tkNhan.TenNh,
+                TenTknhan = ndNhan.TenKh,
+                SoTknhan = tkNhan.SoTk,
+                ThoiGian = DateTime.Now,
+                SoTien = decimal.Parse(txtSoTien.Text),
+                LoiNhan = txtLoiNhan.Text
+            };
             if (tkGui != null)
             {
                 if (tkNhan != null)

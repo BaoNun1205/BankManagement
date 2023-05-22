@@ -51,7 +51,18 @@ namespace DOAN_Nhom4
             tkNap = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
             KhachHang ndNap = new KhachHang();
             ndNap = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
-            GiaoDich gd = new GiaoDich("Nap Tien", "Tien Mat", "", "", tkNap.TenNh, ndNap.TenKh, tkNap.SoTk, decimal.Parse(txtSoTien.Text), "Nap tien vao tai khoan");
+            LichSuGiaoDich gd = new LichSuGiaoDich()
+            {
+                LoaiGd = "Nap Tien",
+                NganHangGui = "Tien Mat",
+                TenTkgui = "",
+                SoTkgui = "",
+                NganHangNhan = tkNap.TenNh,
+                TenTknhan = ndNap.TenKh,
+                SoTknhan = tkNap.SoTk,
+                SoTien = decimal.Parse(txtSoTien.Text),
+                LoiNhan = "Nap tien vao tai khoan"
+            };
             if (tkNap != null)
             {
                 if (gd.SoTien >= 100000)

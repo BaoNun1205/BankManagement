@@ -9,24 +9,23 @@ namespace DOAN_Nhom4
 {
     internal class KHNoXauDAO
     {
-
-        KHNoXau kh = new KHNoXau();
+        NganHangHhbContext hhb = new NganHangHhbContext();
         DBConnection data = new DBConnection();
         public KHNoXauDAO() { }
-        public void Them(KHNoXau kh)
+        public void Them(KhachHangNoXau kh)
         {
-            string sql = string.Format("INSERT INTO KhachHangNoXau(SoTK, TenTK, CCCD, NgayNo, TenNH) Values('{0}', '{1}', '{2}', '{3}', '{4}')", kh.SoTK, kh.TenTK, kh.Cccd, kh.NgayNo, kh.TenNH);
-            data.xuLi(sql);
+            hhb.KhachHangNoXaus.Add(kh);
+            hhb.SaveChanges();
         }
-        public void Xoa(KHNoXau kh)
+        public void Xoa(KhachHangNoXau kh)
         {
-            string sql = string.Format("DELETE FROM KhachHangNoXau WHERE SoTK = '{0}'", kh.SoTK);
-            data.xuLi(sql);
+            KhachHangNoXau tmp = hhb.KhachHangNoXaus.Where(tmp => tmp.SoTk == kh.SoTk).FirstOrDefault();
+            hhb.Remove(tmp);
+            hhb.SaveChanges();
         }
-        public KHNoXau IsNull(TaiKhoanNganHang tknh)
+        public KhachHangNoXau IsNull(TaiKhoanNganHang tknh)
         {
-            string sql = string.Format("SELECT * FROM KhachHangNoXau WHERE SoTK = '{0}'", tknh.SoTk);
-            return data.XuLiKHNoXau(sql);
+            return hhb.KhachHangNoXaus.Where(tmp => tmp.SoTk == tknh.SoTk).FirstOrDefault();
         }
     }
 }

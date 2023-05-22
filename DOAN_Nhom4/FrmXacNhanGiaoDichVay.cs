@@ -16,7 +16,7 @@ namespace DOAN_Nhom4
     public partial class FrmXacNhanGiaoDichVay : Form
     {
         public KhachHang nguoiDung;
-        public ThongTinNguoiDungVay ttNgDung;
+        public KhachHangVay ttNgDung;
         public Panel pnlNguoiDung;
         public TaiKhoanNganHang tknh;
         ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
@@ -26,7 +26,7 @@ namespace DOAN_Nhom4
         {
             InitializeComponent();
         }
-        public FrmXacNhanGiaoDichVay(KhachHang nguoiDung, TaiKhoanNganHang tknh, ThongTinNguoiDungVay ttNgDung, Panel pnlNguoiDung)
+        public FrmXacNhanGiaoDichVay(KhachHang nguoiDung, TaiKhoanNganHang tknh, KhachHangVay ttNgDung, Panel pnlNguoiDung)
         {
             InitializeComponent();
             this.nguoiDung = nguoiDung;
@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
             decimal sotienlai = decimal.Parse(lblHienThiLai.Text, NumberStyles.AllowThousands);
-            ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.AddMonths(1);
+            ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.Value.AddMonths(1);
             ttNgDung.TongSoTienPhaiTra -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             ttNgDung.ThoiGianVay -= 1;
             ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - sotienlai);
@@ -61,7 +61,19 @@ namespace DOAN_Nhom4
                 {
                     ttNgDungDAO.Sua(ttNgDung);
                     tknhDAO.Sua(tknh);
-                    GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                    LichSuGiaoDich gd = new LichSuGiaoDich()
+                    {
+                        LoaiGd = "Thanh Toan Khoan Vay",
+                        NganHangGui = "HHB",
+                        TenTkgui = nguoiDung.TenKh,
+                        SoTkgui = nguoiDung.SoTk,
+                        NganHangNhan = "HHB",
+                        TenTknhan = "",
+                        SoTknhan = "",
+                        ThoiGian = DateTime.Now,
+                        SoTien = ttNgDung.SoTienHangThang,
+                        LoiNhan = "Thanh toan khoan vay"
+                    };
                     lsgdDAO.Them(gd);
                     MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
@@ -76,7 +88,19 @@ namespace DOAN_Nhom4
             else
             {
                 tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.SoTienHangThang, "Thanh toan khoan vay");
+                LichSuGiaoDich gd = new LichSuGiaoDich()
+                {
+                    LoaiGd = "Thanh Toan Khoan Vay",
+                    NganHangGui = "HHB",
+                    TenTkgui = nguoiDung.TenKh,
+                    SoTkgui = nguoiDung.SoTk,
+                    NganHangNhan = "HHB",
+                    TenTknhan = "",
+                    SoTknhan = "",
+                    ThoiGian = DateTime.Now,
+                    SoTien = ttNgDung.SoTienHangThang,
+                    LoiNhan = "Thanh toan khoan vay"
+                };
                 lsgdDAO.Them(gd);
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -89,11 +113,11 @@ namespace DOAN_Nhom4
         {
             lblHienThiTKNguon.Text = nguoiDung.SoTk;
             lblHienThiTKVay.Text = nguoiDung.SoTk;
-            decimal tmp = ttNgDung.SoTienVay / ttNgDung.ThoiGianVay;
+            decimal tmp = ttNgDung.SoTienVay.Value / ttNgDung.ThoiGianVay.Value;
             lblHienThiNoGoc.Text = tmp.ToString("N0");
-            lblHienThiLai.Text = (ttNgDung.SoTienHangThang - tmp).ToString("N0");
-            lblHienThiTraCham.Text = ttNgDung.PhiTraCham.ToString("N0");
-            lblHienThiTong.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).ToString("N0");
+            lblHienThiLai.Text = (ttNgDung.SoTienHangThang - tmp).Value.ToString("N0");
+            lblHienThiTraCham.Text = ttNgDung.PhiTraCham.Value.ToString("N0");
+            lblHienThiTong.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).Value.ToString("N0");
             txtNgayGiaoDich.Value = DateTime.Now;
         }
     }

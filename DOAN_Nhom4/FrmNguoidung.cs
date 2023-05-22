@@ -16,7 +16,7 @@ namespace DOAN_Nhom4
     {
         public KhachHang kh;
         public TaiKhoanNganHang tknh;
-        public ThongTinNguoiDungVay ttNgDung;
+        public KhachHangVay ttNgDung;
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

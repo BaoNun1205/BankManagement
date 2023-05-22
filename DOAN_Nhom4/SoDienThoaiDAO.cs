@@ -23,26 +23,26 @@ namespace DOAN_Nhom4
             hhb.SaveChanges();
         }
 
-        public void ThanhToanVienThong(SoDienThoai sdt, GiaoDich gd)
+        public void ThanhToanVienThong(SoDienThoai sdt, LichSuGiaoDich gd)
         {
             if (gd.NganHangGui == "Tai Khoan Tin Dung")
             {
-                TaiKhoanTinDung tttd = tttdDAO.LayThongTinTinDungBangStk(gd.SoTKGui);
+                TaiKhoanTinDung tttd = tttdDAO.LayThongTinTinDungBangStk(gd.SoTkgui);
                 tttdDAO.ThanhToanPhi(tttd, gd);
                 tttdDAO.Sua(tttd);
                 NapTienDienThoai(sdt, gd);
             }
             else
             {
-                TaiKhoanNganHang tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTKGui);
+                TaiKhoanNganHang tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTkgui);
                 tknhDAO.RutTien(tknh, gd);
                 NapTienDienThoai(sdt, gd);
             }
         }
 
-        public void NapTienDienThoai(SoDienThoai sdt, GiaoDich gd)
+        public void NapTienDienThoai(SoDienThoai sdt, LichSuGiaoDich gd)
         {
-            sdt.SoDu = sdt.SoDu + gd.SoTien;
+            sdt.SoDu = sdt.SoDu + gd.SoTien.Value;
             CapNhat(sdt);
         }
 

@@ -22,7 +22,7 @@ namespace DOAN_Nhom4
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         ChuyenTienDAO ChuyenTienDAO = new ChuyenTienDAO();
 
-        List<GiaoDich> danhSachGiaoDich = new List<GiaoDich>();
+        List<LichSuGiaoDich> danhSachGiaoDich = new List<LichSuGiaoDich>();
 
         enum KiemTraTenNguoiNhan
         {
@@ -72,7 +72,19 @@ namespace DOAN_Nhom4
             else if (kt == KiemTraTenNguoiNhan.hople && tknh.SoDu >= int.Parse(txtSoTien.Text))
             {
                 if (txtLoiNhan.Text == "") txtLoiNhan.Text = string.Format("{0} da chuyen {1}VND den {2} ", nguoiDung.TenKh.ToString(), txtSoTien.Text, txtTennguoinhan.Text);
-                GiaoDich gd = new GiaoDich("Chuyen Tien", nguoiDung.TenNh, nguoiDung.TenKh, nguoiDung.SoTk, cbTenNH.Text, txtTennguoinhan.Text, txtSTK.Text, int.Parse(txtSoTien.Text), txtLoiNhan.Text);
+                LichSuGiaoDich gd = new LichSuGiaoDich()
+                {
+                    LoaiGd = "Chuyen Tien",
+                    NganHangGui = nguoiDung.TenNh,
+                    TenTkgui = nguoiDung.TenKh,
+                    SoTkgui = nguoiDung.SoTk,
+                    NganHangNhan = cbTenNH.Text,
+                    TenTknhan = txtTennguoinhan.Text,
+                    SoTknhan = txtSTK.Text,
+                    ThoiGian = DateTime.Now,
+                    SoTien = decimal.Parse(txtSoTien.Text),
+                    LoiNhan = txtLoiNhan.Text
+                };
                 FrmXacnhanChuyentien frmxacnhan = new FrmXacnhanChuyentien(nguoiDung, tknh, gd, pnlNguoidung);
                 frmxacnhan.ShowDialog();
                 this.Close();
@@ -101,12 +113,12 @@ namespace DOAN_Nhom4
 
         private void cbTennguoinhan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is GiaoDich)
+            if (cbTennguoinhan.SelectedItem != null && cbTennguoinhan.SelectedItem is LichSuGiaoDich)
             {
-                GiaoDich gd = (GiaoDich)cbTennguoinhan.SelectedItem;
+                LichSuGiaoDich gd = (LichSuGiaoDich)cbTennguoinhan.SelectedItem;
                 cbTenNH.Text = gd.NganHangNhan.ToString();
-                txtSTK.Text = gd.SoTKNhan.ToString();
-                txtTennguoinhan.Text = gd.TenTKNhan.ToString();
+                txtSTK.Text = gd.SoTknhan.ToString();
+                txtTennguoinhan.Text = gd.TenTknhan.ToString();
             }
         }
 
