@@ -70,12 +70,24 @@ namespace DOAN_Nhom4
                     TongTien = tongTien
                 };
 
-                tkiemDAO.Them(tkiem);
-               // GiaoDich gd = new GiaoDich("Gui Tiet Kiem", kh.TenNh, kh.TenKh, kh.SoTk, "HHB", txtTenTKTK.Text, maTietKiem.ToString(), int.Parse(txtSotien.Text), "");
-                //lsgdDAO.Them(gd);
+                LichSuGiaoDich gd = new LichSuGiaoDich()
+                {
+                    LoaiGd = "Gui Tiet Kiem",
+                    NganHangGui = kh.TenNh,
+                    TenTkgui = kh.TenKh,                   
+                    SoTkgui = kh.SoTk,                    
+                    NganHangNhan = "HHB",
+                    TenTknhan = tkiem.TenTktk,
+                    SoTknhan = tkiem.MaTietKiem.ToString(),
+                    ThoiGian = DateTime.Now,
+                    SoTien = tkiem.TienGoc,
+                    LoiNhan = "Gui tien tiet kiem"
+                };
 
-                tknh.SoDu = tknh.SoDu - tienGoc;
+                tknh.SoDu = tknh.SoDu - tkiem.TienGoc;
                 tknhDAO.Sua(tknh);
+                tkiemDAO.Them(tkiem);
+                lsgdDAO.Them(gd);
                 MessageBox.Show("Tạo tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
                 Utility.addForm(frmtietkiem, pnlNguoidung);

@@ -34,17 +34,23 @@ namespace DOAN_Nhom4
 
         public void ChuyenTien(TaiKhoanNganHang tkGui, LichSuGiaoDich gd, TaiKhoanNganHang tkNhan)
         {
-            TaiKhoanNganHang taiKhoanNhan = tknhDAO.LayTaiKhoanNganHang(gd.SoTknhan, gd.NganHangNhan);
-            decimal soTienNhan = (decimal)(gd.SoTien + taiKhoanNhan.SoDu);
-            TaiKhoanNganHang tknhn = hhb.TaiKhoanNganHangs.Where(tknhn => tknhn.TenNh == tkNhan.TenNh && tknhn.SoTk == tkNhan.SoTk).SingleOrDefault();
-            tknhn.SoDu = soTienNhan;
-            hhb.SaveChanges();
+            TaiKhoanNganHang? taiKhoanGui = tknhDAO.LayTaiKhoanNganHang(gd.SoTkgui, gd.NganHangGui);
+            decimal soTienGui = ((taiKhoanGui?.SoDu - gd.SoTien) ?? 0);
+            TaiKhoanNganHang? tknhg = hhb.TaiKhoanNganHangs.Where(tknhg => tknhg.TenNh == tkGui.TenNh && tknhg.SoTk == tkGui.SoTk).SingleOrDefault();
+            if (tknhg != null)
+            {
+                tknhg.SoDu = soTienGui;
+                hhb.SaveChanges();
+            }
 
-            TaiKhoanNganHang taiKhoanGui = tknhDAO.LayTaiKhoanNganHang(gd.SoTkgui, gd.NganHangGui);
-            decimal soTienGui = (decimal)(taiKhoanGui.SoDu - gd.SoTien);
-            TaiKhoanNganHang tknhg = hhb.TaiKhoanNganHangs.Where(tknhg => tknhn.TenNh == tkNhan.TenNh && tknhg.SoTk == tkNhan.SoTk).SingleOrDefault();
-            tknhg.SoDu = soTienNhan;
-            hhb.SaveChanges();
+            TaiKhoanNganHang? taiKhoanNhan = tknhDAO.LayTaiKhoanNganHang(gd.SoTknhan, gd.NganHangNhan);
+            decimal soTienNhan = ((taiKhoanNhan?.SoDu + gd.SoTien) ?? 0);
+            TaiKhoanNganHang? tknhn = hhb.TaiKhoanNganHangs.Where(tknhn => tknhn.TenNh == tkNhan.TenNh && tknhn.SoTk == tkNhan.SoTk).SingleOrDefault();
+            if (tknhn != null)
+            {
+                tknhn.SoDu = soTienNhan;
+                hhb.SaveChanges();
+            }
         }
     }
 }

@@ -106,8 +106,8 @@ namespace DOAN_Nhom4
                         {
                             LoaiGd = "Rut Tiet Kiem",
                             NganHangGui = kh.TenNh,
-                            TenTkgui = tkiem?.TenTktk,
-                            SoTkgui = tkiem?.MaTietKiem.ToString(),
+                            TenTkgui = tkiem.TenTktk,
+                            SoTkgui = tkiem.MaTietKiem.ToString(),
                             NganHangNhan = "HHB",
                             TenTknhan = kh.TenKh,
                             SoTknhan = kh.SoTk,

@@ -46,28 +46,29 @@ namespace DOAN_Nhom4
 
         public void Rut(TaiKhoanTietKiem tkiem)
         {
-            TaiKhoanTietKiem? t = hhb.TaiKhoanTietKiems.Where(tkiem => tkiem.TenNh == tkiem.TenNh && tkiem.SoTk == tkiem.SoTk 
-                                                                && tkiem.MaTietKiem == tkiem.MaTietKiem).SingleOrDefault();
             hhb.Remove(tkiem);
-            hhb.SaveChanges();
+            hhb.SaveChanges();  
         }
 
         public void Sua(TaiKhoanTietKiem tkiem)
         {
             TaiKhoanTietKiem? t = hhb.TaiKhoanTietKiems.Where(tkiem => tkiem.TenNh == tkiem.TenNh && tkiem.SoTk == tkiem.SoTk
                                                                 && tkiem.MaTietKiem == tkiem.MaTietKiem).SingleOrDefault();
-            tkiem.TenNh = t.TenNh;
-            tkiem.SoTk = t.SoTk;
-            tkiem.MaTietKiem = t.MaTietKiem;
-            tkiem.NgayDangKy = t.NgayDangKy;
-            tkiem.TenTktk = t.TenTktk;
-            tkiem.LoaiSo = t.LoaiSo;
-            tkiem.TienGoc = t.TienGoc;
-            tkiem.KiHan = t.KiHan;
-            tkiem.LaiSuat = t.LaiSuat;
-            tkiem.TienLai = t.TienLai;
-            tkiem.TongTien = t.TongTien;
-            hhb.SaveChanges();
+            if (t != null)
+            {
+                tkiem.TenNh = t.TenNh;
+                tkiem.SoTk = t.SoTk;
+                tkiem.MaTietKiem = t.MaTietKiem;
+                tkiem.NgayDangKy = t.NgayDangKy;
+                tkiem.TenTktk = t.TenTktk;
+                tkiem.LoaiSo = t.LoaiSo;
+                tkiem.TienGoc = t.TienGoc;
+                tkiem.KiHan = t.KiHan;
+                tkiem.LaiSuat = t.LaiSuat;
+                tkiem.TienLai = t.TienLai;
+                tkiem.TongTien = t.TongTien;
+                hhb.SaveChanges();
+            }
         }
 
         public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
