@@ -56,14 +56,14 @@ namespace DOAN_Nhom4
             return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.TenDn == GTTenDn).SingleOrDefault();
         }
 
-        public void NapTien(TaiKhoanNganHang tkNap, GiaoDich gd)
+        public void NapTien(TaiKhoanNganHang tkNap, LichSuGiaoDich gd)
         {
             decimal SoDu = (decimal)(gd.SoTien + tkNap.SoDu);
             TaiKhoanNganHang tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkNap.TenNh && tknh.SoTk == tkNap.SoTk).SingleOrDefault();
             tknh.SoDu = SoDu;
             hhb.SaveChanges();
         }
-        public void RutTien(TaiKhoanNganHang tkRut, GiaoDich gd)
+        public void RutTien(TaiKhoanNganHang tkRut, LichSuGiaoDich gd)
         {
             decimal SoDu = (decimal)(tkRut.SoDu - gd.SoTien);
             TaiKhoanNganHang tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkRut.TenNh && tknh.SoTk == tkRut.SoTk).SingleOrDefault();

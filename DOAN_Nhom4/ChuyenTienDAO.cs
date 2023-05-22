@@ -15,9 +15,9 @@ namespace DOAN_Nhom4
 
         public ChuyenTienDAO() { }
 
-        public List<GiaoDich> LayDanhSachGiaoDich(string stkgui)
+        public List<LichSuGiaoDich> LayDanhSachGiaoDich(string stkgui)
         {
-            List<GiaoDich> gd = new List<GiaoDich>();
+            List<LichSuGiaoDich> gd = new List<LichSuGiaoDich>();
             string sql = string.Format("SELECT * FROM hr.LichSuGiaoDich WHERE LoaiGD = 'Chuyen Tien' and SoTKGui = '{0}'", stkgui);
             gd = data.LayDanhSachGiaoDich(sql);
             return gd;
@@ -32,15 +32,15 @@ namespace DOAN_Nhom4
             return danhSachGiaoDich.ToList();
         }*/
 
-        public void ChuyenTien(TaiKhoanNganHang tkGui, GiaoDich gd, TaiKhoanNganHang tkNhan)
+        public void ChuyenTien(TaiKhoanNganHang tkGui, LichSuGiaoDich gd, TaiKhoanNganHang tkNhan)
         {
-            TaiKhoanNganHang taiKhoanNhan = tknhDAO.LayTaiKhoanNganHang(gd.SoTKNhan, gd.NganHangNhan);
+            TaiKhoanNganHang taiKhoanNhan = tknhDAO.LayTaiKhoanNganHang(gd.SoTknhan, gd.NganHangNhan);
             decimal soTienNhan = (decimal)(gd.SoTien + taiKhoanNhan.SoDu);
             TaiKhoanNganHang tknhn = hhb.TaiKhoanNganHangs.Where(tknhn => tknhn.TenNh == tkNhan.TenNh && tknhn.SoTk == tkNhan.SoTk).SingleOrDefault();
             tknhn.SoDu = soTienNhan;
             hhb.SaveChanges();
 
-            TaiKhoanNganHang taiKhoanGui = tknhDAO.LayTaiKhoanNganHang(gd.SoTKGui, gd.NganHangGui);
+            TaiKhoanNganHang taiKhoanGui = tknhDAO.LayTaiKhoanNganHang(gd.SoTkgui, gd.NganHangGui);
             decimal soTienGui = (decimal)(taiKhoanGui.SoDu - gd.SoTien);
             TaiKhoanNganHang tknhg = hhb.TaiKhoanNganHangs.Where(tknhg => tknhn.TenNh == tkNhan.TenNh && tknhg.SoTk == tkNhan.SoTk).SingleOrDefault();
             tknhg.SoDu = soTienNhan;

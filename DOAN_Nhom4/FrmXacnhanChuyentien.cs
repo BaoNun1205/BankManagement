@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmXacnhanChuyentien : Form
     {
-        private GiaoDich gd;
+        private LichSuGiaoDich gd;
         private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoidung;
@@ -27,7 +27,7 @@ namespace DOAN_Nhom4
             this.txtMatkhau.PasswordChar = '*';
         }
 
-        public FrmXacnhanChuyentien(KhachHang kh, TaiKhoanNganHang tknh, GiaoDich gd, Panel pnlNguoidung)
+        public FrmXacnhanChuyentien(KhachHang kh, TaiKhoanNganHang tknh, LichSuGiaoDich gd, Panel pnlNguoidung)
         {
             InitializeComponent();
             this.txtMatkhau.PasswordChar = '*';
@@ -46,10 +46,10 @@ namespace DOAN_Nhom4
         {
             if (txtMatkhau.Text == tknh.MatKhau)
             {               
-                TaiKhoanNganHang tknhNhan = tknhDAO.LayTaiKhoanNganHang(gd.SoTKNhan, gd.NganHangNhan);
+                TaiKhoanNganHang tknhNhan = tknhDAO.LayTaiKhoanNganHang(gd.SoTknhan, gd.NganHangNhan);
                 chuyentienDAO.ChuyenTien(tknh, gd, tknhNhan);
                 lsgdDAO.Them(gd);
-                tknh = tknhDAO.LayTaiKhoanNganHang(gd.SoTKGui, gd.NganHangGui);
+                tknh = tknhDAO.LayTaiKhoanNganHang(gd.SoTkgui, gd.NganHangGui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoidung);
                 this.Hide();
                 frmThongbaoChuyentien.ShowDialog();

@@ -3,13 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
     internal class LichSuGiaoDichDAO
     {
+        NganHangHhbContext hhb = new NganHangHhbContext();
         DBConnection data = new DBConnection();
         public LichSuGiaoDichDAO() { }
 
@@ -19,10 +22,10 @@ namespace DOAN_Nhom4
                                        "FROM hr.LichSuGiaoDich");
             return data.LayDanhSach(sql);
         }
-        public void Them(GiaoDich gd)
+        public void Them(LichSuGiaoDich gd)
         {
-            string sqlGD = string.Format("INSERT INTO hr.LichSuGiaoDich(LoaiGD, NganHangGui, TenTKGui, SoTKGui, NganHangNhan, TenTKNhan, SoTKNhan, ThoiGian, SoTien, LoiNhan) OUTPUT INSERTED.MaGD VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', {8}, '{9}')",gd.LoaiGD, gd.NganHangGui, gd.TenTKGui, gd.SoTKGui, gd.NganHangNhan, gd.TenTKNhan, gd.SoTKNhan, DateTime.Now, gd.SoTien, gd.LoiNhan);
-            data.xuLi(sqlGD);
+            hhb.LichSuGiaoDiches.Add(gd);
+            hhb.SaveChanges();
         }
 
         public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)

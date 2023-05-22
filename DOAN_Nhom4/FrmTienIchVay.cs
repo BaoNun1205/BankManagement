@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            KHNoXau kh = KHNoXauDAO.IsNull(tknh);
+            KhachHangNoXau kh = KHNoXauDAO.IsNull(tknh);
             KhachHangVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung);
             if (kh == null) //kiem tra co no xau nao khong
             {
@@ -47,7 +47,7 @@ namespace DOAN_Nhom4
             }   
             else
             {
-                DateTime startDate = kh.NgayNo;
+                DateTime startDate = kh.NgayNo.Value;
                 DateTime endDate = DateTime.Now;
                 TimeSpan span = endDate - startDate;
                 double totalDays = span.TotalDays;
@@ -73,10 +73,10 @@ namespace DOAN_Nhom4
                 double totalDays = span.TotalDays;
                 if (totalDays > 90) //qua han thanh toan 3 thang => cap nhat no xau va xoa khoan vay
                 {
-                    KHNoXau kh = new KHNoXau();
-                    kh.TenNH = nguoiDung.TenNh;
-                    kh.SoTK = tknh.SoTk;
-                    kh.TenTK = nguoiDung.TenKh;
+                    KhachHangNoXau kh = new KhachHangNoXau();
+                    kh.TenNh = nguoiDung.TenNh;
+                    kh.SoTk = tknh.SoTk;
+                    kh.TenTk = nguoiDung.TenKh;
                     kh.Cccd = nguoiDung.Cccd;
                     kh.NgayNo = DateTime.Now;
                     if(KHNoXauDAO.IsNull(tknh) == null)

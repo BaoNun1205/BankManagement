@@ -61,7 +61,19 @@ namespace DOAN_Nhom4
                 {
                     ttNgDungDAO.Sua(ttNgDung);
                     tknhDAO.Sua(tknh);
-                    GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.SoTienHangThang.Value, "Thanh toan khoan vay");
+                    LichSuGiaoDich gd = new LichSuGiaoDich()
+                    {
+                        LoaiGd = "Thanh Toan Khoan Vay",
+                        NganHangGui = "HHB",
+                        TenTkgui = nguoiDung.TenKh,
+                        SoTkgui = nguoiDung.SoTk,
+                        NganHangNhan = "HHB",
+                        TenTknhan = "",
+                        SoTknhan = "",
+                        ThoiGian = DateTime.Now,
+                        SoTien = ttNgDung.SoTienHangThang,
+                        LoiNhan = "Thanh toan khoan vay"
+                    };
                     lsgdDAO.Them(gd);
                     MessageBox.Show("Hoàn tất thanh toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
@@ -76,7 +88,19 @@ namespace DOAN_Nhom4
             else
             {
                 tknhDAO.Sua(tknh);
-                GiaoDich gd = new GiaoDich("Thanh Toan Khoan Vay", "HHB", nguoiDung.TenKh, nguoiDung.SoTk, "HHB", "", "", ttNgDung.SoTienHangThang.Value, "Thanh toan khoan vay");
+                LichSuGiaoDich gd = new LichSuGiaoDich()
+                {
+                    LoaiGd = "Thanh Toan Khoan Vay",
+                    NganHangGui = "HHB",
+                    TenTkgui = nguoiDung.TenKh,
+                    SoTkgui = nguoiDung.SoTk,
+                    NganHangNhan = "HHB",
+                    TenTknhan = "",
+                    SoTknhan = "",
+                    ThoiGian = DateTime.Now,
+                    SoTien = ttNgDung.SoTienHangThang,
+                    LoiNhan = "Thanh toan khoan vay"
+                };
                 lsgdDAO.Them(gd);
                 ttNgDungDAO.Xoa(ttNgDung);
                 MessageBox.Show("Bạn đã thanh toán xong khoản vay", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

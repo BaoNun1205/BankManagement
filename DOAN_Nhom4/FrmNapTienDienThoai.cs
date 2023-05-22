@@ -153,19 +153,31 @@ namespace DOAN_Nhom4
             {
                 if (menhGia != 0)
                 {
-                    GiaoDich gd = new GiaoDich("Nap Tien Dien Thoai", loaiTaiKhoan, kh.TenKh, Stk, "So Dien Thoai", "So Dien Thoai", txtSoDienThoai.Text, menhGia, " ");
+                    LichSuGiaoDich gd = new LichSuGiaoDich()
+                    {
+                        LoaiGd = "Nap Tien Dien Thoai",
+                        NganHangGui = "HHB",
+                        TenTkgui = kh.TenKh,
+                        SoTkgui = Stk,
+                        NganHangNhan = "So Dien Thoai",
+                        TenTknhan = "",
+                        SoTknhan = txtSoDienThoai.Text,
+                        ThoiGian = DateTime.Now,
+                        SoTien = menhGia,
+                        LoiNhan = "Nap tien dien thoai"
+                    };
                     if (loaiTaiKhoan == "HHB" && tknh.SoDu < gd.SoTien)
                     {
                         MessageBox.Show("Số dư của bạn không đủ!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        if (gd.SoTKNhan == "")
+                        if (gd.SoTknhan == "")
                         {
-                            gd.SoTKNhan = kh.Sdt;
+                            gd.SoTknhan = kh.Sdt;
                         }
                         lsgdDAO.Them(gd);
-                        SoDienThoai sdt = sdtDAO.LaySoDienThoai(gd.SoTKNhan);
+                        SoDienThoai sdt = sdtDAO.LaySoDienThoai(gd.SoTknhan);
                         if (sdt != null)
                         {
                             sdtDAO.ThanhToanVienThong(sdt, gd);

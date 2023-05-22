@@ -89,18 +89,18 @@ namespace DOAN_Nhom4
             tttd.PhiPhat = 0;
         }
 
-        public void ThanhToanPhiTruocNgaySaoKe(TaiKhoanTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhiTruocNgaySaoKe(TaiKhoanTinDung tttd, LichSuGiaoDich gd)
         {
             tttd.SoTienDaSuDung = tttd.SoTienDaSuDung + gd.SoTien;
             Sua(tttd);
         }
-        public void ThanhToanPhiSauNgaySaoKe(TaiKhoanTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhiSauNgaySaoKe(TaiKhoanTinDung tttd, LichSuGiaoDich gd)
         {
             tttd.SoTienSuDungSau = tttd.SoTienSuDungSau + gd.SoTien;
             Sua(tttd);
         }
 
-        public void ThanhToanPhi(TaiKhoanTinDung tttd, GiaoDich gd)
+        public void ThanhToanPhi(TaiKhoanTinDung tttd, LichSuGiaoDich gd)
         {
             if (DateTime.Now > tttd.NgaySaoKe)
             {

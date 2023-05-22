@@ -43,7 +43,19 @@ namespace DOAN_Nhom4
         private void btn_XacNhanVay_Click(object sender, EventArgs e)
         {
             ngDungVay.Them(ttNgDung);
-            GiaoDich gd = new GiaoDich("Vay Tien", "HHB", "", "", "HHB", ttNgDung.HoTen, ttNgDung.SoTkvay, ttNgDung.SoTienVay.Value, "Vay no");
+            LichSuGiaoDich gd = new LichSuGiaoDich()
+            {
+                LoaiGd = "Vay Tien",
+                NganHangGui = "HHB",
+                SoTkgui = "",
+                TenTkgui = "",
+                NganHangNhan = "HHB",
+                TenTknhan = ttNgDung.HoTen,
+                SoTknhan = ttNgDung.SoTkvay,
+                ThoiGian = DateTime.Now,
+                SoTien = ttNgDung.SoTienVay,
+                LoiNhan = "Vay no"
+            };
             lsgdDAO.Them(gd);
             MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FrmTienIch frmTienIch = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);

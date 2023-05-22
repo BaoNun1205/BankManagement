@@ -49,12 +49,24 @@ namespace DOAN_Nhom4
         {
             if (tknh.SoDu >= Int64.Parse(lblHienThiTongSoTien.Text))
             {
-                GiaoDich gd = new GiaoDich("Tin Dung", tknh.TenNh, kh.TenKh, tknh.SoTk, "TinDung", tttd.HoTen, tttd.SoTktinDung, Int64.Parse(lblHienThiTongSoTien.Text), "Thanh toan tien tinh dung");
+                LichSuGiaoDich gd = new LichSuGiaoDich()
+                {
+                    LoaiGd = "Tin Dung",
+                    NganHangGui = "tknh.TenNh",
+                    SoTkgui = kh.TenKh,
+                    TenTkgui = tknh.SoTk,
+                    NganHangNhan = "HHB",
+                    TenTknhan = tttd.HoTen,
+                    SoTknhan = tttd.SoTktinDung,
+                    ThoiGian = DateTime.Now,
+                    SoTien = decimal.Parse(lblHienThiTongSoTien.Text),
+                    LoiNhan = "Thanh toan tien tinh dung"
+                };
                 lsgdDAO.Them(gd);
                 tknhDAO.RutTien(tknh, gd);
                 tttdDAO.CapNhatTinDungHangThang(tttd);
                 tttdDAO.Sua(tttd);
-                tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTKGui);
+                tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTkgui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();
