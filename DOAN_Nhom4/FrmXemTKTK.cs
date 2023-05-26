@@ -122,8 +122,7 @@ namespace DOAN_Nhom4
                         MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
                         Utility.addForm(frmxemtktk, pnlNguoidung);
-                    }
-                    
+                    } 
                 }
             }
         }

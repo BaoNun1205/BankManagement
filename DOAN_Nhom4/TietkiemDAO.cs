@@ -71,7 +71,7 @@ namespace DOAN_Nhom4
             }
         }
 
-        public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
+        /*public DataTable DanhSachTietKiem(TaiKhoanNganHang tknh)
         {
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("MaTietKiem", typeof(string));
@@ -95,6 +95,14 @@ namespace DOAN_Nhom4
             }
 
             return dataTable;
+        }*/
+
+        public List<object> DanhSachTietKiem(TaiKhoanNganHang tknh)
+        {
+            var danhSachTKTK = hhb.TaiKhoanTietKiems
+                                .Where(tk => tk.TenNh == tknh.TenNh && tk.SoTk == tknh.SoTk)
+                                .Select(tk => new { tk.MaTietKiem, tk.NgayDangKy, tk.TenTktk, tk.LoaiSo, tk.TienGoc, tk.KiHan, tk.LaiSuat, tk.TienLai, tk.TongTien });
+            return danhSachTKTK.ToList<object>();                          
         }
 
 
