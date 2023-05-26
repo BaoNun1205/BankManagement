@@ -39,7 +39,7 @@ namespace DOAN_Nhom4
             hhb.SaveChanges();
         }
 
-        public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
+        /*public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
         {
             DateTime fromDate = DateTime.Now.AddDays(-x);
 
@@ -63,9 +63,47 @@ namespace DOAN_Nhom4
             }
 
             return dataTable;
+        }*/
+
+        public List<object> LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
+        {
+            DateTime fromDate = DateTime.Now.AddDays(-x);
+
+            var danhSachGiaoDich = hhb.LichSuGiaoDiches
+                .Where(gd => gd.SoTknhan == kh.SoTk && gd.ThoiGian >= fromDate)
+                .Select(gd => new
+                {
+                    gd.MaGd,
+                    gd.LoaiGd,
+                    gd.ThoiGian,
+                    gd.NganHangGui,
+                    gd.SoTkgui,
+                    gd.SoTien,
+                    gd.LoiNhan
+                })
+                .ToList();
+
+            List<object> danhSachGiaoDichObj = new List<object>();
+
+            foreach (var giaoDich in danhSachGiaoDich)
+            {
+                danhSachGiaoDichObj.Add(new
+                {
+                    MaGD = giaoDich.MaGd,
+                    LoaiGD = giaoDich.LoaiGd,
+                    ThoiGian = giaoDich.ThoiGian,
+                    NganHangGui = giaoDich.NganHangGui,
+                    SoTKGui = giaoDich.SoTkgui,
+                    SoTien = giaoDich.SoTien,
+                    LoiNhan = giaoDich.LoiNhan
+                });
+            }
+
+            return danhSachGiaoDichObj;
         }
 
-        public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
+
+        /*public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
         {
             DateTime fromDate = DateTime.Now.AddDays(-x);
 
@@ -89,7 +127,45 @@ namespace DOAN_Nhom4
             }
 
             return dataTable;
+        }*/
+
+        public List<object> LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
+        {
+            DateTime fromDate = DateTime.Now.AddDays(-x);
+
+            var danhSachGiaoDich = hhb.LichSuGiaoDiches
+                .Where(gd => gd.SoTkgui == kh.SoTk && gd.ThoiGian >= fromDate)
+                .Select(gd => new
+                {
+                    gd.MaGd,
+                    gd.LoaiGd,
+                    gd.ThoiGian,
+                    gd.NganHangNhan,
+                    gd.SoTknhan,
+                    gd.SoTien,
+                    gd.LoiNhan
+                })
+                .ToList();
+
+            List<object> danhSachGiaoDichObj = new List<object>();
+
+            foreach (var giaoDich in danhSachGiaoDich)
+            {
+                danhSachGiaoDichObj.Add(new
+                {
+                    MaGD = giaoDich.MaGd,
+                    LoaiGD = giaoDich.LoaiGd,
+                    ThoiGian = giaoDich.ThoiGian,
+                    NganHangNhan = giaoDich.NganHangNhan,
+                    SoTKNhan = giaoDich.SoTknhan,
+                    SoTien = giaoDich.SoTien,
+                    LoiNhan = giaoDich.LoiNhan
+                });
+            }
+
+            return danhSachGiaoDichObj;
         }
+
 
         public void XuatExcel()
         {
