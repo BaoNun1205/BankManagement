@@ -49,7 +49,7 @@ namespace DOAN_Nhom4
             lblSoTk.Text = kh.SoTk.ToString();
             lblSoDuValue.Text = tknh.SoDu?.ToString("N0") + " VNĐ";
             txtCCCD.Text = kh.Cccd.ToString();
-            txtNgaysinh.Text = kh.NgaySinh?.ToString();
+            txtNgaysinh.Text = kh.NgaySinh?.ToString("dd/MM/yyyy");
             txtSDT.Text = kh.Sdt.ToString();
         }
 
