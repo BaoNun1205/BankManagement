@@ -21,7 +21,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && (ls == null || (ls.NganHangGui == nganHang && ls.SoTkgui == soTK))
@@ -59,7 +59,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && (ls == null || (ls.NganHangNhan == nganHang && ls.SoTknhan == soTK))
@@ -97,7 +97,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && ((ls == null || (ls.NganHangGui == nganHang && ls.SoTkgui == soTK))
@@ -137,7 +137,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && (ls.LoaiGd == s)
@@ -176,7 +176,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && (ls.LoaiGd == s)
@@ -215,7 +215,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && (ls.LoaiGd == s)
@@ -255,7 +255,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && ls.LoaiGd == giaTriThuNhat && ls.LoaiGd == giaTriThuHai
@@ -295,7 +295,7 @@ namespace DOAN_Nhom4
                                       .Select(offset => DateTime.Parse(ngayBatDau).AddDays(offset));
 
             var thongKeTienGui = from d in dateRange
-                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
+                                 join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian?.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
                                        && ls.LoaiGd == giaTriThuNhat && ls.LoaiGd == giaTriThuHai
