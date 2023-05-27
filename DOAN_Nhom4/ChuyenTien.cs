@@ -33,9 +33,9 @@ namespace DOAN_Nhom4
             tk = tknhDAO.LayTaiKhoanNganHang(txtSoTKChuyen.Text, "HHB");
             if (ngDung != null)
             {
-                txtTenTKChuyen.Text = ngDung.TenKh.ToString();
-                txtCCCD.Text = ngDung.Cccd.ToString();
-                txtSDT.Text = ngDung.Sdt.ToString();
+                txtTenTKChuyen.Text = ngDung.TenKh?.ToString();
+                txtCCCD.Text = ngDung.Cccd?.ToString();
+                txtSDT.Text = ngDung.Sdt?.ToString();
                 lblSoDu.Text = tk.SoDu?.ToString("N0") + " VNĐ";
             }
             else
@@ -53,7 +53,7 @@ namespace DOAN_Nhom4
             ngDungNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
             if (ngDungNhan != null)
             {
-                txtTenTKNhan.Text = ngDungNhan.TenKh.ToString();
+                txtTenTKNhan.Text = ngDungNhan.TenKh?.ToString();
             }
             else
             {
