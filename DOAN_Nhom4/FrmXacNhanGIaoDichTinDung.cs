@@ -38,11 +38,11 @@ namespace DOAN_Nhom4
         {
             lblHienThiTKNguon.Text = tknh.SoTk;
             lblHienThiTKTinDung.Text = tttd.SoTktinDung;
-            lblHienThiTienDaSuDung.Text = tttd.SoTienDaSuDung.ToString();
+            lblHienThiTienDaSuDung.Text = tttd.SoTienDaSuDung.Value.ToString("0");
             txt_NgayGiaoDich.Value = DateTime.Now;
-            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.ToString();
-            lblHienThiPhiPhat.Text = tttd.PhiPhat.ToString();
-            lblHienThiTongSoTien.Text = (tttd.PhiTraCham + tttd.PhiPhat + tttd.SoTienDaSuDung).ToString();
+            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.Value.ToString("0");
+            lblHienThiPhiPhat.Text = tttd.PhiPhat.Value.ToString("0");
+            lblHienThiTongSoTien.Text = (tttd.PhiTraCham + tttd.PhiPhat + tttd.SoTienDaSuDung).Value.ToString("0");
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)

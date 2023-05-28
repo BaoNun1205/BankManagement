@@ -63,7 +63,7 @@ namespace DOAN_Nhom4
 
         public decimal PhiTraCham(TaiKhoanTinDung tttd)
         {
-            decimal tienLaiSuat = decimal.Parse(tttd.LaiSuat ?? "0") / 100 / 12;
+            decimal tienLaiSuat = decimal.Parse(tttd.LaiSuat) / 100 / 12;
             decimal tienDaSuDung = (tttd.SoTienDaSuDung ?? 0);
             return tienDaSuDung * tienLaiSuat;
         }
