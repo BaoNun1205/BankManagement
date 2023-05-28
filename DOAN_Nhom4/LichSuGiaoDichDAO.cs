@@ -110,7 +110,7 @@ namespace DOAN_Nhom4
                     for (int col = 0; col < columnNames.Count; col++)
                     {
                         // Lấy giá trị của thuộc tính tương ứng trong dữ liệu
-                        var propertyValue = data[row].GetType().GetProperty(columnNames[col]).GetValue(data[row]);
+                        var propertyValue = data[row]?.GetType()?.GetProperty(columnNames[col])?.GetValue(data[row]);
                         worksheet.Cells[row + 2, col + 1].Value = propertyValue?.ToString();
                     }
                 }

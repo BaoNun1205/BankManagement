@@ -51,7 +51,7 @@ namespace DOAN_Nhom4
             return true;
         }
 
-        public TaiKhoanNganHang LayTaiKhoanNganHang(string GTSoTK, string GTTenNH)
+        public TaiKhoanNganHang? LayTaiKhoanNganHang(string? GTSoTK, string? GTTenNH)
         {
               return hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == GTTenNH && tknh.SoTk == GTSoTK).SingleOrDefault(); 
         }
