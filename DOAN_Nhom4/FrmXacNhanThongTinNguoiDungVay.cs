@@ -89,7 +89,7 @@ namespace DOAN_Nhom4
             txtNgheNghiep.Text = ttNgDung.NgheNghiep;
             txtThuNhap.Text = ttNgDung.ThuNhap;
             txtSPVay.Text = ttNgDung.Spvay;
-            txtSoTienVay.Text = ttNgDung.SoTienVay.Value.ToString("N0") + " VNĐ";
+            txtSoTienVay.Text = ttNgDung.SoTienVay?.ToString("N0") + " VNĐ";
             txtThoiGianVay.Text = ttNgDung.ThoiGianVay.ToString();
             txtKhoanVay.Text = ttNgDung.LoaiKhoanVay;
             txtLaiSuat.Text = lai.ToString();
