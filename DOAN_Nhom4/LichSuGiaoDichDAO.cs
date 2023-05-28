@@ -7,6 +7,8 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeOpenXml;
+using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
@@ -169,8 +171,50 @@ namespace DOAN_Nhom4
 
         public void XuatExcel()
         {
-            string sql = string.Format("SELECT * FROM hr.LichSuGiaoDich");
-            data.XuatExcel(sql);
+            // Sử dụng LINQ để truy vấn và lấy dữ liệu từ nguồn dữ liệu
+            var data = hhb.LichSuGiaoDiches.ToList();
+
+            // Tạo một đối tượng ExcelPackage mới
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                // Tạo một worksheet mới và thiết lập tên cho nó
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("MyWorksheet");
+
+                // Lấy danh sách tên cột từ danh sách thuộc tính của đối tượng
+                var columnNames = typeof(LichSuGiaoDich).GetProperties().Select(property => property.Name).ToList();
+
+                // Thiết lập cột tiêu đề cho worksheet
+                for (int i = 0; i < columnNames.Count; i++)
+                {
+                    worksheet.Cells[1, i + 1].Value = columnNames[i];
+                }
+
+                // Thiết lập dữ liệu cho worksheet
+                for (int row = 0; row < data.Count; row++)
+                {
+                    for (int col = 0; col < columnNames.Count; col++)
+                    {
+                        // Lấy giá trị của thuộc tính tương ứng trong dữ liệu
+                        var propertyValue = data[row].GetType().GetProperty(columnNames[col]).GetValue(data[row]);
+                        worksheet.Cells[row + 2, col + 1].Value = propertyValue?.ToString();
+                    }
+                }
+
+                // Khởi tạo hộp thoại lưu tập tin
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "Excel Workbook (*.xlsx)|*.xlsx";
+                saveFileDialog1.Title = "Save Excel File";
+
+                // Hiển thị hộp thoại lưu tập tin và kiểm tra kết quả
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    // Lưu workbook vào đường dẫn đã chọn
+                    FileInfo file = new FileInfo(saveFileDialog1.FileName);
+                    excelPackage.SaveAs(file);
+                    MessageBox.Show("Xác nhận thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
         }
     }
 }
