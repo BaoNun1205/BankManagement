@@ -37,19 +37,22 @@ namespace DOAN_Nhom4
         private void FrmThongTinTaiKhoangTinDung_Load(object sender, EventArgs e)
         {
             lblHienThiSoTK.Text = tttd.SoTktinDung.ToString();
-            lblHienThiLoaiThe.Text = tttd.LoaiThe.ToString();
-            lblHienThiHanThanhToan.Text = tttd.HanThanhToan.Value.ToString("dd/MM/yyyy");
-            lblHienThiNgaySaoKe.Text = tttd.NgaySaoKe.Value.ToString("dd/MM/yyyy");
-            lblHienThiHanMuc.Text = tttd.HanMuc.Value.ToString("N0");
-            lblHienThiLaiSuat.Text = tttd.LaiSuat.ToString() + '%';
-            lblHienThiSoTienDaSuDung.Text = tttd.SoTienDaSuDung.Value.ToString("N0");
-            lblHienThiSoTienSuDungSau.Text = tttd.SoTienSuDungSau.Value.ToString("N0");
+            lblHienThiLoaiThe.Text = (tttd.LoaiThe ?? "0").ToString();
+            if (tttd.HanThanhToan.HasValue && tttd.NgaySaoKe.HasValue) 
+            {
+                lblHienThiHanThanhToan.Text = tttd.HanThanhToan.Value.ToString("dd/MM/yyyy");
+                lblHienThiNgaySaoKe.Text = tttd.NgaySaoKe.Value.ToString("dd/MM/yyyy");
+            }
+            lblHienThiHanMuc.Text = (tttd.HanMuc ?? 0).ToString("N0");
+            lblHienThiLaiSuat.Text = (tttd.LaiSuat ?? "0").ToString() + '%';
+            lblHienThiSoTienDaSuDung.Text = (tttd.SoTienDaSuDung ?? 0).ToString("N0");
+            lblHienThiSoTienSuDungSau.Text = (tttd.SoTienSuDungSau ?? 0).ToString("N0");
             if (tttdDAO.IsNgayDenHan(tttd))
             {
                 CapNhatPhi();
             }
-            lblHienThiPhiTraCham.Text = tttd.PhiTraCham.Value.ToString("N0");
-            lblHienThiPhiPhat.Text = tttd.PhiPhat.Value.ToString("N0");
+            lblHienThiPhiTraCham.Text = (tttd.PhiTraCham ?? 0).ToString("N0");
+            lblHienThiPhiPhat.Text = (tttd.PhiPhat ?? 0).ToString("N0");
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
