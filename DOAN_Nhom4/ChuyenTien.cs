@@ -136,6 +136,7 @@ namespace DOAN_Nhom4
                             txtLoiNhan.Text = "";
                             lblSoDu.Text = "-";
                             MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         }
                         else
                             MessageBox.Show("Số tiền không hợp lệ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
