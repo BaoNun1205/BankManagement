@@ -54,7 +54,7 @@ namespace DOAN_Nhom4
        
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(nguoiDung, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu();
             Utility.addForm(frmtrangchu, pnlNguoidung);
         }
 
@@ -124,11 +124,11 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTin()
         {
-            KhachHang ngDung = new KhachHang();
+            KhachHang? ngDung = new KhachHang();
             TaiKhoanNganHang? tk = new TaiKhoanNganHang();
             ngDung = khDAO.LayKhachHang(txtSTK.Text, cbTenNH.Text);
             tk = tknhDAO.LayTaiKhoanNganHang(txtSTK.Text, cbTenNH.Text);
-            if (tk != null)
+            if (tk != null && ngDung != null)
             {
                 kt = KiemTraTenNguoiNhan.hople;
                 txtTennguoinhan.Text = ngDung.TenKh?.ToString();

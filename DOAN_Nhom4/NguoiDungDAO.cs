@@ -45,22 +45,28 @@ namespace DOAN_Nhom4
 
         public void Xoa(KhachHang kh)
         {
-            KhachHang khachHang = hhb.KhachHangs.Where(khachHang => khachHang.SoTk == kh.SoTk && khachHang.TenNh == kh.TenNh).SingleOrDefault();
-            hhb.Remove(khachHang);
-            hhb.SaveChanges();
+            KhachHang? khachHang = hhb.KhachHangs.Where(khachHang => khachHang.SoTk == kh.SoTk && khachHang.TenNh == kh.TenNh).SingleOrDefault();
+            if (khachHang != null )
+            {
+                hhb.Remove(khachHang);
+                hhb.SaveChanges();
+            }
         }
         public void Sua(KhachHang kh)
         {
-            KhachHang khachHang = hhb.KhachHangs.Where(khachHang => khachHang.SoTk == kh.SoTk && khachHang.TenNh == kh.TenNh).SingleOrDefault();
-            khachHang.NgaySinh = kh.NgaySinh;
-            khachHang.Cccd = kh.Cccd;
-            khachHang.Sdt = kh.Sdt;
-            khachHang.Email = kh.Email;
-            khachHang.TenKh = kh.TenKh;
-            hhb.SaveChanges();
+            KhachHang? khachHang = hhb.KhachHangs.Where(khachHang => khachHang.SoTk == kh.SoTk && khachHang.TenNh == kh.TenNh).SingleOrDefault();
+            if (khachHang != null)
+            {
+                khachHang.NgaySinh = kh.NgaySinh;
+                khachHang.Cccd = kh.Cccd;
+                khachHang.Sdt = kh.Sdt;
+                khachHang.Email = kh.Email;
+                khachHang.TenKh = kh.TenKh;
+                hhb.SaveChanges();
+            }
         }
 
-        public KhachHang LayKhachHang(string giaTriDau, string giaTriCuoi)
+        public KhachHang? LayKhachHang(string giaTriDau, string giaTriCuoi)
         {
             return hhb.KhachHangs.Where(kh => kh.SoTk == giaTriDau && kh.TenNh == giaTriCuoi).SingleOrDefault();
         }

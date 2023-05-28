@@ -15,7 +15,6 @@ namespace DOAN_Nhom4
     {
         public KhachHang kh;
         public TaiKhoanNganHang tknh;
-        private TaiKhoanTinDung tttd;
         private ThongTinTinDungDAO tktdDAO = new ThongTinTinDungDAO();
         private TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
 
@@ -45,29 +44,30 @@ namespace DOAN_Nhom4
 
         private void HienThiTheNganHang()
         {
-            txtChutaikhoan.Text = kh.TenKh.ToString();
+            txtChutaikhoan.Text = kh.TenKh?.ToString();
             lblSoTk.Text = kh.SoTk.ToString();
             lblSoDuValue.Text = tknh.SoDu?.ToString("N0") + " VNĐ";
-            txtCCCD.Text = kh.Cccd.ToString();
+            txtCCCD.Text = kh.Cccd?.ToString();
             txtNgaysinh.Text = kh.NgaySinh?.ToString("dd/MM/yyyy");
-            txtSDT.Text = kh.Sdt.ToString();
+            txtSDT.Text = kh.Sdt?.ToString();
         }
 
         private void HienThiTheTinDung()
         {
-            tttd = tktdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
-            if (tttd != null)
+            TaiKhoanTinDung? tktd = new TaiKhoanTinDung();
+            tktd = tktdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
+            if (tktd != null)
             {
                 // Hien thi thong tin cua the tin dung
-                lblSoTKTinDung.Text = tttd.SoTktinDung.ToString();
-                lblHanmuc.Text = tttd.HanMuc.ToString() + "VNĐ";
-                
+                lblSoTKTinDung.Text = tktd.SoTktinDung.ToString();
+                lblHanmuc.Text = tktd.HanMuc.ToString() + "VNĐ";
+
                 //kiem tra dieu kien han muc cua the de in ra loai the phu hop
-                if (tttd.HanMuc >= 300000000)
+                if (tktd.HanMuc >= 300000000)
                 {
                     ptbTheTinDung.Image = images[2];
                 }
-                else if (tttd.HanMuc >= 80000000)
+                else if (tktd.HanMuc >= 80000000)
                 {
                     ptbTheTinDung.Image = images[1];
                 }

@@ -47,11 +47,11 @@ namespace DOAN_Nhom4
             hhb.Remove(tktd);
             hhb.SaveChanges();
         }
-        public TaiKhoanTinDung LayThongTinTinDungBangCccd(string giaTri)
+        public TaiKhoanTinDung? LayThongTinTinDungBangCccd(string? giaTri)
         {
             return hhb.TaiKhoanTinDungs.Where(tktd => tktd.Cccd == giaTri).FirstOrDefault();
         }
-        public TaiKhoanTinDung LayThongTinTinDungBangStk(string giaTri)
+        public TaiKhoanTinDung? LayThongTinTinDungBangStk(string? giaTri)
         {
             return hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == giaTri).FirstOrDefault();
         }

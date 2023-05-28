@@ -33,7 +33,7 @@ namespace DOAN_Nhom4
             InitializeComponent();         
             this.kh = kh;
             this.tknh = tknh;
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
+            FrmTrangchu frmtrangchu = new FrmTrangchu();
             Utility.addForm(frmtrangchu, pnlNguoidung);
         }
 
@@ -56,7 +56,7 @@ namespace DOAN_Nhom4
 
         private void pbTrangChu_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh, pnlNguoidung);
+            FrmTrangchu frmtrangchu = new FrmTrangchu();
             Utility.addForm(frmtrangchu, pnlNguoidung);
         }
 

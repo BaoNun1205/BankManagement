@@ -31,7 +31,7 @@ namespace DOAN_Nhom4
 
         private void pbTrangChu_Click(object sender, EventArgs e)
         {
-            FrmTrangchu frmtrangchu = new FrmTrangchu(kh, tknh);
+            FrmTrangchu frmtrangchu = new FrmTrangchu();
             this.Hide();
             frmtrangchu.ShowDialog();
             this.Close();

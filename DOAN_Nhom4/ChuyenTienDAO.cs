@@ -10,7 +10,6 @@ namespace DOAN_Nhom4
     internal class ChuyenTienDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
 
         public ChuyenTienDAO() { }
