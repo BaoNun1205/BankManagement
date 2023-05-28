@@ -25,16 +25,16 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTin()
         {
-            KhachHang ngDung = new KhachHang();
-            TaiKhoanNganHang tk = new TaiKhoanNganHang();
+            KhachHang? ngDung = new KhachHang();
+            TaiKhoanNganHang? tk = new TaiKhoanNganHang();
             ngDung = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
             tk = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
-            if (ngDung != null)
+            if (ngDung != null && tk != null)
             {
-                txtTenTK.Text = ngDung.TenKh.ToString();
-                txtCCCD.Text = ngDung.Cccd.ToString();
-                txtSDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.Value.ToString("N0") + " VNĐ";
+                txtTenTK.Text = ngDung.TenKh?.ToString();
+                txtCCCD.Text = ngDung.Cccd?.ToString();
+                txtSDT.Text = ngDung.Sdt?.ToString();
+                lblSoDu.Text = (tk.SoDu ?? 0).ToString("N0") + " VNĐ";
             }
             else
             {
@@ -47,9 +47,9 @@ namespace DOAN_Nhom4
 
         private void btn_NapTien_Click(object sender, EventArgs e)
         {
-            TaiKhoanNganHang tkNap = new TaiKhoanNganHang();
+            TaiKhoanNganHang? tkNap = new TaiKhoanNganHang();
             tkNap = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
-            KhachHang ndNap = new KhachHang();
+            KhachHang? ndNap = new KhachHang();
             ndNap = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
             LichSuGiaoDich gd = new LichSuGiaoDich()
             {
@@ -57,9 +57,9 @@ namespace DOAN_Nhom4
                 NganHangGui = "Tien Mat",
                 TenTkgui = "",
                 SoTkgui = "",
-                NganHangNhan = tkNap.TenNh,
-                TenTknhan = ndNap.TenKh,
-                SoTknhan = tkNap.SoTk,
+                NganHangNhan = tkNap?.TenNh,
+                TenTknhan = ndNap?.TenKh,
+                SoTknhan = tkNap?.SoTk,
                 SoTien = decimal.Parse(txtSoTien.Text),
                 LoiNhan = "Nap tien vao tai khoan"
             };

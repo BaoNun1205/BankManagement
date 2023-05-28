@@ -25,16 +25,16 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTin()
         {
-            KhachHang ngDung = new KhachHang();
-            TaiKhoanNganHang tk = new TaiKhoanNganHang();
+            KhachHang? ngDung = new KhachHang();
+            TaiKhoanNganHang? tk = new TaiKhoanNganHang();
             ngDung = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
             tk = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
-            if (ngDung != null)
+            if (ngDung != null && tk != null)
             {
-                txtTenTK.Text = ngDung.TenKh.ToString();
-                txtCCCD.Text = ngDung.Cccd.ToString();
-                txtSDT.Text = ngDung.Sdt.ToString();
-                lblSoDu.Text = tk.SoDu.Value.ToString("N0") + " VNĐ";
+                txtTenTK.Text = ngDung.TenKh?.ToString();
+                txtCCCD.Text = ngDung.Cccd?.ToString();
+                txtSDT.Text = ngDung.Sdt?.ToString();
+                lblSoDu.Text = (tk.SoDu ?? 0).ToString("N0") + " VNĐ";
             }
             else
             {
@@ -52,16 +52,16 @@ namespace DOAN_Nhom4
 
         private void btn_RutTien_Click(object sender, EventArgs e)
         {
-            TaiKhoanNganHang tkRut = new TaiKhoanNganHang();
+            TaiKhoanNganHang? tkRut = new TaiKhoanNganHang();
             tkRut = tknhDAO.LayTaiKhoanNganHang(txtSoTK.Text, "HHB");
-            KhachHang ndRut = new KhachHang();
+            KhachHang? ndRut = new KhachHang();
             ndRut = ndDAO.LayKhachHang(txtSoTK.Text, "HHB");
             LichSuGiaoDich gd = new LichSuGiaoDich()
             {
                 LoaiGd = "Rut Tien",
-                NganHangGui = tkRut.TenNh,
-                TenTkgui = ndRut.TenKh,
-                SoTkgui = tkRut.SoTk,
+                NganHangGui = tkRut?.TenNh,
+                TenTkgui = ndRut?.TenKh,
+                SoTkgui = tkRut?.SoTk,
                 NganHangNhan = "Tien Mat",
                 TenTknhan = "",
                 SoTknhan = "",
