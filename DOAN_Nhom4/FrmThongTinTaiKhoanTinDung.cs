@@ -13,19 +13,19 @@ using System.Windows.Forms;
 
 namespace DOAN_Nhom4
 {
-    public partial class FrmThongTinNguoiDungTinDung : Form
+    public partial class FrmThongTinTaiKhoanTinDung : Form
     {
         private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
         private TaiKhoanTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
-        public FrmThongTinNguoiDungTinDung()
+        public FrmThongTinTaiKhoanTinDung()
         {
             InitializeComponent();
         }
 
-        public FrmThongTinNguoiDungTinDung(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, TaiKhoanTinDung tttd)
+        public FrmThongTinTaiKhoanTinDung(KhachHang kh, TaiKhoanNganHang tknh, Panel pnlNguoiDung, TaiKhoanTinDung tttd)
         {
             InitializeComponent();
             this.kh = kh;

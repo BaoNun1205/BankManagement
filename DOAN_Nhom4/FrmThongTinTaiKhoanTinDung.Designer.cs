@@ -1,6 +1,6 @@
 ﻿namespace DOAN_Nhom4
 {
-    partial class FrmThongTinNguoiDungTinDung
+    partial class FrmThongTinTaiKhoanTinDung
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinNguoiDungTinDung));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinTaiKhoanTinDung));
             this.btnHuyBo = new CustomButton.VBButton();
             this.btnThanhToan = new CustomButton.VBButton();
             this.lblPhiTraCham = new System.Windows.Forms.Label();
@@ -360,7 +360,7 @@
             this.lblSoTienSuDungSau.TabIndex = 115;
             this.lblSoTienSuDungSau.Text = "Số tiền sử dụng sau";
             // 
-            // lblNgaySaoKe
+            // FrmThongTinTaiKhoanTinDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -390,7 +390,7 @@
             this.Controls.Add(this.lblNgayDaoHan);
             this.Controls.Add(this.btnTaiKhoanVay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "lblNgaySaoKe";
+            this.Name = "FrmThongTinTaiKhoanTinDung";
             this.Text = "FrmThongTinTaiKhoangTinDung";
             this.Load += new System.EventHandler(this.FrmThongTinTaiKhoangTinDung_Load);
             this.ResumeLayout(false);
