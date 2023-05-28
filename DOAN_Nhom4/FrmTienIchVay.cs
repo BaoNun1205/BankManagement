@@ -19,6 +19,7 @@ namespace DOAN_Nhom4
         private Panel pnlNguoiDung;
         ThongTinNguoiDungVayDAO ttNgDungDAO = new ThongTinNguoiDungVayDAO();
         KHNoXauDAO KHNoXauDAO = new KHNoXauDAO();
+        DateTime startDate = new DateTime();
         public FrmTienIchVay()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace DOAN_Nhom4
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             KhachHangNoXau kh = KHNoXauDAO.IsNull(tknh);
-            KhachHangVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung);
+            KhachHangVay? ttNgDung = ttNgDungDAO.TKValid(nguoiDung);
             if (kh == null) //kiem tra co no xau nao khong
             {
                 if (ttNgDung == null) //kiem tra co khoan vay nao khong
@@ -47,7 +48,8 @@ namespace DOAN_Nhom4
             }   
             else
             {
-                DateTime startDate = kh.NgayNo.Value;
+
+                if (kh.NgayNo.HasValue) startDate = kh.NgayNo.Value;
                 DateTime endDate = DateTime.Now;
                 TimeSpan span = endDate - startDate;
                 double totalDays = span.TotalDays;
@@ -64,10 +66,10 @@ namespace DOAN_Nhom4
 
         private void btn_XemKhoanVay_Click(object sender, EventArgs e)
         {
-            KhachHangVay ttNgDung = ttNgDungDAO.TKValid(nguoiDung);           
+            KhachHangVay? ttNgDung = ttNgDungDAO.TKValid(nguoiDung);           
             if (ttNgDung != null) //kiem tra xem co khoan vay hay chua
             {
-                DateTime startDate = ttNgDung.NgayDenHan.Value;
+                if (ttNgDung.NgayDenHan.HasValue) startDate = ttNgDung.NgayDenHan.Value;
                 DateTime endDate = DateTime.Now;
                 TimeSpan span = endDate - startDate;
                 double totalDays = span.TotalDays;

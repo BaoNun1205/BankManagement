@@ -49,7 +49,10 @@ namespace DOAN_Nhom4
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
             decimal sotienlai = decimal.Parse(lblHienThiLai.Text, NumberStyles.AllowThousands);
-            ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.Value.AddMonths(1);
+            if (ttNgDung.NgayDenHan.HasValue)
+            {
+                ttNgDung.NgayDenHan = ttNgDung.NgayDenHan.Value.AddMonths(1);
+            }            
             ttNgDung.TongSoTienPhaiTra -= (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham);
             ttNgDung.ThoiGianVay -= 1;
             ttNgDung.SoTienVay = ttNgDung.SoTienVay - (ttNgDung.SoTienHangThang - sotienlai);
@@ -113,11 +116,11 @@ namespace DOAN_Nhom4
         {
             lblHienThiTKNguon.Text = nguoiDung.SoTk;
             lblHienThiTKVay.Text = nguoiDung.SoTk;
-            decimal tmp = ttNgDung.SoTienVay.Value / ttNgDung.ThoiGianVay.Value;
+            decimal tmp = (ttNgDung.SoTienVay ?? 0) / (ttNgDung.ThoiGianVay ?? 0);
             lblHienThiNoGoc.Text = tmp.ToString("N0");
-            lblHienThiLai.Text = (ttNgDung.SoTienHangThang - tmp).Value.ToString("N0");
-            lblHienThiTraCham.Text = ttNgDung.PhiTraCham.Value.ToString("N0");
-            lblHienThiTong.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham).Value.ToString("N0");
+            lblHienThiLai.Text = ((ttNgDung.SoTienHangThang ?? 0) - tmp).ToString("N0");
+            lblHienThiTraCham.Text = (ttNgDung.PhiTraCham ?? 0).ToString("N0");
+            lblHienThiTong.Text = (ttNgDung.SoTienHangThang + ttNgDung.PhiTraCham ?? 0).ToString("N0");
             txtNgayGiaoDich.Value = DateTime.Now;
         }
     }

@@ -23,64 +23,73 @@ namespace DOAN_Nhom4
         }
         public void Sua(KhachHangVay ttNgDung)
         {
-            KhachHangVay tmp = hhb.KhachHangVays.Where(tmp => tmp.SoTkvay == ttNgDung.SoTkvay).FirstOrDefault();
-            tmp.SoTkvay = ttNgDung.SoTkvay;
-            tmp.HoTen = ttNgDung.HoTen;
-            tmp.Cccd = ttNgDung.Cccd;
-            tmp.DiaChi = ttNgDung.DiaChi;
-            tmp.Sdt = ttNgDung.Sdt;
-            tmp.Email = ttNgDung.Email;
-            tmp.NgheNghiep = ttNgDung.NgheNghiep;
-            tmp.ThuNhap = ttNgDung.ThuNhap;
-            tmp.Spvay = ttNgDung.Spvay;
-            tmp.SoTienVay = ttNgDung.SoTienVay;
-            tmp.ThoiGianVay = ttNgDung.ThoiGianVay;
-            tmp.TaiSanTheChap = ttNgDung.TaiSanTheChap;
-            tmp.GiaTriTaiSan = ttNgDung.GiaTriTaiSan;
-            tmp.ChiNhanhVay = ttNgDung.ChiNhanhVay;
-            tmp.NgayVay = ttNgDung.NgayVay;
-            tmp.LaiSuat = ttNgDung.LaiSuat;
-            tmp.SoTienHangThang = ttNgDung.SoTienHangThang;
-            tmp.NgayDenHan = ttNgDung.NgayDenHan;
-            tmp.TongSoTienPhaiTra = ttNgDung.TongSoTienPhaiTra;
-            tmp.PhiTraCham = ttNgDung.PhiTraCham;
-            hhb.SaveChanges();
+            KhachHangVay? tmp = hhb.KhachHangVays.Where(tmp => tmp.SoTkvay == ttNgDung.SoTkvay).FirstOrDefault();
+            if (tmp != null)
+            {
+                tmp.SoTkvay = ttNgDung.SoTkvay;
+                tmp.HoTen = ttNgDung.HoTen;
+                tmp.Cccd = ttNgDung.Cccd;
+                tmp.DiaChi = ttNgDung.DiaChi;
+                tmp.Sdt = ttNgDung.Sdt;
+                tmp.Email = ttNgDung.Email;
+                tmp.NgheNghiep = ttNgDung.NgheNghiep;
+                tmp.ThuNhap = ttNgDung.ThuNhap;
+                tmp.Spvay = ttNgDung.Spvay;
+                tmp.SoTienVay = ttNgDung.SoTienVay;
+                tmp.ThoiGianVay = ttNgDung.ThoiGianVay;
+                tmp.TaiSanTheChap = ttNgDung.TaiSanTheChap;
+                tmp.GiaTriTaiSan = ttNgDung.GiaTriTaiSan;
+                tmp.ChiNhanhVay = ttNgDung.ChiNhanhVay;
+                tmp.NgayVay = ttNgDung.NgayVay;
+                tmp.LaiSuat = ttNgDung.LaiSuat;
+                tmp.SoTienHangThang = ttNgDung.SoTienHangThang;
+                tmp.NgayDenHan = ttNgDung.NgayDenHan;
+                tmp.TongSoTienPhaiTra = ttNgDung.TongSoTienPhaiTra;
+                tmp.PhiTraCham = ttNgDung.PhiTraCham;
+                hhb.SaveChanges();
+            }    
         }
         public void Xoa(KhachHangVay ttNgDung)
         {
-            KhachHangVay tmp = hhb.KhachHangVays.Where(tmp => tmp.SoTkvay == ttNgDung.SoTkvay).FirstOrDefault();
-            hhb.Remove(tmp);
-            hhb.SaveChanges();
+            KhachHangVay? tmp = hhb.KhachHangVays.Where(tmp => tmp.SoTkvay == ttNgDung.SoTkvay).FirstOrDefault();
+            if (tmp != null)
+            {
+                hhb.Remove(tmp);
+                hhb.SaveChanges();
+            }
         }
-        public KhachHangVay TKValid(KhachHang ngdung)
+        public KhachHangVay? TKValid(KhachHang ngdung)
         {
             return hhb.KhachHangVays.Where(tmp => tmp.SoTkvay == ngdung.SoTk).FirstOrDefault();
         }     
         public Decimal TienHangThang(KhachHangVay ttNgDung)
         {
-            double soTienVay = double.Parse(ttNgDung.SoTienVay.ToString());
-            double laithang = double.Parse(ttNgDung.LaiSuat) / 1200;
-            double number = Math.Pow((1 + laithang), int.Parse(ttNgDung.ThoiGianVay.ToString()));
+            double soTienVay = double.Parse((ttNgDung.SoTienVay ?? 0).ToString());
+            double laithang = double.Parse(ttNgDung.LaiSuat ?? "0") / 1200;
+            double number = Math.Pow((1 + laithang), int.Parse((ttNgDung.ThoiGianVay ?? 0).ToString()));
             double tmp = (soTienVay * laithang * number) / (number - 1);
             decimal tienhangthang = new decimal(tmp);
             return tienhangthang;
         }
         public string TinhTien(KhachHangVay ttNgDung)
         {
-            double laithang = double.Parse(ttNgDung.LaiSuat) / 12;
-            decimal tongsotien = TienHangThang(ttNgDung) * (int)ttNgDung.ThoiGianVay;
+            double laithang = double.Parse(ttNgDung.LaiSuat ?? "0") / 12;
+            decimal tongsotien = TienHangThang(ttNgDung) * (ttNgDung.ThoiGianVay ?? 0);
             string kq = String.Format("{0} x ({1} x {2}% x (1 + {3}%)^{4}) / ((1 + {5}%)^{6} - 1) = {7}",
                 ttNgDung.ThoiGianVay.ToString(), ttNgDung.SoTienVay.ToString(), laithang.ToString("0.000"), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), laithang.ToString("0.000"), ttNgDung.ThoiGianVay.ToString(), tongsotien.ToString("N0"));
             return kq;
         }
         public Decimal TongSoTien(KhachHangVay ttNgDung)
         {
-            return TienHangThang(ttNgDung) * (decimal)ttNgDung.ThoiGianVay;
+            return TienHangThang(ttNgDung) * (ttNgDung.ThoiGianVay ?? 0);
         }
         public void CapNhatNgDungVay(KhachHangVay ttNgDung)
         {
             ttNgDung.SoTienHangThang = TienHangThang(ttNgDung);
-            ttNgDung.NgayDenHan = ttNgDung.NgayVay.Value.AddMonths(1);
+            if (ttNgDung.NgayVay.HasValue)
+            {
+                ttNgDung.NgayDenHan = ttNgDung.NgayVay.Value.AddMonths(1);
+            }
             ttNgDung.TongSoTienPhaiTra = TongSoTien(ttNgDung);
             ttNgDung.PhiTraCham = 0;
         }
