@@ -79,11 +79,11 @@ namespace DOAN_Nhom4
         }
         public bool IsPhone(KhachHang kh)
         {
-            return data.IsPhone(kh.Sdt);
+            return data.IsPhone(kh.Sdt ?? "0");
         }
         public bool IsEmail(KhachHang kh)
         {
-            return data.IsEmail(kh.Email);
+            return data.IsEmail(kh.Email ?? "0");
         }
     }
 }

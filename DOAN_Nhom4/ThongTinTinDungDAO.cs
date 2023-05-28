@@ -63,8 +63,8 @@ namespace DOAN_Nhom4
 
         public decimal PhiTraCham(TaiKhoanTinDung tttd)
         {
-            decimal tienLaiSuat = decimal.Parse(tttd.LaiSuat) / 100 / 12;
-            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
+            decimal tienLaiSuat = decimal.Parse(tttd.LaiSuat ?? "0") / 100 / 12;
+            decimal tienDaSuDung = (tttd.SoTienDaSuDung ?? 0);
             return tienDaSuDung * tienLaiSuat;
         }
 
@@ -80,14 +80,17 @@ namespace DOAN_Nhom4
         public decimal PhiPhat(TaiKhoanTinDung tttd)
         {
             decimal tienPhat = (decimal)0.04;
-            decimal tienDaSuDung = (decimal)tttd.SoTienDaSuDung;
+            decimal tienDaSuDung = (tttd.SoTienDaSuDung ?? 0);
             return tienDaSuDung * tienPhat;
         }
 
         public void CapNhatTinDungHangThang(TaiKhoanTinDung tttd)
         {
-            tttd.HanThanhToan = tttd.HanThanhToan.Value.AddMonths(1);
-            tttd.NgaySaoKe = tttd.HanThanhToan.Value.Subtract(new TimeSpan(15, 0, 0, 0));
+            if (tttd.HanThanhToan.HasValue)
+            {
+                tttd.HanThanhToan = tttd.HanThanhToan.Value.AddMonths(1);
+                tttd.NgaySaoKe = tttd.HanThanhToan.Value.Subtract(new TimeSpan(15, 0, 0, 0));
+            }
             tttd.SoTienDaSuDung = tttd.SoTienSuDungSau;
             tttd.SoTienSuDungSau = 0;
             tttd.PhiTraCham = 0;

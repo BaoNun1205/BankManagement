@@ -151,7 +151,7 @@ namespace DOAN_Nhom4
 
         private void btn_Refersh_Click(object sender, EventArgs e)
         {
-            Refresh();
+            LamMoi();
         }
 
         private void btn_DV_Click(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace DOAN_Nhom4
             gvQLKH.Columns[10].HeaderText = "Ngày đăng ký";            
         }
 
-        private void Refresh()
+        private void LamMoi()
         {
             txt_SoTK.Text = "";
             txt_TenTK.Text = "";

@@ -41,10 +41,11 @@ namespace DOAN_Nhom4
         private void FrmNapTienDienThoai_Load(object sender, EventArgs e)
         {
             btnTKThe.Text = tknh.SoTk.ToString();
-            tttd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
-            if (tttd != null)
+            TaiKhoanTinDung? tktd = new TaiKhoanTinDung();
+            tktd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
+            if (tktd != null)
             {
-                btnTKTinDung.Text = tttd.SoTktinDung.ToString();
+                btnTKTinDung.Text = tktd.SoTktinDung.ToString();
             }
             else
             {
@@ -177,11 +178,10 @@ namespace DOAN_Nhom4
                             gd.SoTknhan = kh.Sdt;
                         }
                         lsgdDAO.Them(gd);
-                        SoDienThoai sdt = sdtDAO.LaySoDienThoai(gd.SoTknhan);
+                        SoDienThoai? sdt = sdtDAO.LaySoDienThoai(gd.SoTknhan);
                         if (sdt != null)
                         {
                             sdtDAO.ThanhToanVienThong(sdt, gd);
-                            tknh = tknhDAO.LayTaiKhoanNganHang(tknh.SoTk, tknh.TenNh);
                             FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
                             this.Hide();
                             frmThongbaoChuyentien.ShowDialog();
