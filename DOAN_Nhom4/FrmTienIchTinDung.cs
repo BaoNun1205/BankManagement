@@ -16,7 +16,6 @@ namespace DOAN_Nhom4
         private KhachHang kh;
         private TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
-        private TaiKhoanTinDung tttd;
         private ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
         public FrmTienIchTinDung()
         {
