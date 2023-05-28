@@ -20,7 +20,7 @@ namespace DOAN_Nhom4
         }
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         NguoiDungDAO ndDAO = new NguoiDungDAO();
-        DBConnection db = new DBConnection();
+        KiemTraThongTin db = new KiemTraThongTin();
         LichSuGiaoDichDAO lsgdDAO = new LichSuGiaoDichDAO();
 
         public void HienThiThongTin()

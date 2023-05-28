@@ -14,7 +14,7 @@ namespace DOAN_Nhom4
     internal class TietkiemDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin data = new KiemTraThongTin();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         public TietkiemDAO() { }
 

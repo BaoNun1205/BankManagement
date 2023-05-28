@@ -11,7 +11,7 @@ namespace DOAN_Nhom4
     internal class ThongKeDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin data = new KiemTraThongTin();
         public ThongKeDAO() { }
 
         public List<dynamic> ThongKeTienGui(string ngayBatDau, string ngayKetThuc, string nganHang, string soTK)

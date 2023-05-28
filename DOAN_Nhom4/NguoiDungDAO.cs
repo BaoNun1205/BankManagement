@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
     internal class NguoiDungDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin kt = new KiemTraThongTin();
         public List<object> LayDanhSach()
         {
             var customerAccountList = from customer in hhb.KhachHangs
@@ -79,11 +79,11 @@ namespace DOAN_Nhom4
         }
         public bool IsPhone(KhachHang kh)
         {
-            return data.IsPhone(kh.Sdt ?? "0");
+            return kt.IsPhone(kh.Sdt ?? "0");
         }
         public bool IsEmail(KhachHang kh)
         {
-            return data.IsEmail(kh.Email ?? "0");
+            return kt.IsEmail(kh.Email ?? "0");
         }
     }
 }

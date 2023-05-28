@@ -10,7 +10,7 @@ namespace DOAN_Nhom4
     internal class SoDienThoaiDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin data = new KiemTraThongTin();
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         ThongTinTinDungDAO tttdDAO = new ThongTinTinDungDAO();
 

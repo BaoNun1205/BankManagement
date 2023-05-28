@@ -10,7 +10,7 @@ namespace DOAN_Nhom4
     internal class KHNoXauDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin data = new KiemTraThongTin();
         public KHNoXauDAO() { }
         public void Them(KhachHangNoXau kh)
         {

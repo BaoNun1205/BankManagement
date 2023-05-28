@@ -15,7 +15,7 @@ namespace DOAN_Nhom4
     internal class LichSuGiaoDichDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin data = new KiemTraThongTin();
         public LichSuGiaoDichDAO() { }
 
         public List<object> HienThi()

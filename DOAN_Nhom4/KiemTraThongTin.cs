@@ -16,9 +16,9 @@ using DOAN_Nhom4.Entities;
 
 namespace DOAN_Nhom4
 {
-    internal class DBConnection
+    internal class KiemTraThongTin
     {
-        public DBConnection() { }
+        public KiemTraThongTin() { }
         public bool IsEmail(string email)
         {
             string strRegex = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";

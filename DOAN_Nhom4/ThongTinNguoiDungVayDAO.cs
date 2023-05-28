@@ -13,7 +13,7 @@ namespace DOAN_Nhom4
     internal class ThongTinNguoiDungVayDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
+        KiemTraThongTin data = new KiemTraThongTin();
         public ThongTinNguoiDungVayDAO() { }
 
         public void Them(KhachHangVay ttNgDung)

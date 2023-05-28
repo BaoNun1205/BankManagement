@@ -16,7 +16,7 @@ namespace DOAN_Nhom4
 {
     public partial class FrmVay : Form
     {
-        DBConnection db = new DBConnection();
+        KiemTraThongTin db = new KiemTraThongTin();
         public KhachHang nguoiDung;
         public TaiKhoanNganHang tknh;
         private Panel pnlNguoiDung;
