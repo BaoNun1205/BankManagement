@@ -73,7 +73,7 @@ namespace DOAN_Nhom4
         }
         public void RutTien(TaiKhoanNganHang tkRut, LichSuGiaoDich gd)
         {
-            decimal SoDu = Convert.ToDecimal(tkRut.SoDu) - Convert.ToDecimal(gd.SoTien);
+            decimal SoDu = ((tkRut.SoDu - gd.SoTien) ?? 0);
             TaiKhoanNganHang? tknh = hhb.TaiKhoanNganHangs.Where(tknh => tknh.TenNh == tkRut.TenNh && tknh.SoTk == tkRut.SoTk).SingleOrDefault();
             if (tknh != null)
             {
