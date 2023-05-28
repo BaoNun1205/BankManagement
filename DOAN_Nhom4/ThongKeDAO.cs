@@ -140,7 +140,7 @@ namespace DOAN_Nhom4
                                  join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
-                                       && (ls.LoaiGd == s)
+                                       && (ls == null || ls.LoaiGd == s)
                                  group ls by d into g
                                  select new
                                  {
@@ -179,7 +179,7 @@ namespace DOAN_Nhom4
                                  join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
-                                       && (ls.LoaiGd == s)
+                                       && (ls == null || ls.LoaiGd == s)
                                  group ls by d into g
                                  select new
                                  {
@@ -218,7 +218,7 @@ namespace DOAN_Nhom4
                                  join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
-                                       && (ls.LoaiGd == s)
+                                       && (ls == null || ls.LoaiGd == s)
                                  group ls by d into g
                                  select new
                                  {
@@ -258,7 +258,7 @@ namespace DOAN_Nhom4
                                  join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
-                                       && ls.LoaiGd == giaTriThuNhat && ls.LoaiGd == giaTriThuHai
+                                       && (ls == null || ls.LoaiGd == giaTriThuNhat || ls.LoaiGd == giaTriThuHai)
                                  group ls by d into g
                                  select new
                                  {
@@ -298,7 +298,7 @@ namespace DOAN_Nhom4
                                  join ls in hhb.LichSuGiaoDiches on d.Date equals ls.ThoiGian.Value.Date into gj
                                  from ls in gj.DefaultIfEmpty()
                                  where d >= DateTime.Parse(ngayBatDau) && d <= DateTime.Parse(ngayKetThuc)
-                                       && ls.LoaiGd == giaTriThuNhat && ls.LoaiGd == giaTriThuHai
+                                       && (ls == null || ls.LoaiGd == giaTriThuNhat || ls.LoaiGd == giaTriThuHai)
                                  group ls by d into g
                                  select new
                                  {
