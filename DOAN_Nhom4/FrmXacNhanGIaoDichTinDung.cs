@@ -52,9 +52,9 @@ namespace DOAN_Nhom4
                 LichSuGiaoDich gd = new LichSuGiaoDich()
                 {
                     LoaiGd = "Tin Dung",
-                    NganHangGui = "tknh.TenNh",
-                    SoTkgui = kh.TenKh,
-                    TenTkgui = tknh.SoTk,
+                    NganHangGui = tknh.TenNh,
+                    SoTkgui = tknh.SoTk,
+                    TenTkgui = kh.TenKh,
                     NganHangNhan = "HHB",
                     TenTknhan = tttd.HoTen,
                     SoTknhan = tttd.SoTktinDung,
@@ -66,7 +66,7 @@ namespace DOAN_Nhom4
                 tknhDAO.RutTien(tknh, gd);
                 tttdDAO.CapNhatTinDungHangThang(tttd);
                 tttdDAO.Sua(tttd);
-                tknh = tknhDAO.LayTaiKhoanNganHang(gd.NganHangGui, gd.SoTkgui);
+                tknh = tknhDAO.LayTaiKhoanNganHang(gd.SoTkgui, gd.NganHangGui);
                 FrmThongbaoChuyentien frmThongbaoChuyentien = new FrmThongbaoChuyentien(kh, gd, tknh, pnlNguoiDung);
                 frmThongbaoChuyentien.ShowDialog();
                 this.Close();
