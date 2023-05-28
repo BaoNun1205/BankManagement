@@ -11,7 +11,6 @@ namespace DOAN_Nhom4
     internal class ThongTinTinDungDAO
     {
         NganHangHhbContext hhb = new NganHangHhbContext();
-        DBConnection data = new DBConnection();
         public ThongTinTinDungDAO () { }
         public void Them(TaiKhoanTinDung tttd)
         {
@@ -20,32 +19,38 @@ namespace DOAN_Nhom4
         }
         public void Sua(TaiKhoanTinDung tttd)
         {
-            TaiKhoanTinDung tktd = hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == tttd.SoTktinDung).FirstOrDefault();
-            tktd.SoTktinDung = tttd.SoTktinDung;
-            tktd.HoTen = tttd.HoTen;
-            tktd.Cccd = tttd.Cccd;
-            tktd.DiaChi = tttd.DiaChi;
-            tktd.Sdt = tttd.Sdt;
-            tktd.Email = tttd.Email;
-            tktd.NgheNghiep = tttd.NgheNghiep;
-            tktd.ThuNhap = tttd.ThuNhap;
-            tktd.LoaiThe = tttd.LoaiThe;
-            tktd.HanThanhToan = tttd.HanThanhToan;
-            tktd.NgaySaoKe = tttd.NgaySaoKe;
-            tktd.HanMuc = tttd.HanMuc;
-            tktd.LaiSuat = tttd.LaiSuat;
-            tktd.SoTienDaSuDung = tttd.SoTienDaSuDung;
-            tktd.SoTienSuDungSau = tttd.SoTienSuDungSau;
-            tktd.NgayMoThe = tttd.NgayMoThe;
-            tktd.PhiTraCham = tttd.PhiTraCham;
-            tktd.PhiPhat = tttd.PhiPhat;
-            hhb.SaveChanges();
+            TaiKhoanTinDung? tktd = hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == tttd.SoTktinDung).FirstOrDefault();
+            if (tktd != null)
+            {
+                tktd.SoTktinDung = tttd.SoTktinDung;
+                tktd.HoTen = tttd.HoTen;
+                tktd.Cccd = tttd.Cccd;
+                tktd.DiaChi = tttd.DiaChi;
+                tktd.Sdt = tttd.Sdt;
+                tktd.Email = tttd.Email;
+                tktd.NgheNghiep = tttd.NgheNghiep;
+                tktd.ThuNhap = tttd.ThuNhap;
+                tktd.LoaiThe = tttd.LoaiThe;
+                tktd.HanThanhToan = tttd.HanThanhToan;
+                tktd.NgaySaoKe = tttd.NgaySaoKe;
+                tktd.HanMuc = tttd.HanMuc;
+                tktd.LaiSuat = tttd.LaiSuat;
+                tktd.SoTienDaSuDung = tttd.SoTienDaSuDung;
+                tktd.SoTienSuDungSau = tttd.SoTienSuDungSau;
+                tktd.NgayMoThe = tttd.NgayMoThe;
+                tktd.PhiTraCham = tttd.PhiTraCham;
+                tktd.PhiPhat = tttd.PhiPhat;
+                hhb.SaveChanges();
+            }            
         }
         public void Xoa(TaiKhoanTinDung tttd)
         {
-            TaiKhoanTinDung tktd = hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == tttd.SoTktinDung).FirstOrDefault();
-            hhb.Remove(tktd);
-            hhb.SaveChanges();
+            TaiKhoanTinDung? tktd = hhb.TaiKhoanTinDungs.Where(tktd => tktd.SoTktinDung == tttd.SoTktinDung).FirstOrDefault();
+            if (tktd != null)
+            {
+                hhb.Remove(tktd);
+                hhb.SaveChanges();
+            }              
         }
         public TaiKhoanTinDung? LayThongTinTinDungBangCccd(string? giaTri)
         {
