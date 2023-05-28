@@ -41,32 +41,6 @@ namespace DOAN_Nhom4
             hhb.SaveChanges();
         }
 
-        /*public DataTable LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
-        {
-            DateTime fromDate = DateTime.Now.AddDays(-x);
-
-            var danhSachGiaoDich = hhb.LichSuGiaoDiches
-                .Where(gd => gd.SoTknhan == kh.SoTk && gd.ThoiGian >= fromDate)
-                .Select(gd => new { gd.MaGd, gd.LoaiGd, gd.ThoiGian, gd.NganHangGui, gd.SoTkgui, gd.SoTien, gd.LoiNhan })
-                .ToList();
-
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("MaGD");
-            dataTable.Columns.Add("LoaiGD");
-            dataTable.Columns.Add("ThoiGian");
-            dataTable.Columns.Add("NganHangGui");
-            dataTable.Columns.Add("SoTKGui");
-            dataTable.Columns.Add("SoTien");
-            dataTable.Columns.Add("LoiNhan");
-
-            foreach (var giaoDich in danhSachGiaoDich)
-            {
-                dataTable.Rows.Add(giaoDich.MaGd, giaoDich.LoaiGd, giaoDich.ThoiGian, giaoDich.NganHangGui, giaoDich.SoTkgui, giaoDich.SoTien, giaoDich.LoiNhan);
-            }
-
-            return dataTable;
-        }*/
-
         public List<object> LichSuGiaoDichNhanNguoiDung(KhachHang kh, int x)
         {
             DateTime fromDate = DateTime.Now.AddDays(-x);
@@ -83,53 +57,10 @@ namespace DOAN_Nhom4
                     gd.SoTien,
                     gd.LoiNhan
                 })
-                .ToList();
+                .ToList<object>();
 
-            List<object> danhSachGiaoDichObj = new List<object>();
-
-            foreach (var giaoDich in danhSachGiaoDich)
-            {
-                danhSachGiaoDichObj.Add(new
-                {
-                    MaGD = giaoDich.MaGd,
-                    LoaiGD = giaoDich.LoaiGd,
-                    ThoiGian = giaoDich.ThoiGian,
-                    NganHangGui = giaoDich.NganHangGui,
-                    SoTKGui = giaoDich.SoTkgui,
-                    SoTien = giaoDich.SoTien,
-                    LoiNhan = giaoDich.LoiNhan
-                });
-            }
-
-            return danhSachGiaoDichObj;
+            return danhSachGiaoDich;
         }
-
-
-        /*public DataTable LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
-        {
-            DateTime fromDate = DateTime.Now.AddDays(-x);
-
-            var danhSachGiaoDich = hhb.LichSuGiaoDiches
-                .Where(gd => gd.SoTkgui == kh.SoTk && gd.ThoiGian >= fromDate)
-                .Select(gd => new { gd.MaGd, gd.LoaiGd, gd.ThoiGian, gd.NganHangNhan, gd.SoTknhan, gd.SoTien, gd.LoiNhan })
-                .ToList();
-
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("MaGD");
-            dataTable.Columns.Add("LoaiGD");
-            dataTable.Columns.Add("ThoiGian");
-            dataTable.Columns.Add("NganHangNhan");
-            dataTable.Columns.Add("SoTKNhan");
-            dataTable.Columns.Add("SoTien");
-            dataTable.Columns.Add("LoiNhan");
-
-            foreach (var giaoDich in danhSachGiaoDich)
-            {
-                dataTable.Rows.Add(giaoDich.MaGd, giaoDich.LoaiGd, giaoDich.ThoiGian, giaoDich.NganHangNhan, giaoDich.SoTknhan, giaoDich.SoTien, giaoDich.LoiNhan);
-            }
-
-            return dataTable;
-        }*/
 
         public List<object> LichSuGiaoDichGuiNguoiDung(KhachHang kh, int x)
         {
@@ -147,25 +78,9 @@ namespace DOAN_Nhom4
                     gd.SoTien,
                     gd.LoiNhan
                 })
-                .ToList();
+                .ToList<object>();
 
-            List<object> danhSachGiaoDichObj = new List<object>();
-
-            foreach (var giaoDich in danhSachGiaoDich)
-            {
-                danhSachGiaoDichObj.Add(new
-                {
-                    MaGD = giaoDich.MaGd,
-                    LoaiGD = giaoDich.LoaiGd,
-                    ThoiGian = giaoDich.ThoiGian,
-                    NganHangNhan = giaoDich.NganHangNhan,
-                    SoTKNhan = giaoDich.SoTknhan,
-                    SoTien = giaoDich.SoTien,
-                    LoiNhan = giaoDich.LoiNhan
-                });
-            }
-
-            return danhSachGiaoDichObj;
+            return danhSachGiaoDich;
         }
 
 
