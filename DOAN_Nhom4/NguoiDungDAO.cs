@@ -66,7 +66,7 @@ namespace DOAN_Nhom4
             }
         }
 
-        public KhachHang? LayKhachHang(string giaTriDau, string giaTriCuoi)
+        public KhachHang? LayKhachHang(string? giaTriDau, string? giaTriCuoi)
         {
             return hhb.KhachHangs.Where(kh => kh.SoTk == giaTriDau && kh.TenNh == giaTriCuoi).SingleOrDefault();
         }

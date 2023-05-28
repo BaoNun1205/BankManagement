@@ -15,10 +15,18 @@ namespace DOAN_Nhom4
 {
     public partial class ChuyenTien : UserControl
     {
+        Panel pnlDichvu;
         public ChuyenTien()
         {
             InitializeComponent();
         }
+
+        public ChuyenTien(Panel pnlDichvu)
+        {
+            InitializeComponent();
+            this.pnlDichvu = pnlDichvu;
+        }
+
         TaiKhoanNganHangDAO tknhDAO = new TaiKhoanNganHangDAO();
         NguoiDungDAO ndDAO = new NguoiDungDAO();
         ChuyenTienDAO chuyentienDAO = new ChuyenTienDAO();
@@ -27,11 +35,11 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTinNguoiChuyen()
         {
-            KhachHang ngDung = new KhachHang();
-            TaiKhoanNganHang tk = new TaiKhoanNganHang();
+            KhachHang? ngDung = new KhachHang();
+            TaiKhoanNganHang? tk = new TaiKhoanNganHang();
             ngDung = ndDAO.LayKhachHang(txtSoTKChuyen.Text,"HHB");           
             tk = tknhDAO.LayTaiKhoanNganHang(txtSoTKChuyen.Text, "HHB");
-            if (ngDung != null)
+            if (ngDung != null && tk != null)
             {
                 txtTenTKChuyen.Text = ngDung.TenKh?.ToString();
                 txtCCCD.Text = ngDung.Cccd?.ToString();
@@ -49,7 +57,7 @@ namespace DOAN_Nhom4
 
         public void HienThiThongTinNguoiNhan()
         {
-            KhachHang ngDungNhan = new KhachHang();
+            KhachHang? ngDungNhan = new KhachHang();
             ngDungNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
             if (ngDungNhan != null)
             {
@@ -62,16 +70,16 @@ namespace DOAN_Nhom4
         }
         public void HienThiThongTinNguoiNhanCoDieuKien()
         {
-            KhachHang ngDungNhan = new KhachHang();
+            KhachHang? ngDungNhan = new KhachHang();
             ngDungNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
-            KhachHang ngDungChuyen = new KhachHang();
+            KhachHang? ngDungChuyen = new KhachHang();
             ngDungChuyen = ndDAO.LayKhachHang(txtSoTKChuyen.Text, "HHB");
-            if (ngDungNhan != null)
+            if (ngDungNhan != null && ngDungChuyen != null)
             {
                 if (ngDungChuyen.TenNh == ngDungNhan.TenNh && ngDungChuyen.SoTk == ngDungNhan.SoTk)
                     txtTenTKNhan.Text = "Khong duoc chuyen cho chinh minh";
                 else
-                    txtTenTKNhan.Text = ngDungNhan.TenKh.ToString();
+                    txtTenTKNhan.Text = (ngDungNhan.TenKh ?? "0").ToString();
             }
             else
             {
@@ -96,22 +104,22 @@ namespace DOAN_Nhom4
         }
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
-            TaiKhoanNganHang tkGui = new TaiKhoanNganHang();
+            TaiKhoanNganHang? tkGui = new TaiKhoanNganHang();
             tkGui = tknhDAO.LayTaiKhoanNganHang(txtSoTKChuyen.Text, "HHB");
-            KhachHang ndGui = new KhachHang();
+            KhachHang? ndGui = new KhachHang();
             ndGui = ndDAO.LayKhachHang(txtSoTKChuyen.Text, "HHB");
-            TaiKhoanNganHang tkNhan = new TaiKhoanNganHang();
+            TaiKhoanNganHang? tkNhan = new TaiKhoanNganHang();
             tkNhan = tknhDAO.LayTaiKhoanNganHang(txtSoTKNhan.Text, cbTenNH.Text);
-            KhachHang ndNhan = new KhachHang();
+            KhachHang? ndNhan = new KhachHang();
             ndNhan = ndDAO.LayKhachHang(txtSoTKNhan.Text, cbTenNH.Text);
             LichSuGiaoDich gd = new LichSuGiaoDich()
             {
                 LoaiGd = "Chuyen tien",
                 NganHangGui = tkGui?.TenNh,
-                TenTkgui = ndGui.TenKh,
+                TenTkgui = ndGui?.TenKh,
                 SoTkgui = tkGui?.SoTk,
                 NganHangNhan = tkNhan?.TenNh,
-                TenTknhan = ndNhan.TenKh,
+                TenTknhan = ndNhan?.TenKh,
                 SoTknhan = tkNhan?.SoTk,
                 ThoiGian = DateTime.Now,
                 SoTien = decimal.Parse(txtSoTien.Text),
@@ -127,14 +135,8 @@ namespace DOAN_Nhom4
                         {
                             chuyentienDAO.ChuyenTien(tkGui, gd, tkNhan);
                             lsgdDAO.Them(gd);
-                            txtSoTKNhan.Text = "";
-                            txtSoTKChuyen.Text = "";
-                            cbTenNH.Text = "HHB";
-                            txtSoTien.Text = "";
-                            txtCCCD.Text = "";
-                            txtSDT.Text = "";
-                            txtLoiNhan.Text = "";
-                            lblSoDu.Text = "-";
+                            ChuyenTien ct = new ChuyenTien(pnlDichvu);
+                            Utility.addUserControl(ct, pnlDichvu);
                             MessageBox.Show("Chuyển tiền thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }

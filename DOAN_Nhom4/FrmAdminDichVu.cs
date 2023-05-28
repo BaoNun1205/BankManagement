@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
 
         private void btn_ChuyenTien_Click(object sender, EventArgs e)
         {
-            ChuyenTien ct = new ChuyenTien();
+            ChuyenTien ct = new ChuyenTien(pnlDichvu);
             Utility.addUserControl(ct, pnlDichvu);
         }
 
