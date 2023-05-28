@@ -54,7 +54,7 @@ namespace DOAN_Nhom4
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            TaiKhoanTinDung td = tttdDAO.LayThongTinTinDungBangStk(txtSoTaiKhoan.Text);
+            TaiKhoanTinDung? td = tttdDAO.LayThongTinTinDungBangStk(txtSoTaiKhoan.Text);
             if (td == null)
             {
                 if (IsNull(sender, e) == true)
