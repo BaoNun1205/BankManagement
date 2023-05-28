@@ -33,8 +33,9 @@ namespace DOAN_Nhom4
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            tttd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
-            if (tttd == null)
+            TaiKhoanTinDung? tktd = new TaiKhoanTinDung();
+            tktd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
+            if (tktd == null)
             {
                 FrmDangKyTinDung frmDangKyTinDung = new FrmDangKyTinDung(kh, tknh, pnlNguoiDung);
                 Utility.addForm(frmDangKyTinDung, pnlNguoiDung);
@@ -47,8 +48,9 @@ namespace DOAN_Nhom4
 
         private void btnThongTinThe_Click(object sender, EventArgs e)
         {
-            tttd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
-            if (tttd != null)
+            TaiKhoanTinDung? tktd = new TaiKhoanTinDung();
+            tktd = tttdDAO.LayThongTinTinDungBangCccd(kh.Cccd);
+            if (tktd != null)
             {
                 FrmThongTinNguoiDungTinDung frmThongTinTaiKhoangTinDung = new FrmThongTinNguoiDungTinDung(kh, tknh, pnlNguoiDung, tttd);
                 Utility.addForm(frmThongTinTaiKhoangTinDung, pnlNguoiDung);
