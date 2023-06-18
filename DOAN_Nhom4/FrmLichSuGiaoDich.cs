@@ -110,7 +110,7 @@ namespace DOAN_Nhom4
         private void btnThongke_Click(object sender, EventArgs e)
         {
             FrmThongKe frmthongke = new FrmThongKe(kh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmthongke, pnlNguoiDung);
+            ClassAddForm.addForm(frmthongke, pnlNguoiDung);
         }
 
         private void btn_TienRa_MouseEnter(object sender, EventArgs e)

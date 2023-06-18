@@ -86,7 +86,7 @@ namespace DOAN_Nhom4
             
             foreach (TietKiem tk in tkiems)
             {
-                if (NgayToiHan(tk.NgayDangky, tk.KiHan).ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy"))
+                if (NgayToiHan(tk.NgayDangky, tk.KiHan) <= DateTime.Now)
                 {
                     if (tk.LoaiSo == 1)
                     {

@@ -71,7 +71,7 @@ namespace DOAN_Nhom4
                     lsgdDAO.Them(gd);
                     MessageBox.Show("Rút tiền trong tài khoản tiết kiệm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmXemTKTK frmxemtktk = new FrmXemTKTK(kh, tknh, pnlNguoidung);
-                    DOAN_Nhom4.ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
+                    ClassAddForm.addForm(frmxemtktk, pnlNguoidung);
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace DOAN_Nhom4
         private void pBQuaylai_Click(object sender, EventArgs e)
         {
             FrmTietkiem frmtietkiem = new FrmTietkiem(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
+            ClassAddForm.addForm(frmtietkiem, pnlNguoidung);
         }
 
         private void cbTenTKTK_SelectedIndexChanged(object sender, EventArgs e)

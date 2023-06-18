@@ -65,25 +65,25 @@ namespace DOAN_Nhom4
         private void pBQuaylai_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmtienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmtienIchVay, pnlNguoiDung);
+            ClassAddForm.addForm(frmtienIchVay, pnlNguoiDung);
         }
 
         private void btn_HuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchVay frmTienIchVay = new FrmTienIchVay(nguoiDung, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
+            ClassAddForm.addForm(frmTienIchVay, pnlNguoiDung);
         }
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             FrmXacNhanGiaoDichVay frmgdvay = new FrmXacNhanGiaoDichVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmgdvay, pnlNguoiDung);
+            ClassAddForm.addForm(frmgdvay, pnlNguoiDung);
         }
 
         private void btn_ThanhToanToanBo_Click(object sender, EventArgs e)
         {
             FrmXacNhanGiaoDichVayToanBo frmgdvaytoanbo = new FrmXacNhanGiaoDichVayToanBo(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmgdvaytoanbo, pnlNguoiDung);
+            ClassAddForm.addForm(frmgdvaytoanbo, pnlNguoiDung);
         }
     }
 }

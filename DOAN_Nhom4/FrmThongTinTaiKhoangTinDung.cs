@@ -55,7 +55,7 @@ namespace DOAN_Nhom4
             if (DateTime.Now > tttd.NgaySaoKe)
             {
                 FrmXacNhanGIaoDichTinDung frmXacNhanGIaoDichTinDung = new FrmXacNhanGIaoDichTinDung(kh, tknh, pnlNguoiDung, tttd);
-                DOAN_Nhom4.ClassAddForm.addForm(frmXacNhanGIaoDichTinDung, pnlNguoiDung);
+                ClassAddForm.addForm(frmXacNhanGIaoDichTinDung, pnlNguoiDung);
             }
             else
             {
@@ -73,7 +73,7 @@ namespace DOAN_Nhom4
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             FrmTienIchTinDung frmTienIchTinDung = new FrmTienIchTinDung(kh, tknh, pnlNguoiDung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
+            ClassAddForm.addForm(frmTienIchTinDung, pnlNguoiDung);
         }
     }
 }

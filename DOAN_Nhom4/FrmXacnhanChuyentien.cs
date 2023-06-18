@@ -37,7 +37,7 @@ namespace DOAN_Nhom4
         private void btnHuy_Click(object sender, EventArgs e)
         {
             FrmChuyentien frmchuyentien = new FrmChuyentien(kh, tknh, pnlNguoidung);
-            DOAN_Nhom4.ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
+            ClassAddForm.addForm(frmchuyentien, pnlNguoidung);
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)

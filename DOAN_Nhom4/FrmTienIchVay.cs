@@ -39,7 +39,7 @@ namespace DOAN_Nhom4
                 if (ttNgDung == null)
                 {
                     FrmVay frmVay = new FrmVay(nguoiDung, tknh, pnlNguoiDung);
-                    DOAN_Nhom4.ClassAddForm.addForm(frmVay, pnlNguoiDung);
+                    ClassAddForm.addForm(frmVay, pnlNguoiDung);
                 }
                 else
                     MessageBox.Show("Bạn đang có khoản vay!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -54,7 +54,7 @@ namespace DOAN_Nhom4
                 {
                     KHNoXauDAO.Xoa(kh);
                     FrmVay frmVay = new FrmVay(nguoiDung, tknh, pnlNguoiDung);
-                    DOAN_Nhom4.ClassAddForm.addForm(frmVay, pnlNguoiDung);
+                    ClassAddForm.addForm(frmVay, pnlNguoiDung);
                 }
                 else
                     MessageBox.Show("Bạn đang có nợ xấu!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -82,12 +82,12 @@ namespace DOAN_Nhom4
                     ttNgDungDAO.Xoa(ttNgDung);
                     MessageBox.Show("Bạn trở thành nợ xấu vì không thanh toán khoản vay quá 90 ngày", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     FrmTienIch frmtienich = new FrmTienIch(nguoiDung, tknh, pnlNguoiDung);
-                    DOAN_Nhom4.ClassAddForm.addForm(frmtienich, pnlNguoiDung);
+                    ClassAddForm.addForm(frmtienich, pnlNguoiDung);
                 }
                 else
                 {
                     FrmThongTinTaiKhoanVay frmThongTinTaiKhoanVay = new FrmThongTinTaiKhoanVay(nguoiDung, tknh, ttNgDung, pnlNguoiDung);
-                    DOAN_Nhom4.ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
+                    ClassAddForm.addForm(frmThongTinTaiKhoanVay, pnlNguoiDung);
                 }     
             }
             else
