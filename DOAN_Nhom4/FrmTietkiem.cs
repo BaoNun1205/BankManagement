@@ -111,7 +111,7 @@ namespace DOAN_Nhom4
         private void btn12thang_Click(object sender, EventArgs e)
         {
             kiHan = 12;
-            lblLaisuat.Text = "8,6%";
+            lblLaisuat.Text = "8.6%";
             laiSuat = 0.086;
             HienThiThongTin();
             HienThiMacDinh();
