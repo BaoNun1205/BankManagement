@@ -247,6 +247,7 @@
             this.pnlTrendau.Name = "pnlTrendau";
             this.pnlTrendau.Size = new System.Drawing.Size(1150, 91);
             this.pnlTrendau.TabIndex = 55;
+            this.pnlTrendau.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTrendau_Paint);
             this.pnlTrendau.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTrendau_MouseDown);
             // 
             // pbMini

@@ -119,5 +119,10 @@ namespace DOAN_Nhom4
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void pnlTrendau_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
